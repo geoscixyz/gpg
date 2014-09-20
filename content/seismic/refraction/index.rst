@@ -10,3 +10,4 @@ Contents:
    :maxdepth: 2
 
    seismic_velocity
+   seismic_introduction
