@@ -11,3 +11,4 @@ Contents:
 
    seismic_velocity
    seismic_introduction
+   seismic_sources
