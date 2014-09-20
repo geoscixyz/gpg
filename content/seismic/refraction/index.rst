@@ -7,8 +7,8 @@ Seismic Refraction
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    seismic_velocity
    seismic_introduction
-   seismic_fundamental_physics
+   seismic_sources
