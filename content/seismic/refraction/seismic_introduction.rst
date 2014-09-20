@@ -6,6 +6,7 @@ Introduction
 .. sidebar:: Seismic Methods
 
     .. figure:: ./images/icon_refrac.gif
+    	:align: center
 
 Seismic methods involve generating acoustic energy in the form of pressure or shear waves that propagate into the ground. Sensors (geophones) are installed in lines on the surface, and they record the faint ground motions caused by the acoustic energy (seismic waves) that returns from boundaries where the elastic properties of subsurface materials change. At such boundaries there are two fundamental physical effects. "Reflection" means some of the energy impinging on the interface is returned or "bounced" back towards the surface - light reflecting from a semi-transparent mirror is a good analogy. "Refraction" is less intuitive, but the concept is recognizable in images of things under water. When light arrives at a boundary, the portion that passes through is bent so it's direction of propagation changes. In fact, seismic refraction involves detecting energy that has been bent so that it travels along the interface between two subsurface materials, before returning to the surface where it's effects can be measured. The phenomenon is not intuitive, but it is explained in the "Ray paths" section of this chapter.
 
