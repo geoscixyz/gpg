@@ -13,3 +13,4 @@ Contents:
    seismic_introduction
    seismic_fundamental_physics
    seismic_sources
+   seismic_ray_paths
