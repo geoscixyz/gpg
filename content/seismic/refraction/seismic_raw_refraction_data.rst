@@ -29,7 +29,7 @@ Each geophone produces an electrical signal that is proportional to ground motio
 
 On this plot, one geophone was not working properly. Geophones are labeled with the first closest to the source. As expected, ground motion occurred earlier at geophones closest to the source. For geophones 1 through 10, it seems as if there was no ground motion at later times, however this is an artifact of the "gain" (amplification) applied to these traces. Gain is lower for geophone signals near the source because signal amplitudes are larger. If the signals within the blue box are amplified and replotted, the adjustable figure below results.
 
-.. figure:: ./images/firstbreak1.gif
+.. figure:: ./images/firstbreak3.gif
 	:align: center
 
 This figure shows shorter segments of traces from 12 geophones. The signal amplitudes have been amplified, so all ground motions are visible. There are clear beginings of ground motion for each trace, which appear later in time for traces farther from the source. Finding exactly what time the ground first moved at each geophone is called **first break picking**. It is not difficult in this case, but it can be challenging if signals are weak. Use radio buttons next to the figure to see the result of picking first breaks (also known as first arrivals) on this figure. Once the picks are chosen, it becomes evidend that there is a definate pattern to the arrivals - there are straight lines joining the first breaks of several adjacent traces. The third radio button reveals straight line patterns emphasized by drawing red lines.
