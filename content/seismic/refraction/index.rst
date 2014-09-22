@@ -14,3 +14,4 @@ Contents:
    seismic_fundamental_physics
    seismic_sources
    seismic_ray_paths
+   seismic_refraction_horizontal_layers
