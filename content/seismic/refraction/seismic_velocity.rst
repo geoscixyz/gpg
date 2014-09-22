@@ -97,7 +97,7 @@ The relations between elastic properties and velocity, introduced under "Fundame
 
 The two elastic constants and density each depend on the properties that geologists or engineers use to characterize the rock. These are the "secondary properties", including porosity, fluid saturation, texture etc. Many of these relationships are empirical - velocities are found to be related to certain rock units in a given locale by actual laboratory measurements on core samples of the rock or soil.
 
-One generally applicable rule is that seismic velocities generally increase with depth. However densities also increase with depth, so it must be that the bulk and shear modulii ( \\(K\\) and \\(u\\) respectively) increase faster than the density. There are many empirical relationships between velocity and depth of burial and geologic age, and different publications will present these relationships in various graphical or tabular ways. In the next section, general expectations for how porosity, lithification, pressure and fluid saturation affect velocity are are summarized.
+One generally applicable rule is that seismic velocities generally increase with depth. However densities also increase with depth, so it must be that the bulk and shear modulii ( \\(K\\) and \\(u\\) respectively) increase faster than the density. There are many empirical relationships between velocity and depth of burial and geologic age, and different publications will present these relationships in various graphical or tabular ways. In the next section, general expectations for how porosity, lithification, pressure and fluid saturation affect velocity are summarized.
 
 
 Porosity
