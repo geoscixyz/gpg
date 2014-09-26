@@ -6,7 +6,7 @@ Fundamental physics
 Fundamental Physics of Seismology
 =================================
 
-TEST If we strike the earth with a hammer, an explosive charge, or an earthquake, the material of the earth near the source becomes compressed (or extended) and twisted. Earth materials are elastic and these deformations propagate away from the source. The speed of propagation and the type of motion propagated depends upon the elastic properties of the material, namely
+If we strike the earth with a hammer, an explosive charge, or an earthquake, the material of the earth near the source becomes compressed (or extended) and twisted. Earth materials are elastic and these deformations propagate away from the source. The speed of propagation and the type of motion propagated depends upon the elastic properties of the material, namely
 
 1. density: \\( \\rho \\)
 2. bulk modulus:  \\( \\kappa \\) (compressibility)
