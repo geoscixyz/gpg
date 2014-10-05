@@ -121,7 +121,7 @@ The extension to more layers is in principle straight forward. Snell's law holds
 .. math::
 	\frac{\sin\theta_1}{v_1} = \frac{\sin\theta_2}{v_2} = \frac{\sin\theta_3}{v_3} = ...
 
-For a three layered case, the algebra is slightly more involved compared to a two layer example because we need to compute the times due to the ray path segments in the two top layers. Consider the diagrams below:
+For a three layer case, the algebra is slightly more involved compared to a two layer example because we need to compute the times due to the ray path segments in the two top layers. Consider the diagrams below:
 
 .. figure:: ./images/twoHorizontalLayers.gif
 	:align: center
