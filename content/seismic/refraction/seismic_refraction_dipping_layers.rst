@@ -88,24 +88,32 @@ Profile Geometries
 Because interfaces are generally dipping (if not curved and tortuous) one needs to have information from multiple directions or at least some type of overlapping information which can be manipulated to yield the dip. The most common acquisition geometries are:
 
 1. Reverse profile shots where you fire at both ends of the recording spread.
-2. Split spread (receivers are spread out from the shot in both directions).
-3. Single end roll-along.
-
-These are illustrated in the diagrams here.
-
 
 .. figure:: ./images/profile_geom1.gif
-    :align: left 
-	:scale: 100 %
+	:align: center
+	:scale: 140 %
+
+
+2. Split spread (receivers are spread out from the shot in both directions).
 
 .. figure:: ./images/profile_geom2.gif
-	:figclass: center
-	:align: left
-	:scale: 100 %
+	:align: center
+	:scale: 140%
+
+
+3. Single end roll-along.
 
 .. figure:: ./images/profile_geom3.gif
-	:align: left
-	:scale: 100 %
+	:align: center
+	:scale: 140 %
+
+
+
+
+
+
+
+
 
 .. Notes to consider for review (Phil, 04/10/2014):
 .. (1) The final sentence before Profile Geometries says averaging v2 and v2 (as does GPG). Quantities need clarification. 
