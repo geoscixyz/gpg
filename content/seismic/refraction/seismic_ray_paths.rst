@@ -41,7 +41,7 @@ A P-wave incident upon a boundary can produce reflected and transmitted P-waves,
 Waves for a layer over a halfspace
 ==================================
 
-We do seismic refraction surveys in order to learn about the geometry of geologic layers and velocities (ie. types of) materials. To do this we must build relations relating what we know and can measure to the things we want. In other words we must build equations that relate what we want (depths and velocities) to what we measure (surface distance and total travel times).
+We do seismic refraction surveys in order to learn about the geometry of geologic layers and velocities (ie. types of) materials. To do this we must build relations relating what we know, and can measure, to the things we want. In other words we must build equations that relate what we want (depths and velocities) to what we measure (source-receiver distance and travel times).
 
 Consider a layer of thickness h and velocity \\(v_1\\) overlying a uniform halfspace of velocity \\(v_2\\). A source is detonated at time \\(t=0\\). We are interested in the waves and arrival times of those waves at a receiver which is located a distance \\(x\\) from the source at position \\(D\\) in the figure below.
 

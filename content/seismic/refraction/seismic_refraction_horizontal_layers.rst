@@ -25,9 +25,7 @@ In all cases, the development of the travel-time curves requires only that we kn
 One layer over basement - the horizontal interface
 ==================================================
 
-We want relations involving things we want in terms of things we either know of can get. We want depths, but in fact, we can get travel times in terms of distances (known) and velocities (obtainable - see below). Depth is obtained as a last step.
-
-Consider an earth composed of a uniform layer with velocity \\(v_1\\) and thickness \\(z\\) overlying a medium with velocity \\(v_2\\). Let \\(\\theta\\) be the critical angle and x denoted the distance between the source at \\(A\\) and a receiver at \\(D\\).  Let \\(x_c\\) denote the critical distance.
+We need to identify specific ray paths and their associated travel times. Consider an earth composed of a uniform layer with velocity \\(v_1\\) and thickness \\(z\\) overlying a medium with velocity \\(v_2\\). Let \\(\\theta\\) be the critical angle and x denoted the distance between the source at \\(A\\) and a receiver at \\(D\\).  Let \\(x_c\\) denote the critical distance.
 
 .. figure:: ./images/refracHzGeometry.gif
 	:align: center
@@ -73,11 +71,8 @@ It is convenient to rearrange this slightly differently. Using the definition fo
 Use these two relations for \\(\\cos\\) and \\(\\tan\\) in the expression for t above to obtain a useful set of relations.
 
 .. math ::
-	t = & \frac{x\sin\theta}{v_1} + \frac{2z\cos\theta}{v_1} \\
-	  = & \frac{x}{v_2} + \frac{2z\sqrt{v_2^2-v_1^2}}{v_1v_2} \\
+	t = & \frac{x}{v_2} + \frac{2z\sqrt{v_2^2-v_1^2}}{v_1v_2} \\
 	  = & \frac{x}{v_2} + t_i
-
-You can convince yourself that \\(x\\) is in fact the complete distance between shot and geophone by carrying out the intermediate analysis steps.
 
 This simple relation says that the travel time curve is a straight line which has a slope of \\(1/v_2\\) and an intercept of \\(t_i\\). This intercept time is the time where the refraction line extends to intercept the \\(y\\)-axis **above the source position**. This is not a real "time" - it is derived from the graph.
 
@@ -121,7 +116,12 @@ This can be used as a consistency check, or it can be used to compute one of the
 Two Horizontal Layers Over a Halfspace
 ======================================
 
-The extension to more layers is in principle straight forward. However, the algebra is slightly more involved because we need to compute the times due to the ray path segments in the two top layers. Consider the diagrams below:
+The extension to more layers is in principle straight forward. Snell's law holds for waves at all interfaces, so for a multi-layered medium
+
+.. math::
+	\frac{\sin\theta_1}{v_1} = \frac{\sin\theta_2}{v_2} = \frac{\sin\theta_3}{v_3} = ...
+
+For a three layered case, the algebra is slightly more involved compared to a two layer example because we need to compute the times due to the ray path segments in the two top layers. Consider the diagrams below:
 
 .. figure:: ./images/twoHorizontalLayers.gif
 	:align: center

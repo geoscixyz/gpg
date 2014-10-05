@@ -22,7 +22,7 @@ Of course energy is both **reflected** and **refracted**, so ground motion detec
 Signals that get recorded
 =========================
 
-Each geophone produces an electrical signal that is proportional to ground motion (in one direction - usually vertical, but horizontal with special geophones used for shear wave work). That signal is recorded for a short period of time starting the moment the source of energy begins. We observe these signals by plotting them as one wiggly line for each geophone's signal. These signals are plotted next to each other so that ground motion at each geophone can be seen as a function of time. An example showing ground motion at 24 geophones is shown below.
+Each geophone produces an electrical signal that is proportional to ground motion (in one direction - usually vertical, but horizontal with special geophones used for shear wave work). That signal is recorded for a short period of time starting at the moment that the source of energy begins. We observe these signals by plotting them as one wiggly line for each geophone's signal. These signals are plotted next to each other so that ground motion at each geophone can be seen as a function of time. An example showing ground motion at 24 geophones is shown below.
 
 .. figure:: ./images/rawdata.gif
 	:align: center

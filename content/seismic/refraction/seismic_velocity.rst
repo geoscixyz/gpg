@@ -81,10 +81,11 @@ The table to the right shows rough ranges of velocities in units of kilometers p
 +--------------------------------+-----------+
 | Concrete                       |    3.6    |
 +--------------------------------+-----------+
+    :align: right
 
 .. This next sentence is out of place and unsupported: "Therefore" is the major issue
 
-Therefore seismic surveys are most effective at delineating structure, .i.e boundaries where rock type changes.
+Seismic surveys are most effective at delineating structure, .i.e boundaries where rock type changes.
 
 The relations between elastic properties and velocity, introduced under "Fundamentals", are given again here.
 
@@ -97,7 +98,7 @@ The relations between elastic properties and velocity, introduced under "Fundame
 
 The two elastic constants and density each depend on the properties that geologists or engineers use to characterize the rock. These are the "secondary properties", including porosity, fluid saturation, texture etc. Many of these relationships are empirical - velocities are found to be related to certain rock units in a given locale by actual laboratory measurements on core samples of the rock or soil.
 
-One generally applicable rule is that seismic velocities generally increase with depth. However densities also increase with depth, so it must be that the bulk and shear modulii ( \\(K\\) and \\(u\\) respectively) increase faster than the density. There are many empirical relationships between velocity and depth of burial and geologic age, and different publications will present these relationships in various graphical or tabular ways. In the next section, general expectations for how porosity, lithification, pressure and fluid saturation affect velocity are summarized.
+One generally applicable rule is that seismic velocities generally increase with depth. However densities also increase with depth, so it must be that the bulk and shear modulii ( \\(K\\) and \\(\mu\\) respectively) increase faster than the density. There are many empirical relationships between velocity and depth of burial and geologic age, and different publications will present these relationships in various graphical or tabular ways. In the next section, general expectations for how porosity, lithification, pressure and fluid saturation affect velocity are summarized.
 
 
 Porosity
@@ -118,7 +119,7 @@ The degree to which grains in a sedimentary rock are cemented together by post d
 Pressure
 --------
 
-Compressional wave velocity is strongly dependent on effective stress. For a rock buried in the earth, the **confining pressure** is the pressure of the overlying rock column, and the **pore water pressure** may be greater than, less than, or (if there is connected porosity to the surface) equal to the hydrostatic pressure. The **effective pressure** is the difference between the confining and pore pressure.
+Compressional wave velocity is strongly dependent on effective stress. For a rock buried in the earth, the **confining (or "lithostatic") pressure** is the pressure of the overlying rock column, and the **pore water pressure** may be greater than, less than, or (if there is connected porosity to the surface) equal to the confining pressure. The **effective pressure** is the difference between the confining and pore pressure.
 
 In general velocity rises with increasing confining pressure and then levels off to a “terminal velocity” when the effective pressure is *high*. The effect is probably due to crack closure. At *low* effective pressure, cracks are open and easily closed with an increase in stress. This is the equivalent of saying there is large strain for low increase in stress, hence small \\(K\\) and low velocity. As the effective pressure increases the cracks are all closed, \\(K\\) goes up and the velocity increases.
 
@@ -129,7 +130,7 @@ All this seems a bit complicated, and the take-home message is that there are se
 Fluid saturation
 ----------------
 
-Theoretical and empirical studies have shown that the compressional wave velocity *decreases* with *decreasing* fluid saturation. As the fraction of gas in the pores increases, \\(K\\) and hence velocity decreases. Less intuitive is the fact that \\(V_s\\) also decreases with an increase in gas content. The reflection coefficient is strongly affected if one of the contacting media is gas saturated because the impedance is lowered by decreases in both the density and velocity.
+Theoretical and empirical studies have shown that the compressional wave velocity *decreases* with *decreasing* fluid saturation. As the fraction of gas in the pores increases, \\(K\\), and hence velocity, decreases. Less intuitive is the fact that \\(V_s\\) also decreases with an increase in gas content. The seismic reflection coefficient is strongly affected if one of the contacting media is gas saturated because the impedance is lowered by decreases in both the density and velocity.
 
 Velocity in unconsolidated near surface soils (the weathered layer)
 -------------------------------------------------------------------
@@ -143,11 +144,11 @@ Attenuation is the reduction in amplitude (strength) of the seismic signal as it
 
 There are many theories for explaining attenuation in rocks. Friction is a contributor, but does not explain laboratory measurement alone. Various other damping mechanisms such as viscous flow have more success but much important work remains to be done in this area, especially for unconsolidated material where the attenuation is very high. Some of the theories predict attenuation as well as dispersion (which means the variation of velocity with frequency).
 
-Experimentally it is found that attenuation depends on frequency, but velocity does not (much). Quantitatively, at one Hertz the amplitude decays by roughly two thirds in 10 km., whereas at 1000 Hz it decays by the same about in 10 m. Also, attenuation may be as much as 10 times greater in unconsolidated sediments.
+Experimentally it is found that attenuation depends on frequency, but velocity does not (much). Quantitatively, at one Hertz the amplitude decays by roughly two thirds in 10 km., whereas at 1000 Hz it decays by that same about in 10 m. This reflects the fact that the wavelength at 1 Hz is 1000 times larger than the wavelength at 1000 Hz. Also, attenuation may be as much as 10 times greater in unconsolidated sediments.
 
 Another important attenuation mechanism is the reduction in amplitude of a wave by the scattering of its energy by objects whose dimensions are on the order of the wavelength. For example, attenuation of a 1000 Hertz signal in a shallow unconsolidated medium with a velocity of 250 m/sec can result in the signal being reduced to two thirds is original amplitude after traveling only 157 m. Therefore, it is reasonable to expect that the very high attenuation observed in near surface unconsolidated sediments is due to scattering.
 
-
+.. This needs to be moved to the reflection section (Phil, 02/10/2014)
 Energy at velocity boundaries
 -----------------------------
 
@@ -172,7 +173,7 @@ We define here the "Acoustic Impedance" \\( Z = \\rho V \\), or the product of d
 
 Note that at the interface there is continuity of displacement so that \\(A_0 = A_1 + A_2\\).
 
-
+.. Move to reflection and transmission section (Phil, 02,10,2014)
 Special Cases
 =============
 
