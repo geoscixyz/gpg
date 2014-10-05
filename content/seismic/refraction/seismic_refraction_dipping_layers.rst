@@ -58,7 +58,20 @@ Now, how do we use these relations? Start by recalling what we want: We want dep
 
 What about true refractor velocity, \\(v_2\\)? Snell's law can of course be invoked. The critical angle \\(\\theta\\) (referred to above) is obtained from the relation involving updip and downdip velocities, and the known value of \\(v_1\\). A less accurate version of \\(v_2\\) can be obtained by averaging \\(v_2\\) and \\(v_2\\) but your average value will be wrong by a factor of \\(cos(\\gamma)\\), or 2% to 3% for dips of about 12 degrees. 
 
+Profile Geometries
+------------------
+
+Because interfaces are generally dipping (if not curved and tortuous) one needs to have information from multiple directions or at least some type of overlapping information which can be manipulated to yield the dip. The most common acquisition geometries are:
+
+1. Reverse profile shots where you fire at both ends of the recording spread.
+2. Split spread (receivers are spread out from the shot in both directions).
+3. Single end roll-along.
+
+These are illustrated in the diagrams here.
+
+.. figure:: ./images/profile_geoms1.gif
+    :align: center
 
 .. Notes to consider for review (Phil, 04/10/2014):
-.. (1) The final sentence says averaging v2 and v2 (as does GPG). Quantities need clarification. 
+.. (1) The final sentence before Profile Geometries says averaging v2 and v2 (as does GPG). Quantities need clarification. 
 .. (2) Grammar/style query: earlier paragraphs use "updip velocity" and latter use "up-dip velocity." Text is modified from GPG to unhyphenated choice for consistency. But in general: hyphen or no hyphen?
