@@ -109,12 +109,6 @@ Because interfaces are generally dipping (if not curved and tortuous) one needs 
 
 
 
-
-
-
-
-
-
 .. Notes to consider for review (Phil, 04/10/2014):
 .. (1) The final sentence before Profile Geometries says averaging v2 and v2 (as does GPG). Quantities need clarification. 
 .. (2) Grammar/style query: earlier paragraphs use "updip velocity" and latter use "up-dip velocity." Text is modified from GPG to unhyphenated choice for consistency. But in general: hyphen or no hyphen?

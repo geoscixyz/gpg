@@ -17,5 +17,7 @@ Contents:
    seismic_ray_paths
    seismic_refraction_horizontal_layers
    seismic_refraction_dipping_layers
+   seismic_refraction_irregular_layers
+   seismic_refraction_other_topics
    
    
