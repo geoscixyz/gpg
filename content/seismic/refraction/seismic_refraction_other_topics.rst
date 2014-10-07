@@ -79,7 +79,7 @@ Static Data Corrections
 
 There are two corrections that are sometimes applied to the recorded travel times. These are corrections for elevations and similar corrections when there is a known weathered layer which has variable velocity.
 
-**Elevation Correction:**  The goal is to reduce the data to a datum plane, that is, to define a flat surface on which the data might have been recorded. The importance of this lies in the fact that all of our interpretation formulae assume that the upper surface of the earth is flat. Let \\(h_S\\) and \\(h_D\\) respectively denote the height of the shot and receiver about the datum plane (negative heights are allowed). The angle that the waves in this region are travelling vertically is determined by Snell's law. If \\(v_n\\) denotes the velocity of the refractor then the elevation correction is 
+**Elevation Correction:**  The goal is to reduce the data to a datum plane, that is, to define a flat surface on which the data might have been recorded. The importance of this lies in the fact that all of our interpretation formulae assume that the upper surface of the earth is flat. Let \\(h_S\\) and \\(h_D\\) respectively denote the height of the shot and receiver about the datum plane (negative heights are allowed). The angle that the waves in this region are travelling upward or downward is determined by Snell's law. If \\(v_n\\) denotes the velocity of the refractor then the elevation correction is 
 
 .. math::
 	t_{elev} = -(h_S + h_D)\frac{(v_n^2 - v_1^2)^\frac{1}{2}}{v_1v_n}

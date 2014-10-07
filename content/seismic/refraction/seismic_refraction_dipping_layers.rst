@@ -73,10 +73,10 @@ There are two equations in two unknowns \\(\\theta\\) and \\(\\gamma\\), therefo
 
 
 .. math::
-	\gamma = \frac{1}{2} \bigg[ sin^{-1}\bigg( \frac{v_1}{v_{2d}} \bigg) - sin^{-1}\bigg( \frac{v_1}{v_{2u}}  \bigg)     \bigg]
+	\gamma = \frac{1}{2} \bigg[ sin^{-1}\bigg( \frac{v_1}{v_{2d}} \bigg) - sin^{-1}\bigg( \frac{v_1}{v_{2u}}  \bigg) \bigg]
 
 .. math::
-	\theta = \frac{1}{2} \bigg[ sin^{-1}\bigg( \frac{v_1}{v_{2d}} \bigg) + sin^{-1}\bigg( \frac{v_1}{v_{2u}}  \bigg)     \bigg]	
+	\theta = \frac{1}{2} \bigg[ sin^{-1}\bigg( \frac{v_1}{v_{2d}} \bigg) + sin^{-1}\bigg( \frac{v_1}{v_{2u}}  \bigg) \bigg]	
 
 Now, how do we use these relations? Start by recalling what we want: We want depths under each end of the survey line (\\(h\\) and \\(h'\\)) and two true velocities. This is as much as we will obtain from a two-shot (forward and reverse) seismic refraction survey. We have, or can measure, velocities \\(v_1\\), \\(v_{2u}\\)  and \\(v_{2d}\\)  , and two intercept times \\(t_i\\) and \\(t'_i\\). The intercepts \\(t_i\\) and \\(t'_i\\) can be used to calculate \\(z\\) and \\(z'\\) (using equations (1) and (2) above) because \\(x=0\\) when \\(t_2=t_i\\) or \\(t'_2=t'_i\\) and the angle \\(\\theta\\) can be found using the three velocities obtainable from the T-X plot. Finally, true depths \\(h\\) and \\(h'\\) can be found using these slant depths and the relation we found for dip, \\(\\gamma\\).
 

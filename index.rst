@@ -7,7 +7,7 @@ Contents:
    :maxdepth: 2
 
    content/seismic/refraction/index
-
+   content/seismic/reflection/index
 
 
 Indices and tables
