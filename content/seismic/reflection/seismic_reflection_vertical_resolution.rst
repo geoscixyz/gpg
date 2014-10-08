@@ -32,7 +32,7 @@ Vertical resolution is defined in a visual sense: that is, "can the two arrivals
 .. figure:: ./images/thin_layer_2.gif
 	:align: right
 	:scale: 100 %
-In the second case the two pulses overlap so the interpretation is of one layer only. Recall that we are depicting ideal situations with these figures. What is a minimum thickness for layer 2 before the two pulses overlap? Intuitively the two pulses will overlap unless the distance within the layer is more than a wavelength. Since the second pulse travels both directions this means that when layer 2 it 1/2 wavelength thick, the two pulses will arrive well separated.
+In the second case the two pulses overlap so the interpretation is of one layer only. Recall that we are depicting ideal situations with these figures. What is a minimum thickness for layer 2 before the two pulses overlap? Intuitively the two pulses will overlap unless the distance within the layer is more than a wavelength. Since the second pulse travels both directions this means that when layer 2 is 1/2 wavelength thick, the two pulses will arrive well separated.
 
 
 In fact, the theoretical minimum thickness is 1/4 wavelength. In other words, careful processing can extract the pulses if they overlap by half a wavelength, but this theoretical minimum is never really achieved in practice.
