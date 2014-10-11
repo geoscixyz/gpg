@@ -62,3 +62,5 @@ The algebra has only one complicated step--a binomial expansion must be applied 
 The approximation is valid so long as the source-receiver separation (or offset) is "small" which means much less than the vertical depth to the reflecting layer (i.e. \\(x << vt_0\\)). The result is a simple expression for normal moveout.
 
 Each echo can be shifted up to align with the \\(t_0\\) position, so long as the trace position, \\(x\\), the vertical incident travel time, \\(t_0\\), and the velocity are known. Velocity can be estimated using the slope of the \\(t^2\\)--\\(x^2\\) plot, or with several other methods, which we will discuss in pages following.
+
+

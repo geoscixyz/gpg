@@ -25,7 +25,7 @@ We define here the "Acoustic Impedance" \\( Z = \\rho V \\), or the product of d
 
 Note that at the interface there is continuity of displacement so that \\(A_0 = A_1 + A_2\\).
 
-.. Move to reflection and transmission section (Phil, 02,10,2014)
+
 Special Cases
 =============
 

@@ -3,14 +3,12 @@
 Introduction
 ************
 
-.. :figclass: float-right-360 ...this is how to float a figure to the right
-
 .. figure:: ./images/titleicon.gif
 	:figclass: float-right-360
 	:align: right
 	:scale: 135 %
 
-The basic elements of seismology were covered in an earlier course. There we focused upon seismic refraction. Head waves propagated along an interface separating media of different velocites and were recorded as first arrivals at the surface. These arrivals were then analysed to yield information about the velocities and thicknesses of the layers. 
+The basic elements of seismology were covered in an earlier course. There we focused upon seismic refraction. Head waves propagated along an interface separating media of different velocities and were recorded as first arrivals at the surface. These arrivals were then analyzed to yield information about the velocities and thicknesses of the layers. 
 
 .. figure:: ./images/reflection_intro_layers.gif
 	:figclass: float-right-360

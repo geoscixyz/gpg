@@ -83,7 +83,6 @@ The table to the right shows rough ranges of velocities in units of kilometers p
 +--------------------------------+-----------+
     :align: right
 
-.. This next sentence is out of place and unsupported: "Therefore" is the major issue
 
 Seismic surveys are most effective at delineating structure, .i.e boundaries where rock type changes.
 
