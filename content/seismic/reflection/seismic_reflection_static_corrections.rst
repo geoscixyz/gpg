@@ -18,8 +18,8 @@ Elevation Statics
 	:align: right
 	:scale: 120 %
 
-.. figure:: ./images/irregualr_surface_and_CMP.gif
-	:figclass: right
+.. figure:: ./images/irregular_surface_and_CMP.gif
+	:figclass: center
 	:align: right
 	:scale: 120 %
 

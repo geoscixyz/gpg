@@ -35,7 +35,8 @@ The figures to the right illustrate effects of low pass and high pass filters. F
 
 .. figure:: ./images/ghost.gif
 	:align: center
-	:scale: 100 %
+	:scale: 150 %
+
 
 **a) Deghosting**
 
@@ -46,7 +47,7 @@ A seismic wavelet is composed of the original wavelet plus a closely spaced refl
 
 .. figure:: ./images/seismic_wavelet.gif
 	:align: center
-	:scale: 100 %
+	:scale: 120 %
 
 **b) Wavelet or Signature Deconvolution**
 
@@ -55,7 +56,7 @@ An "inverse filter" is designed so that the original source wavelet is contracte
 
 .. figure:: ./images/inverse_filter.gif
 	:align: center
-	:scale: 100 %
+	:scale: 120 %
 
 This can enhance the vertical resolution, though not beyond the "theoretical" maximum which is controlled by wavelength.
 

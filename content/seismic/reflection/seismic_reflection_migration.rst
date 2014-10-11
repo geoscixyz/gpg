@@ -24,19 +24,16 @@ The reflection time is given by \\(2l/v_i\\). But when we plot the section we th
 
 Other artifacts are visible in non-migrated sections. Synclines will be observed as "bow ties." Their width on the seismic section is narrower than reality and their structural depth is diminished. Conversely, anticlines will appear wider than they really are. Finally a point scatterer will be observed as a hyperbola.
 
-.. image:: ./images/synform_reflection.gif
+.. figure:: ./images/synform_reflection.gif
 	:align: left
 	:scale: 115 %
-
-	A sharp synclinal feature (a) in a reflecting interface , and the resultant "bow-tie" shape of the reflection event (b) in the non-migrated seismic section.
 
 .. figure:: ./images/syn_anti_form.gif
 	:figclass: center
 	:align: left
 	:scale: 115 %
  	
-
-The plots above show several synthetic geologic structures and their associated non-migrated seismic sections.
+The plots above show several synthetic geologic structures and their associated non-migrated seismic sections: (a) a sharp synclinal feature in a reflecting interface, and (b) the resultant "bow-tie" shape of the reflection event in the non-migrated seismic section. 
 
 Migration is the process of reconstructing a seismic section so that reflection events are repositioned under their correct surface location and at a correct vertical reflection travel time. The effects of migration are to: 
 
@@ -50,9 +47,9 @@ The principles of migration are shown in the figure below left. A single point d
 
 .. figure:: ./images/point_defractor.gif
 	:align: left
-	:scale: 100 %
+	:scale: 85 %
 
 .. figure:: ./images/pre_and_post_migration.gif
 	:figclass: center
 	:align: left
-	:scale: 90%
+	:scale: 85%
