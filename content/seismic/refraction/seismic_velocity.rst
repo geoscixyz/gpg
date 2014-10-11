@@ -81,14 +81,14 @@ The table to the right shows rough ranges of velocities in units of kilometers p
 +--------------------------------+-----------+
 | Concrete                       |    3.6    |
 +--------------------------------+-----------+
-    :align: right
+
 
 
 Seismic surveys are most effective at delineating structure, .i.e boundaries where rock type changes.
 
 The relations between elastic properties and velocity, introduced under "Fundamentals", are given again here.
 
-.. link here!
+.. <<editorial comment>> link here!
 
 .. math::
 	v_p = \sqrt{\frac{K+4/3\mu}{\rho}} \quad v_s = \sqrt{\frac{\mu}{\rho}}

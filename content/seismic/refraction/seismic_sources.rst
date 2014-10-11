@@ -5,10 +5,10 @@ Seismic Sources
 
 For seismic surveying purposes there are a number of generic goals. Not all of these objectives can be met perfectly, but sources are designed to meet them as effectively as possible.
 
-1. High energy is required - the stronger the source, the better the signal to noise ratio.
-2. High frequency is preferred - the higher the frequency, the shorter the seismic pulse and hence the better the resolution.
-3. Repeatability is important for reliable measurements - we often want to stack the signals to improve the signal to noise ratio so repeat "shots" must all have identical source energy characteristics.
-4. A well-defined source signature is desirable. By this we mean that the exact pattern of the wave energy should be known. If it is, we can use deconvolution to find the exact times of reflections &/or refractions. Deconvolution is a processing step that enhances reflections and/or refractions.
+1. High energy is required--the stronger the source, the better the signal to noise ratio.
+2. High frequency is preferred--the higher the frequency, the shorter the seismic pulse and hence the better the resolution.
+3. Repeatability is important for reliable measurements--we often want to stack the signals to improve the signal to noise ratio so repeat "shots" must all have identical source energy characteristics.
+4. A well-defined source signature is desirable. By this we mean that the exact pattern of the wave energy should be known. If it is, we can use deconvolution to find the exact times of reflections and/or refractions. Deconvolution is a processing step that enhances reflections and/or refractions.
 
 Land Sources
 ------------
@@ -53,7 +53,8 @@ On land the instruments are called seismometers or geophones. Once the sensor's 
 
 Seismic signal detectors for water-borne deployment are called **hydrophones**. These are generally ceramic piezoelectric elements which produce an output voltage proportional to the pressure variations associated with the passage of a compressional wave through the water. At sea, these are often carried in a neutrally buoyant cable (seismic streamer). Recall that shear waves can not travel in liquids.
 
-.. insert a plcae holder for accelerometers
+.. <<place holder>> for accelerometers
+
 Recording equipment
 -------------------
 

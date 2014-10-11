@@ -15,10 +15,6 @@ Elevation Statics
 -----------------
 
 .. figure:: ./images/irregular_surface.gif
-	:align: right
-	:scale: 120 %
-
-.. figure:: ./images/irregular_surface_and_CMP.gif
 	:figclass: center
 	:align: right
 	:scale: 120 %
@@ -26,6 +22,10 @@ Elevation Statics
 Consider the need for (1). Common midpoint shot receiver pairs acquire data on an irregular interface (right figures, top panel). Time differences are caused because of extra travel time associated with elevation of source and receiever. As a result reflections observed on the CMP gather will not have a hyperbolic form and they will not be amenable to normal CMP processing (bottom panel). 
 
 
+.. figure:: ./images/irregular_surface_and_CMP.gif
+	:align: right
+	:scale: 120 %
+	
 The correction procedure involves establishing a datum on which to locate source and receiver, and then adding or subtracting the incremental time. The reference velocity will be that of the upper layer. 
 
 .. figure:: ./images/S_R_datum_correction.gif

@@ -24,6 +24,17 @@ This is the equation of a hyperbola. In seismic reflection (as in radar) we plot
 	:align: center
 	:scale: 130 %
 
+Two way travel time:
+
+.. math::
+ 		t_0 = \frac{2z}{v} 
+
+Normal Moveout: 
+
+.. math::
+ 		\Delta T = t(x) - t_0
+
+
 In the above diagram \\(t_0\\) is the 2-way vertical travel time. It is the minimum time at which a reflection will be recorded. The additional time taken for a signal to reach a receiver at offset \\(x\\) is called the "Normal Moveout" time, \\(\\Delta T\\).  This value is required for every trace in the common depth point data set in order to shift echoes up so they align for stacking. How is it obtained? First let us find a way of determining velocity and \\(t_0\\).   
 
 For this simple earth structure the velocity and layer thickness can readily be obtained from the hyperbola. Squaring both sides yields, 

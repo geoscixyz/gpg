@@ -44,7 +44,6 @@ Migration is the process of reconstructing a seismic section so that reflection 
 
 The principles of migration are shown in the figure below left. A single point diffractor will generate a hyperbolic trajectory in a travel time section. Migration collapses the hyperbolic event back to its apex.
 
-
 .. figure:: ./images/point_defractor.gif
 	:align: left
 	:scale: 85 %
@@ -52,4 +51,8 @@ The principles of migration are shown in the figure below left. A single point d
 .. figure:: ./images/pre_and_post_migration.gif
 	:figclass: center
 	:align: left
-	:scale: 85%
+	:scale: 90%
+
+The example above right shows an unmigrated section (top). The section after migration is shown in the bottom panel. [#f1]_ 
+
+.. [#f1] From Kearey, Philip and Micheal Brooks, "An Introduction to Geophysical Exploration."" 2nd ed. Blackwell Science: 1991. 

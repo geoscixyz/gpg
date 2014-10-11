@@ -13,30 +13,51 @@ Seismic data are routinely acquired using a source and multiple receivers. The e
 Multichannel Reflection Survey
 ------------------------------
 
-First consider the source-receiver geometry. The geometry can be "split spread" in which case there is a central shot with receivers on both sides, or a "single-ended spread" in which the receivers are always on one side of the source. Split spreads are common in land surveys; single-ended spreads are common in marine surveys.
-  
-A split spread seismic record is shown above right. The seismic traces all belong to a single source and hence this is referred to as a "Common Source Gather". The first arrivals are direct or critically refracted arrivals. Reflection hyperbolae from numerous boundaries are observed. The strong energy in the triangular central portion is ground roll caused by surface waves. It masks the reflection events.   
+First consider the source-receiver geometry. The geometry can be "split spread" in which case there is a central shot with receivers on both sides, or a "single-ended spread" in which the receivers are always on one side of the source. Split spreads are common in land surveys; single-ended spreads are common in marine surveys. 
+
+.. figure:: ./images/split_and_single_spread.gif
+	:align: center
+	:scale: 110%
+
+	Shot-detector configurations used in multichannel seismic reflection profiling .(a) Split spread, or straddle spread. (b) Single-ended spread [#f1]_ 
+
+.. figure:: ./images/shot_gather_split_spread.gif
+	:align: right
+	:scale: 100 %   
+
+.. <<editorial comment>> The original GPG had a "click to enlarge" feature for the shot gather. Should it be added?
+
+A split spread seismic record is shown above. The seismic traces all belong to a single source and hence this is referred to as a "Common Source Gather". The first arrivals are direct or critically refracted arrivals. Reflection hyperbolae from numerous boundaries are observed, right. The strong energy in the triangular central portion is ground roll caused by surface waves. It masks the reflection events.   
 
 Fundamental procedure
 ---------------------
 
 In order to benefit from gathering several echoes from each reflecting point there are numerous operations that need to be applied to the data. Much of the data processing is tied to the hypothesis that the earth's properties vary most strongly in the vertical direction. The following points illustrate the fundamental procedural concept underlying the creation of a final seismic reflection section:
 
-.. figure:: ./images/geom1.gif
-	:align: right
-	:scale: 150 %
-
-**Objective:** We want to image reflections across layers where there is an impedance change.
-
-.. figure:: ./images/geom2.gif
-	:align: right
-	:scale: 150 %
-
-**Reason for using many "redundant" echoes--to reduce noise:** We need to gather several versions of the experiment and stack.     
 
 .. figure:: ./images/geom3.gif
 	:align: right
-	:scale: 150 %
+	:scale: 152 %
+
+	type (3)
+
+.. figure:: ./images/geom2.gif
+	:align: right
+	:scale: 152 %
+
+	type (2)
+
+.. figure:: ./images/geom1.gif
+	:align: right
+	:scale: 152 %
+
+	type (1)
+	
+
+**Objective:** We want to image reflections across layers where there is an impedance change.
+
+**Reason for using many "redundant" echoes--to reduce noise:** We need to gather several versions of the experiment and stack.   
+
 **Logistics:** However, surveying with one shot and many geophones is more cost-effective.
 
 **Therefore** Field work must be arranged as follows:
@@ -53,10 +74,10 @@ In order to benefit from gathering several echoes from each reflecting point the
 	:scale: 100 %
 
 
-.. Notes:
+.. [#f1] From Kearey, Philip and Micheal Brooks, 'An Introduction to Geophysical Exploration'. 2nd ed. Blackwell Science: 1991. 
 
-.. Place holder for stacking and SNR applet
 
-.. The last three small figures need enumeration. Is there a way? (Phil.07/10/2014)
+.. <<place holder>>  for stacking and SNR applet on this page
 
-.. The previous script (the last sentence under "Fundamental Principles") says "The table shown next illustrates the fundamental procedural concept underlying the creation of a final seismic reflection section." As the table is removed but the point form aspects remain, the above sentence is changed to "The following points illustrate..."
+
+

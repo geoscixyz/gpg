@@ -8,7 +8,7 @@ Reflections and refractions at a plane interface
 
 Consider a P-wave which is incident at an  angle \\(\\theta_1\\) measured with respect to the normal of the interface. There will be a reflected wave and a transmitted wave but the directions of the waves are given by the diagram to the right.
 
-**Law of reflection:** The angle of reflection equals the angle of incidence. So \\(\\theta_r\\) = \\(\\theta_i\\) .
+**Law of reflection:** The angle of reflection equals the angle of incidence. So \\(\\theta_r\\) = \\(\\theta_1\\) .
 
 **Law of refraction:** The angle of refraction \\(\\theta_2\\)  is determined through Snell's Law, which is
 
@@ -21,6 +21,11 @@ If the wave travels from a low velocity medium to a high velocity medium the wav
 	:align: center
 
 **"Critical refraction"** is an important concept in refraction seismics. The maximum value of \\(\\theta_2\\) is 90\\(^\\circ\\). If this is the case, then refracted waves travel horizontally in the second medium. The incident angle that causes this, known as the critical angle, \\(\\theta_c\\) is found using Snell's law as follows:
+
+.. math::
+	\frac{\sin\theta_c}{v_1} = \frac{\sin 90^{\circ}}{v_2} = \frac{1}{v_2}
+
+	\sin\theta_c = \frac{v_1}{v_2}
 
 When the wave in the second medium is critically refracted, it travels parallel to the interface at a speed of \\(v_2\\). As it travels, it radiates energy into the upper medium with the associated ray path making an angle \\(\\theta_c\\) with the normal. This critically refracted wave is also called a "head wave". It is somewhat analogous to the bow wave of a moving boat.
 
@@ -49,6 +54,8 @@ There are three principle waves that will travel through the earth and arrive at
 
 .. figure:: ./images/waveslayerhalfspace.gif
 	:align: center
+
+.. <<editorial comment>> This diagram is ok. If redrawn, put a source symbol (*) and a dashed line for the critically refracted ray.
 
 The travel time curves for these ray paths are shown to the right, and expressions for the ray paths and important parameters of these travel time curves are as follows:
 

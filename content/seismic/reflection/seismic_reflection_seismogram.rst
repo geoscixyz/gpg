@@ -38,8 +38,6 @@ The total travel time is the sum of the incremental times for a particular refle
 .. math::
 	\Delta  t_i = \frac{2h_i}{v}
 
-.. Rework this with Doug's notes(07/10/2014)
-
 
 The normal incidence seismic trace is obtained by the convolution of a seismic wavelet (input pulse) with the reflectivity function. The amplitude of each spike on the reflectivity function is equal to the value of the reflection coefficient that corresponds to a particular boundary. (In reality this value is further altered by the transmission coefficients). The times for each reflection event are obtained by knowing the layer thickness and velocities. Each impulse on the reflection function generates a scaled replication of the seismic wavelet. The composite of all of the reflection events generates the seismic trace. 
 
@@ -47,7 +45,7 @@ The normal incidence seismic trace is obtained by the convolution of a seismic w
 	:align: center
 	:scale: 100%
 
-	The reflection seismogram viewed as the convolved output of a reflectivity function with an input pulse. From Kearey, Philip and Micheal Brooks, An Introduction to Geophysical Exploration. 2nd ed. Blackwell Science: 1991. 
+	The [#f1]_  reflection seismogram viewed as the convolved output of a reflectivity function with an input pulse. 
 
 Notice how the negative reflection coefficients change the polarity of the signal recorded at the receiver. 
 
@@ -55,7 +53,8 @@ Notice how the negative reflection coefficients change the polarity of the signa
 	:align: center
 	:scale: 100%
 
-	A synthetic seismogram. From Kearey, Philip and Micheal Brooks, An Introduction to Geophysical Exploration. 2nd ed. Blackwell Science: 1991. 
+	A synthetic [#f1]_ seismogram. 
 
+.. [#f1] From Kearey, Philip and Micheal Brooks, "An Introduction to Geophysical Exploration". 2nd ed. Blackwell Science: 1991. 
 
-.. Note: This comment is a placeholder for (1) understanding negative reflection and (2) differences in velocities, acceleration data
+.. <<place holder>> This comment is a placeholder for understanding negative reflection and differences in velocities applet.

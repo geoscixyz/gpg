@@ -1,5 +1,6 @@
 .. _seismic_refraction_irregular_layers:
 
+.. <<place holder>> This section is to be put on hold for now. This .rst file is a placeholder for this section.
 
 Irregular Surfaces and the Plus-Minus Method
 ********************************************

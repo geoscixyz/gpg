@@ -6,7 +6,7 @@ Vertical Resolution
  	
 The vertical resolution of a seismic data sets describes how thin a layer can be before the reflections from its top and its bottom become indistinguishable. This depends upon the shape of the seismic source wavelet. The shape, or more particularly the signal wavelength depends upon the frequency and the velocity of the materials. Recall that \\(\\lambda = vt\\).
 
-.. Note: Here is a placeholder for two items: (1) seismic source waveforms and (2) a synthetic seismogram applet
+.. <<place holder>> Here is a placeholder for two items: (1) seismic source waveforms applet and (2) a synthetic seismogram applet
 
 .. figure:: ./images/pulse1.gif
 	:figclass: right
@@ -30,7 +30,9 @@ Vertical resolution is defined in a visual sense: that is, "can the two arrivals
 .. figure:: ./images/thin_layer_2.gif
 	:align: right
 	:scale: 100 %
-	
+
+.. <<place holder>> for applet.
+
 In the second case the two pulses overlap so the interpretation is of one layer only. Recall that we are depicting ideal situations with these figures. What is a minimum thickness for layer 2 before the two pulses overlap? Intuitively the two pulses will overlap unless the distance within the layer is more than a wavelength. Since the second pulse travels both directions this means that when layer 2 is 1/2 wavelength thick, the two pulses will arrive well separated.
 
 
@@ -41,6 +43,3 @@ How does this thickness in terms of wavelength translate into real distances? As
 .. figure:: ./images/wavelen-on-photo.jpg
 	:align: center
 	:scale: 130 %
-
-.. Note (1): See placeholders at top of page.
-.. Note (2): wavelets at top of page need adjustment (07/10/2014)

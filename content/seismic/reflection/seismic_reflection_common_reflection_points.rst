@@ -18,8 +18,7 @@ The collection of seismic traces that correspond to a particular midpoint is cal
 	:align: center
 	:scale: 100 %
 
-	Common depth point (CDP) reflection profiling. (a) A set of rays from different shots to detectors are reflected off a common point on a horizontal reflector. (b) The common depth point is not achieved in the case of a dipping reflector. From Kearey, Philip and Micheal Brooks, An Introduction to Geophysical Exploration. 2nd ed. Blackwell Science: 1991. 
+	Common depth point (CDP) reflection profiling. [#f1]_  (a) A set of rays from different shots to detectors are reflected off a common point on a horizontal reflector. (b) The common depth point is not achieved in the case of a dipping  reflector. 
 
 
-
- 
+.. [#f1] From Kearey, Philip and Micheal Brooks, An Introduction to Geophysical Exploration. 2nd ed. Blackwell Science: 1991. 

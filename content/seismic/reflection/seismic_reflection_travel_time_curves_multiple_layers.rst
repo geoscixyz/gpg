@@ -9,12 +9,12 @@ If there are additional layers then the seismic energy at each interface is refr
 
 .. figure:: ./images/ray_in_multiple_layers.gif
 	:align: left
-	:scale: 140 %
+	:scale: 145 %
 
 .. figure:: ./images/t_x_curve_reflected_ray.gif
 	:figclass: center
 	:align: left
-	:scale: 165 %
+	:scale: 175 %
 
 
 The complex travel path of a reflected ray through a multilayered ground. (b) The time--distance curve for reflected rays following the above type of path. Note that the divergence from the hyperbolic travel-time curve for a homogeneous overburden of velocity Vrms increases with offset. 

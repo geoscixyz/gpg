@@ -8,6 +8,8 @@ Energy in the ground
 
 Seismic body waves travel away from the source, into the ground. The energy spreads in all possible directions away from the source, so wavefronts expand as hemispheres under a source point, if the ground is uniform. The energy will arrive at geophones at times depending upon the velocity of the waves in the subsurface materials. When energy reaches a change in material, some energy will be reflected from the interface, and some will pass through it. The geometry of this situation is shown in the next figure.
 
+.. <<place holder>> This is a place holder for active links
+
 .. figure:: ./images/reflect.jpg
 	:align: center
 
@@ -32,6 +34,8 @@ On this plot, one geophone was not working properly. Geophones are labeled with 
 .. figure:: ./images/firstbreak3.gif
 	:align: center
 
-This figure shows shorter segments of traces from 12 geophones. The signal amplitudes have been amplified, so all ground motions are visible. There are clear beginnings of ground motion for each trace, which appear later in time for traces farther from the source. Finding exactly what time the ground first moved at each geophone is called **first break picking**. It is not difficult in this case, but it can be challenging if signals are weak. Use radio buttons next to the figure to see the result of picking first breaks (also known as first arrivals) on this figure. Once the picks are chosen, it becomes evident that there is a definite pattern to the arrivals - there are straight lines joining the first breaks of several adjacent traces. The third radio button reveals straight line patterns emphasized by drawing red lines.
+This figure shows shorter segments of traces from 12 geophones. The signal amplitudes have been amplified, so all ground motions are visible. There are clear beginnings of ground motion for each trace, which appear later in time for traces farther from the source. Finding exactly what time the ground first moved at each geophone is called **first break picking**. It is not difficult in this case, but it can be challenging if signals are weak. Use radio buttons next to the figure to see the result of picking first breaks (also known as first arrivals) on this figure. Once the picks are chosen, it becomes evident that there is a definite pattern to the arrivals--there are straight lines joining the first breaks of several adjacent traces. The third radio button reveals straight line patterns emphasized by drawing red lines.
 
 We will learn that first arrivals are either direct signals (for near geophones) or refractions that have travelled along subsurface interfaces. The objective of seismic refraction surveys is to determine the geometry of subsurface interfaces, and this can be derived by analysis of the pattern of first arrivals.
+
+

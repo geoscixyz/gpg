@@ -8,6 +8,8 @@ Introduction
 	:align: right
 	:scale: 135 %
 
+.. <<editorial comment>> The lithoprobe image info is to be omitted for now. 
+
 The basic elements of seismology were covered in an earlier course. There we focused upon seismic refraction. Head waves propagated along an interface separating media of different velocities and were recorded as first arrivals at the surface. These arrivals were then analyzed to yield information about the velocities and thicknesses of the layers. 
 
 .. figure:: ./images/reflection_intro_layers.gif
