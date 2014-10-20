@@ -84,7 +84,7 @@ Some GPR terminology
 **Reflection** occurs at boundaries (where the transition zone thickness < wavelength) where \\(\\sigma\\) or \\(\\epsilon_R\\) change. In the lossless case (i.e. when conductivity = 0), the reflection coefficient is 
 
 .. math::
-		R = \frac{\sqrt{\epsilon_1}-\sqrt{\epsilon_1}}{\sqrt{\epsilon_1}+\sqrt{\epsilon_1}}
+		R = \frac{\sqrt{\epsilon_2}-\sqrt{\epsilon_1}}{\sqrt{\epsilon_2}+\sqrt{\epsilon_1}}
 
 
 **Scattering** occurs when energy is returned from features that are smaller than a wavelength. Amount of scatter is proportional to wavelength, scatterer size and material.
@@ -111,7 +111,7 @@ Dielectric permittivity
  
 Relative dielectric permittivity is the parameter usually referred to in GPR work. It is 1 (one) for free space or air, and 80 for water. Because it is a number that compares true value to free space value, it has no units.
 
-Dielectric permittivity is in fact a complex value, often written \\( \\epsilon_r = \\epsilon_r^{\\prime} - i\\epsilon_r^{\\prime\\prime}\\). It can be considered as a measure of the extent to which charge distribution can be distorted or polarized by an applied electric field.
+Dielectric permittivity is in fact a complex value, often written \\( \\epsilon_R = \\epsilon_R^{\\prime} - i\\epsilon_R^{\\prime\\prime}\\). It can be considered as a measure of the extent to which charge distribution can be distorted or polarized by an applied electric field.
 
 
 The so-called "real" part, \\(\\epsilon_r^{\\prime}\\), is the *relative dielectric constant*\\( \\), often introduced in electronics or physics courses in the context of capacitors. It is a storage component measured as capacitance per unit length. (Capacitance is "the amount of charge a material can hold" for a given applied voltage.) At different frequencies, polarization occurs at different scales: at very high frequencies, only subatomic particles can be polarized. At GPR frequencies, the reorientation of dipolar molecules is the largest contribution, hence water's importance in determining the velocity of EM waves in a material. Note that \\(\\epsilon_R = 80\\) for water, whereas \\(\\epsilon_R < 10\\) for most other common materials.
