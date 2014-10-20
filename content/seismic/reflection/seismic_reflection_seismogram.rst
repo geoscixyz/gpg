@@ -17,8 +17,8 @@ The procedure for generating the ideal seismogram is as follows:
 The figure below illustrates the procedure:
 
 .. figure:: ./images/three_layer_schematic.gif
-	:align: left
-	:scale: 120 %
+	:align: right
+	:scale: 110 %
 
 If the amplitude of the incident ray is \\(A_0\\) and the amplitude of reflection is \\(A_1\\), then the reflection coefficient \\(r\\) is \\(A_1/A_0\\).
 
@@ -45,7 +45,7 @@ The normal incidence seismic trace is obtained by the convolution of a seismic w
 	:align: center
 	:scale: 100%
 
-	The [#f1]_  reflection seismogram viewed as the convolved output of a reflectivity function with an input pulse. 
+	The reflection seismogram viewed as the convolved output of a reflectivity function with an input pulse. [#f1]_  
 
 Notice how the negative reflection coefficients change the polarity of the signal recorded at the receiver. 
 
@@ -53,7 +53,7 @@ Notice how the negative reflection coefficients change the polarity of the signa
 	:align: center
 	:scale: 100%
 
-	A synthetic [#f1]_ seismogram. 
+	A synthetic seismogram. [#f1]_
 
 .. [#f1] From Kearey, Philip and Micheal Brooks, "An Introduction to Geophysical Exploration". 2nd ed. Blackwell Science: 1991. 
 

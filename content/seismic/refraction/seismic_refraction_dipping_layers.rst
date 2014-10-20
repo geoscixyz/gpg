@@ -14,7 +14,7 @@ Earth layers can often be approximated as planar, but they are rarely horizontal
 .. figure:: ./images/dip_layer_x_t_lines.gif
 	:figclass: center
 	:align: left
-	:scale: 100 %
+	:scale: 90 %
 
 
 Arrival times of the refracted wave will still appear as a straight line on the travel time plot. However, as the refracted wave moves updip the waves have less distance to travel to the surface. The travel time is reduced and thus the slope of the line is reduced. The velocity recovered from using this slope is called \\(v_{2u}\\), and is called the updip "apparent" velocity. This will be larger than the true velocity of the layer.
