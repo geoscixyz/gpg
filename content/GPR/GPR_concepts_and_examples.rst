@@ -84,7 +84,7 @@ Some GPR terminology
 **Reflection** occurs at boundaries (where the transition zone thickness < wavelength) where \\(\\sigma\\) or \\(\\epsilon_R\\) change. In the lossless case (i.e. when conductivity = 0), the reflection coefficient is 
 
 .. math::
-		R = \frac{\sqrt{\epsilon_2}-\sqrt{\epsilon_1}}{\sqrt{\epsilon_2}+\sqrt{\epsilon_1}}
+		R = \frac{\sqrt{\epsilon_1}-\sqrt{\epsilon_2}}{\sqrt{\epsilon_2}+\sqrt{\epsilon_1}}
 
 
 **Scattering** occurs when energy is returned from features that are smaller than a wavelength. Amount of scatter is proportional to wavelength, scatterer size and material.
