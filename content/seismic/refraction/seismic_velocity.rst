@@ -97,7 +97,7 @@ The relations between elastic properties and velocity, introduced under "Fundame
 
 The two elastic constants and density each depend on the properties that geologists or engineers use to characterize the rock. These are the "secondary properties", including porosity, fluid saturation, texture etc. Many of these relationships are empirical - velocities are found to be related to certain rock units in a given locale by actual laboratory measurements on core samples of the rock or soil.
 
-One generally applicable rule is that seismic velocities generally increase with depth. However densities also increase with depth, so it must be that the bulk and shear modulii ( \\(K\\) and \\(\mu\\) respectively) increase faster than the density. There are many empirical relationships between velocity and depth of burial and geologic age, and different publications will present these relationships in various graphical or tabular ways. In the next section, general expectations for how porosity, lithification, pressure and fluid saturation affect velocity are summarized.
+One generally applicable rule is that seismic velocities generally increase with depth. However densities also increase with depth, so it must be that the bulk and shear modulii ( \\(K\\) and \\(\\mu\\) respectively) increase faster than the density. There are many empirical relationships between velocity and depth of burial and geologic age, and different publications will present these relationships in various graphical or tabular ways. In the next section, general expectations for how porosity, lithification, pressure and fluid saturation affect velocity are summarized.
 
 
 Porosity
@@ -106,7 +106,7 @@ Porosity
 A very rough rule is the so called Wyllie's time average relationship (in which \\( \\phi \\) is the porosity):
 
 .. math::
-    \frac{1}{V_{\text{bluk}}} = \frac{\phi}{V_{\text{fluid}}} + \frac{1-\phi}{V_{\text{matrik}}}
+    \frac{1}{V_{\text{bluk}}} = \frac{\phi}{V_{\text{fluid}}} + \frac{1-\phi}{V_{\text{matrix}}}
 
 This is not based on theory but is roughly right when the effective pressure is high and the rock is fully saturated. It is used extensively in the oil industry to convert data from "sonic logs" (which measure formation velocities directly) into porosity.
 

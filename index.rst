@@ -9,6 +9,7 @@ Contents:
    content/seismic/refraction/index
    content/seismic/reflection/index
    content/GPR/index
+   content/DC_resistivity/index
  
 
 
