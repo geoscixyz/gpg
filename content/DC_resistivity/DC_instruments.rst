@@ -65,19 +65,21 @@ Ordinary insulated wire on reels (possibly on a back-pack) for easy handling are
 Variations on the theme
 =======================
 
-
-Since the early 1990's manufacturers of instruments have been producing automated systems which permit the use of electrodes for either current source or potential measurements. Some systems involve planting a series of electrodes and wiring them together with a cable, which allows each electrode to be selected either as a potential electrode or as a current source. This procedure is being implemented in borehole projects, as well as surface surveys. Examples of systems that work in this manner are given in the following list (as of January 2007).
-
-	-http://www.agiusa.com/index.shtml (images to the right)
-	-http://www.iris-instruments.com/Product/Brochure/syscal.html
-	-http://www.zonge.com/
-
-
 .. figure:: ./images/field_site.jpg
 	:align: right
 	:scale: 100 
 
 .. figure:: ./images/trawling.jpg
+	:align: right
+	:scale: 100 
+
+Since the early 1990's manufacturers of instruments have been producing automated systems which permit the use of electrodes for either current source or potential measurements. Some systems involve planting a series of electrodes and wiring them together with a cable, which allows each electrode to be selected either as a potential electrode or as a current source. This procedure is being implemented in borehole projects, as well as surface surveys. Examples of systems that work in this manner are given in the following list (as of January 2007).
+
+- http://www.agiusa.com/index.shtml (images to the right)
+- http://www.iris-instruments.com/Product/Brochure/syscal.html
+- http://www.zonge.com/
+
+.. figure:: ./images/ohm_mapper.jpgg
 	:align: right
 	:scale: 100 
 
