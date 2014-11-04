@@ -79,7 +79,7 @@ Since the early 1990's manufacturers of instruments have been producing automate
 - http://www.iris-instruments.com/Product/Brochure/syscal.html
 - http://www.zonge.com/
 
-.. figure:: ./images/ohm_mapper.jpgg
+.. figure:: ./images/ohm_mapper.jpg
 	:align: right
 	:scale: 100 
 
@@ -92,7 +92,10 @@ Another arrangement involves a towed array system in which all potential and sou
 In the early 1990's receivers were developed that could record complete digitized potential waveforms rather than simply measuring voltages at specific times relative to the transmitted signal. These systems produce large data sets, but with field computers running the systems, storage is not a problem. Fully digitized waveforms have several potential advantages, including identification and removal of all types of noise, and interpretation of subtle, 2nd and 3rd order effects caused by frequency dependant responses of subsurface materials. One example of a current full waveform system is the Titan 24 Deep Earth Imaging System of Quantec Geoscience (as of January 2007). An example of full waveform data gathered by MIDAAS Inc. in the early 1990's is shown to the right. The figure shows the "off-time" IP signals for 12 potential measurements taken using one current station. "On-time" signals are not shown.
 
 
+References
+==========
 
+Corwin, R.F., 1990, *The self-potential method for environmental and engineering applications*, in Geotechnical and Environmental Geophysics, Vol I: Review and Tutorial, (Ward, S.H., ed), Society of Exploration Geophysics, pg 127 - 146. 
 
 
 

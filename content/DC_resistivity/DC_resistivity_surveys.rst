@@ -16,25 +16,25 @@ Like all geophysical processes, DC surveys can be described in terms of input en
 	:align: center
 	:scale: 100 %
 
-Using the same colour scheme as the flow diagram above, Figure 2 shows how this conceptual framework applies for DC methods. The energy source is a pair of electrodes that inject a well-known current into the ground at known locations (Fig. 2a). The earth affects this energy because variations in the electrical conductivity of subsurface structures will bend the current flow lines (Fig. 2b). The measured signals or data (Fig. 2c) will involve measurements of voltage at the earth's surface or within boreholes. This type of data contains information about how charges become distributed at boundaries where electrical conductivity changes.
+Using the same colour scheme as the flow diagram above, Figure 2 shows how this conceptual framework applies for DC methods. The energy source is a pair of electrodes that inject a known current into the ground at known locations (Figure 2a). The earth affects this energy because variations in the electrical conductivity of subsurface structures will bend the current flow lines (Figure 2b). The measured signals or data (Figure 2c) will involve measurements of voltage at the earth's surface or within boreholes. This type of data contains information about how charges become distributed at boundaries where electrical conductivity changes.
 
 .. figure:: ./images/E_source.gif
 	:align: center
 	:scale: 100 %
 
-	fig. 2a. The energy source is a controlled DC electrical current injected into the ground.
+	Figure 2a. The energy source is a controlled DC electrical current injected into the ground.
 
 .. figure:: ./images/E_source2.gif
 	:align: center
 	:scale: 100 %
 
-	fig. 2b. Increases and decreases in electrical conductivity cause current paths to converge and diverge respectively.
+	Figure 2b. Increases and decreases in electrical conductivity cause current paths to converge and diverge respectively.
 
 .. figure:: ./images/E_source3.gif
 	:align: center
 	:scale: 100 %
 
-	fig. 2c. Data are voltages caused by charges accumulating due to current flow.
+	Figure 2c. Data are voltages caused by charges accumulating due to current flow.
 
 For each placement of the transmitting electrodes, voltages will be measured at different locations. Therefore, the complete data set includes measured voltages with known currents and electrode geometries. In order to create maps or graphs of raw data for quality assessment, it is usual to convert the data into a form that has units of resistivity. The data are the input for DC resistivity inversions, and the results will be 1D, 2D or 3D models of how subsurface conductivity is distributed.
 
@@ -44,6 +44,8 @@ The physical property: electrical conductivity
 .. figure:: ./images/cube.gif
 	:align: right
 	:scale: 100 %
+
+Electrical conductivity (or resistivity) is a bulk property of material describing how well that material allows electric currents to flow through it. Consider current flowing through the unit cube of material shown to the right: 
 
 **Conductivity**, \\(\\sigma\\), is the inverse of resistivity: \\(\\sigma = 1/\\rho\\). Conductivity is given in units of Siemens per metre, or S/m. Millisiemens per metre (mS/m) are often used; 1000 mS/m = 1 S/m. So 1 mS/m = 1000 Ohm-m.
 

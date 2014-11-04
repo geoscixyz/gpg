@@ -17,7 +17,7 @@ In order to derive a relation between measurments (I, V and geometry) and the re
 	:align: right
 	:scale: 100 %
 
-Consider first a uniform Earth and one electrode, which is pumping a current, I, into the ground. We want to find the electric potential within the ground at a distance, r, from the current source. The current density in the ground is related to source current injected, and the potential measured at a surface defined by, r, is related to the electric field that exists in the ground because of the current which flows radially outward from its point source. These two relations will be combined with the 3D form of Ohm's law to end up with an expression for conductivity (the physical property we want) in terms of the current source, measured potential, and the distance.
+Consider first a uniform Earth and one electrode, which is pumping a current, \\(I\\), into the ground. We want to find the electric potential within the ground at a distance, \\(r\\), from the current source. The current density in the ground is related to source current injected, and it flows radially outward from its point source. The potential measured at a surface defined by \\(r\\) is related to the electric field that exists in the ground because of the current. These two relations will be combined with the 3D form of Ohm's law to end up with an expression for conductivity (the physical property we want) in terms of the current source, measured potential, and the distance.
 
 First, by symmetry the current density out of the hemisphere of radius, \\(r\\), is
 
@@ -29,7 +29,7 @@ and the current is flowing in a radial direction. Since \\(J= \\sigma E\\) (Ohm'
 .. math::
 		E = -\frac{dV(r)}{dr}
 
-Combining the expression for E, Ohm's Law and equation 1, we have
+Combining the expression for \\(E\\), Ohm's Law and equation 1, we have
 
 .. math::
 		J = -\sigma \frac{dV(r)}{dr} &= \frac{I}{2 \pi r^2}
@@ -81,8 +81,8 @@ Two electrode current sources
 
 In a geophysical survey, current is injected into the ground using two electrodes. It is convenient to label the electrodes as
 
-A. positive current electrode (carries a current +I)		
-B. negative current electrode (carries a current -I)
+A. positive current electrode (carries a current \\(+I\\))		
+B. negative current electrode (carries a current \\(-I\\))
 
 .. figure:: ./images/fieldlines.gif
 	:align: right
@@ -108,7 +108,7 @@ For a uniform Earth, lines of current flow are shown in red in the figure to the
 
 From these calculations and the graph of the current flow shown above, notice that almost 50% of the current placed into the ground flows through rock at depths shallower than or equal to the current electrode spacing.
 
-The graph shown below plots the potential that would be measured along the surface of the earth for a fixed 2-electrode source. The voltage we would observe with our voltmeter (between purple electrodes) is the difference in potential at the two voltage electrodes, \\(\\Delta V\\).
+The graph shown below plots the potential that would be measured along the surface of the earth for a fixed 2-electrode source. The voltage we would observe with our voltmeter (between purple electrodes) is the **difference** in potential at the two voltage electrodes, \\(\\Delta V\\).
 
 .. figure:: ./images/pot_difference.gif
 	:align: center
@@ -117,7 +117,7 @@ The graph shown below plots the potential that would be measured along the surfa
 Practical surveys
 =================
 
-If there are two current (source) electrodes, the potential is the superposition of the effects from both. In a practical experiment (figure below), one electrode, A, is the positive side of a current source, and the other electrode, B, is the negative side. The current into each electrode is equal, but of opposite sign. For a practical survey, we need two electrodes to measure a potential difference. These are M, the positive terminal of the voltmeter (the one closest to the A current electrode), and N, the negative terminal of the voltmeter.
+If there are two current (source) electrodes, the potential is the superposition of the effects from both. In a practical experiment (figure below), one electrode, \\(A\\), is the positive side of a current source, and the other electrode, \\(B\\), is the negative side. The current into each electrode is equal, but of opposite sign. For a practical survey, we need two electrodes to measure a potential difference. These are \\(M\\), the positive terminal of the voltmeter (the one closest to the \\(A\\) current electrode), and \\(N\\), the negative terminal of the voltmeter.
 
 .. figure:: ./images/practical_experiemnt.gif
 	:align: center
@@ -135,7 +135,7 @@ The measured voltage is a potential difference \\((V_M - V_N)\\) in which each p
 Apparent resistivity
 ====================
 
-In the final relation, G is a geometric factor which depends upon the geometry of all four electrodes. Finally, we can define apparent resistivity (discussed in the measurements section) by rearranging the last expression to give:
+In the final relation, \\(G\\) is a geometric factor which depends upon the geometry of all four electrodes. Finally, we can define apparent resistivity (discussed in the measurements section) by rearranging the last expression to give:
 
 .. math::
 		\rho_a = \frac{\Delta V}{IG}
@@ -157,7 +157,7 @@ Structural anisotropy (for example, layering or fracturing) causes the simple fo
 		J_i = -\sigma_{ik} \frac{\partial V}{\partial  x_k} \quad i,k = 1,2,3
 
 
-In homogeneous ground with a single current and potential electrodes, the expression for V (voltage) in terms of resistivity and distance from the current source is \\(V=-I \\rho / 2 \\pi r \\) (which was shown above). In anisotropic ground, there are different values of resistivity for the horizontal and a vertical directions. The expression for voltage in terms of the two resistivities and distance is
+In homogeneous ground with a single current and potential electrodes, the expression for \\(V\\) (voltage) in terms of resistivity and distance from the current source is \\(V=-I \\rho / 2 \\pi r \\) (which was shown above). In anisotropic ground, there are different values of resistivity for the horizontal and a vertical directions. The expression for voltage in terms of the two resistivities and distance is
 
 .. math::
 		V=-I \frac{\sqrt{\rho_h \rho_v}}{2 \pi r} = - \frac{I \rho_h \lambda}{2 \pi r}
@@ -197,6 +197,8 @@ Recall that Ohm's law is \\(**J** = \\sigma **E**\\). Since the normal component
 	:scale: 120 %
 
 The only way an electric field can change at a boundary is if there is a charge on the boundary. If the current is flowing from a resistive medium to a conductive medium, then the charge buildup will be negative. If the current flows from a conductive medium to a resistive medium, then the charge will be positive. This is illustrated in the diagram below-left, where the anomalous body (blue) is more conductive than the host (yellow). In the figure below-right, the change in **E**-field is illustrated for a field crossing from a resistive medium (yellow) into a more conductive zone (blue). Tangential components are unchanged, but normal components of **E** are different so that normal components of **J** can remain unchanged. This change in direction is the origin of the concept that current lines "converge" upon entering a conductor, and "diverge" upon entering a resistor (illustrated with cartoons of the ore body in this chapter's introduction).
+
+.. check reference to introduction. Either change reference or change title to first section.
 
 .. figure:: ./images/conductive_body.gif
 	:align: left
@@ -245,12 +247,12 @@ Using the physics and appropriate mathematics to calculate a set of measurements
 	&(b) \quad \textbf{E} = \nabla V \quad  &&\textrm{The electric field is the gradient of a scalar potential.}  \\[0.4em]
 	&(c) \quad \nabla \cdot\ \textbf{J} = - \partial{Q} / \partial{t} \quad &&\textrm{The divergence of current density equals the rate of change of free charge density.}
 
-We want to obtain a differential equation and boundary conditions to define the forward problem that will allow us to relate conductivity everywhere to potential everywhere. Start by combining (a) and (b) to say \\(**J** = \\sigma \\nabla V \\), then plug this into (c) to get
+We want to obtain a differential equation and boundary conditions to define the forward problem that will allow us to relate conductivity everywhere to potential everywhere. Start by combining (a) and (b) to say \\(\\textbf{J} = \\sigma \\nabla V \\), then plug this into (c) to get
 
 .. math:: 
 		\nabla \cdot\ (\sigma \nabla V) = - \partial{Q} / \partial{t} \quad (2)
 
-This holds for steady state conditions everywhere, except at the source position \\(r = r_s\\), where it equals the input current, \\I\\). In other words, charge does not accumulate under steady state conditions, except at the point of the source.
+This holds for steady state conditions everywhere, except at the source position \\(r = r_s\\), where it equals the input current, \\(I\\). In other words, charge does not accumulate under steady state conditions, except at the point of the source.
 
 Equation (2) can be re-written as
 
@@ -265,3 +267,11 @@ The Dirac delta function is used here to indicate that charge density is varying
 
 This differential equation (3) and the two boundary conditions define the forward problem that relates conductivity everywhere in the ground to potential measured anywhere within or on the surface of the ground. This problem can be solved numerically using finite element or finite volume techniques. 
 
+References
+----------
+
+**Dey , A. and H.F. Morrison**, 1979a, *Resistivity modelling for arbitrarily shaped two-dimensional structures*, Geophysical Prospecting, 27, 106-136.
+
+**Dey, A. and H.F. Morrison, 1979b**, *Resistivity modeling for arbitrarily shaped three-dimensional structures*, Geophysics, 44, no. 4, 753-780.
+
+**McGillevry, P.R.**, 1992, *Forward modelling and inversion of DC resistivity and MMR data*, unpublished PhD. thesis, UBC.
