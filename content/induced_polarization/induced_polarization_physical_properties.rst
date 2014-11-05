@@ -10,15 +10,13 @@ The chargeability of earth materials is essentially an electrochemical effect ca
  - the details of microscopic interactions between solid surfaces and fluids;
  - the amount of surface area within a specific volume.
 
- The surface area-to-volume ratio is an important factor. Clays tend to be chargeable while sandstones are not, and the images here illustrate one reason why this is true. In addition, the surface interactions between clay minerals and fluids enhance the ability of these materials to hold charges.
-
+The surface area-to-volume ratio is an important factor. Clays tend to be chargeable while sandstones are not, and the images here illustrate one reason why this is true. In addition, the surface interactions between clay minerals and fluids enhance the ability of these materials to hold charges.
 
 .. figure:: ./images/illite.gif
 	:align: center
 	:scale: 120 %
  
 	Illite (a clay mineral) with surface area-to-volume ratio of \\(100m^2/g\\) (1000 times greater than sandstone)
-
 
 .. figure:: ./images/quartz.gif
 	:align: center
@@ -33,7 +31,6 @@ There are two primary causes of chargeability. In both cases the re-distribution
 
 Membrane polarization
 ^^^^^^^^^^^^^^^^^^^^^
-
 
 Membrane polarization occurs when pore space narrows to within several boundary layer thicknesses (which is the thickness of ions adsorbed to a surface).
 
@@ -55,8 +52,6 @@ The result is a net charge dipole which adds to any other voltages measured at t
 	:align: center
 	:scale: 100 %
 
-
-
 A second form of membrane polarization is similar to the first:
 
 .. figure:: ./images/memb_pol_2nd_type.gif
@@ -66,7 +61,6 @@ A second form of membrane polarization is similar to the first:
 This occurs where clay particles partially block ionic solution paths, as in the adjacent figure. Upon application of an electric potential, positive charge carriers pass easily, while negative carriers accumulate. There is an "ion-selective membrane."
 
 A surplus of both cations and anions occurs at one end of the membrane, while a deficiency occurs at the other end. The reduction of mobility is most obvious at frequencies slower than the diffusion time of ions between adjacent membrane zones; i.e. slower than around 0.1 Hz. Conductivity increases at higher frequencies.
-
 
 Electrode polarization
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -83,8 +77,6 @@ The result is two electrical double layers which add to voltages measured at the
 	:align: center
 	:scale: 100
 
-
-
 Comments on electrode polarization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -95,7 +87,6 @@ Comments on electrode polarization
 Some remarks are appropriate here in order to provide some sense of the complexity of the chargeability phenomenon.
 
 At an interface between ionic and metallic conduction (for example, an ore grain in pore water), there is an impedance involved in getting current to flow across the barrier. These interfaces look like the top figure and have the simplified circuit analogue shown in the bottom figure. 
-
 
 .. figure:: ./images/elec_pol_4.gif
 	:align: right
@@ -138,9 +129,6 @@ These examples show that a wide range of variability can be expected, implying t
 
 **Table 1:** Charging and integration times were about 1 minute each, which is much longer than field survey systems; therefore, values are larger than field measurements. 
 
-
-
-
 +-----------------------+--------------------------+
 |  **Material type**    | **Chargeability (msec)** |
 +=======================+==========================+
@@ -162,7 +150,6 @@ These examples show that a wide range of variability can be expected, implying t
 +-----------------------+--------------------------+
 | limestone, dolomite   | 10-20                    |  
 +-----------------------+--------------------------+
-
 
 **Table 2:** The values below involved more realistic charging and integration times of 3 seconds and 0.02-1.0 seconds respectively.
 
