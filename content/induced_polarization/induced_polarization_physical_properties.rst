@@ -118,7 +118,7 @@ The Cole-Cole model for complex impedance is often used for modeling the ground'
  .. math::
 		\rho (\omega) = \rho_0 \left[1-m \left( 1- \frac{1}{1+(j \omega \tau)^c}\right) \right] 
 
-This relation describes a complex impedance as a function of frequency, \\(omega\\) with three parameters. \\(m\\) is intrinsic chargeability, \\(tau\\) is a time constant (of the decay curve), and \\(c\\) is a parameter controlling the frequency dependence.	
+This relation describes a complex impedance as a function of frequency, \\(\\omega\\) with three parameters. \\(m\\) is intrinsic chargeability, \\(\\tau\\) is a time constant (of the decay curve), and \\(c\\) is a parameter controlling the frequency dependence.	
 
 Typical chargeabilities for materials
 =====================================
