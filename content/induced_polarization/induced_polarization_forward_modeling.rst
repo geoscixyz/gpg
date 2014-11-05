@@ -15,7 +15,7 @@ Essential equations
 We start by considering a theoretical form of time-domain IP data. Recall that if a square current signal is injected into the ground, the potential recorded over chargeable ground will exhibit a delayed response caused by the charging and discharging of the ground. There are three potentials that can be defined on this measured voltage waveform, as shown on the adjacent figure. The theoretical IP datum is defined as the ratio of the secondary voltage measured immediately upon shutting off the current source to the primary voltage measured after the signal has stabilized while the current is still on.
 
  .. math::
- 		d= \frac{V_s}{V_P} = \frac{V_P - V _ {\sigma}}{V_P} = \frac{F_{DC}(\sigma (1 - m)) - F_{DC}(\sigma)}{F_{DC}(\sigma (1 - m)) }
+ 		d= \frac{V_s}{V_P} = \frac{V_P - V _ {\sigma}}{V_P} = \frac{F_{DC}[\sigma (1 - m)] - F_{DC}[\sigma]}{F_{DC}[\sigma (1 - m)] }
 
 The right hand side of this equation is showing that each potential can be found using a DC resistivity forward modeling calculation using the conductivity of the region involved, and that conductivity is modified by chargeability, \\(m\\). This is based upon the original definition of chargeablity suggested by Seigel, 1959. 
 
