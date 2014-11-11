@@ -11,6 +11,7 @@ Contents:
    content/GPR/index
    content/DC_resistivity/index
    content/induced_polarization/index
+   content/electromagnetics/index
  
 
 

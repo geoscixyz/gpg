@@ -43,6 +43,7 @@ Current is usually injected as a 50% duty cycle reversing square wave (Figure 3)
 
 	Figure 3
 
+.. raw:: ./foo.html
 
 This pattern for the current source is necessary because a voltage measured when the current is off will be non-zero in many situations. Naturally occurring potentials are called spontaneous or self potentials (SP), and they are usually caused by electrochemical activity in the ground. From the point of view of DC resistivity surveys, SP voltages are noise because measured voltages must be caused by the source current only. The 50% duty cycle reversing square wave is employed so as to remove the (poorly known) SP signals.
 

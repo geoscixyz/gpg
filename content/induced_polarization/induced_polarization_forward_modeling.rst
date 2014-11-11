@@ -2,9 +2,7 @@
 
 Forward Modeling
 ****************
-
-
- 	
+	
 Essential equations 
 -------------------
 
