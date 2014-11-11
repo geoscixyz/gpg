@@ -1,7 +1,7 @@
 .. _electromagnetics_index:
 
-Electromagnetics
-================
+Electromagnetic Methods
+=======================
 
 Contents:
 
@@ -9,3 +9,4 @@ Contents:
    :maxdepth: 3
  
    electromagnetics_concepts
+   electromagnetics_fk_domain_systems
