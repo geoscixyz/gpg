@@ -335,7 +335,7 @@ Further insight about the apparent conductivity is obtained by incorporating the
 
 respectively for the vertical and horizontal dipoles.
 
-Multilayer Karth Structures
+Multilayer Earth Structures
 ===========================
 
 Under the assumption that \\( s << \\delta \\)  then the above formulae can be used to predict the
