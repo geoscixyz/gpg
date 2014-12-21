@@ -61,12 +61,12 @@ The details of Earth's field at any location on Earth are described using a form
 
 * A sidebar_ describing the International Geomagnetic Reference Field.
 * Three figures_ show how declination, inclination and field strength varies around the world.
-* NOAA_ Geomagnetism home page, and the Canadian National Geomagnetism Program's homepage_ websites.
+* `NOAA Geomagnetism`_ home page, and the Canadian National Geomagnetism Program's homepage_ websites.
 * Find parameters describing Earth's test_ field at a specific location (specified using date, latitude, longitude and elevation) at the NOAA National Geophysical Data Center's online magnetic field calculator here_.
 
 .. _sidebar: file:///C:/Users/Philip/Desktop/GIT/GPG/_build/html/content/magnetics/magnetics_IGRF.html
 .. _figures: file:///C:/Users/Philip/Desktop/GIT/GPG/_build/html/content/magnetics/magnetics_three_figures.html
-.. _NOAA: http://www.ngdc.noaa.gov/ngdc.html
+.. _NOAA Geomagnetism: http://www.ngdc.noaa.gov/ngdc.html
 .. _homepage: http://www.geomag.nrcan.gc.ca/index-eng.php
 .. _here: http://www.ngdc.noaa.gov/geomag-web/
 .. _test: file:///C:/Users/Philip/Desktop/GIT/GPG/_build/html/content/seismic/refraction/index.html

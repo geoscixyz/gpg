@@ -3,7 +3,7 @@
 Magnetics
 =========
 
-Contents:
+Contents:bur
 
 .. toctree::
    :maxdepth: 3
@@ -12,3 +12,8 @@ Contents:
    magnetics_susceptibility
    magnetics_earths_field
    magnetics_buried_dipole
+   magnetics_gradient_magnetics   
+   magnetics_simple_vs_complex
+   magnetics_instruments
+   magnetics_plotting_processing
+   magnetics_buried_structures
