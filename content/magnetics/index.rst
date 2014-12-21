@@ -17,3 +17,4 @@ Contents:bur
    magnetics_instruments
    magnetics_plotting_processing
    magnetics_buried_structures
+   magnetics_line_profiles
