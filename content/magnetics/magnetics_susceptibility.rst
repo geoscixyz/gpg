@@ -21,31 +21,11 @@ Some Definitions
 	& \text{1 Tesla} = 10^9 \text{nT} \\[0.3em]
 	& \text{1 nT} =   \gamma
 
-**What is susceptibility?** When there is no external magnetic field, individual magnetic zones ("magnetic domains") within rocks, soils or other materials will generally be oriented randomly. The net effect would be a zero magnetic field. However, when the material is in the presence of an external magnetic field such as Earth’s field, the individual magnetic domains become more or less aligned, resulting in a net non-zero field. This is a secondary field distinct from, but caused by, the Earth’s field. The following figures illustrate:
+**What is susceptibility?** When there is no external magnetic field, individual magnetic zones ("magnetic domains") within rocks, soils or other materials will generally be oriented randomly. The net effect would be a zero magnetic field. However, when the material is in the presence of an external magnetic field such as Earth’s field, tBKhe individual magnetic domains become more or less aligned, resulting in a net non-zero field. This is a secondary field distinct from, but caused by, the Earth’s field. The following interactive figure illustrates:
 
-.. figure:: ./images/susceptibility1.gif
-	:align: center
-	:scale: 150%
-
-	No external field. The rock sample has zero net field.
-
-.. figure:: ./images/susceptibility2.gif
-	:align: center
-	:scale: 150%
-
-	Magnetic domains are oriented randomly.
-
-.. figure:: ./images/susceptibility3.gif
-	:align: center
-	:scale: 150%
-
-	If an external field **H** exists, magnetic domains will align to it. The body aquires a "magnetization."
-
-.. figure:: ./images/susceptibility4.gif
-	:align: center
-	:scale: 150%	
-
-	The net effect of the magnetization causes rock sample to have a non-zero magnetic field, **m**. 	
+.. raw:: html
+    :file: susceptibility.html
+	
 	
 The strength of the induced magnetisation,**M**, the "dipole moment per unit volume", has units \\( Am^2 \\). It is related to the causative field's strength, **H**, by 
 
@@ -53,6 +33,9 @@ The strength of the induced magnetisation,**M**, the "dipole moment per unit vol
 		\vec{M}=\kappa \vec{H}
 
 Susceptibility \\( \\kappa \\) is a dimensionless number related to the number of individual magnetic dipoles in the medium that can be aligned with the main field. Note that as the field increases the number of dipoles that align themselves with the field also increases.
+
+
+
 
 Although unit-less, the value of susceptibility is different in the cgs and SI systems of measurement because of the way electromagnetic derivations proceed within the two systems. Translation between cgs and SI systems of units is done via \\(\\kappa (SI) = 4 \\pi \\kappa(cgs) \\) . The SI system is the current preferred standard among most geophysicists, but you will find cgs used in older references and texts. For more details, see the sub-section on units in the "Geophysical Surveys" chapter, "Magnetics" section.  
 

@@ -11,15 +11,13 @@ We learned above what the anomalous magnetic field will be over a buried dipole 
 
 The concept is illustrated in the following eight figures selected with the buttons. (Such calculations are introduced in section 10 and details are given in section 11.)
 
-.. figure:: ./images/1a.gif 
-	:align: center
-	:scale: 100%
+.. raw:: html
+    :file: simple_vs_complex.html
 
 Here again are the data generated from the single block, the 5 blocks and the continuous Earth models: 
 
-.. figure:: ./images/block-data.gif 
-	:align: center
-	:scale: 100%
+.. raw:: html
+    :file: simple_vs_complex2.html
 
 The following table gives access to model, mesh and data files associated with these 3 models (uniform earth, 1 block, 5 blocks) for use with UBC-GIF modelling and inversion code MAG3D. The MeshTools3D program is used to view 3D models. The filename extensions will be understandable to those familiar with use of these codes. See MAG3D in IAG's Chapter 10, "Sftwr & manuals" . 
 

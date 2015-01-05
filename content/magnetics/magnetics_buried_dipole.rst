@@ -6,11 +6,6 @@ Response over a buried magnetic dipole
 Fields due to buried magnetic dipoles 
 =====================================
 
-.. no_field.gif
-.. inducing_field.gif
-.. magnetic_anomaly.gif
-.. measurements.gif
-
 To learn about magnetic field data that will be recorded at Earth's surface over buried susceptible material, start by considering a small susceptible object that is magnetized by the Earth's field. "Small" means that all of the object's dimensions are several times smaller than the depth to its center. If the object is small, its induced field can be approximated as if the object were a "magnetic dipole" -- that is, a little bar magnet with strength and direction caused by the inducing field. Understanding this simple situation is crucial because all real scenarios can be thought of as a combination (superposition) of many dipoles (see the "Buried structures" section). The sign convention will be that horizontal fields are positive if they point in the \\(\\hat{x}\\) direction and vertical fields are positive if they point down.
 
 The figures below illustrate the problem. The pattern recorded at the surface arises by measuring the field strength everywhere on the surface, removing the Earth's field, and then plotting the results as a contour map of anomalous field strength. In the third figure, regions of blue anomalous field are "negative" because at those surface locations, the **anomalous** field crossing that surface points in the opposite direction for Earth's field.

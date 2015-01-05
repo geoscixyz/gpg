@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Content page</title>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+</head>
+<body> 
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="99%"> 
+  <tbody> 
+    <tr> 
+      <td bgcolor="#ffffff" width="12">&nbsp;</td> 
+              <table align="center" border="1" cellpadding="2" cellspacing="0" width="95%"> 
+          <tbody> 
+            <tr valign="top"> 
+              <td> <form name="form1" method="post" action=""> 
+                  <img src="./../../_images/intro1.gif" name="intro" id="intro" align="right" height="109" width="120"> 
+                  <input name="radiobutton" onclick="MM_swapImage('intro','','./../../_images/intro1.gif',1)" value="radiobutton" checked="checked" type="radio"> 
+                  No external field. Rock sample has zero net field.<br> 
+                  <input name="radiobutton" onclick="MM_swapImage('intro','','./../../_images/intro2.gif',1)" value="radiobutton" type="radio"> 
+                  Magnetic domains are oriented randomly.<br> 
+                  <input name="radiobutton" onclick="MM_swapImage('intro','','./../../_images/intro3.gif',1)" value="radiobutton" type="radio"> 
+                  If an external field <strong>H</strong> exists, magnetic domains will align to it.<br> 
+                  <input name="radiobutton" onclick="MM_swapImage('intro','','./../../_images/intro4.gif',1)" value="radiobutton" type="radio"> 
+                  Net effect of all aligned fields causes rock sample to have a NON-zero field, <strong>m</strong>.
+                </form> 
+                <p align="right"><em>Click buttons to change the image. </em></p></td> 
+            </tr> 
+          </tbody> 
+                    
+
+</table> 
+</tr>
+</tbody>
+</table>
+<p></p>
+</body>
+</html>

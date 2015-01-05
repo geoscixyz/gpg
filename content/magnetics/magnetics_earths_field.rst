@@ -59,17 +59,17 @@ Sketch of coordinates used to describe magnetic fields.
 The details of Earth's field at any location on Earth are described using a formula based upon a spherical harmonic decomposition of the field called the IGRF or International Geomagnetic Reference Field. Details about Earth's field can be found at government geoscience websites (listed below) such as the NOAA Geomagnetism home page, or the Canadian National Geomagnetism Program's home page. Resources about Earth's global magnetic field are:
 
 
-* A sidebar_ describing the International Geomagnetic Reference Field.
-* Three figures_ show how declination, inclination and field strength varies around the world.
-* `NOAA Geomagnetism`_ home page, and the Canadian National Geomagnetism Program's homepage_ websites.
-* Find parameters describing Earth's test_ field at a specific location (specified using date, latitude, longitude and elevation) at the NOAA National Geophysical Data Center's online magnetic field calculator here_.
+* `A sidebar`_ describing the International Geomagnetic Reference Field.
+* `Three figures`_ show how declination, inclination and field strength varies around the world.
+* `NOAA Geomagnetism home page`_, and the `Canadian National Geomagnetism Program's `home page`_ websites.
+* Find parameters describing Earth's field at a specific location (specified using date, latitude, longitude and elevation) at the NOAA National Geophysical Data Center's online `magnetic field calculator`_.
 
-.. _sidebar: file:///C:/Users/Philip/Desktop/GIT/GPG/_build/html/content/magnetics/magnetics_IGRF.html
-.. _figures: file:///C:/Users/Philip/Desktop/GIT/GPG/_build/html/content/magnetics/magnetics_three_figures.html
-.. _NOAA Geomagnetism: http://www.ngdc.noaa.gov/ngdc.html
-.. _homepage: http://www.geomag.nrcan.gc.ca/index-eng.php
-.. _here: http://www.ngdc.noaa.gov/geomag-web/
-.. _test: file:///C:/Users/Philip/Desktop/GIT/GPG/_build/html/content/seismic/refraction/index.html
+.. _A sidebar: file:///C:/Users/Philip/Desktop/GIT/GPG/_build/html/content/magnetics/magnetics_IGRF.html
+.. _Three figures: file:///C:/Users/Philip/Desktop/GIT/GPG/_build/html/content/magnetics/magnetics_three_figures.html
+.. _NOAA Geomagnetism home page: http://www.ngdc.noaa.gov/ngdc.html
+.. _home page: http://www.geomag.nrcan.gc.ca/index-eng.php
+.. _magnetic field calculator: http://www.ngdc.noaa.gov/geomag-web/
+
 
 Variability of Earth's field
 ----------------------------
@@ -83,13 +83,15 @@ The source of the main (nearly dipolar) field varies slowly, causing changes in 
 
 The second component of Earth's field involves external contributions due primarily to currents in the ionized upper atmosphere. 
 
-* Daily variations (on the order of 20 - 50 nT in size) are due to solar wind action on the ionosphere and magnetosphere. The image shows an artist's rendition of the charged particles interacting with Earth's magnetic field. An overview of Earth's magnetic field (with good images, graphs, etc.) can be found on the British Geological Survey's geomagnetics website_.
+* Daily variations (on the order of 20 - 50 nT in size) are due to solar wind action on the ionosphere and magnetosphere. The image shows an artist's rendition of the charged particles interacting with Earth's magnetic field. An overview of Earth's magnetic field (with good images, graphs, etc.) can be found on the British Geological Survey's `geomagnetics website`_.
 
-.. _website: http://www.geomag.bgs.ac.uk/
+.. _geomagnetics website: http://www.geomag.bgs.ac.uk/
 
 * Magnetic storms are correlated with sunspot activity, usually on an 11-year cycle. These variations can be large enough to cause damage to satellites and north-south oriented power distribution systems. They are also the cause of the Aurora Borealis or Australis (northern or southern lights respectively). See the GSC's "Geomagnetic Hazards" web page for more.
 
 
 Temporal variations are often larger than geophysical anomalies. They must be accounted for in all surveys. The only exception is gradient magnetic surveys gathered using two sensors. Three figures are given in a sidebar showing examples of different types of magnetic noise that may be encountered at time scales of several days, hours, and minutes.
 
-The Geological Survey of Canada has a web page, which can provide graphs of diurnal variations observed at any of 11 magnetic observatories in Canada, for any day in the most recent 3 years. Find this facility by starting at the GSC Geomagnetic data page. 
+The Geological Survey of Canada has a web page, which can provide graphs of diurnal variations observed at any of 11 magnetic observatories in Canada, for any day in the most recent 3 years. Find this facility by starting at the `GSC Geomagnetic data page`_. 
+
+.. _GSC Geomagnetic data page: http://www.geomag.nrcan.gc.ca/index-eng.php
