@@ -16,7 +16,7 @@ Gradient measurements
 When buried objects are the target, geophysical surveys must usually detect features with high magnetic susceptibility and/or high electrical conductivity. Some objects will be magnetic, but others have negligible magnetic susceptibility (such as aluminum or some forms of stainless steel). When the buried targets are expected to be magnetic, measurements of variations in the strength of Earth's magnetic field often produce excellent results. However, because of the many ferrous objects and electrical sources of magnetic fields under and around industrial sites, total field anomaly maps may be too complicated to interpret, or subtle variations may be overwhelmed by larger features. A gradient survey is often a better choice under these conditions because the magnetic field gradient varies more rapidly than total field strength and it, therefore, provides higher spatial resolution. This is illustrated by the interactive figures below.
 
 .. raw:: html
-    :file: grad_mag.html
+    :file: html/grad_mag.html
 
 In addition to higher spacial resolution, temporal variations are automatically eliminated because the measured parameter is a difference of two total field measurements. Therefore, the base station measurements and subsequent data corrections normally required for total field surveys are not required. If the goal is to map variations in geological materials, then more subtle trends in magnetic response must be observed.
 
