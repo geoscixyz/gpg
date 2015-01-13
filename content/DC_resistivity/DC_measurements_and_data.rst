@@ -15,10 +15,9 @@ Current flow in the ground
 
 The path of the current in the earth after it is injected with two electrodes depends upon the distribution of electrical resistivity. If the Earth is uniform, current flows in a regular three dimensional pattern under the electrodes as illustrated Figure 1. The north slice number 8 (flagged with a *) is similar to the type of image commonly shown in texts to indicate how current flows in two dimensions under a pair of source electrodes.
 
-.. <<add multiple figure here>>
+.. raw:: html
+    :file: figure1.html
 
-
-Figure 1 here!
 
 Normally the earth is *not* uniform. Galvanic currents will flow towards regions of high conductivity and away from regions of high resistivity, as illustrated in Figure 2.
 
@@ -43,7 +42,7 @@ Current is usually injected as a 50% duty cycle reversing square wave (Figure 3)
 
 	Figure 3
 
-.. raw:: ./foo.html
+.. raw:: html
 
 This pattern for the current source is necessary because a voltage measured when the current is off will be non-zero in many situations. Naturally occurring potentials are called spontaneous or self potentials (SP), and they are usually caused by electrochemical activity in the ground. From the point of view of DC resistivity surveys, SP voltages are noise because measured voltages must be caused by the source current only. The 50% duty cycle reversing square wave is employed so as to remove the (poorly known) SP signals.
 
