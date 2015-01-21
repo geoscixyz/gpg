@@ -67,6 +67,7 @@ Geologically significant magnetic minerals are either in the iron-titanium-oxyge
 | Pyrrhotite            |\\( Fe_{1-x}S(Fe_7S_8) \\)|  \\( 1500 \\times 10^{-3} \\)     |   
 +-----------------------+--------------------------+-----------------------------------+
 
+
 Rocks
 -----
 

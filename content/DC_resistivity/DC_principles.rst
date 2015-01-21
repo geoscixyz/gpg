@@ -262,7 +262,7 @@ Equation (2) can be re-written as
 The Dirac delta function is used here to indicate that charge density is varying only at the point source of current.
 
 **Boundary conditions** that must hold are:
-	1. The change of potential across the free surface is zero \\(\\partial{V}/\\partial{n} = 0\\) at \\(z=0\\), and
+	1. The change of potential across the free surface is zero (\\(\\partial{V}/\\partial{n} = 0\\) at \\(z=0\\)), and
 	2. \\(V\\) approaches 0 as \\(r - r_s\\) approaches infinity.
 
 This differential equation (3) and the two boundary conditions define the forward problem that relates conductivity everywhere in the ground to potential measured anywhere within or on the surface of the ground. This problem can be solved numerically using finite element or finite volume techniques. 

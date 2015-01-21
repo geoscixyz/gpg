@@ -21,20 +21,12 @@ Wind, instrument, and cultural effects can generate unwanted noise at frequencie
 
 One can apply a frequency filter to remove all signals that have a frequency high than \\(f_H\\) and all frequencies lower than \\(f_L\\).
 
-.. figure:: ./images/no_filter.gif
-	:align: right
-	:scale: 100 %
+.. raw:: html
+    :file: filtering.html
 
-.. <<editorial comment>> Origninal GPG has a toggle for different filters. Filenames for the toogle are: no_filter.gif, low_pass_filter.gif, high_pass_filter.gif
-
-The figures to the right illustrate effects of low pass and high pass filters. First examine the figure and try to identify aspects caused by high frequencies. Then try to identify aspects caused by lower freqeuncy components in the signal. 	
 
 2. Deconvolution
 ----------------
-
-
-
-
 
 **a) Deghosting**
 

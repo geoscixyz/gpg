@@ -21,9 +21,10 @@ The path of the current in the earth after it is injected with two electrodes de
 
 Normally the earth is *not* uniform. Galvanic currents will flow towards regions of high conductivity and away from regions of high resistivity, as illustrated in Figure 2.
 
+.. raw:: html
+    :file: figure2.html
 
-.. <<add multiple figure here>>
-Figure 2 here!
+Figure 2. The Elura orebody (in New South Wales, Australia) is an example of a subsurface target with a range of electrical resistivities. Details are from I.G. Hone, *Geoelectric Properties of the Elura Prospect, Cobar, NSW*, in "The Geophysics of the Elura Orebody, Cobar NSW," 1980, Australian Society of Exploration Geophysicists.
 
 The relation between charge distribution, current flow and resulting potentials is discussed more fully in the section on principles. 
 
@@ -42,7 +43,6 @@ Current is usually injected as a 50% duty cycle reversing square wave (Figure 3)
 
 	Figure 3
 
-.. raw:: html
 
 This pattern for the current source is necessary because a voltage measured when the current is off will be non-zero in many situations. Naturally occurring potentials are called spontaneous or self potentials (SP), and they are usually caused by electrochemical activity in the ground. From the point of view of DC resistivity surveys, SP voltages are noise because measured voltages must be caused by the source current only. The 50% duty cycle reversing square wave is employed so as to remove the (poorly known) SP signals.
 
@@ -151,8 +151,8 @@ The most common specific arrays are detailed in Figure 7, but there are several 
 The following images show how electrodes are placed for the various named arrays. Electrodes placed on lines imply that the array is usually used for profiling. A circle at the array's center implies that the array is generally expanded symmetrically about its center for acquiring sounding data.
 
 
-.. <<add multiple figure here>>
-Figure 7 here!
+.. raw:: html
+    :file: figure7.html
 
 
 Plotting raw data
@@ -166,10 +166,8 @@ Soundings
 
 Soundings are used when the earth's electrical structure needs to be interpreted in terms of layers under a single location at the surface. The electrode spacings are varied symmetrically about a central location.
 
-Therefore, data must be plotted as a function of electrode spacing rather than as a function of location. The resulting plot is called a sounding curve, and it arises as shown in this interactive figure (Figure 8). Only current electrodes are shown. Potentials would be measured inside current electrodes using either the Wenner or Schulmberger configurations.
-
-.. <<add multiple figure here>>
-Figure 8 here!
+.. raw:: html
+    :file: figure8.html
 
 Profiling
 ---------
@@ -186,18 +184,20 @@ Simple profiling involves moving a fixed array of four electrodes along a survey
 
 In the animation in Figure 10, the process of gathering and plotting profiling data is illustrated. The survey illustrated involves a dipole-dipole array with \\(a = 2\\) meters, and \\(n = 4\\).
 
-.. <<add multiple figure here>>
-Figure 10 here!
+.. raw:: html
+    :file: figure10.html
 
 
 **Gradient array:** Large scale reconnaissance surveys are sometimes done using the gradient array (Figure 7e above). If the current sources are not moved, then the energizing field is the same for all measurements. There is, therefore, no inherent information about variations with depth, just like the case of gravity and magnetic surveys. Gradient array surveys are often displayed simply by contour plotting the results.
 
 **Real Sections:** There is one variation of the gradient array that provides limited information about structures at depth. It is run under the trade name "real-section," but the plot is still a "pseudosection" because apparent resistivity data are plotted with no attempt to convert apparent (measured) resistivities into true (intrinsic) resistivities. In the following figures, red electrodes are the current source, and blue electrodes are the potential measurement electrodes. A row of potential measurements at fixed "a" spacing is gathered for each pair of current electrode placements. This is basically a set of seven (in this case) gradient surveys along the same line. At four stages in acquisition, the data look like the following:
 
-.. <<add multiple figure here>>
-Figuree 11 here!
+.. raw:: html
+    :file: figure11.html
 
 **Choice of array:** Does the choice of array type matter for profiling? Appendix II has a brief comparison of pseudosections and the results of inverting data gathered using the arrays.
+
+.. appendix II is not included in the current version and therefore the preceding line needs to be modified. 
 
 Processing options
 ==================
