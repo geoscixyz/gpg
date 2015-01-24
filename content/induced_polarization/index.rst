@@ -6,7 +6,7 @@ Induced Polarization
 Contents:
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    induced_polarization_introduction
    induced_polarization_physical_properties

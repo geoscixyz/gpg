@@ -4,7 +4,7 @@ Geophysics for Practicing Geoscientists
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    content/seismic/refraction/index
    content/seismic/reflection/index

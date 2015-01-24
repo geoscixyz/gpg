@@ -6,7 +6,7 @@ Seismic Reflection
 Contents:
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
  
    seismic_reflection_introduction
    seismic_reflection_refx_trans_plane_waves

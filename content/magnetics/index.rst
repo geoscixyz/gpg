@@ -6,7 +6,7 @@ Magnetics
 Contents:bur
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    magnetics_introduction
    magnetics_susceptibility
