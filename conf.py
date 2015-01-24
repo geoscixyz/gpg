@@ -281,5 +281,6 @@ intersphinx_mapping = {'http://docs.python.org/': None}
 
 
 # -- User Defined Methods ------------------------------------------------
+sys.path.append(os.getcwd())
 from Add2Build import copyImages
 copyImages()
