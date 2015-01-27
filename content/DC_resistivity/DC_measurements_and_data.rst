@@ -169,6 +169,7 @@ Soundings are used when the earth's electrical structure needs to be interpreted
 .. raw:: html
     :file: figure8.html
 
+
 Profiling
 ---------
 
