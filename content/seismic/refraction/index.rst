@@ -7,7 +7,7 @@ Seismic Refraction
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    seismic_velocity
    seismic_introduction

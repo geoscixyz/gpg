@@ -6,6 +6,6 @@ Ground Penetrating Radar
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
  
    GPR_concepts_and_examples

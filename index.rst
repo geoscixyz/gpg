@@ -5,14 +5,16 @@ Contents:
 
 .. toctree::
    :maxdepth: 1
-
+   
+   content/magnetics/index
    content/seismic/refraction/index
    content/seismic/reflection/index
    content/GPR/index
+   content/electromagnetics/index
    content/DC_resistivity/index
    content/induced_polarization/index
-   content/electromagnetics/index
-   content/magnetics/index
+   
+   
  
 
 
