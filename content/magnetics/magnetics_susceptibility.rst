@@ -27,7 +27,7 @@ Some Definitions
     :file: susceptibility.html
 	
 	
-The strength of the induced magnetisation,**M**, the "dipole moment per unit volume", has units \\( Am^2 \\). It is related to the causative field's strength, **H**, by 
+The strength of the induced magnetisation, **M**, the "dipole moment per unit volume", has units \\( Am^2 \\). It is related to the causative field's strength, **H**, by 
 
 .. math::
 		\vec{M}=\kappa \vec{H}

@@ -8,7 +8,7 @@ A measurement of the magnetic field at any location will involve either recordin
 Fluxgate Magnetometer
 =====================
 
-- This type of instrument was developed during WWII to detect submarines. It measures the magnitude in a specific direction determined by the sensor's orientation. A complete measurement of the field requires three individual (cartesian) components of the field ( such as \\(B_x\\), \\(B_y\\), \\(B_z\\).
+- This type of instrument was developed during WWII to detect submarines. It measures the magnitude in a specific direction determined by the sensor's orientation. A complete measurement of the field requires three individual (cartesian) components of the field ( such as \\(B_x\\), \\(B_y\\), \\(B_z\\) ).
 - It is generally difficult to get leveling and alignment accurate. Sensor accuracy is 1 nT so orientation must be known to within .001 degrees.
 - There are some fluxgates which generate a measure of the total field strength.
 
