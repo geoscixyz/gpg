@@ -9,7 +9,7 @@ We learned above what the anomalous magnetic field will be over a buried dipole 
 2. Recognize that the response to a single rectangular cell with constant susceptibility in an arbitrary magnetizing field can be calculated relatively easily using expressions from the literature.
 3. At each location where a measurement is made above our model of the earth, the responses from all the individual cells must be added up. The result will be the superposition of all those little responses.
 
-The concept is illustrated in the following eight figures selected with the buttons. (Such calculations are introduced in section 10 and details are given in section 11.)
+The concept is illustrated in the following eight figures selected with the buttons.
 
 .. raw:: html
     :file: simple_vs_complex.html

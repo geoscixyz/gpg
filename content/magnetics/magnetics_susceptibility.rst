@@ -86,9 +86,6 @@ In rocks, susceptibility is mainly dependent on the volume percent of magnetite.
 
 A table summarizing typical susceptibilities of common materials follows:
 
-
-
-
 +-----------------------+---------------------------------------------------------+
 |  **Material**         | **Susceptibility (SI units, \\( \\times 10^{-3} \\) )** |
 +=======================+=========================================================+
