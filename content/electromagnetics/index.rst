@@ -6,7 +6,7 @@ Electromagnetic Methods
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
  
    electromagnetics_concepts
    electromagnetics_fk_domain_systems

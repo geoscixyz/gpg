@@ -6,7 +6,7 @@ DC Resistivity
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
  
    DC_resistivity_surveys
    DC_measurements_and_data
