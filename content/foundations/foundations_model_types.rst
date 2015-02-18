@@ -1,7 +1,7 @@
 .. _foundations_model_types:
 
 
-Mathematical Representations of the Earth
+Mathematical representations of the Earth
 *****************************************
 
 Earth materials and buried structures are complicated. Yet we need to be able to represent these mathematically so that responses from geophysical surveys can be numerically simulated. Ultimately, our goal is to find a mathematical representation of the earth, such that when simulated responses are generated, then the simulated responses are in agreement with the observations. The process of carrying this out is refered to as "inversion".

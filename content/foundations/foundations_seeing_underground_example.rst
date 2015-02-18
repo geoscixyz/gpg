@@ -1,6 +1,6 @@
 .. _foundations_seeing_underground_example:
 
-Seeing Underground: Mineral exploration example
+Seeing Underground: mineral exploration example
 ***********************************************
 
 Large quantities of magnetic field measurements are routinely gathered over mineral and petroleum exploration prospects using airborne techniques. Resulting magnetic anomaly maps can provide information about geological trends because rocks containing higher proportions of the mineral magnetite have a higher magnetic susceptibility, and will affect the local behaviour of the earth's magnetic field. Data can also be inverted to reveal three dimensional features of the earth. 
@@ -10,6 +10,8 @@ Regional and local magnetic surveys
 
 Figure 3 (supplied courtesy of Placer Dome Exploration) provides an example of regional information from an area surrounding the Mt Milligan copper porphyry deposit, located in central British Columbia. Geological trends can be decerned using this type of data, however, exploration for a specific deposit requires more detailed information about local subsurface distributions of rock types. Figure 3b shows anomalous strengths of the earth's magnetic field for a small region of one ore body. Evidently there is a range of different rock types below the surface, but details of location, depth and magnetic susceptibility are difficult to determine directly using conventional methods. 
 
+.. raw:: html
+    :file: figure3.html
 
 Inversion to obtain 3D details 
 ==============================

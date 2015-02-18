@@ -62,6 +62,8 @@ Subsurface structures are usually interpreted either in terms of objects, layers
 
 In the face of ongoing demand for increasingly quantitative information, however, sophisticated techniques are now being used to numerically estimate the distribution of the earth's physical properties. These modelling procedures give geoscientists a more cost effective, reliable and accurate means of extracting as much information as possible from conventional survey data. They also make it possible to present the rather technical information in more visual and meaningful ways to managers, shareholders, regulatory agencies and other interest groups. 
 
-After reading this section, it should become evident that the application of geophysics to problems involving earth's subsurface is a non-trivial process. A seven step framework should be used to help understand each aspect of this process. This framework can be viewed here.
+After reading this section, it should become evident that the application of geophysics to problems involving earth's subsurface is a non-trivial process. A seven step framework should be used to help understand each aspect of this process. This framework can be viewed here :ref:`foundations_sevensteps`.
+	
+
 
 .. add link to seven step framework.
