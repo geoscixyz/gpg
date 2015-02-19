@@ -1,0 +1,103 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+	<title>Mt Milligan 3D Chargeability - javascript movie</title>
+	<meta name="description" content="Mt Milligan 3D Chargeability - javascript movie">
+<script LANGUAGE="JavaScript1.2">
+anims = new Array(36);
+var frame = 0;
+var timeout_state = null;
+function imageLoad() {
+	for(var i = 0; i<36; i++) {
+		anims[i] = new Image();
+		anims[i].src = "chg" + i + ".gif";
+	}
+}			
+function ForwardButton(){
+	if(timeout_state == null) {
+		animator();
+	}
+}
+function ReverseButton(){
+	if(timeout_state == null) {
+		reverseAnimator();
+	}
+}
+function animator() {
+	frame = (frame + 1);
+	if(frame >= 36) {
+		frame = 0;
+	}
+	document.animImage.src = anims[frame].src;
+	timeout_state = setTimeout("animator()", document.animForm.animPace.value);
+}
+function reverseAnimator() {
+	frame = (frame - 1);
+	if(frame < 0) {
+		frame = 35;
+	}
+	document.animImage.src = anims[frame].src;
+	timeout_state = setTimeout("reverseAnimator()", document.animForm.animPace.value);
+}
+function Stopbutton() {
+	clearTimeout(timeout_state);
+	timeout_state = null;
+}
+function Stepup() {
+	clearTimeout(timeout_state);
+	timeout_state = null;
+	if(frame >= 36) {
+		frame = 0;
+	} else {
+		frame = frame+1;
+	}
+	document.animImage.src = anims[frame].src;
+}
+function Stepdown() {
+	clearTimeout(timeout_state);
+	timeout_state = null;
+	if(frame <= 0) {
+		frame = 35;
+	} else {
+		frame = frame-1;
+	}
+	document.animImage.src = anims[frame].src;
+}
+function Reset() {
+	document.animImage.src = anims[0].src;
+	frame = 0;
+	clearTimeout(timeout_state);
+	timeout_state = null;
+}
+</script>
+</head>
+<body bgcolor="#FFFFFF" onLoad="imageLoad()">
+<center>
+	<h4>Mt Milligan chargeability model</h4>
+</center>
+<center>
+	<table BORDER=0 >
+		<TR>
+		<TD>
+			<img SRC="./../../_images/chg0.gif" NAME="animImage" height=200 width=261>
+		</TD>
+		</TR>
+		<TR><TD>
+			<center>
+				<form NAME="animForm">
+				<input TYPE=button VALUE=" << " NAME="animReset" onClick=Reset()>
+				<input TYPE=button VALUE=' Rwd ' NAME="Reverse" onClick=ReverseButton()>
+				<input TYPE=button VALUE='Pause' NAME="Stop" onClick=Stopbutton()>
+				<input TYPE=button VALUE=' Play ' NAME="Forward" onClick=ForwardButton()>
+				<input TYPE=button VALUE=' -1' NAME="Step" onClick=Stepdown()>
+				<input TYPE=button VALUE='+1' NAME="Step" onClick=Stepup()> <p>Frame rate: 
+				<input TYPE=text SIZE=4 VALUE=100 NAME="animPace" onChange=Stopbutton()> (milliseconds)</p>
+				</form>
+			</center>
+		</TD></TR>
+	</table>
+</center>
+</body>
+</html>			

@@ -10,6 +10,8 @@ Background: Earth's Field
 
 Most people are familiar with the magnetic field that exists around a dipolar or "bar" magnet (shown to the right as the pattern of iron filings on paper over a bar magnet). To a first approximation, Earth's magnetic field looks like that of a dipolar source within the Earth, which is tilted about 11.5 degrees from the spin axis and is slightly off centre. This field has a strength of approximately 70,000 nanoTeslas (nT) at the magnetic poles and approximately 25,000 nT at the magnetic equator. Units for magnetics work are discussed in the separate chapter on units. The figure below-left illustrates a cross-section of the field as it could be imagined from space. Below-right is a sketch of the directions of the field at Earth's surface.
 
+.. there is no chapter on units in the new GPG
+
 .. figure:: ./images/fig_2a.jpg
 	:align: left
 	:scale: 155% 

@@ -26,12 +26,12 @@ Normally the earth is *not* uniform. Galvanic currents will flow towards regions
 
 Figure 2. The Elura orebody (in New South Wales, Australia) is an example of a subsurface target with a range of electrical resistivities. Details are from I.G. Hone, *Geoelectric Properties of the Elura Prospect, Cobar, NSW*, in "The Geophysics of the Elura Orebody, Cobar NSW," 1980, Australian Society of Exploration Geophysicists.
 
-The relation between charge distribution, current flow and resulting potentials is discussed more fully in the section on principles. 
+The relation between charge distribution, current flow and resulting potentials is discussed more fully in the section :doc:`DC_principles`. 
 
 Sources
 =======
 
-High power and reliable constant current are the primary requirements of DC resistivity transmitters. For small scale work (electrodes up to roughly 100 m apart), a transmitter capable of sourcing up to several hundred milliwatts of power might be adequate. For larger scale work (electrodes as much as 1000 m or more apart), it is possible to obtain transmitters that can source up to 30,000 watts. See the section called "DC resistivity instruments" for more details.
+High power and reliable constant current are the primary requirements of DC resistivity transmitters. For small scale work (electrodes up to roughly 100 m apart), a transmitter capable of sourcing up to several hundred milliwatts of power might be adequate. For larger scale work (electrodes as much as 1000 m or more apart), it is possible to obtain transmitters that can source up to 30,000 watts. See the section :doc:`DC_instruments` for more details.
 
 
 Current is usually injected as a 50% duty cycle reversing square wave (Figure 3). That is, current is on for several seconds, off for several seconds, on with reversed polarity, off, etc. Voltages are recorded while current is on.
@@ -145,6 +145,8 @@ The most common specific arrays are detailed in Figure 7, but there are several 
 - There are also numerous other proprietary or experimental electrode configurations designed for 3D interpretation.
 
 **Azimuthal arrays** are used to investigate the horizontal electrical anisotropy near the surface. Electrode configurations are usually one of the linear arrays (Wenner, dipole-dipole, etc.). However, instead of moving the array along a line (profiling), or expanding it about a central point (sounding), the array is rotated about a central point so that resistivity as a function of azimuthal direction can be plotted. Further details about the use of azimuthal arrays are given in the "Azimuthal resistivity" section.
+
+.. This section is not in the new GPG
 
 **Borehole** work often involves conceptually similar arrays with sources and receivers in various combinations of surface and down-hole locations. These are not discussed further here.
 

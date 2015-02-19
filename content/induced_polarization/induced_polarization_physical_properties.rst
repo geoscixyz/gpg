@@ -3,7 +3,7 @@
 Physical Properties
 *******************
 
-The chargeability of earth materials is essentially an electrochemical effect caused by many factors, not all of which are completely understood. If ground is chargeable, it responds as if resistivity was a complex quantity - it behaves somewhat like a leaky capacitor. Therefore the chargeability can be measured in a number of ways using time domain or frequency domain techniques (detailed in the section on measurements and data). Aspects affecting the chargeability of a sample include:
+The chargeability of earth materials is essentially an electrochemical effect caused by many factors, not all of which are completely understood. If ground is chargeable, it responds as if resistivity was a complex quantity - it behaves somewhat like a leaky capacitor. Therefore the chargeability can be measured in a number of ways using time domain or frequency domain techniques (detailed in the section :doc:`induced_polarization_measurements_data`). Aspects affecting the chargeability of a sample include:
 
  - the grain size of particles in the sample;
  - the type and mobility of ions within the pore fluids;

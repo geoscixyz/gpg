@@ -1,6 +1,6 @@
 .. _foundations_seeing_underground_example:
 
-Seeing Underground: mineral exploration example
+Seeing Underground: Mineral exploration example
 ***********************************************
 
 Large quantities of magnetic field measurements are routinely gathered over mineral and petroleum exploration prospects using airborne techniques. Resulting magnetic anomaly maps can provide information about geological trends because rocks containing higher proportions of the mineral magnetite have a higher magnetic susceptibility, and will affect the local behaviour of the earth's magnetic field. Data can also be inverted to reveal three dimensional features of the earth. 
@@ -35,3 +35,15 @@ Corroboration with independent geophysical results
 ==================================================
 
 Few geophysical surveys are used alone with no other independent information. At Mt Milligan many types geophysical surveys were performed on the ground, from airborne platforms, and from within boreholes. For example, a similar inversion procedure was used to interpret DC electrical measurements gathered over the same area. The 3D iso-surface image of Figure 6 shows a model of the distribution of chargeability (the capacity for material to hold an electrical charge), a physical property related essentially to metal or clay content and grain size. The apparent anti-correlation between magnetic susceptibility and chargeability at Mt Milligan is evident only after careful inversion of two unrelated geophysical data sets. This example illustrates that conducting inversions on multiple types of data sets can provide an enhanced understanding of the surveyed region; in this case it provides insight about subsequent alteration of the rocks that occurred after the initial formation of the mineral deposit.
+
+.. raw:: html
+    :file: animated_fig1.html
+
+
+**Figure 5:** The same magnetic susceptibility distribution model shown in the previous figure is plotted here as a 3D isosurface of constant susceptibility. Any surface between zero and the maximum susceptibility recovered could be chosen for the plot. The best choice for illustrating geologically relevant features depends upon estimating the true susceptibility of rocks, perhaps from borehole or outcropping samples. 
+
+ .. raw:: html
+    :file: animated_fig2.html
+
+ **Figure 6:** An isosurface plot of chargeability, which is usually related to the presence of sulphide ores, graphite, or clay minerals. The chargeability model was obtained by carrying out a 3D inversion of induced polarization data collected along parallel survey lines over the deposit region. Comparison with the 3D model of magnetic susceptibility shows that low chargeability is correlated with high susceptibility. Detailed correlation of the two inversion results provided information that contributed to an enhanced understanding of how the ore body was deposited. 
+
