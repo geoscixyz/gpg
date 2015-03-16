@@ -61,13 +61,11 @@ Sketch of coordinates used to describe magnetic fields.
 The details of Earth's field at any location on Earth are described using a formula based upon a spherical harmonic decomposition of the field called the IGRF or International Geomagnetic Reference Field. Details about Earth's field can be found at government geoscience websites (listed below) such as the NOAA Geomagnetism home page, or the Canadian National Geomagnetism Program's home page. Resources about Earth's global magnetic field are:
 
 
-* `A sidebar`_ describing the International Geomagnetic Reference Field.
-* `Three figures`_ show how declination, inclination and field strength varies around the world.
-* `NOAA Geomagnetism home page`_, and the `Canadian National Geomagnetism Program's `home page`_ websites.
+* A page describing the International Geomagnetic Reference Field: :doc:`magnetics_IGRF`.
+* Three figures show how declination, inclination and field strength varies around the world, see: :doc:`magnetics_three_figures`.
+* `NOAA Geomagnetism home page`_ , and the Canadian National Geomagnetism Program's `home page`_ websites.
 * Find parameters describing Earth's field at a specific location (specified using date, latitude, longitude and elevation) at the NOAA National Geophysical Data Center's online `magnetic field calculator`_.
 
-.. _A sidebar: file:///C:/Users/Philip/Desktop/GIT/GPG/_build/html/content/magnetics/magnetics_IGRF.html
-.. _Three figures: file:///C:/Users/Philip/Desktop/GIT/GPG/_build/html/content/magnetics/magnetics_three_figures.html
 .. _NOAA Geomagnetism home page: http://www.ngdc.noaa.gov/ngdc.html
 .. _home page: http://www.geomag.nrcan.gc.ca/index-eng.php
 .. _magnetic field calculator: http://www.ngdc.noaa.gov/geomag-web/

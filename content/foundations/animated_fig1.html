@@ -12,7 +12,7 @@ var timeout_state = null;
 function imageLoad() {
 	for(var i = 0; i<36; i++) {
 		anims[i] = new Image();
-		anims[i].src = "mag" + i + ".gif";
+		anims[i].src = "./../../_images/mag" + i + ".gif";
 	}
 }			
 function ForwardButton(){
@@ -90,11 +90,11 @@ function Reset() {
 				<input TYPE=button VALUE='Pause' NAME="Stop" onClick=Stopbutton()>
 				<input TYPE=button VALUE=' Play ' NAME="Forward" onClick=ForwardButton()>
 				<input TYPE=button VALUE=' -1' NAME="Step" onClick=Stepdown()>
-				<input TYPE=button VALUE='+1' NAME="Step" onClick=Stepup()> <p>Frame rate: 
-				<input TYPE=text SIZE=4 VALUE=100 NAME="animPace" onChange=Stopbutton()> (milliseconds)</p>
+				<input TYPE=button VALUE='+1' NAME="Step" onClick=Stepup()> Frame rate: 
+				<input TYPE=text SIZE=4 VALUE=100 NAME="animPace" onChange=Stopbutton()> (milliseconds)
 			</form>
 	</table>
 </center>
-<p></p>
+
 </body>
 </html>
