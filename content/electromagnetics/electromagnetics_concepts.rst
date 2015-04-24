@@ -18,7 +18,7 @@ Electrical force can be generated, in two ways:
 charge. The "voltage" of the battery is directly proportional to the amount of stored charge).
 Upon completion of the circuit there will be an electric field \\(\\vec{E}\\) (volts/m) set up in the body.
 The electric field is a vector: it has both direction and magnitude. The force that any charge
-\\(q\\) feels is given by \\(\\vec{F} = q \\vec{E}\\). Unit positive ot negative charges will feel the same magnitude
+\\(q\\) feels is given by \\(\\vec{F} = q \\vec{E}\\). Unit positive or negative charges will feel the same magnitude
 of force but directions will be opposite. Since like charges repel and unlike charges attract,
 the negative charges will be attracted to the positive terminal of the battery and the positive
 charges will be attracted to the negative terminal.
