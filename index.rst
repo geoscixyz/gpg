@@ -14,6 +14,7 @@ Contents:
    content/electromagnetics/index
    content/DC_resistivity/index
    content/induced_polarization/index
+   content/gravity/index
    
    
  

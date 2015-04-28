@@ -41,6 +41,5 @@ A seismic section from the northern Amadeus basin, central Australia, illustrati
 In order to generate the previous images there are numerous operations that need to be applied to the data. Much of the data processing is tied to the hypothesis that the earth's properties vary most strongly in the vertical direction. As background we first review the principles of a reflection seismogram and then consider travel time curves that arise from a horizontally layered earth.
 
 
-.. [#f1] From Kearey, Philip and Micheal Brooks, 'An Introduction to Geophysical Exploration'. 2nd ed. Blackwell Science: 1991. 
+.. [#f1] From Kearey, Philip and Micheal Brooks, '*An Introduction to Geophysical Exploration*'. 2nd ed. Blackwell Science: 1991. 
 
-.. Note: the title in the footnote needs to be underlined.
