@@ -8,9 +8,9 @@ The fold refers to the number of times a particular subsurface point has been sa
 .. math::
  		fold = \frac{N (number\;of\;geophones)}{2n}
 
-where \\(n\\) is the moveup rate in units of geophone spacing. "Moveup rate" is in fact (shot spacing)/(geophone spacing). For example, if geophones are 2 meters apart and shots are employed every 4 meters, then the moveup rate is \\(n=4/2=2\\). This can be less than one if there are shots set more often than geophone spacing, a practice that is sometimes done in marine seismology, especially ocean bottom profiling. 
+where \\(n\\) is the moveup rate in units of geophone spacing. "Moveup rate" is in fact (shot spacing)/(geophone spacing). For example, if geophones are 2 meters apart and shots are employed every 4 meters, then the moveup rate is n=4/2=2. This can be less than one if there are shots set more often than geophone spacing, a practice that is sometimes done in marine seismology, especially ocean bottom profiling. 
 
-The schematic below shows a single ended spread with 8 geophones and moveup rate of \\(n=2\\).
+The schematic below shows a single ended spread with 8 geophones and moveup rate of n=2.
 
 .. figure:: ./images/fold.gif
     :align: center

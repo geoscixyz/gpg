@@ -86,7 +86,7 @@ Consider some practical questions: How useful is this type of work? What kinds o
 #. Many oil and gas and structural geology targets can be imaged.
 #. Anticipated limit for future systems is a little better.
 
-Two (somewhat complex) figures summarizing the limits of dectability for various ore bodies (mostly in Australia) are provided separately `here`_ (PDF). Keep in mind that questions about structures associated with oil and gas are often larger targets than those associated with mineral exploration, so these types of cutting edge procedures are so far more directly useful to the hydrocarbons industry.
+Two (somewhat complex) figures summarizing the limits of detectability for various ore bodies (mostly in Australia) are provided separately `here`_ (PDF). Keep in mind that questions about structures associated with oil and gas are often larger targets than those associated with mineral exploration, so these types of cutting edge procedures are so far more directly useful to the hydrocarbons industry.
 
 Other forms of processing for maps
 ==================================

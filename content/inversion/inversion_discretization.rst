@@ -25,7 +25,7 @@ where the volume is divided into \\(M\\) cells with the density constant in each
 
 is the response of the ith observation location due to a cell of constant density in the jth cell. (Remember the cell can be 1D (layer), 2D or 3D).
 
-The above discretisation allows the data to be written in matrix form:
+The above discretization allows the data to be written in matrix form:
 
 .. math::
 		d=Gm
@@ -165,7 +165,7 @@ We want to find a numerical approximation
 .. figure:: ./images/Xcells.jpg
     :align: center	
 
-Let \\(d_k\\) be the distance between the center f the cells. A discrete approximation to the integral is had by evaluating the derivative of the model based upin how much it changes between cell centers. 
+Let \\(d_k\\) be the distance between the center f the cells. A discrete approximation to the integral is had by evaluating the derivative of the model based upon how much it changes between cell centers. 
 
 .. math::
 		\phi_x \approx \sum_{k=1}^{M-1} \left( \frac{M_{k+1}-M_k}{d_k} \right)^2 d_k
@@ -192,7 +192,7 @@ where
 		\end{split}
 		\end{equation}	
 
-If \\(W_x\\) is written as an \\(M \\times M\\) matrix, then its last row is zero. The reason for a row to be zero is that there are only \\(M-1\\) segments on which inear gradients have been defined. Effectively the two \\(1/2\\) cells on each end have been neglected.
+If \\(W_x\\) is written as an \\(M \\times M\\) matrix, then its last row is zero. The reason for a row to be zero is that there are only \\(M-1\\) segments on which linear gradients have been defined. Effectively the two \\(1/2\\) cells on each end have been neglected.
 
 So we have:
 

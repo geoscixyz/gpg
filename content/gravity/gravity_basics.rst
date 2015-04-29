@@ -23,13 +23,13 @@ Newton's equation describing the force between two masses (Earth and Moon, or Ea
 .. math::
 		F = G \frac{Mm}{r^2} \qquad \text{(Eq1)}
 
-where the force \\(F\\) points from one mass to the other, \\(M\\) and \\(m\\) are two masses, and \\(G=6.67*10^{-11} Nm^2/Kg^2\\). You should recall that another of Newton's relations characterizes the force on an object experiencing acceleration:
+where the force \\(F\\) points from one mass to the other, \\(M\\) and \\(m\\) are two masses, and \\(G=6.67*10^{-11}\\) Nm\ :sup:`2`\/Kg\ :sup:`2`\. You should recall that another of Newton's relations characterizes the force on an object experiencing acceleration:
 
 .. math::
 		F=ma \qquad \text{(Eq2)}
 
 
-Comparing these two equations, it should be clear that most of Eq1 represents an acceleration: \\\(a = GM/r^2\\). In fact this is gravitational acceleration, and we call it \\(g\\). This gravitational acceleration \\(g\\) is nominally approximately 9.8 m/s\ :sup:`2`\  on Earth's surface at the equator. Local variations in \\(g\\) will be caused by local variations in M and/or in \\(r\\). 
+Comparing these two equations, it should be clear that most of Eq1 represents an acceleration: \\\(a = GM/r^2\\). In fact this is gravitational acceleration, and we call it \\(g\\). This gravitational acceleration \\(g\\) is nominally approximately 9.8 m/s\ :sup:`2`\  on Earth's surface at the equator. Local variations in \\(g\\) will be caused by local variations in \\(M\\) and/or in \\(r\\). 
 
 Units
 =====
@@ -46,7 +46,7 @@ If a mass hangs on a spring, a force on the mass \\((F = ma)\\) will stretch the
 .. math::
 		m(dg)=k(ds)
 
-where *k* is the "elastic spring constant," *dg* \\( \\) a small change in gravitational acceleration, and *ds* is a small change in spring length. So, if we measure *ds*, we can get 
+where \\(k\\) is the "elastic spring constant," \\(dg\\) \\( \\) a small change in gravitational acceleration, and \\(ds\\) is a small change in spring length. So, if we measure \\(ds\\), we can get 
 
 .. math::
 		dg = ds \frac{k}{m}
@@ -91,7 +91,7 @@ This relation (profile) is plotted in the figure to the right. Also plotted is t
 
 - Note that the “mass” must involve the density *contrast*. In other words, the difference between host and target densities.
 - An estimate of vertical depth to the center of mass can be obtained by equating amplitude at \\(x=0\\) to twice the amplitude at \\(x\\).
-- The result is a half-width rule giving depth to centre of a sphere \\(z=1.3 x_{1/2}\\), where \\(x_{1/2}\\) is half the width of the measured gravity anomaly at half of its maximum amplitude. You can prove this by recognizing that at the maximum amplitude (directly over the sphere), \\(x=0\\) so \\(g_Z=GM/z^2\\). Then \\(x\\) in terms of \\(z\\) at the location where \\(g_Z\\) is half of its maximum amplitude, or 
+- The result is a half-width rule giving depth to center of a sphere \\(z=1.3 x_{1/2}\\), where \\(x_{1/2}\\) is half the width of the measured gravity anomaly at half of its maximum amplitude. You can prove this by recognizing that at the maximum amplitude (directly over the sphere), \\(x=0\\) so \\(g_Z=GM/z^2\\). Then \\(x\\) in terms of \\(z\\) at the location where \\(g_Z\\) is half of its maximum amplitude, or 
 
 .. math::
 		\frac{GM}{2z^2}=\frac{GMz}{(x^2 + z^2)^{3/2}}

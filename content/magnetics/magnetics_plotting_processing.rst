@@ -19,7 +19,7 @@ At the scale of most exploration or engineering surveys, a map of total field da
 .. raw:: html
     :file: data_plotting1.html
 
-Large data sets are commonly gathered using airborne instruments. They may involve 105 to 106 data points to show magnetic variations over many square kilometres. An example of a large airborne data set is shown to the right, with a larger version, including alternative colour scale schemes, `shown in a sidebar`_. 
+Large data sets are commonly gathered using airborne instruments. They may involve 105 to 106 data points to show magnetic variations over many square kilometers. An example of a large airborne data set is shown to the right, with a larger version, including alternative colour scale schemes, `shown in a sidebar`_. 
 
 .. _shown in a sidebar: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/sidebar-airmaps.html
 

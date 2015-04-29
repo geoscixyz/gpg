@@ -10,7 +10,7 @@ There are four techniques for observing chargeability: two using a charging curr
 
 Two types of time domain data
 =============================
-Consider the experiment illustrated in the following figure. Current is injected into the ground at the \\(I\\) source electrodes and voltage is measured at the \\(V\\) potential electrodes. The source is DC (direct current) in the sense that when it is on, there is no variation. However, in this case it is turned on and off with a duty cycle as shown in the figure. Two methods of measuring chargeability in the time domain are described below. 
+Consider the experiment illustrated in the following figure. Current, \\(I\\), is injected into the ground at the source electrodes and voltage, \\(V\\), is measured at the potential electrodes. The source is DC (direct current) in the sense that when it is on, there is no variation. However, in this case it is turned on and off with a duty cycle as shown in the figure. Two methods of measuring chargeability in the time domain are described below. 
 
 
 .. figure:: ./images/IP_source.gif
@@ -25,13 +25,13 @@ Consider the experiment illustrated in the following figure. Current is injected
 1. The following is a definition of chargeability but it is not possible to measure it exactly in the field. The figure to the right shows voltage measured when the transmitter is first turned on and then turned off some time later. Using parameters from this figure, one definition of chargeability is \\(M = V_S / V_P\\) where \\(V_S\\) and \\(V_P\\) are the steady state and "secondary" potentials, respectively. 
 
 - The leading edge potential \\(V_{\\sigma}\\) is what would be measured in the absence of chargeability. This potential would yield the ground's resistivity.
-- The steady state, \\(V_P\\) (often referred to as the primary potential), is the combined effect of current flowing in the ground and charges built up under the influence of the imposed electric field. 
+- The steady state, \\(V_P\\) (with a subscript *m* in the figure above), often referred to as the primary potential, is the combined effect of current flowing in the ground and charges built up under the influence of the imposed electric field. 
 - The secondary potential is entirely due to the charge imbalance resulting from the build-up of charge.
 - Using this form, chargeability \\(M\\) will be \\(0 ≤ M < 1\\). If \\(M = 0\\) the measured potential will follow the input current waveform exactly with no charging or discharging involved, as shown in the first column of the figure above.
 
 2. The most commonly measured form of time domain IP is the normalized area under the decay curve. It can be represented by the following equation, using parameters specified in the adjacent figure. The decaying potential that follows \\(V_s\\) is written as \\(V_s (t)\\).
 
-Chargeability M is essentially the red area under the decay curve, normalized by the source voltage. 
+Chargeability, \\(M\\), is essentially the red area under the decay curve, normalized by the source voltage. 
 
  .. math::
   			M = \frac{1}{V_P} \int  \! V_S(t) \, \mathrm{d}t
@@ -132,10 +132,10 @@ Choice of time, frequency or phase measurements
 The following lists a few factors affecting whether to choose time domain or frequency domain survey types:
 
 - Time domain methods are the most common since the IP signal is measured directly. The decay signals are small, such as millivolts or microvolts, so the signal-to-noise ratio can be a problem. Stacking many repeat measurements is required.
-- Frequency domain methods require significantly smaller source currents and are less sensitive to some sources of noise. However the effects of EM coupling can be severe, and need to be removed. ("EM coupling" is an un-wanted signal which arises from inductive interactions (like a transformer) between conductive near-surface ground and the wires carrying transmitter current. It can completely hide IP effects when it is severe). 
+- Frequency domain methods require significantly smaller source currents and are less sensitive to some sources of noise. However the effects of EM coupling can be severe, and need to be removed. ("EM coupling" is an unwanted signal which arises from inductive interactions (like a transformer) between conductive near-surface ground and the wires carrying transmitter current. It can completely hide IP effects when it is severe). 
 - See Smith, 1980, for a comparison of time domain and frequency domain results recorded using three different instruments over the same ore body. Such studies are rare because of the cost, so this is an interesting examination of the pros and cons of various ways of measuring IP.
 
 References
 ==========
 
-    Smith, M.J., 1980, Comparison of induced polarization measurements over the Elura orebody, The Geophysics of the Elura Orebody, Cobar NSW, ASEG, 1980, 77-80.
+    Smith, M.J., 1980, *Comparison of induced polarization measurements over the Elura orebody, The Geophysics of the Elura Orebody, Cobar NSW*, ASEG, 1980, 77-80.

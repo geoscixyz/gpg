@@ -7,12 +7,12 @@ Seeing underground: Introduction
 	:align: right
 	:scale: 90 %
 
-The purpose of this section is to explain very briefly how applied geophysics can contribute unique and important information that helps solve a wide range of practical problems in the earth sciences and engineering. The article was adapted from Geophysical Inversion: New Ways of Seeing the Earth's Subsurface, by Francis Jones and Doug Oldenburg, in *Innovation*, October 1998, Assocation of Professional Engineers and Geoscientists of British Columbia.
+The purpose of this section is to explain very briefly how applied geophysics can contribute unique and important information that helps solve a wide range of practical problems in the earth sciences and engineering. The article was adapted from Geophysical Inversion: New Ways of Seeing the Earth's Subsurface, by Francis Jones and Doug Oldenburg, in *Innovation*, October 1998, Association of Professional Engineers and Geoscientists of British Columbia.
 
 Importance of Earth's subsurface
 ================================
 
-The surface of the earth has provided the setting for most human endeavours throughout the history of civilization, and these activities have been profoundly affected by the largely invisible characteristics of the immediate subsurface. Human development has depended heavily on resources obtained from both near surface (as in construction materials) and from hundreds to thousands of metres deep (as in metalliferous ores and petroleum based products). We also use water from subsurface aquifers, deposit much of our waste within the near subsurface, and build structures that must interface safely with these shallow regions. 
+The surface of the earth has provided the setting for most human endeavors throughout the history of civilization, and these activities have been profoundly affected by the largely invisible characteristics of the immediate subsurface. Human development has depended heavily on resources obtained from both near surface (as in construction materials) and from hundreds to thousands of meters deep (as in metalliferous ores and petroleum based products). We also use water from subsurface aquifers, deposit much of our waste within the near subsurface, and build structures that must interface safely with these shallow regions. 
 
 Physical properties vs rock type and structure
 ==============================================
@@ -60,10 +60,7 @@ Subsurface structures are usually interpreted either in terms of objects, layers
 
 	Figure 1: A field crew initializes geophysical acquisition equipment used to conduct a mineral exploration survey at a site near the Iskut River, in west-central British Columbia. 
 
-In the face of ongoing demand for increasingly quantitative information, however, sophisticated techniques are now being used to numerically estimate the distribution of the earth's physical properties. These modelling procedures give geoscientists a more cost effective, reliable and accurate means of extracting as much information as possible from conventional survey data. They also make it possible to present the rather technical information in more visual and meaningful ways to managers, shareholders, regulatory agencies and other interest groups. 
+In the face of ongoing demand for increasingly quantitative information, however, sophisticated techniques are now being used to numerically estimate the distribution of the earth's physical properties. These modeling procedures give geoscientists a more cost effective, reliable and accurate means of extracting as much information as possible from conventional survey data. They also make it possible to present the rather technical information in more visual and meaningful ways to managers, shareholders, regulatory agencies and other interest groups. 
 
 After reading this section, it should become evident that the application of geophysics to problems involving earth's subsurface is a non-trivial process. A seven step framework should be used to help understand each aspect of this process. This framework can be viewed in :doc:`foundations_sevensteps`.
 	
-
-
-.. add link to seven step framework.

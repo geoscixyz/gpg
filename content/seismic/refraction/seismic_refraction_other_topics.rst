@@ -6,7 +6,7 @@ Other topics: Hidden layers, Lateral velocity variations, Phantoming, and Static
 Hidden Layers
 -------------
 
-When acquiring refraction data we attempt to obtain first arrivals from each refractor (in fact first arrivals are the only useful data - signal energy following first arrivals can not be used unless seismic reflection is being done - a topic covered in geop301). Sometimes it is not possible to obtain refracted arrivas from each and every refracting horizon. There are two reasons why the second layer might go undetected. 
+When acquiring refraction data we attempt to obtain first arrivals from each refractor (in fact first arrivals are the only useful data - signal energy following first arrivals can not be used unless seismic reflection is being done - a topic covered in geop301). Sometimes it is not possible to obtain refracted arrivals from each and every refracting horizon. There are two reasons why the second layer might go undetected. 
 
 **1. The Second Layer is a Low Velocity Layer:**  If \\(v_2 < v_1\\)  the incoming wave will refract towards the normal and there will be no critical refraction along the upper boundary.  Assuming \\(v_3 > v_1\\) the first arrival travel time curve will look as shown in the second half of the figure.
 
@@ -20,7 +20,7 @@ When acquiring refraction data we attempt to obtain first arrivals from each ref
 	:scale: 100 %
 
 
-**2. The Second Layer is Too Thin:**  Even though there is a headwave on its upper surface, the headwave travelling along the top of the third layer arrives first. The dependence of the travel time curves upon the thickness of the second layer is shown in this sequence of three figures.
+**2. The Second Layer is Too Thin:**  Even though there is a headwave on its upper surface, the headwave traveling along the top of the third layer arrives first. The dependence of the travel time curves upon the thickness of the second layer is shown in this sequence of three figures.
 
 
 .. figure:: ./images/thin_layer_1.gif
@@ -39,7 +39,7 @@ When acquiring refraction data we attempt to obtain first arrivals from each ref
 Lateral Velocity Changes
 ------------------------
 
-The headwave travels at the speed of the underlying medium and that velocity might vary laterally.  This produces another complication when interpreting the first arrivals. Consider the two velocity models and traveltime curves given below. The traveltime curves are the same. We note that the crossover point between \\(v_{2a}\\) and \\(v_{2b}\\) in (b) is always shifted away from the shotpoint with respect to the location of the position of the subsurface change. 
+The headwave travels at the speed of the underlying medium and that velocity might vary laterally. This produces another complication when interpreting the first arrivals. Consider the two velocity models and traveltime curves given below. The traveltime curves are the same. We note that the crossover point between \\(v_{2a}\\) and \\(v_{2b}\\) in (b) is always shifted away from the shotpoint with respect to the location of the position of the subsurface change. 
 
 .. Labels for a and b need to be added to these figures.
 
@@ -83,7 +83,3 @@ There are two corrections that are sometimes applied to the recorded travel time
 
 .. math::
 	t_{elev} = -(h_S + h_D)\frac{(v_n^2 - v_1^2)^\frac{1}{2}}{v_1v_n}
- 
-
-
-

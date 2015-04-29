@@ -27,7 +27,7 @@ Some Definitions
     :file: susceptibility.html
 	
 	
-The strength of the induced magnetisation, **M**, the "dipole moment per unit volume", has units \\( Am^2 \\). It is related to the causative field's strength, **H**, by 
+The strength of the induced magnetisation, \\(M\\), the "dipole moment per unit volume", has units Am\ :sup:`2`\ . It is related to the causative field's strength, \\(H\\), by 
 
 .. math::
 		\vec{M}=\kappa \vec{H}
@@ -140,7 +140,7 @@ Differences between the three formulae are probably due to the differences in th
 Soils
 -----
 
-(Summarized from Breiner, 1973) Magnetic susceptibility of soils might be expected to be related to the magnetite content of parent rocks. However magnetite is more resistant to weathering than other minerals. It is also denser than average materials and therefore subject to depositional concentration. In addition, organic action is thought to be responsible for the formation of maghemite from other non-magnetic forms of iron oxide. For all these reasons, soils have very variable susceptibilities, and may have higher susceptibilities than suggested by the parent rocks. In any case, soil susceptibility can significantly impact ground-based surveys, creating noisy results that are often difficult to explain, or mitigate. 
+(Summarized from Breiner, 1973) Magnetic susceptibility of soils might be expected to be related to the magnetite content of parent rocks. However magnetite is more resistant to weathering than other minerals. It is also denser than average materials and therefore subject to dispositional concentration. In addition, organic action is thought to be responsible for the formation of maghemite from other non-magnetic forms of iron oxide. For all these reasons, soils have very variable susceptibilities, and may have higher susceptibilities than suggested by the parent rocks. In any case, soil susceptibility can significantly impact ground-based surveys, creating noisy results that are often difficult to explain, or mitigate. 
 
 Buried metal
 ------------

@@ -13,7 +13,7 @@ These pages introduce the fundamentals and practicalities of gravity surveying. 
 Gravity Surveys
 ===============
 
-For applications at engineering, exploration and regional or continental geological scales, measurements of Earth's gravitational field are used to map subsurface variations in density. For geological materials, denisty ranges from nearly 0 kg/m\ :sup:`3`\  (for voids or snow, dust and similar materials) to roughly 8000 kg/m\ :sup:`3`\  for some rare minerals. Most common geological materials are between 1800 and 3200 kg/m\ :sup:`3`\. 
+For applications at engineering, exploration and regional or continental geological scales, measurements of Earth's gravitational field are used to map subsurface variations in density. For geological materials, density ranges from nearly 0 kg/m\ :sup:`3`\  (for voids or snow, dust and similar materials) to roughly 8000 kg/m\ :sup:`3`\  for some rare minerals. Most common geological materials are between 1800 and 3200 kg/m\ :sup:`3`\. 
 
 .. figure:: ./images/grav_photo.jpg
     :align: right

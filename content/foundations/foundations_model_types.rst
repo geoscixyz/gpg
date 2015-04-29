@@ -4,9 +4,9 @@
 Mathematical representations of the Earth
 *****************************************
 
-Earth materials and buried structures are complicated. Yet we need to be able to represent these mathematically so that responses from geophysical surveys can be numerically simulated. Ultimately, our goal is to find a mathematical representation of the earth, such that when simulated responses are generated, then the simulated responses are in agreement with the observations. The process of carrying this out is refered to as "inversion".
+Earth materials and buried structures are complicated. Yet we need to be able to represent these mathematically so that responses from geophysical surveys can be numerically simulated. Ultimately, our goal is to find a mathematical representation of the earth, such that when simulated responses are generated, then the simulated responses are in agreement with the observations. The process of carrying this out is referred to as "inversion".
 
-There are many ways to parameterize the earth mathematically. We can have discrete objects with boundaries or we can divide the earth into "cells", each of which has constant value of a physical property. The earth is 3-dimensional and to accomodate this the cells can be: layers, 2D cylinders, 3D prisms.
+There are many ways to parameterize the earth mathematically. We can have discrete objects with boundaries or we can divide the earth into "cells", each of which has constant value of a physical property. The earth is 3-dimensional and to accommodate this the cells can be: layers, 2D cylinders, 3D prisms.
 
 We generically refer to the parameterized earth as a "model". In the inverse problem we attempt to find values for each element in the model. In the application step, these values are interpreted to help solve the problem of interest. This means we need to know the relationship between values of a physical property and rock type, alteration, buried object etc.
 

@@ -19,7 +19,7 @@ Here again are the data generated from the single block, the 5 blocks and the co
 .. raw:: html
     :file: simple_vs_complex2.html
 
-The following table gives access to model, mesh and data files associated with these 3 models (uniform earth, 1 block, 5 blocks) for use with UBC-GIF modelling and inversion code MAG3D. The MeshTools3D program is used to view 3D models. The filename extensions will be understandable to those familiar with use of these codes. See MAG3D in IAG's Chapter 10, "Sftwr & manuals" . 
+The following table gives access to model, mesh and data files associated with these 3 models (uniform earth, 1 block, 5 blocks) for use with UBC-GIF modeling and inversion code MAG3D. The MeshTools3D program is used to view 3D models. The filename extensions will be understandable to those familiar with use of these codes. See MAG3D in IAG's Chapter 10, "Sftwr & manuals" . 
 
 +-------------------+----------------+-------------------+---------------+---------------+
 |  **Model**        | **model file** | **location file** | **mesh file** | **data file** |

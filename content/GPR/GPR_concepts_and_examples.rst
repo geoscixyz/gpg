@@ -191,6 +191,9 @@ There are several sources of GPR instruments. The system available for teaching 
 
 Examples of both types of systems, and typical data sets, are presented in figures below.
 
+Environmental waste
+-------------------
+
 .. figure:: ./images/eg1-f.gif
 	:align: left
 	:scale: 100 %
@@ -201,6 +204,10 @@ Examples of both types of systems, and typical data sets, are presented in figur
 	:scale: 100 %
 
 Shielded GSSI antenna system being used for investigating an environmental waste site.
+
+Storage tanks
+-------------
+
 
 .. figure:: ./images/underground_storage2.gif
 	:align: left
@@ -214,6 +221,9 @@ Shielded GSSI antenna system being used for investigating an environmental waste
 
 The detection of underground storage tanks (UST's) is a common application.
 
+Geotechnical work
+----------------
+
 .. figure:: ./images/high_freq_geotech.gif
 	:align: left
 	:scale: 85 %
@@ -225,6 +235,8 @@ The detection of underground storage tanks (UST's) is a common application.
 
 Very high frequency systems are also available for fine-scale geotechnical work. There are also a number of systems configured for towing behind a vehicle. Monitoring of railway and roadway integrity can be done very efficiently with these systems.
 
+Geological Investigation
+------------------------
 
 .. figure:: ./images/eg5-f.gif
 	:align: left
@@ -237,6 +249,8 @@ Very high frequency systems are also available for fine-scale geotechnical work.
 
 Unshielded Sensors and Software antenna system being used for geological investigation. 
 
+Mining
+-------
 
 .. figure:: ./images/eg4-f.gif
 	:align: left
@@ -250,14 +264,72 @@ Unshielded Sensors and Software antenna system being used for geological investi
 Shielded high frequency system being used to monitor mine wall integrity in a South African mine. 
 
 
+Borehole Investigation
+----------------------
 
 .. figure:: ./images/borehole1.gif
-	:align: left
-	:scale: 170 %
+	:align: center
+	:scale: 100 %
+
+	GPR can also be performed for borehole investigations.This is an example of a sensor and software instrument.
 
 .. figure:: ./images/borehole2.gif
 	:figclass: center
-	:align: left
-	:scale: 160 %
+	:align: center
+	:scale: 100 %
 
-GPR can also be performed for borehole investigations. On the left is a sensor and software instrument. On the right are borehole GPR data gathered using a RAMAC system (available from Terraplus).
+	Borehole GPR data gathered using a RAMAC system (available from Terraplus).
+
+Hydrogeology
+------------
+
+.. figure:: ./images/gpr-06_brookswood.jpg
+	:figclass: center
+	:align: center
+	:scale: 100 %
+
+	UBC students operating a Pulse Ekko GPR system with 50 Mhz antennas, investigating an acquifer in Langely, BC.
+
+.. figure:: ./images/gpr-06_brookswood-gpr-small.jpg
+	:align: center
+	:scale: 100 %
+
+	GPR results over the boundary between aquifer and aquatard
+
+.. figure:: ./images/gpr-06_brookswood-dc.jpg
+	:align: center
+	:scale: 100 %
+
+	Higher conductivity zone shows why GPR signals penetrate deeper in the gravelly acquifer. Conductive clay acquitard attenuates GPR signals more rapidly.
+
+GPR for glaciological investigations
+------------------------------------
+
+
+.. figure:: ./images/gpr-06_kask-glac.jpg
+	:align: center
+	:scale: 100 %
+
+	A small tributary glacier off the Kaskawalsh, Kluane National Park, Yukon. 
+
+
+.. figure:: ./images/gpr-06_kask-rdr.jpg
+	:align: center
+	:scale: 100 %
+
+	Looking across near the glacier's firn line - the small portable GPR unit operates at 8 Mhz. 
+
+.. figure:: ./images/gpr-06_kskrdr-dat.gif
+	:align: center
+	:scale: 100 %
+
+	Raw GPR data. Notice the "bow-tie" pattern under the deepest location.
+
+.. figure:: ./images/gpr-06_kskrdr-arcs.gif	
+	:align: center
+	:scale: 100 %
+
+	Arc migration resolves correct cross sectional glacier bed topography
+
+
+

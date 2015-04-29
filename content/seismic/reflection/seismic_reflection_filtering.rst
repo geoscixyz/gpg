@@ -89,7 +89,7 @@ The procedure for carrying out \\(f\\mbox{-}k\\) filtering is provided in the fl
 	:align: left
 	:scale: 130 %
 
-Four shallow marine records (a) before and (b) after f-k dip filtering to remove coherant linear noise. The coherent noise seen in these records is primarily of guided wave type.
+Four shallow marine records (a) before and (b) after f-k dip filtering to remove coherent linear noise. The coherent noise seen in these records is primarily of guided wave type.
 
 
 .. <<editorial comment>> Original GPG has a "click to enlarge" feature for shallow_marine_records.gif

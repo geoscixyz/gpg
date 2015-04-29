@@ -56,12 +56,12 @@ methods.
 	:scale: 100 %
 
 **Magnetic Flux**: In discussing the phenomena of EM induction it is important to have a concept
-of magnetic flux. We had previous defined the magnetic flux density \\(\\vec{B}\\). The magnetic flux which crosses a closed loop is given by
+of magnetic flux. We had previous defined the magnetic flux density \\(\\vec{B}\\). The magnetic flux \\(\\phi_B\\) which crosses a closed loop is given by
 
 .. math::
 		\phi_B = \int_{area} \vec{B} \cdot \hat{n} \; d\vec{a}
 
-where \\(\\hat{n}\\) is the outward poitning normal vector for the loop.
+where \\(\\hat{n}\\) is the outward pointing normal vector for the loop.
 
 **Faraday's Law**: A lime varying magnetic field impinging upon a conductor induces an
 electromotive force (or voltage) in the conductor.
@@ -101,7 +101,7 @@ Primary EM field:
 -----------------
 
 The current in the transmitter loop produces a magnetic field. In air (sometimes referred to
-as free space) this magnetic field travels at the speed of light \\(c = 3.0 x 10^8\\) m/s and therefore reaches the receiver "instantaneously." The magnetic field observed at the receiver is called the "primary field." Mathematically, the magnetic field would be written as \\(\\vec{H}_p = \\vec{H}_0 \\cos(\\omega t) \\). The direction of the field would depend upon the orientation of the wire. When we discussed magnetism we showed that the magnetic field from a loop source was identical to that of a permanent bar magnet at the center of the loop provided that the observer is "far" from the loop. That is, this approximation holds when \\( r\\, >>\\, a\\) where \\(r\\) is the distance from the observer to the center of the loop and \\(a\\) is the radius of the loop. The magnetic moment from a loop is \\(\\vec{m} = IA \\hat{n}\\), where \\(I\\) is the current in the loop, \\(A\\) is its area, and \\(\\hat{n}\\) is the unit vector perpendicular to the plane of the loop. 
+as free space) this magnetic field travels at the speed of light \\(c = 3.0 \\times 10^8\\) m/s and therefore reaches the receiver "instantaneously." The magnetic field observed at the receiver is called the "primary field." Mathematically, the magnetic field would be written as \\(\\vec{H}_p = \\vec{H}_0 \\cos(\\omega t) \\). The direction of the field would depend upon the orientation of the wire. When we discussed magnetism we showed that the magnetic field from a loop source was identical to that of a permanent bar magnet at the center of the loop provided that the observer is "far" from the loop. That is, this approximation holds when \\( r\\, >>\\, a\\) where \\(r\\) is the distance from the observer to the center of the loop and \\(a\\) is the radius of the loop. The magnetic moment from a loop is \\(\\vec{m} = IA \\hat{n}\\), where \\(I\\) is the current in the loop, \\(A\\) is its area, and \\(\\hat{n}\\) is the unit vector perpendicular to the plane of the loop. 
 
 Receiver
 --------
@@ -123,6 +123,9 @@ The currents in the body produce their own magnetic field (This is known as Ampe
 **Observation**: The receiver measures the sum of the primary and secondary fields or it measures
 the associated voltages that are induced in a coil caused by the time varying magnetic flux.
 
+Summary
+-------
+
 1. A time varying current in a transmitter produces a time varying magnetic field which impinges upon a conductor in the ground.
 2. The changing flux generates and electric field everywhere.
 3. The electric field generates currents via Ohm's Law, \\( \\vec{J} = \\sigma \\vec{E} \\).
@@ -130,5 +133,5 @@ the associated voltages that are induced in a coil caused by the time varying ma
 5. The receiver measures the sum of the primary and secondary fields, (or it measures associated
 voltages.)
 
-.. end
+
 

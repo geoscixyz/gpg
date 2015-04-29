@@ -19,7 +19,7 @@ Elevation Statics
 	:align: right
 	:scale: 120 %
 
-Consider the need for (1). Common midpoint shot receiver pairs acquire data on an irregular interface (right figures, top panel). Time differences are caused because of extra travel time associated with elevation of source and receiever. As a result reflections observed on the CMP gather will not have a hyperbolic form and they will not be amenable to normal CMP processing (bottom panel). 
+Consider the need for (1). Common midpoint shot receiver pairs acquire data on an irregular interface (right figures, top panel). Time differences are caused because of extra travel time associated with elevation of source and receiver. As a result reflections observed on the CMP gather will not have a hyperbolic form and they will not be amenable to normal CMP processing (bottom panel). 
 
 
 .. figure:: ./images/irregular_surface_and_CMP.gif
@@ -33,7 +33,7 @@ The correction procedure involves establishing a datum on which to locate source
 	:scale: 120 %
 
 
-The reflections of interest are usually coming from great depth and the upcoming energy is travelling nearly vertical. So the static correction due to elevation expressed as a change in travel time is
+The reflections of interest are usually coming from great depth and the upcoming energy is traveling nearly vertical. So the static correction due to elevation expressed as a change in travel time is
 
 .. math::
 	\Delta t = \frac{h_s}{v_1} - \frac{h_r}{v_1}

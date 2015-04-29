@@ -57,4 +57,4 @@ Notice how the negative reflection coefficients change the polarity of the signa
 
 .. [#f1] From Kearey, Philip and Micheal Brooks, "An Introduction to Geophysical Exploration". 2nd ed. Blackwell Science: 1991. 
 
-.. <<place holder>> This comment is a placeholder for understanding negative reflection and differences in velocities applet.
+.. <<place holder>> This comment is a placeholder for the "understanding negative reflection and differences in velocities" applet.

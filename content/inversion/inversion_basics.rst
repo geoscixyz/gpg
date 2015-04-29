@@ -118,7 +118,7 @@ There are two solution strategies with \\(N\\) as the number of data and \\(M\\)
 
 **Case 1**: when \\(N>M\\), that is, when there is more data than unknowns, (e.g., finding the magnetic dipole parameters) We can post the inverse problem as one of the finding the best fitting model
 
-**Case 2**: when \\(M>N\\), that is, when there are more unknowns than data, (e.g. 3D inversion of gravity or magnetics). This is a non-unique problem. We need to incorporate addictional information about the model into the inversion. 
+**Case 2**: when \\(M>N\\), that is, when there are more unknowns than data, (e.g. 3D inversion of gravity or magnetics). This is a non-unique problem. We need to incorporate additional information about the model into the inversion. 
 
 Remark: Case 1, finding a few parameters is simpler, so we will deal with that first. 
 
@@ -128,7 +128,7 @@ Inverse Problem 1: Find a few parameters
 
 Let \\(d_i^{obs}\\) from \\(i=1,...,N\\) be the observed data. 
 
-Let \\(\\sigma_i\\) be an estimated standard deviation for the ith datum. Asume that data errors are Gaussian with zero mean and a standard deviation of \\(\\sigma_c\\)
+Let \\(\\sigma_i\\) be an estimated standard deviation for the ith datum. Assume that data errors are Gaussian with zero mean and a standard deviation of \\(\\sigma_c\\)
 
 Define the misfit (this is an appropriate misfit function for Gaussian statistics):
 
@@ -167,7 +167,7 @@ Consider the simple case where we write:
 .. math::
 		d = Gm 
 
-with \\(G\\) as an \\(N \\times M\\) matrix. There are infinitely many soutions. For example, consider the case where there are two unknowns \\(m_1\\) and \\(m_2\\) and one datum:
+with \\(G\\) as an \\(N \\times M\\) matrix. There are infinitely many solutions. For example, consider the case where there are two unknowns \\(m_1\\) and \\(m_2\\) and one datum:
 
 .. figure:: ./images/line.jpg 		
     :align: right

@@ -31,7 +31,7 @@ The relation between charge distribution, current flow and resulting potentials 
 Sources
 =======
 
-High power and reliable constant current are the primary requirements of DC resistivity transmitters. For small scale work (electrodes up to roughly 100 m apart), a transmitter capable of sourcing up to several hundred milliwatts of power might be adequate. For larger scale work (electrodes as much as 1000 m or more apart), it is possible to obtain transmitters that can source up to 30,000 watts. See the section :doc:`DC_instruments` for more details.
+High power and reliable constant current are the primary requirements of DC resistivity transmitters. For small scale work (electrodes up to roughly 100 m apart), a transmitter capable of sourcing up to several hundred milliwatts of power might be adequate. For larger scale work (electrodes as much as 1000 m or more apart), it is possible to obtain transmitters that can source up to 30,000 watts. See the section :doc:_DC_instruments for more details.
 
 
 Current is usually injected as a 50% duty cycle reversing square wave (Figure 3). That is, current is on for several seconds, off for several seconds, on with reversed polarity, off, etc. Voltages are recorded while current is on.
@@ -66,8 +66,6 @@ It is tempting to compare the earth to a resistor in an electric circuit (Figure
 	Figure 4b
 
 In order to derive the relation between measurements (\\(I\\), \\(V\\), geometry) and the required physical property (resistivity, \\(\\rho\\)  ) we start from first principles (see the section called "Physical principles of DC resistivity". The derivation is a three step process:
-
-
 	
 - First find a relation for potential due to a point source of current at the surface of a uniform medium. The expression will look like Ohm's law with the addition of terms involving the distance between source and potential measurement location.
 

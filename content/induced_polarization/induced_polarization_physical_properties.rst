@@ -27,7 +27,7 @@ The surface area-to-volume ratio is an important factor. Clays tend to be charge
 Two microscopic effects cause macroscopic chargeability
 =======================================================
 
-There are two primary causes of chargeability. In both cases the re-distribution of charges takes some time to occur when an external DC electric field is applied. Equivalently, it takes the same time to revert to a balanced charge distribution once the electric field is removed. "Charging" is hard to measure in practice. "Discharging" is measured using time domain IP survey techiques. The effect of finite charging time on sinusoidal signals at different frequencies also can be measured using frequency domain or phase IP surveys. The two types of polarization are called "membrane polarization" and "electrode polarization." 
+There are two primary causes of chargeability. In both cases the re-distribution of charges takes some time to occur when an external DC electric field is applied. Equivalently, it takes the same time to revert to a balanced charge distribution once the electric field is removed. "Charging" is hard to measure in practice. "Discharging" is measured using time domain IP survey techniques. The effect of finite charging time on sinusoidal signals at different frequencies also can be measured using frequency domain or phase IP surveys. The two types of polarization are called "membrane polarization" and "electrode polarization." 
 
 Membrane polarization
 ^^^^^^^^^^^^^^^^^^^^^

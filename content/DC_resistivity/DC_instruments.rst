@@ -12,7 +12,7 @@ High power and reliable constant current are the primary requirements. For small
 	:align: center
 	:scale: 100 %
 
-	Sorting wire and equipment to begin a resistivity / IP survey for a mineral exploration target. The survey lines will be up to 2 kilometres long. Transmitter wire is on a back portable reel, and wiring for reading potentials is bundled around cans for generator fuel and water for the crew of 4 field operators.
+	Sorting wire and equipment to begin a resistivity / IP survey for a mineral exploration target. The survey lines will be up to 2 kilometers long. Transmitter wire is on a back portable reel, and wiring for reading potentials is bundled around cans for generator fuel and water for the crew of 4 field operators.
 
 
 .. figure:: ./images/dc-equip2.jpg
@@ -59,7 +59,7 @@ Cables
 Ordinary insulated wire on reels (possibly on a back-pack) for easy handling are most common (figure to the right).
 
 	- For small scale work, some systems are available that use multiconductor cable, and possibly "smart" electrodes that can be switched between input and measurement functions by computer.
-	- For large scale work, this is not practical because of the large currents involved (up to a hundred Amps or so in some cases). Multiconductor cables with individual wires capable of carrying that current would be prohibitively heavy for mineral exploration surveys, which commonly involve profile lines several kilometres long.
+	- For large scale work, this is not practical because of the large currents involved (up to a hundred Amps or so in some cases). Multiconductor cables with individual wires capable of carrying that current would be prohibitively heavy for mineral exploration surveys, which commonly involve profile lines several kilometers long.
 	- However, there are some systems that use multiconductor seismic cable for the potentials while requiring the normal single, heavy gauge wire for the current source.
 
 Variations on the theme
@@ -89,7 +89,7 @@ Another arrangement involves a towed array system in which all potential and sou
 	:align: right
 	:scale: 100 
 
-In the early 1990's receivers were developed that could record complete digitized potential waveforms rather than simply measuring voltages at specific times relative to the transmitted signal. These systems produce large data sets, but with field computers running the systems, storage is not a problem. Fully digitized waveforms have several potential advantages, including identification and removal of all types of noise, and interpretation of subtle, 2nd and 3rd order effects caused by frequency dependant responses of subsurface materials. One example of a current full waveform system is the Titan 24 Deep Earth Imaging System of Quantec Geoscience (as of January 2007). An example of full waveform data gathered by MIDAAS Inc. in the early 1990's is shown to the right. The figure shows the "off-time" IP signals for 12 potential measurements taken using one current station. "On-time" signals are not shown.
+In the early 1990's receivers were developed that could record complete digitized potential waveforms rather than simply measuring voltages at specific times relative to the transmitted signal. These systems produce large data sets, but with field computers running the systems, storage is not a problem. Fully digitized waveforms have several potential advantages, including identification and removal of all types of noise, and interpretation of subtle, 2nd and 3rd order effects caused by frequency dependent responses of subsurface materials. One example of a current full waveform system is the Titan 24 Deep Earth Imaging System of Quantec Geoscience (as of January 2007). An example of full waveform data gathered by MIDAAS Inc. in the early 1990's is shown to the right. The figure shows the "off-time" IP signals for 12 potential measurements taken using one current station. "On-time" signals are not shown.
 
 
 References

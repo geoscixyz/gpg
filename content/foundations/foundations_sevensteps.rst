@@ -29,7 +29,7 @@ Geophysics can play an important role in helping solve resource exploration, env
 3. **Surveys:** Determine a suitable geophysical survey, and design an effective and efficient field survey. Identify possible sources of error, noise and mis-interpretation. Successful application of geophysical techniques depends upon careful survey design and data acquisition. Matching surveys to suit the relevant physical properties is important, and forward modeling may contribute towards building appropriate expectations for data quality, noise levels, and suitability to the task.
 
 
-4. **Data:** Carry out the field survey taking all necessary actions to ensure compelete, high quality, and cost effective data sets. Geophysical data can be aquired in boreholes, on the surface, or in the air using aircraft. Field procedures must permit acquisition of high quality data, yet they must be economical, and safe to obtain.
+4. **Data:** Carry out the field survey taking all necessary actions to ensure complete, high quality, and cost effective data sets. Geophysical data can be acquired in boreholes, on the surface, or in the air using aircraft. Field procedures must permit acquisition of high quality data, yet they must be economical, and safe to obtain.
 
 
 5. **Processing:** Plot the data, and apply appropriate processing and analysis. In nearly all cases interpretation can not proceed until some form of data processing has been applied. This may be as simple as plotting the data, or it may involve multiple numerical processing steps or data inversion. 
@@ -51,7 +51,7 @@ This sequence of images summarizes the framework visually.
  1. **Setup:** Establish the geoscience objectives, consider conventional practice, and identify how geophysics might contribute.
  2. **Properties:** Characterize materials that can be expected and establish the likely physical property contrasts.
  3. **Surveys:** Determine a suitable geophysical survey, and design an effective and efficient field survey. Identify possible sources of error, noise and mis-interpretation.
- 4. **Data:** Carry out the field survey, taking all necessary actions to ensure compelete, high quality, and cost effective data sets.
+ 4. **Data:** Carry out the field survey, taking all necessary actions to ensure complete, high quality, and cost effective data sets.
  5. **Processing:** Plot the data, and apply appropriate processing and analysis. 
  6. **Interpretation:** Interpret results in terms of physical property distributions, and then in terms of the original geoscience objectives.
  7. **Synthesis:** Combine interpretations with prior knowledge about the problem, and with other relevant information. Decide if your results are adequate for the particular problem. Iteration is usually necessary.

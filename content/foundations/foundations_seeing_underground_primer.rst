@@ -7,12 +7,12 @@ Seeing Underground: Geophysics primer
 	:align: right
 	:scale: 90 %
 
-Geophysical surveys are performed when information about the earth's subsurface is desired but direct sampling through expensive and invasive techniques such as drilling or trenching is insufficient, impractical or ill-advised. A survey may be as large as the whole Earth, as small as the top few metres of the subsurface, or anywhere in between. 
+Geophysical surveys are performed when information about the earth's subsurface is desired but direct sampling through expensive and invasive techniques such as drilling or trenching is insufficient, impractical or ill-advised. A survey may be as large as the whole Earth, as small as the top few meters of the subsurface, or anywhere in between. 
 
 Measuring physical properties
 =============================
 
-During a geophysical survey, energy is put into the earth and responses are recorded at the surface, in the air or in boreholes. Resulting data reveal information about the earth because the behaviour of the energy within the ground is controlled by the distribution of the earth's physical properties. For instance, one basic physical property is magnetic susceptibility, which describes a rock's ability to become magnetized. This physical property provides information on rock type and structures because the rock's magnetic susceptibility relates directly to mineral type, and to the chemical alteration processes involved in its deposition. A second important physical property is electrical conductivity, which quantifies a material's capacity to carry electrical current. Figure 2 illustrates one way that a geophysical survey can be carried out to provide information about the subsurface distribution of electrical conductivity.
+During a geophysical survey, energy is put into the earth and responses are recorded at the surface, in the air or in boreholes. Resulting data reveal information about the earth because the behavior of the energy within the ground is controlled by the distribution of the earth's physical properties. For instance, one basic physical property is magnetic susceptibility, which describes a rock's ability to become magnetized. This physical property provides information on rock type and structures because the rock's magnetic susceptibility relates directly to mineral type, and to the chemical alteration processes involved in its deposition. A second important physical property is electrical conductivity, which quantifies a material's capacity to carry electrical current. Figure 2 illustrates one way that a geophysical survey can be carried out to provide information about the subsurface distribution of electrical conductivity.
 
 .. raw:: html
     :file: figure2.html
@@ -29,7 +29,7 @@ Traditionally, useful information was extracted from geophysical field results b
 	:align: center
 	:scale: 90 %
 
-	Figure 3. Tetatouche Antiform - Total Magnetic Field, from "Airborne Geophysical Survey of the Bathurst Mining Camp", Geological Survey of Canada website, http://gdcinfo.agg.nrcan.gc.ca/app/bathmag/tetagouche_e.html (Dec. 2006). 
+	Figure 3. Tetatouche Antiform - Total Magnetic Field, from "Airborne Geophysical Survey of the Bathurst Mining Camp", Geological Survey of Canada website.
 
 Historically, in mineral exploration, the identification of an anomalous region was often the endpoint of the analysis, and the image was used to plan the location of a drill hole. Unfortunately, the success rate was generally poor. At best, data maps provide some information about the lateral extent of a body but little information about what is happening at depth. Quantitative analysis, in particular inversion, is required to obtain 3D information.
 

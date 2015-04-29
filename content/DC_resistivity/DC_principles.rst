@@ -6,12 +6,12 @@ Physical principles of DC resistivity
 Introduction
 ============
 
-This chapter presents the important phyiscal principles upon which DC resistivity methods are based. The relations between current flow, potentials and resistivity in uniform ground are explained. This forms the basis for the concept of apparent resistivity derived from practical survey arrangements (two current and two potential electrodes planted at the surface). The effect of anisotropic ground upon measured potentials is then described. Finally, charge distribution is explained because it is a useful way of understanding how potentials arise at the surface due to variations in electrical conductivity underground. The forward modeling relations are also based upon charge distribution.
+This chapter presents the important physical principles upon which DC resistivity methods are based. The relations between current flow, potentials and resistivity in uniform ground are explained. This forms the basis for the concept of apparent resistivity derived from practical survey arrangements (two current and two potential electrodes planted at the surface). The effect of anisotropic ground upon measured potentials is then described. Finally, charge distribution is explained because it is a useful way of understanding how potentials arise at the surface due to variations in electrical conductivity underground. The forward modeling relations are also based upon charge distribution.
 
 Currents and voltages in a uniform earth
 ========================================
 
-In order to derive a relation between measurments (I, V and geometry) and the required physical property (resistivity or  \\(\\rho\\) ), we must start by identifying how these parameters relate to electric field strength, E (Volts per meter), current density, J (Amps per unit area), and resistivity  (Ohm-m) in the three dimensional situation of a field survey (the introduction defines resistivity and conductivity).
+In order to derive a relation between measurements (\\(I\\), \\(V\\) and geometry) and the required physical property (resistivity or  \\(\\rho\\) ), we must start by identifying how these parameters relate to electric field strength, \\(E\\) (Volts per meter), current density, \\(J\\) (Amps per unit area), and resistivity  (Ohm-m) in the three dimensional situation of a field survey (the introduction defines resistivity and conductivity).
 
 .. figure:: ./images/currents_in_earth.gif
 	:align: right
@@ -36,7 +36,7 @@ Combining the expression for \\(E\\), Ohm's Law and equation 1, we have
 
 		\frac{dV(r)}{dr} &= \frac{-I}{2\pi \sigma r^2}
 
-If we intergrate,
+If we integrate,
 
 .. math::
 		V(r) = \frac{I}{2 \pi \sigma r} + C
@@ -186,19 +186,18 @@ One of the fundamental principles regarding current flow is that away from the c
 
 Because there are no sources or sinks of current in the earth (conservation of charge), the normal component of current density is constant across any boundary where conductivity changes. That is, all of the current that flows into one side of the boundary must flow out the other side. Also, since lines of equal potential in an electric field are perpendicular to current flow, the electric field perpendicular to the normal component of current at the boundaries must also be constant across the boundary. Therefore there are two boundary conditions that must hold across interfaces where conductivity changes:
 
-	- the *normal* \\( \\)component of current density, **J**, must be continuous, and
-	- *tangential* \\( \\)components of electric field, **E**, must be continuous.
+	- the *normal* \\( \\)component of current density, \\(J\\), must be continuous, and
+	- *tangential* \\( \\)components of electric field, \\(E\\), must be continuous.
 
-Recall that Ohm's law is \\(**J** = \\sigma **E**\\). Since the normal component of J is continuous across a boundary where conductivity changes, the normal component of the **E**-field must NOT be equal. If \\(\\sigma_2 > \\sigma_1\\) then \\(E_2 < E_1 \\). The following figure should clarify:
+Recall that Ohm's law is \\(J = \\sigma E\\). Since the normal component of \\(J\\) is continuous across a boundary where conductivity changes, the normal component of the \\(E\\)-field must NOT be equal. If \\(\\sigma_2 > \\sigma_1\\) then \\(E_2 < E_1 \\). The following figure should clarify:
 
 
 .. figure:: ./images/sigma_E_relation.gif
 	:align: center
 	:scale: 120 %
 
-The only way an electric field can change at a boundary is if there is a charge on the boundary. If the current is flowing from a resistive medium to a conductive medium, then the charge buildup will be negative. If the current flows from a conductive medium to a resistive medium, then the charge will be positive. This is illustrated in the diagram below-left, where the anomalous body (blue) is more conductive than the host (yellow). In the figure below-right, the change in **E**-field is illustrated for a field crossing from a resistive medium (yellow) into a more conductive zone (blue). Tangential components are unchanged, but normal components of **E** are different so that normal components of **J** can remain unchanged. This change in direction is the origin of the concept that current lines "converge" upon entering a conductor, and "diverge" upon entering a resistor (illustrated with cartoons of the ore body in this chapter's introduction).
+The only way an electric field can change at a boundary is if there is a charge on the boundary. If the current is flowing from a resistive medium to a conductive medium, then the charge buildup will be negative. If the current flows from a conductive medium to a resistive medium, then the charge will be positive. This is illustrated in the diagram below-left, where the anomalous body (blue) is more conductive than the host (yellow). In the figure below-right, the change in \\(E\\)-field is illustrated for a field crossing from a resistive medium (yellow) into a more conductive zone (blue). Tangential components are unchanged, but normal components of \\(E\\) are different so that normal components of \\(J\\) can remain unchanged. This change in direction is the origin of the concept that current lines "converge" upon entering a conductor, and "diverge" upon entering a resistor (illustrated with cartoons of the ore body in :doc:`DC_resistivity_surveys`).
 
-.. check reference to introduction. Either change reference or change title to first section.
 
 .. figure:: ./images/conductive_body.gif
 	:align: left

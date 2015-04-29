@@ -17,7 +17,7 @@ Magnetic dipoles: a Java applet
 -------------------------------
 
 
-As noted above, a real buried feature will look like a magnetic dipole if its physical dimensions are much smaller than the depth to the feature's centre.
+As noted above, a real buried feature will look like a magnetic dipole if its physical dimensions are much smaller than the depth to the feature's center.
 
 The response that will be measured at points on a surface overlying a buried magnetic dipole can be explored using the UBC-GIF magnetic dipole Java applet; click here_ to start it in a separate browser window. Be sure to read the description and instructions below the applet before using it. This tool shows you a surface map of the total field anomaly, \\(B_t\\), after you specify the inclination, declination, and strength of the inducing field, the depth of the buried dipole, and the strength of the buried dipole's magnetic moment, **m** (which is proportional to its magnetic susceptibility and the inducing field strength). Recall from the introduction that the strength of induced magnetization in a material is related to its susceptibility via \\( \\textbf{m} =\\kappa \\textbf{H} \\). 
 

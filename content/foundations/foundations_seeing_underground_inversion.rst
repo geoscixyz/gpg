@@ -21,6 +21,7 @@ Parametric methods
 ==================
 
 These inversion methods involve finding a model of the earth which is described using only a few parameters. The solutions require that there be fewer parameters than there are data values so that the problem is formally "over-determined." A few examples of parametric models are:
+
  - **Buried object:** parameters could be depth to a sphere (or cylinder), a radius of a sphere or radius and length of a cylinder, and the physical property contrast between the object and host rocks. 
  - **Layered earth:** parameters are layer thicknesses and physical property values.
  - **A buried sheet:** parameters might be depth to the top of sheet, it's dip, strike, thickness, and the physical property contrast between the sheet and host rocks.
@@ -47,6 +48,6 @@ This second class of inversion methods allows the earth's model to be more reali
 	:align: center 
 	:scale: 100 %
 
-	An acceptible model can cause the data, and simultaneously produces a minimum value for the "model objective function". 
+	An acceptable model can cause the data, and simultaneously produces a minimum value for the "model objective function". 
 
 In practice a number of inversions, with different reasonable objective functions, should be carried out so the interpreter has some insight about the range of earth models that can acceptably reproduce the field data. Error statistics about the data will determine how closely the reproduced data matches the real measured data. The fact that these error statistics are often poorly known is a second good reason for performing several inversions before settling upon a preferred model. 

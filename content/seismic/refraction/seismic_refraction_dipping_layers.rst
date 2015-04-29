@@ -13,14 +13,12 @@ Earth layers can often be approximated as planar, but they are rarely horizontal
 .. figure:: ./images/dip_layer_x_t_lines.gif
 	:figclass: center
 	:align: left
-	:scale: 90 %
+	:scale: 100 %
 
 
 Arrival times of the refracted wave will still appear as a straight line on the travel time plot. However, as the refracted wave moves updip the waves have less distance to travel to the surface. The travel time is reduced and thus the slope of the line is reduced. The velocity recovered from using this slope is called \\(v_{2u}\\), and is called the updip "apparent" velocity. This will be larger than the true velocity of the layer.
 
-Conversely, if you are downdip then the distance travelled by the refracted wave increases with distance and it takes longer for the waves to reach you. The slope of the refracted arrival on the travel time plot will increase and the apparent downdip velocity \\(v_{2d}\\) estimated from this slope will be smaller than the true velocity. 
-
-.. :figclass: float-right-360 ...this is how to float a figure to the right
+Conversely, if you are downdip then the distance traveled by the refracted wave increases with distance and it takes longer for the waves to reach you. The slope of the refracted arrival on the travel time plot will increase and the apparent downdip velocity \\(v_{2d}\\) estimated from this slope will be smaller than the true velocity. 
 
 .. figure:: ./images/dip_layer_S_R_schematic.gif
 	:align: left
@@ -30,6 +28,7 @@ Conversely, if you are downdip then the distance travelled by the refracted wave
 	:figclass: center
 	:align: left
 	:scale: 120 %
+
 
 **Therefore, having receivers only updip or downdip from the source provides only an apparent velocity and no indication that there is a dipping interface.**
 
@@ -110,4 +109,3 @@ Because interfaces are generally dipping (if not curved and tortuous) one needs 
 
 .. Notes to consider for review (Phil, 04/10/2014):
 .. (1) The final sentence before Profile Geometries says averaging v2 and v2 (as does GPG). Quantities need clarification. 
-.. (2) Grammar/style query: earlier paragraphs use "updip velocity" and latter use "up-dip velocity." Text is modified from GPG to unhyphenated choice for consistency. But in general: hyphen or no hyphen?

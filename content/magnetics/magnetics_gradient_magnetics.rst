@@ -8,7 +8,7 @@ Gradient Magnetics
 	.. figure:: images/icon_maggrad.gif
 		:align: center
 
-Most modern instruments are capable of collecting magnetic field data using two sensors for gradient surveys. The vertical gradient is measured using two sensors at (typically) 2 and 3 metres above the ground. Horizontal gradient surveys can be conducted if the sensors can be mounted some distance apart on a frame. 
+Most modern instruments are capable of collecting magnetic field data using two sensors for gradient surveys. The vertical gradient is measured using two sensors at (typically) 2 and 3 meters above the ground. Horizontal gradient surveys can be conducted if the sensors can be mounted some distance apart on a frame. 
 
 Gradient measurements
 =====================

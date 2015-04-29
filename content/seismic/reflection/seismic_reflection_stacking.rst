@@ -50,7 +50,7 @@ As an example consider the two CMP gathers in the figure below left (click for a
 	:scale: 125 %
 
 
-In the figure above right, the CMP gather for point 988 has been moveout corrected using different velocites. The moveout correction using a velocity of 1225 ft/s (328 m/s) causes the reflection events to occur at about the same time for all traces. Stacking these signals will produce a high quality reflection signal. Conversely, a velocity of 1075 ft/s is too small and produces too large a correction at far offsets. 
+In the figure above right, the CMP gather for point 988 has been moveout corrected using different velocities. The moveout correction using a velocity of 1225 ft/s (328 m/s) causes the reflection events to occur at about the same time for all traces. Stacking these signals will produce a high quality reflection signal. Conversely, a velocity of 1075 ft/s is too small and produces too large a correction at far offsets. 
 
 
 .. figure:: ./images/wrong_velocity_stack.gif

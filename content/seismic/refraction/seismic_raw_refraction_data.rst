@@ -18,7 +18,7 @@ If seismic signals travel at higher velocity in the lower layer, then some of th
 .. figure:: ./images/refract.jpg
 	:align: center
 
-Of course energy is both **reflected** and **refracted**, so ground motion detected at a geophone is a caused by the combination of direct, refracted and reflected energy arriving at the geophone's location. The different types of energy are distinguishable only because they have travelled along different pathways. Refraction surveying takes advantage of the fact that refracted waves arrive before reflected energy, so long as the geophone is at a great enough distance from the shot point.
+Of course energy is both **reflected** and **refracted**, so ground motion detected at a geophone is a caused by the combination of direct, refracted and reflected energy arriving at the geophone's location. The different types of energy are distinguishable only because they have traveled along different pathways. Refraction surveying takes advantage of the fact that refracted waves arrive before reflected energy, so long as the geophone is at a great enough distance from the shot point.
 
 
 Signals that get recorded
@@ -36,6 +36,6 @@ On this plot, one geophone was not working properly. Geophones are labeled with 
 
 This figure shows shorter segments of traces from 12 geophones. The signal amplitudes have been amplified, so all ground motions are visible. There are clear beginnings of ground motion for each trace, which appear later in time for traces farther from the source. Finding exactly what time the ground first moved at each geophone is called **first break picking**. It is not difficult in this case, but it can be challenging if signals are weak. Use radio buttons next to the figure to see the result of picking first breaks (also known as first arrivals) on this figure. Once the picks are chosen, it becomes evident that there is a definite pattern to the arrivals--there are straight lines joining the first breaks of several adjacent traces. The third radio button reveals straight line patterns emphasized by drawing red lines.
 
-We will learn that first arrivals are either direct signals (for near geophones) or refractions that have travelled along subsurface interfaces. The objective of seismic refraction surveys is to determine the geometry of subsurface interfaces, and this can be derived by analysis of the pattern of first arrivals.
+We will learn that first arrivals are either direct signals (for near geophones) or refractions that have traveled along subsurface interfaces. The objective of seismic refraction surveys is to determine the geometry of subsurface interfaces, and this can be derived by analysis of the pattern of first arrivals.
 
 

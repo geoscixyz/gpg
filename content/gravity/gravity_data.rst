@@ -30,7 +30,7 @@ Instrumentation: part II
 
 Modern instruments use similar mechanisms, but they incorporate automatic leveling, computer driven recording, and other convenience features. See, for example, http://www.lacosteromberg.com/ that has several highly respected portable instruments (both spring based (image to the right) and "free-fall" types), as well as air-sea gravity systems.
 
-There are also several organizations supplying instruments and services for marine and airborne surveys, and for measuring gravity gradients, but these advanced topics are beyond the scope of this intrduction, except for the comments on the associated page that discusses gravity gradients.
+There are also several organizations supplying instruments and services for marine and airborne surveys, and for measuring gravity gradients, but these advanced topics are beyond the scope of this introduction, except for the comments on the associated page that discusses gravity gradients.
 
 Field procedures
 ================
@@ -41,7 +41,7 @@ The following points provide an outline for how data are acquired for common gro
 - **Setting the range**: Only relative gravitational changes can be recorded unless measurements are tied to a benchmark with a known value of \\(g\\). The dynamic range of an instrument may be between 10,000 and 70,000 mGal, and the instrument's range may have to be set for a new site after the instrument has been transported.
 - **Shake-down**: Gentle tapping on the base may be required to stabilize the movement (especially after resetting the range).
 - **Leveling the instrument**: Leveling is critical. Ensure the platform is stable and not drifting. Be aware of ground motion, vehicles, trees, tele- and micro-seismics, etc.
-- **Readings**: Ideally, several readings should be made by a single operator, each one involving a seperate leveling. To avoid dial "whiplash," view comfortably from a consistent angle, and adjust the instrument for its null reading, using the exact same physical procedure every time. 
+- **Readings**: Ideally, several readings should be made by a single operator, each one involving a separate leveling. To avoid dial "whiplash," view comfortably from a consistent angle, and adjust the instrument for its null reading, using the exact same physical procedure every time. 
 -  **Survey procedures**: 
 	+ Station spacing depends on anomaly size; avoid spatial aliasing, unless anomaly detection (as opposed to anomaly characterization) is the only goal. 
 	+ Most surveys involve measurement of relative values. A base station is chosen and re-occupied often enough (every couple of hours) to characterize instrument drift. Results are generated relative to it. 
@@ -51,7 +51,7 @@ The following points provide an outline for how data are acquired for common gro
 The following are some comments on positioning for gravity surveying:
 
 - 3.3 cm elevation error results in 0.01 mGal measurement error, which is the accuracy of many instruments.
-- Centimetre accuracy in elevation is possible with realtime differential GPS, but it is not necessarily easy.
+- Centimeter accuracy in elevation is possible with realtime differential GPS, but it is not necessarily easy.
 - Terrain corrections are hard to get accurate to better than 0.2 mGal using conventional methods because of line-of-site limitation for "inner zone" corrections. However, digital terrain data can contribute significantly to improving final results.
 
 Data reduction
@@ -67,10 +67,12 @@ Corrections
 
 The adjacent figure shows the effects of each correction for a short line surveyed in Vancouver, BC. Raw data after correcting for drift, and each of the correction factors are shown. Final interpretations would normally be made from the Bouguer anomaly graph (red). 
 
-- **Latitude correction**: The earth's poles are closer to the centre of the equator than is the equator. However, there is more mass under the equator and there is an opposing centrifugal acceleration at the equator. The net effect is that gravity is greater at the poles than the equator.
-  + For values relative to a base station, gravity increases as you move north, so subtract \\(0.811sin(2a)\\) mGal/km as you move north from the base station. (The \\(a\\) is latitude). 
-  + The maximum correction values will be 0.008 mGal / 10 cm, which occurs at \\(a=45°\\). 
-- **Free-air correction** (elevation): Applying 0.3086 h mGal (h in metres) accounts for the \\(1/r^2\\) dependance. Measurements at higher elevations will be *smaller*; therefore, *add* the correction for higher elevations.
+- **Latitude correction**: The earth's poles are closer to the center of the equator than is the equator. However, there is more mass under the equator and there is an opposing centrifugal acceleration at the equator. The net effect is that gravity is greater at the poles than the equator.
+
+ + For values relative to a base station, gravity increases as you move north, so subtract \\(0.811sin(2a)\\) mGal/km as you move north from the base station. (The \\(a\\) is latitude). 
+ + The maximum correction values will be 0.008 mGal / 10 cm, which occurs at \\(a=45°\\). 
+
+- **Free-air correction** (elevation): Applying 0.3086 h mGal (h in meters) accounts for the \\(1/r^2\\) dependence. Measurements at higher elevations will be *smaller*; therefore, *add* the correction for higher elevations.
 - **Bouguer correction**: This corrects the free-air value to account for material between the reference and measurement elevations.  If you are further above the reference, there is more material (effect is greater), so subtract \\(0.04191 h× d\\) mGal (\\(h\\) in metres, \\(d\\) in g/cc) from the reading. The derivation involves determining the effect of a point, then integrating for a line, then again for a sheet, and finally for a slab. 
  + In the equation for the Bouguer correction, density, d, must be estimated; this can be done if the material is known, or by using a "crustal" value of 2.67 g/cc. Alternatively, trial and error can be used to find the density that causes the data to least reflect the patterns of topography.
  + Question: The Bouguer correction is always subtracted. What situation causes the value to be positive, and what causes the value to be negative?

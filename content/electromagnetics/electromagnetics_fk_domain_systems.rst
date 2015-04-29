@@ -13,13 +13,13 @@ Consider a frequency domain source. This could be a loop on the ground or in the
 	:scale: 100 %
 
 
-1. The primary field is harmonic \\( \\cos(\\omega t) \\). At the receiver the primary fieid can be written as \\( \\vec{H}_p \\cos(\\omega t) \\).
+1. The primary field is harmonic \\( \\cos(\\omega t) \\). At the receiver the primary field can be written as \\( \\vec{H}_p \\cos(\\omega t) \\).
 
 2. The currents induced in the conductor will also be harmonic with the same frequency \\(\\omega\\).
-They will however, have a different phase. The resultantsecondary field from these currents
+They will, however, have a different phase. The resultant secondary field from these currents
 must also have the same frequency dependence and hence can be written as \\( \\vec{H}_s \\cos(\\omega t + \\psi) \\), where \\(\\psi\\) is a phase angle.
 
-At the receiver we observe the sun of the promary and secondary fields which is 
+At the receiver we observe the sun of the primary and secondary fields which is 
 
 .. math::
 		\vec{H}_{total} = \vec{H}_p \cos (\omega t) + \vec{H}_s \cos (\omega t + \psi)
@@ -39,9 +39,9 @@ of the body.
 .. math::
 		\mathcal{E} = - \frac{d \phi_B}{dt}
 
-If the primary current varies as \\(\\cos(\\omega t)\\)  then the flux, \\(\\phi_B\\) also varies as \\(\\cos(\\omega t)\\) . Thus \\( \\mathcal{E} ~ \\sin(\\omega t) \\). That is, the EMF lags the primary by \\(\\pi/2\\).
+If the primary current varies as \\(\\cos(\\omega t)\\)  then the flux, \\(\\phi_B\\) also varies as \\(\\cos(\\omega t)\\), while \\( \\mathcal{E}\\) varies with \\(\\sin(\\omega t) \\). That is, the EMF lags the primary by \\(\\pi/2\\).
 
-3. The body in which the induction is occuring can be represented as a ciruit element with self-inductance \\(L\\) and a resistance \\(R\\). Through the laws of electromegnetic induction, the time varying currents that are set up in the conductor suffer a further lag
+3. The body in which the induction is occurring can be represented as a circuit element with self-inductance \\(L\\) and a resistance \\(R\\). Through the laws of electromagnetic induction, the time varying currents that are set up in the conductor suffer a further lag
 
 .. math::
 		\phi = \tan^{-1} \left( \frac{\omega L}{R} \right)
@@ -56,8 +56,8 @@ Note:
 1. For a resistive body (or for very low frequency) \\(\\phi \\rightarrow 0\\) so the secondary field is only
 \\(\\pi/2\\) out of phase with the primary field. The response from a weak conductor will be in the out-of-phase component of the measured signal.
 
-2. For very conductive bodies (or for very high frequency) the secondary field becomes nearly \\(\\pi\\),
-180° out of phase with the primary. Since \\(\\cos(\\omega t + \\pi ) = -\cos(\\omega t)\\), the response due to a good conductor will be in phase with the primary but reversed in sign. 
+2. For very conductive bodies (or for very high frequency) the secondary field becomes nearly \\(\\pi\\) 
+(180°) out of phase with the primary. Since \\(\\cos(\\omega t + \\pi ) = -\cos(\\omega t)\\), the response due to a good conductor will be in phase with the primary but reversed in sign. 
 
 Measurement of Secondary Fields
 ===============================
@@ -71,7 +71,7 @@ be done in two ways:
 
 1. One can have a "bucking" coil or "compensator" which provides a magnetic field at the
 receiver which has the same amplitude and phase as the primary field but is in the opposite
-direction. As a result Hv is annihilated at the receiver, (eg. aircraft systems. Lab systems,
+direction. As a result \\(\\vec{H}_p\\) is annihilated at the receiver, (eg. aircraft systems. Lab systems,
 EM-31).
 
 .. figure:: ./images/bucking_coil.jpg
@@ -150,7 +150,7 @@ host. This is a two-stage process.
 2. Use the response diagram and the knowledge of whether you are dealing with a good conductor or poor conductor to determine the relative amplitude of the in-phase and out-of-phase parts.
 
 
-**Part I:** Consider the basic geometry given below. For any placement of te transmitter there will be a varying magnetic foed crossing the plate and hence induced currents. Those currents generate secondary magnetic fields. Adopt a convention that if the secondary field is in (he same direction as the primary field then the response will be plotted as a positive value. Alternatively, when the two fields are in opposition the response will be negative. The distance between the transmitter and receiver loops is held fixed and the-datum is plotted at the midpoint between the coils. When both loops are to the left, or to the right, of the plate then the response is positive. The response will be zero when either coil is over the plate. When the receiver, which is a horizontal coil, is over the plate, then no magnetic flux is passing through the coil. There will be zero voltage induced. When the transmitter is directly over the thin conducting plate, there is no flux crossing the plate, hence no currents will be generated in the plate and the secondary magnetic field is zero. 
+**Part I:** Consider the basic geometry given below. For any placement of the transmitter there will be a varying magnetic field crossing the plate and hence induced currents. Those currents generate secondary magnetic fields. Adopt a convention that if the secondary field is in (he same direction as the primary field then the response will be plotted as a positive value. Alternatively, when the two fields are in opposition the response will be negative. The distance between the transmitter and receiver loops is held fixed and the-datum is plotted at the midpoint between the coils. When both loops are to the left, or to the right, of the plate then the response is positive. The response will be zero when either coil is over the plate. When the receiver, which is a horizontal coil, is over the plate, then no magnetic flux is passing through the coil. There will be zero voltage induced. When the transmitter is directly over the thin conducting plate, there is no flux crossing the plate, hence no currents will be generated in the plate and the secondary magnetic field is zero. 
 
 
 .. figure:: ./images/source_receiver_signal.jpg
@@ -158,7 +158,7 @@ host. This is a two-stage process.
 	:scale: 100 %
 
 **Part II:** The basic sketch for the shape of the anomalous signal is determined from the geometry
-of the coils and the relative locations of transmitter, receiver and the conductive body. In practise
+of the coils and the relative locations of transmitter, receiver and the conductive body. In practice
 we measure both an in-phase and an out-of-phase component. Each of these curves will look
 like the basic curve (given above). We need only establish relative amplitude. From the general
 response curve we find that the in-phase (or real component) is larger than the out-of-phase
@@ -183,7 +183,7 @@ The Conductive Host
 ===================
 
 The sketches regarding EM responses were derived under the simplifying assumptions that
-the buried body was in a vciy resistive medium. Consequently, the response depended only upon
+the buried body was in a very resistive medium. Consequently, the response depended only upon
 the relative orientations of the source coil and the body (the coupling effect), the conductivity of
 the body and the frequency of the transmitter, and the coupling effect of the secondary magnetic
 fields with the receiver.
@@ -204,13 +204,14 @@ Strength of the Primary Field in the Earth
 ==========================================
 
 The strength of the primary field depends upon:
-1. frequency of the transmitter
-2. conductivity of the host material
-3. geometry of the source
+
+#. frequency of the transmitter
+#. conductivity of the host material
+#. geometry of the source
 
 Considerable insight can be obtained by first ignoring the geometry of the source and observing
 how a plane electromagnetic wave decays as it propagates into the earth. An incoming sinusoidal
-wave with frequency \\(\\omega = 2 \\pi f\\) travels in the atmosphere at the speed of light \\(c = 3 x 10^8\\) m/s and has a wavelength \\(\\lambda = c/f\\). When the wave enters the conducting earth it still propagates as a sinusoid but it travels much slower and attenuates rapidly. An example, with numbers for
+wave with frequency \\(\\omega = 2 \\pi f\\) travels in the atmosphere at the speed of light \\(c = 3 \\times 10^8\\) m/s and has a wavelength \\(\\lambda = c/f\\). When the wave enters the conducting earth it still propagates as a sinusoid but it travels much slower and attenuates rapidly. An example, with numbers for
 speed and wavelength is given below.
 
 
@@ -219,7 +220,7 @@ speed and wavelength is given below.
 	:scale: 80 %
 
 The wave attenuates so fast that it only propagates about a wavelength into the earth. Because
-the amplitude diminishes so rapidly and the waves travel so slowly, we generally talk about Uie
+the amplitude diminishes so rapidly and the waves travel so slowly, we generally talk about the
 EM wave "diffusing" into the earth. The amplitude of the field decays exponentially with depth
 according to the diagram given below.
 
@@ -247,7 +248,7 @@ penetration is about twice the separation of the source and receiver, but this i
 and is easily violated. Also, a necessary condition for this to happen is that the source/receiver
 separation \\(s << \\delta\\) (coil separation is less than the skin depth).
 
-The justification for the above statement is based upon the following. Consider a homogenous halfspace on the surface of which is located a horizontal coplanar coil (HCP) system (e.g. EM31) or a vertical coplanar (VCP) system (EM34). Let the depth \\(z\\) in the earth be normalized by the coil spacing \\(s\\). (True depth in meters is \\(zs\\).) The time varying fields in the transmitting coils will induce eddy currents in the earth. For a homogeneous earth, these currents flow in horizontal planes. This is true even for the vertically oriented coils. It is possible to calculate the contribution to the secondary field as measured from the surface from any thin layer of thickness \\(dz\\) at some depth \\(z\\). Let \\(\\phi_V(z)\\) denote this contribution from the vertical magnetic dipole source and receiver. The subscript \\(V\\) denotes that the magnetic fields are vertical. A horisontal loop of current acts like a vertical magnetic dipole. A plot of this function is shown below:
+The justification for the above statement is based upon the following. Consider a homogeneous halfspace on the surface of which is located a horizontal coplanar coil (HCP) system (e.g. EM31) or a vertical coplanar (VCP) system (EM34). Let the depth \\(z\\) in the earth be normalized by the coil spacing \\(s\\). (True depth in meters is \\(zs\\).) The time varying fields in the transmitting coils will induce eddy currents in the earth. For a homogeneous earth, these currents flow in horizontal planes. This is true even for the vertically oriented coils. It is possible to calculate the contribution to the secondary field as measured from the surface from any thin layer of thickness \\(dz\\) at some depth \\(z\\). Let \\(\\phi_V(z)\\) denote this contribution from the vertical magnetic dipole source and receiver. The subscript \\(V\\) denotes that the magnetic fields are vertical. A horizontal loop of current acts like a vertical magnetic dipole. A plot of this function is shown below:
 
 .. figure:: ./images/vertical_dipole_response.jpg
 	:align: center
