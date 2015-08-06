@@ -1,6 +1,8 @@
 Geophysics for Practicing Geoscientists
 =======================================
 
+Hello!
+
 Contents:
 
 .. toctree::
