@@ -1,6 +1,8 @@
 Geophysics for Practicing Geoscientists
 =======================================
 
+Coin Coin
+
 Contents:
 
 .. toctree::
