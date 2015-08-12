@@ -6,7 +6,8 @@ Seismic Velocity
 Relating geology to velocity
 ============================
 
-Mechanical waves travel at different speed, depending on the type of material they go through. In dry air at 20°C, mechanical waves (=sound) travel at 0.34 km/s. In water their speed is 1.49 km/s. 
+Mechanical waves travel at different speed, depending on the type of material they go through. In dry air at 20°C, mechanical waves (=sound) travel at 0.34 km/s. In water their speed is 1.49 km/s. In the same way, their speed varies in different kind of rocks.
+
 The velocities of mechanical waves in various rock types vary rather widely, so it is usually difficult to determine rock type based only upon velocities. The table to the below shows rough ranges of velocities in units of kilometers per second for several types of earth materials.
 
 +--------------------------------+-----------+
