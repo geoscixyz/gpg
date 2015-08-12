@@ -1,9 +1,9 @@
 .. _magnetics_susceptibility:
 
-Susceptibility
-**************
+Magnetic Susceptibility
+***********************
 
-For magnetic surveys, the relevant physical property is *magnetic susceptibiity*, or less commonly the related property *magnetic permeability*. 
+For magnetic surveys, the relevant physical property is *magnetic susceptibiity*, or less commonly the related property *magnetic permeability*, which is a measure of how magnetized a material becomes in the presence of a magnetic field. The source for magnetization is the natural magnetic field of the earth.
 
 
 Some Definitions

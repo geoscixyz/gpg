@@ -1,7 +1,7 @@
-.. _magnetics_index:
+.. _physical_properties_index:
 
-Magnetics
-=========
+Physical Properties
+===================
 
 .. figure:: ./images/solarwind.jpg
    :align: right
@@ -16,7 +16,8 @@ Contents:
 .. toctree::
    :maxdepth: 1
 
-   
+   gravity_density
    magnetics_susceptibility
+   electric_resistivity
    seismic_velocity
    

@@ -6,8 +6,8 @@ Seismic Velocity
 Relating geology to velocity
 ============================
 
-
-The velocities of various rock types vary rather widely, so it is usually difficult to determine rock type based only upon velocities. The table to the below shows rough ranges of velocities in units of kilometers per second for several types of earth materials.
+Mechanical waves travel at different speed, depending on the type of material they go through. In dry air at 20°C, mechanical waves (=sound) travel at 0.34 km/s. In water their speed is 1.49 km/s. 
+The velocities of mechanical waves in various rock types vary rather widely, so it is usually difficult to determine rock type based only upon velocities. The table to the below shows rough ranges of velocities in units of kilometers per second for several types of earth materials.
 
 +--------------------------------+-----------+
 | **Unconsolidated Materials**   |    km/s   |
