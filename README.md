@@ -5,4 +5,4 @@ A learning resource for applied geophysics.
 
 Originally created by Francis H.M. Jones and Douglas W. Oldenburg.
 
-
+http://gpg.geosci.xyz/en/latest/
