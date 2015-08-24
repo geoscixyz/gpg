@@ -5,7 +5,7 @@ Susceptibility
 
 For magnetic surveys, the relevant physical property is *magnetic susceptibiity*, or less commonly the related property *magnetic permeability*. 
 
-
+hello seogi
 Some Definitions
 ================
 
