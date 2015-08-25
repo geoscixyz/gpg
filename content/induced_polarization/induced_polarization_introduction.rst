@@ -12,23 +12,6 @@ Chargeability is a physical property that is related to resistivity. The module 
 
 Induced polarization can also be measured using low frequency sinusoidal signals, as discussed in the "Measurements and data" section of this chapter. The signals or data that are measured depend upon which of the various types of source signals are used. Note that IP surveys always include resistivity measurements because the electrical resistivity of teh earth must be known in order to invert data to recover chargeability.
 
-Examples
-========
-
-The data sets shown (below) were gathered simultaneously at the Century Deposit in Australia. Clearly they are exhibiting responses to different materials within the ground. However, this presentation of the raw data (plots called pseudosections) is deceptive, and does not represent true distribution of material properties in the ground. After inverting these data, the resulting resistivity model reveals information about rocks overlying the deposit, while the resulting chargeability model shows the deposit itself and underlying shale units. 
-
-
-.. figure:: ./images/raw_data.gif
-	:align: center
-	:scale: 120 %
-
-	Raw data (pseudosections)
-
-.. figure:: ./images/inverted_results.gif
-	:align: center
-	:scale: 120 %
-
-	Inversion results (resistivity top, chargeability bottom)
 
 
 The physical property--chargeability

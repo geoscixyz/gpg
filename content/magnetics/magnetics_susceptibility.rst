@@ -155,6 +155,12 @@ Organically derived susceptibility
 Organic chemistry can be important in understanding magnetic survey results for petroleum exploration applications. Under certain conditions magnetic anomalies caused by organic chemical activity can provide indicators of petroleum reservoir in underlying rocks. This is described in a supplementary article (Stone et al, 2004).
 
 
+Field measurements of magnetic susceptibility using a KT10
+----------------------------------------------------------
+
+.. figure:: 
+	../physical_properties/images/magnetic_susceptibility_measurement_kt10.jpg
+
 References cited on this page 
 -----------------------------
 
