@@ -1,4 +1,0 @@
-.. _electric_resistivity:
-
-
-

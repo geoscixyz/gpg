@@ -7,7 +7,7 @@ Relating geology to velocity
 ============================
 
 
-Mechanic waves travel at different speed depending on the material they go through. For example if in the air at 20°C they travel at around 343 m/s (it is a sound), in water at 20°C they travel at 1480 m/s. Similarly the velocities of various rock types vary rather widely, so it is usually difficult to determine rock type based only upon velocities. The table to the below shows rough ranges of velocities in units of kilometers per second for several types of earth materials.
+The velocities of various rock types vary rather widely, so it is usually difficult to determine rock type based only upon velocities. The table to the below shows rough ranges of velocities in units of kilometers per second for several types of earth materials.
 
 +--------------------------------+-----------+
 | **Unconsolidated Materials**   |    km/s   |
@@ -124,8 +124,6 @@ In general velocity rises with increasing confining pressure and then levels off
 Finally even at depth, as the pore pressure increases above hydrostatic, the effective pressure decreases as does the velocity. Therefore, over-pressured zones may be detectable in a sedimentary sequence by their anomalously low velocities.
 
 All this seems a bit complicated, and the take-home message is that there are several contributing factors to velocity, some of which may be counter-intuitive.
-
-.. _myreferencelabel:
 
 Fluid saturation
 ----------------
