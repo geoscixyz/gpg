@@ -13,11 +13,11 @@ Contents:
 .. toctree::
    :maxdepth: 1
 
-   gravity_density
+   physical_properties_density
    ../magnetics/magnetics_susceptibility
    ../seismic/refraction/seismic_velocity
-   dielectric_permittivity
-   conductivity
+   physical_properties_dielectric_permittivity
+   physical_properties_conductivity
    ../induced_polarization/induced_polarization_physical_properties
 
 	
