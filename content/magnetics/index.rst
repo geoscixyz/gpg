@@ -19,9 +19,9 @@ Contents:
    magnetics_susceptibility
    magnetics_earths_field
    magnetics_buried_dipole
-   magnetics_gradient_magnetics   
-   magnetics_simple_vs_complex
+   magnetics_extended_bodies
+   magnetics_line_profiles   
+   magnetics_complex_structures
    magnetics_instruments
+   magnetics_gradient_magnetics   
    magnetics_plotting_processing
-   magnetics_buried_structures
-   magnetics_line_profiles

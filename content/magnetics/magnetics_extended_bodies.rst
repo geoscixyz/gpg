@@ -1,4 +1,4 @@
-.. _magnetics_buried_structures:
+.. _magnetics_extended_bodies:
 
 Fields from extended bodies
 ***************************

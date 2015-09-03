@@ -1,4 +1,4 @@
-.. _magnetics_simple_vs_complex:
+.. _magnetics_complex_structures:
 
 Working with complex structures
 *****************************
