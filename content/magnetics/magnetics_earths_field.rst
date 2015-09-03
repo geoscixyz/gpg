@@ -31,12 +31,12 @@ There are, in fact, three different components to Earth's field:
 Describing Earth's field
 ------------------------
 
-The convention for describing Earth's field is to have a negative pole in the northern hemisphere and a positive pole in the southern hemisphere. Therefore, the magnetic field on Earth's surface looks approximately like that given in the right-hand figure above. Using B to represent the magnetic field of Earth as a vector in three dimensions, the field at any location on (or above or within) Earth can be described in either of three ways (refer to the next figure below):
+The convention for drawing magnetic field lines is that they flow outward from a positive pole and inward to a negative pole. The Earth's field behaves like there is a negative pole in the northern hemisphere and a positive pole in the southern hemisphere. Therefore, the magnetic field on Earth's surface looks approximately like that given in the  figure above. Using B to represent the magnetic field of Earth as a vector in three dimensions, the field at any location on (or above or within) Earth can be described in either of three ways (refer to the next figure below):
 
 
  B = (\\(B_x\\), \\(B_y\\), \\(B_z\\)) = (X, Y, Z) in the figure. These are Cartesian coordinates with X pointing to true (geographic) north, Y pointing east and Z pointing vertically down.
 
- B = (\\(B_h\\) , \\(B_z\\) , \\(D\\)) = (H, Z, D) in the figure. These are horizontal and vertical components, plus declination (angle with respect to true north).
+ B = (\\(B_h\\) , \\(B_z\\) , \\(D\\)) = (H, Z, D) in the figure. These are horizontal and vertical components, plus declination (angle with respect to true north). 
     
  B = (\\(D\\), \\(I\\), \\(\\mid B\\mid\\) ). These are the commonly used polar coordinates which include two angles and a magnitude: D=declination, I=inclination, and \\(\\mid B \\mid \\)=total field strength.
 
@@ -89,8 +89,10 @@ The second component of Earth's field involves external contributions due primar
 * Magnetic storms are correlated with sunspot activity, usually on an 11-year cycle. These variations can be large enough to cause damage to satellites and north-south oriented power distribution systems. They are also the cause of the Aurora Borealis or Australis (northern or southern lights respectively). See the GSC's "Geomagnetic Hazards" web page for more.
 
 
-Temporal variations are often larger than geophysical anomalies. They must be accounted for in all surveys. The only exception is gradient magnetic surveys gathered using two sensors. Three figures are given in a sidebar showing examples of different types of magnetic noise that may be encountered at time scales of several days, hours, and minutes.
+Temporal variations are often larger than geophysical anomalies. They must be accounted for in all surveys and this is usually done by acquiring data at a fixed base-station. Another alternative is to acquire gradient data that use two fixed sensors. Three figures are given in a sidebar showing examples of different types of magnetic noise that may be encountered at time scales of several days, hours, and minutes.
 
-The Geological Survey of Canada has a web page, which can provide graphs of diurnal variations observed at any of 11 magnetic observatories in Canada, for any day in the most recent 3 years. Find this facility by starting at the `GSC Geomagnetic data page`_. 
+DWO: I didn't find these pictures but we should have some photos of time variation of the fields at different time scales.
+
+The Geological Survey of Canada has a web page, which can provide graphs of diurnal variations observed at any of 11 magnetic observatories in Canada, for any day in the most recent 3 years. Find this facility by starting at the `GSC Geomagnetic data page`_. This resource is also a link to other information about magnetics.
 
 .. _GSC Geomagnetic data page: http://www.geomag.nrcan.gc.ca/index-eng.php

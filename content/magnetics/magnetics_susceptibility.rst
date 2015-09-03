@@ -15,29 +15,39 @@ Some Definitions
 	&\mu \quad &&\textrm{magnetic permeability, } H/m  \\[0.3em]
 	&\mu_0 = 4 \pi 10^{-7} \quad &&\textrm{the permeability of free space, } H/m  \\[0.3em]
 	&\vec{B} = \mu \vec{H} \quad &&\textrm{the constitutive relation between } \vec{B} \text{ and } \vec{H} \\[0.3em]
-	&\mu = \mu_0(1+\kappa) \quad &&\textrm{where } \kappa \textrm{ is magnetic susceptibility} \\[0.3em]
+	&\mu = \mu_0(1+\kappa) \quad &&\textrm{where } \kappa \textrm{ is magnetic susceptibility} A/m \\[0.3em]
 	&\vec{M}=\kappa \vec{H} \quad &&\textrm{where } \vec{M} \textrm{ is magnetization} \\[0.3em]
 	&\vec{m} \quad &&\textrm{dipole moment, } Am^2 \\[0.3em]
 	& \text{1 Tesla} = 10^9 \text{nT} \\[0.3em]
-	& \text{1 nT} =   \gamma
+	& \text{1 nT} =   \gamma \ (gamma)
 
-**What is susceptibility?** When there is no external magnetic field, individual magnetic zones ("magnetic domains") within rocks, soils or other materials will generally be oriented randomly. The net effect would be a zero magnetic field. However, when the material is in the presence of an external magnetic field such as Earth’s field, tBKhe individual magnetic domains become more or less aligned, resulting in a net non-zero field. This is a secondary field distinct from, but caused by, the Earth’s field. The following interactive figure illustrates:
+**What is susceptibility?** Individual particles, minerals, and magnetic domains within rocks often have a net magnetic moment. That is, they behave like small magnets. When there is no external magnetic field, these particles are generally randomly oriented  oriented and hence don't produce a net magnetic field. However, when the material is in the presence of an external magnetic field such as Earth’s field, the individual magnetic particles become more aligned, resulting in a net magnetic field. This secondary field is distinct from, but caused by, the Earth’s field. The following interactive figure illustrates:
 
 .. raw:: html
     :file: susceptibility.html
 	
-	
-The strength of the induced magnetisation, \\(M\\), the "dipole moment per unit volume", has units Am\ :sup:`2`\ . It is related to the causative field's strength, \\(H\\), by 
+DWO:  remove m from last line in box (wrong units) Substitute a magnetic fields from a bar magnet on the body
+
+The strength of the induced magnetisation, \\(M\\), the "dipole moment per unit volume", has units A/m. It is related to the causative field's strength, \\(H\\), by 
 
 .. math::
 		\vec{M}=\kappa \vec{H}
 
 Susceptibility \\( \\kappa \\) is a dimensionless number related to the number of individual magnetic dipoles in the medium that can be aligned with the main field. Note that as the field increases the number of dipoles that align themselves with the field also increases.
 
+Each magnetic particle has it's own magnetic moment. Let $\vec m_i$ be the magnetic moment of the $i'th$ particle. This has an amplitude and direction, exactly the same as a small bar magnet.  Consider a volume $V$. The total magnetic moment, which is the sum of the individual magnetic moments, is
 
+.. math::
+	\vec m= \sum\limits_i \vec m_i	
 
+The magnetization $\vec M$ ($A/m$) is the dipole moment per unit volume. It is given by
+
+.. math::
+	\vec M = \frac {\vec m}{V} = \frac {1}{V} \sum_i \vec m_i	
 
 Although unit-less, the value of susceptibility is different in the cgs and SI systems of measurement because of the way electromagnetic derivations proceed within the two systems. Translation between cgs and SI systems of units is done via \\(\\kappa (SI) = 4 \\pi \\kappa(cgs) \\) . The SI system is the current preferred standard among most geophysicists, but you will find cgs used in older references and texts. For more details, see the sub-section on units in the "Geophysical Surveys" chapter, "Magnetics" section.  
+
+	
 
 Susceptibility of materials
 ===========================
