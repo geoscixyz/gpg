@@ -10,7 +10,9 @@
 A seven-step framework for applied geophysics
 *********************************************
 
-Geophysics can play an important role in helping solve resource exploration, environmental, or geotechnical problems. Effective use of geophysics makes use of a seven-step framework. All seven tasks are inter-related, so the distinction between the steps can become blurred. For example, the geoscience problem will determine an appropriate interpretation procedure, which in turn will place constraints upon the survey design and choice of processing steps. Also, data processing, interpretation and synthesis are often particularly tightly related. However, it is useful to think in terms of these seven steps because they form a framework, which can be employed for any application of geophysical work to applied geoscience problems. 
+Geophysics can play an important role in helping solve resource exploration, environmental, or geotechnical problems. The application of geophysics is most effectively carried out by following a seven-step framework. Careful thought and due dilligence at each step is important to achieve a final outcome.
+
+
 
 1. **Setup:** Establish the geoscience objectives, consider conventional practice, and identify how geophysics might contribute. Details of setting up the problem depend upon which of the four general task types is involved.
  - Locating buried objects
@@ -45,6 +47,8 @@ This sequence of images summarizes the framework visually.
 .. figure:: ./images/seven_steps.jpg
 	:align: center
 	:scale: 90 %
+
+All seven tasks are inter-related, so the distinction between the steps can become blurred. For example, the geoscience problem will determine an appropriate interpretation procedure, which in turn will place constraints upon the survey design and choice of processing steps. Also, data processing, interpretation and synthesis are often particularly tightly related. However, it is useful to think in terms of these seven steps because they form a framework, which can be employed for any application of geophysical work to applied geoscience problems. 
 
 
 **Summary for the seven-step framework**
