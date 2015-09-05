@@ -17,10 +17,10 @@ If \\(L\\) denotes the scale length of a buried object and the distance from the
 First we begin with the concept of magnetic charges or poles. They can't be generated in practise. If you cut a small magnet in half, you will have two smaller dipole magnets. Let $Q$ be a magnetic charge. It has units of Webers. The charge creates a magnetic field, $B$ that is given by
 
 .. math::
-	B=  \frac{ \mu_0 Q \hat r}{4*pi*r^2}
+	\vec B=  \frac{ \mu_0 Q \hat r}{4 \pi r^2}
 
 
-If $Q$ is positive the field lines of $B$ extend radially outward in all directions as indicated by the drawing. If $Q$ is negative the field lines have the same shape but they point toward the source. If a positive and negative charge are put in proximity they form a dipole and the field lines look like the diagram below.
+If $Q$ is positive the field lines of $\vec B$ extend radially outward in all directions as indicated by the drawing. If $Q$ is negative the field lines have the same shape but they point toward the source. If a positive and negative charge are put in proximity they form a dipole and the field lines look like the diagram below.
 
 DWO: there are diagrams in the slides that can be inserted
 
@@ -48,7 +48,7 @@ The resultant anomalous magnetic field can be thought of as being due to a distr
 Working with magnetic charges
 ==========================
 
-The magnetization in a body of constant magnetic susceptibility $\kappa$ is $\vec M = \kappa \vec H_0$. As illustrated in the above diagram, the magnetic field outside the body can be represented as fields  due to charges on the surface of the body. The surface charge density is given by
+The magnetization in a body of constant magnetic susceptibility $\kappa$ is $\vec M = \kappa \vec H_0$. As illustrated in the above diagram, the magnetic field outside the body can be represented as fields due to charges on the surface of the body. The surface charge density is given by
 
 .. math::
 	\tau_s= \vec M \cdot \hat n
@@ -56,10 +56,10 @@ The magnetization in a body of constant magnetic susceptibility $\kappa$ is $\ve
 So the strength of the magnetic charges on the surface depends upon how the direction of the magnetic field is aligned with the boundary of the object. In the image above, there are charges on the top and bottom of the prism but there are no charges on the sides where the magnetic field is parallel to the boundary. 
 
 
-There are some circumstances in which the concept of magnetic charge greatly simplifies the problem. Consider a pipe, or vertical prism, and an incident magnetic field that is pointing down. The magnetization points vertically downward and $\vec{M} \cdot \hat n$ is zero except at the two ends. At the top the charge density is $|M| W/m^2$ and at the bottom it is $-|M| W/m^2$. Suppose the pipe has a radius $a$ and thus an area $\pi a^2$. If the radius of the pipe is small compared to the location of the observer then the effect is the same as if all of the charge was sitting at the top of the pipe at its center. The total charge on the face is the area (units $m2$) times the charge density $W/m^2$
+There are some circumstances in which the concept of magnetic charge greatly simplifies the problem. Consider a pipe, or vertical prism, and an incident magnetic field that is pointing down. The magnetization points vertically downward and $\vec{M} \cdot \hat n$ is zero except at the two ends. At the top the charge density is $|M| W/m^2$ and at the bottom it is $-|M| W/m^2$. Suppose the pipe has a radius $a$ and thus an area $\pi a^2$. If the radius of the pipe is small compared to the distance from the observer then the effect is the same as if all of the charge was sitting at the top of the pipe at its center. The total charge on the face is the area (units $m2$) times the charge density $W/m^2$
 
 .. math::
-	Q= \kappa H_0 \pi*a^2
+	Q= \kappa H_0 \pi a^2
 
 and the magnetic fields are like those given in equation XXX and diagram XXX.
 
@@ -68,9 +68,12 @@ The same phenomenon is happening at the bottom of the pipe but there the charge 
 The equation xxx provides the anomalous magnetic field due to a charge of strength $Q$. This is a vector. When we measure the magnetic anomaly we measure one or more individual components of this field. The total field anomaly is the projection of the anomalous field onto the direction of the earth's field $\hat z$ so the magnetic field anomaly over the pipe is 
 
 .. math::
-	B_t= \frac{mu_0}{4*\pi} \frac{Q z}{r^3}
+	B_t= \frac{\mu_0}{4 \pi} \frac{Q z}{r^3}
 
-where z is the depth of burial. 	
+where z is the depth of burial. Equivalently, if we substitute for the magnetic charge and write the expression using the earth's magnetic field $B_0$ then
+
+.. math::
+	B_t= \frac{\kappa \pi a^2 B_0}{4 \pi} \frac{z}{r^3} 	
 
 
 Geologic Features and representation for modeling 
