@@ -66,6 +66,7 @@ For example on the kth cell \\( x_{k-1} \\leq x \\leq x_k \\)  , \\(m(x) = m_k\\
 
 .. math::
 		d_j = \int_{x_0}^{x_k} g_j (x) m(x) dx = \sum_{k=1}^M \int_{x_{k-1}}^{x_k} g_j(x) m(x) dx = \sum_{k=1}^M m_k \left(\int_{x_{k-1}}^{x_k} g_j (x) dx \right) 		
+
 so
 
 .. math::
@@ -237,7 +238,8 @@ so
 and 
 
 .. math::
-		m = (G^T W_d^T W_d G + \beta W_m^T W_m)^{-1} (G^T W_d^T W_d d^{obs} + \beta W_m^T W_m m_0)		
+		m = (G^T W_d^T W_d G + \beta W_m^T W_m)^{-1} (G^T W_d^T W_d d^{obs} + \beta W_m^T W_m m_0)	
+			
 This is an \\(M \\times M\\) system of equations solved for \\(m\\). Solve this for many values of \\(\\beta\\) and model \\(m\\) that reproduces the data to the desired value. 
 
 .. figure:: ./images/tikhonov_curve.jpg
