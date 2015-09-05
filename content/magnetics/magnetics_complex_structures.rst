@@ -28,7 +28,7 @@ The following table gives access to model, mesh and data files associated with t
 +-------------------+----------------+-------------------+---------------+---------------+
 | Five block:       | `block_5_sus`_ |`block_5_sus_loc`_ | `block_msh`_  |`block_5_mag`_ | 
 +-------------------+----------------+-------------------+---------------+---------------+
-| Continuous earth: | `v_sus`_       |  --------------   | `v_msh`_      | `v_mag`_      |
+| Continuous earth: | `v_sus`_       |                   | `v_msh`_      | `v_mag`_      |
 +-------------------+----------------+-------------------+---------------+---------------+
 
 .. _block_sus: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/block.sus
