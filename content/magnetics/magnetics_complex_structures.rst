@@ -1,7 +1,7 @@
 .. _magnetics_complex_structures:
 
 Working with complex structures
-*****************************
+*******************************
 
 In previous sections we learned what the anomalous magnetic field will be over a buried dipole (xxx link) and over extended bodies of uniform susceptibility (xxx link), and how those ideas apply to geologic structures that have a uniform susceptibility. In general however, the earth is complex and the rocks have variable susceptibility. How then do we determine the anomalous magnetic fields that arise from these geologic structures". The numerical procedure by which we simulate the data that would be obseved in a survey is often referred to as "forward modelling". In this context the term "model" refers to the 3D distribution of magnetic susceptibility in the earth.  There a numerous approaches but a common one is the following. Technically it is an integral equation solution but that is not particularly relevant here. The approach has three steps: 
 
