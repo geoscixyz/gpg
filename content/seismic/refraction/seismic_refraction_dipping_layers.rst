@@ -3,17 +3,18 @@
 Interpretation when layers are dipping
 **************************************
 
-Earth layers can often be approximated as planar, but they are rarely horizontal.  The next level of complication is to assume that the layers have some dip associated with them. Consider a single interface which is dipping at an angle \\(\\theta\\) with respect to the horizontal. The critical angle is still defined by the angle that an incoming wave must make with respect to the **normal** of the refractor. This is shown by the left diagram below.
+Earth layers can often be approximated as planar, but they are rarely horizontal.  The next level of complication is to assume that the layers have some dip associated with them. Consider a single interface which is dipping at an angle \\(\\theta\\) with respect to the horizontal. The critical angle is still defined by the angle that an incoming wave must make with respect to the **normal** of the refractor. This is shown by the diagram below.
 
 
 .. figure:: ./images/dip_layer_S_R_schematic1.gif
-	:align: left
+	:align: center
 	:scale: 135 %
+
 
 .. figure:: ./images/dip_layer_x_t_lines.gif
 	:figclass: center
-	:align: left
-	:scale: 100 %
+	:align: center
+	:scale: 123 %
 
 
 Arrival times of the refracted wave will still appear as a straight line on the travel time plot. However, as the refracted wave moves updip the waves have less distance to travel to the surface. The travel time is reduced and thus the slope of the line is reduced. The velocity recovered from using this slope is called \\(v_{2u}\\), and is called the updip "apparent" velocity. This will be larger than the true velocity of the layer.
@@ -21,12 +22,11 @@ Arrival times of the refracted wave will still appear as a straight line on the 
 Conversely, if you are downdip then the distance traveled by the refracted wave increases with distance and it takes longer for the waves to reach you. The slope of the refracted arrival on the travel time plot will increase and the apparent downdip velocity \\(v_{2d}\\) estimated from this slope will be smaller than the true velocity. 
 
 .. figure:: ./images/dip_layer_S_R_schematic.gif
-	:align: left
+	:align: center
 	:scale: 135 %
 
 .. figure:: ./images/dip_layer_x_t_lines2.gif
-	:figclass: center
-	:align: left
+	:align: center
 	:scale: 120 %
 
 
@@ -35,15 +35,15 @@ Conversely, if you are downdip then the distance traveled by the refracted wave 
 Intuitively, if we want to obtain another parameter (namely the dip angle, designated \\( \\gamma\\)), then we need more data. We can achieve this by having two shots so that both updip and downdip apparent velocities can be obtained. This requires shots at both ends of the spread. 
 
 .. figure:: ./images/dip_layers_geom.gif
-	:figclass: float-right-360
-	:align: right
+	:align: center
 	:scale: 110 %
+
 Consider the geometry and travel time curves shown to the right.  Note that \\(h\\) is depth (vertical distance) of the interface beneath the shot at A. The distance from A to the normal of the interface is given by \\(z\\). These quantities are given by \\((h', z')\\) for the source at D. The traveltimes \\(t_{AD}\\) (time for the wave to go from A to D) and \\(t_{DA}\\) (the time for the wave to go from D to A) are called the "reciprocal times."  It is should be obvious from geometry that these time are equal. 
 
 .. figure:: ./images/reciprocal_times.gif
-	:figclass: float-right-360
-	:align: right
+	:align: center
 	:scale: 100 %
+
 Note the reciprocal travel times are sometimes erroneously considered as the travel times from first to last geophones of a spread, even though these first and last geophones do not always coincide with the two shot locations. Reciprocal times are total travel times from source location to the last receiver location.
 
 Checking for equal reciprocal times is a common test of the quality of the data. Don't forget that the reciprocal time for each shot is found as the intersection of the refraction line with the time axis above the other shot (not at the "arbitrary" time axis). Extending the line with a ruler is an acceptable way of finding these times.
