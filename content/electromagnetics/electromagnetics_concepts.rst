@@ -14,23 +14,14 @@ of Amperes) quantifies the amount of charge that is moving by an observer in one
 
 Electrical force can be generated, in two ways:
 
-1. battery (Each terminal of the battery can be thought of as storing a positive or negative
-charge. The "voltage" of the battery is directly proportional to the amount of stored charge).
-Upon completion of the circuit there will be an electric field \\(\\vec{E}\\) (volts/m) set up in the body.
-The electric field is a vector: it has both direction and magnitude. The force that any charge
-\\(q\\) feels is given by \\(\\vec{F} = q \\vec{E}\\). Unit positive or negative charges will feel the same magnitude
-of force but directions will be opposite. Since like charges repel and unlike charges attract,
-the negative charges will be attracted to the positive terminal of the battery and the positive
+1. battery (Each terminal of the battery can be thought of as storing a positive or negative charge. The "voltage" of the battery is directly proportional to the amount of stored charge). Upon completion of the circuit there will be an electric field \\(\\vec{E}\\) (volts/m) set up in the body. The electric field is a vector: it has both direction and magnitude. The force that any charge \\(q\\) feels is given by \\(\\vec{F} = q \\vec{E}\\). Unit positive or negative charges will feel the same magnitude of force but directions will be opposite. Since like charges repel and unlike charges attract, the negative charges will be attracted to the positive terminal of the battery and the positive
 charges will be attracted to the negative terminal.
 
 .. figure:: ./images/circuit.jpg
 	:align: center
 	:scale: 100 %
 
-2. A time varying magnetic field can generate or "induce" an electric field in a conductor.
-Consider the simple example of a permanent magnetic moving toward a loop of wire. A
-current is observed and hence there must have been an electrical force which has caused
-the charges to move.
+2. A time varying magnetic field can generate or "induce" an electric field in a conductor. Consider the simple example of a permanent magnetic moving toward a loop of wire. A current is observed and hence there must have been an electrical force which has caused the charges to move.
 
 .. figure:: ./images/induced_field.jpg
 	:align: center
@@ -130,8 +121,7 @@ Summary
 2. The changing flux generates and electric field everywhere.
 3. The electric field generates currents via Ohm's Law, \\( \\vec{J} = \\sigma \\vec{E} \\).
 4. The currents produce their own magnetic fields. 
-5. The receiver measures the sum of the primary and secondary fields, (or it measures associated
-voltages.)
+5. The receiver measures the sum of the primary and secondary fields, (or it measures associated voltages.)
 
 
 
