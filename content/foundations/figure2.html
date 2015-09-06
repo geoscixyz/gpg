@@ -22,23 +22,53 @@ function MM_swapImage() { //v3.0
   var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
 }
-//-->
 
 MM_preloadImages('./../../_images/hili-dblstart-txt.gif','./../../_images/hili-prev-txt.gif','./../../_images/hili-nextr-txt.gif')
 </script>
 
-<form> 
-<b><img src="./../../_images/resist-eg1.jpg" alt="Model" name="dynamicImage" align="right" border="0" height="216" width="522">Figure 2:</b> An example of how the distribution of a physical property (electrical conductivity in this case) can be measured to provide information about geologic materials. Click buttons to reveal corresponding images.<b><font color="#000000"><br> 
-            1.</font></b> 
-                  <input name="direction" onclick="document.forms[0].dynamicImage.src ='./../../_images/resist-eg1.jpg'" value="Off" checked="checked" type="radio"> 
-                  The physical properties under this surface are unknown. &nbsp;A geophysical survey&nbsp;- DC resistivity in this case - is used to generate data. <br> 
-                  <b><font color="#000000">2.</font></b> 
-                  <input name="direction" value="OFF" onclick="document.forms[0].dynamicImage.src ='./../../_images/resist-eg2.jpg'" type="radio"> 
-                  Current is injected into the ground, and resulting voltages are measured as electrode geometry varies.&nbsp;In this case, voltages get smaller as electrodes are separated further and further apart. <br> 
-                  <b><font color="#000000">3.</font></b> 
-                  <input name="direction" value="OFF" onclick="document.forms[0].dynamicImage.src ='./../../_images/resist-eg3.jpg'" type="radio"> 
-                  <b><font color="#000000">I</font>nversion </b>of this data set produces an estimate of a "layered earth" or 1D model of the relevant physical property - electrical conductivity.<br> 
-                  <b><font color="#000000">4.</font></b> 
-                  <input name="direction" value="OFF" onclick="document.forms[0].dynamicImage.src ='./../../_images/resist-eg.jpg'" type="radio"> 
-                  <b>Interpretation</b> converts the model into geologic information.  
-</form>
+   <table cellspacing="0" width="100%"> 
+      <tbody> 
+        <tr> 
+          <td colspan="4" class="caption" valign="top"> <b>Figure 2.</b> An example of how the distribution of a physical property (electrical conductivity in this case) can be measured to provide information about geologic materials.
+          </td> 
+        </tr> 
+
+        <tr> 
+          <td align="top" valign="CENTER" width="100%" colspan="4"><img src="./../../_images/resist-eg1.jpg" name="resist" id="resist"></td>
+        </tr>
+
+        <tr>
+          <td valign="top" width="10"><font size="-1"><b>a. </b> </font></td> 
+          <td valign="top" width="10"><font size="-1"> 
+            <input name="resist" value="OFF" onclick="MM_swapImage('resist','','./../../_images/resist-eg1.jpg',1)" checked="checked" type="radio"> 
+            </font></td> 
+          <td colspan="2"><font size="-1"> The physical properties under this surface are unknown. A geophysical survey- DC resistivity in this case - is used to generate data.</font></td> 
+        </tr> 
+
+        <tr>
+          <td valign="top" width="10"><font size="-1"><b>b. </b> </font></td> 
+          <td valign="top" width="10"><font size="-1"> 
+            <input name="resist" value="OFF" onclick="MM_swapImage('resist','','./../../_images/resist-eg2.jpg',1)" type="radio"> 
+            </font></td> 
+          <td colspan="2"><font size="-1"> Current is injected into the ground, and resulting voltages are measured as electrode geometry varies. In this case, voltages get smaller as electrodes are separated further and further apart.</font></td> 
+        </tr> 
+
+        <tr>
+          <td valign="top" width="10"><font size="-1"><b>c. </b> </font></td> 
+          <td valign="top" width="10"><font size="-1"> 
+            <input name="resist" value="OFF" onclick="MM_swapImage('resist','','./../../_images/resist-eg3.jpg',1)" type="radio"> 
+            </font></td> 
+          <td colspan="2"><font size="-1"> <b>Inversion </b>of this data set produces an estimate of a "layered earth" or 1D model of the relevant physical property - electrical conductivity.</font></td> 
+        </tr> 
+
+        <tr>
+          <td valign="top" width="10"><font size="-1"><b>d. </b> </font></td> 
+          <td valign="top" width="10"><font size="-1"> 
+            <input name="resist" value="OFF" onclick="MM_swapImage('resist','','./../../_images/resist-eg.jpg',1)" type="radio"> 
+            </font></td> 
+          <td colspan="2"><font size="-1"> <b>Interpretation</b> converts the model into geologic information.</font></td> 
+        </tr> 
+
+      </tbody>
+    </table>
+    <br>
