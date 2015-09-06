@@ -29,13 +29,17 @@ These inversion methods involve finding a model of the earth which is described 
 Generalized inversion methods
 =============================
 
-This second class of inversion methods allows the earth's model to be more realistically complex, which means that more parameters than data points are permitted. Such problems are mathematically referred to as "under-determined". Most solutions to this more general form of the geophysical inversion problem involve three steps, which can be explained as follows: 
+This second class of inversion methods allows the earth's model to be more realistically complex, which means that more parameters than data points are permitted. These problems are non-unique and require that other information be incorporated. A work-flow procedure is required and here we highlight a few of the main components:  
 
-1. Represent the earth with many cells so that complex distributions of physical properties can be simulated. In practice, the earth is divided into thousands or millions of cells of fixed geometry. Each cell has a constant, but unknown, value. The parameters we seek are the physical property values for these cells.
 
-2. Design a model objective function. This is a mathematical quantity which measures the "size" of any solution. It is a single number. A priori information about the earth can be incorporated into the objective function. Usually the model objective has different components. One will make it "close" to a supplied reference model, others may control "smoothness" in various spatial directions. Mathematical optimization theory is used to find a solution that minimizes the objective function. The resultant solution will have minimum structure. This will be a good choice since it will tend to show large scale important features rather than a great deal of extraneous structure that can result from noisy observations.
+1. Represent the earth with many cells so that complex distributions of physical properties can be simulated. In practice, the earth is divided into thousands or millions of cells of fixed geometry. Each cell has a constant, but unknown, value. The parameters we seek are the physical property values for these cells. Be able to simulate the field observations if they were acquired over this model.  
 
-3. The final solution must also acceptably reproduce the field observations. Our final optimization problem is to find that model which minimizes our model objective function subject to the constraint that the measured data are adequately reproduced.
+2. Estimate uncertainties in the observed data and design a metric that can be used to decide when data have been adequately fit. 
+
+3. Design a model objective function. This is a mathematical quantity which measures the "size" of any solution. It is a single number. A priori information about the earth can be incorporated into the objective function. Usually the model objective has different components.One will make it "close" to a supplied reference model, others may control "smoothness" in various spatial directions. Models that minimize the objective function are good candidates for interpretation since they will generally have minimum structure and tend to reveal the important large scale structure and be good choices . 
+
+
+4. Use numerical optimization to find a solution that adequately fits the data and minimizes the model objective function. This yields a solution that is a good candidate for interpretation. 
 
 
 .. figure:: ./images/inv-1.jpg
@@ -48,6 +52,8 @@ This second class of inversion methods allows the earth's model to be more reali
 	:align: center 
 	:scale: 100 %
 
-	An acceptable model can cause the data, and simultaneously produces a minimum value for the "model objective function". 
+	An inverted model that has minimum structure and acceptably reproduces the data. The generated data from the model are shown on the upper surface and it can be compared with the observed data in the previous figure. 
 
-In practice a number of inversions, with different reasonable objective functions, should be carried out so the interpreter has some insight about the range of earth models that can acceptably reproduce the field data. Error statistics about the data will determine how closely the reproduced data matches the real measured data. The fact that these error statistics are often poorly known is a second good reason for performing several inversions before settling upon a preferred model. 
+In practice a number of inversions, perhaps with different objective functions, and different assignments of uncertainties on the data, should be carried out so the interpreter has some insight about the range of earth models that can acceptably reproduce the field data. Error statistics about the data will determine how closely the reproduced data matches the real measured data. 
+
+More detail about inversion and the workflow process is provided in inverse theory section of the GPG.
