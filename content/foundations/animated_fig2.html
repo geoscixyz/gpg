@@ -1,18 +1,11 @@
-<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-	<meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
-	<title>Mt Milligan 3D Chargeability - javascript movie</title>
-	<meta name="description" content="Mt Milligan 3D Chargeability - javascript movie">
-<script LANGUAGE="JavaScript1.2">
+<script LANGUAGE="JavaScript" type="text/JavaScript">
 anims = new Array(36);
 var frame = 0;
 var timeout_state = null;
 function imageLoad() {
 	for(var i = 0; i<36; i++) {
 		anims[i] = new Image();
-		anims[i].src = "chg" + i + ".gif";
+		anims[i].src = "./../../_images/chg" + i + ".gif";
 	}
 }			
 function ForwardButton(){
@@ -88,11 +81,11 @@ function Reset() {
 			<center>
 				<form NAME="animForm">
 				<input TYPE=button VALUE=" << " NAME="animReset" onClick=Reset()>
-				<input TYPE=button VALUE=' Rwd ' NAME="Reverse" onClick=ReverseButton()>
-				<input TYPE=button VALUE='Pause' NAME="Stop" onClick=Stopbutton()>
-				<input TYPE=button VALUE=' Play ' NAME="Forward" onClick=ForwardButton()>
-				<input TYPE=button VALUE=' -1' NAME="Step" onClick=Stepdown()>
-				<input TYPE=button VALUE='+1' NAME="Step" onClick=Stepup()> <p>Frame rate: 
+				<input TYPE=button VALUE=" < " NAME="Reverse" onClick=ReverseButton()>
+				<input TYPE=button VALUE="Pause" NAME="Stop" onClick=Stopbutton()>
+				<input TYPE=button VALUE=" > " NAME="Forward" onClick=ForwardButton()>
+				<input TYPE=button VALUE=" -1" NAME="Step" onClick=Stepdown()>
+				<input TYPE=button VALUE="+1" NAME="Step" onClick=Stepup()> <p>Frame rate: 
 				<input TYPE=text SIZE=4 VALUE=100 NAME="animPace" onChange=Stopbutton()> (milliseconds)</p>
 				</form>
 			</center>
@@ -100,4 +93,4 @@ function Reset() {
 	</table>
 </center>
 </body>
-</html>			
+		

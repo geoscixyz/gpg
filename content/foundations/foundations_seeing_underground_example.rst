@@ -36,7 +36,7 @@ Corroboration with independent geophysical results
 
 Few geophysical surveys are used alone with no other independent information. At Mt Milligan many types geophysical surveys were performed on the ground, from airborne platforms, and from within boreholes. For example, a similar inversion procedure was used to interpret DC electrical measurements gathered over the same area. The 3D isosurfacee image of Figure 6 shows a model of the distribution of chargeability (the capacity for material to hold an electrical charge), a physical property related essentially to metal or clay content and grain size. The apparent anti-correlation between magnetic susceptibility and chargeability at Mt Milligan is evident only after careful inversion of two unrelated geophysical data sets. This example illustrates that conducting inversions on multiple types of data sets can provide an enhanced understanding of the surveyed region; in this case it provides insight about subsequent alteration of the rocks that occurred after the initial formation of the mineral deposit.
 
-.. raw:: html
+ .. raw:: html
     :file: animated_fig1.html
 
 
