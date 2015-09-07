@@ -54,7 +54,7 @@ This sequence of images summarizes the framework visually.
 
 
 Summary for the seven-step framework
-************************************
+====================================
 
  1. **Setup:** Establish the geoscience objectives, consider conventional practice, and identify how geophysics might contribute.
  2. **Properties:** Characterize materials that can be expected and establish the likely physical property contrasts.
