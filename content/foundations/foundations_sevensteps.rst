@@ -60,7 +60,7 @@ All tasks in the seven-step process are inter-related, so the distinction betwee
 
 
 Summary for the seven-step framework
-************************************
+====================================
 
  1. **Setup:** Establish the geoscience objectives, consider conventional practice, and identify how geophysics might contribute.
  2. **Properties:** Characterize materials that can be expected and establish the likely physical property contrasts.

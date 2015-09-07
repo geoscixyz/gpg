@@ -1,9 +1,9 @@
 .. _foundations_seeing_underground_primer:
 
-Seeing Underground: Geophysics primer
-*************************************
+Geophysics primer
+*****************
 
-.. figure:: ./images/foursurveys.jpg
+.. figure:: ../images/foursurveys.jpg
 	:align: right
 	:scale: 90 %
 

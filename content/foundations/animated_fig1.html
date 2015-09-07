@@ -1,100 +1,97 @@
-<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-	<meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
-	<title>Mt Milligan 3D magnetic susceptibility - javascript movie</title>
-	<meta name="description" content="Mt Milligan 3D magnetic susceptibility - javascript movie">
-<script LANGUAGE="JavaScript1.2">
-anims = new Array(36);
-var frame = 0;
-var timeout_state = null;
-function imageLoad() {
+<script language="JavaScript">
+
+anims1 = new Array(36);
+var frame1 = 0;
+var timeout_state1 = null;
+
+function imageLoad1() {
 	for(var i = 0; i<36; i++) {
-		anims[i] = new Image();
-		anims[i].src = "./../../_images/mag" + i + ".gif";
+		anims1[i] = new Image();
+		anims1[i].src = "./../../_images/mag" + i + ".gif";
 	}
 }			
-function ForwardButton(){
-	if(timeout_state == null) {
-		animator();
+function ForwardButton1(){
+	if(timeout_state1 == null) {
+		animator1();
 	}
 }
-function ReverseButton(){
-	if(timeout_state == null) {
-		reverseAnimator();
+function ReverseButton1(){
+	if(timeout_state1 == null) {
+		reverseAnimator1();
 	}
 }
-function animator() {
-	frame = (frame + 1);
-	if(frame >= 36) {
-		frame = 0;
+function animator1() {
+	frame1 = (frame1 + 1);
+	if(frame1 >= 36) {
+		frame1 = 0;
 	}
-	document.animImage.src = anims[frame].src;
-	timeout_state = setTimeout("animator()", document.animForm.animPace.value);
+	document.animImage1.src = anims1[frame1].src;
+	timeout_state1 = setTimeout("animator1()", document.animForm1.animPace.value);
 }
-function reverseAnimator() {
-	frame = (frame - 1);
-	if(frame < 0) {
-		frame = 35;
+function reverseAnimator1() {
+	frame1 = (frame1 - 1);
+	if(frame1 < 0) {
+		frame1 = 35;
 	}
-	document.animImage.src = anims[frame].src;
-	timeout_state = setTimeout("reverseAnimator()", document.animForm.animPace.value);
+	document.animImage1.src = anims1[frame1].src;
+	timeout_state1 = setTimeout("reverseAnimator1()", document.animForm1.animPace.value);
 }
-function Stopbutton() {
-	clearTimeout(timeout_state);
-	timeout_state = null;
+function Stopbutton1() {
+	clearTimeout(timeout_state1);
+	timeout_state1 = null;
 }
-function Stepup() {
-	clearTimeout(timeout_state);
-	timeout_state = null;
-	if(frame >= 36) {
-		frame = 0;
+function Stepup1() {
+	clearTimeout(timeout_state1);
+	timeout_state1 = null;
+	if(frame1 >= 36) {
+		frame1 = 0;
 	} else {
-		frame = frame+1;
+		frame1 = frame1+1;
 	}
-	document.animImage.src = anims[frame].src;
+	document.animImage1.src = anims1[frame1].src;
 }
-function Stepdown() {
-	clearTimeout(timeout_state);
-	timeout_state = null;
-	if(frame <= 0) {
-		frame = 35;
+function Stepdown1() {
+	clearTimeout(timeout_state1);
+	timeout_state1 = null;
+	if(frame1 <= 0) {
+		frame1 = 35;
 	} else {
-		frame = frame-1;
+		frame1 = frame1-1;
 	}
-	document.animImage.src = anims[frame].src;
+	document.animImage1.src = anims1[frame1].src;
 }
-function Reset() {
-	document.animImage.src = anims[0].src;
-	frame = 0;
-	clearTimeout(timeout_state);
-	timeout_state = null;
+function Reset1() {
+	document.animImage1.src = anims1[0].src;
+	frame1 = 0;
+	clearTimeout(timeout_state1);
+	timeout_state1 = null;
 }
-</script>
-</head>
 
-<body bgcolor="#FFFFFF" onLoad="imageLoad()">
-	<center><h4>Mt Milligan magnetic susceptibility model</h4></center>
+imageLoad1()
+
+</script>
+
+
+<center><h4>Mt Milligan magnetic susceptibility model</h4></center>
 <center>
 	<table>
 		<TR>
 		<TD>
-			<img SRC="./../../_images/mag0.gif" NAME="animImage" height=200 width=261>
+			<img SRC="./../../_images/mag0.gif" NAME="animImage1" height=200 width=261>
 		</TD>
 		</TR>
 		<TR><TD>
-			<form NAME="animForm">
-				<input TYPE=button VALUE=" << " NAME="animReset" onClick=Reset()>
-				<input TYPE=button VALUE=' Rwd ' NAME="Reverse" onClick=ReverseButton()>
-				<input TYPE=button VALUE='Pause' NAME="Stop" onClick=Stopbutton()>
-				<input TYPE=button VALUE=' Play ' NAME="Forward" onClick=ForwardButton()>
-				<input TYPE=button VALUE=' -1' NAME="Step" onClick=Stepdown()>
-				<input TYPE=button VALUE='+1' NAME="Step" onClick=Stepup()> Frame rate: 
-				<input TYPE=text SIZE=4 VALUE=100 NAME="animPace" onChange=Stopbutton()> (milliseconds)
+			<form NAME="animForm1">
+				<input type=button value=" << " name="animReset" onClick="Reset1()">
+				<input type=button value=" < " name="Reverse" onClick="ReverseButton1()">
+				<input type=button value="Pause" name="Stop" onClick="Stopbutton1()">
+				<input type=button value=" > " name="Forward" onClick="ForwardButton1()">
+				<input type=button value=" -1" name="Step" onClick="Stepdown1()">
+				<input type=button value="+1" name="Step" onClick="Stepup1()"> <p>Frame rate: 
+				<input type=text SIZE=4 value=100 name="animPace" onChange="Stopbutton1()"> (milliseconds)</p>
 			</form>
 	</table>
 </center>
 
-</body>
-</html>
+<p>
+<hr SIZE=1 WIDTH="100%">

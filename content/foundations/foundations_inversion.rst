@@ -1,7 +1,7 @@
-.. _foundations_seeing_underground_inversion:
+.. _foundations_inversion:
 
-Seeing underground: Inversion Outline
-*************************************
+Inversion Outline
+*****************
 
 The problem of estimating a reasonable earth model (i.e. a quantitative distribution of one or more physical properties based upon recorded data) is known as the geophysical inverse problem. Various methodologies for performing geophysical inversion have been developed. There are two broad classes of inversion: "Parametric" methods and "Generalized" inversion methods. 
 

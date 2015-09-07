@@ -1,7 +1,7 @@
 .. _foundations_seeing_underground_geotech:
 
-Seeing underground: Geotechnical example
-****************************************
+Geotechnical example
+********************
 
 Geotechnical work also requires quantitative, accurately located information about the subsurface. Figure 7a. below shows initial unprocessed results of a DC electrical survey over calcine tailings at the Sullivan Mine in southern BC. Lateral locations of conductive material can be interpreted directly. However, for this application, there was a need to characterize the extent and depth of the calcine material (which has a higher electrical conductivity than host rocks) partly to determine the quantity of calcine and partly to constrain the possible subsurface paths along which ground water could travel. 
 
@@ -12,7 +12,7 @@ The standard form of presentation shown in the top panel of figure 7, known as a
 
 Also, with resistivity surveys it is important to estimate the depth of investigation because the ability to resolve geology at depth depends upon survey geometry and subsurface conductivity as well as the current source power. Traditionally (prior to development of formal inversion techniques), geophysicists used ad-hoc rules to identify the depths at which interpretations became unreliable.
 
-.. figure:: ./images/figure7.jpg
+.. figure:: ../images/figure7.jpg
 	:align: right
 	:scale: 90 %
 

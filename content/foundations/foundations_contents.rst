@@ -1,4 +1,4 @@
-.. _foundations_contents:
+.. _foundations_intro:
 
 Contents
 ********
