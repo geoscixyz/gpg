@@ -14,7 +14,9 @@ Geophysics can play an important role in helping solve resource exploration, env
 
 
 
-1. **Setup:** \textbf{What is the Problem?} Establish the geoscience objectives, consider conventional practice, and identify how geophysics might contribute.  This could include: 
+1. **Setup:** *What is the Problem?*
+   
+   Establish the geoscience objectives, consider conventional practice, and identify how geophysics might contribute.  This could include: 
 
     - Mapping geology
     - Locating buried objects
