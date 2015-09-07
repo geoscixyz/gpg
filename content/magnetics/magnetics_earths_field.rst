@@ -91,7 +91,7 @@ The second component of Earth's field involves external contributions due primar
 
 Temporal variations are often larger than geophysical anomalies. They must be accounted for in all surveys and this is usually done by acquiring data at a fixed base-station. Another alternative is to acquire gradient data that use two fixed sensors. Three figures are given in a sidebar showing examples of different types of magnetic noise that may be encountered at time scales of several days, hours, and minutes.
 
-DWO: I didn't find these pictures but we should have some photos of time variation of the fields at different time scales.
+.. DWO: I didn't find these pictures but we should have some photos of time variation of the fields at different time scales.
 
 The Geological Survey of Canada has a web page, which can provide graphs of diurnal variations observed at any of 11 magnetic observatories in Canada, for any day in the most recent 3 years. Find this facility by starting at the `GSC Geomagnetic data page`_. This resource is also a link to other information about magnetics.
 
