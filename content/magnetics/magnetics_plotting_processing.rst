@@ -58,7 +58,7 @@ Clearly this process involves some degree of subjectivity and will depend upon h
 
 
 Plotting Data
-===================
+=============
 
 
 
@@ -92,7 +92,7 @@ Such data sets will be too large to invert directly, but they can provide extrem
 
 
 Processing Magnetic Maps
-==================
+========================
 
 DWO:   this section can benefit with additional development and figures. 
 
