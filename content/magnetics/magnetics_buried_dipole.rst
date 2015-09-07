@@ -10,7 +10,17 @@ The general principles of magnetic surveying are encapsulated into the following
 (b) At the location of burial, the earth's field magnetic field is \\(\\vec{H}\\) and the magnetization in the object is \\(\\vec{M} = \\kappa \\vec{H}\\).
 (c) If the object is "small", that is all of the object's dimensions are several times smaller than the depth to its center, then  the object acts as a "magnetic dipole" -- that is, a little bar magnet with strength and direction caused by the inducing field. The  dipole moment of the magnet is \\(\\vec{m} = \\text{Volume} * \\vec{M}\\)
 (d) The magnetic field of the object is referred to as the "secondary" field or sometimes the "anomalous" field \\(\\vec{B_a}\\). This is what we seek to measure. 
-(e) \\(\\vec{B_a}\\) is a vector field and hence requires three components to specify it. In the accompanying applet observations of individual components \\((B_x,B_y,B_z)\\) can be displayed. The projection of \\(\\vec{B_a}\\) onto the direction of Earth's field \\(\\vec{\\hat{B_0}}\\) is displayed as \\(B_t\\). See xxx linkgpg xxx.  In addition the vertical gradient of the field, obtained if measurements were acquired with a gradiometer, are listed as \\(B_g\\).  Sign conventions must be adopted when data are plotted. For magnetic surveying the coordinate system used is: {\\(x\\) is northing, \\(y\\) is easting, and \\(z\\) is downward}.  The sign convention will be that horizontal fields are positive if they point in the \\(\\hat{x}\\) direction for \\(B_x\\), in the \\(\\hat{y}\\) direction for \\(B_y\\) and vertical fields are positive if they point downward. For \\(B_t\\) the anomaly is positive if it points in the same direction as the earth's field and negative if it is the opposite direction. 
+(e) \\(\\vec{B_a}\\) is a vector field and hence requires three components to specify it. In the accompanying applet observations of individual components \\((B_x,B_y,B_z)\\) can be displayed. The projection of \\(\\vec{B_a}\\) onto the direction of Earth's field \\(\\vec{\\hat{B_0}}\\) is displayed as \\(B_t\\). 
+
+
+ .. figure:: ./images/TMI_anomaly.png
+	:align: center
+	:scale: 110% 
+
+	Figure Caption
+
+
+In addition the vertical gradient of the field, obtained if measurements were acquired with a gradiometer, are listed as \\(B_g\\).  Sign conventions must be adopted when data are plotted. For magnetic surveying the coordinate system used is: {\\(x\\) is northing, \\(y\\) is easting, and \\(z\\) is downward}.  The sign convention will be that horizontal fields are positive if they point in the \\(\\hat{x}\\) direction for \\(B_x\\), in the \\(\\hat{y}\\) direction for \\(B_y\\) and vertical fields are positive if they point downward. For \\(B_t\\) the anomaly is positive if it points in the same direction as the earth's field and negative if it is the opposite direction. 
 
 Understanding the magnetic fields of a buried dipole, and the resultant observations, is crucial because all real scenarios can be thought of as a combination (superposition) of dipoles (see the "Buried structures" section). More advanced applets will be used to look at some of the responses of some of these bodies.
 

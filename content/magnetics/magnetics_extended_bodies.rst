@@ -20,11 +20,29 @@ First we begin with the concept of magnetic charges or poles. They can't be gene
 	\vec{B} =  \frac{ \mu_0 Q \hat r}{4 \pi r^2}
 
 
-If \\(Q\\) is positive the field lines of \\(\\vec{B}\\) extend radially outward in all directions as indicated by the drawing. If \\(Q\\) is negative the field lines have the same shape but they point toward the source. If a positive and negative charge are put in proximity they form a dipole and the field lines look like the diagram below.
+If \\(Q\\) is positive the field lines of \\(\\vec{B}\\) extend radially outward in all directions as indicated by the drawing. If \\(Q\\) is negative the field lines have the same shape but they point toward the source. 
 
-.. DWO: there are diagrams in the slides that can be inserted
+ .. figure:: ./images/Positive_magnetic_pole.png
+	:align: center
+	:scale: 110% 
 
-If the distance between the two charges is \\(s\\) then the dipole has a magnetic moment \\(m=Qs\\) (units: \\(\\text{Amp m}^2\\)). The direction of the dipole goes from the positive to negative charge. (see diagram). Formulae for the magnetic field in cylindrical or cartesian coordinates can be found xxxx.
+	Figure Caption
+
+ .. figure:: ./images/Negative_magnetic_pole.png
+	:align: center
+	:scale: 110% 
+
+	Figure Caption
+
+
+If a positive and negative charge are put in proximity they form a dipole and the field lines look like the diagram below.
+
+ .. figure:: ./images/Magnetic_dipole.png
+	:align: center
+	:scale: 110% 
+
+
+If the distance between the two charges is \\(s\\) then the dipole has a magnetic moment \\(m=Qs\\) (units: \\(\\text{Amp m}^2\\)). The direction of the dipole goes from the positive to negative charge. (see diagram). Formulae for the magnetic field in cylindrical or cartesian coordinates can be found in standard texts.
 
 ------
 
