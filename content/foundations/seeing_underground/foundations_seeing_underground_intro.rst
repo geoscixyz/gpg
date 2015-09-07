@@ -1,9 +1,9 @@
 .. _foundations_seeing_underground_intro:
 
-Seeing underground: Introduction
-********************************
+Introduction
+************
 
-.. figure:: ./images/icon_cityscape-query.gif
+.. figure:: ../images/icon_cityscape-query.gif
 	:align: right
 	:scale: 90 %
 
@@ -36,25 +36,25 @@ Other physical properties that can be usefully mapped include chargeability, nat
 Demand for improved modeling
 ============================
 
-.. figure:: ./images/3d.gif
+.. figure:: ../images/3d.gif
 	:align: right
 	:scale: 100 %
 
-.. figure:: ./images/2d.gif
+.. figure:: ../images/2d.gif
 	:align: right
 	:scale: 100 %
 
-.. figure:: ./images/1d.gif
+.. figure:: ../images/1d.gif
 	:align: right
 	:scale: 100 %	
 
-.. figure:: ./images/0obj.gif
+.. figure:: ../images/0obj.gif
 	:align: right
 	:scale: 100 %
 
 Subsurface structures are usually interpreted either in terms of objects, layers, linear features, or complex distributions. This type of information, obtained remotely and non-invasively using geophysical surveys, is routinely used in geotechnical, exploration and environmental activities to characterize geological structures, estimate ore reserves, map contaminant plumes, etc. What is involved in obtaining such information? First, field work is done (Figure 1) which involves making many careful measurements along survey lines on the ground or from aircraft. Traditionally, interpretations of these measurements are often made from graphs or maps of raw or processed data, resulting in qualitative or crudely quantitative information about the locations, depths, and types of materials under ground.
 
-.. figure:: ./images/magvlf-isk.jpg
+.. figure:: ../images/magvlf-isk.jpg
 	:align: center
 	:scale: 100 
 
@@ -62,5 +62,5 @@ Subsurface structures are usually interpreted either in terms of objects, layers
 
 In the face of ongoing demand for increasingly quantitative information, however, sophisticated techniques are now being used to numerically estimate the distribution of the earth's physical properties. These modeling procedures give geoscientists a more cost effective, reliable and accurate means of extracting as much information as possible from conventional survey data. They also make it possible to present the rather technical information in more visual and meaningful ways to managers, shareholders, regulatory agencies and other interest groups. 
 
-After reading this section, it should become evident that the application of geophysics to problems involving earth's subsurface is a non-trivial process. A seven step framework should be used to help understand each aspect of this process. This framework can be viewed in :doc:`foundations_sevensteps`.
+After reading this section, it should become evident that the application of geophysics to problems involving earth's subsurface is a non-trivial process. A seven step framework should be used to help understand each aspect of this process. This framework can be viewed in :doc:`../foundations_sevensteps`.
 	
