@@ -11,17 +11,18 @@ We saw in xxxEarth's magnetic field changes xxx  that the magnetic field at any 
 .. math::
 	\Delta B(t) = B^{obs}(t) - B^{base}(t)
 
-The graphs below indicate the procedure.
+.. The graphs below indicate the procedure.
 
-DWO: same graphs as used in the lecture
+.. DWO: same graphs as used in the lecture
 
 
- Two things happen with this procedure
+Two things happen with this procedure
  -Time variations are removed
  -Earth's field, associated with the location of the base-station, is removed. 
- The residual data would be similar to that in which the IGRF (link) has been removed. 
 
- The residual field $\Delta B$ contains the sought anomalous field but it may also have some broad-scale background or "regional field". Thus 
+The residual data would be similar to that in which the IGRF (:doc:`magnetics_IGRF`) has been removed. 
+
+The residual field $\Delta B$ contains the sought anomalous field but it may also have some broad-scale background or "regional field". Thus 
 
 .. math::
 	\Delta B = B_a + B_{regional}
