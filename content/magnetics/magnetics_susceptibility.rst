@@ -3,7 +3,7 @@
 Susceptibility
 **************
 
-For magnetic surveys, the relevant physical property is *magnetic susceptibiity*, or less commonly the related property *magnetic permeability*. 
+For magnetic surveys, the relevant physical property is *magnetic susceptibility*, or less commonly the related property *magnetic permeability*. 
 
 
 Some Definitions
@@ -26,26 +26,27 @@ Some Definitions
 .. raw:: html
     :file: susceptibility.html
 	
-DWO:  remove m from last line in box (wrong units) Substitute a magnetic fields from a bar magnet on the body
+.. DWO:  remove m from last line in box (wrong units) Substitute a magnetic fields from a bar magnet on the body
 
-The strength of the induced magnetisation, \\(M\\), the "dipole moment per unit volume", has units A/m. It is related to the causative field's strength, \\(H\\), by 
+The strength of the induced magnetisation, \\(M\\), the "dipole moment per unit volume", has units \\(\\text{A/m}\\). It is related to the causative field's strength, \\(H\\), by 
 
 .. math::
 		\vec{M}=\kappa \vec{H}
 
 Susceptibility \\( \\kappa \\) is a dimensionless number related to the number of individual magnetic dipoles in the medium that can be aligned with the main field. Note that as the field increases the number of dipoles that align themselves with the field also increases.
 
-Each magnetic particle has it's own magnetic moment. Let $\vec m_i$ be the magnetic moment of the $i'th$ particle. This has an amplitude and direction, exactly the same as a small bar magnet.  Consider a volume $V$. The total magnetic moment, which is the sum of the individual magnetic moments, is
+Each magnetic particle has it's own magnetic moment. Let \\(\\vec{m_i}\\) be the magnetic moment of the \\(i'\\text{th}\\) particle. This has an amplitude and direction, exactly the same as a small bar magnet.  Consider a volume \\(V\\). The total magnetic moment, which is the sum of the individual magnetic moments, is
+
+ .. math::
+	\vec{m}= \sum_i \vec{m_i}	
+
+The magnetization \\(\\vec{M}\\) \\((\\text{A/m})\\) is the dipole moment per unit volume. It is given by
 
 .. math::
-	\vec m= \sum\limits_i \vec m_i	
+	\vec{M} = \frac {\vec{m}}{V} = \frac {1}{V} \sum_i \vec{m_i}	
 
-The magnetization $\vec M$ ($A/m$) is the dipole moment per unit volume. It is given by
-
-.. math::
-	\vec M = \frac {\vec m}{V} = \frac {1}{V} \sum_i \vec m_i	
-
-Although unit-less, the value of susceptibility is different in the cgs and SI systems of measurement because of the way electromagnetic derivations proceed within the two systems. Translation between cgs and SI systems of units is done via \\(\\kappa (SI) = 4 \\pi \\kappa(cgs) \\) . The SI system is the current preferred standard among most geophysicists, but you will find cgs used in older references and texts. For more details, see the sub-section on units in the "Geophysical Surveys" chapter, "Magnetics" section.  
+Although unit-less, the value of susceptibility is different in the cgs and SI systems of measurement because of the way electromagnetic derivations proceed within the two systems. Translation between cgs and SI systems of units is done via \\(\\kappa \\text{(SI)} = 4 \\pi \\kappa \\text{(cgs)} \\) . The SI system is the current preferred standard among most geophysicists, but you will find cgs used in older references and texts. 
+.. For more details, see the sub-section on units in the "Geophysical Surveys" chapter, "Magnetics" section.  
 
 	
 
@@ -89,7 +90,7 @@ In rocks, susceptibility is mainly dependent on the volume percent of magnetite.
 * Magnetite (SG ≈ 5) is heavy and often accumulates in sediments and alluvial environments in the same way that other heavy minerals form placer deposits. So, for example, ancient or hidden stream paths can sometimes be mapped because magnetite deposition will depend upon water flow rates. 
 * Maghemite, a magnetic form of hematite, is produced in highly organic soils. Surface soils can acquire a remanent magnetization that is stronger than the induced magnetization, often as a result of human interference with fires or other disturbances. Implications are important for archeology.
 
-.. figure:: ./images/susceptibility_chart.gif
+ .. figure:: ./images/susceptibility_chart.gif
 	:align: center
 	:scale: 100%	
 
