@@ -25,7 +25,7 @@ Traditional interpretation
 Traditionally, useful information was extracted from geophysical field results by examining maps or line profiles of raw or filtered survey data. Such images are useful for estimating locations and quantities of buried materials, and to help choose locations for more invasive (and expensive) techniques such as drilling. For example, large scale maps of magnetic or gravity data often show geologic structure, or identify an anomalous region that might be associated with a desired target. As an example Figure 3 shows the magnetic data acquired at the Bathurst region of New Brunswick. The major features observed are related to geologic structure. 
 
 
- .. figure:: ./images/graphic5.gif
+ .. figure:: ../images/graphic5.gif
 	:align: center
 	:scale: 90 %
 
@@ -36,7 +36,7 @@ Historically, in mineral exploration, the identification of an anomalous region 
 Inversion
 =========
 
- .. figure:: ./images/inv-cartoon.jpg
+ .. figure:: ../images/inv-cartoon.jpg
 	:align: center
 	:scale: 90 %
 

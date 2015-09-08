@@ -15,7 +15,6 @@ Contents:
    :maxdepth: 1
  
    seeing_underground/index
-   .. foundations_contents
    foundations_sevensteps
    foundations_survey_methods
    foundations_model_types

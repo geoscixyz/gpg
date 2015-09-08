@@ -20,6 +20,5 @@ Contents:
    foundations_seeing_underground_example
    foundations_seeing_underground_geotech
    foundations_seeing_underground_conclusions
-   .. foundations_seeing_underground_inversion
  
    
