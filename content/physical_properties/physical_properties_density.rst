@@ -20,7 +20,7 @@ Densities of geologic materials vary from \\(880 ~\\text{kg/m}^3\\) (ice) (or \\
 
 It is important to recall the difference between mass, density and weight. Density is the physical property - it is mass (kilograms) per unit volume. Weight is the force experienced by that mass in the presence of a gravitational field. Your weight on the Moon is 1/6th of your weight on Earth, but your mass (and density) is the same wherever you are.
 
-Specific gravity is also often used and is defined as a relative density in comparaison with a reference substance (usually water, whose density is approximated to \\(1 ~\\text{g/cm^3}\\).
+Specific gravity is also often used and is defined as a relative density in comparaison with a reference substance (usually water, whose density is approximated to \\(1 ~\\text{g/cm}^3\\).
 
 .. math::
 	SP=\frac{\rho}{\rho_{{\omega}}}
