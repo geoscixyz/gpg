@@ -14,13 +14,13 @@ Density is defined as the ratio between the mass m of an object and its volume V
 	\rho = \frac{m}{V} \quad &&\textrm{Volumetric mass density,}\ (g/cm^3)\ or \ (kg/m^3)
 
 
-Densities of geologic materials vary from 880 :math:`kg/m^3` (ice) (or 0 for air) to over 8000 :math:`kg/m^3` for some rare minerals. Rocks are generally between 1600 :math:`kg/m^3` (sediments) and 3500 :math:`kg/m^3` (gabbro). Table 2.1 from PV Sharma is reproduced below.
+Densities of geologic materials vary from \\(880 ~\\text{kg/m}^3\\) (ice) (or \\(0\\) for air) to over \\(8000 ~{\\text{kg/m}}^3\\) for some rare minerals. Rocks are generally between \\(1600 ~\\text{kg/m}^3\\) (sediments) and \\(3500 ~\\text{kg/m}^3\\) (gabbro). Table 2.1 from PV Sharma is reproduced below.
 
 .. figure:: ./images/gravity_table.gif
 
 It is important to recall the difference between mass, density and weight. Density is the physical property - it is mass (kilograms) per unit volume. Weight is the force experienced by that mass in the presence of a gravitational field. Your weight on the Moon is 1/6th of your weight on Earth, but your mass (and density) is the same wherever you are.
 
-Specific gravity is also often used and is defined as a relative density in comparaison with a reference substance (usually water, whose density is approximated to 1 :math:`g/cm^3`).
+Specific gravity is also often used and is defined as a relative density in comparaison with a reference substance (usually water, whose density is approximated to \\(1 ~\\text{g/cm^3}\\).
 
 .. math::
 	SP=\frac{\rho}{\rho_{{\omega}}}
