@@ -125,7 +125,6 @@ Finally even at depth, as the pore pressure increases above hydrostatic, the eff
 
 All this seems a bit complicated, and the take-home message is that there are several contributing factors to velocity, some of which may be counter-intuitive.
 
-.. _myreferencelabel:
 
 Fluid saturation
 ----------------
