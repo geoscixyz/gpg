@@ -60,5 +60,5 @@ target/
 *.sublime-project
 *.sublime-workspace
 
-# Notebooks
-*.ipynb_checkpoints
+# Picasa stuff
+*.ini
