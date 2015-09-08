@@ -4,7 +4,7 @@
 Seeing Underground
 ==================
 
-.. figure:: ../images/icon_cityscape-query.gif
+ .. figure:: ../images/icon_cityscape-query.gif
    :align: right
    :scale: 90 %
 

@@ -3,7 +3,7 @@
 Geophysics primer
 *****************
 
-.. figure:: ../images/foursurveys.jpg
+ .. figure:: ../images/foursurveys.jpg
 	:align: right
 	:scale: 90 %
 
@@ -14,7 +14,7 @@ Measuring physical properties
 
 During a geophysical survey, energy is put into the earth and responses are recorded at the surface, in the air or in boreholes. Resulting data reveal information about the earth because the behavior of the energy within the ground is controlled by the distribution of the earth's physical properties. For instance, one basic physical property is magnetic susceptibility, which describes a rock's ability to become magnetized. This physical property provides information on rock type and structures because the rock's magnetic susceptibility relates directly to mineral type, to the chemical alteration processes. A second important physical property is electrical conductivity, which quantifies a material's ability to carry electrical current. Figure 2 illustrates one way that a geophysical survey can be carried out to provide information about the subsurface distribution of electrical conductivity.
 
-.. raw:: html
+ .. raw:: html
     :file: figure2.html
 
 Evidently, the application of geophysics to problems involving earth's subsurface is a non-trivial process and should be conducted through the seven-step procedure.
@@ -25,7 +25,7 @@ Traditional interpretation
 Traditionally, useful information was extracted from geophysical field results by examining maps or line profiles of raw or filtered survey data. Such images are useful for estimating locations and quantities of buried materials, and to help choose locations for more invasive (and expensive) techniques such as drilling. For example, large scale maps of magnetic or gravity data often show geologic structure, or identify an anomalous region that might be associated with a desired target. As an example Figure 3 shows the magnetic data acquired at the Bathurst region of New Brunswick. The major features observed are related to geologic structure. 
 
 
-.. figure:: ./images/graphic5.gif
+ .. figure:: ./images/graphic5.gif
 	:align: center
 	:scale: 90 %
 
@@ -36,7 +36,7 @@ Historically, in mineral exploration, the identification of an anomalous region 
 Inversion
 =========
 
-.. figure:: ./images/inv-cartoon.jpg
+ .. figure:: ./images/inv-cartoon.jpg
 	:align: center
 	:scale: 90 %
 
