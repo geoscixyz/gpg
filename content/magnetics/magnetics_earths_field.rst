@@ -47,7 +47,7 @@ In 2004, Earth's north magnetic pole was close to Melville Island at (Latitude, 
 	:align: center
 	:scale: 130% 
 
-Sketch of coordinates used to describe magnetic fields.
+	Sketch of coordinates used to describe magnetic fields.
 
 * **B** is the vector representing magnetic field of the earth. Its length represents its magnitude of field strength (sometimes referred to as F).
 * **H** is the projection of the field, **B**, onto the surface.
@@ -75,7 +75,7 @@ Variability of Earth's field
 
 The source of the main (nearly dipolar) field varies slowly, causing changes in strength, declination and inclination over time scales of months to years. Changes in the exact location of the magnetic north pole are caused by this effect. See the Geological Survey of Canada's website for a conversational history of the location of the Magnetic North pole. Declination varies very widely in Canada. The correct value of declination can be found by entering your latitude, longitude and year at the GSC's website.
 
-.. figure:: ./images/solar_wind.jpg
+ .. figure:: ./images/solar_wind.jpg
 	:align: right
 	:figclass: float-right-360
 	:scale: 110% 
@@ -91,7 +91,7 @@ The second component of Earth's field involves external contributions due primar
 
 Temporal variations are often larger than geophysical anomalies. They must be accounted for in all surveys and this is usually done by acquiring data at a fixed base-station. Another alternative is to acquire gradient data that use two fixed sensors. Three figures are given in a sidebar showing examples of different types of magnetic noise that may be encountered at time scales of several days, hours, and minutes.
 
-.. figure:: ./images/pipe3_timelapse.gif
+ .. figure:: ./images/pipe3_timelapse.gif
 	:align: center
 	:scale: 110% 
 
