@@ -27,6 +27,6 @@ Soils and rocks are composed mostly of silicate minerals, which are essentially 
 	- temperature and phase of pore fluid;
 	- amount and composition of colloids (clay content).
 
-Detailed discussion of geologic factors affecting this important physical property are provided in a separate location.
+.. Detailed discussion of geologic factors affecting this important physical property are provided in a separate location.
 
 	
