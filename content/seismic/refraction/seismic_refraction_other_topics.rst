@@ -64,6 +64,7 @@ Phantoming
 	:align: right
 	:figclass: float-right-360
 	:scale: 100 %
+	
 As shown in the above diagram, refracting arrivals from two shots from the same end produce traveltime curves which are parallel. This provides a good way to group first-break arrivals according to specific refractors. Ideally we want to have many arrivals from a single interface. This can be accomplished by using the parallelism noted above and phantoming the arrivals. That is, we can determine the arrival time of the refracted event at a location where no seismometer really existed. Phantoming can be carried out in the cases where:
 
     1. The receiver array is fixed, and off-end shots are recorded.

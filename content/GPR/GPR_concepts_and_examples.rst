@@ -222,7 +222,7 @@ Storage tanks
 The detection of underground storage tanks (UST's) is a common application.
 
 Geotechnical work
-----------------
+-----------------
 
 .. figure:: ./images/high_freq_geotech.gif
 	:align: left
@@ -250,7 +250,7 @@ Geological Investigation
 Unshielded Sensors and Software antenna system being used for geological investigation. 
 
 Mining
--------
+------
 
 .. figure:: ./images/eg4-f.gif
 	:align: left

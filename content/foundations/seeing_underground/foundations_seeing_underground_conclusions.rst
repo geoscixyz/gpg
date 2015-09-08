@@ -1,9 +1,9 @@
 .. _foundations_seeing_underground_conclusions:
 
-Seeing underground: Conclusions
-*******************************
+Conclusions
+***********
 
-.. figure:: ./images/inv-3.jpg
+.. figure:: ../images/inv-3.jpg
 	:align: right
 	:scale: 100 %
 

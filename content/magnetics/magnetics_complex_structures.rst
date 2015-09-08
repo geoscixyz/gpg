@@ -1,13 +1,13 @@
-.. _magnetics_simple_vs_complex:
+.. _magnetics_complex_structures:
 
-Simple and complex structures
-*****************************
+Working with complex structures
+*******************************
 
-We learned above what the anomalous magnetic field will be over a buried dipole and over extended bodies of uniform susceptibility, and how those ideas apply to geologic structures (again, assuming uniform susceptibility). How then do we anticipate the fields due to more general geologic models of the earth? In "geophysical" terminology, the question is "how do we forward model the response to an arbitrary distribution of susceptibility?" Here is one approach that has become popular; there are 3 steps:
+In previous sections we learned what the anomalous magnetic field will be over a :ref:`buried dipole <magnetics_buried_dipole>` and over :ref:`extended bodies of uniform susceptibility <magnetics_extended_bodies>`, and how those ideas apply to geologic structures that have a uniform susceptibility. In general however, the earth is complex and the rocks have variable susceptibility. How then do we determine the anomalous magnetic fields that arise from these geologic structures". The numerical procedure by which we simulate the data that would be obseved in a survey is often referred to as "forward modelling". In this context the term "model" refers to the 3D distribution of magnetic susceptibility in the earth.  There a numerous approaches but a common one is the following. Technically it is an integral equation solution but that is not particularly relevant here. The approach has three steps: 
 
-1. Describe the subsurface as a finite collection of cells, each with uniform susceptibility.
-2. Recognize that the response to a single rectangular cell with constant susceptibility in an arbitrary magnetizing field can be calculated relatively easily using expressions from the literature.
-3. At each location where a measurement is made above our model of the earth, the responses from all the individual cells must be added up. The result will be the superposition of all those little responses.
+1. Describe the subsurface as a finite collection of prismatic cells, each with uniform susceptibility.
+2. The response of a single rectangular cell with constant susceptibility in an arbitrary magnetizing field can be calculated using expressions from the literature.
+3. The principle of superposition holds.  At each location where a measurement is made, the responses from the individual cells are be added up to yield the total response.
 
 The concept is illustrated in the following eight figures selected with the buttons.
 
@@ -28,7 +28,7 @@ The following table gives access to model, mesh and data files associated with t
 +-------------------+----------------+-------------------+---------------+---------------+
 | Five block:       | `block_5_sus`_ |`block_5_sus_loc`_ | `block_msh`_  |`block_5_mag`_ | 
 +-------------------+----------------+-------------------+---------------+---------------+
-| Continuous earth: | `v_sus`_       |  --------------   | `v_msh`_      | `v_mag`_      |
+| Continuous earth: | `v_sus`_       |                   | `v_msh`_      | `v_mag`_      |
 +-------------------+----------------+-------------------+---------------+---------------+
 
 .. _block_sus: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/block.sus
