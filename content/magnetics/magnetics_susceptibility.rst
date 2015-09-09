@@ -170,7 +170,7 @@ Field measurements of magnetic susceptibility using a KT10
 ----------------------------------------------------------
 
  .. figure:: 
-	../physical_properties/images/magnetic_susceptibility_measurement_KT10.JPG
+	../foundations/physical_properties/images/magnetic_susceptibility_measurement_KT10.jpg
 
 References cited on this page 
 -----------------------------
