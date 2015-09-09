@@ -15,7 +15,7 @@ Measuring physical properties
 During a geophysical survey, energy is put into the earth and responses are recorded at the surface, in the air or in boreholes. Resulting data reveal information about the earth because the behavior of the energy within the ground is controlled by the distribution of the earth's physical properties. For instance, one basic physical property is magnetic susceptibility, which describes a rock's ability to become magnetized. This physical property provides information on rock type and structures because the rock's magnetic susceptibility relates directly to mineral type, to the chemical alteration processes. A second important physical property is electrical conductivity, which quantifies a material's ability to carry electrical current. Figure 2 illustrates one way that a geophysical survey can be carried out to provide information about the subsurface distribution of electrical conductivity.
 
  .. raw:: html
-    :file: figure2.html
+    :file: ../figure2.html
 
 Evidently, the application of geophysics to problems involving earth's subsurface is a non-trivial process and should be conducted through the seven-step procedure.
 
