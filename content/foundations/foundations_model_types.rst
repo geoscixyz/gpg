@@ -35,7 +35,7 @@ Below we provide some examples of commonly used earth parameterizations.
     .. figure:: ./images/1d-interp.gif
     	:align: center
 
-3. In **1D models**, the physical property is assumed to vary only in one direction (usually depth). The earth is commonly divided into layers (cells), each of which has a constant value of physical property. Surveys that are designed to yield 1D results are often called soundings. Results are often displayed in a way that resembles a drill core. 
+3. In a **1D model**, the physical property is assumed to vary only in one direction (usually depth). The earth is commonly divided into layers (cells), each of which has a constant value of physical property. Surveys that are designed to yield 1D results are often called soundings. Results are often displayed in a way that resembles a drill core. 
 
 **Typical geoscience tasks:** Layered Earth problems, such as hydrology, overburden thickness, clay layer detection, etc. 
 
@@ -44,7 +44,7 @@ Below we provide some examples of commonly used earth parameterizations.
     .. figure:: ./images/2d-interp.gif
     	:align: center
 	
-4. In **2D models**, the physical property is assumed to vary in two directions, usually depth and the direction parallel to a survey line. Surveys that yield 2D results are interpreted as cross sections. The assumption is that the structures extend without change either side of the survey line. 
+4. In a **2D model**, the physical property is assumed to vary in two directions, usually depth and the direction parallel to a survey line. Surveys that yield 2D results are interpreted as cross sections. The assumption is that the structures extend without change either side of the survey line. 
 
 **Typical geoscience tasks:** Detailed geologic structure characterization such as defining ore bodies or other geologic features
 
@@ -53,8 +53,8 @@ Below we provide some examples of commonly used earth parameterizations.
     .. figure:: ./images/modelytpes_3d.gif
     	:align: center
 
-5. In **3D models**, the subsurface is divided into prismatic cells. Each cell is assumed to have a constant physical property. This is the most general parameterization but it can be difficult to work work numerically if the number of cells becomes too large. 
+5. In a **3D model**, the subsurface is divided into prismatic cells. Each cell is assumed to have a constant physical property. This is the most general parameterization and 3D inversion is computatinally intensive. 
 
 **Typical geoscience tasks:** Detailed geologic structure characterization such as defining ore bodies or other geologic features
 
-For 2D and 3D models, structures within the earth may be considered as simple geometric shapes, or as continuously varying distributions of a physical property. Simple shapes (spheres, blocks, cylinders, etc.) are easy to describe - they require few parameters. For example a cylinder is fully described by a fixed radius, depth to top, length and density. For continuously varying physical property distributions, the Earth's structure must be described as a *function* of physical property versus position. Representing this mathematically requires many cells. In the next section, we expand upon the distinctions between discrete simple geometric shapes and continuously varying models.
+For 2D and 3D models, structures within the earth may be considered as simple geometric shapes, or as continuously varying distributions of a physical property. Simple shapes (spheres, blocks, cylinders, etc.) are easy to describe - they require few parameters. For example a cylinder is fully described by a fixed radius, depth to top, length and density. For continuously varying physical property distributions, the Earth's structure must be described as a *function* with the physical property dependent upon position. Representing this mathematically requires that the earth be represented with many cells. In the next section, we expand upon the distinctions between discrete simple geometric shapes and continuously varying models.

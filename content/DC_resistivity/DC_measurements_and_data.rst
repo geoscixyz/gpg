@@ -13,7 +13,7 @@ In order to create maps or graphs of raw data for quality assessment or for dire
 Current flow in the ground
 ==========================
 
-The path of the current in the earth after it is injected with two electrodes depends upon the distribution of electrical resistivity. If the Earth is uniform, current flows in a regular three dimensional pattern under the electrodes as illustrated Figure 1. The north slice number 8 (flagged with a *) is similar to the type of image commonly shown in texts to indicate how current flows in two dimensions under a pair of source electrodes.
+The path of the current in the earth after it is injected with two electrodes depends upon the distribution of electrical resistivity. If the Earth is uniform, current flows in a regular three dimensional pattern under the electrodes as illustrated Figure 1. The north slice number 8 (flagged with a \\(\\ast\\)) is similar to the type of image commonly shown in texts to indicate how current flows in two dimensions under a pair of source electrodes.
 
 .. raw:: html
     :file: figure1.html

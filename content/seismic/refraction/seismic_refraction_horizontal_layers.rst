@@ -39,6 +39,7 @@ From elementary geometry the following relationships hold:
 
 .. math::
 	x_c = 2z\tan\theta \quad l=\frac{z}{\cos\theta}
+
 or
 
 .. math::
@@ -111,6 +112,7 @@ Thus
 	x_{\text{cross}} &= \left(\frac{v_1v_2}{v_2-v_1}\right)t_i \\
 	&= \frac{v_1v_2}{v_2-v_1}\frac{2z}{v_1v_2}\sqrt{v_2^2-v_1^2} \\
 	&= 2z\sqrt{\frac{v_2+v_1}{v_2-v_1}}
+
 This can be used as a consistency check, or it can be used to compute one of the variables given values for two others.
 
 Two Horizontal Layers Over a Halfspace

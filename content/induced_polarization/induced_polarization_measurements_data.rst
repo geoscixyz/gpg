@@ -108,6 +108,8 @@ Many instruments record measured voltage, \\(V_P\\), just before the transmitter
 
 Other instruments use alternative time windows, and some newer instruments digitize the whole waveform, but the fundamental concepts are the same for all time domain systems.
 
+
+
 Frequency domain IP
 -------------------
 
@@ -134,6 +136,32 @@ The following lists a few factors affecting whether to choose time domain or fre
 - Time domain methods are the most common since the IP signal is measured directly. The decay signals are small, such as millivolts or microvolts, so the signal-to-noise ratio can be a problem. Stacking many repeat measurements is required.
 - Frequency domain methods require significantly smaller source currents and are less sensitive to some sources of noise. However the effects of EM coupling can be severe, and need to be removed. ("EM coupling" is an unwanted signal which arises from inductive interactions (like a transformer) between conductive near-surface ground and the wires carrying transmitter current. It can completely hide IP effects when it is severe). 
 - See Smith, 1980, for a comparison of time domain and frequency domain results recorded using three different instruments over the same ore body. Such studies are rare because of the cost, so this is an interesting examination of the pros and cons of various ways of measuring IP.
+
+Examples of inverted field data 
+===============================
+
+The data sets shown (below) were gathered simultaneously at the Century Deposit in Australia. Clearly they are exhibiting responses to different materials within the ground. However, this presentation of the raw data (plots called pseudosections) is deceptive, and does not represent true distribution of material properties in the ground. After inverting these data, the resulting resistivity model reveals information about rocks overlying the deposit, while the resulting chargeability model shows the deposit itself and underlying shale units. 
+
+
+.. figure:: ./images/raw_data.gif
+	:align: center
+	:scale: 120 %
+
+	Raw data (pseudosections)
+
+.. figure:: ./images/inverted_results.gif
+	:align: center
+	:scale: 120 %
+
+	Inversion results (resistivity top, chargeability bottom)
+
+Measuring conductivity and chargeability on a core sample with a GDD SCIP Tester
+================================================================================
+
+The Sample Core Induced Polarization (SCIP) Tester from GDD Inc. is a portative instruements that allows to estimate the resistivity and the IP response of core samples.
+
+.. figure:: 
+	../foundations/physical_properties/images/conductivity_chargeability_measurement.jpg
 
 References
 ==========

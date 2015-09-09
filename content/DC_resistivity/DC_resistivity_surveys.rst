@@ -38,6 +38,7 @@ Using the same colour scheme as the flow diagram above, Figure 2 shows how this 
 
 For each placement of the transmitting electrodes, voltages will be measured at different locations. Therefore, the complete data set includes measured voltages with known currents and electrode geometries. In order to create maps or graphs of raw data for quality assessment, it is usual to convert the data into a form that has units of resistivity. The data are the input for DC resistivity inversions, and the results will be 1D, 2D or 3D models of how subsurface conductivity is distributed.
 
+
 The physical property: electrical conductivity
 ==============================================
 
@@ -52,7 +53,7 @@ Electrical conductivity (or resistivity) is a bulk property of material describi
 
 The electrical conductivity of Earth's materials varies over many orders of magnitude. It depends upon many factors, including: rock type, porosity, connectivity of pores, nature of the fluid, and metallic content of the solid matrix. An indication of the range of conductivity for rocks and minerals is in the following figure:
 
-.. figure:: ./images/conductivity_chart.gif
+.. figure:: ./images/resistivity_table.png
 	:align: center
 	:scale: 100%
 
@@ -65,4 +66,6 @@ Soils and rocks are composed mostly of silicate minerals, which are essentially 
 	- temperature and phase of pore fluid;
 	- amount and composition of colloids (clay content).
 
-Detailed discussion of geologic factors affecting this important physical property are provided in a separate location.
+.. Detailed discussion of geologic factors affecting this important physical property are provided in a separate location.
+
+	
