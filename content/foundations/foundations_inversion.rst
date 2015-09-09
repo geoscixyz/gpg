@@ -5,13 +5,13 @@ Inversion Outline
 
 The problem of estimating a reasonable earth model (i.e. a quantitative distribution of one or more physical properties based upon recorded data) is known as the geophysical inverse problem. Various methodologies for performing geophysical inversion have been developed. There are two broad classes of inversion: "Parametric" methods and "Generalized" inversion methods. 
 
-.. figure:: ./images/inv2.gif
+ .. figure:: ./images/inv2.gif
 	:align: center
 	:scale: 100 %
 
 	Inversion: estimating a model based upon measured data and some understanding of the setting		
 
-.. figure:: ./images/fwd.gif
+ .. figure:: ./images/fwd.gif
 	:align: center 
 	:scale: 100 %
 
@@ -42,13 +42,13 @@ This second class of inversion methods allows the earth's model to be more reali
 4. Use numerical optimization to find a solution that adequately fits the data and minimizes the model objective function. This yields a solution that is a good candidate for interpretation. 
 
 
-.. figure:: ./images/inv-1.jpg
+ .. figure:: ./images/inv-1.jpg
 	:align: center
 	:scale: 100 %
 
 	The earth model is a fixed distribution of cells, each with an adjustable value of the physical property. Measured data are shown on top. 
 		
-.. figure:: ./images/inv-3.jpg
+ .. figure:: ./images/inv-3.jpg
 	:align: center 
 	:scale: 100 %
 

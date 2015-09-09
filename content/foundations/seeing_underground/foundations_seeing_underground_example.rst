@@ -10,7 +10,7 @@ Regional and local magnetic surveys
 
 Figure 3 (supplied courtesy of Placer Dome Exploration) provides an example of regional information from an area surrounding the Mt Milligan copper porphyry deposit, located in central British Columbia. Geological trends can be discerned using this type of data, however, exploration for a specific deposit requires more detailed information about local subsurface distributions of rock types. Figure 3b shows anomalous strengths of the earth's magnetic field for a small region of one ore body. Evidently there is a range of different rock types below the surface, but details of location, depth and magnetic susceptibility are difficult to determine directly using conventional methods. 
 
-.. raw:: html
+ .. raw:: html
     :file: ../figure3.html
 
 Inversion to obtain 3D details 
