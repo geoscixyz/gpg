@@ -14,7 +14,7 @@ Electrical conductivity (or resistivity) is a bulk property of material describi
 
 The electrical conductivity of Earth's materials varies over many orders of magnitude. It depends upon many factors, including: rock type, porosity, connectivity of pores, nature of the fluid, and metallic content of the solid matrix. An indication of the range of conductivity for rocks and minerals is in the following figure:
 
-.. figure:: ../DC_resistivity/images/resistivity_table.jpg
+.. figure:: ../DC_resistivity/images/resistivity_table.png
 	:align: center
 	:scale: 100%
 
@@ -27,6 +27,6 @@ Soils and rocks are composed mostly of silicate minerals, which are essentially 
 	- temperature and phase of pore fluid;
 	- amount and composition of colloids (clay content).
 
-Detailed discussion of geologic factors affecting this important physical property are provided in a separate location.
+.. Detailed discussion of geologic factors affecting this important physical property are provided in a separate location.
 
 	
