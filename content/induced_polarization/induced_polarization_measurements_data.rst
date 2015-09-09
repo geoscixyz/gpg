@@ -161,7 +161,7 @@ Measuring conductivity and chargeability on a core sample with a GDD SCIP Tester
 The Sample Core Induced Polarization (SCIP) Tester from GDD Inc. is a portative instruements that allows to estimate the resistivity and the IP response of core samples.
 
 .. figure:: 
-	../physical_properties/images/conductivity_chargeability_measurement.jpg
+	./images/conductivity_chargeability_measurement.jpg
 
 References
 ==========

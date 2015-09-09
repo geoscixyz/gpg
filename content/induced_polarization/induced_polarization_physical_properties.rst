@@ -8,12 +8,12 @@ Introduction
 
 Chargeability is a physical property that is related to resistivity. The module about DC resistivity shows that potentials measured in a DC resistivity survey can be related to charges that accumulate when current is made to flow. However, when the transmitter current is switched off, the measured voltage may take up to several seconds to reach zero. Similarly, when the current is switched on, there may be a finite time taken for the voltage to reach a steady state value. In other words, current injected into the ground causes some materials to become polarized. The phenomenon is called induced polarization, and the physical property that is measured is usually called chargeability, which quantifies the material's capacity to retain charges after a forcing current is removed. The following figure illustrates the measurable effect.
 
-.. figure:: ./images/IP_source.gif
+ .. figure:: ./images/IP_source.gif
 	:align: center
 	:scale: 100 %
 
 
-Induced polarization can also be measured using low frequency sinusoidal signals, as discussed in the "Measurements and data" section of this chapter. The signals or data that are measured depend upon which of the various types of source signals are used. Note that IP surveys always include resistivity measurements because the electrical resistivity of teh earth must be known in order to invert data to recover chargeability.
+Induced polarization can also be measured using low frequency sinusoidal signals, as discussed in the :doc:`induced_polarization_measurements_data` section of this chapter. The signals or data that are measured depend upon which of the various types of source signals are used. Note that IP surveys always include resistivity measurements because the electrical resistivity of teh earth must be known in order to invert data to recover chargeability.
 
 
 
@@ -36,13 +36,13 @@ The chargeability of earth materials is essentially an electrochemical effect ca
 
 The surface area-to-volume ratio is an important factor. Clays tend to be chargeable while sandstones are not, and the images here illustrate one reason why this is true. In addition, the surface interactions between clay minerals and fluids enhance the ability of these materials to hold charges.
 
-.. figure:: ./images/illite.gif
+ .. figure:: ./images/illite.gif
 	:align: center
 	:scale: 120 %
  
 	Illite (a clay mineral) with surface area-to-volume ratio of \\(100m^2/g\\) (1000 times greater than sandstone)
 
-.. figure:: ./images/quartz.gif
+ .. figure:: ./images/quartz.gif
 	:align: center
 	:scale: 120 %
  
@@ -58,13 +58,13 @@ Membrane polarization
 
 Membrane polarization occurs when pore space narrows to within several boundary layer thicknesses (which is the thickness of ions adsorbed to a surface).
 
-.. figure:: ./images/memb1.gif
+ .. figure:: ./images/memb1.gif
 	:align: center
 	:scale: 100 %
 
 Charges cannot flow easily, so they accumulate when an electric field is applied.
 
-.. figure:: ./images/memb2.gif
+ .. figure:: ./images/memb2.gif
 	:figclass: center
 	:align: center
 	:scale: 100 %
@@ -72,15 +72,15 @@ Charges cannot flow easily, so they accumulate when an electric field is applied
 
 The result is a net charge dipole which adds to any other voltages measured at the surface.	
 
-.. figure:: ./images/memb3.gif
+ .. figure:: ./images/memb3.gif
 	:align: center
 	:scale: 100 %
 
 A second form of membrane polarization is similar to the first:
 
-.. figure:: ./images/memb_pol_2nd_type.gif
+ .. figure:: ./images/memb_pol_2nd_type.gif
 	:align: right
-	:scale: 100	
+	:scale: 100	%
 
 This occurs where clay particles partially block ionic solution paths, as in the adjacent figure. Upon application of an electric potential, positive charge carriers pass easily, while negative carriers accumulate. There is an "ion-selective membrane."
 
@@ -91,28 +91,28 @@ Electrode polarization
 
 Electrode polarization occurs when pore space is blocked by metallic particles. Again, charges accumulate when an electric field is applied.
 
-.. figure:: ./images/elec_pol_1.gif
+ .. figure:: ./images/elec_pol_1.gif
 	:align: center
-	:scale: 100
+	:scale: 100 %
 
 The result is two electrical double layers which add to voltages measured at the surface.
 
 .. figure:: ./images/elec_pol_2.gif
 	:align: center
-	:scale: 100
+	:scale: 100 %
 
 Comments on electrode polarization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ./images/elec_pol_3.gif
+ .. figure:: ./images/elec_pol_3.gif
 	:align: right
-	:scale: 100
+	:scale: 100 %
 
 Some remarks are appropriate here in order to provide some sense of the complexity of the chargeability phenomenon.
 
 At an interface between ionic and metallic conduction (for example, an ore grain in pore water), there is an impedance involved in getting current to flow across the barrier. These interfaces look like the top figure and have the simplified circuit analogue shown in the bottom figure. 
 
-.. figure:: ./images/elec_pol_4.gif
+ .. figure:: ./images/elec_pol_4.gif
 	:align: right
 	:scale: 100 %
 
@@ -133,7 +133,7 @@ Summary of what affects the chargeability of material
 Spectral Induced Polarization
 =============================
 
-.. figure:: ./images/spectral_ip.gif
+ .. figure:: ./images/spectral_ip.gif
 	:align: right
 	:scale: 100 %
 
