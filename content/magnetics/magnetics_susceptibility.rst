@@ -169,8 +169,8 @@ Organic chemistry can be important in understanding magnetic survey results for 
 Field measurements of magnetic susceptibility using a KT10
 ----------------------------------------------------------
 
-.. figure:: 
-	../physical_properties/images/magnetic_susceptibility_measurement_kt10.jpg
+ .. figure:: 
+	../physical_properties/images/magnetic_susceptibility_measurement_KT10.JPG
 
 References cited on this page 
 -----------------------------
