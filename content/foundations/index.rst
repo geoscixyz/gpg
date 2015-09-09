@@ -16,7 +16,7 @@ Contents:
  
    seeing_underground/index
    foundations_sevensteps
-   ./physical_properties/index
+   physical_properties/index
    foundations_survey_methods
    foundations_model_types
    foundations_inversion
