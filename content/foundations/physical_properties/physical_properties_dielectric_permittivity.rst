@@ -15,7 +15,7 @@ Dielectric permittivity is in fact a complex value, often written \\( \\epsilon_
 
 The so-called "real" part, \\(\\epsilon_r^{\\prime}\\), is the *relative dielectric constant*\\( \\), often introduced in electronics or physics courses in the context of capacitors. It is a storage component measured as capacitance per unit length. (Capacitance is "the amount of charge a material can hold" for a given applied voltage.) At different frequencies, polarization occurs at different scales: at very high frequencies, only subatomic particles can be polarized. At GPR frequencies, the reorientation of dipolar molecules is the largest contribution, hence water's importance in determining the velocity of EM waves in a material. Note that \\(\\epsilon_R = 80\\) for water, whereas \\(\\epsilon_R < 10\\) for most other common materials.
 
- .. figure:: ../GPR/images/dielectric_responses.jpg
+ .. figure:: ../../GPR/images/dielectric_responses.jpg
 	:align: center
 	:scale: 100 %
 

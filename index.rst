@@ -13,7 +13,6 @@ Contents:
    :maxdepth: 1
    
    content/foundations/index
-   content/physical_properties/index
    content/magnetics/index
    content/seismic/refraction/index
    content/seismic/reflection/index
@@ -22,7 +21,6 @@ Contents:
    content/DC_resistivity/index
    content/induced_polarization/index
    content/gravity/index
-..   content/inversion/index
    
    
  

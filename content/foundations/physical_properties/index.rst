@@ -14,11 +14,11 @@ Contents:
    :maxdepth: 1
 
    physical_properties_density
-   ../magnetics/magnetics_susceptibility
-   ../seismic/refraction/seismic_velocity
+   ../../magnetics/magnetics_susceptibility
+   ../../seismic/refraction/seismic_velocity
    physical_properties_dielectric_permittivity
    physical_properties_conductivity
-   ../induced_polarization/induced_polarization_physical_properties
+   ../../induced_polarization/induced_polarization_physical_properties
 
 	
    
