@@ -14,7 +14,6 @@ The concept is illustrated in the following eight figures selected with the butt
 .. raw:: html
     :file: simple_vs_complex.html
 
-Here again are the data generated from the single block, the 5 blocks and the continuous Earth models: 
 
 .. raw:: html
     :file: simple_vs_complex2.html

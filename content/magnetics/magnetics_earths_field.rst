@@ -49,13 +49,13 @@ In 2004, Earth's north magnetic pole was close to Melville Island at (Latitude, 
 
 	Sketch of coordinates used to describe magnetic fields.
 
-* **B** is the vector representing magnetic field of the earth. Its length represents its magnitude of field strength (sometimes referred to as F).
+* **B** is the vector representing Earth's magnetic field. Its length represents the magnitude of the field strength (sometimes referred to as F).
 * **H** is the projection of the field, **B**, onto the surface.
 * **Z** is the projection of the field, **B**, onto the vertical direction.
 * **X** is the projection of the field, **B**, onto the northward direction.
 * **Y** is the projection of the field, **B**, onto the eastward direction.
-* D: declination is the angle that *H* makes with respect to geographic north.
-* I: inclination is the angle between **B** and the horizontal. It can vary between -90° and +90°. 
+* **D**: declination is the angle that *H* makes with respect to geographic north.
+* **I**: inclination is the angle between **B** and the horizontal. It can vary between -90° and +90°. 
 
 The details of Earth's field at any location on Earth are described using a formula based upon a spherical harmonic decomposition of the field called the IGRF or International Geomagnetic Reference Field. Details about Earth's field can be found at government geoscience websites (listed below) such as the NOAA Geomagnetism home page, or the Canadian National Geomagnetism Program's home page. Resources about Earth's global magnetic field are:
 
@@ -65,7 +65,7 @@ The details of Earth's field at any location on Earth are described using a form
 * `NOAA Geomagnetism home page`_ , and the Canadian National Geomagnetism Program's `home page`_ websites.
 * Find parameters describing Earth's field at a specific location (specified using date, latitude, longitude and elevation) at the NOAA National Geophysical Data Center's online `magnetic field calculator`_.
 
-.. _NOAA Geomagnetism home page: http://www.ngdc.noaa.gov/ngdc.html
+.. _NOAA Geomagnetism home page: http://www.ngdc.noaa.gov/geomag/geomag.shtml
 .. _home page: http://www.geomag.nrcan.gc.ca/index-eng.php
 .. _magnetic field calculator: http://www.ngdc.noaa.gov/geomag-web/
 

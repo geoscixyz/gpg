@@ -15,13 +15,13 @@ Some Definitions
 	&\mu \quad &&\textrm{magnetic permeability, } H/m  \\[0.3em]
 	&\mu_0 = 4 \pi 10^{-7} \quad &&\textrm{the permeability of free space, } H/m  \\[0.3em]
 	&\vec{B} = \mu \vec{H} \quad &&\textrm{the constitutive relation between } \vec{B} \text{ and } \vec{H} \\[0.3em]
-	&\mu = \mu_0(1+\kappa) \quad &&\textrm{where } \kappa \textrm{ is magnetic susceptibility} A/m \\[0.3em]
+	&\mu = \mu_0(1+\kappa) \quad &&\textrm{where } \kappa \textrm{ is magnetic susceptibility which is unitless} \\[0.3em]
 	&\vec{M}=\kappa \vec{H} \quad &&\textrm{where } \vec{M} \textrm{ is magnetization} \\[0.3em]
 	&\vec{m} \quad &&\textrm{dipole moment, } Am^2 \\[0.3em]
 	& \text{1 Tesla} = 10^9 \text{nT} \\[0.3em]
 	& \text{1 nT} =   \gamma \ (gamma)
 
-**What is susceptibility?** Individual particles, minerals, and magnetic domains within rocks often have a net magnetic moment. That is, they behave like small magnets. When there is no external magnetic field, these particles are generally randomly oriented  oriented and hence don't produce a net magnetic field. However, when the material is in the presence of an external magnetic field such as Earth’s field, the individual magnetic particles become more aligned, resulting in a net magnetic field. This secondary field is distinct from, but caused by, the Earth’s field. The following interactive figure illustrates:
+**What is susceptibility?** Individual particles, minerals, and magnetic domains within rocks often have a net magnetic moment. That is, they behave like small magnets. When there is no external magnetic field, these particles are generally randomly oriented and hence don't produce a net magnetic field. However, when the material is in the presence of an external magnetic field such as Earth’s field, the individual magnetic particles become more aligned, resulting in a net magnetic field. This secondary field is distinct from, but caused by, the Earth’s field. The following interactive figure illustrates:
 
 .. raw:: html
     :file: susceptibility.html
@@ -156,7 +156,7 @@ Soils
 Buried metal
 ------------
 
-(Summarized from Breiner, 1973) For most iron or steel objects, the susceptibility, k, falls between 10 and 200 in SI units. However, predicting the response of a magnetometer survey over metal is complicated for several reasons. Remanent magnetisation is likely to be strong, and pointing in different directions in the various components of a buried object. For example, a buried pipe will often show up as a linear set of anomalies with variable character because each segment will have it's own magnetic signature. It should also be remembered that stainless steel is not magnetic, and that many potential targets may not even be ferrous (for example, aircraft frame parts are often some alloy with no magnetic properties). 
+(Summarized from Breiner, 1973) For most iron or steel objects, the susceptibility, \\(\\kappa\\), falls between 10 and 200 in SI units. However, predicting the response of a magnetometer survey over metal is complicated for several reasons. Remanent magnetisation is likely to be strong, and pointing in different directions in the various components of a buried object. For example, a buried pipe will often show up as a linear set of anomalies with variable character because each segment will have it's own magnetic signature. It should also be remembered that stainless steel is not magnetic, and that many potential targets may not even be ferrous (for example, aircraft frame parts are often some alloy with no magnetic properties). 
 
 The maximum induced magnetic field strength (i.e. the maximum anomaly), \\(T\\), of a 3D object can be roughly estimated using \\(T = M/r^3\\) (or \\(T = 2M/r^3\\) for latitudes greater than \\(60^\\circ\\), where \\(M\\) is the magnetic moment estimated from \\(M = \\kappa F V\\) (\\(\\kappa\\) is susceptibility, \\(F\\) is ambient field strength,\\(V\\) is volume), and \\(r\\) is the distance to the target. For a 2D object, \\(T = M/r^2\\) is appropriate. 
 
