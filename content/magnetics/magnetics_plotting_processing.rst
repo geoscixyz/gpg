@@ -6,7 +6,7 @@ Processing and plotting magnetic data
 Removal of time variations
 ==========================
 
-We saw in xxxEarth's magnetic field changes xxx  that the magnetic field at any point on the earth changes with time. Our magnetometers record this field as well as that of the sought buried objects or structures. If the changes in earth's field have an amplitude that is significant compared to our anomalous signal, and if we don't correct for them, then this can greatly degrade our survey results. The general procedure is to establish a "base-station" which is fixed in location and continually measures the magnetic field. Each datum acquired by the roving sensor is also time-stamped. The assumption is then made that the changes in the magnetic field caused by these natural sources has a very long spatial wavelength and hence is the same at any point in the survey grid. Field data, corrected for these time variations, is obtained through the subtraction process
+We saw in xxxEarth's magnetic field changes xxx  that the magnetic field at any point on the earth changes with time. These temporal variations are also referred to as diurnal variations. Our magnetometers record this field as well as that of the sought buried objects or structures. If the changes in earth's field have an amplitude that is significant compared to our anomalous signal, and if we don't correct for them, then this can greatly degrade our survey results. The general procedure is to establish a "base-station" which is fixed in location and continually measures the magnetic field. Each datum acquired by the roving sensor is also time-stamped. The assumption is then made that the changes in the magnetic field caused by these natural sources has a very long spatial wavelength and hence is the same at any point in the survey grid. Field data, corrected for these time variations, is obtained through the subtraction process
 
 .. math::
 	\Delta B(t) = B^{obs}(t) - B^{base}(t)
@@ -17,17 +17,18 @@ We saw in xxxEarth's magnetic field changes xxx  that the magnetic field at any 
 
 
 Two things happen with this procedure
- -Time variations are removed
- -Earth's field, associated with the location of the base-station, is removed. 
+
+- Time variations are removed.
+- Earth's field, associated with the location of the base-station, is removed. 
 
 The residual data would be similar to that in which the IGRF (:doc:`magnetics_IGRF`) has been removed. 
 
-The residual field $\Delta B$ contains the sought anomalous field but it may also have some broad-scale background or "regional field". Thus 
+The residual field, \\(\\Delta B\\), contains the sought anomalous field but it may also have some broad-scale background or "regional field". Thus 
 
 .. math::
 	\Delta B = B_a + B_{regional}
 
-The "regional field" is a smoothly varying field that aroses from large scale background structure. Our interest is in the anomalous field produced by our sought object or geology and hence we want to remove this regional field. 
+The "regional field" is a smoothly varying field which characterizes the magnetic response of large scale background structures. If our primary interest is in the anomalous field produced by the taget body, we may want to remove this regional field. 
 
 
 Removal of regional trends
@@ -38,7 +39,7 @@ In order to interpret magnetic data in terms of features and structures at depth
 .. math::
 	\textbf{B}_{anomalous} = \textbf{B}_{measured} - \textbf{B}_{regional}
 
-Estimates of the regional field may be obtained from:
+Estimates of the regional field may be obtained using:
 
 - the IGRF (International Geomagnetic Reference Field) discussed in :doc:`magnetics_earths_field`;
 - a constant value selected by the interpreter (when survey areas are small);
@@ -51,7 +52,7 @@ To illustrate the process, when data are collected along a line, the removal of 
 	:align: center
 	:scale: 110%	
 
-Clearly this process involves some degree of subjectivity and will depend upon how you draw a line that separates the desired "signal" from the background. The situation becomes more complicated for  magnetic maps (data collected over an area) where the causative bodies have complicated shapes and variable dimensions. Nevertheless, even removing an approximate regional field can be of critical importance in isolating an anomaly that can then be further processed as maps or input into an inversion. The following is an example showing the regional magnetic map and a local anomalous field taken from a survey in central British Columbia. The area is Mt. Milligan, which has recently opened up as a mine. In the large-scale map the dominant feature is the magnetic signature of the mountain. Of interest is a (2km x 2km) of that map. A large-scale regional is estimated, subtracted from the data and the results are shown in a second  window. The magnetic feature observed in that map is related to the ore body. 
+Clearly this process involves some degree of subjectivity and will depend upon how you draw a line that separates the desired "signal" from the background. The situation becomes more complicated for  magnetic maps (data collected over an area) where the causative bodies have complicated shapes and variable dimensions. Nevertheless, removing an approximate regional field can be of critical importance in isolating an anomaly for further processing as maps or input into an inversion. The following is an example showing the regional magnetic map and a local anomalous field taken from a survey in central British Columbia. The area is Mt. Milligan, which has recently opened up as a mine. In the large-scale map the dominant feature is the magnetic signature of the mountain. Of interest is a (2km x 2km) segment of that map. A large-scale regional field is estimated, subtracted from the observed data, and the results are shown in a second  window. The magnetic feature observed in that map is related to the ore body. 
 
 .. raw:: html
     :file: data_plotting2.html
@@ -68,7 +69,7 @@ Plotting Data
 	:align: right
 	:scale: 100%	
 
-2d plots of magnetic data, often referred to as maps, can provide insight about the geologic units, contacts, horizontal location of structures. What is presented, and how it is presented can greatly alter interpretation obtained by visually looking at the maps.   Raw data are not usually presented directly. Choices of contour plotting parameters must be made; features not related to targets might be removed; and data or image enhancement processing might be employed. Here we introduce some aspects of these topics.	
+2D plots of magnetic data, often referred to as maps, can provide insight about the geologic units, contacts, and the horizontal location of structures. What is presented, and how it is presented can greatly alter interpretations obtained by visually analyzing the maps. Raw data are not usually presented directly. Choices of contour plotting parameters must be made; features not related to targets might be removed; and data or image enhancement processing might be employed. Here we introduce some aspects of these topics.	
 
 The most common form of magnetic survey data involves "total field" measurements. This means that the field's magnitude along the direction of the earth's field is measured at every location. To the right is a total field strength map for the whole world (a full size version is in the sidebar_ mentioned in the section :doc:`magnetics_earths_field`).
 
@@ -88,7 +89,7 @@ Large data sets are commonly gathered using airborne instruments. They may invol
 	:align: right
 	:scale: 40%	
 
-Such data sets will be too large to invert directly, but they can provide extremely valuable information about geology and structure, especially if some processing is applied to enhance desirable features and/or suppress noise or unwanted features. 
+Such data sets were once too large to invert directly, but they still provided extremely valuable information about geology and structure, especially if some processing is applied to enhance desirable features and/or suppress noise or unwanted features. With recent advancements in computational power and inversion methodologies these large scale problems are becoming easier to invert.
 
 
 
@@ -107,8 +108,7 @@ There are numerous options for processing potential fields data in general, and 
 
 .. _a sidebar: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/sidebar-mageg1.html
 
-Some other good reasons for applying potential fields data processing techniques are listed as follows:
-
+Other examples of magnetic data processing techniques include:
 
 - Upward continuation is commonly used to remove the effects of very nearby (or shallow) susceptible material.
 - Second vertical derivative of total field anomaly is sometimes used to emphasize the edges of anomalous zones.
