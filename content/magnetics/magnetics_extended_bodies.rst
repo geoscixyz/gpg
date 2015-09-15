@@ -109,6 +109,6 @@ For each model, the concept of surface magnetic charges then permits evaluation 
 	:align: center
 	:scale: 100% 
 
-As seen in the figures, for these types of features the responses can represented as monopoles, dipoles, lines of dipoles, sheets of charges etc. This can help understand what the magnetic response from such objects are. For instance a buried cylinder or rebar can be thought of as a line of dipoles. Sometimes field data are interpreted using these simple approximations. There are numerous parametric inversion algorithms that have been generated to accomplish this. 
+As seen in the figures, for these types of features the responses can represented as monopoles, dipoles, lines of dipoles, sheets of charges etc. This can help us understand what the magnetic response of such objects are. For instance a buried cylinder or rebar can be thought of as a line of dipoles. Sometimes field data are interpreted using these simple approximations. There are numerous parametric inversion algorithms that have been generated to accomplish this. 
 
 Some images on this page adapted from "Applications manual for portable magnetometers" by S. Breiner, 1999, Geometrics 2190 Fortune Drive San Jose, California 95131 U.S.A.	
