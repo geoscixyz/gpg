@@ -8,7 +8,11 @@ Contents
 	:align: right
 	:scale: 90 %
 
-This chapter provides non-technical introductions to essential concepts underlying applied geophysics. Material is quite varied, and should be useful to beginners as well as experienced geophysicists. See also the Resources/References section for other useful background material about applied geophysics. Sections in "Foundations" include:
+This chapter provides non-technical introductions to essential concepts
+underlying applied geophysics. Material is quite varied, and should be useful
+to beginners as well as experienced geophysicists. See also the
+Resources/References section for other useful background material about
+applied geophysics. Sections in "Foundations" include:
 
  a. **Contents** (this page)
  b. **Sumary pages**

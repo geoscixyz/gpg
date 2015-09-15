@@ -6,37 +6,75 @@ Chargeability
 Introduction
 ============
 
-Chargeability is a physical property that is related to resistivity. The module about DC resistivity shows that potentials measured in a DC resistivity survey can be related to charges that accumulate when current is made to flow. However, when the transmitter current is switched off, the measured voltage may take up to several seconds to reach zero. Similarly, when the current is switched on, there may be a finite time taken for the voltage to reach a steady state value. In other words, current injected into the ground causes some materials to become polarized. The phenomenon is called induced polarization, and the physical property that is measured is usually called chargeability, which quantifies the material's capacity to retain charges after a forcing current is removed. The following figure illustrates the measurable effect.
+Chargeability is a physical property that is related to resistivity. The
+module about DC resistivity shows that potentials measured in a DC resistivity
+survey can be related to charges that accumulate when current is made to flow.
+However, when the transmitter current is switched off, the measured voltage
+may take up to several seconds to reach zero. Similarly, when the current is
+switched on, there may be a finite time taken for the voltage to reach a
+steady state value. In other words, current injected into the ground causes
+some materials to become polarized. The phenomenon is called induced
+polarization, and the physical property that is measured is usually called
+chargeability, which quantifies the material's capacity to retain charges
+after a forcing current is removed. The following figure illustrates the
+measurable effect.
 
  .. figure:: ./images/images_duplicates/IP_source.gif
 	:align: center
 	:scale: 100 %
 
 
-Induced polarization can also be measured using low frequency sinusoidal signals, as discussed in the `induced polarization measurements data`_ section of this chapter. The signals or data that are measured depend upon which of the various types of source signals are used. Note that IP surveys always include resistivity measurements because the electrical resistivity of teh earth must be known in order to invert data to recover chargeability.
+Induced polarization can also be measured using low frequency sinusoidal
+signals, as discussed in the `induced polarization measurements data`_ section
+of this chapter. The signals or data that are measured depend upon which of
+the various types of source signals are used. Note that IP surveys always
+include resistivity measurements because the electrical resistivity of teh
+earth must be known in order to invert data to recover chargeability.
 
 
 
 What can be detected?
 =============================
 
-The materials that are most chargeable include sulfide minerals (both massive and disseminated), clay-rich materials, and graphite. However, the chargeablility of materials can have a wide range within the same geographic region. This is because chargeability depends upon many factors, including mineral type, grain size, the ratio of internal surface area to volume, the properties of electrolytes in pore space, and the physics of interaction between surfaces and fluids.
+The materials that are most chargeable include sulfide minerals (both massive
+and disseminated), clay-rich materials, and graphite. However, the
+chargeablility of materials can have a wide range within the same geographic
+region. This is because chargeability depends upon many factors, including
+mineral type, grain size, the ratio of internal surface area to volume, the
+properties of electrolytes in pore space, and the physics of interaction
+between surfaces and fluids.
 
-Interpretation of chargeabililty models is further complicated by the fact that there is no standard set of units for this physical property. There are at least three ways of measuring the phenomenon and models recovered by inversion generally take on the same units as the measurement. This could be milli-seconds if measurements are made of the ground's response to impulsive sources. The units could also be percent if the response at two or more source signal frequencies is compared, or units of milliradians may be used if the phase difference between source and received signals is recorded.
+Interpretation of chargeabililty models is further complicated by the fact
+that there is no standard set of units for this physical property. There are
+at least three ways of measuring the phenomenon and models recovered by
+inversion generally take on the same units as the measurement. This could be
+milli-seconds if measurements are made of the ground's response to impulsive
+sources. The units could also be percent if the response at two or more source
+signal frequencies is compared, or units of milliradians may be used if the
+phase difference between source and received signals is recorded.
 
 Physical Phenomenons
 ====================
 
 .. _induced polarization measurements data: http://gpg.geosci.xyz/en/latest/content/induced_polarization/induced_polarization_measurements_data.html
 
-The chargeability of earth materials is essentially an electrochemical effect caused by many factors, not all of which are completely understood. If ground is chargeable, it responds as if resistivity was a complex quantity - it behaves somewhat like a leaky capacitor. Therefore the chargeability can be measured in a number of ways using time domain or frequency domain techniques (detailed in the section `induced polarization measurements data`_). Aspects affecting the chargeability of a sample include:
+The chargeability of earth materials is essentially an electrochemical effect
+caused by many factors, not all of which are completely understood. If ground
+is chargeable, it responds as if resistivity was a complex quantity - it
+behaves somewhat like a leaky capacitor. Therefore the chargeability can be
+measured in a number of ways using time domain or frequency domain techniques
+(detailed in the section `induced polarization measurements data`_). Aspects
+affecting the chargeability of a sample include:
 
  - the grain size of particles in the sample;
  - the type and mobility of ions within the pore fluids;
  - the details of microscopic interactions between solid surfaces and fluids;
  - the amount of surface area within a specific volume.
 
-The surface area-to-volume ratio is an important factor. Clays tend to be chargeable while sandstones are not, and the images here illustrate one reason why this is true. In addition, the surface interactions between clay minerals and fluids enhance the ability of these materials to hold charges.
+The surface area-to-volume ratio is an important factor. Clays tend to be
+chargeable while sandstones are not, and the images here illustrate one reason
+why this is true. In addition, the surface interactions between clay minerals
+and fluids enhance the ability of these materials to hold charges.
 
  .. figure:: ./images/images_duplicates/illite.gif
 	:align: center
@@ -53,12 +91,22 @@ The surface area-to-volume ratio is an important factor. Clays tend to be charge
 Two microscopic effects cause macroscopic chargeability
 -------------------------------------------------------
 
-There are two primary causes of chargeability. In both cases the re-distribution of charges takes some time to occur when an external DC electric field is applied. Equivalently, it takes the same time to revert to a balanced charge distribution once the electric field is removed. "Charging" is hard to measure in practice. "Discharging" is measured using time domain IP survey techniques. The effect of finite charging time on sinusoidal signals at different frequencies also can be measured using frequency domain or phase IP surveys. The two types of polarization are called "membrane polarization" and "electrode polarization." 
+There are two primary causes of chargeability. In both cases the re-
+distribution of charges takes some time to occur when an external DC electric
+field is applied. Equivalently, it takes the same time to revert to a balanced
+charge distribution once the electric field is removed. "Charging" is hard to
+measure in practice. "Discharging" is measured using time domain IP survey
+techniques. The effect of finite charging time on sinusoidal signals at
+different frequencies also can be measured using frequency domain or phase IP
+surveys. The two types of polarization are called "membrane polarization" and
+"electrode polarization."
 
 Membrane polarization
 ^^^^^^^^^^^^^^^^^^^^^
 
-Membrane polarization occurs when pore space narrows to within several boundary layer thicknesses (which is the thickness of ions adsorbed to a surface).
+Membrane polarization occurs when pore space narrows to within several
+boundary layer thicknesses (which is the thickness of ions adsorbed to a
+surface).
 
  .. figure:: ./images/images_duplicates/memb1.gif
 	:align: center
@@ -84,14 +132,22 @@ A second form of membrane polarization is similar to the first:
 	:align: right
 	:scale: 100	
 
-This occurs where clay particles partially block ionic solution paths, as in the adjacent figure. Upon application of an electric potential, positive charge carriers pass easily, while negative carriers accumulate. There is an "ion-selective membrane."
+This occurs where clay particles partially block ionic solution paths, as in
+the adjacent figure. Upon application of an electric potential, positive
+charge carriers pass easily, while negative carriers accumulate. There is an
+"ion-selective membrane."
 
-A surplus of both cations and anions occurs at one end of the membrane, while a deficiency occurs at the other end. The reduction of mobility is most obvious at frequencies slower than the diffusion time of ions between adjacent membrane zones; i.e. slower than around 0.1 Hz. Conductivity increases at higher frequencies.
+A surplus of both cations and anions occurs at one end of the membrane, while
+a deficiency occurs at the other end. The reduction of mobility is most
+obvious at frequencies slower than the diffusion time of ions between adjacent
+membrane zones; i.e. slower than around 0.1 Hz. Conductivity increases at
+higher frequencies.
 
 Electrode polarization
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Electrode polarization occurs when pore space is blocked by metallic particles. Again, charges accumulate when an electric field is applied.
+Electrode polarization occurs when pore space is blocked by metallic
+particles. Again, charges accumulate when an electric field is applied.
 
  .. figure:: ./images/images_duplicates/elec_pol_1.gif
 	:align: center
@@ -110,19 +166,33 @@ Comments on electrode polarization
 	:align: right
 	:scale: 100
 
-Some remarks are appropriate here in order to provide some sense of the complexity of the chargeability phenomenon.
+Some remarks are appropriate here in order to provide some sense of the
+complexity of the chargeability phenomenon.
 
-At an interface between ionic and metallic conduction (for example, an ore grain in pore water), there is an impedance involved in getting current to flow across the barrier. These interfaces look like the top figure and have the simplified circuit analogue shown in the bottom figure. 
+At an interface between ionic and metallic conduction (for example, an ore
+grain in pore water), there is an impedance involved in getting current to
+flow across the barrier. These interfaces look like the top figure and have
+the simplified circuit analogue shown in the bottom figure.
 
  .. figure:: ./images/images_duplicates/elec_pol_4.gif
 	:align: right
 	:scale: 100 %
 
-Current can flow via charge transfer (or ion diffusion), which involves electrochemical processes, or via a capacitive effect (no charge transfer), involving diffusion currents.
+Current can flow via charge transfer (or ion diffusion), which involves
+electrochemical processes, or via a capacitive effect (no charge transfer),
+involving diffusion currents.
 
-Ion diffusion is not easy to model with circuit elements. The process is called the Warburg impedance. Its magnitude varies as approximately 1/frequency.
+Ion diffusion is not easy to model with circuit elements. The process is
+called the Warburg impedance. Its magnitude varies as approximately
+1/frequency.
 
-Note that, while it is useful to understand simplified models of the relevant electrical behaviour of surface-electrolyte interactions, all rocks are, in fact, "dirty" in the sense that they are not simply pure "electrodes" (semiconducting mineral grains) and electrolytes (pore solutions).  There are other materials and particles affecting ionic behaviour within and outside the diffuse layer, and some of the sample's constituents will affect the behaviour of the fixed layer near and on the liquid-solid interfaces. 
+Note that, while it is useful to understand simplified models of the relevant
+electrical behaviour of surface-electrolyte interactions, all rocks are, in
+fact, "dirty" in the sense that they are not simply pure "electrodes"
+(semiconducting mineral grains) and electrolytes (pore solutions).  There are
+other materials and particles affecting ionic behaviour within and outside the
+diffuse layer, and some of the sample's constituents will affect the behaviour
+of the fixed layer near and on the liquid-solid interfaces.
 
 Summary of what affects the chargeability of material
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -139,21 +209,33 @@ Spectral Induced Polarization
 	:align: right
 	:scale: 100 %
 
-The Cole-Cole model for complex impedance is often used for modeling the ground's impedance. The Cole-Cole model is written as: 
+The Cole-Cole model for complex impedance is often used for modeling the
+ground's impedance. The Cole-Cole model is written as:
 
  .. math::
 		\rho (\omega) = \rho_0 \left[1-m \left( 1- \frac{1}{1+(j \omega \tau)^c}\right) \right] 
 
-This relation describes a complex impedance as a function of frequency, \\(\\omega\\) with three parameters. \\(m\\) is intrinsic chargeability, \\(\\tau\\) is a time constant (of the decay curve), and \\(c\\) is a parameter controlling the frequency dependence.	
+This relation describes a complex impedance as a function of frequency,
+\\(\\omega\\) with three parameters. \\(m\\) is intrinsic chargeability,
+\\(\\tau\\) is a time constant (of the decay curve), and \\(c\\) is a
+parameter controlling the frequency dependence.
 
 Typical chargeabilities for materials
 =====================================
 
-The following tables (from Telford et al, 1976) provides a very general guide to possible chargeabilities of materials. One reason that in-situ chargeabilities tend to appear lower than laboratory values is that large volumes of mixed materials are involved in field measurements.
+The following tables (from Telford et al, 1976) provides a very general guide
+to possible chargeabilities of materials. One reason that in-situ
+chargeabilities tend to appear lower than laboratory values is that large
+volumes of mixed materials are involved in field measurements.
 
-These examples show that a wide range of variability can be expected, implying that it is difficult to use values of intrinsic chargeability (in models obtained by inversion of IP data) to determine exactly what type of rock or material is in the ground. However, this is an ongoing topic of research. 
+These examples show that a wide range of variability can be expected, implying
+that it is difficult to use values of intrinsic chargeability (in models
+obtained by inversion of IP data) to determine exactly what type of rock or
+material is in the ground. However, this is an ongoing topic of research.
 
-**Table 1:** Charging and integration times were about 1 minute each, which is much longer than field survey systems; therefore, values are larger than field measurements. 
+**Table 1:** Charging and integration times were about 1 minute each, which is
+much longer than field survey systems; therefore, values are larger than
+field measurements.
 
 +-----------------------+--------------------------+
 |  **Material type**    | **Chargeability (msec)** |
@@ -177,7 +259,8 @@ These examples show that a wide range of variability can be expected, implying t
 | limestone, dolomite   | 10-20                    |  
 +-----------------------+--------------------------+
 
-**Table 2:** The values below involved more realistic charging and integration times of 3 seconds and 0.02-1.0 seconds respectively.
+**Table 2:** The values below involved more realistic charging and integration
+times of 3 seconds and 0.02-1.0 seconds respectively.
 
 +-----------------------+--------------------------+
 |  **Material type**    | **Chargeability (msec)** |
@@ -231,5 +314,14 @@ Typical problems where chargeability is useful
 ==============================================
 
 
-Mineral exploration for sulfides (disseminated and massive) is unquestionably the most common application of IP because those types of ore minerals are often chargeable.There are also applications in hydrogeology. For example, mapping salt water intrusions in aquifers that include clayey layers may be difficult using resistivity alone. However, the increased chargeability associated with clay may help differentiate between zones with more saline water and clay, both of which have low resistivity. In addition, there is a growing interest in the possibility of using chargeability to aid in the detection and delineation of contaminants in the ground. There has also been some effort to apply IP to oil and gas exploration.
+Mineral exploration for sulfides (disseminated and massive) is unquestionably
+the most common application of IP because those types of ore minerals are
+often chargeable.There are also applications in hydrogeology. For example,
+mapping salt water intrusions in aquifers that include clayey layers may be
+difficult using resistivity alone. However, the increased chargeability
+associated with clay may help differentiate between zones with more saline
+water and clay, both of which have low resistivity. In addition, there is a
+growing interest in the possibility of using chargeability to aid in the
+detection and delineation of contaminants in the ground. There has also been
+some effort to apply IP to oil and gas exploration.
 
