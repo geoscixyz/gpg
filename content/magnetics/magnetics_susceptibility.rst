@@ -3,7 +3,9 @@
 Susceptibility
 **************
 
-For magnetic surveys, the relevant physical property is *magnetic susceptibility*, or less commonly the related property *magnetic permeability*. 
+For magnetic surveys, the relevant physical property is *magnetic
+susceptibility*, or less commonly the related property *magnetic
+permeability*.
 
 
 Some Definitions
@@ -21,32 +23,57 @@ Some Definitions
 	& \text{1 Tesla} = 10^9 \text{nT} \\[0.3em]
 	& \text{1 nT} =   \gamma \ (gamma)
 
-**What is susceptibility?** Individual particles, minerals, and magnetic domains within rocks often have a net magnetic moment. That is, they behave like small magnets. When there is no external magnetic field, these particles are generally randomly oriented and hence don't produce a net magnetic field. However, when the material is in the presence of an external magnetic field such as Earth’s field, the individual magnetic particles become more aligned, resulting in a net magnetic field. This secondary field is distinct from, but caused by, the Earth’s field. The following interactive figure illustrates:
+**What is susceptibility?** Individual particles, minerals, and magnetic domains
+within rocks often have a net magnetic moment. That is, they behave like
+small magnets. When there is no external magnetic field, these particles are
+generally randomly oriented and hence don't produce a net magnetic field.
+However, when the material is in the presence of an external magnetic field
+such as Earth’s field, the individual magnetic particles become more
+aligned, resulting in a net magnetic field. This secondary field is distinct
+from, but caused by, the Earth’s field. The following interactive figure
+illustrates:
 
 .. raw:: html
     :file: susceptibility.html
 	
 .. DWO:  remove m from last line in box (wrong units) Substitute a magnetic fields from a bar magnet on the body
 
-The strength of the induced magnetisation, \\(M\\), the "dipole moment per unit volume", has units \\(\\text{A/m}\\). It is related to the causative field's strength, \\(H\\), by 
+The strength of the induced magnetisation, \\(M\\), the "dipole moment per
+unit volume", has units \\(\\text{A/m}\\). It is related to the causative
+field's strength, \\(H\\), by
 
 .. math::
 		\vec{M}=\kappa \vec{H}
 
-Susceptibility \\( \\kappa \\) is a dimensionless number related to the number of individual magnetic dipoles in the medium that can be aligned with the main field. Note that as the field increases the number of dipoles that align themselves with the field also increases.
+Susceptibility \\( \\kappa \\) is a dimensionless number related to the number
+of individual magnetic dipoles in the medium that can be aligned with the main
+field. Note that as the field increases the number of dipoles that align
+themselves with the field also increases.
 
-Each magnetic particle has it's own magnetic moment. Let \\(\\vec{m_i}\\) be the magnetic moment of the \\(i'\\text{th}\\) particle. This has an amplitude and direction, exactly the same as a small bar magnet.  Consider a volume \\(V\\). The total magnetic moment, which is the sum of the individual magnetic moments, is
+Each magnetic particle has it's own magnetic moment. Let \\(\\vec{m_i}\\) be
+the magnetic moment of the \\(i'\\text{th}\\) particle. This has an amplitude
+and direction, exactly the same as a small bar magnet.  Consider a volume
+\\(V\\). The total magnetic moment, which is the sum of the individual
+magnetic moments, is
 
  .. math::
 	\vec{m}= \sum_i \vec{m_i}	
 
-The magnetization \\(\\vec{M}\\) \\((\\text{A/m})\\) is the dipole moment per unit volume. It is given by
+The magnetization \\(\\vec{M}\\) \\((\\text{A/m})\\) is the dipole moment per
+unit volume. It is given by
 
 .. math::
 	\vec{M} = \frac {\vec{m}}{V} = \frac {1}{V} \sum_i \vec{m_i}	
 
-Although unit-less, the value of susceptibility is different in the cgs and SI systems of measurement because of the way electromagnetic derivations proceed within the two systems. Translation between cgs and SI systems of units is done via \\(\\kappa \\text{(SI)} = 4 \\pi \\kappa \\text{(cgs)} \\) . The SI system is the current preferred standard among most geophysicists, but you will find cgs used in older references and texts. 
-.. For more details, see the sub-section on units in the "Geophysical Surveys" chapter, "Magnetics" section.  
+Although unit-less, the value of susceptibility is different in the cgs and SI
+systems of measurement because of the way electromagnetic derivations proceed
+within the two systems. Translation between cgs and SI systems of units is
+done via \\(\\kappa \\text{(SI)} = 4 \\pi \\kappa \\text{(cgs)} \\) . The SI
+system is the current preferred standard among most geophysicists, but you
+will find cgs used in older references and texts.
+
+.. For more details, see the sub-section on units in the "Geophysical Surveys"
+.. chapter, "Magnetics" section.
 
 	
 
@@ -57,7 +84,13 @@ Susceptibility of materials
 Minerals
 --------
 
-Geologically significant magnetic minerals are either in the iron-titanium-oxygen group or in the iron-sulfur group. In the iron-titanium-oxygen group there are five main minerals, and in the iron-sulfur group there are two main minerals. There is apparently much more known about the first group. Grant and West, 1965, has an excellent summary, with a great deal of information about magnetism of minerals. The following table gives a simple indication of susceptibilities for specific magnetic minerals. 
+Geologically significant magnetic minerals are either in the iron-titanium-
+oxygen group or in the iron-sulfur group. In the iron-titanium-oxygen group
+there are five main minerals, and in the iron-sulfur group there are two main
+minerals. There is apparently much more known about the first group. Grant and
+West, 1965, has an excellent summary, with a great deal of information about
+magnetism of minerals. The following table gives a simple indication of
+susceptibilities for specific magnetic minerals.
 
 
 +-----------------------+--------------------------+-----------------------------------+
@@ -82,13 +115,33 @@ Geologically significant magnetic minerals are either in the iron-titanium-oxyge
 Rocks
 -----
 
-In rocks, susceptibility is mainly dependent on the volume percent of magnetite. This mineral is common in igneous and metamorphic rocks, and is present at least in trace amounts in most sediments. The chart below shows the ranges of magnetic susceptibility and magnetite volume for common rock types. Note that the susceptibility scale is logarithmic, so there is a huge range of susceptibilities in geological materials. Some relevant remarks are:
+In rocks, susceptibility is mainly dependent on the volume percent of
+magnetite. This mineral is common in igneous and metamorphic rocks, and is
+present at least in trace amounts in most sediments. The chart below shows the
+ranges of magnetic susceptibility and magnetite volume for common rock types.
+Note that the susceptibility scale is logarithmic, so there is a huge range of
+susceptibilities in geological materials. Some relevant remarks are:
 
-* Magnetite is by far the most common geologic magnetic material. The magnetic properties of most rocks depend on the proportion of magnetite within the rocks. See the approximate percent of magnetite by volume, highlighted by the red lines.
-* Igneous rocks tend to be more magnetic than sedimentary rocks, but there is a very wide range of overlap.
-* Magnetic minerals include metallic iron, nickel, cobalt, magnetite, pyrrhotite, and ulvospinel.
-* Magnetite (SG ≈ 5) is heavy and often accumulates in sediments and alluvial environments in the same way that other heavy minerals form placer deposits. So, for example, ancient or hidden stream paths can sometimes be mapped because magnetite deposition will depend upon water flow rates. 
-* Maghemite, a magnetic form of hematite, is produced in highly organic soils. Surface soils can acquire a remanent magnetization that is stronger than the induced magnetization, often as a result of human interference with fires or other disturbances. Implications are important for archeology.
+* Magnetite is by far the most common geologic magnetic material. The magnetic
+  properties of most rocks depend on the proportion of magnetite within the
+  rocks. See the approximate percent of magnetite by volume, highlighted by
+  the red lines.
+
+* Igneous rocks tend to be more magnetic than sedimentary rocks, but there is
+  a very wide range of overlap.
+
+* Magnetic minerals include metallic iron, nickel, cobalt, magnetite,
+  pyrrhotite, and ulvospinel.
+
+* Magnetite (SG ≈ 5) is heavy and often accumulates in sediments and alluvial
+  environments in the same way that other heavy minerals form placer deposits.
+  So, for example, ancient or hidden stream paths can sometimes be mapped
+  because magnetite deposition will depend upon water flow rates.
+
+* Maghemite, a magnetic form of hematite, is produced in highly organic soils.
+  Surface soils can acquire a remanent magnetization that is stronger than the
+  induced magnetization, often as a result of human interference with fires or
+  other disturbances. Implications are important for archeology.
 
  .. figure:: ./images/susceptibility_chart.gif
 	:align: center
@@ -140,30 +193,72 @@ A table summarizing typical susceptibilities of common materials follows:
 +-----------------------+---------------------------------------------------------+
 
 
-Bulk susceptibility of rocks depends, of course, on what magnetic minerals are present, although there is no simple relationship. For example anisotropy is often present in metamorphic rocks, with smaller susceptibility in the direction normal to the textural trends (schistosity or gneissosity) than in a direction parallel to it. Banded magnetite or pyrrhotite are the most significant examples of rocks with anisotropic susceptibility. Magnetite is by far the most significant contributor to a rock's magnetic properties. There are several empirical relations between magnetite content and bulk susceptibility. Three such relations listed below (Grant and West, 1965) represent bulk susceptibility, \\(\\kappa\\), as a function of magnetite content by percent volume, \\(V\\). 
+Bulk susceptibility of rocks depends, of course, on what magnetic minerals are
+present, although there is no simple relationship. For example anisotropy is
+often present in metamorphic rocks, with smaller susceptibility in the
+direction normal to the textural trends (schistosity or gneissosity) than in a
+direction parallel to it. Banded magnetite or pyrrhotite are the most
+significant examples of rocks with anisotropic susceptibility. Magnetite is by
+far the most significant contributor to a rock's magnetic properties. There
+are several empirical relations between magnetite content and bulk
+susceptibility. Three such relations listed below (Grant and West, 1965)
+represent bulk susceptibility, \\(\\kappa\\), as a function of magnetite
+content by percent volume, \\(V\\).
 
 1. \\( \\kappa = 2.89 \\times10^{-3} \\; V^{1.01} \\)
 2. \\( \\kappa = 2.6 \\times10^{-3} \\; V^{1.11} \\)
 3. \\( \\kappa = 1.16 \\times10^{-3} \\; V^{1.39} \\)
 
-Differences between the three formulae are probably due to the differences in the sample sets and separation process. Separation tends to overestimate the ferrimagnetic mineral content, while visual or microscopic examination tends to underestimate it. 
+Differences between the three formulae are probably due to the differences in
+the sample sets and separation process. Separation tends to overestimate the
+ferrimagnetic mineral content, while visual or microscopic examination tends
+to underestimate it.
 
 Soils
 -----
 
-(Summarized from Breiner, 1973) Magnetic susceptibility of soils might be expected to be related to the magnetite content of parent rocks. However magnetite is more resistant to weathering than other minerals. It is also denser than average materials and therefore subject to dispositional concentration. In addition, organic action is thought to be responsible for the formation of maghemite from other non-magnetic forms of iron oxide. For all these reasons, soils have very variable susceptibilities, and may have higher susceptibilities than suggested by the parent rocks. In any case, soil susceptibility can significantly impact ground-based surveys, creating noisy results that are often difficult to explain, or mitigate. 
+(Summarized from Breiner, 1973) Magnetic susceptibility of soils might be
+expected to be related to the magnetite content of parent rocks. However
+magnetite is more resistant to weathering than other minerals. It is also
+denser than average materials and therefore subject to dispositional
+concentration. In addition, organic action is thought to be responsible for
+the formation of maghemite from other non-magnetic forms of iron oxide. For
+all these reasons, soils have very variable susceptibilities, and may have
+higher susceptibilities than suggested by the parent rocks. In any case, soil
+susceptibility can significantly impact ground-based surveys, creating noisy
+results that are often difficult to explain, or mitigate.
 
 Buried metal
 ------------
 
-(Summarized from Breiner, 1973) For most iron or steel objects, the susceptibility, \\(\\kappa\\), falls between 10 and 200 in SI units. However, predicting the response of a magnetometer survey over metal is complicated for several reasons. Remanent magnetisation is likely to be strong, and pointing in different directions in the various components of a buried object. For example, a buried pipe will often show up as a linear set of anomalies with variable character because each segment will have it's own magnetic signature. It should also be remembered that stainless steel is not magnetic, and that many potential targets may not even be ferrous (for example, aircraft frame parts are often some alloy with no magnetic properties). 
+(Summarized from Breiner, 1973) For most iron or steel objects, the
+susceptibility, \\(\\kappa\\), falls between 10 and 200 in SI units. However,
+predicting the response of a magnetometer survey over metal is complicated
+for several reasons. Remanent magnetisation is likely to be strong, and
+pointing in different directions in the various components of a buried
+object. For example, a buried pipe will often show up as a linear set of
+anomalies with variable character because each segment will have it's own
+magnetic signature. It should also be remembered that stainless steel is not
+magnetic, and that many potential targets may not even be ferrous (for
+example, aircraft frame parts are often some alloy with no magnetic
+properties).
 
-The maximum induced magnetic field strength (i.e. the maximum anomaly), \\(T\\), of a 3D object can be roughly estimated using \\(T = M/r^3\\) (or \\(T = 2M/r^3\\) for latitudes greater than \\(60^\\circ\\), where \\(M\\) is the magnetic moment estimated from \\(M = \\kappa F V\\) (\\(\\kappa\\) is susceptibility, \\(F\\) is ambient field strength,\\(V\\) is volume), and \\(r\\) is the distance to the target. For a 2D object, \\(T = M/r^2\\) is appropriate. 
+The maximum induced magnetic field strength (i.e. the maximum anomaly),
+\\(T\\), of a 3D object can be roughly estimated using \\(T = M/r^3\\) (or
+\\(T = 2M/r^3\\) for latitudes greater than \\(60^\\circ\\), where \\(M\\) is
+the magnetic moment estimated from \\(M = \\kappa F V\\) (\\(\\kappa\\) is
+susceptibility, \\(F\\) is ambient field strength,\\(V\\) is volume), and
+\\(r\\) is the distance to the target. For a 2D object, \\(T = M/r^2\\) is
+appropriate.
 
 Organically derived susceptibility
 ----------------------------------
 
-Organic chemistry can be important in understanding magnetic survey results for petroleum exploration applications. Under certain conditions magnetic anomalies caused by organic chemical activity can provide indicators of petroleum reservoir in underlying rocks. This is described in a supplementary article (Stone et al, 2004).
+Organic chemistry can be important in understanding magnetic survey results
+for petroleum exploration applications. Under certain conditions magnetic
+anomalies caused by organic chemical activity can provide indicators of
+petroleum reservoir in underlying rocks. This is described in a supplementary
+article (Stone et al, 2004).
 
 
 Field measurements of magnetic susceptibility using a KT10

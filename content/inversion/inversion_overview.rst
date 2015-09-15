@@ -14,7 +14,11 @@ Overview of linear inverse theory
 The geophysical experiment
 ==========================
 
-Geophysicists are continually faced with a genuine type of problem. Our goal is to extract quantitative information about the earth (or a physical system) without directly sampling. To carry the task out, the geophysicist sets up an experiment (sensitive to particular physical properties that are diagnostic of the study).
+Geophysicists are continually faced with a genuine type of problem. Our goal
+is to extract quantitative information about the earth (or a physical system)
+without directly sampling. To carry the task out, the geophysicist sets up an
+experiment (sensitive to particular physical properties that are diagnostic of
+the study).
 
 .. figure:: ./images/survey.jpg
     :align: center
@@ -32,11 +36,19 @@ Experiment
 ==========
 
 - energy is input into the earth
+
 - propagation of the energy depends upon physical laws.
-- initial primary energy interacts with substructure to generate scattered (secondary) energy which is returned to a receiver. 
+
+- initial primary energy interacts with substructure to generate scattered
+  (secondary) energy which is returned to a receiver.
+
 - receiver outputs a (set) if numbers which constitute our data.
 
-Knowledge of (1) the data, (2) physics about how energy propagates through the earth, and (3) the physical experiment (sources/receivers geometry, ...) must somehow be combined to reveal information about the earth. This is the goal of inverse theory. It provides a set of mathematical tools by which to extract quantitative answers to specific questions. 
+Knowledge of (1) the data, (2) physics about how energy propagates through the
+earth, and (3) the physical experiment (sources/receivers geometry, ...) must
+somehow be combined to reveal information about the earth. This is the goal of
+inverse theory. It provides a set of mathematical tools by which to extract
+quantitative answers to specific questions.
 
 
 Examples
@@ -65,7 +77,9 @@ Examples
 .. figure:: ./images/medical.jpg
     :align: center
 
-**Optics: Shaw problem**. Each ray (incident angle\\(t\\)) scatters into a region of \\(\\pi\\). The goal is to measure the intensity on the right hand side and determine the strength of the source on the left hand side. 
+**Optics: Shaw problem.** Each ray (incident angle\\(t\\)) scatters into a
+region of \\(\\pi\\). The goal is to measure the intensity on the right hand
+side and determine the strength of the source on the left hand side.
 
 .. figure:: ./images/shaw.jpg
     :align: center

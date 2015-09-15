@@ -7,7 +7,14 @@ Induced Polarization
    :align: right
    :scale: 110 %
 
-In this section we look at Induced Polarization (IP) surveys. IP surveys are often linked to DC surveys, and the sources and receivers for IP surveys are the same. The physical property for IP surveys is chargeability—a measure of how well material holds charge. There are four types of data that are obtained from these surveys, two in the time domain and two in the frequency domain. Likewise, there are different ways to quantify chargeability, so pay close attention to units. We will also look into the essential equations that go into forward modelling IP data.  
+In this section we look at Induced Polarization (IP) surveys. IP surveys are
+often linked to DC surveys, and the sources and receivers for IP surveys are
+the same. The physical property for IP surveys is chargeability—a measure of
+how well material holds charge. There are four types of data that are obtained
+from these surveys, two in the time domain and two in the frequency domain.
+Likewise, there are different ways to quantify chargeability, so pay close
+attention to units. We will also look into the essential equations that go
+into forward modelling IP data.
 
 Contents:
 

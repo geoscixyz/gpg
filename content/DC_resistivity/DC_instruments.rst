@@ -13,7 +13,7 @@ to obtain transmitters that can source up to 30,000 watts. Current is usually
 injected as a 50% duty cycle reversing square wave; that is, current is on for
 several seconds, off for several seconds, on with reversed polarity, off, etc.
 
-.. figure:: ./images/dc-equip1.jpg
+ .. figure:: ./images/dc-equip1.jpg
 	:align: center
 	:scale: 100 %
 
@@ -24,7 +24,7 @@ several seconds, off for several seconds, on with reversed polarity, off, etc.
 	crew of 4 field operators.
 
 
-.. figure:: ./images/dc-equip2.jpg
+ .. figure:: ./images/dc-equip2.jpg
 	:align: center
 	:scale: 100 %
 
@@ -42,19 +42,21 @@ possible to obtain transmitters capable of sourcing tens of kilowatts of
 power. Needless to say, these are rather dangerous systems, and definitely not
 portable! The figures below show several currently available transmitters.
 
-.. figure:: ./images/zongtx.gif
+ .. figure:: ./images/zongtx.gif
 	:align: center
 	:scale: 100 %
 
 	Three transmitters and their power generators.Images are from Zong
 	Engineering and Research sales literature.
 
-.. figure:: ./images/scinttx.gif
+
+ .. figure:: ./images/scinttx.gif
 	:align: center
 	:scale: 100 %
 
 	0 kW Scintrex resistivity-IP transmitter in use in the field. The power
 	generator is on the pickup truck.
+
 
 Receivers
 =========
@@ -99,19 +101,24 @@ Cables
 	:align: right
 	:scale: 100 %
 
-Ordinary insulated wire on reels (possibly on a back-pack) for easy handling
-are most common (figure to the right).
+	Ordinary insulated wire on reels (possibly on a back-pack) for easy
+	handling are most common (figure to the right).
 
-	- For small scale work, some systems are available that use multiconductor cable, and possibly "smart" electrodes that can be switched between input and measurement functions by computer.
-	- For large scale work, this is not practical because of the large currents involved (up to a hundred Amps or so in some cases). Multiconductor cables with individual wires capable of carrying that current would be prohibitively heavy for mineral exploration surveys, which commonly involve profile lines several kilometers long.
-	- However, there are some systems that use multiconductor seismic cable for the potentials while requiring the normal single, heavy gauge wire for the current source.
+
+- For small scale work, some systems are available that use multiconductor cable, and possibly "smart" electrodes that can be switched between input and measurement functions by computer.
+
+- For large scale work, this is not practical because of the large currents involved (up to a hundred Amps or so in some cases). Multiconductor cables with individual wires capable of carrying that current would be prohibitively heavy for mineral exploration surveys, which commonly involve profile lines several kilometers long.
+
+- However, there are some systems that use multiconductor seismic cable for the potentials while requiring the normal single, heavy gauge wire for the current source.
+
 
 Variations on the theme
 =======================
 
-.. figure:: ./images/field_site.jpg
+ .. figure:: ./images/field_site.jpg
 	:align: right
 	:scale: 100 
+
 
  .. figure:: ./images/trawling.jpg
 	:align: right
@@ -134,6 +141,7 @@ following list (as of January 2007).
 	:align: right
 	:scale: 100 
 
+
 Another arrangement involves a towed array system in which all potential and
 source electrodes are basically heavy metallic weights. This arrangement is
 efficient when the survey site is essentially flat and ground is relatively
@@ -146,6 +154,7 @@ January 2007), and others.
  .. figure:: ./images/gooddat1-sm.gif
 	:align: right
 	:scale: 100 
+
 
 In the early 1990's receivers were developed that could record complete
 digitized potential waveforms rather than simply measuring voltages at
