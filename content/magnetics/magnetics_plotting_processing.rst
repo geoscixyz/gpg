@@ -139,7 +139,7 @@ here:
     :file: data_plotting1.html
 
 Large data sets are commonly gathered using airborne instruments. They may
-involve 105 to 106 data points to show magnetic variations over many square
+involve \\(10^5\\) to \\(10^6\\) data points to show magnetic variations over many square
 kilometers. An example of a large airborne data set is shown to the right,
 with a larger version, including alternative colour scale schemes, `shown in a
 sidebar`_.
@@ -151,7 +151,7 @@ sidebar`_.
 	:align: right
 	:scale: 40%	
 
-Such data sets were once too large to invert directly, but they still provided
+Such data sets were once too large to invert directly, but they still provide
 extremely valuable information about geology and structure, especially if some
 processing is applied to enhance desirable features and/or suppress noise or
 unwanted features. With recent advancements in computational power and
