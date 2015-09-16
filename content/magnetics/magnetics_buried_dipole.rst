@@ -13,16 +13,16 @@ The general principles of magnetic surveying are encapsulated into the following
 
 (c) If the object is "small", that is all of the object's dimensions are several times smaller than the depth to its center, then  the object acts as a "magnetic dipole" -- that is, a little bar magnet with strength and direction caused by the inducing field. The  dipole moment of the object is \\(\\vec{m} = \\text{Volume} * \\vec{M}\\)
 
-(d) The magnetic field of the object is referred to as the "secondary" field or sometimes the "anomalous" field \\(\\vec{B_a}\\). This is what we seek to measure. 
+(d) The magnetic field of the object is referred to as the "secondary" field or sometimes the "anomalous" field \\(\\vec{B_A}\\). This is what we seek to measure. 
 
-(e) \\(\\vec{B_a}\\) is a vector field and hence requires three components to specify it. In the accompanying applet observations of individual components \\((B_x,B_y,B_z)\\) can be displayed. The projection of \\(\\vec{B_a}\\) onto the direction of Earth's field \\(\\hat{B_0}\\) is displayed as \\(B_t\\). 
+(e) \\(\\vec{B_A}\\) is a vector field and hence requires three components to specify it. In the accompanying applet observations of individual components \\((B_x,B_y,B_z)\\) can be displayed. The projection of \\(\\vec{B_A}\\) onto the direction of Earth's field \\(\\hat{B_0}\\) is called the *total field* (\\(B_t\\)). 
 
 
  .. figure:: ./images/TMI_anomaly.png
 	:align: center
 	:scale: 110% 
 
-	Figure Caption
+	When using a total field magnetometer we measure \\(\\left|\\vec{B}\\right|\\) which is equal to \\(\\left|\\vec{B_0} + \\vec{B_A}\\right|\\). Since we do not know the direction of \\(\\vec{B_A}\\) we assume that the anomalous field is mostly induced and that it's direction aligns with the Earth's inducing field \\(\\vec{B_0}\\). This allows us to approximate the *total field* datum (\\(B_t\\)) as the projection of \\(\\vec{B_A}\\) onto the direction of Earth's field \\(\\hat{B_0}\\).
 
 
 In addition the vertical gradient of the field, obtained if measurements were

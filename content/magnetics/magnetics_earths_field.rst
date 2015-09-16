@@ -131,15 +131,16 @@ primarily to currents in the ionized upper atmosphere.
 Temporal variations are often larger than geophysical anomalies. They must be
 accounted for in all surveys and this is usually done by acquiring data at a
 fixed base-station. Another alternative is to acquire gradient data that use
-two fixed sensors. Three figures are given in a sidebar showing examples of
-different types of magnetic noise that may be encountered at time scales of
-several days, hours, and minutes.
+two fixed sensors. The figure below shows an example magnetic noise that may be 
+encountered as a result of a geomagnetic storm. These temporal variations have 
+an impact on magnetic data measured over time scales of several days, hours, or 
+minutes.
 
- .. figure:: ./images/pipe3_timelapse.gif
+ .. figure:: ./images/pipe3_timelapse_edit.gif
 	:align: center
 	:scale: 110% 
 
-	Figure Caption
+	Adapted from NRC http://www.spaceweather.gc.ca/tech/se-pip-en.php
 
 The Geological Survey of Canada has a web page, which can provide graphs of
 diurnal variations observed at any of 11 magnetic observatories in Canada, for

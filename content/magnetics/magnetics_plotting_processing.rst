@@ -6,22 +6,21 @@ Processing and plotting magnetic data
 Removal of time variations
 ==========================
 
-We saw in xxxEarth's magnetic field changes xxx  that the magnetic field at
+We saw in section :doc:`magnetics_earths_field` that the magnetic field at
 any point on the earth changes with time. These temporal variations are also
-referred to as diurnal variations. Our magnetometers record this field as well
-as that of the sought buried objects or structures. If the changes in earth's
+referred to as diurnal variations. Our magnetometers record the Earth's inducing field as well
+as the secondary or anomalous fields induced in susceptible bodies. If the changes in earth's
 field have an amplitude that is significant compared to our anomalous signal,
-and if we don't correct for them, then this can greatly degrade our survey
-results. The general procedure is to establish a "base-station" which is fixed
-in location and continually measures the magnetic field. Each datum acquired
-by the roving sensor is also time-stamped. The assumption is then made that
-the changes in the magnetic field caused by these natural sources has a very
-long spatial wavelength and hence is the same at any point in the survey grid.
-Field data, corrected for these time variations, is obtained through the
+then we need to correct for the observed temporal variations. The general procedure 
+is to establish a "base-station" which is fixed in location and continually measures 
+the magnetic field. Each datum acquired by the roving sensor is also time-stamped. The assumption 
+is then made that the changes in the Earth's magnetic field caused by these natural sources have a
+long enough spatial wavelength that they are same at any point on the survey grid. 
+Field data, corrected for these time variations, is obtained through the following
 subtraction process
 
 .. math::
-	\Delta B(t) = B^{obs}(t) - B^{base}(t)
+	\Delta \textbf{B}(t) = \textbf{B}_{obs}(t) - \textbf{B}_{base}(t)
 
 .. The graphs below indicate the procedure.
 
@@ -41,7 +40,7 @@ The residual field, \\(\\Delta B\\), contains the sought anomalous field but
 it may also have some broad-scale background or "regional field". Thus
 
 .. math::
-	\Delta B = B_a + B_{regional}
+	\Delta \textbf{B} = \textbf{B}_a + \textbf{B}_{regional}
 
 The "regional field" is a smoothly varying field which characterizes the
 magnetic response of large scale background structures. If our primary
@@ -60,7 +59,7 @@ than the actual survey area. That is, we want to remove a regional field. If
 we designate magnetic fields as **B**, then we want to perform the following
 
 .. math::
-	\textbf{B}_{anomalous} = \textbf{B}_{measured} - \textbf{B}_{regional}
+	\textbf{B}_{a} = \Delta \textbf{B} - \textbf{B}_{regional}
 
 Estimates of the regional field may be obtained using:
 
@@ -140,7 +139,7 @@ here:
     :file: data_plotting1.html
 
 Large data sets are commonly gathered using airborne instruments. They may
-involve 105 to 106 data points to show magnetic variations over many square
+involve \\(10^5\\) to \\(10^6\\) data points to show magnetic variations over many square
 kilometers. An example of a large airborne data set is shown to the right,
 with a larger version, including alternative colour scale schemes, `shown in a
 sidebar`_.
@@ -152,7 +151,7 @@ sidebar`_.
 	:align: right
 	:scale: 40%	
 
-Such data sets were once too large to invert directly, but they still provided
+Such data sets were once too large to invert directly, but they still provide
 extremely valuable information about geology and structure, especially if some
 processing is applied to enhance desirable features and/or suppress noise or
 unwanted features. With recent advancements in computational power and
