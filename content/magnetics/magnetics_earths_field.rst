@@ -140,7 +140,7 @@ minutes.
 	:align: center
 	:scale: 110% 
 
-	.. Figure Caption
+	Adapted from NRC http://www.spaceweather.gc.ca/tech/se-pip-en.php
 
 The Geological Survey of Canada has a web page, which can provide graphs of
 diurnal variations observed at any of 11 magnetic observatories in Canada, for
