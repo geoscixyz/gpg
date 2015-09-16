@@ -18,3 +18,18 @@ Here are a couple resources on sphinx and reStructured Text:
 
 
 **Tips:**
+
+Example of how to reference a Figure.
+
+*Insert and name your Figure
+ .. figure:: ./ExampleImage.png
+	:align: center
+	:scale: 110% 
+	:name: ExampleImage
+
+	Figure Caption.
+	
+*Reference the Figure
+An example image is shown in :numref:`Positive_magnetic_pole`.
+	
+	
