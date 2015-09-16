@@ -6,7 +6,7 @@ Instruments for magnetic surveys
 A measurement of the magnetic field at any location will involve either
 recording the amplitude of the field or one of its three components.
 Instruments are deployed on the ground, in marine work, on helicopters and
-fixed wing aircraft, and in space-borne geophysical. Instrument types commonly
+fixed wing aircraft, and in space-borne geophysical platforms. Instrument types commonly
 used are outlined very briefly as follows:
 
 Fluxgate Magnetometer
