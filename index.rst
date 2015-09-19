@@ -1,6 +1,10 @@
 Geophysics for Practicing Geoscientists
 =======================================
 
+ .. image:: intro.png
+   :width: 200 px
+   :alt: intro
+   :align: right
 
 The GPG is a learning resource for applied geophysics and its applications to
 help solve problems of relevance to society including those in resource
@@ -29,6 +33,7 @@ input and collaborators! Join the development on github_.
 
 
 Contents:
+^^^^^^^^^
 
 .. toctree::
    :maxdepth: 1
@@ -42,18 +47,6 @@ Contents:
    content/DC_resistivity/index
    content/induced_polarization/index
    content/gravity/index
-   
-   
- 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
 
 
 Feedback:
@@ -64,3 +57,14 @@ Have comments or suggestions? Submit feedback here_.
 .. _here: https://docs.google.com/forms/d/1Bv43lKncKaTQY3_J_B1DrPQr0ft0Qt1x6IjqM7iDbnc/viewform?usp=send_form>`.  
 
 
+Contributors:
+^^^^^^^^^^^^^
+
+.. include:: AUTHORS.rst
+
+.. Indices and tables
+.. ==================
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
