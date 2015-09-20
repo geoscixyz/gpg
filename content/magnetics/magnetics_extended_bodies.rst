@@ -1,4 +1,3 @@
-numfig
 .. _magnetics_extended_bodies:
 
 Fields from extended bodies
