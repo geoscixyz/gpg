@@ -8,7 +8,13 @@ Seismic Refraction
    :align: right
    :scale: 110 %
 
-In this section we will go over some of the fundamental physics of acoustic waves (two types, referred to as P and S waves) and their relationship to material properties like bulk modulus, shear modulus, and density. We will then use a conceptual model that describes sound waves as ray-paths and examine how refracted waves appear in seismic data. Last we will consider how rays travel in layered media and examine some the variations that occur with different geometries, like dipping layers and horizontal velocity variations. 
+In this section we will go over some of the fundamental physics of acoustic
+waves (two types, referred to as P and S waves) and their relationship to
+material properties like bulk modulus, shear modulus, and density. We will
+then use a conceptual model that describes sound waves as ray-paths and
+examine how refracted waves appear in seismic data. Last we will consider how
+rays travel in layered media and examine some the variations that occur with
+different geometries, like dipping layers and horizontal velocity variations.
 
 Contents:
 

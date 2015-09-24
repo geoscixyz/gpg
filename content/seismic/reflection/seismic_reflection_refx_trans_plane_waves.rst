@@ -4,14 +4,19 @@
 Reflection and Transmission of Plane Waves
 ******************************************
 
-If we are some distance away from the source, then the seismic wave will look like a plane wave. That is, the wavefront will look like a planar surface. Imagine such a plane wave which impinges at a boundary at normal incidence.
+If we are some distance away from the source, then the seismic wave will look
+like a plane wave. That is, the wavefront will look like a planar surface.
+Imagine such a plane wave which impinges at a boundary at normal incidence.
 
 .. figure:: ./images/R_and_T_amplitudes.png
     :align: center
 
     Energy across a velocity boundary, where, \\(A_0\\) is the amplitude of the incident wave; \\(A_1\\) is the amplitude of the reflected wave; \\(A_2\\) is the amplitude of the transmitted wave
 
-We define here the "Acoustic Impedance" \\( Z = \\rho V \\), or the product of density and velocity. Energy is reflected and transmitted at the interface. We define next expressions which describe the efficiency of reflection and transmission.
+We define here the "Acoustic Impedance" \\( Z = \\rho V \\), or the product of
+density and velocity. Energy is reflected and transmitted at the interface. We
+define next expressions which describe the efficiency of reflection and
+transmission.
 
 **Reflection Coefficient:**
 
@@ -30,16 +35,25 @@ Special Cases
 =============
 
 1. If \\( Z_1 = Z_2 \\):   \\( R = 0 \\),  \\( T = 1 \\)
-2. If   \\( Z_1 >> Z_2 \\):   \\( R = -1 \\),  \\( T = 2 \\).  The value \\( R = -1 \\) means that the pulse will be reflected with a polarity change, for example at the rock-air interface, with an upward traveling wave.
-3. If   \\( Z_2 >> Z_1 \\)   \\( R = 1 \\),  \\( T = 0 \\) (air earth interface with downward traveling wave).
 
-**Remark**:  Large amplitudes of the transmitted wave are sometimes counter-intuitive. However, the energy transported in an acoustic wave is
+2. If   \\( Z_1 >> Z_2 \\):   \\( R = -1 \\),  \\( T = 2 \\).  The value \\( R
+   = -1 \\) means that the pulse will be reflected with a polarity change, for
+   example at the rock-air interface, with an upward traveling wave.
+
+3. If   \\( Z_2 >> Z_1 \\)   \\( R = 1 \\),  \\( T = 0 \\) (air earth
+   interface with downward traveling wave).
+
+**Remark:**  Large amplitudes of the transmitted wave are sometimes counter-
+intuitive. However, the energy transported in an acoustic wave is
 
 .. math::
     \text{Energy} = \frac{1}{2} \rho v \omega^2 A^2 \approx ZA^2
 
 
-So even though there is an enhanced amplitude of a transmitted wave in certain situations, there is still loss of energy. The ratio of incoming to reflected energy is \\( E_R \\) and the ration of incoming to transmitted energy is \\( E_T \\). The values of these rations are
+So even though there is an enhanced amplitude of a transmitted wave in certain
+situations, there is still loss of energy. The ratio of incoming to reflected
+energy is \\( E_R \\) and the ration of incoming to transmitted energy is \\(
+E_T \\). The values of these rations are
 
 .. math::
     E_R = \left( \frac{Z_2 - Z_1}{Z_2 + Z_1} \right)^2

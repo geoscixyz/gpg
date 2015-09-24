@@ -23,14 +23,16 @@ where the volume is divided into \\(M\\) cells with the density constant in each
 .. math::
 		G_{ij} = - \gamma \int_{R_j} \frac{(z_i - z')}{|r_i - r'|^3} dv
 
-is the response of the ith observation location due to a cell of constant density in the jth cell. (Remember the cell can be 1D (layer), 2D or 3D).
+is the response of the ith observation location due to a cell of constant
+density in the jth cell. (Remember the cell can be 1D (layer), 2D or 3D).
 
 The above discretization allows the data to be written in matrix form:
 
 .. math::
 		d=Gm
 
-The next task is to get a matrix representation of our model objective function. In 1D we had a combination
+The next task is to get a matrix representation of our model objective
+function. In 1D we had a combination
 
 .. math::
 		\phi(m) = \alpha_s \int m^2 (x) dx + \alpha_x \int \left(\frac{dm}{dx}\right)^2 dx
@@ -73,7 +75,8 @@ so
 		d_j = \sum_{k=1}^M G_{ij} m_k
 
 
-where \\(G_{jk} = \\int_{x_{k-1}}^{x_k} g_j (x) dx \\) is the integral of the jth kernel function over the kth cell. In matrix vector form this becomes
+where \\(G_{jk} = \\int_{x_{k-1}}^{x_k} g_j (x) dx \\) is the integral of the
+jth kernel function over the kth cell. In matrix vector form this becomes
 
 .. math::
 		d=Gm
@@ -84,12 +87,14 @@ Method 2: Quadrature formulation
 .. math::
 		\int_{x_0}^{x_M} f(x) dx = \sum_{i=1}^{M} w_k f(x_k)
 
-where \\(w_k\\) are known weights. For example, we could evaluate this with a midpoint rule
+where \\(w_k\\) are known weights. For example, we could evaluate this with a
+midpoint rule
 
 .. figure:: ./images/midpointrule.jpg
     :align: center	
 
-Let \\(h_k = x_k x_{k-1}\\) be the width of the kth cell, and let \\(x_{k-1/2}\\) denote the center of the kth cell, then
+Let \\(h_k = x_k x_{k-1}\\) be the width of the kth cell, and let
+\\(x_{k-1/2}\\) denote the center of the kth cell, then
 
 .. math::
 		\int_{x_0}^{x_M} f(x) dx = \sum_{i=1}^{M} h_k f(x_{k-1/2})	
@@ -104,7 +109,9 @@ In this case the model vector \\(\\vec{m}\\)
 .. math::
 		\vec{m} = \left( m(x_{1/2}), m(x_{3/2}), ... , m(x_{M-1/2}) \right)
 
-is generally written as \\( \\vec{m} = ( m_1, ..., m_M) \\) so the model parameters are the values of the model at the cell centers. The elements of \\(G\\) are
+is generally written as \\( \\vec{m} = ( m_1, ..., m_M) \\) so the model
+parameters are the values of the model at the cell centers. The elements of
+\\(G\\) are
 
 .. math::
 		G_{jk} = g_j (x_{k-1/2}) h_k
@@ -124,7 +131,9 @@ A general objective function in 1D is
 .. math::
 		\phi_m = \alpha_s \int m^2(x) dx + \alpha_x \int \left(\frac{dm}{dx}\right)^2 dx
 
-We use the same discretization as we did in the forward problem. Divide the region on which the model is defined into \\(M\\) cells and assume the model is constant in each cell. 
+We use the same discretization as we did in the forward problem. Divide the
+region on which the model is defined into \\(M\\) cells and assume the model
+is constant in each cell.
 
 .. figure:: ./images/Mcells.jpg
     :align: center	
@@ -166,13 +175,17 @@ We want to find a numerical approximation
 .. figure:: ./images/Xcells.jpg
     :align: center	
 
-Let \\(d_k\\) be the distance between the center f the cells. A discrete approximation to the integral is had by evaluating the derivative of the model based upon how much it changes between cell centers. 
+Let \\(d_k\\) be the distance between the center f the cells. A discrete
+approximation to the integral is had by evaluating the derivative of the model
+based upon how much it changes between cell centers.
 
 .. math::
 		\phi_x \approx \sum_{k=1}^{M-1} \left( \frac{M_{k+1}-M_k}{d_k} \right)^2 d_k
 
 
-Note that there are only \\(M-1\\) terms in the sum. The \\( \\frac{M_{k+1}-M_k}{d_k} \\) part represents the average gradient between the kth and k+1th cell. Now this can be written as
+Note that there are only \\(M-1\\) terms in the sum. The \\(
+\\frac{M_{k+1}-M_k}{d_k} \\) part represents the average gradient between the
+kth and k+1th cell. Now this can be written as
 
 .. math::
 		\phi_x = \sum_{k=1}^{M-1} \left( \frac{M_{k+1}-M_k}{d_k} \right)^2 d_k = m^T W_x^T W_x m = \|W_x m\|^2
@@ -193,7 +206,10 @@ where
 		\end{split}
 		\end{equation}	
 
-If \\(W_x\\) is written as an \\(M \\times M\\) matrix, then its last row is zero. The reason for a row to be zero is that there are only \\(M-1\\) segments on which linear gradients have been defined. Effectively the two \\(1/2\\) cells on each end have been neglected.
+If \\(W_x\\) is written as an \\(M \\times M\\) matrix, then its last row is
+zero. The reason for a row to be zero is that there are only \\(M-1\\)
+segments on which linear gradients have been defined. Effectively the two
+\\(1/2\\) cells on each end have been neglected.
 
 So we have:
 
@@ -224,7 +240,8 @@ becomes
 		\text{minimize} \qquad \phi = \|W_d (Gm-d^{obs}) \|^2 + \beta \|W_m (m-m_0)\|^2		
 
 
-Now we only need how to solve this (see notes on the UBCGIF website). Before I reproduce only the basic equation, first, take the gradient:
+Now we only need how to solve this (see notes on the UBCGIF website). Before I
+reproduce only the basic equation, first, take the gradient:
 
 .. math::
 		\frac{\partial \phi}{\partial m} = 	0 = 2G^T W_d^T W_d (Gm-d^{obs}) + 2 \beta W_m^T W_m (m-m_0)	
@@ -240,7 +257,9 @@ and
 .. math::
 		m = (G^T W_d^T W_d G + \beta W_m^T W_m)^{-1} (G^T W_d^T W_d d^{obs} + \beta W_m^T W_m m_0)	
 			
-This is an \\(M \\times M\\) system of equations solved for \\(m\\). Solve this for many values of \\(\\beta\\) and model \\(m\\) that reproduces the data to the desired value. 
+This is an \\(M \\times M\\) system of equations solved for \\(m\\). Solve
+this for many values of \\(\\beta\\) and model \\(m\\) that reproduces the
+data to the desired value.
 
 .. figure:: ./images/tikhonov_curve.jpg
     :align: center	

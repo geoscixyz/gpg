@@ -23,8 +23,11 @@ Output: data
 
 Earth model: 
 
-- physical property values, e.g. density, magnetic susceptibility, conductivity, elastic properties, etc. 
-- parameters (e.g. magnetics \\((x,y,z,m,\\theta,\\rho)\\), \\( (m,\\theta,\\gamma)\\) are the strength and orientation of a dipole)    
+- physical property values, e.g. density, magnetic susceptibility,
+  conductivity, elastic properties, etc.
+
+- parameters (e.g. magnetics \\((x,y,z,m,\\theta,\\rho)\\), \\(
+  (m,\\theta,\\gamma)\\) are the strength and orientation of a dipole)
 
 General notation: 
 
@@ -42,7 +45,8 @@ e.g. gravity:
 .. math::
 		g_z(x,y,z) = -\gamma \int_{vol} \frac{\rho(x',y',z')(z-z')}{( (x-x')^2+(y-y')^2 + (z-z')^2)^{3/2}} dx' dy' dz'
 
-To solve this problem numerically we divided the earth into cells, each with a constant \\(\\rho\\), and wrote the data as
+To solve this problem numerically we divided the earth into cells, each with a
+constant \\(\\rho\\), and wrote the data as
 
 .. math::
 		g_z(x_i, y_i, z_i) = \sum_{j=1}^M G_{ij} \rho_j \qquad i=1,...,N
@@ -81,8 +85,9 @@ In both (1) and (2) we can write the relationship between the data and model as
 	&	\vec{m} \in \mathbb{R}^M \qquad (m_1, ..., m_M) \\
 	&	G \quad \text{is an} \quad N \times M \quad \text{matrix}
 
-In other cases, the general notation \\(d=F(m)\\) can
-t be written as a simple vector-matrix product. As we shall see in DC resistivity, the governing equation is:
+In other cases, the general notation \\(d=F(m)\\) can t be written as a simple
+vector-matrix product. As we shall see in DC resistivity, the governing
+equation is:
 
 .. math::
 		\nabla \cdot \sigma \nabla \phi = - I \delta(r-r_s) \qquad (3)
@@ -99,26 +104,38 @@ Lastly, we can have situations where the earth model is a set of parameters.
 .. figure:: ./images/cube.jpg
     :align: right
 
-Suppose we wanted to find a best fit dipole that generated surfaces magnetic response.
+Suppose we wanted to find a best fit dipole that generated surfaces magnetic
+response.
 
 .. math::
 		& \vec{B} = \frac{\mu_0 (m)}{4 \pi r^3} (3 (\hat{m} \cdot \hat{r}) \hat{r} - \hat{m}) \\ \\
 		& \vec{m} = |m| \hat{m}
 
-The parameters are \\( (x_0, y_0, z_0, \|m\|, \\theta, \\gamma)\\) where the first three define location and the last three are amplitude and orientation of the dipole.	So general representation \\(d = F[m]\\), the model would be the set of parameters.
+The parameters are \\( (x_0, y_0, z_0, \|m\|, \\theta, \\gamma)\\) where the
+first three define location and the last three are amplitude and orientation
+of the dipole.    So general representation \\(d = F[m]\\), the model would be
+the set of parameters.
 
 Remark: The ability to generate data, \\(d\\), given a "model" is called "forward modeling."
 
 Inverse Problem
 ===============
 
-Given observed data \\(d_i\\) with \\(i = 1, ..., N\\) and an estimate of the data errors, and the forward modeling relationship \\(d=F[m]\\) what is the model \\(m\\) that produced the data?
+Given observed data \\(d_i\\) with \\(i = 1, ..., N\\) and an estimate of the
+data errors, and the forward modeling relationship \\(d=F[m]\\) what is the
+model \\(m\\) that produced the data?
 
-There are two solution strategies with \\(N\\) as the number of data and \\(M\\) the number of model parameters.
+There are two solution strategies with \\(N\\) as the number of data and
+\\(M\\) the number of model parameters.
 
-**Case 1**: when \\(N>M\\), that is, when there is more data than unknowns, (e.g., finding the magnetic dipole parameters) We can post the inverse problem as one of the finding the best fitting model
+**Case 1:** when \\(N>M\\), that is, when there is more data than unknowns,
+(e.g., finding the magnetic dipole parameters) We can post the inverse
+problem as one of the finding the best fitting model
 
-**Case 2**: when \\(M>N\\), that is, when there are more unknowns than data, (e.g. 3D inversion of gravity or magnetics). This is a non-unique problem. We need to incorporate additional information about the model into the inversion. 
+**Case 2:** when \\(M>N\\), that is, when there are more unknowns than data,
+(e.g. 3D inversion of gravity or magnetics). This is a non-unique problem.
+We need to incorporate additional information about the model into the
+inversion.
 
 Remark: Case 1, finding a few parameters is simpler, so we will deal with that first. 
 
@@ -128,7 +145,9 @@ Inverse Problem 1: Find a few parameters
 
 Let \\(d_i^{obs}\\) from \\(i=1,...,N\\) be the observed data. 
 
-Let \\(\\sigma_i\\) be an estimated standard deviation for the ith datum. Assume that data errors are Gaussian with zero mean and a standard deviation of \\(\\sigma_c\\)
+Let \\(\\sigma_i\\) be an estimated standard deviation for the ith datum.
+Assume that data errors are Gaussian with zero mean and a standard deviation
+of \\(\\sigma_c\\)
 
 Define the misfit (this is an appropriate misfit function for Gaussian statistics):
 
@@ -153,7 +172,9 @@ Remark: In general, the solution of the problem requires:
 .. figure:: ./images/phi_d_min.jpg
     :align: center
 
-Remarks: final results can depend upon the starting model. Consider minimizing a function of a single variable. In the figure below \\(x_2\\) is a better solution. 
+Remarks: final results can depend upon the starting model. Consider minimizing
+a function of a single variable. In the figure below \\(x_2\\) is a better
+solution.
 
 .. figure:: ./images/sing_var_min.jpg
     :align: center
@@ -167,7 +188,9 @@ Consider the simple case where we write:
 .. math::
 		d = Gm 
 
-with \\(G\\) as an \\(N \\times M\\) matrix. There are infinitely many solutions. For example, consider the case where there are two unknowns \\(m_1\\) and \\(m_2\\) and one datum:
+with \\(G\\) as an \\(N \\times M\\) matrix. There are infinitely many
+solutions. For example, consider the case where there are two unknowns
+\\(m_1\\) and \\(m_2\\) and one datum:
 
 .. figure:: ./images/line.jpg 		
     :align: right
@@ -180,13 +203,17 @@ and the solution is
 .. math::
 		m_2 = 1 - m_1
 
-Any point along the line is a viable solution. To find a particular solution we need to have additional information (a priori knowledge) about the solution. For example, suppose we knew that the earth model was one where \\(\||m\||^2\\) was small. Then let 
+Any point along the line is a viable solution. To find a particular solution
+we need to have additional information (a priori knowledge) about the
+solution. For example, suppose we knew that the earth model was one where
+\\(\||m\||^2\\) was small. Then let
 
 .. math::
 		\phi_m = \||m\||^2 = \sum m_i^2	
 
 
-For our toy example this gives \\(\\phi_m = m_1^2 + m_2^2\\). Question: what is the \\(m\\) that minimize \\(\\phi_m\\) and still fits the data constraint? 
+For our toy example this gives \\(\\phi_m = m_1^2 + m_2^2\\). Question: what
+is the \\(m\\) that minimize \\(\\phi_m\\) and still fits the data constraint?
 
 .. figure:: ./images/toy_solution.jpg 		
     :align: right
@@ -197,16 +224,22 @@ For our toy example this gives \\(\\phi_m = m_1^2 + m_2^2\\). Question: what is 
 
 The answer is \\(m = (m_1, m_2) = (1/\\sqrt{2},1/\\sqrt{2} )\\)
 
-So this is a way to get a single solution that also includes additional information about the earth model. 
+So this is a way to get a single solution that also includes additional
+information about the earth model.
 
 For a general problem in 3D, we introduce a model objective function 
 
 .. math::
 		\phi_m = \alpha_s \int_{vol} (m-m_{ref})^2 dv + \alpha_x \int_{vol} \left(\frac{dm}{dx} \right)^2 dv + \alpha_y \int_{vol} \left(\frac{dm}{dy} \right)^2 dv + \alpha_z \int_{vol} \left(\frac{dm}{dz} \right)^2 dv
 
-The first term makes a solution close to a reference model (which can be zero); the second term minimizes structure in the x-direction, the third term in the y-direction, and the fourth term in the z-direction. The parameters \\(\\alpha_s, \\alpha_x, \\alpha_y, \\alpha_z\\) are constants that control the relative wighting of the different penalty terms. 
+The first term makes a solution close to a reference model (which can be
+zero); the second term minimizes structure in the x-direction, the third term
+in the y-direction, and the fourth term in the z-direction. The parameters
+\\(\\alpha_s, \\alpha_x, \\alpha_y, \\alpha_z\\) are constants that control
+the relative wighting of the different penalty terms.
 
-Again, to solve the problem numerically we need to divide the earth into cells (as done in the forward modeling)
+Again, to solve the problem numerically we need to divide the earth into cells
+(as done in the forward modeling)
 
 .. math::
 	 \phi_m & = \alpha_s \|W_s (m-m_{ref}) \|^2 + \alpha_x \|W_x (m-m_{ref}) \|^2  + \alpha_y \|W_y (m-m_{ref}) \|^2 +\alpha_z \|W_z (m-m_{ref}) \|^2  \\
@@ -215,18 +248,23 @@ Again, to solve the problem numerically we need to divide the earth into cells (
 
 where \\(W_m\\) is an \\(M \\times M\\) matrix (\\(W_s, W_x, W_y,W_z\\)	are alos matrices). 
 
-So our prior knowledge about what kind of solution we want is encoded into \\(\\phi_m\\). This is extremely important. If we followed the ideas in the toy example we would be led to formulate our problem as
+So our prior knowledge about what kind of solution we want is encoded into
+\\(\\phi_m\\). This is extremely important. If we followed the ideas in the
+toy example we would be led to formulate our problem as
 
 .. math::
 		& \text{minimize } \phi_m \|W_m(m-m_{ref})\|^2 \\[0.4em]
 		& \text{subject to } d^{obs} = F[m]
 
-But the observation \\(d^{obs}\\) have errors. We don't want to find a solution that fits the inaccurate data exactly (then we would be guaranteed to have the wrong model). Rather, we define the misfit as
+But the observation \\(d^{obs}\\) have errors. We don't want to find a
+solution that fits the inaccurate data exactly (then we would be guaranteed to
+have the wrong model). Rather, we define the misfit as
 
 .. math::
 		\phi_d = \sum \left( \frac{d_i^{obs} - F[m]}{\sigma_i}\right)^2
 
-If the data are contaminated with Gaussian error then, if are at the solution \\(m\\), 		
+If the data are contaminated with Gaussian error then, if are at the solution
+\\(m\\),
 
 .. figure:: ./images/obs_pred.jpg	
     :align: right
@@ -236,18 +274,24 @@ Solve the inverse problem by
 .. math::
 		\text{minimize } \phi = \phi_d + \beta \phi_m
 
-where \\(\\beta \\in [0,\\infty)\\) is a regularization parameter. As \\(\\beta\\) changes from zero to infinity		
+where \\(\\beta \\in [0,\\infty)\\) is a regularization parameter. As
+\\(\\beta\\) changes from zero to infinity
 
 .. figure:: ./images/phi_d_phi_m.jpg	
     :align: center
 
-As \\(\\beta \\rightarrow 0\\), min \\(\\phi = \\phi_d \\rightarrow\\) small misfit (\\(\\phi_d\\)), large model norm (\\(\\phi_m\\)).
+As \\(\\beta \\rightarrow 0\\), min \\(\\phi = \\phi_d \\rightarrow\\) small
+misfit (\\(\\phi_d\\)), large model norm (\\(\\phi_m\\)).
 
-As \\(\\beta \\rightarrow \\infty\\), min \\(\\phi = \\phi_m \\rightarrow\\) small model norm (\\(\\phi_m=0\\)), large misfit (\\(\\phi_d\\)).
+As \\(\\beta \\rightarrow \\infty\\), min \\(\\phi = \\phi_m \\rightarrow\\)
+small model norm (\\(\\phi_m=0\\)), large misfit (\\(\\phi_d\\)).
 
 Putting these together yields the Tikhonov curve
 
 .. figure:: ./images/tikhonov.jpg	
     :align: center
 
-When we minimize \\(\\phi = \\phi_d + \\beta \\phi_m\\) every value of \\(\\beta\\) gives a difference solution. We can experiment and find that value of \\(\\beta\\) for which the misfit is equal to some desired target level \\(\\phi_d^*\\).
+When we minimize \\(\\phi = \\phi_d + \\beta \\phi_m\\) every value of
+\\(\\beta\\) gives a difference solution. We can experiment and find that
+value of \\(\\beta\\) for which the misfit is equal to some desired target
+level \\(\\phi_d^*\\).
