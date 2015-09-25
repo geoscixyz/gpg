@@ -1,12 +1,12 @@
 .. _electromagnetics_fk_domain_systems:
 
-Frequency Domain Systems
+Frequency-domain Systems
 ************************
 
 Nature of the total field
 =========================
 
-Consider a frequency domain source. This could be a loop on the ground or in
+Consider a frequency-domain source. This could be a loop on the ground or in
 the air.
 
 .. figure:: ./images/Hp_Hs_schematic.jpg
@@ -14,7 +14,7 @@ the air.
 	:scale: 100 %
 
 
-1. The primary field is harmonic \\( \\cos(\\omega t) \\). At the receiver the
+1. The primary field is harmonic \\( \\cos(\\omega t) \\). At the receiver, the
    primary field can be written as \\( \\vec{H}_p \\cos(\\omega t) \\).
 
 2. The currents induced in the conductor will also be harmonic with the same
@@ -23,8 +23,7 @@ the air.
    frequency dependence and hence can be written as \\( \\vec{H}_s \\cos(\\omega
    t + \\psi) \\), where \\(\\psi\\) is a phase angle.
 
-At the receiver we observe the sun of the primary and secondary fields which
-is
+At the receiver, we observe the sum of the primary and secondary fields, written as:
 
 .. math::
 		\vec{H}_{total} = \vec{H}_p \cos (\omega t) + \vec{H}_s \cos (\omega t + \psi)
@@ -32,14 +31,14 @@ is
 The Phase of the Secondary Field
 ================================
 
-If the primary field is harmonic with frequency \\(\\omega\\) then the
+If the primary field is harmonic with frequency \\(\\omega\\), then the
 secondary field is also harmonic. The secondary field will have a different
 phase than the primary; it will lag the primary field by angles between 90°
 and 180°. The amount of phase difference is diagnostic of the conductivity of
 the body.
 
 1. The primary current varies as \\(\\cos(\\omega t)\\) and hence the primary
-   magnetic field also has this same dependence. (The primary field is in-phase
+   magnetic field also has this same dependence (The primary field is in-phase
    with the current).
 
 2. At the conductive body the EMF (induced voltage) is
@@ -47,32 +46,32 @@ the body.
 .. math::
 		\mathcal{E} = - \frac{d \phi_B}{dt}
 
-If the primary current varies as \\(\\cos(\\omega t)\\)  then the flux,
+If the primary current varies as \\(\\cos(\\omega t)\\), then the flux
 \\(\\phi_B\\) also varies as \\(\\cos(\\omega t)\\), while \\( \\mathcal{E}\\)
 varies with \\(\\sin(\\omega t) \\). That is, the EMF lags the primary by
 \\(\\pi/2\\).
 
 3. The body in which the induction is occurring can be represented as a
-   circuit element with self-inductance \\(L\\) and a resistance \\(R\\). Through
+   circuit element with self-inductance \\(L\\) and resistance \\(R\\). Through
    the laws of electromagnetic induction, the time varying currents that are set
    up in the conductor suffer a further lag
 
 .. math::
 		\phi = \tan^{-1} \left( \frac{\omega L}{R} \right)
 
-4. As a result the secondary field lags the primary by a total amount
+4. As a result, the secondary field lags the primary by a total amount
 
 .. math::
 		\psi = \frac{\pi}{2} + \tan^{-1} \left( \frac{\omega L}{R} \right)
 
 Note:
 
-1. For a resistive body (or for very low frequency) \\(\\phi \\rightarrow 0\\)
+1. For a resistive body (or for very low frequency), \\(\\phi \\rightarrow 0\\)
    so the secondary field is only \\(\\pi/2\\) out of phase with the primary
    field. The response from a weak conductor will be in the out-of-phase
    component of the measured signal.
 
-2. For very conductive bodies (or for very high frequency) the secondary field
+2. For very conductive bodies (or for very high frequency), the secondary field
    becomes nearly \\(\\pi\\)  (180°) out of phase with the primary. Since
    \\(\\cos(\\omega t + \\pi ) = -\cos(\\omega t)\\), the response due to a good
    conductor will be in phase with the primary but reversed in sign.
