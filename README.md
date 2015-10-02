@@ -1,6 +1,8 @@
 GPG: Geophysics for Practicing Geoscientists
 ============================================
 
+[![Build Status](https://travis-ci.org/ubcgif/gpg.svg?branch=master)](https://travis-ci.org/ubcgif/gpg)
+
 A learning resource for applied geophysics.
 
 Originally created by Francis H.M. Jones and Douglas W. Oldenburg.
@@ -25,7 +27,7 @@ Here are a couple resources on sphinx and reStructured Text:
 Example of how to reference a Figure.
 
 - Insert and name your Figure
-```
+
  .. figure:: ./ExampleImage.png
 	:align: center
 	:scale: 110% 
