@@ -51,6 +51,17 @@ master_doc = 'index'
 # General information about the project.
 project = u'Geophysics for Practicing Geoscientists'
 copyright = u'2014-2015, UBCGIF'
+# copyright = """
+# <a rel="license" 
+#    href="http://creativecommons.org/licenses/by/4.0/"
+#    style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+#    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+#    </a>
+#    2015, UBCGIF.<br />
+#    Except where noted, this work is licensed under a <br />
+#    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
+# """
+# author = u'UBCGIF'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
