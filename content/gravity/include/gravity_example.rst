@@ -20,13 +20,13 @@ detect the anomaly expected from the formations known to be present. Figure 1a
 is the resulting Bouguer anomaly map, with the profile discussed below shown
 as A-A'.
 
-.. figure:: ./images/gravmc2_f1a.gif
+.. figure:: ../images/gravmc2_f1a.gif
     :align: center
     :scale: 70%    
 
     Figure 1a. Bouguer gravity map of the area of interest. Contour interval is 1 mGal. l. 
 
-.. figure:: ./images/gravmc2_f1b.gif
+.. figure:: ../images/gravmc2_f1b.gif
     :align: center
     :scale: 70%
 
@@ -78,7 +78,7 @@ oil field. Several points are worth noting:
   There are undoubtedly other structures that could produce similar
   gravitational response at the surface
 
- .. figure:: ./images/gravmc2_f2.gif
+ .. figure:: ../images/gravmc2_f2.gif
     :align: center
     :scale: 60%  
 
