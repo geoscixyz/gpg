@@ -34,7 +34,7 @@ earth must be known in order to invert data to recover chargeability.
 
 
 What can be detected?
-=============================
+=====================
 
 The materials that are most chargeable include sulfide minerals (both massive
 and disseminated), clay-rich materials, and graphite. However, the
