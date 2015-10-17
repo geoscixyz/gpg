@@ -3,3 +3,4 @@
 
 
 - Lindsey Heagy, (`@lheagy <https://github.com/lheagy/>`_)
+- Rowan Cockett, (`@rowanc1 <https://github.com/rowanc1/>`_)
