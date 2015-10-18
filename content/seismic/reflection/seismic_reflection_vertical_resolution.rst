@@ -19,7 +19,7 @@ frequency and the velocity of the materials. Recall that \\(\\lambda = vt\\).
 
 	**or** 
 
-.. figure:: ./images/pulse1.gif
+.. figure:: ./images/pulse2.gif
 	:align: center
 	:scale: 100 %
 
