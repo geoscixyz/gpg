@@ -4,7 +4,7 @@ Principles of Electromagnetic (EM) Induction
 ********************************************
 
 Consider the goal of using an inductive EM source to locate a conductive body
-buried in a relatively non=conducting (or resistive) host material. The basic
+buried in a relatively non-conducting (or resistive) host material. The basic
 picture is shown below
 
 .. figure:: ./images/Tx_Rx_schematic.jpg
