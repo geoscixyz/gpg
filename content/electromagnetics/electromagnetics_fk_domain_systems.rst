@@ -472,7 +472,7 @@ surface given below
 The apparent conductivity would be
 
 .. math::
-		\sigma_a &= \int_{0}^{h} \sigma_1 \phi_V (z) dz	+ \int_{h}^{\infty} \sigma_2  \phi_H (z) dz \\[0.8em]
+		\sigma_a &= \int_{0}^{h} \sigma_1 \phi_V (z) dz	+ \int_{h}^{\infty} \sigma_2  \phi_V (z) dz \\[0.8em]
 				 &= \sigma_1 (1-R_V(h)) + \sigma_2 R_V(h)	
 
 Either the curves shown previously or the following formulae are therefore useful:
