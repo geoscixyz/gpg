@@ -3,7 +3,11 @@
 Responses from a Conductor in Free Space
 ****************************************
 
-The above plots, and the basic understanding of the different coupling between
+.. figure:: ./images/Hp_Hs_schematic.jpg
+    :align: center
+    :scale: 80 %
+
+The basic understanding of the different coupling between
 the source and receiver that is due to geometry, allows us to sketch the
 expected responses that arise from a frequency domain horizontal loop survey
 taken over a conductor which is buried in a resistive host. This is a two-

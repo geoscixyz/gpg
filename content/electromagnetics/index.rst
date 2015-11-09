@@ -21,4 +21,3 @@ Contents:
    conductive_host
    primary_field_in_the_earth
    dual_loop_systems
-   depth_of_penetration
