@@ -14,7 +14,7 @@ Contents:
 .. toctree::
    :maxdepth: 1
  
-   electromagnetics_fields
+   electromagnetic_fields
    principles_of_em_induction
    frequency_domain_data
    responses_from_a_conductor_in_free_space
