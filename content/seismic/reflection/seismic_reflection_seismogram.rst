@@ -20,8 +20,7 @@ The procedure for generating the ideal seismogram is as follows:
 
 (a) Begin with a geologic section.
 
-(b) Compute the acoustic impedance as a function of depth. In practice,
-    (combine density and velocity logs to do this.)
+(b) Compute the acoustic impedance as a function of depth by taking the product of the density and velocity logs
 
 (c) Compute the reflection (and transmission) coefficients as a function of
     depth. This yields a reflection log.
