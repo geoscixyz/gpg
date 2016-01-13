@@ -1,5 +1,5 @@
 - Doug Oldenburg, (`@dougoldenburg <https://github.com/dougoldenburg/>`_)
-- Francis Jones,  
+- Francis Jones,  (`@fhmjones <https://github.com/fhmjones/>`_)
 
 
 - Lindsey Heagy, (`@lheagy <https://github.com/lheagy/>`_)
