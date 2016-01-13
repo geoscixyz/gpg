@@ -50,7 +50,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Geophysics for Practicing Geoscientists'
-copyright = u'2014-2015, UBCGIF'
+copyright = u'2014-2016, UBCGIF'
 # copyright = """
 # <a rel="license" 
 #    href="http://creativecommons.org/licenses/by/4.0/"
