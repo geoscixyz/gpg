@@ -47,8 +47,8 @@ transmitter, receiver and the conductive body. In practice we measure both an
 in-phase and an out-of-phase component. Each of these curves will look like
 the basic curve (given above). We need only establish relative amplitude. From
 the general response curve we find that the in-phase (or real component) is
-larger than the out-of-phase (imaginary) component when \\(\\omega \\sigma \\)
-(or \\(\\omega L / R\\)) is large.
+larger than the out-of-phase (imaginary) component when :math:`\omega \sigma`
+(or :math:`\omega L / R`) is large.
 
 Below we plot the responses for a horizontal loop survey taken over a vertical
 conductive plate in which:
@@ -60,7 +60,7 @@ conductive plate in which:
 5.  conductivity-thickness product = 1.0
 
 Because the body is conductive and the frequency of the survey is high, the
-value of \\(\\omega L / R\\) is large and the in-phase response is larger than
+value of :math:`\omega L / R` is large and the in-phase response is larger than
 the quadrature response.
 
 .. figure:: ./images/dipole_response.jpg

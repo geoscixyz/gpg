@@ -8,7 +8,7 @@ The vertical resolution of a seismic data sets describes how thin a layer can
 be before the reflections from its top and its bottom become
 indistinguishable. This depends upon the shape of the seismic source wavelet.
 The shape, or more particularly the signal wavelength depends upon the
-frequency and the velocity of the materials. Recall that \\(\\lambda = vt\\).
+frequency and the velocity of the materials. Recall that :math:`\lambda = vt`.
 
 .. <<place holder>> Here is a placeholder for two items: (1) seismic source waveforms applet and (2) a synthetic seismogram applet
 

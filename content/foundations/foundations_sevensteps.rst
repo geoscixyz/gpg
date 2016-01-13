@@ -16,7 +16,6 @@ effectively carried out by following a seven-step framework. Careful thought
 and due dilligence at each step is important to achieve a final outcome.
 
 
-
 1. **Setup:** *What is the Problem?*
    
    Establish the geoscience objectives, consider conventional practice, and

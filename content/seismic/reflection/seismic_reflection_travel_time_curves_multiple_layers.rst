@@ -11,7 +11,7 @@ line and hence the travel times are affected. It is observed that for small
 offsets, the travel time curve is still approximately hyperbolic, but the
 velocity, which controls the shape of the curve, is an "average" velocity
 determined from the velocities of all the layers above the reflector. The
-velocity is called the RMS (Root Mean Square) velocity, \\(v_{rms}\\).
+velocity is called the RMS (Root Mean Square) velocity, :math:`v_{rms}`.
 
 .. figure:: ./images/ray_in_multiple_layers.gif
 	:align: left
@@ -29,7 +29,7 @@ Note that the divergence from the hyperbolic travel-time curve for a
 homogeneous overburden of velocity Vrms increases with offset.
 
 As outlined in the figure above, the reflection curve for small offsets is
-still like a hyperbola, but the associated velocity is  \\(v_{rms}\\), not a
+still like a hyperbola, but the associated velocity is  :math:`v_{rms}`, not a
 true interval velocity.
 
 .. figure:: ./images/travel_t_hyperbolas.gif
@@ -42,7 +42,7 @@ For each hyperbola:
  		  t &\approx \frac{\left(x^2 + 4z_n^2 \right)^2 } {v_n^{rms}} 
 
 By fitting hyperbolas to each reflection event one can obtain
-\\(t_n,v_n^{rms}\\) for n = 1, 2, ... The interval velocity and layer
+:math:`t_n,v_n^{rms}` for n = 1, 2, ... The interval velocity and layer
 thickness of each layer can be found using the formulae below:
 
 .. math::
@@ -52,14 +52,14 @@ thickness of each layer can be found using the formulae below:
  		  \Delta z = z_n - z_{n-1} = v_n \left( \frac{t_n - t_{n-1}}{2} \right)
 
 
-These formulae for the interval velocity and thickness of the \\(n^{th}\\)
-layer are directly obtainable from the definition of \\(v_n^{rms}\\) given
-above. The RMS velocity for the \\(n^{th}\\) layer is given by:
+These formulae for the interval velocity and thickness of the :math:`n^{th}`
+layer are directly obtainable from the definition of :math:`v_n^{rms}` given
+above. The RMS velocity for the :math:`n^{th}` layer is given by:
 
 
 .. math::
  		  v_n^{rms} = \left( \frac{\sum_{i=1}^{n} v_i^2 \tau_i}{\sum_{i=1}^{n} \tau_i}	 \right)
 
-where \\(v_i\\) is the velocity of the \\( \\) \\(i^{th}\\) layer, and
-\\(\\tau_i\\) is the one-way travel time through the \\( \\) \\(i^{th}\\)
+where :math:`v_i` is the velocity of the :math:`` :math:`i^{th}` layer, and
+:math:`\tau_i` is the one-way travel time through the :math:`` :math:`i^{th}`
 layer.

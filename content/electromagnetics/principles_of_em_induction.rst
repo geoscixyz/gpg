@@ -15,26 +15,26 @@ Transmitter
 ===========
 
 The transmitter may be a loop of wire connected to a generator which outputs a
-sinusoidal current. For examples, the current is \\(I_0 \\cos(\\omega t) \\)
-where \\( \\omega = 2 \\pi f\\).
+sinusoidal current. For examples, the current is :math:`I_0 \cos(\omega t)`
+where :math:`\omega = 2 \pi f`.
 
 Primary EM field
 ================
 
 The current in the transmitter loop produces a magnetic field. In air
 (sometimes referred to as free space) this magnetic field travels at the speed
-of light \\(c = 3.0 \\times 10^8\\) m/s and therefore reaches the receiver
+of light :math:`c = 3.0 \times 10^8` m/s and therefore reaches the receiver
 "instantaneously." The magnetic field observed at the receiver is called the
 "primary field." Mathematically, the magnetic field would be written as
-\\(\\vec{H}_p = \\vec{H}_0 \\cos(\\omega t) \\). The direction of the field
+:math:`\vec{H}_p = \vec{H}_0 \cos(\omega t)`. The direction of the field
 would depend upon the orientation of the wire. When we discussed magnetism we
 showed that the magnetic field from a loop source was identical to that of a
 permanent bar magnet at the center of the loop provided that the observer is
-"far" from the loop. That is, this approximation holds when \\( r\\, >>\\,
-a\\) where \\(r\\) is the distance from the observer to the center of the loop
-and \\(a\\) is the radius of the loop. The magnetic moment from a loop is
-\\(\\vec{m} = IA \\hat{n}\\), where \\(I\\) is the current in the loop,
-\\(A\\) is its area, and \\(\\hat{n}\\) is the unit vector perpendicular to
+"far" from the loop. That is, this approximation holds when :math:`r\, >>\,
+a` where :math:`r` is the distance from the observer to the center of the loop
+and :math:`a` is the radius of the loop. The magnetic moment from a loop is
+:math:`\vec{m} = IA \hat{n}`, where :math:`I` is the current in the loop,
+:math:`A` is its area, and :math:`\hat{n}` is the unit vector perpendicular to
 the plane of the loop.
 
 Receiver
@@ -56,13 +56,13 @@ currents is governed by Ohm's law:
 .. math::
         \vec{J} = \sigma \vec{E}
 
-where \\(\\vec{J}\\) is current density in \\(A/m^2\\) (amperes per meter
-squared) and \\(\\vec{E}\\) is the electric field with units of Volts/meter.
+where :math:`\vec{J}` is current density in :math:`A/m^2` (amperes per meter
+squared) and :math:`\vec{E}` is the electric field with units of Volts/meter.
 
 The currents in the body produce their own magnetic field (This is known as
 Ampere's Law or Biot Savart Law). These currents will also vary with time and
 their magnetic field can be measured at the transmitter. We refer to these
-fields as the "secondary" magnetic field, \\(\\vec{H_s}\\).
+fields as the "secondary" magnetic field, :math:`\vec{H_s}`.
 
 **Observation**: The receiver measures the sum of the primary and secondary
 fields or it measures the associated voltages that are induced in a coil
@@ -74,8 +74,7 @@ Summary
 1. A time varying current in a transmitter produces a time varying magnetic
    field which impinges upon a conductor in the ground. 
 2. The changing flux generates and electric field everywhere. 
-3. The electric field generates currents via Ohm's Law, \\( \\vec{J} = \\sigma 
-   \\vec{E} \\). 
+3. The electric field generates currents via Ohm's Law, :math:`\vec{J} = \sigma \vec{E}` . 
 4. The currents produce their own magnetic fields.  
 5. The receiver measures the sum of the primary and secondary fields, 
    (or it measures associated voltages.)

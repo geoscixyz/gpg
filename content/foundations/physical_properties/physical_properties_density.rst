@@ -19,10 +19,10 @@ V.
 	\rho = \frac{m}{V} \quad &&\textrm{Volumetric mass density,}\ (g/cm^3)\ or \ (kg/m^3)
 
 
-Densities of geologic materials vary from \\(880 ~\\text{kg/m}^3\\) (ice) (or
-\\(0\\) for air) to over \\(8000 ~{\\text{kg/m}}^3\\) for some rare minerals.
-Rocks are generally between \\(1600 ~\\text{kg/m}^3\\) (sediments) and \\(3500
-~\\text{kg/m}^3\\) (gabbro). Table 2.1 from PV Sharma is reproduced below.
+Densities of geologic materials vary from :math:`880 ~\text{kg/m}^3` (ice) (or
+:math:`0` for air) to over :math:`8000 ~{\text{kg/m}}^3` for some rare minerals.
+Rocks are generally between :math:`1600 ~\text{kg/m}^3` (sediments) and :math:`3500
+~\text{kg/m}^3` (gabbro). Table 2.1 from PV Sharma is reproduced below.
 
 .. figure:: ./images/gravity_table.gif
 
@@ -34,7 +34,7 @@ but your mass (and density) is the same wherever you are.
 
 Specific gravity is also often used and is defined as a relative density in
 comparaison with a reference substance (usually water, whose density is
-approximated to \\(1 ~\\text{g/cm}^3\\).
+approximated to :math:`1 ~\text{g/cm}^3`.
 
 .. math::
 	SP=\frac{\rho}{\rho_{{\omega}}}

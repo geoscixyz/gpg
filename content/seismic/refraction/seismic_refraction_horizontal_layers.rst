@@ -31,18 +31,18 @@ know the rules of propagation, i.e., energy travels in straight lines in a
 uniform medium and refracts according to Snell's law when it enters a medium
 with different velocity. We must also be able to calculate the lengths of the
 ray path in each layer and along the refractor. Travel-time curves are graphs
-showing the travel-time, \\(t\\), (length of time for a seismic signal to
+showing the travel-time, :math:`t`, (length of time for a seismic signal to
 travel from the source to the receiver along which ever path is being
-considered) versus distance between the source and receiver, \\(x\\).
+considered) versus distance between the source and receiver, :math:`x`.
 
 One layer over basement - the horizontal interface
 ==================================================
 
 We need to identify specific ray paths and their associated travel times.
-Consider an earth composed of a uniform layer with velocity \\(v_1\\) and
-thickness \\(z\\) overlying a medium with velocity \\(v_2\\). Let
-\\(\\theta\\) be the critical angle and x denoted the distance between the
-source at \\(A\\) and a receiver at \\(D\\).  Let \\(x_c\\) denote the
+Consider an earth composed of a uniform layer with velocity :math:`v_1` and
+thickness :math:`z` overlying a medium with velocity :math:`v_2`. Let
+:math:`\theta` be the critical angle and x denoted the distance between the
+source at :math:`A` and a receiver at :math:`D`.  Let :math:`x_c` denote the
 critical distance.
 
 .. figure:: ./images/refracHzGeometry.gif
@@ -64,14 +64,14 @@ or
 	\tan\theta = \frac{x_c}{2z} \quad \cos\theta = \frac{z}{l}
 
 The travel time is the cumulative time for the wave to traverse the path
-\\(ABCD\\). This is \\(t=t_{AB}+t_{BC}+t_{CD}\\).
+:math:`ABCD`. This is :math:`t=t_{AB}+t_{BC}+t_{CD}`.
 
 
-Generally time = distance / velocity, so we can write \\(t_{AB} = L/v_1 =
-(z/cos\\theta) / v1\\), (using \\(L\\) from just above).
+Generally time = distance / velocity, so we can write :math:`t_{AB} = L/v_1 =
+(z/cos\theta) / v1`, (using :math:`L` from just above).
 
-Also, we can note that \\(t_{AB} = t_{CD}\\) and the distance \\(BC\\) is
-\\(x-x_c\\). So we can now state that \\(t=2t_{AB}+t_{BC}\\) , or
+Also, we can note that :math:`t_{AB} = t_{CD}` and the distance :math:`BC` is
+:math:`x-x_c`. So we can now state that :math:`t=2t_{AB}+t_{BC}` , or
 
 .. math::
 	t = \frac{2z}{v_1\cos\theta} + \frac{x-2z\tan\theta}{v_2}
@@ -82,7 +82,7 @@ Also, we can note that \\(t_{AB} = t_{CD}\\) and the distance \\(BC\\) is
 		:align: center
 
 It is convenient to rearrange this slightly differently. Using the definition
-for critical angle  \\(\sin\\theta=v_1/v_2\\), we can make the "velocity
+for critical angle  :math:`\sin\theta=v_1/v_2`, we can make the "velocity
 triangle", so expressions for the angle arise directly from simple
 trigonometry:
 
@@ -93,16 +93,16 @@ trigonometry:
 	\tan\theta = \frac{v_1}{\sqrt{v_2^2-v_1^2}}
 
 
-Use these two relations for \\(\\cos\\) and \\(\\tan\\) in the expression for
+Use these two relations for :math:`\cos` and :math:`\tan` in the expression for
 t above to obtain a useful set of relations.
 
 .. math ::
-	t = & \frac{x}{v_2} + \frac{2z\sqrt{v_2^2-v_1^2}}{v_1v_2} \\
+	t = & \frac{x}{v_2} + \frac{2z\sqrt{v_2^2-v_1^2}}{v_1v_2} \
 	  = & \frac{x}{v_2} + t_i
 
 This simple relation says that the travel time curve is a straight line which
-has a slope of \\(1/v_2\\) and an intercept of \\(t_i\\). This intercept time
-is the time where the refraction line extends to intercept the \\(y\\)-axis
+has a slope of :math:`1/v_2` and an intercept of :math:`t_i`. This intercept time
+is the time where the refraction line extends to intercept the :math:`y`-axis
 **above the source position**. This is not a real "time" - it is derived from
 the graph.
 
@@ -113,9 +113,9 @@ The velocities of the seismic layers and the layer thickness are obtained in the
 
 1. Plot the times of first arrivals on an time-offset plot ("offset" is distance between source and geophone).
 
-2. The direct arrivals are observed to lie along a straight line joining the origin. The slope of this line is \\(1/v_1\\), giving the velocity of the upper layer.
+2. The direct arrivals are observed to lie along a straight line joining the origin. The slope of this line is :math:`1/v_1`, giving the velocity of the upper layer.
 
-3. The refracted arrivals appear as a straight line with smaller slope equal to \\(1/v_2\\), giving the velocity of the lower layer.
+3. The refracted arrivals appear as a straight line with smaller slope equal to :math:`1/v_2`, giving the velocity of the lower layer.
 
 4. For the refracted wave, this intercept time is
 
@@ -128,7 +128,7 @@ so
 	z = \frac{t_iv_1v_2}{2\sqrt{v_2^2-v_1^2}}
 
 
-We therefore can obtain all three useful parameters about the earth, \\((v_1, z, v_2)\\).
+We therefore can obtain all three useful parameters about the earth, :math:`(v_1, z, v_2)`.
 
 There is another useful point that is observable from the first arrival
 travel-time plot. We can often discern the crossover distance. Since this is
@@ -144,8 +144,8 @@ Thus
 	x_{\text{cross}}\left(\frac{1}{v_1} - \frac{1}{v_2}\right) = t_i
 
 .. math::
-	x_{\text{cross}} &= \left(\frac{v_1v_2}{v_2-v_1}\right)t_i \\
-	&= \frac{v_1v_2}{v_2-v_1}\frac{2z}{v_1v_2}\sqrt{v_2^2-v_1^2} \\
+	x_{\text{cross}} &= \left(\frac{v_1v_2}{v_2-v_1}\right)t_i \
+	&= \frac{v_1v_2}{v_2-v_1}\frac{2z}{v_1v_2}\sqrt{v_2^2-v_1^2} \
 	&= 2z\sqrt{\frac{v_2+v_1}{v_2-v_1}}
 
 This can be used as a consistency check, or it can be used to compute one of
@@ -175,7 +175,7 @@ Using arguments that are entirely analagous to the two layer case (above) the
 travel time for the wave refracted at the top of layer three is given by
 
 .. math::
-	t &= \frac{x}{v_3} + \frac{2 z_1 \cos\theta_1}{v_1} + \frac{2z_2\cos\theta_2}{v_2} \\
+	t &= \frac{x}{v_3} + \frac{2 z_1 \cos\theta_1}{v_1} + \frac{2z_2\cos\theta_2}{v_2} \
 	&= \frac{x}{v_3} + t_{i1} + t_{i2}
 
 All quantities are defined in the diagrams, and the angles are
@@ -183,10 +183,10 @@ All quantities are defined in the diagrams, and the angles are
 .. math::
 	\theta_1 = \sin^{-1}\left(\frac{v_1}{v_3}\right) \quad \text{and} \quad \theta_2 = \sin^{-1}\left(\frac{v_2}{v_3}\right)
 
-Note that \\(\\theta_2\\) is a critical angle while \\(\\theta_1\\) is not.
-You can prove the relation for  \\(\\theta_1\\) yourself by using Snell's law
+Note that :math:`\theta_2` is a critical angle while :math:`\theta_1` is not.
+You can prove the relation for  :math:`\theta_1` yourself by using Snell's law
 at the two interfaces, and recalling that the angle of the ray coming from
-point \\(B\\) is the same as the angle arriving at point \\(C\\). The straight
+point :math:`B` is the same as the angle arriving at point :math:`C`. The straight
 line that corresponds to an individual refractor provides a velocity (from its
 slope) and a thickness (from the intercept). Thus the information on the above
 travel-time plot allows us to recover all three velocities and the thickness

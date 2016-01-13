@@ -32,7 +32,7 @@ be removed using bandpass filtering in the frequency domain.
 	:scale: 120 %
 
 One can apply a frequency filter to remove all signals that have a frequency
-high than \\(f_H\\) and all frequencies lower than \\(f_L\\).
+high than :math:`f_H` and all frequencies lower than :math:`f_L`.
 
 .. raw:: html
     :file: filtering.html
@@ -79,8 +79,8 @@ This type of processing can remove some multiples from a seismic section.
 Reverberation (multiples of the ocean-bottom reflection) in marine surveys is
 a common example of this type of problem.
 
-3. Velocity or \\(f\\mbox{-}k\\) filtering
-------------------------------------------
+3. Velocity or :math:`f\mbox{-}k` filtering
+-------------------------------------------
 
 In shot gathers or on final sections we often have events that appear with a
 specific slope. Notice the ground roll, in the CSP gather below left. These
@@ -93,7 +93,7 @@ They can be isolated by taking a 2-D Fourier transform. In that domain the
 ground roll is located in a fan-like region. By zeroing the Fourier transform
 values in this fan and then inverse Fourier transforming, we remove the ground
 roll. The diagram below right sketches these fan-shaped regions of an
-\\(f\\mbox{-}k\\) plot for a typical shot gather which contains reflections
+:math:`f\mbox{-}k` plot for a typical shot gather which contains reflections
 events and noise.
 
 
@@ -108,9 +108,9 @@ events and noise.
 
 .. <<editorial comment>> Original GPG has a "click to enlarge" feature for CSP_w_ground_roll_2.gif. 
 
-The procedure for carrying out \\(f\\mbox{-}k\\) filtering is provided in the
+The procedure for carrying out :math:`f\mbox{-}k` filtering is provided in the
 flow chart, below left. The final diagram shows four shallow marine records
-before and after \\(f\\mbox{-}k\\) filtering to remove coherent linear noise.
+before and after :math:`f\mbox{-}k` filtering to remove coherent linear noise.
 Hyperbolic reflections are observed after removal of the noise.
 
 

@@ -51,11 +51,11 @@ location on (or above or within) Earth can be described in either of three
 ways (refer to the next figure below):
 
 
- B = (\\(B_x\\), \\(B_y\\), \\(B_z\\)) = (X, Y, Z) in the figure. These are Cartesian coordinates with X pointing to true (geographic) north, Y pointing east and Z pointing vertically down.
+ B = (:math:`B_x`, :math:`B_y`, :math:`B_z`) = (X, Y, Z) in the figure. These are Cartesian coordinates with X pointing to true (geographic) north, Y pointing east and Z pointing vertically down.
 
- B = (\\(B_h\\) , \\(B_z\\) , \\(D\\)) = (H, Z, D) in the figure. These are horizontal and vertical components, plus declination (angle with respect to true north). 
+ B = (:math:`B_h` , :math:`B_z` , :math:`D`) = (H, Z, D) in the figure. These are horizontal and vertical components, plus declination (angle with respect to true north). 
     
- B = (\\(D\\), \\(I\\), \\(\\mid B\\mid\\) ). These are the commonly used polar coordinates which include two angles and a magnitude: D=declination, I=inclination, and \\(\\mid B \\mid \\)=total field strength.
+ B = (:math:`D`, :math:`I`, :math:`\mid B\mid` ). These are the commonly used polar coordinates which include two angles and a magnitude: D=declination, I=inclination, and :math:`\mid B \mid` =total field strength.
 
 
 In 2004, Earth's north magnetic pole was close to Melville Island at
@@ -117,7 +117,7 @@ primarily to currents in the ionized upper atmosphere.
   action on the ionosphere and magnetosphere. The image shows an artist's
   rendition of the charged particles interacting with Earth's magnetic field.
   An overview of Earth's magnetic field (with good images, graphs, etc.) can
-  be found on the British Geological Survey's `geomagnetics website`_.
+  be found on the British Geological Survey's`geomagnetics website`_.
 
 .. _geomagnetics website: http://www.geomag.bgs.ac.uk/
 
@@ -144,7 +144,7 @@ minutes.
 
 The Geological Survey of Canada has a web page, which can provide graphs of
 diurnal variations observed at any of 11 magnetic observatories in Canada, for
-any day in the most recent 3 years. Find this facility by starting at the `GSC
+any day in the most recent 3 years. Find this facility by starting at the`GSC
 Geomagnetic data page`_. This resource is also a link to other information
 about magnetics.
 

@@ -148,7 +148,7 @@ efficient when the survey site is essentially flat and ground is relatively
 soft. Other similar systems used both for land and marine use use capacitively
 coupled electrodes rather than electrodes that make galvanic (direct) contact
 with earth materials. Two examples of this approach can be seen at at the
-`Iris Instruments`_ and `Geometrics`_ (image to the right) websites (as of
+`Iris Instruments`_ and`Geometrics`_ (image to the right) websites (as of
 January 2007), and others.
 
  .. figure:: ./images/gooddat1-sm.gif

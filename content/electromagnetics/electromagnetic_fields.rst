@@ -4,9 +4,9 @@ Electromagnetic Fields
 **********************
 
 Electromagnetic methods are sensitive principally to electrical conductivity
-\\(\\sigma\\) (units are S/m or Siemens/meter). We sometimes work with the
-inverse of conductivity which is electrical resistivity \\(\\rho\\) which has
-units \\(\\Omega m\\) (ohm-meters). Electrical conductivity characterizes the
+:math:`\sigma` (units are S/m or Siemens/meter). We sometimes work with the
+inverse of conductivity which is electrical resistivity :math:`\rho` which has
+units :math:`\Omega m` (ohm-meters). Electrical conductivity characterizes the
 ease that current flows through the material when an electrical force is
 applied. Electric current (units of Amperes) quantifies the amount of charge
 that is moving by an observer in one second.
@@ -16,9 +16,9 @@ Electrical force can be generated, in two ways:
 1. battery (Each terminal of the battery can be thought of as storing a
    positive or negative charge. The "voltage" of the battery is directly
    proportional to the amount of stored charge). Upon completion of the circuit
-   there will be an electric field \\(\\vec{E}\\) (volts/m) set up in the body.
+   there will be an electric field :math:`\vec{E}` (volts/m) set up in the body.
    The electric field is a vector: it has both direction and magnitude. The force
-   that any charge \\(q\\) feels is given by \\(\\vec{F} = q \\vec{E}\\). Unit
+   that any charge :math:`q` feels is given by :math:`\vec{F} = q \vec{E}`. Unit
    positive or negative charges will feel the same magnitude of force but
    directions will be opposite. Since like charges repel and unlike charges
    attract, the negative charges will be attracted to the positive terminal of
@@ -60,13 +60,13 @@ b. having a steady-state current and then switching it off. This leads to Time
 
 **Magnetic Flux**: In discussing the phenomena of EM induction it is important
 to have a concept of magnetic flux. We had previous defined the magnetic flux
-density \\(\\vec{B}\\). The magnetic flux \\(\\phi_B\\) which crosses a closed
+density :math:`\vec{B}`. The magnetic flux :math:`\phi_B` which crosses a closed
 loop is given by
 
 .. math::
         \phi_B = \int_{area} \vec{B} \cdot \hat{n} \; d\vec{a}
 
-where \\(\\hat{n}\\) is the outward pointing normal vector for the loop.
+where :math:`\hat{n}` is the outward pointing normal vector for the loop.
 
 **Faraday's Law**: A lime varying magnetic field impinging upon a conductor
 induces an electromotive force (or voltage) in the conductor.
@@ -74,7 +74,7 @@ induces an electromotive force (or voltage) in the conductor.
 .. math::
         V = - \frac{d \phi_B}{dt}
 
-This would be the voltage measured in a loop of wire if \\(\\phi_B\\) is the
+This would be the voltage measured in a loop of wire if :math:`\phi_B` is the
 magnetic flux crossing the wire loop.
 
 **Lens' Law**:The direction of the induced current in the conductor is such

@@ -19,7 +19,7 @@ single dipping layer and seismic traces corresponding to a coincident source
 and receiver.
 
 
-The reflection time is given by \\(2l/v_i\\). But when we plot the section we
+The reflection time is given by :math:`2l/v_i`. But when we plot the section we
 think of the reflections arriving from directly beneath the shot. The result
 is that a sloping reflector in the ground will appear as a sloping reflector
 in the seismic section, but the slopes will be different. The true dip will be

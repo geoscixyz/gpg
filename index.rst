@@ -29,7 +29,7 @@ Development of the GPG is ongoing, with the core development team consisting
 of researchers and students at the University of British Columbia. We welcome
 input and collaborators! Join the development on github_. 
 
-.. _github: https://github.com/ubcgif/gpg.
+.. _github: https://github.com/ubcgif/gpg
 
 
 Contents:

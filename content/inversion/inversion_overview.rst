@@ -26,11 +26,11 @@ the study).
 
 The experiment that is designed depends upon what information is sought
 
-- large scale (whole earth, find \\(\\rho,v_p,v_s\\))
+- large scale (whole earth, find :math:`\rho,v_p,v_s`)
 
-- exploration (oil, gas, minerals, find \\(\\sigma, \\mu, \\eta,\\rho\\))
+- exploration (oil, gas, minerals, find :math:`\sigma, \mu, \eta,\rho`)
 
-- environmental (utilities, salt water intrusion, \\(\\mu, \\sigma, \\epsilon\\))
+- environmental (utilities, salt water intrusion, :math:`\mu, \sigma, \epsilon`)
 
 Experiment
 ==========
@@ -55,12 +55,12 @@ Examples
 ========
 
 
-**Cross-well tomography**. We measure the travel time and want to know the velocity \\(v(x,z)\\).
+**Cross-well tomography**. We measure the travel time and want to know the velocity :math:`v(x,z)`.
 
 .. figure:: ./images/crosswell.jpg
     :align: center
 
-**DC Surveys**. We measure voltage and want \\(\\sigma(x,y,z)\\) and need many sources.
+**DC Surveys**. We measure voltage and want :math:`\sigma(x,y,z)` and need many sources.
 
 .. figure:: ./images/dc_survey.jpg
     :align: center
@@ -70,15 +70,15 @@ Examples
 - CAT 
 - X-ray
 - Detectors record amplitude
-- find \\(\\eta\\) (effectively an absorption coefficient)
+- find :math:`\eta` (effectively an absorption coefficient)
 - need to rotate source/receivers to get good coverage
 - note the difference with the geophysics problem where we only have sources and receivers on the surface.
 
 .. figure:: ./images/medical.jpg
     :align: center
 
-**Optics: Shaw problem.** Each ray (incident angle\\(t\\)) scatters into a
-region of \\(\\pi\\). The goal is to measure the intensity on the right hand
+**Optics: Shaw problem.** Each ray (incident angle:math:`t`) scatters into a
+region of :math:`\pi`. The goal is to measure the intensity on the right hand
 side and determine the strength of the source on the left hand side.
 
 .. figure:: ./images/shaw.jpg

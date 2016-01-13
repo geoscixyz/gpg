@@ -6,15 +6,15 @@ Ray Paths in Layered Media
 Reflections and refractions at a plane interface
 ================================================
 
-Consider a P-wave which is incident at an  angle \\(\\theta_1\\) measured with
+Consider a P-wave which is incident at an  angle :math:`\theta_1` measured with
 respect to the normal of the interface. There will be a reflected wave and a
 transmitted wave but the directions of the waves are given by the diagram to
 the right.
 
 **Law of reflection:** The angle of reflection equals the angle of incidence. So
-\\(\\theta_r\\) = \\(\\theta_1\\) .
+:math:`\theta_r` = :math:`\theta_1` .
 
-**Law of refraction:** The angle of refraction \\(\\theta_2\\)  is determined
+**Law of refraction:** The angle of refraction :math:`\theta_2`  is determined
 through Snell's Law, which is
 
 .. math::
@@ -28,9 +28,9 @@ the normal if the wave goes from a high velocity to a low velocity medium.
 	:align: center
 
 **"Critical refraction"** is an important concept in refraction seismics. The
-"maximum value of \\(\\theta_2\\) is 90\\(^\\circ\\). If this is the case,
+"maximum value of :math:`\theta_2` is 90:math:`^\circ`. If this is the case,
 "then refracted waves travel horizontally in the second medium. The incident
-"angle that causes this, known as the critical angle, \\(\\theta_c\\) is
+"angle that causes this, known as the critical angle, :math:`\theta_c` is
 "found using Snell's law as follows:
 
 .. math::
@@ -39,9 +39,9 @@ the normal if the wave goes from a high velocity to a low velocity medium.
 	\sin\theta_c = \frac{v_1}{v_2}
 
 When the wave in the second medium is critically refracted, it travels
-parallel to the interface at a speed of \\(v_2\\). As it travels, it radiates
+parallel to the interface at a speed of :math:`v_2`. As it travels, it radiates
 energy into the upper medium with the associated ray path making an angle
-\\(\\theta_c\\) with the normal. This critically refracted wave is also called
+:math:`\theta_c` with the normal. This critically refracted wave is also called
 a "head wave". It is somewhat analogous to the bow wave of a moving boat.
 
 .. figure:: ./images/criticalrefraction.gif
@@ -54,7 +54,7 @@ Mode Conversion
 A P-wave incident upon a boundary can produce reflected and transmitted
 P-waves, but reflected and transmitted S-waves can also be produced. Analogous
 conversions occur when there is an incident S wave on a plane boundary. The
-mode conversions (P \\(\\rightarrow\\) S, or S \\(\\rightarrow\\) P) can
+mode conversions (P :math:`\rightarrow` S, or S :math:`\rightarrow` P) can
 complicate interpretation, but S-waves are always slower than P-waves, so
 first arrivals will always be P-waves unless a special S-wave energy source is
 used. A valuable benefit of using shear waves is that they provide important
@@ -74,10 +74,10 @@ build relations relating what we know, and can measure, to the things we want.
 In other words we must build equations that relate what we want (depths and
 velocities) to what we measure (source-receiver distance and travel times).
 
-Consider a layer of thickness h and velocity \\(v_1\\) overlying a uniform
-halfspace of velocity \\(v_2\\). A source is detonated at time \\(t=0\\). We
+Consider a layer of thickness h and velocity :math:`v_1` overlying a uniform
+halfspace of velocity :math:`v_2`. A source is detonated at time :math:`t=0`. We
 are interested in the waves and arrival times of those waves at a receiver
-which is located a distance \\(x\\) from the source at position \\(D\\) in the
+which is located a distance :math:`x` from the source at position :math:`D` in the
 figure below.
 
 There are three principle waves that will travel through the earth and arrive
@@ -93,23 +93,23 @@ The travel time curves for these ray paths are shown to the right, and
 expressions for the ray paths and important parameters of these travel time
 curves are as follows:
 
-- \\(x_{crit}\\)  is the critical distance at which the refracted arrival first arrives.
+- :math:`x_{crit}`  is the critical distance at which the refracted arrival first arrives.
 
-- \\(x_{cross}\\)  is the crossover distance. Beyond this distance the refracted arrival is the first arrival on the record.
+- :math:`x_{cross}`  is the crossover distance. Beyond this distance the refracted arrival is the first arrival on the record.
 
 - Travel times of visible arrivals are related to distance between geophone
-  and source (\\(x\\)), thickness of the layer (\\(h\\)) and the velocities of
-  signals within the two layers (\\(v_1\\) and \\(v_2\\)). Three times are of
-  interest: \\(t_{dir}\\) is travel time of direct arrivals, \\(t_{ref}\\) is
-  arrival time of reflections and \\(t_{cr}\\) is the refraction travel time
+  and source (:math:`x`), thickness of the layer (:math:`h`) and the velocities of
+  signals within the two layers (:math:`v_1` and :math:`v_2`). Three times are of
+  interest: :math:`t_{dir}` is travel time of direct arrivals, :math:`t_{ref}` is
+  arrival time of reflections and :math:`t_{cr}` is the refraction travel time
   (see figure above). These parameters are all related as follows:
 
 .. figure:: ./images/timetravels.gif
 	:align: center
 
 .. math::
-	t_{dir} & = \frac{x}{v_1}\\
-	t_{ref} & = \frac{\sqrt{x^2 + 4h^2}}{v_1}\\
+	t_{dir} & = \frac{x}{v_1}\
+	t_{ref} & = \frac{\sqrt{x^2 + 4h^2}}{v_1}\
 	t_{cr}  & = \frac{x}{v_2} + \frac{2h\sqrt{v_2^2-v_1^2}}{v_1 v_2}
 
 The first and third of these are important for interpretation of seismic

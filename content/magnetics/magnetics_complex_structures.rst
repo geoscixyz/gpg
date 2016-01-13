@@ -41,11 +41,11 @@ use of these codes. See MAG3D in IAG's Chapter 10, "Sftwr & manuals" .
 +-------------------+----------------+-------------------+---------------+---------------+
 |  **Model**        | **model file** | **location file** | **mesh file** | **data file** |
 +===================+================+===================+===============+===============+
-| Single block:     | `block_sus`_   | `block_sus_loc`_  | `block_msh`_  | `block_mag`_  |       
+| Single block:     |`block_sus`_    |`block_sus_loc`_   |`block_msh`_   |`block_mag`_   |       
 +-------------------+----------------+-------------------+---------------+---------------+
-| Five block:       | `block_5_sus`_ |`block_5_sus_loc`_ | `block_msh`_  |`block_5_mag`_ | 
+| Five block:       |`block_5_sus`_  |`block_5_sus_loc`_ |`block_msh`_   |`block_5_mag`_ | 
 +-------------------+----------------+-------------------+---------------+---------------+
-| Continuous earth: | `v_sus`_       |                   | `v_msh`_      | `v_mag`_      |
+| Continuous earth: |`v_sus`_        |                   |`v_msh`_       |`v_mag`_       |
 +-------------------+----------------+-------------------+---------------+---------------+
 
 .. _block_sus: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/block.sus

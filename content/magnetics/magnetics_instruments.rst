@@ -15,8 +15,8 @@ Fluxgate Magnetometer
 - The fluxgate magnetometer was developed during WWII to detect submarines. It
   measures the magnetic field in a specific direction determined by the
   sensor's orientation. A complete measurement of the field requires three
-  individual (Cartesian) components of the field ( such as \\(B_x\\),
-  \\(B_y\\), \\(B_z\\) ).
+  individual (Cartesian) components of the field ( such as :math:`B_x`,
+  :math:`B_y`, :math:`B_z` ).
 
 - It is generally difficult to get leveling and alignment accurate. Sensor
   accuracy is 1 nT so orientation must be known to within .001 degrees.
@@ -37,12 +37,12 @@ Proton Precession Magnetometer
   artificial magnetic field, causing the protons to align with the new field.
   When the artificial field is removed, the protons precess back to their
   original orientation and their precession frequency (called the *Larmor*
-  precession frequency) is measured. That frequency, \\(f\\), is related
-  directly to the strength of the earth's field, (\\(B_e\\)), according to the
-  equation below. The parameter, \\(\\gamma_p\\), is the ratio of the magnetic
+  precession frequency) is measured. That frequency, :math:`f`, is related
+  directly to the strength of the earth's field, (:math:`B_e`), according to the
+  equation below. The parameter, :math:`\gamma_p`, is the ratio of the magnetic
   moment to spin angular momentum. It is called the gyromagnetic ratio of a
-  proton and is known to 0.001%; \\( \\gamma_p = 2.67520 \\times 10^8 T^{-1}
-  s^{-1} \\).
+  proton and is known to 0.001%; :math:`\gamma_p = 2.67520 \times 10^8 T^{-1}
+  s^{-1}`.
 
 .. math::
 	f= \frac{\gamma_p B_e}{2 \pi}

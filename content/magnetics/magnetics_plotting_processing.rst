@@ -36,7 +36,7 @@ Two things happen with this procedure
 The residual data would be similar to that in which the IGRF
 (:doc:`magnetics_IGRF`) has been removed.
 
-The residual field, \\(\\Delta B\\), contains the sought anomalous field but
+The residual field, :math:`\Delta B`, contains the sought anomalous field but
 it may also have some broad-scale background or "regional field". Thus
 
 .. math::
@@ -139,9 +139,9 @@ here:
     :file: data_plotting1.html
 
 Large data sets are commonly gathered using airborne instruments. They may
-involve \\(10^5\\) to \\(10^6\\) data points to show magnetic variations over many square
+involve :math:`10^5` to :math:`10^6` data points to show magnetic variations over many square
 kilometers. An example of a large airborne data set is shown to the right,
-with a larger version, including alternative colour scale schemes, `shown in a
+with a larger version, including alternative colour scale schemes,`shown in a
 sidebar`_.
 
 .. _shown in a sidebar: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/sidebar-airmaps.html
@@ -173,7 +173,7 @@ Processing Magnetic Maps
 
 There are numerous options for processing potential fields data in general,
 and magnetics data specifically. One example (figure shown here) is provided
-in `a sidebar`_. The processing was applied in this case in order to emphasize
+in`a sidebar`_. The processing was applied in this case in order to emphasize
 geologic structural trends.
 
 .. _a sidebar: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/sidebar-mageg1.html
@@ -199,7 +199,7 @@ Other examples of magnetic data processing techniques include:
   therefore, mapping peaks of horizontal gradient of pseudo-gravity can help
   map geologic contacts.
 
-The effects of these five processing options are illustrated in a `separate
+The effects of these five processing options are illustrated in a`separate
 sidebar`_ on processing of magnetics data.
 
 .. _separate sidebar: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/blakely/blakely.html

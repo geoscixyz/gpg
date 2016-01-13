@@ -19,7 +19,7 @@ medium.
 
 The laws of EM induction require that there be eddy currents that are also set
 up in the host. But any conductive material in which currents are flowing is a
-"lossy" medium. That is, there are \\(I^2R\\) losses which convert the
+"lossy" medium. That is, there are :math:`I^2R` losses which convert the
 electromagnetic energy to heat. As a consequence the energy from the source
 does not propagate to arbitrarily large depths in the earth. The amplitude of
 the EM fields thus decrease due to geometrical spreading and attenuation.

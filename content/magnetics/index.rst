@@ -28,6 +28,8 @@ Contents:
    magnetics_introduction
    magnetics_susceptibility
    magnetics_earths_field
+   magnetics_IGRF
+   magnetics_three_figures
    magnetics_buried_dipole
    magnetics_extended_bodies
    magnetics_line_profiles   
