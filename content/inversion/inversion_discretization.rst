@@ -18,7 +18,7 @@ is
 .. math::
 		g_z(r_i) = \sum_{j=1}^M G_{ij} \rho_j
 
-where the volume is divided into \\(M\\) cells with the density constant in each cell.
+where the volume is divided into :math:`M` cells with the density constant in each cell.
 
 .. math::
 		G_{ij} = - \gamma \int_{R_j} \frac{(z_i - z')}{|r_i - r'|^3} dv
@@ -37,7 +37,7 @@ function. In 1D we had a combination
 .. math::
 		\phi(m) = \alpha_s \int m^2 (x) dx + \alpha_x \int \left(\frac{dm}{dx}\right)^2 dx
 
-Suppose the region on which the model is defined is divided into \\(M\\) cells
+Suppose the region on which the model is defined is divided into :math:`M` cells
 
 
 .. figure:: ./images/1D_mesh.jpg
@@ -59,12 +59,12 @@ then there are a number of ways to write this in vector/matrix form.
 Method 1
 --------
 
-Let \\(m(x)\\) be represented by "cells" where the model is constant in each cell. 
+Let :math:`m(x)` be represented by "cells" where the model is constant in each cell. 
 
 .. figure:: ./images/1D_mesh2.jpg
     :align: center		
 
-For example on the kth cell \\( x_{k-1} \\leq x \\leq x_k \\)  , \\(m(x) = m_k\\)
+For example on the kth cell :math:`x_{k-1} \leq x \leq x_k`  , :math:`m(x) = m_k`
 
 .. math::
 		d_j = \int_{x_0}^{x_k} g_j (x) m(x) dx = \sum_{k=1}^M \int_{x_{k-1}}^{x_k} g_j(x) m(x) dx = \sum_{k=1}^M m_k \left(\int_{x_{k-1}}^{x_k} g_j (x) dx \right) 		
@@ -75,7 +75,7 @@ so
 		d_j = \sum_{k=1}^M G_{ij} m_k
 
 
-where \\(G_{jk} = \\int_{x_{k-1}}^{x_k} g_j (x) dx \\) is the integral of the
+where :math:`G_{jk} = \int_{x_{k-1}}^{x_k} g_j (x) dx` is the integral of the
 jth kernel function over the kth cell. In matrix vector form this becomes
 
 .. math::
@@ -87,14 +87,14 @@ Method 2: Quadrature formulation
 .. math::
 		\int_{x_0}^{x_M} f(x) dx = \sum_{i=1}^{M} w_k f(x_k)
 
-where \\(w_k\\) are known weights. For example, we could evaluate this with a
+where :math:`w_k` are known weights. For example, we could evaluate this with a
 midpoint rule
 
 .. figure:: ./images/midpointrule.jpg
     :align: center	
 
-Let \\(h_k = x_k x_{k-1}\\) be the width of the kth cell, and let
-\\(x_{k-1/2}\\) denote the center of the kth cell, then
+Let :math:`h_k = x_k x_{k-1}` be the width of the kth cell, and let
+:math:`x_{k-1/2}` denote the center of the kth cell, then
 
 .. math::
 		\int_{x_0}^{x_M} f(x) dx = \sum_{i=1}^{M} h_k f(x_{k-1/2})	
@@ -104,14 +104,14 @@ In our case
 .. math::
 		d_j = \int_{x_0}^{x_M} g_j(x) m(x) dx = \sum_{k=0}^M g_j (x_{k-1/2}) m(x_{k-1/2}) h_k \equiv \sum G_{jk} m_k
 
-In this case the model vector \\(\\vec{m}\\)
+In this case the model vector :math:`\vec{m}`
 
 .. math::
 		\vec{m} = \left( m(x_{1/2}), m(x_{3/2}), ... , m(x_{M-1/2}) \right)
 
-is generally written as \\( \\vec{m} = ( m_1, ..., m_M) \\) so the model
+is generally written as :math:`\vec{m} = ( m_1, ..., m_M)` so the model
 parameters are the values of the model at the cell centers. The elements of
-\\(G\\) are
+:math:`G` are
 
 .. math::
 		G_{jk} = g_j (x_{k-1/2}) h_k
@@ -132,7 +132,7 @@ A general objective function in 1D is
 		\phi_m = \alpha_s \int m^2(x) dx + \alpha_x \int \left(\frac{dm}{dx}\right)^2 dx
 
 We use the same discretization as we did in the forward problem. Divide the
-region on which the model is defined into \\(M\\) cells and assume the model
+region on which the model is defined into :math:`M` cells and assume the model
 is constant in each cell.
 
 .. figure:: ./images/Mcells.jpg
@@ -143,7 +143,7 @@ Consider the first term
 .. math::
 		\phi_0 = \int_{x_0}^{x_M} m^2(x) dx = \sum_{i=1}^M \int_{x_{i-1}}^{x_i} m_i^2 dx = \sum_{i=1}^M m_i^2 x \Big|_{x_i}^{x_{i-1}} = \sum_{i=1}^M m_i^2 (x_i-x_{i-1})
 
-For convenience, let \\(l_i\\) denote the length if the ith element. Then
+For convenience, let :math:`l_i` denote the length if the ith element. Then
 
 .. math::
 		\phi_s = \sum_{i=1}^M m_i^2 l_i = m^T W_s^T W_s m = \|W_s m \|^2
@@ -155,10 +155,10 @@ where
 		\begin{split}
 		W_s = 
 		\begin{bmatrix}
-    		\frac{1}{\sqrt{l_1}} & 0 & 0 & \cdots & 0\\
-    		0 & \frac{1}{\sqrt{l_2}} & 0 & \cdots & 0\\
-    		0 & 0 & \frac{1}{\sqrt{l_3}} & \cdots & \vdots\\
-    		0 & 0 & 0 & \ddots & \frac{1}{\sqrt{l_M}}\\    
+    		\frac{1}{\sqrt{l_1}} & 0 & 0 & \cdots & 0\
+    		0 & \frac{1}{\sqrt{l_2}} & 0 & \cdots & 0\
+    		0 & 0 & \frac{1}{\sqrt{l_3}} & \cdots & \vdots\
+    		0 & 0 & 0 & \ddots & \frac{1}{\sqrt{l_M}}\    
 		\end{bmatrix}
 		\end{split}
 		\end{equation}				
@@ -175,7 +175,7 @@ We want to find a numerical approximation
 .. figure:: ./images/Xcells.jpg
     :align: center	
 
-Let \\(d_k\\) be the distance between the center f the cells. A discrete
+Let :math:`d_k` be the distance between the center f the cells. A discrete
 approximation to the integral is had by evaluating the derivative of the model
 based upon how much it changes between cell centers.
 
@@ -183,8 +183,8 @@ based upon how much it changes between cell centers.
 		\phi_x \approx \sum_{k=1}^{M-1} \left( \frac{M_{k+1}-M_k}{d_k} \right)^2 d_k
 
 
-Note that there are only \\(M-1\\) terms in the sum. The \\(
-\\frac{M_{k+1}-M_k}{d_k} \\) part represents the average gradient between the
+Note that there are only :math:`M-1` terms in the sum. The :math:`
+\frac{M_{k+1}-M_k}{d_k}` part represents the average gradient between the
 kth and k+1th cell. Now this can be written as
 
 .. math::
@@ -197,19 +197,19 @@ where
 		\begin{split}
 		W_x = 
 		\begin{bmatrix}
-    		-\frac{1}{\sqrt{d_1}} & \frac{1}{\sqrt{d_1}} & 0 & \cdots & 0\\
-    		0 & -\frac{1}{\sqrt{d_2}} & \frac{1}{\sqrt{d_2}}  & \cdots & 0\\
-    		0 & 0 & \ddots & \ddots & \vdots\\   
-    		0 & 0 & 0 & -\frac{1}{\sqrt{d_{M-1}}} & \frac{1}{\sqrt{d_{M-1}}}\\ 
-    		0 & 0 & 0 & 0 & 0\\   
+    		-\frac{1}{\sqrt{d_1}} & \frac{1}{\sqrt{d_1}} & 0 & \cdots & 0\
+    		0 & -\frac{1}{\sqrt{d_2}} & \frac{1}{\sqrt{d_2}}  & \cdots & 0\
+    		0 & 0 & \ddots & \ddots & \vdots\   
+    		0 & 0 & 0 & -\frac{1}{\sqrt{d_{M-1}}} & \frac{1}{\sqrt{d_{M-1}}}\ 
+    		0 & 0 & 0 & 0 & 0\   
 		\end{bmatrix}
 		\end{split}
 		\end{equation}	
 
-If \\(W_x\\) is written as an \\(M \\times M\\) matrix, then its last row is
-zero. The reason for a row to be zero is that there are only \\(M-1\\)
+If :math:`W_x` is written as an :math:`M \times M` matrix, then its last row is
+zero. The reason for a row to be zero is that there are only :math:`M-1`
 segments on which linear gradients have been defined. Effectively the two
-\\(1/2\\) cells on each end have been neglected.
+:math:`1/2` cells on each end have been neglected.
 
 So we have:
 
@@ -227,7 +227,7 @@ If we discretize a combination of these with a reference model, then
 		& = (m-m_0)^T W_m^T W_m (m-m_0) \\[0.2em] 
 		& = \|W_m (m-m_0) \|^2
 
-where \\(W_m^T W_m = \\alpha_s W_s^T W_s + \\alpha_x W_x^T W_x\\) is an \\(M \\times M\\) matrix.
+where :math:`W_m^T W_m = \alpha_s W_s^T W_s + \alpha_x W_x^T W_x` is an :math:`M \times M` matrix.
 
 So our inverse problem in which we minimize
 
@@ -257,8 +257,8 @@ and
 .. math::
 		m = (G^T W_d^T W_d G + \beta W_m^T W_m)^{-1} (G^T W_d^T W_d d^{obs} + \beta W_m^T W_m m_0)	
 			
-This is an \\(M \\times M\\) system of equations solved for \\(m\\). Solve
-this for many values of \\(\\beta\\) and model \\(m\\) that reproduces the
+This is an :math:`M \times M` system of equations solved for :math:`m`. Solve
+this for many values of :math:`\beta` and model :math:`m` that reproduces the
 data to the desired value.
 
 .. figure:: ./images/tikhonov_curve.jpg
@@ -274,21 +274,21 @@ Vector differentiation
 		y &: M \quad \text{vector} \\[0.4em]
 		b &: N \quad \text{vector} \\[0.4em]
 
-Consider \\(\\phi=x^Ty=\\sum x_i y_i\\)	
+Consider :math:`\phi=x^Ty=\sum x_i y_i`	
 
 .. math::
 		\begin{equation}
 		\frac{\partial \phi} {\partial x} = 
 		\begin{bmatrix}
-		    \frac{\partial \phi}{\partial x_1} \\
-		    \vdots  \\
-		    \frac{\partial \phi}{\partial x_M}\\ 
+		    \frac{\partial \phi}{\partial x_1} \
+		    \vdots  \
+		    \frac{\partial \phi}{\partial x_M}\ 
 		\end{bmatrix}
 		=
 		\begin{bmatrix}
-		    y_1 \\
-		    \vdots  \\
-		    y_M\\ 
+		    y_1 \
+		    \vdots  \
+		    y_M\ 
 		\end{bmatrix}
 		= y
 		\end{equation}
@@ -299,15 +299,15 @@ Similarly,
 		\begin{equation}
 		\frac{\partial \phi} {\partial y} = 
 		\begin{bmatrix}
-		    \frac{\partial \phi}{\partial y_1} \\
-		    \vdots  \\
-		    \frac{\partial \phi}{\partial y_M}\\ 
+		    \frac{\partial \phi}{\partial y_1} \
+		    \vdots  \
+		    \frac{\partial \phi}{\partial y_M}\ 
 		\end{bmatrix}
 		=
 		\begin{bmatrix}
-		    x_1 \\
-		    \vdots  \\
-		    x_M\\ 
+		    x_1 \
+		    \vdots  \
+		    x_M\ 
 		\end{bmatrix}
 		= x
 		\end{equation}
@@ -320,7 +320,7 @@ Consider
 		& = Ax + A^Tx \\[0.2em]
 		& = (A+A^T)x
 
-If \\(A\\) is symmetric then \\(A^T=A\\) so
+If :math:`A` is symmetric then :math:`A^T=A` so
 
 .. math::
 		\frac{\partial}{\partial x}	(x^T A x) = 2Ax

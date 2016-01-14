@@ -10,7 +10,7 @@ numerically evaluated by
 .. math::
  		fold = \frac{N (number\;of\;geophones)}{2n}
 
-where \\(n\\) is the moveup rate in units of geophone spacing. "Moveup rate"
+where :math:`n` is the moveup rate in units of geophone spacing. "Moveup rate"
 is in fact (shot spacing)/(geophone spacing). For example, if geophones are 2
 meters apart and shots are employed every 4 meters, then the moveup rate is
 n=4/2=2. This can be less than one if there are shots set more often than

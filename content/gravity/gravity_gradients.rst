@@ -16,22 +16,22 @@ money has been spent on inventing this capability and yes, it is useful for
 larger scale problems associated with oil and gas and to some extent minerals
 exploration.
 
-Measured gravity is \\(g_z\\)
-=============================
+Measured gravity is :math:`g_z`
+===============================
 
 .. figure:: ./images/grav_diag.gif
     :align: right
 
-Normally the vertical component of gravity \\(g_z\\) is measured. This was
+Normally the vertical component of gravity :math:`g_z` is measured. This was
 illustrated using the profile over a sphere or cylinder (right) in the section
-:doc:`gravity_basics`. The horizontal components of gravity, \\(g_x\\), and
-\\(g_y\\), are small and not measured.
+:doc:`gravity_basics`. The horizontal components of gravity, :math:`g_x`, and
+:math:`g_y`, are small and not measured.
 
-The spatial derivative (rate of change) of \\(g\\)
-==================================================
+The spatial derivative (rate of change) of :math:`g`
+====================================================
 
 The spatial rate of change of gravity (in the x-direction) is written
-mathematically as \\(\\partial g/ \\partial x\\). This horizontal derivative
+mathematically as :math:`\partial g/ \partial x`. This horizontal derivative
 can help map edges of buried changes in density. However, when data were
 gathered over an area, it is more common to employ the so called *total
 horizontal derivative*, which is the square root of the sum of squared x- and
@@ -64,9 +64,9 @@ The second spatial derivative
 .. figure:: ./images/2ndhorizderiv.gif
     :align: right
 
-The rate of change of gradients (written as \\(\\partial^2 g / \\partial
-x^2\\) also can be estimated. Inflection points on the graph of \\(\\partial^2
-g / \\partial x^2\\) reveal the location of maximum rate of change of the
+The rate of change of gradients (written as :math:`\partial^2 g / \partial
+x^2` also can be estimated. Inflection points on the graph of :math:`\partial^2
+g / \partial x^2` reveal the location of maximum rate of change of the
 gradient. The adjacent images show how this can help reveal the difference
 between a basin and an intrusion. Maps can also be processed to generate
 images of the second horizontal derivatives.
@@ -80,9 +80,9 @@ which states that squared gradient of gravity equals 0:
 .. math::
 		\frac{\partial^2 g}{\partial x^2} + \frac{\partial^2 g}{\partial y^2}  + \frac{\partial^2 g}{\partial y^2} =0
 
-The \\(\\partial^2 g / \\partial x^2\\)  and \\(\\partial^2 g / \\partial
-y^2\\)  terms can be obtained directly from a Bouguer anomaly map, so the
-\\(\\partial^2 g / \\partial z^2\\)  term can be derived. This last term
+The :math:`\partial^2 g / \partial x^2`  and :math:`\partial^2 g / \partial
+y^2`  terms can be obtained directly from a Bouguer anomaly map, so the
+:math:`\partial^2 g / \partial z^2`  term can be derived. This last term
 describes how fast the "vertical rate of change in gravity" is changing.
 However the success of this process depends upon adequate data spacing. These
 types of calculations are very efficient in the Fourier domain - something
@@ -130,17 +130,17 @@ Measuring gradients
 ===================
 
 We are talking now about measuring how gravity varies spatially - that is
-\\(\\partial g / \\partial x\\) or \\(\\partial g / \\partial y\\) or
-\\(\\partial g / \\partial z\\). In fact, there are units for gravitational
-gradient - the Eotvos Unit (EU) which is \\(10^{-6}\\) mGal/cm.
+:math:`\partial g / \partial x` or :math:`\partial g / \partial y` or
+:math:`\partial g / \partial z`. In fact, there are units for gravitational
+gradient - the Eotvos Unit (EU) which is :math:`10^{-6}` mGal/cm.
 
 However, if you think about it, we should really be more careful about what we
 are measuring. We are familiar with measuring the vertical component of
-gravity, \\(g_z\\). However, it would be theoretically possible to measure
-\\(g_x\\) and \\(g_y\\). In fact, one could consider how each of these three
+gravity, :math:`g_z`. However, it would be theoretically possible to measure
+:math:`g_x` and :math:`g_y`. In fact, one could consider how each of these three
 components of gravity vary in all three directions. That represents nine
 different "gradient" measurements. Given what you know about measuring
-\\(g_z\\), measuring the other two components should sound like a very
+:math:`g_z`, measuring the other two components should sound like a very
 difficult task. Well, you are right. It is very difficult. In fact, it turns
 out to be easier to measure the gradients than the fields themselves. And, as
 of roughly 1998 - 2001, there are systems that can make these measurements.
@@ -154,12 +154,12 @@ on `a separate page of images`_. Evidently, different components emphasize
 different aspects of a buried density contrast or target. Look at these
 figures and consider these questions:
 
-#. Which emphasizes the feature’s location? (answer = \\(T_{zz}\\))
+#. Which emphasizes the feature’s location? (answer = :math:`T_{zz}`)
 
 #. Which emphasize lineations in one or another direction? (answer =
-   \\(T_{xx}\\), \\(T_{yy}\\))?
+   :math:`T_{xx}`, :math:`T_{yy}`)?
 
-#. Which emphasize the feature's edges? (answer = \\(T_{xz}\\), \\(T_{yz}\\))?
+#. Which emphasize the feature's edges? (answer = :math:`T_{xz}`, :math:`T_{yz}`)?
 
 #. What does the remaining component emphasize? (answer = edges)?
 

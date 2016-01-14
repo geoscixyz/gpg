@@ -38,28 +38,28 @@ illustrates:
 	
 .. DWO:  remove m from last line in box (wrong units) Substitute a magnetic fields from a bar magnet on the body
 
-The strength of the induced magnetisation, \\(M\\), the "dipole moment per
-unit volume", has units \\(\\text{A/m}\\). It is related to the causative
-field's strength, \\(H\\), by
+The strength of the induced magnetisation, :math:`M`, the "dipole moment per
+unit volume", has units :math:`\text{A/m}`. It is related to the causative
+field's strength, :math:`H`, by
 
 .. math::
 		\vec{M}=\kappa \vec{H}
 
-Susceptibility \\( \\kappa \\) is a dimensionless number related to the number
+Susceptibility :math:`\kappa` is a dimensionless number related to the number
 of individual magnetic dipoles in the medium that can be aligned with the main
 field. Note that as the field increases the number of dipoles that align
 themselves with the field also increases.
 
-Each magnetic particle has it's own magnetic moment. Let \\(\\vec{m_i}\\) be
-the magnetic moment of the \\(i'\\text{th}\\) particle. This has an amplitude
+Each magnetic particle has it's own magnetic moment. Let :math:`\vec{m_i}` be
+the magnetic moment of the :math:`i'\text{th}` particle. This has an amplitude
 and direction, exactly the same as a small bar magnet.  Consider a volume
-\\(V\\). The total magnetic moment, which is the sum of the individual
+:math:`V`. The total magnetic moment, which is the sum of the individual
 magnetic moments, is
 
  .. math::
 	\vec{m}= \sum_i \vec{m_i}	
 
-The magnetization \\(\\vec{M}\\) \\((\\text{A/m})\\) is the dipole moment per
+The magnetization :math:`\vec{M}` :math:`(\text{A/m})` is the dipole moment per
 unit volume. It is given by
 
 .. math::
@@ -68,7 +68,7 @@ unit volume. It is given by
 Although unit-less, the value of susceptibility is different in the cgs and SI
 systems of measurement because of the way electromagnetic derivations proceed
 within the two systems. Translation between cgs and SI systems of units is
-done via \\(\\kappa \\text{(SI)} = 4 \\pi \\kappa \\text{(cgs)} \\) . The SI
+done via :math:`\kappa \text{(SI)} = 4 \pi \kappa \text{(cgs)}` . The SI
 system is the current preferred standard among most geophysicists, but you
 will find cgs used in older references and texts.
 
@@ -93,23 +93,23 @@ magnetism of minerals. The following table gives a simple indication of
 susceptibilities for specific magnetic minerals.
 
 
-+-----------------------+--------------------------+-----------------------------------+
-|  **Mineral**          | **Chemical formula**     |  Average susceptibility (SI)      |
-+=======================+==========================+===================================+
-| Magnetite             | \\( Fe_3 O_4 \\)         |  \\( 6000 \\times 10^{-3} \\)     |
-+-----------------------+--------------------------+-----------------------------------+
-| Ulvospinel            | \\( Fe_2 TiO_4 \\)       |    \\( \\sim 0\\)                 |
-+-----------------------+--------------------------+-----------------------------------+
-| Ilmenite              | \\( FeTiO_3 \\)          |  \\( 1800 \\times 10^{-3} \\)     |  
-+-----------------------+--------------------------+-----------------------------------+
-| Hematite              | \\( Fe_2O_3 \\)          |   \\( 6.5 \\times 10^{-3} \\)     | 
-+-----------------------+--------------------------+-----------------------------------+
-| Maghemite             | \\( Fe_2O_3 \\)          |    similar to magnetite           |
-+-----------------------+--------------------------+-----------------------------------+
-| Pyrite                | \\( FeS_2 \\)            |   \\( 1.5 \\times 10^{-3} \\)     | 
-+-----------------------+--------------------------+-----------------------------------+
-| Pyrrhotite            |\\( Fe_{1-x}S(Fe_7S_8) \\)|  \\( 1500 \\times 10^{-3} \\)     |   
-+-----------------------+--------------------------+-----------------------------------+
++-----------------------+--------------------------+------------------------------+
+|  **Mineral**          | **Chemical formula**     |  Average susceptibility (SI) |
++=======================+==========================+==============================+
+| Magnetite             | :math:`Fe_3 O_4`         | :math:`6000 \times 10^{-3}`  |
++-----------------------+--------------------------+------------------------------+
+| Ulvospinel            | :math:`Fe_2 TiO_4`       | :math:`\sim 0`               |
++-----------------------+--------------------------+------------------------------+
+| Ilmenite              | :math:`FeTiO_3`          | :math:`1800 \times 10^{-3}`  |  
++-----------------------+--------------------------+------------------------------+
+| Hematite              | :math:`Fe_2O_3`          | :math:`6.5 \times 10^{-3}`   | 
++-----------------------+--------------------------+------------------------------+
+| Maghemite             | :math:`Fe_2O_3`          |    similar to magnetite      |
++-----------------------+--------------------------+------------------------------+
+| Pyrite                | :math:`FeS_2`            | :math:`1.5 \times 10^{-3}`   | 
++-----------------------+--------------------------+------------------------------+
+| Pyrrhotite            |:math:`Fe_{1-x}S(Fe_7S_8)`| :math:`1500 \times 10^{-3}`  |   
++-----------------------+--------------------------+------------------------------+
 
 
 Rocks
@@ -151,7 +151,7 @@ susceptibilities in geological materials. Some relevant remarks are:
 A table summarizing typical susceptibilities of common materials follows:
 
 +-----------------------+---------------------------------------------------------+
-|  **Material**         | **Susceptibility (SI units, \\( \\times 10^{-3} \\) )** |
+|  **Material**         | **Susceptibility (SI units, :math:`\times 10^{-3}` )**  |
 +=======================+=========================================================+
 | Air                   |       about 0                                           |
 +-----------------------+---------------------------------------------------------+
@@ -202,12 +202,12 @@ significant examples of rocks with anisotropic susceptibility. Magnetite is by
 far the most significant contributor to a rock's magnetic properties. There
 are several empirical relations between magnetite content and bulk
 susceptibility. Three such relations listed below (Grant and West, 1965)
-represent bulk susceptibility, \\(\\kappa\\), as a function of magnetite
-content by percent volume, \\(V\\).
+represent bulk susceptibility, :math:`\kappa`, as a function of magnetite
+content by percent volume, :math:`V`.
 
-1. \\( \\kappa = 2.89 \\times10^{-3} \\; V^{1.01} \\)
-2. \\( \\kappa = 2.6 \\times10^{-3} \\; V^{1.11} \\)
-3. \\( \\kappa = 1.16 \\times10^{-3} \\; V^{1.39} \\)
+1. :math:`\kappa = 2.89 \times10^{-3} \; V^{1.01}`
+2. :math:`\kappa = 2.6 \times10^{-3} \; V^{1.11}`
+3. :math:`\kappa = 1.16 \times10^{-3} \; V^{1.39}`
 
 Differences between the three formulae are probably due to the differences in
 the sample sets and separation process. Separation tends to overestimate the
@@ -232,7 +232,7 @@ Buried metal
 ------------
 
 (Summarized from Breiner, 1973) For most iron or steel objects, the
-susceptibility, \\(\\kappa\\), falls between 10 and 200 in SI units. However,
+susceptibility, :math:`\kappa`, falls between 10 and 200 in SI units. However,
 predicting the response of a magnetometer survey over metal is complicated
 for several reasons. Remanent magnetisation is likely to be strong, and
 pointing in different directions in the various components of a buried
@@ -244,11 +244,11 @@ example, aircraft frame parts are often some alloy with no magnetic
 properties).
 
 The maximum induced magnetic field strength (i.e. the maximum anomaly),
-\\(T\\), of a 3D object can be roughly estimated using \\(T = M/r^3\\) (or
-\\(T = 2M/r^3\\) for latitudes greater than \\(60^\\circ\\), where \\(M\\) is
-the magnetic moment estimated from \\(M = \\kappa F V\\) (\\(\\kappa\\) is
-susceptibility, \\(F\\) is ambient field strength,\\(V\\) is volume), and
-\\(r\\) is the distance to the target. For a 2D object, \\(T = M/r^2\\) is
+:math:`T`, of a 3D object can be roughly estimated using :math:`T = M/r^3` (or
+:math:`T = 2M/r^3` for latitudes greater than :math:`60^\circ`, where :math:`M` is
+the magnetic moment estimated from :math:`M = \kappa F V` (:math:`\kappa` is
+susceptibility, :math:`F` is ambient field strength,:math:`V` is volume), and
+:math:`r` is the distance to the target. For a 2D object, :math:`T = M/r^2` is
 appropriate.
 
 Organically derived susceptibility

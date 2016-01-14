@@ -111,7 +111,7 @@ of the rock or soil.
 
 One generally applicable rule is that seismic velocities generally increase
 with depth. However densities also increase with depth, so it must be that the
-bulk and shear modulii ( \\(K\\) and \\(\\mu\\) respectively) increase faster
+bulk and shear modulii ( :math:`K` and :math:`\mu` respectively) increase faster
 than the density. There are many empirical relationships between velocity and
 depth of burial and geologic age, and different publications will present
 these relationships in various graphical or tabular ways. In the next section,
@@ -123,7 +123,7 @@ Porosity
 --------
 
 A very rough rule is the so called Wyllie's time average relationship (in
-which \\( \\phi \\) is the porosity):
+which :math:`\phi` is the porosity):
 
 .. math::
     \frac{1}{V_{\text{bluk}}} = \frac{\phi}{V_{\text{fluid}}} + \frac{1-\phi}{V_{\text{matrix}}}
@@ -157,9 +157,9 @@ In general velocity rises with increasing confining pressure and then levels
 off to a “terminal velocity” when the effective pressure is *high*. The effect
 is probably due to crack closure. At *low* effective pressure, cracks are open
 and easily closed with an increase in stress. This is the equivalent of saying
-there is large strain for low increase in stress, hence small \\(K\\) and low
+there is large strain for low increase in stress, hence small :math:`K` and low
 velocity. As the effective pressure increases the cracks are all closed,
-\\(K\\) goes up and the velocity increases.
+:math:`K` goes up and the velocity increases.
 
 Finally even at depth, as the pore pressure increases above hydrostatic, the
 effective pressure decreases as does the velocity. Therefore, over-pressured
@@ -176,8 +176,8 @@ Fluid saturation
 
 Theoretical and empirical studies have shown that the compressional wave
 velocity *decreases* with *decreasing* fluid saturation. As the fraction of
-gas in the pores increases, \\(K\\), and hence velocity, decreases. Less
-intuitive is the fact that \\(V_s\\) also decreases with an increase in gas
+gas in the pores increases, :math:`K`, and hence velocity, decreases. Less
+intuitive is the fact that :math:`V_s` also decreases with an increase in gas
 content. The seismic reflection coefficient is strongly affected if one of the
 contacting media is gas saturated because the impedance is lowered by
 decreases in both the density and velocity.
@@ -189,7 +189,7 @@ The effects of high porosity, less than 100% water saturation, lack of
 cementation, low effective pressure and the low bulk modulus (due to the ease
 with which native minerals can be rearranged under stress) combine to yield
 very low compressional and shear wave velocities in the weathered layer.
-\\(V_p\\) can be as low as 200 m/sec in the unsaturated zone (vadose zone) –
+:math:`V_p` can be as low as 200 m/sec in the unsaturated zone (vadose zone) –
 which is less that the velocity of sound in air!
 
 Attenuation

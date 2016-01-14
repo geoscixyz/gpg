@@ -78,13 +78,13 @@ and fluids enhance the ability of these materials to hold charges.
 	:align: center
 	:scale: 120 %
  
-	Illite (a clay mineral) with surface area-to-volume ratio of \\(100m^2/g\\) (1000 times greater than sandstone)
+	Illite (a clay mineral) with surface area-to-volume ratio of :math:`100m^2/g` (1000 times greater than sandstone)
 
  .. figure:: ./images/quartz.gif
 	:align: center
 	:scale: 120 %
  
- 	Quartz overgrowths in sandstone with surface area-to-volume ratio of \\(0.1m^2/g\\)
+ 	Quartz overgrowths in sandstone with surface area-to-volume ratio of :math:`0.1m^2/g`
 
 Two microscopic effects cause macroscopic chargeability
 -------------------------------------------------------
@@ -226,8 +226,8 @@ ground's impedance. The Cole-Cole model is written as:
 		\rho (\omega) = \rho_0 \left[1-m \left( 1- \frac{1}{1+(j \omega \tau)^c}\right) \right] 
 
 This relation describes a complex impedance as a function of frequency,
-\\(\\omega\\) with three parameters. \\(m\\) is intrinsic chargeability,
-\\(\\tau\\) is a time constant (of the decay curve), and \\(c\\) is a
+:math:`\omega` with three parameters. :math:`m` is intrinsic chargeability,
+:math:`\tau` is a time constant (of the decay curve), and :math:`c` is a
 parameter controlling the frequency dependence.
 
 Typical chargeabilities for materials

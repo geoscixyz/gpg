@@ -13,7 +13,7 @@ The in-phase component is diagnostic of high conductivity bodies (metal pipes,
 drums, etc.) and the quadrature component can be converted into an apparent
 conductivity which is read out in mS/m. Such readings arc valid only if the
 ground is laterally uniform on a scale length equal to the source-receiver
-separation and that \\(s << \\delta\\). The instrument and coils can be
+separation and that :math:`s << \delta`. The instrument and coils can be
 rotated by 90° so that loops are vertical. This provides data estimating the
 conductivities and thickness. The effective depth of exploration is about 6
 meters for the vertical dipole mode and about 3 meters for the horizontal
@@ -45,7 +45,7 @@ receiver geometry. This generally reduces the depth of penetration. A rule of
 thumb for loop-loop systems is that the depth of penetration is about twice
 the separation of the source and receiver, but this is very approximate and is
 easily violated. Also, a necessary condition for this to happen is that the
-source/receiver separation \\(s << \\delta\\) (coil separation is less than
+source/receiver separation :math:`s << \delta` (coil separation is less than
 the skin depth).
 
 If we are attempting to find a conducting target then the ability to see the
@@ -61,15 +61,15 @@ Relative Response Function
 The justification for the above statement is based upon the following.
 Consider a homogeneous halfspace on the surface of which is located a
 horizontal coplanar coil (HCP) system (e.g. EM31) or a vertical coplanar (VCP)
-system (EM34). Let the depth \\(z\\) in the earth be normalized by the coil
-spacing \\(s\\). (True depth in meters is \\(zs\\).) The time varying fields
+system (EM34). Let the depth :math:`z` in the earth be normalized by the coil
+spacing :math:`s`. (True depth in meters is :math:`zs`.) The time varying fields
 in the transmitting coils will induce eddy currents in the earth. For a
 homogeneous earth, these currents flow in horizontal planes. This is true even
 for the vertically oriented coils. It is possible to calculate the
 contribution to the secondary field as measured from the surface from any thin
-layer of thickness \\(dz\\) at some depth \\(z\\). Let \\(\\phi_V(z)\\) denote
+layer of thickness :math:`dz` at some depth :math:`z`. Let :math:`\phi_V(z)` denote
 this contribution from the vertical magnetic dipole source and receiver. The
-subscript \\(V\\) denotes that the magnetic fields are vertical. A horizontal
+subscript :math:`V` denotes that the magnetic fields are vertical. A horizontal
 loop of current acts like a vertical magnetic dipole. A plot of this function
 is shown below:
 
@@ -77,17 +77,17 @@ is shown below:
     :align: center
     :scale: 100 %
 
-    Relative response versus depth for vertical dipoles. \\(\\phi_V(z)\\) is the relative contribution to \\(H_s\\). from material in a thin layer dz located at (normalized) depth \\(z\\).
+    Relative response versus depth for vertical dipoles. :math:`\phi_V(z)` is the relative contribution to :math:`H_s`. from material in a thin layer dz located at (normalized) depth :math:`z`.
 
 Note that the vertical magnetic dipole has zero sensitivity at the surface,
-has a maximum at about \\(z = 0.4\\) and is substantially diminished by \\(z =
-2.0\\). It is this type of diagram which says that the maximum depth of
+has a maximum at about :math:`z = 0.4` and is substantially diminished by :math:`z =
+2.0`. It is this type of diagram which says that the maximum depth of
 investigation is limited to about twice the coil separation. This rule of
 thumb however is valid only when the coil separation is much less than the
 skin depth.
 
 The response function from the horizontal magnetic is very different. Let
-\\(\\phi_H (z)\\) denote the relative contribution that arises from a
+:math:`\phi_H (z)` denote the relative contribution that arises from a
 horizontal magnetic dipole source and receiver. It has a maximum at the
 surface, so it is sensitive to the conductivity there, and it decreases
 monotonically with depth.
@@ -113,7 +113,7 @@ are useful for carrying out computations. Define
         R_H (z) &= \int_{z}^{\infty} \phi_H (z) dz
 
 to be the relative contribution to the secondary magnetic field obtained from
-all of the material below a depth \\(z\\). The diagrams are plotted below:
+all of the material below a depth :math:`z`. The diagrams are plotted below:
 
  .. figure:: ./images/cumulative_response.jpg
     :align: center
@@ -127,8 +127,8 @@ is only half that amount.
 Apparent Conductivity from the Quadrature Component
 ===================================================
 
-If the spacing \\(s\\) between the coils is much less than the skin depth,
-that is, \\(s << \\delta\\) then the ratio of secondary to primary field is
+If the spacing :math:`s` between the coils is much less than the skin depth,
+that is, :math:`s << \delta` then the ratio of secondary to primary field is
 approximately
 
 .. math::
@@ -137,13 +137,13 @@ approximately
 The response is purely imaginary or is found in the quadrature component. The
 constant conductivity which gives rise to the observed response can be found
 from the above formula. It is referred to as the apparent conductivity
-\\(\\sigma_a\\).
+:math:`\sigma_a`.
 
 .. math::
         \sigma_a = \frac{4}{\omega \mu_0 \sigma s^2} \left| \frac{H_s}{H_p} \right| 
 
 Further insight about the apparent conductivity is obtained by incorporating
-the response curves \\(\\phi_V(z)\\) and \\(\\phi_H(z)\\). We have
+the response curves :math:`\phi_V(z)` and :math:`\phi_H(z)`. We have
 
 .. math::
         \sigma_a &= \int_{0}^{\infty} \phi_V (z) \sigma (z) dz \\[0.8em]
@@ -154,7 +154,7 @@ respectively for the vertical and horizontal dipoles.
 Multilayer Earth Structures
 ===========================
 
-Under the assumption that \\( s << \\delta \\)  then the above formulae can be
+Under the assumption that :math:`s << \delta`  then the above formulae can be
 used to predict the apparent conductivity from a multilayered earth, or to
 used measured apparent conductivities to estimate the individual layer
 thickness and conductivities. For instance if we coplanar coils on the earth's

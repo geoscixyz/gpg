@@ -11,9 +11,9 @@ The strength of the primary field depends upon:
 
 Considerable insight can be obtained by first ignoring the geometry of the
 source and observing how a plane electromagnetic wave decays as it propagates
-into the earth. An incoming sinusoidal wave with frequency \\(\\omega = 2 \\pi
-f\\) travels in the atmosphere at the speed of light \\(c = 3 \\times 10^8\\)
-m/s and has a wavelength \\(\\lambda = c/f\\). When the wave enters the
+into the earth. An incoming sinusoidal wave with frequency :math:`\omega = 2 \pi
+f` travels in the atmosphere at the speed of light :math:`c = 3 \times 10^8`
+m/s and has a wavelength :math:`\lambda = c/f`. When the wave enters the
 conducting earth it still propagates as a sinusoid but it travels much slower
 and attenuates rapidly. An example, with numbers for speed and wavelength is
 given below.
@@ -38,8 +38,8 @@ diagram given below.
        \mid H \mid &= H_0 e^\frac{-z}{\delta}
 
 **Skin Depth:** This is the depth by which the amplitude has decayed to
-\\(1/e\\) of its surface value. For a uniform halfspace of conductivity
-\\(\\sigma\\) the skin depth \\(\\delta\\) is
+:math:`1/e` of its surface value. For a uniform halfspace of conductivity
+:math:`\sigma` the skin depth :math:`\delta` is
 
 .. math::
         \delta = \sqrt{\frac{2}{\mu_0 \omega \sigma} } \simeq 500 \sqrt{\frac{1}{\omega f}} = 500 \sqrt{\frac{\rho}{f}} \text{meters}

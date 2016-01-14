@@ -11,8 +11,8 @@ Electrical conductivity (or resistivity) is a bulk property of material
 describing how well that material allows electric currents to flow through it.
 Consider current flowing through the unit cube of material shown to the right:
 
-**Conductivity**, \\(\\sigma\\), is the inverse of resistivity: \\(\\sigma =
-1/\\rho\\). Conductivity is given in units of Siemens per meter, or S/m.
+**Conductivity**, :math:`\sigma`, is the inverse of resistivity: :math:`\sigma =
+1/\rho`. Conductivity is given in units of Siemens per meter, or S/m.
 Millisiemens per meter (mS/m) are often used; 1000 mS/m = 1 S/m. So 1 mS/m =
 1000 Ohm-m.
 

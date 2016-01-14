@@ -49,7 +49,7 @@ elevation expressed as a change in travel time is
 	\Delta t = \frac{h_s}{v_1} - \frac{h_r}{v_1}
 
 and is subtracted from the record. That is, the whole seismic record is
-shifted in time by a value \\(\\Delta t\\).
+shifted in time by a value :math:`\Delta t`.
 
 After static correction, the subsurface events will look more like an
 hyperbola and they will be ready for velocity analysis, NMO and stacking.

@@ -11,7 +11,7 @@ The earth's shape can be approximated by an oblate (squashed) ellipsoid
 approximating mean sea-level. The "flattening" of the ellipsoid is at the
 poles; i.e. radius at equator > radius at poles. The reference spheroid is
 described by the following equation, which gives the theoretical value of
-gravity as a function of latitude \\(\\phi\\). Coefficients were standardized
+gravity as a function of latitude :math:`\phi`. Coefficients were standardized
 in 1979, but earlier work may have used other coefficients. Plugging in 0 and
 90 degrees yields approximately 9.780 m/s\ :sup:`2`\  and 9.832 m/s\ :sup:`2`\
 for values of gravitational acceleration at the equator and poles
@@ -86,7 +86,7 @@ Gravity gradiometry
 
 The gradients of Earth's gravity field can be estimated from a simple map of
 gz by calculating horizontal first and second derivatives. Actually measuring
-the three gradients (\\(g_z\\), \\(g_x\\), \\(g_y\\)) may be desirable for
+the three gradients (:math:`g_z`, :math:`g_x`, :math:`g_y`) may be desirable for
 several reasons.
 
 However, interpretation of gravity gradiometry is not trivial. There was a
@@ -110,7 +110,7 @@ Here are notes on characteristics of a modern, semi-automatic ground-based, port
 
 - Instruments correct for leveling errors up to 200 sec of arc. 
 
-- \\(g\\) is sampled at 1 s intervals and no result is displayed until it is
+- :math:`g` is sampled at 1 s intervals and no result is displayed until it is
   deemed statistically reliable by the on-board micro-computer.
 
 - Movements are now "static," meaning there is no need to "amplify" the mass
@@ -140,7 +140,7 @@ laser interferometer. Specifications include:
 
 - Operating dynamic range: world-wide
 
-For a good summary of the instrument, how it works, applications, and current
-users, see the company's web page at http://www.microgsolutions.com/index.html
+.. For a good summary of the instrument, how it works, applications, and current
+.. users, see the company's web page at http://www.microgsolutions.com/index.html
 
 .. _Geodetic Survey Division: http://webapp.geod.nrcan.gc.ca/geod/

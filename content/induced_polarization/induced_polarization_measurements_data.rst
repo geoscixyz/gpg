@@ -14,8 +14,8 @@ of frequency) of the phenomenon is observed in the frequency domain.
 Two types of time domain data
 =============================
 
-Consider the experiment illustrated in the following figure. Current, \\(I\\),
-is injected into the ground at the source electrodes and voltage, \\(V\\), is
+Consider the experiment illustrated in the following figure. Current, :math:`I`,
+is injected into the ground at the source electrodes and voltage, :math:`V`, is
 measured at the potential electrodes. The source is DC (direct current) in the
 sense that when it is on, there is no variation. However, in this case it is
 turned on and off with a duty cycle as shown in the figure. Two methods of
@@ -35,14 +35,14 @@ measuring chargeability in the time domain are described below.
    measure it exactly in the field. The figure to the right shows voltage
    measured when the transmitter is first turned on and then turned off some time
    later. Using parameters from this figure, one definition of chargeability is
-   \\(M = V_S / V_P\\) where \\(V_S\\) and \\(V_P\\) are the steady state and
+   :math:`M = V_S / V_P` where :math:`V_S` and :math:`V_P` are the steady state and
    "secondary" potentials, respectively.
 
-	- The leading edge potential \\(V_{\\sigma}\\) is what would be measured in
+	- The leading edge potential :math:`V_{\sigma}` is what would be measured in
 	  the absence of chargeability. This potential would yield the ground's
 	  resistivity.
 
-	- The steady state, \\(V_P\\) (with a subscript *m* in the figure above),
+	- The steady state, :math:`V_P` (with a subscript *m* in the figure above),
 	  often referred to as the primary potential, is the combined effect of
 	  current flowing in the ground and charges built up under the influence of
 	  the imposed electric field.
@@ -50,17 +50,17 @@ measuring chargeability in the time domain are described below.
 	- The secondary potential is entirely due to the charge imbalance resulting
 	  from the build-up of charge.
 
-	- Using this form, chargeability \\(M\\) will be \\(0 ≤ M < 1\\). If \\(M =
-	  0\\) the measured potential will follow the input current waveform exactly
+	- Using this form, chargeability :math:`M` will be :math:`0 ≤ M < 1`. If :math:`M =
+	  0` the measured potential will follow the input current waveform exactly
 	  with no charging or discharging involved, as shown in the first column of
 	  the figure above.
 
 2. The most commonly measured form of time domain IP is the normalized area
    under the decay curve. It can be represented by the following equation, using
    parameters specified in the adjacent figure. The decaying potential that
-   follows \\(V_s\\) is written as \\(V_s (t)\\).
+   follows :math:`V_s` is written as :math:`V_s (t)`.
 
-Chargeability, \\(M\\), is essentially the red area under the decay curve,
+Chargeability, :math:`M`, is essentially the red area under the decay curve,
 normalized by the source voltage.
 
  .. math::
@@ -87,10 +87,10 @@ described below.
    frequency effect*" or PFE. Since the ground has less time to respond at higher
    frequencies, the signal is expected to be smaller at the higher frequency.
    Expressions for PFE are shown in the equations below. The data used in this
-   calculation are illustrated in the figure below. Recall that \\(\\rho_a= K
-   \\mid V \\mid / I \\) , where \\(K\\) is the geometric factor based upon
+   calculation are illustrated in the figure below. Recall that :math:`\rho_a= K
+   \mid V \mid / I` , where :math:`K` is the geometric factor based upon
    electrode geometry (see the Geophysical surveys chapter, "DC resistivity"
-   section), \\(V\\) is the measured potential, and \\(I\\) is the source
+   section), :math:`V` is the measured potential, and :math:`I` is the source
    current.
 
 
@@ -126,15 +126,15 @@ but they do not produce the same numbers. In fact, the units of the various
 measurements are different. Nevertheless, the following approximate rule of
 thumb allows conversion between the different data sets:
 
-										+------------+------------+-----------+
-										| A chargeability of \\(M = 0.1\\) is |
-										+============+============+===========+
-										|               10 PFE                |
-										+------------+------------+-----------+
-										|               70 mrad               |
-										+------------+------------+-----------+
-										|               70 msec               |
-										+------------+------------+-----------+
+										+------------+------------+------------+
+										| A chargeability of :math:`M = 0.1` is|
+										+============+============+============+
+										|               10 PFE                 |
+										+------------+------------+------------+
+										|               70 mrad                |
+										+------------+------------+------------+
+										|               70 msec                |
+										+------------+------------+------------+
 
 Data acquisition
 ================
@@ -143,13 +143,13 @@ Time domain IP
 --------------
 
 As noted above, when time domain IP is recorded, chargeability is measured as
-the area under the decay curve normalized by "primary" voltage \\(V_P\\),
+the area under the decay curve normalized by "primary" voltage :math:`V_P`,
 using
 
 .. math::
   		M = \frac{1}{V_P} \int_{t_1}^{t_2}   \! V_S(t) \, \mathrm{d}t
 
-The \\(t_1\\) and \\(t_2\\) times may be any limits within the off-time, and
+The :math:`t_1` and :math:`t_2` times may be any limits within the off-time, and
 there are not really any standards, so comparison of different surveys can be
 difficult.
 
@@ -164,13 +164,13 @@ removed. Recording both positive and negative cycles allows the "off-time"
 potential (i.e. voltages recorded when the transmitter is off) to be
 estimated, and any non-zero component removed.
 
-Many instruments record measured voltage, \\(V_P\\), just before the
+Many instruments record measured voltage, :math:`V_P`, just before the
 transmitter is turned off, and then again 10 times while voltages decay during
 the off times. The results can then provide a calculated chargeability and an
 estimated spontaneous potential. The adjacent figure illustrates each measured
 parameter. Note that if the transmitter is not on for a long enough time,
-\\(V_P\\) will be measured before the charging time is finished, resulting in
-a voltage that is smaller than the actual \\(V_P\\).
+:math:`V_P` will be measured before the charging time is finished, resulting in
+a voltage that is smaller than the actual :math:`V_P`.
 
 
 .. figure:: ./images/transmitter_on_off.gif
@@ -193,7 +193,7 @@ The percent frequency effect was defined above as either
 	  FE = \frac{V(f_2) - V(f_1)}{V(f_1)}
 
 
-Where \\(f_1\\) is the DC or very low frequency, and \\(f_2\\) is a higher
+Where :math:`f_1` is the DC or very low frequency, and :math:`f_2` is a higher
 frequency (a few tens to hundreds of Hertz) the second type of resistivities
 can be measured at frequencies on the order of a few tens to hundreds of
 Hertz.

@@ -31,7 +31,7 @@ The path of the current in the earth after it is injected with two electrodes
 depends upon the distribution of electrical resistivity. If the Earth is
 uniform, current flows in a regular three dimensional pattern under the
 electrodes as illustrated Figure 1. The north slice number 8 (flagged with a
-\\(\\ast\\)) is similar to the type of image commonly shown in texts to
+:math:`\ast`) is similar to the type of image commonly shown in texts to
 indicate how current flows in two dimensions under a pair of source
 electrodes.
 
@@ -92,9 +92,9 @@ Measurements: potential difference
 
 It is tempting to compare the earth to a resistor in an electric circuit
 (Figure 4a). However, it is important to recognize the difference between
-resistance and resistivity. If we apply Ohm's law, \\(R=V/I\\), to the
+resistance and resistivity. If we apply Ohm's law, :math:`R=V/I`, to the
 situation in Figure 4b, we will have a resistance, which is in units of Ohms.
-This is *not*\\( \\) the ground's resistivity, which has units of Ohm-m. We do
+This is *not*:math:`` the ground's resistivity, which has units of Ohm-m. We do
 not want the resistance of this circuit; we want a measure of the ground's
 resistivity.
 
@@ -112,8 +112,8 @@ resistivity.
 
 	Figure 4b
 
-In order to derive the relation between measurements (\\(I\\), \\(V\\),
-geometry) and the required physical property (resistivity, \\(\\rho\\)  ) we
+In order to derive the relation between measurements (:math:`I`, :math:`V`,
+geometry) and the required physical property (resistivity, :math:`\rho`  ) we
 start from first principles (see the section called "Physical principles of DC
 resistivity". The derivation is a three step process:
 	
@@ -141,13 +141,13 @@ Figure 5 as follows (again, details are in the principles section):
 
 	\Delta V &=I \rho G
 
-**G** is a geometric factor (including the factor \\(1/2 \\pi\\)), which depends
+**G** is a geometric factor (including the factor :math:`1/2 \pi`), which depends
 upon the locations of electrodes.
 
 Data: Apparent resistivity
 ==========================
 
-Rearranging the last expression above, we define *apparent resistivity*\\( \\)
+Rearranging the last expression above, we define *apparent resistivity*:math:``
 as the resistivity of a halfspace which produces the observed potential from a
 particular electrode geometry:
 
@@ -167,16 +167,16 @@ more complicated, the measured apparent resistivity will lie between the
 maximum and the minimum of the true resistivities.
 
 For any survey we can compute the apparent resistivity if measured voltage,
-\\(I\\), and the geometric factor, \\(G\\) are known. Sometimes there is a
-simple expression for \\(G\\). For example, if electrodes are spaced equally
-by a distance \\(a\\), then:
+:math:`I`, and the geometric factor, :math:`G` are known. Sometimes there is a
+simple expression for :math:`G`. For example, if electrodes are spaced equally
+by a distance :math:`a`, then:
 
  .. math::
 		G = \frac{ \frac{1}{a} - \frac{1}{2a}	 - \frac{1}{2a} + \frac{1}{a} }{2 \pi}	= \frac{1}{2 \pi a}
 
 This is the case for the "Wenner" array shown in Figure 6, which summarizes
 the geometric factor for a variety of common electrode configurations. Note
-that in this figure, \\(k=1/G\\) . Usage of the various arrays is illustrated
+that in this figure, :math:`k=1/G` . Usage of the various arrays is illustrated
 in the next section.
 
 .. figure:: ./images/figure6.gif
@@ -292,7 +292,7 @@ is tricky and requires some experience.
 
 In the animation in Figure 10, the process of gathering and plotting profiling
 data is illustrated. The survey illustrated involves a dipole-dipole array
-with \\(a = 2\\) meters, and \\(n = 4\\).
+with :math:`a = 2` meters, and :math:`n = 4`.
 
  .. raw:: html
     :file: figure10.html
@@ -333,5 +333,5 @@ Very little processing is applied to most raw resistivity data, other than to
 convert from apparent resistivities to potentials if that is needed for input
 to inversion programs. This is accomplished by using the apparent resistivity
 formula for the array in use, and the known geometric factor. If the current,
-\\(I\\), is taken to be 1 (even if it was not 1 Amp in the field), then the
+:math:`I`, is taken to be 1 (even if it was not 1 Amp in the field), then the
 result is a normalized potential in units of volts.

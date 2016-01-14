@@ -23,7 +23,7 @@ data from MAGSAT, consisting of measurements of vector components and total
 intensity of the geomagnetic field between 350 and 560 km altitude.
 
 To correct data sets which had older versions of reference fields removed, add
-\\( (F_0 - F_n) \\)to each data point, where the two parameters are total
+:math:`(F_0 - F_n)` to each data point, where the two parameters are total
 intensity values computed from the old and new reference fields respectively.
 See Peddie N.W. 1982, 1983, and 1986 for details. Charts of many types are
 available on-line, as downloadable postscript files, and for sale (less than

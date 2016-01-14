@@ -26,7 +26,7 @@ The procedure for generating the ideal seismogram is as follows:
     depth. This yields a reflection log.
 
 (d) Convert to time. Each layer has a defined velocity. The incremental (two-
-    way) travel time on each layer is \\(\\Delta t_i = \\rho_i / v_i\\). This
+    way) travel time on each layer is :math:`\Delta t_i = \rho_i / v_i`. This
     yields a reflection function on the two-way travel time domain.
 
 (e) Convolve the reflectivity function with a source wavelet. This yields the
@@ -38,9 +38,9 @@ The figure below illustrates the procedure:
 	:align: right
 	:scale: 110 %
 
-If the amplitude of the incident ray is \\(A_0\\) and the amplitude of
-reflection is \\(A_1\\), then the reflection coefficient \\(r\\) is
-\\(A_1/A_0\\).
+If the amplitude of the incident ray is :math:`A_0` and the amplitude of
+reflection is :math:`A_1`, then the reflection coefficient :math:`r` is
+:math:`A_1/A_0`.
 
 The acoustic impedance for the ith layer is given by:
 
@@ -48,8 +48,8 @@ The acoustic impedance for the ith layer is given by:
 	r_i =\frac{Z_{i+1} - Z_i}{Z_{i+1} + Z_i}
 
 
-The transmitted wave has amplitude \\(A_2\\), and the transmission coefficient
-\\(A_2\\) to \\(A_0\\) is
+The transmitted wave has amplitude :math:`A_2`, and the transmission coefficient
+:math:`A_2` to :math:`A_0` is
 
 .. math::
 	t_i = \frac{2Z_i}{Z_{i+1} + Z_i}

@@ -36,7 +36,7 @@ Two things happen with this procedure
 The residual data would be similar to that in which the IGRF
 (:doc:`magnetics_IGRF`) has been removed.
 
-The residual field, \\(\\Delta B\\), contains the sought anomalous field but
+The residual field, :math:`\Delta B`, contains the sought anomalous field but
 it may also have some broad-scale background or "regional field". Thus
 
 .. math::
@@ -139,7 +139,7 @@ here:
     :file: data_plotting1.html
 
 Large data sets are commonly gathered using airborne instruments. They may
-involve \\(10^5\\) to \\(10^6\\) data points to show magnetic variations over many square
+involve :math:`10^5` to :math:`10^6` data points to show magnetic variations over many square
 kilometers. An example of a large airborne data set is shown to the right,
 with a larger version, including alternative colour scale schemes, `shown in a
 sidebar`_.

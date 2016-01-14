@@ -30,17 +30,17 @@ proceed as follows.
  		t^2 (x) = t_0^2 + \frac{x^2}{v_{st}^2}
 
 
-where \\(v_{st}\\) is a "stacking" velocity, or sometimes called the Normal Moveout Velocity, \\(v_{nmo}\\). 
+where :math:`v_{st}` is a "stacking" velocity, or sometimes called the Normal Moveout Velocity, :math:`v_{nmo}`. 
 
 
 2. For each reflection event hyperbola, perform a velocity analysis to find
-   \\(v_{st}\\). This is done by first choosing \\(t_0\\). Then choose a trial
-   value of velocity \\(v_1\\). The associated travel time hyperbola is generated
+   :math:`v_{st}`. This is done by first choosing :math:`t_0`. Then choose a trial
+   value of velocity :math:`v_1`. The associated travel time hyperbola is generated
    and it forms a trajectory on the CMP gather. Sum the energy of the seismic
    traces along the trajectory and plot this value on a graph of velocity versus
    energy. Repeat this procedure for different trial velocities. Choose as
-   \\(v_{st}\\) the velocity that yields the largest energy. In the diagram below
-   \\(v_2\\) represents the stacking velocity. The term cross power can be
+   :math:`v_{st}` the velocity that yields the largest energy. In the diagram below
+   :math:`v_2` represents the stacking velocity. The term cross power can be
    interpreted as total energy.
 
 .. figure:: ./images/stacking_velocity.gif
@@ -50,8 +50,8 @@ where \\(v_{st}\\) is a "stacking" velocity, or sometimes called the Normal Move
 	From Kearey, Philip and Micheal Brooks, An Introduction to Geophysical Exploration. 2nd ed. Blackwell Science: 1991.
 
 3. Calculate the Normal Moveout Correction: Again, using the hyperbola
-   corresponding to \\(v_st\\), compute the normal moveout for each trace and
-   then adjust the reflection time by the amount \\(\\Delta T\\).
+   corresponding to :math:`v_st`, compute the normal moveout for each trace and
+   then adjust the reflection time by the amount :math:`\Delta T`.
 
 
 .. figure:: ./images/NMO_correction.gif
@@ -116,7 +116,7 @@ Summary: Essential Elements in CMP Processing
 	
 .. <<editorial comment>> The original GPG had a "click to enlarge feature for the workfow." The small and large image file names are: workflow.gif to big_workflow.gif
 
-There are many different processing steps that *could* \\( \\) be performed.
+There are many different processing steps that *could* :math:`` be performed.
 An example from GS Baker, 1999, is shown in the flow chart image here (click
 for a larger version.). However, the essential steps are summarized in the
 following short list.
