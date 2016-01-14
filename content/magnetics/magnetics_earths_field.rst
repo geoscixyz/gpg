@@ -117,7 +117,7 @@ primarily to currents in the ionized upper atmosphere.
   action on the ionosphere and magnetosphere. The image shows an artist's
   rendition of the charged particles interacting with Earth's magnetic field.
   An overview of Earth's magnetic field (with good images, graphs, etc.) can
-  be found on the British Geological Survey's`geomagnetics website`_.
+  be found on the British Geological Survey's `geomagnetics website`_.
 
 .. _geomagnetics website: http://www.geomag.bgs.ac.uk/
 

@@ -41,7 +41,7 @@ water, whereas :math:`\epsilon_R < 10` for most other common materials.
 	:align: center
 	:scale: 100 %
 
-	A dielectric permittivity spectrum over a wide range of frequencies, for real (top curve) and "imaginary" (bottom curve) components. Borrowed from`Wikipedia Dielectric Permittivity Article`_.
+	A dielectric permittivity spectrum over a wide range of frequencies, for real (top curve) and "imaginary" (bottom curve) components. Borrowed from `Wikipedia Dielectric Permittivity Article`_.
 
 The so-called "imaginary" part, :math:`\epsilon_r^{\prime\prime}`,  is a loss
 component that generally indicates how much energy is dissipated at the

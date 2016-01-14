@@ -120,7 +120,7 @@ the lower sensitivity of airborne measurements is sufficient for the task.
 Currently airborne surveys are sensitive enough for most oil and gas
 exploration problems, and for some large mineral exploration problems, but not
 sensitive enough for engineeri & environmentalng scale work. If you are
-interested (it is short and easy) see`Turner Valley`_, Canada – A Case
+interested (it is short and easy) see `Turner Valley`_, Canada – A Case
 History in Contemporary Airborne Gravity (links to the Sander Geophysics
 Limited (SGL) website), by J.W. Peirce1, S. Sander2, R.A. Charters1, and V.
 Lavoie, presented at the EAGE 64th Conference & Exhibition — Florence, Italy,
@@ -150,7 +150,7 @@ useful. But there is much research needed to learn how best to make use of the
 results.
 
 Maps showing what measurements of gravitational gradients look like are given
-on`a separate page of images`_. Evidently, different components emphasize
+on `a separate page of images`_. Evidently, different components emphasize
 different aspects of a buried density contrast or target. Look at these
 figures and consider these questions:
 
@@ -176,7 +176,7 @@ of targets can be detected?
 #. Anticipated limit for future systems is a little better.
 
 Two (somewhat complex) figures summarizing the limits of detectability for
-various ore bodies (mostly in Australia) are provided separately`here`_
+various ore bodies (mostly in Australia) are provided separately `here`_
 (PDF). Keep in mind that questions about structures associated with oil and
 gas are often larger targets than those associated with mineral exploration,
 so these types of cutting edge procedures are so far more directly useful to

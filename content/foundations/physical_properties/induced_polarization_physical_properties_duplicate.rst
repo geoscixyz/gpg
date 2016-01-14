@@ -25,7 +25,7 @@ measurable effect.
 
 
 Induced polarization can also be measured using low frequency sinusoidal
-signals, as discussed in the`induced polarization measurements data`_ section
+signals, as discussed in the `induced polarization measurements data`_ section
 of this chapter. The signals or data that are measured depend upon which of
 the various types of source signals are used. Note that IP surveys always
 include resistivity measurements because the electrical resistivity of teh
@@ -63,7 +63,7 @@ caused by many factors, not all of which are completely understood. If ground
 is chargeable, it responds as if resistivity was a complex quantity - it
 behaves somewhat like a leaky capacitor. Therefore the chargeability can be
 measured in a number of ways using time domain or frequency domain techniques
-(detailed in the section`induced polarization measurements data`_). Aspects
+(detailed in the section `induced polarization measurements data`_). Aspects
 affecting the chargeability of a sample include:
 
  - the grain size of particles in the sample;
