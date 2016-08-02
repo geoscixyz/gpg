@@ -3,6 +3,113 @@
 Seismic Velocity
 ****************
 
+Seismic velocity represents the diagnostic physical property in seismic refraction and seismic reflection surveys.
+Seismic velocity defines the speed at which elastic waves propagate through a particular medium.
+In seismology, there are two fundamental types of elastic waves: pressure waves ("P-waves") and shear-waves ("S-waves").
+
+For P-waves, compressional and extentional deformation defining the wave occurs along the direction of wave propagation.
+The P-wave velocity can be related to the elastic properties of the medium by the following expression:
+
+.. math::
+	v_p = \sqrt{\frac{K+4/3\mu}{\rho}} 
+	
+
+For S-waves, the elastic deformation occurs transverse (or parallel) to the direction of wave propagation.
+The S-wave velocity can be related to the elastic properties of the medium by the following expression:
+
+.. math::
+	v_s = \sqrt{\frac{\mu}{\rho}}
+
+	
+Symbols used to define P-wave and S-wave velocities, as well as the elastic properties on which they depend, are summarized below:
+
+.. math::
+	v_p&:\textrm{ p-wave velocity (m/s or km/s)} \\
+	v_s&:\textrm{ s-wave velocity (m/s or km/s)} \\
+	K&:\textrm{ Bulk-modulus or constant of incompressibility (units)} \\
+	\mu&:\textrm{ Shear-modulus or modulus of rigidity (units)} \\
+	\rho&:\textrm{ Density (kg/m}^3\textrm{)}
+
+
+P-Wave and S-Wave Velocity Measurements
+=======================================
+
+Need a simple description
+
+
+
+P-Wave and S-Wave Velocities in Common Rocks
+============================================
+
+P-waves and S-waves travel at different speeds depending the media they are propagating through; with P-waves travelling faster than S-waves.
+P-waves are able to propagate through solids and fluids, however, S-waves can only propagate through solid materials.
+Given that there are so many factors which impact the velocity of seismic waves, it is impossible to assign a single value to a particular rock type.
+Therefore, the seismic velocities of rocks are generally defined over a range.
+The range of p-wave and s-wave velocities for common rock types are shown below:
+
++---------------------------------+--------------+--------------+
+|      **Material**               | p-wave (m/s) | s-wave (m/s) |
++=================================+==============+==============+
+| Air                             |  343         | N/A          |
++---------------------------------+--------------+--------------+
+| Water                           | 1450 - 1500  | N/A          |
++---------------------------------+--------------+--------------+
+| Ice                             | 3400 - 3800  | 1700 - 1900  |
++---------------------------------+--------------+--------------+
+| Oil                             | 1200 - 1250  | N/A          |
++---------------------------------+--------------+--------------+
+| Vegetal Soil                    |  300 - 700   |  100 - 300   |
++---------------------------------+--------------+--------------+
+| Dry Sands                       |  400 - 1200  |  100 - 500   |
++---------------------------------+--------------+--------------+
+| Wet Sands                       | 1500 - 2000  | 400 - 600    |
++---------------------------------+--------------+--------------+
+| Saturated Shales and Clays      | 1100 - 2500  | 200 - 800    |
++---------------------------------+--------------+--------------+
+| Porous and Saturated Sandstones | 2000 - 3500  | 800 - 1800   |
++---------------------------------+--------------+--------------+
+| Marls                           | 2000 - 3000  | 750 - 1500   |
++---------------------------------+--------------+--------------+
+| Chalk                           | 2300 - 2600  | 1100 - 1300  |
++---------------------------------+--------------+--------------+
+| Coal                            | 2200 - 2700  | 1000 - 1400  |
++---------------------------------+--------------+--------------+
+| Salt                            | 4500 - 5500  | 2500 - 3100  |
++---------------------------------+--------------+--------------+
+| Anhydrites                      | 4000 - 5500  | 2200 - 3100  |
++---------------------------------+--------------+--------------+
+| Limestones                      | 3500 - 6000  | 2000 - 3300  |
++---------------------------------+--------------+--------------+
+| Dolomites                       | 3500 - 6500  | 1900 - 3600  |
++---------------------------------+--------------+--------------+
+| Granite                         | 4500 - 6000  | 2500 - 3300  |
++---------------------------------+--------------+--------------+
+| Basalt                          | 5000 - 6000  | 2800 - 2400  |
++---------------------------------+--------------+--------------+
+| Gneiss                          | 4400 - 5200  | 2700 - 3200  |
++---------------------------------+--------------+--------------+
+
+
+
+Factors Impacting the Seismic Velocity
+======================================
+
+Given that P-wave and S-wave velocities both depend on the shear modulus and density of the material, many of the factors which impact the P-wave velocity will affect the S-wave velocity in a similar manner.
+Below are some of the factors which are known to affect the seismic velocities in materials.
+
+Basically paraphrase or copy what is below.
+
+
+
+
+
+
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
 Relating geology to velocity
 ============================
 

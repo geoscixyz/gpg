@@ -3,6 +3,63 @@
 Density
 *******
 
+Density (:math:`\rho`) is the diagnostic physical property used in gravity surveys.
+Density is defined as the mass (:math:`m`) contained within a material per unit volume (:math:`V`):
+
+.. math::
+	\rho = \frac{m}{V}
+	
+Please note that mass (the quantity of matter within an object) should not be confused with weight (the downward force exerted by an object due to gravity).
+
+**Specific Gravity**: In some cases, the density of a material is represented instead by its specific gravity.
+Specific gravity defines the ratio of a material's density to that of water:
+
+.. math::
+	S.G. = \frac{\rho}{\rho_w}
+
+where the density of water (:math:`\rho_w`) is 1,000 kg/m :math:`\!^3` (or 1 g/cm :math:`\!^3`).
+Parameters used to define density and their associated units are summarized below:
+
+.. math::
+	\rho & :\textrm{Density (g/cm}^3\textrm{ or kg/m}^3) \\
+	m & : \textrm{Mass (g or kg)} \\
+	V & :\textrm{Volume (cm}^3\textrm{ or m}^3) \\
+	S.G. & : \textrm{Specific Gravity (unitless)}
+
+
+
+
+Density Measurements
+====================
+
+Acquiring the density of a material requires an appropriate method of measurement.
+Below are three ways to measure density for various rock types.
+
+Fill in using what is below
+
+
+Density of Common Rocks
+=======================
+
+Fill in using what is below, find a better table, or paraphrase
+
+
+
+
+Factors Impacting Rock Density
+==============================
+
+Needs to be finished
+
+
+
+
+
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
 Some Definitions
 ================
 

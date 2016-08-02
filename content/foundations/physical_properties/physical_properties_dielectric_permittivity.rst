@@ -1,7 +1,90 @@
 .. _physical_properties_dielectric_permittivity:
 
-Dielectric permittivity
+Dielectric Permittivity
 ***********************
+
+The dielectric permittivity (:math:`\varepsilon`) represents an important diagnostic physical property in ground-penetrating radar; as the attenuation and velocity of electromagnetic waves associated this survey method are strongly dependent on the dielectric permittivity.
+Dielectric permittivity is defined as the ratio between the electric field (:math:`\vec E`) within a dielectric material and the corresponding electric displacement (:math:`\vec D`):
+
+.. math::
+	\vec D = \varepsilon \vec E
+
+When exposed to an electric field, the average position of positive and negative charges within most materials become slightly separated.
+This separation results in a net electric polarization (:math:`\vec P`) within the material.
+The electric field, electric displacement and electric polarization are related by the following expression:
+
+.. math::
+	\vec D = \varepsilon_0 \vec E + \vec P
+	
+
+where the permeability of free-space (:math:`\varepsilon_0 = 8.8541878176 \times 10^{-12}` F/m) defines the relationship between :math:`\vec D` and :math:`\vec E` if the electric polarization were zero.
+Therefore, the dielectric permittivity and the electric displacement define how strongly a material becomes electrically polarized under the influence of an electric field.
+
+**Relative Permittivity**: The dielectric properties of a material are frequently expressed using the relative permittivity (:math:`\varepsilon_r`), where:
+
+.. math::
+	\varepsilon_r = \frac{\varepsilon}{\varepsilon_0}
+	
+
+**Dielectric Permittivity and Frequency-Dependence**: The electric polarization which is generated within dielectric materials does not occur instantaneously and depends on the frequency of the electric field.
+Therefore, the dielectric permittivity must be expressed as a frequency-dependent quantity with both a real part (:math:`\varepsilon^\prime`) and an imaginary part (:math:`\varepsilon^{\prime\prime}`):
+
+.. math::
+	\varepsilon (\omega) = \varepsilon^\prime (\omega) + i \varepsilon^{\prime\prime} (\omega)
+
+
+where :math:`i = \sqrt{-1}`.
+
+- Significance of Re and Im to energy storage and dissipation
+
+- That generally, permittivity decreases as frequency increases
+
+
+
+.. math::
+	\vec E &: \textrm{Electric Field ()} \\
+	\vec D &: \textrm{Electric Displacement ()} \\
+	\vec P &: \textrm{Electric Polarization ()} \\
+	\varepsilon &:\textrm{ Dielectric permittivity (F/m)} \\
+	\varepsilon_0 &:\textrm{ Permittivity of free-space ( = 8.8541878176 10}^{-12}\textrm{ F/m)} \\
+	\varepsilon_r &:\textrm{ Relative permittivity ((F/m)/(F/m))} \\
+	\varepsilon^\prime &:\textrm{ Real permittivity} \\
+	\varepsilon^{\prime\prime} &:\textrm{ Imaginary permittivity} 
+	
+
+
+
+Measurements for Dielectric Permittivity
+========================================
+
+- Experiment by using the material to fill a parallel plate capacitor
+
+
+
+
+
+Electrical Permittivity for Common Rocks
+========================================
+
+- Really need to define specifically what the numbers mean.
+
+- Usually, the numbers represent the real component at a particularly relevant frequency
+
+
+
+
+Factors Impacting Electric Permittivity
+=======================================
+
+
+
+**Water**:
+
+
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 **Dielectric permittivity  :math:`(\epsilon)`:** This physical property
 quantifies how easily material becomes polarized in the presence of an
