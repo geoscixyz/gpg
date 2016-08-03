@@ -20,12 +20,17 @@ Specific gravity defines the ratio of a material's density to that of water:
 where the density of water (:math:`\rho_w`) is 1,000 kg/m :math:`\!^3` (or 1 g/cm :math:`\!^3`).
 Parameters used to define density and their associated units are summarized below:
 
-.. math::
-	\rho & :\textrm{Density (g/cm}^3\textrm{ or kg/m}^3) \\
-	m & : \textrm{Mass (g or kg)} \\
-	V & :\textrm{Volume (cm}^3\textrm{ or m}^3) \\
-	S.G. & : \textrm{Specific Gravity (unitless)}
-
++------------------+--------------+----------------------------------------+
+| Property         | Symbol       | Units                                  |
++==================+==============+========================================+
+| Density          | :math:`\rho` | g/cm :math:`\!^3` or kg/m :math:`\!^3` |
++------------------+--------------+----------------------------------------+
+| Mass             | :math:`m`    | g or kg                                |
++------------------+--------------+----------------------------------------+
+| Volume           | :math:`V`    | cm :math:`\!^3` or m :math:`\!^3`      |
++------------------+--------------+----------------------------------------+
+| Specific Gravity | :math:`S.G.` | *None                                  |
++------------------+--------------+----------------------------------------+
 
 
 
@@ -33,7 +38,7 @@ Density Measurements
 ====================
 
 Acquiring the density of a material requires an appropriate method of measurement.
-Below are four ways to measure density for various rock types.
+Below are four common ways to measure density ordered from most basic to most sophisticated.
 
 **Basic Method**
 
