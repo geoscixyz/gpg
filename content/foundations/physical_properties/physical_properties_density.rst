@@ -33,15 +33,70 @@ Density Measurements
 ====================
 
 Acquiring the density of a material requires an appropriate method of measurement.
-Below are three ways to measure density for various rock types.
+Below are four ways to measure density for various rock types.
 
-Fill in using what is below
+**Basic Method**
+
+The most basic method for measuring a rock's bulk density can be performed in two steps.
+First, the mass of the rock is obtained using a scale.
+Next, the rock is fully immersed into a volume of water contained in a graduated cylinder.
+The amount of water which is displaced by the rock is equal to its volume.
+Now that we know the mass and the volume of the rock, we can determine the density using the first equation.
+This method however, is not particularly accurate and is rarely used for practical purposes.
+
+**Hydrostatic Weighting**
+
+For this method, the mass of the rock (:math:`m_{a}`) is first measured using a conventional scale.
+The rock is then immersed into a bath of water, where its underwater weight is measured and used to obtain an apparent mass (:math:`m_{w}`).
+Where :math:`\rho_w` = 1000 kg/m :math:`\!^3` is the density of water, the density of the rock is given by:
+
+.. figure:: ./images/hydrostatic_weighting_legend.jpg
+	:scale: 50%
+	:align: right
+
+.. math::	
+	\rho = \frac{m_a}{m_a - m_w} \times \rho_w									
+
+Although this method is simple, it cannot be used effectively for rocks which are overly unconsolidated or porous.
+Unconsolidated rocks have a tendency to break apart when immersed in water.
+The pore-space within porous rocks becomes partially filled, resulting in an overestimation of the rock's density.
+
+**Pycnometer Measurements**
+
+Pycnometer measurements are generally used on porous rocks and sediments.
+Using a pycnometer, we can obtain a rock's skeletal density; that is, the average density of all solid material within the rock.
+As a result, bulk density is not recovered using this method, as we are neglecting the rock's pore space.
+
+Pycnometers typically have a chamber of known volume (:math:`V_c`).
+Once a rock has been placed in the chamber, the volume of the chamber is changed.
+The subsequent change in gas pressure is used to determine the volume of gas both surrounding and within the pore space of the rock (denoted by :math:`V_s`).
+The difference between :math:`V_c` and :math:`V_a` represents the skeletal volume of the rock.
+The skeletal density of the rock is therefore:
+
+.. math::
+	\rho_{sk} = \frac{m}{V_c - V_s}
+	
+
+**Gamma-Gamma Density Logging**
+
+Gamma-gamma density logging is used to continuously record the bulk density of rocks along a borehole.
+For these measurements, gamma rays are emmitted by a radioactive source.
+As the rays attempt to penetrate through the borehole, they interact with electrons within the rock and undergo Compton scattering.
+On the other side of the borehole, a detector measures the intensity of scattered gamma rays.
+Gamma rays experience a higher level of Compton scattering in denser materials.
+Therefore, the intensity of the detected gamma ray signal can be used to obtain the bulk density of the rocks within the borehole. 
 
 
 Density of Common Rocks
 =======================
 
-Fill in using what is below, find a better table, or paraphrase
+The densities of a rocks vary depending on their composition and structure.
+However, rocks formed by similar processes
+
+
+The composition and structure of each rock is unique.
+Thus, the densities characterizing rocks are highly variable.
+
 
 
 
@@ -49,9 +104,31 @@ Fill in using what is below, find a better table, or paraphrase
 Factors Impacting Rock Density
 ==============================
 
-Needs to be finished
+There are many factors which impact the bulk density of a rock.
+Below are several important factors which you should be familiar with.
+
+**Mineralogy**
+
+The bulk density of most rocks is determined by its mineralogy.
 
 
+
+**Pore-Space and Pore Fluid**
+
+Nearly all rocks contain pore space.
+For compacted or cemented rocks, the pore space is very small.
+However, the pore space contained within extrusive volcanic and sedimentary rocks can vary significantly large.
+The pore space within a rock is generally filled with fluids such as air, water or brine.
+
+
+
+**Compaction**
+
+
+
+
+
+**Cementation**
 
 
 

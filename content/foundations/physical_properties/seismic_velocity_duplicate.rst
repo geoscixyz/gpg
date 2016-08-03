@@ -23,12 +23,22 @@ The S-wave velocity can be related to the elastic properties of the medium by th
 	
 Symbols used to define P-wave and S-wave velocities, as well as the elastic properties on which they depend, are summarized below:
 
-.. math::
-	v_p&:\textrm{ p-wave velocity (m/s or km/s)} \\
-	v_s&:\textrm{ s-wave velocity (m/s or km/s)} \\
-	K&:\textrm{ Bulk-modulus or constant of incompressibility (units)} \\
-	\mu&:\textrm{ Shear-modulus or modulus of rigidity (units)} \\
-	\rho&:\textrm{ Density (kg/m}^3\textrm{)}
++----------------------------------------------+--------------+----------------------------------------+
+| Property                                     | Symbol       | Units                                  |
++==============================================+==============+========================================+
+| P-Wave Velocity                              | :math:`v_p`  | m/s or km/s                            |
++----------------------------------------------+--------------+----------------------------------------+
+| S-Wave Velocity                              | :math:`v_s`  | m/s or km/s                            |
++----------------------------------------------+--------------+----------------------------------------+
+| Bulk Modulus (Constant of Incompressibility) | :math:`K`    | Pa or GPa                              |
++----------------------------------------------+--------------+----------------------------------------+
+| Shear Modulus (Modulus of Rigidity)          | :math:`\mu`  | Pa or GPa                              |
++----------------------------------------------+--------------+----------------------------------------+
+| Density                                      | :math:`\rho` | kg/m :math:`\!^3` or g/cm :math:`\!^3` |
++----------------------------------------------+--------------+----------------------------------------+
+
+
+
 
 
 P-Wave and S-Wave Velocity Measurements
@@ -97,9 +107,49 @@ Factors Impacting the Seismic Velocity
 Given that P-wave and S-wave velocities both depend on the shear modulus and density of the material, many of the factors which impact the P-wave velocity will affect the S-wave velocity in a similar manner.
 Below are some of the factors which are known to affect the seismic velocities in materials.
 
-Basically paraphrase or copy what is below.
+**Lithology**
+
+The mineralogy and structure of a rock determines its bulk modulus, shear modulus and density; which define the P-wave and S-wave velocities.
+In general, igneous, metamorphic, carbonate and anhydrite rocks have relatively large seismic velocities compared to sedimentary rocks and soils.
+This is because the aforementionned rocks only deform under extreme compressional and shear stresses, and are therefore characterized by larger bulk and shear moduli.
+In sandstones and soils, clays have a tendency to present in load-bearing positions.
+As a result, seismic velocities are heavily influenced by clay content.
+Even in small abundances, clays have been shown to significantly reduce the seismic velocity by reducing the shear modulus.
 
 
+**Porosity**
+
+The most significant factor affecting seismic wave velocities is porosity.
+In the above table, we saw that seismic waves travel faster in solids than they do in fluids; with S-waves being unable to propagate through fluids.
+Thus as the porosity of a rock increases, both the P-wave and S-wave velocities will decrease.
+This is because seismic wave propagation becomes less efficient when forced through a fluid.
+Although it will not be explained here, the pore structure also plays an important role in reducing the efficiency of seismic wave propagation within rocks.
+
+
+**Pore Fluid and Saturation**
+
+Pore fluid determines the elastic properties of the pore space.
+Since P-wave velocity is larger in water and oil than it is in air, the P-wave velocity of a rock is less impacted by porosity if the pore-space is saturated.
+Additionally, the S-wave velocity has been shown to depend on the density of the pore fluid.
+As a result, P-wave and S-wave velocities increase as pore saturation increases.
+This can be described in a rudimentary manner using Wyllie's equation:
+
+.. math::
+	V_{bulk} = \Bigg [ \frac{\phi}{V_{fluid}} + \frac{1-\phi}{V_{matrix}} \Bigg ]^{-1}
+
+where :math:`0 \leq \phi \leq 1` is the fractional \% fluid saturation, :math:`V_{fluid}` is the seismic velocity of the fluid, :math:`V_{matrix}` is the seismic velocity of the solid material within the rock, and :math:`V_{bulk}` is the bulk seismic velocity for the rock.
+
+
+**Lithification**
+
+Lithification describes the geological process in which unconsolidated sediments become consolidated through compaction and cementation.
+When subject to tectonic compression, or under the weight of overlying geological units, sediments and soils become compacted.
+This compaction reduces the pore-space which ultimately increases the P-wave and S-wave velocities.
+As a result, the seismic velocities of sedimentary units frequently increase with depth.
+
+Cementation refers to chemical fluid processes in which pore space is replaced by a precipitate and mineral grains become fused to one another.
+Cementation increases the incompressibility and rigidity of the sedimentary rock, thus increasing its bulk and shear moduli.
+Ultimately, this process is responsible for increasing the seismic velocities.
 
 
 
