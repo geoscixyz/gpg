@@ -29,7 +29,7 @@ Parameters used to define density and their associated units are summarized belo
 +------------------+--------------+----------------------------------------+
 | Volume           | :math:`V`    | cm :math:`\!^3` or m :math:`\!^3`      |
 +------------------+--------------+----------------------------------------+
-| Specific Gravity | :math:`S.G.` | *None                                  |
+| Specific Gravity | :math:`S.G.` | *Unitless                              |
 +------------------+--------------+----------------------------------------+
 
 
@@ -38,7 +38,7 @@ Density Measurements
 ====================
 
 Acquiring the density of a material requires an appropriate method of measurement.
-Below are four common ways to measure density ordered from most basic to most sophisticated.
+Below are four common ways to measure density ordered from more basic to more sophisticated.
 
 **Basic Method**
 
@@ -46,8 +46,12 @@ The most basic method for measuring a rock's bulk density can be performed in tw
 First, the mass of the rock is obtained using a scale.
 Next, the rock is fully immersed into a volume of water contained in a graduated cylinder.
 The amount of water which is displaced by the rock is equal to its volume.
-Now that we know the mass and the volume of the rock, we can determine the density using the first equation.
-This method however, is not particularly accurate and is rarely used for practical purposes.
+Therefore, the volume of the rock is equal to the change in volume (:math:`\Delta V`) measured from the graduated cylinder:
+
+.. math::
+	\rho = \frac{m}{\Delta V}
+
+Although it is simple, this method is not particularly accurate and is rarely used for practical purposes.
 
 **Hydrostatic Weighting**
 
@@ -70,12 +74,13 @@ The pore-space within porous rocks becomes partially filled, resulting in an ove
 
 Pycnometer measurements are generally used on porous rocks and sediments.
 Using a pycnometer, we can obtain a rock's skeletal density; that is, the average density of all solid material within the rock.
-As a result, bulk density is not recovered using this method, as we are neglecting the rock's pore space.
+Bulk density is not recovered using this method, as we are not accounting for the rock's pore space.
 
 Pycnometers typically have a chamber of known volume (:math:`V_c`).
-Once a rock has been placed in the chamber, the volume of the chamber is changed.
-The subsequent change in gas pressure is used to determine the volume of gas both surrounding and within the pore space of the rock (denoted by :math:`V_s`).
-The difference between :math:`V_c` and :math:`V_a` represents the skeletal volume of the rock.
+Once a rock has been placed in the chamber, the initial volume of the chamber is changed, thus changing the pressure.
+The change in gas pressure is used to determine how much of the chamber is comprised of gas.
+This can be used to determine the volume of solid material within the chamber (denoted by :math:`V_s`).
+The difference between :math:`V_c` and :math:`V_s` represents the volume of solid material comprising the rock.
 The skeletal density of the rock is therefore:
 
 .. math::
@@ -84,18 +89,20 @@ The skeletal density of the rock is therefore:
 
 **Gamma-Gamma Density Logging**
 
-Gamma-gamma density logging is used to continuously record the bulk density of rocks along a borehole.
+Gamma-gamma density logging is used to continuously record the bulk density of rock formation along a borehole.
 For these measurements, gamma rays are emmitted by a radioactive source.
-As the rays attempt to penetrate through the borehole, they interact with electrons within the rock and undergo Compton scattering.
-On the other side of the borehole, a detector measures the intensity of scattered gamma rays.
+While transmitting through the adjacent rock, the gamma rays interact with electrons and undergo Compton scattering.
+A detector within the borehole measures the intensity of the scattered gamma rays.
 Gamma rays experience a higher level of Compton scattering in denser materials.
-Therefore, the intensity of the detected gamma ray signal can be used to obtain the bulk density of the rocks within the borehole. 
+Therefore, the intensity scattered signal can be used to obtain the bulk density of the rocks within the borehole. 
 
 
 Density of Common Rocks
 =======================
 
-Summarized below are the density ranges for common rock types (Telford et al., 1990):
+Below, we have summarized the density ranges for common rock types (Telford et al., 1990).
+Although certain rock types are generally less dense than others, it is important to recognize that density values for certain rock types may overlap.
+
 
 +-----------------------+-----------------------------------+
 | Rock Type             | Density Range (g/cm :math:`\!^3`) |
@@ -183,21 +190,52 @@ Below are several important factors which you should be familiar with.
 
 **Composition**
 
-The bulk density of most rocks is determined by its composition.
+Composition impacts the density of all rock types.
+Most common rocks are made up of sillicate minerals due to the abundance of silicon and oxygen in the Earth's crust.
+The distinct densities of these rocks, however, are dictated by the abundances of other elements such as: aluminum, iron, calcium, sodium, potassium and magnesium.
+
+In igeneous rocks, density generally decreases with respect to the \% abundance of silica (Si0 :math:`\!_2`) contained within the rock.
+Using this relationship, igeneous rocks are classified as being felsic, intermediate, mafic or ultramafic.
+Rocks with lower silica content (mafic) tend to contain higher abundances of heavier elements like magnesium and iron; making them denser than rocks with a higher silica content (felsic).
+This explains why the oceanic crust (mafic) is typically more dense than the continental crust (felsic).
+The classification of igeneous rocks based on \% silica content can be seen below:
+
+
++-------------------+------------------------------+----------+
+| Igneous Rock Type | \% Silica (SiO :math:`\!_2`) | Density  |
++===================+==============================+==========+
+| Felsic            | 65\% <                       | Lowest   |
++-------------------+------------------------------+----------+
+| Indermediate      | 55\% - 65\%                  | Moderate |
++-------------------+------------------------------+----------+
+| Mafic             | 45\% - 55\%                  | High     |
++-------------------+------------------------------+----------+
+| Ultramafic        | < 45\%                       | Highest  |
++-------------------+------------------------------+----------+
+
+Similar relationships between composition and density are much harder to obtain for sedimentary and metamorphic rocks.
+For sedimentary rocks, the density depends on the rock's parent material, which can be highly variable.
+For metamorphic rocks, the density depends on the parent rock and the metamorphic alteration it has experienced.
+
+The oxide and sulphide minerals contained in ore-bearing rocks are much denser than typical rock forming minerals.
+This is because ore-bearing rocks contain large quantities of heavy elements such as gold, silver, copper, lead and iron.
 
 
 
-**Pore-Space and Pore Fluid**
+**Porosity**
 
-Nearly all rocks contain pore space.
-For compacted or cemented rocks, the pore space is very small.
-However, the pore space contained within extrusive volcanic and sedimentary rocks can vary significantly large.
-The pore space within a rock is generally filled with fluids such as air, water or brine.
-
-
+Porosity primarily impacts the density of sedimentary and extrusive volcanic rocks, as the porosity of other rock types is generally very small.
+Pore fluids, whether it be air, water, brine or petroleum, have much less density than rock forming minerals.
+As a result, rock density decreases as porosity increases.
+Because air, water, brine and petroleum have measureably different densities, the type of pore fluid also impacts the density of the rock.
 
 
+**Pressure**
 
+Sedimentary rocks can experience significant pressure from overlying geological units.
+In sedimentary rocks, compressional forces are responsible for reducing the pore space.
+The reduction in pore space ultimately results in a higher density for the rock.
+This is explains why sediments at the bottom of a basin are typically denser than those at the top.
 
 
 
