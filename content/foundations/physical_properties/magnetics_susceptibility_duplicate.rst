@@ -1,7 +1,146 @@
 .. _magnetics_susceptibility_duplicate:
 
+
 Susceptibility
 **************
+
+Magnetic susceptibility (:math:`\kappa`) is the diagnostic physical property used in magnetic surveys.
+Magnetic susceptibility defines a constant of proportionality between an applied magnetic field (:math:`\vec H`) and the magnetization it induces (:math:`\vec M`) within a material:
+
+.. math::
+	\vec M = \kappa \vec H
+
+
+
+
+
+
+Within rocks and other materials, there exists a collection magnetic dipoles (:math:`\vec m`).
+Magnetic dipoles essentially behave like microscopic bar magnets. 
+In the absence of an external magnetic field, the magnetic dipoles (bar magnets) are generally disordered.
+As a result, their individual magnetizations cancel out one another, leading to a net magnetization of zero for the material.
+Once a magnetic field is applied, the magnetic dipoles (bar magnets) try to re-orient themselves along the field.
+The strength of the alignment represents the strength of the induced magnetization.
+
+
+
+**Magnetic Permeability**: The magnetic properties of a material can also be expressed using the magnetic permeability (:math:`\mu`).
+Magnetic permeability relates the intensity of the magnetic field (:math:`\vec H`) within a material to the density of magnetic flux (:math:`\vec B`), where: 
+
+.. math::
+	\vec B = \mu \vec H
+
+The density of magnetic flux through a material depends on the magnetization within the material.
+This dependence is represented by the following expression:
+
+.. math::
+	\vec B = \mu_0 \big ( \vec H + \vec M \big )
+	
+	
+where :math:`\mu_0 = 4\pi \times 10^{-7}` H/m is the permeability of free-space.
+The permeability of free-space represents the relationship between :math:`\vec B` and :math:`\vec H` when the material is non-magnetic.
+Using our definition of the magnetization, the magnetic permeability can be defined in terms of the magnetic susceptibility as follows:
+
+.. math::
+	\mu = \mu_0 (1 + \kappa )
+	
+As a result, the magnetic permeability also represents a diagnostic physical property for magnetic surveys.
+
+
+**Relative Permeability**: The magnetic properties of materials are frequently given using the relative permeability.
+Relative Permeability (:math:`\mu_r`) defines the magnetic permeability of a material proportional to that of free-space:
+
+.. math::
+	\mu_r = \frac{\mu}{\mu_0}
+
+
+Parameters used to define magnetic properties and their associated units are tabulated below.
+
++--------------------------+----------------+-----------+
+| **Property**             | **Symbol**     | **Units** |
++==========================+================+===========+
+| Magnetic Field Intensity | :math:`\vec H` | A/m       |
++--------------------------+----------------+-----------+
+| Magnetic Flux Density    | :math:`\vec B` | T         |
++--------------------------+----------------+-----------+
+| Magnetization            | :math:`\vec M` | A/m       |
++--------------------------+----------------+-----------+
+| Magnetic Susceptibility  | :math:`\kappa` | *Unitless |
++--------------------------+----------------+-----------+
+| Magnetic Permeability    | :math:`\mu`    | H/m       |
++--------------------------+----------------+-----------+
+| Relative Permeability    | :math:`\mu_r`  | *Unitless |
++--------------------------+----------------+-----------+
+
+
+Susceptibility Measurements
+===========================
+
+
+
+
+
+
+
+
+
+
+
+Susceptibility of Common Rocks
+==============================
+
+A chart showing the range of magnetic susceptibility values for common rocks types is shown below.
+Note that the scale is logarithmic, indicating a huge variability in magnetic susceptibility among rocks.
+From this chart we can infer several things:
+
+- Magnetite-bearing rock is by far the most susceptible (see red vertical red lines denoting \% magnetite content).
+- Although hematite and magnetite are both iron-oxide minerals, only magnetite is susceptible.
+- Igneous and metamorphic rocks tend to be more susceptible than sedimentary rocks. However, there is a very wide range of overlap.
+
+A more detailed analysis or rock magnetic properties can be found in Clark and Emerson (1991).
+
+
+
+ .. figure:: ./images/images_duplicates/susceptibility_chart.gif
+	:align: center
+	:scale: 100%	
+
+
+
+
+Factors Impacting Magnetic Susceptibility
+=========================================
+
+**Magnetic Minerals**
+
+The magnetic susceptibility of a rock depends on the type and abundance of magnetic minerals it contains.
+Magnetic minerals are generally part of the iron-titanium-oxide or iron-sulphide mineral groups.
+The most important magnetic mineral in rock magnetism is magnetite; as it is common in igneous and metamorphic rocks, and is present at least in trace amounts in most sediments.
+Ore-bearing sulphides are frequently susceptible due to minerals such as pyrite and pyrrhotite.
+The magnetic susceptibilities of notable magnetic minerals are shown below.
+
+
++-----------------------+--------------------------+------------------------------+
+|  **Mineral**          | **Chemical formula**     |  Average susceptibility (SI) |
++=======================+==========================+==============================+
+| Magnetite             |:math:`Fe_3 O_4`          | 5.8                          |
++-----------------------+--------------------------+------------------------------+
+| Ilmenite              |:math:`FeTiO_3`           | 1.8                          |  
++-----------------------+--------------------------+------------------------------+
+| Hematite              |:math:`Fe_2O_3`           |  :math:`6.5 \times 10^{-3}`  | 
++-----------------------+--------------------------+------------------------------+
+| Maghemite             |:math:`Fe_2O_3`           | 5.8                          |
++-----------------------+--------------------------+------------------------------+
+| Pyrite                |:math:`FeS_2`             |  :math:`1.5 \times 10^{-3}`  | 
++-----------------------+--------------------------+------------------------------+
+| Pyrrhotite            |:math:`Fe_{1-x}S(Fe_7S_8)`|  1.5                         |   
++-----------------------+--------------------------+------------------------------+
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
 
 For magnetic surveys, the relevant physical property is *magnetic susceptibility*, or less commonly the related property *magnetic permeability*. 
 

@@ -3,8 +3,8 @@
 Dielectric Permittivity
 ***********************
 
-The dielectric permittivity (:math:`\varepsilon`) represents an important diagnostic physical property in ground-penetrating radar; as the attenuation and velocity of electromagnetic waves associated this survey method are strongly dependent on the dielectric permittivity.
-Dielectric permittivity is defined as the ratio between the electric field (:math:`\vec E`) within a dielectric material and the corresponding electric displacement (:math:`\vec D`):
+The dielectric permittivity (:math:`\varepsilon`) represents an important diagnostic physical property in ground-penetrating radar; as the attenuation and velocity of electromagnetic waves associated with this survey method are strongly dependent on the dielectric permittivity.
+Dielectric permittivity is defined as the ratio between the electric field (:math:`\vec E`) within a material and the corresponding electric displacement (:math:`\vec D`):
 
 .. math::
 	\vec D = \varepsilon \vec E
@@ -17,7 +17,7 @@ The electric field, electric displacement and electric polarization are related 
 	\vec D = \varepsilon_0 \vec E + \vec P
 	
 
-where the permeability of free-space (:math:`\varepsilon_0 = 8.8541878176 \times 10^{-12}` F/m) defines the relationship between :math:`\vec D` and :math:`\vec E` if the electric polarization were zero.
+where the permittivity of free-space (:math:`\varepsilon_0 = 8.8541878176 \times 10^{-12}` F/m) defines the relationship between :math:`\vec D` and :math:`\vec E` if the material is non-polarizable.
 Therefore, the dielectric permittivity and the electric displacement define how strongly a material becomes electrically polarized under the influence of an electric field.
 
 **Relative Permittivity**: The dielectric properties of a material are frequently expressed using the relative permittivity (:math:`\varepsilon_r`), where:
