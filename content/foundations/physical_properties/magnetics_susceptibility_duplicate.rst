@@ -12,9 +12,6 @@ Magnetic susceptibility defines a constant of proportionality between an applied
 
 
 
-
-
-
 Within rocks and other materials, there exists a collection magnetic dipoles (:math:`\vec m`).
 Magnetic dipoles essentially behave like microscopic bar magnets. 
 In the absence of an external magnetic field, the magnetic dipoles (bar magnets) are generally disordered.
@@ -23,6 +20,10 @@ Once a magnetic field is applied, the magnetic dipoles (bar magnets) try to re-o
 The strength of the alignment represents the strength of the induced magnetization.
 
 
+.. figure:: ./images/magnetization_physics.png
+	:align: center
+	:scale: 60%
+	
 
 **Magnetic Permeability**: The magnetic properties of a material can also be expressed using the magnetic permeability (:math:`\mu`).
 Magnetic permeability relates the intensity of the magnetic field (:math:`\vec H`) within a material to the density of magnetic flux (:math:`\vec B`), where: 
@@ -76,13 +77,24 @@ Parameters used to define magnetic properties and their associated units are tab
 Susceptibility Measurements
 ===========================
 
+**KT-10 Magnetic Susceptibility Meter**
+
+The KT-10 magnetic susceptibility meter is a widely used tool for measuring magnetic susceptibilities in the field.
+Within the KT-10, there is an electrical circuit which produces a magnetic field.
+When held next to a rock, the magnetic field causes a magnetization within the rock.
+This magnetization changes the resonance frequency of the current within the circuit.
+Therefore, the KT-10 measures a change in resonance frequency, and uses it to approximate the suseptibility of the rock.
+
+.. figure:: 
+	./images/images_duplicates/magnetic_susceptibility_measurement_KT10.jpg
+	:align: center
+	:width: 50%
 
 
+**Laboratory Measurements**
 
-
-
-
-
+Laboratory measurements are based on the same physical principles as the KT-10.
+However, the circuit and sample holder used in laboratory measurements are more sophisticated, resulting in more accurate susceptibility values.
 
 
 
@@ -96,15 +108,16 @@ From this chart we can infer several things:
 - Magnetite-bearing rock is by far the most susceptible (see red vertical red lines denoting \% magnetite content).
 - Although hematite and magnetite are both iron-oxide minerals, only magnetite is susceptible.
 - Igneous and metamorphic rocks tend to be more susceptible than sedimentary rocks. However, there is a very wide range of overlap.
+- Mafic igneous rocks are more susceptible than felsic igneous rocks.
+- Mineralized rocks such as skarn and banded-iron formation are generally more susceptible than the host rock.
 
 A more detailed analysis or rock magnetic properties can be found in Clark and Emerson (1991).
 
 
 
- .. figure:: ./images/images_duplicates/susceptibility_chart.gif
+.. figure:: ./images/rock_susceptibilities_adapted.png
 	:align: center
-	:scale: 100%	
-
+	:scale: 100%
 
 
 
@@ -115,7 +128,8 @@ Factors Impacting Magnetic Susceptibility
 
 The magnetic susceptibility of a rock depends on the type and abundance of magnetic minerals it contains.
 Magnetic minerals are generally part of the iron-titanium-oxide or iron-sulphide mineral groups.
-The most important magnetic mineral in rock magnetism is magnetite; as it is common in igneous and metamorphic rocks, and is present at least in trace amounts in most sediments.
+The most important magnetic mineral in rock magnetism is magnetite.
+This mineral is common in igneous and metamorphic rocks, and is present at least in trace amounts in most sediments.
 Ore-bearing sulphides are frequently susceptible due to minerals such as pyrite and pyrrhotite.
 The magnetic susceptibilities of notable magnetic minerals are shown below.
 

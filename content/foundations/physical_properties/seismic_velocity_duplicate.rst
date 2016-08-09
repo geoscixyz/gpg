@@ -55,7 +55,7 @@ P-waves and S-waves travel at different speeds depending the media they are prop
 P-waves are able to propagate through solids and fluids, however, S-waves can only propagate through solid materials.
 Given that there are so many factors which impact the velocity of seismic waves, it is impossible to assign a single value to a particular rock type.
 Therefore, the seismic velocities of rocks are generally defined over a range.
-The range of p-wave and s-wave velocities for common rock types are shown below:
+The range of P-wave and S-wave velocities for common rock types are shown below:
 
 +---------------------------------+--------------+--------------+
 |      **Material**               | p-wave (m/s) | s-wave (m/s) |
