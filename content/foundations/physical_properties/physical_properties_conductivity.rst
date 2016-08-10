@@ -1,7 +1,143 @@
 .. _physical_properties_conductivity:
 
-Electrical conductivity
+Electrical Conductivity
 =======================
+
+Electrical conductivity (:math:`\sigma`) is the diagnostic physical property in DC resistivity and electromagnetic surveys.
+It also plays an important role in ground-penetrating radar and induced polarization surveys.
+Electrical conductivity defines the ratio between the density of electrical current (:math:`\vec J`) within a material, and the electric field (:math:`\vec E`) responsible for producing it:
+
+.. math::
+	\vec J = \sigma \vec E
+
+
+Within rocks and other materials, there are free electrical charges.
+When an electric field is applied to a material, these charges experience an electrical (Coulomb) force.
+This force causes the free charges to move through the material along the direction of the applied field.
+The rate at which electrical charges move through a material defines the electric current (:math:`\vec I`). 
+We use the current density to define the flow of electrical charges per unit cross-sectional area, where:
+
+.. math::
+	\vec J = \frac{\vec I}{A_\perp}
+	
+
+Essentially, the electrical conductivity defines how easy it is for current to flow though a particular material when subjected to an electric field.
+In conductive materials (larger :math:`\sigma`), free charges move quite easily and strong currents may be induced by a relatively weak electrical field.
+In contrast, resistive materials (smaller :math:`\sigma`) require strong electrical fields in order to produce any significant current.
+
+**Resistivity**: An equivalent physical property to the conductivity is the resistivity (:math:`\rho`).
+By definition, the resistivity of a material is the reciprocal of its conductivity:
+
+.. math::
+	\rho = \frac{1}{\sigma}
+
+
+Resistivity therefore defines how difficult it is for current to flow though a particular material when subjected to an electric field.
+Both the electrical conductivity and resistivity are acceptable for describing the conductive properties of rocks, however, one should avoid confusing the two terms.
+
+
+Parameters used to define the conductive properties and their associated units are summarized below.
+
+
+
++------------------+----------------+-------------------------+
+| **Property**     | **Symbol**     | **Units**               |
++==================+================+=========================+
+| Electric Field   | :math:`\vec E` | F/m                     |
++------------------+----------------+-------------------------+
+| Current Density  | :math:`\vec J` | A/m :math:`\!^2`        |
++------------------+----------------+-------------------------+
+| Electric Current | :math:`\vec I` | A                       |
++------------------+----------------+-------------------------+
+| Conductivity     | :math:`\sigma` | S/m or mS/m             |
++------------------+----------------+-------------------------+
+| Resistivity      | :math:`\rho`   | :math:`\Omega\cdot\!` m |
++------------------+----------------+-------------------------+
+
+
+
+Conductivity/Resisitivity Measurements
+======================================
+
+Measurements of rock conductivity/resistivity are fairly straightfoward.
+First, a cylindrical core sample is taken from the rock.
+The core sample is then placed in a sample holder between two electrodes where it acts as a resistive element for a circuit.
+
+Next, a source is used to drive direct current (:math:`I`) through the core sample.
+By measuring the voltage drop (:math:`V`) accross the length of the sample, Ohm's law can be used to determine the circuit resistance (:math:`R`) caused by the rock:
+
+.. math::
+	R = \frac{V}{I}
+
+
+The measured resistance increases proportional to the length of the core sample.
+We expect this given that the current must flow through more of the resistive material.
+The measured resistance is also inversely proportional to the cross-sectional area of the sample.
+This relationship can be understood by comparing the net resistance of two identical resistors in parallel to a single resistor in series.
+
+Ultimately, the resistivity of the sample can be obtained from the measured resistance, the length of the core and its cross-sectional area using Pouillet's law:
+
+.. math::
+	\rho = \frac{R A_\perp}{l}
+
+
+
+
+Conductivities/Resisitivities of Common Rocks
+=============================================
+
+
+
+
+
+
+
+Factors Impacting a Rock's Conductive Properties
+================================================
+
+
+
+**Porosity, Pore Saturation and Pore Fluid**
+
+Most rocks contain pore-spaces which are at least partially saturated with ionic fluids.
+These fluids include: fresh water, brackish water, ocean water and brine.
+Because pore fluids have a higher conductivity than most rock-forming minerals, electrical current generally prefers to flow through the pore-space whenever possible.
+As a result, the bulk conductivity of the rock depends significantly its porosity, fluid saturation and the type of fluid contained within the pore-space.
+
+For rocks which are unsaturated, the pore space is occupied solely by air.
+Because air is infinitely resistive, it forces the current to flow through the minerals comprising the rock.
+As a result, unsaturated rocks are poorly conductive.
+When a sufficient percentage of the pore-space is saturated, the pore fluid is able to offer a more efficient pathway for the current.
+Thus, the bulk conductivity of rocks generally increases as fluid saturation increases.
+
+Current flows through a rock's pore-fluid via ionic conduction.
+As a result, the conductivity of the pore-fluid depends on the concentration of dissolved ions.
+Pore-fluid conductivity increases as the concentration of dissolved ions increases.
+This implies rock's containing more brackish pore fluid are more conductive than rocks containing fresh-water.
+
+
+**Tortuosity**
+
+Tortuosity defines the connectivity and complexity of a rock's pore-space network.
+For rocks with low tortuosities, the current's path through the pore space is simple; resulting in efficient conduction of electrical charges.
+For rocks with high tortuosities, the path the current must take to get through the rock is very indirect.
+As a result, conduction is inefficient, and the rock demonstrated a lower conductivity.
+
+
+
+**Mineralization**
+
+Electrical current within a rock will choose not to flow through the pore-space if the rock forming minerals are more conductive.
+This occurs frequently in ore-bearing rocks due to the presence of metal-oxides (magnetite, illmenite, specular hematite), metal-sulphides (pyrite, pyrrhotite, galena) and native metals (gold, silver, copper). 
+One exception is graphite, which despite being entirely comprised of carbon, is very conductive.
+As expected, the conductivity increases as the concentration of conductive minerals within the rock increases.
+
+
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
 
  .. figure:: ./images/images_duplicates/cube.gif
 	:align: right
