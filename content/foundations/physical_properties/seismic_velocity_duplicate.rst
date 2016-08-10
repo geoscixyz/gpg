@@ -7,14 +7,14 @@ Seismic velocity represents the diagnostic physical property in seismic refracti
 Seismic velocity defines the speed at which elastic waves propagate through a particular medium.
 In seismology, there are two fundamental types of elastic waves: pressure waves ("P-waves") and shear-waves ("S-waves").
 
-For P-waves, compressional and extentional deformation defining the wave occurs along the direction of wave propagation.
+For P-waves, compressional and extentional deformation associated with the wave occurs along the direction of wave propagation.
 The P-wave velocity can be related to the elastic properties of the medium by the following expression:
 
 .. math::
 	v_p = \sqrt{\frac{K+4/3\mu}{\rho}} 
 	
 
-For S-waves, the elastic deformation occurs transverse (or parallel) to the direction of wave propagation.
+For S-waves, elastic deformation associated with the wave occurs transverse (or parallel) to the direction of wave propagation.
 The S-wave velocity can be related to the elastic properties of the medium by the following expression:
 
 .. math::
@@ -110,7 +110,7 @@ Below are some of the factors which are known to affect the seismic velocities i
 **Lithology**
 
 The mineralogy and structure of a rock determines its bulk modulus, shear modulus and density; which define the P-wave and S-wave velocities.
-In general, igneous, metamorphic, carbonate and anhydrite rocks have relatively large seismic velocities compared to sedimentary rocks and soils.
+In general, igneous, metamorphic, carbonate and anhydrite rocks have relatively large seismic velocities compared to soils and most sedimentary rocks.
 This is because the aforementionned rocks only deform under extreme compressional and shear stresses, and are therefore characterized by larger bulk and shear moduli.
 In sandstones and soils, clays have a tendency to present in load-bearing positions.
 As a result, seismic velocities are heavily influenced by clay content.

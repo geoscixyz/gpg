@@ -14,14 +14,14 @@ Electrical conductivity defines the ratio between the density of electrical curr
 Within rocks and other materials, there are free electrical charges.
 When an electric field is applied to a material, these charges experience an electrical (Coulomb) force.
 This force causes the free charges to move through the material along the direction of the applied field.
-The rate at which electrical charges move through a material defines the electric current (:math:`\vec I`). 
-We use the current density to define the flow of electrical charges per unit cross-sectional area, where:
+The flow of electrical charges through a material is known as electrical current (:math:`\vec I`). 
+The current density defines the current which flows through a cross-sectional area (:math:`A`), where:
 
 .. math::
-	\vec J = \frac{\vec I}{A_\perp}
+	\vec J = \frac{\vec I}{A}
 	
 
-Essentially, the electrical conductivity defines how easy it is for current to flow though a particular material when subjected to an electric field.
+In essence, the electrical conductivity defines how easy it is for current to flow though a particular material when subjected to an electric field.
 In conductive materials (larger :math:`\sigma`), free charges move quite easily and strong currents may be induced by a relatively weak electrical field.
 In contrast, resistive materials (smaller :math:`\sigma`) require strong electrical fields in order to produce any significant current.
 
@@ -34,8 +34,6 @@ By definition, the resistivity of a material is the reciprocal of its conductivi
 
 Resistivity therefore defines how difficult it is for current to flow though a particular material when subjected to an electric field.
 Both the electrical conductivity and resistivity are acceptable for describing the conductive properties of rocks, however, one should avoid confusing the two terms.
-
-
 Parameters used to define the conductive properties and their associated units are summarized below.
 
 
@@ -59,7 +57,7 @@ Parameters used to define the conductive properties and their associated units a
 Conductivity/Resisitivity Measurements
 ======================================
 
-Measurements of rock conductivity/resistivity are fairly straightfoward.
+Measuring a rock's conductivity/resistivity is fairly straightforward.
 First, a cylindrical core sample is taken from the rock.
 The core sample is then placed in a sample holder between two electrodes where it acts as a resistive element for a circuit.
 
@@ -75,10 +73,10 @@ We expect this given that the current must flow through more of the resistive ma
 The measured resistance is also inversely proportional to the cross-sectional area of the sample.
 This relationship can be understood by comparing the net resistance of two identical resistors in parallel to a single resistor in series.
 
-Ultimately, the resistivity of the sample can be obtained from the measured resistance, the length of the core and its cross-sectional area using Pouillet's law:
+Ultimately, the resistivity of the sample can be obtained from the measured resistance, the length of the core (:math:`l`) and its cross-sectional area (:math:`A`) using Pouillet's law:
 
 .. math::
-	\rho = \frac{R A_\perp}{l}
+	\rho = \frac{R A}{l}
 
 
 
@@ -86,9 +84,20 @@ Ultimately, the resistivity of the sample can be obtained from the measured resi
 Conductivities/Resisitivities of Common Rocks
 =============================================
 
+A chart showing the range of electrical conductivity/resistivity values for common rock types is shown below.
+Note that the scale is logarithmic, indicating a huge variability in conductivity/resistivity among rocks.
+From this chart we can infer several things:
+
+- Massive sulphides and graphite-bearing rocks are by far the most conductive.
+- Carbonate rocks and unconsolidated sediments are very resistive
+- Weathered igneous and metamorphic rocks are more conductive than unweathered igneous and metamorphic rocks.
+- Sedimentary rocks containing clays are generally more conductive.
+- Salt water is more conductive than fresh water.
 
 
-
+.. figure:: ./images/images_duplicates/resistivity_table.png
+	:align: center
+	:scale: 100%
 
 
 
@@ -121,7 +130,7 @@ This implies rock's containing more brackish pore fluid are more conductive than
 Tortuosity defines the connectivity and complexity of a rock's pore-space network.
 For rocks with low tortuosities, the current's path through the pore space is simple; resulting in efficient conduction of electrical charges.
 For rocks with high tortuosities, the path the current must take to get through the rock is very indirect.
-As a result, conduction is inefficient, and the rock demonstrated a lower conductivity.
+As a result, conduction is inefficient, and the rock is more resistive.
 
 
 

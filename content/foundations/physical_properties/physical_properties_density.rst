@@ -17,7 +17,7 @@ Specific gravity defines the ratio of a material's density to that of water:
 .. math::
 	S.G. = \frac{\rho}{\rho_w}
 
-where the density of water (:math:`\rho_w`) is 1,000 kg/m :math:`\!^3` (or 1 g/cm :math:`\!^3`).
+where the density of water :math:`\rho_w` = 1,000 kg/m :math:`\!^3` (or 1 g/cm :math:`\!^3`).
 Parameters used to define density and their associated units are summarized below:
 
 +------------------+--------------+----------------------------------------+

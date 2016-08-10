@@ -101,15 +101,15 @@ However, the circuit and sample holder used in laboratory measurements are more 
 Susceptibility of Common Rocks
 ==============================
 
-A chart showing the range of magnetic susceptibility values for common rocks types is shown below.
+A chart showing the range of magnetic susceptibility values for common rock types is shown below.
 Note that the scale is logarithmic, indicating a huge variability in magnetic susceptibility among rocks.
 From this chart we can infer several things:
 
-- Magnetite-bearing rock is by far the most susceptible (see red vertical red lines denoting \% magnetite content).
-- Although hematite and magnetite are both iron-oxide minerals, only magnetite is susceptible.
+- Rocks with a high magnetite content are by far the most susceptible (see red vertical red lines denoting \% magnetite content).
+- Although hematite and magnetite are both iron-oxide minerals, only magnetite is particularly susceptible.
 - Igneous and metamorphic rocks tend to be more susceptible than sedimentary rocks. However, there is a very wide range of overlap.
 - Mafic igneous rocks are more susceptible than felsic igneous rocks.
-- Mineralized rocks such as skarn and banded-iron formation are generally more susceptible than the host rock.
+- Mineralized rocks such as skarns and banded-iron formations are generally more susceptible than the surrounding country rock.
 
 A more detailed analysis or rock magnetic properties can be found in Clark and Emerson (1991).
 
