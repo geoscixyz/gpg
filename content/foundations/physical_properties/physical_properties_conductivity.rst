@@ -1,11 +1,19 @@
 .. _physical_properties_conductivity:
 
 Electrical Conductivity
-=======================
+***********************
 
+
+	
+	
 Electrical conductivity (:math:`\sigma`) is the diagnostic physical property in DC resistivity and electromagnetic surveys.
 It also plays an important role in ground-penetrating radar and induced polarization surveys.
 Electrical conductivity defines the ratio between the density of electrical current (:math:`\vec J`) within a material, and the electric field (:math:`\vec E`) responsible for producing it:
+
+.. figure:: ./images/conductivity_physics_diagram.png
+	:align: right
+	:scale: 50%
+
 
 .. math::
 	\vec J = \sigma \vec E
@@ -13,12 +21,12 @@ Electrical conductivity defines the ratio between the density of electrical curr
 
 Within rocks and other materials, there are free electrical charges.
 When an electric field is applied to a material, these charges experience an electrical (Coulomb) force.
-This force causes the free charges to move through the material along the direction of the applied field.
-The flow of electrical charges through a material is known as electrical current (:math:`\vec I`). 
-The current density defines the current which flows through a cross-sectional area (:math:`A`), where:
+This force causes the free charges to move through the material along the direction of the applied field; with positive charges moving parallel to the field and negative charges moving in the opposite direction.
+The size of the flow of electrical charges through a material is known as electrical current (:math:`\vec I`). 
+Current density represents the amount of current flowing per unit cross-sectional area (:math:`A`), where:
 
 .. math::
-	\vec J = \frac{\vec I}{A}
+	\vec J = \frac{d\vec I}{dA}
 	
 
 In essence, the electrical conductivity defines how easy it is for current to flow though a particular material when subjected to an electric field.
@@ -53,9 +61,9 @@ Parameters used to define the conductive properties and their associated units a
 +------------------+----------------+-------------------------+
 
 
+Conductivity Measurements
+=========================
 
-Conductivity/Resisitivity Measurements
-======================================
 
 Measuring a rock's conductivity/resistivity is fairly straightforward.
 First, a cylindrical core sample is taken from the rock.
@@ -80,9 +88,8 @@ Ultimately, the resistivity of the sample can be obtained from the measured resi
 
 
 
-
-Conductivities/Resisitivities of Common Rocks
-=============================================
+Conductivities of Common Rocks
+==============================
 
 A chart showing the range of electrical conductivity/resistivity values for common rock types is shown below.
 Note that the scale is logarithmic, indicating a huge variability in conductivity/resistivity among rocks.
@@ -101,10 +108,10 @@ From this chart we can infer several things:
 
 
 
-Factors Impacting a Rock's Conductive Properties
-================================================
 
 
+Factors Affecting Rock Conductivity
+===================================
 
 **Porosity, Pore Saturation and Pore Fluid**
 
@@ -184,6 +191,6 @@ electrolytic, so conductivity depends mainly upon:
 	- temperature and phase of pore fluid;
 	- amount and composition of colloids (clay content).
 
-.. Detailed discussion of geologic factors affecting this important physical property are provided in a separate location.
+Detailed discussion of geologic factors affecting this important physical property are provided in a separate location.
 
 	

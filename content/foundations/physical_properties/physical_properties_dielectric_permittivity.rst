@@ -6,10 +6,15 @@ Dielectric Permittivity
 The dielectric permittivity (:math:`\varepsilon`) represents an important diagnostic physical property in ground-penetrating radar; as the attenuation and velocity of electromagnetic waves associated with this survey method are strongly dependent on the dielectric permittivity.
 Dielectric permittivity is defined as the ratio between the electric field (:math:`\vec E`) within a material and the corresponding electric displacement (:math:`\vec D`):
 
+
+.. figure:: ./images/electric_polarization_physics_diagram.png
+	:align: right
+	:scale: 40%
+
 .. math::
 	\vec D = \varepsilon \vec E
 
-When exposed to an electric field, the average position of positive and negative charges within most materials become slightly separated.
+When exposed to an electric field, the average position of positive and negative charges within most materials become slightly separated on an atomic level.
 This separation results in a net electric polarization (:math:`\vec P`) within the material.
 The electric field, electric displacement and electric polarization are related by the following expression:
 
@@ -19,6 +24,14 @@ The electric field, electric displacement and electric polarization are related 
 
 where the permittivity of free-space (:math:`\varepsilon_0 = 8.8541878176 \times 10^{-12}` F/m) defines the relationship between :math:`\vec D` and :math:`\vec E` if the material is non-polarizable.
 Therefore, the dielectric permittivity and the electric displacement define how strongly a material becomes electrically polarized under the influence of an electric field.
+The electrical polarization within the material can be defined in terms of the electric field as follows:
+
+.. math::
+	\vec P = (\varepsilon - \varepsilon_0 ) \vec E = \chi_e \varepsilon_0 \vec E
+
+where :math:`\chi_e` is known as the electric susceptibility.
+The electric susceptibility should not be confused with the magnetic susceptibility, as they describe different physical processes.
+
 
 **Relative Permittivity**: The dielectric properties of a material are frequently expressed using the relative permittivity (:math:`\varepsilon_r`), where:
 
@@ -39,18 +52,26 @@ where :math:`i = \sqrt{-1}`.
 
 - That generally, permittivity decreases as frequency increases
 
++-------------------------+-----------------------------------+------------------+
+| **Property**            | **Symbol**                        | **Units**        |
++=========================+===================================+==================+
+| Electric Field          | :math:`\vec E`                    | N/C or V/m       |
++-------------------------+-----------------------------------+------------------+
+| Displacement Current    | :math:`\vec D`                    | A/m :math:`\!^2` |
++-------------------------+-----------------------------------+------------------+
+| Electric Polarization   | :math:`\vec P`                    | A/m :math:`\!^2` | 
++-------------------------+-----------------------------------+------------------+
+| Dielectric Permittivity | :math:`varepsilon`                | F/m              |
++-------------------------+-----------------------------------+------------------+
+| Relative Permeability   | :math:`varepsilon_r`              | *Unitless        |
++-------------------------+-----------------------------------+------------------+
+| Real Permeability       | :math:`varepsilon^\prime`         | F/m              |
++-------------------------+-----------------------------------+------------------+
+| Imaginary Permeability  | :math:`varepsilon^{\prime\prime}` | F/m              |
++-------------------------+-----------------------------------+------------------+
+| Electric Susceptibility | :math:`\chi_e`                    | *Unitsless       |
++-------------------------+-----------------------------------+------------------+
 
-
-.. math::
-	\vec E &: \textrm{Electric Field ()} \\
-	\vec D &: \textrm{Electric Displacement ()} \\
-	\vec P &: \textrm{Electric Polarization ()} \\
-	\varepsilon &:\textrm{ Dielectric permittivity (F/m)} \\
-	\varepsilon_0 &:\textrm{ Permittivity of free-space ( = 8.8541878176 10}^{-12}\textrm{ F/m)} \\
-	\varepsilon_r &:\textrm{ Relative permittivity ((F/m)/(F/m))} \\
-	\varepsilon^\prime &:\textrm{ Real permittivity} \\
-	\varepsilon^{\prime\prime} &:\textrm{ Imaginary permittivity} 
-	
 
 
 
