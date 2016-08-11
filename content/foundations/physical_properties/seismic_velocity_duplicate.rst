@@ -7,6 +7,10 @@ Seismic velocity represents the diagnostic physical property in seismic refracti
 Seismic velocity defines the speed at which elastic waves propagate through a particular medium.
 In seismology, there are two fundamental types of elastic waves: pressure waves ("P-waves") and shear-waves ("S-waves").
 
+.. figure:: ./images/Pwave_physics_diagram.png
+	:scale: 70%
+	:align: right
+
 For P-waves, compressional and extentional deformation associated with the wave occurs along the direction of wave propagation.
 The P-wave velocity can be related to the elastic properties of the medium by the following expression:
 
@@ -14,13 +18,18 @@ The P-wave velocity can be related to the elastic properties of the medium by th
 	v_p = \sqrt{\frac{K+4/3\mu}{\rho}} 
 	
 
+.. figure:: ./images/Swave_physics_diagram.png
+	:scale: 70%
+	:align: right
+
+
 For S-waves, elastic deformation associated with the wave occurs transverse (or parallel) to the direction of wave propagation.
 The S-wave velocity can be related to the elastic properties of the medium by the following expression:
 
 .. math::
 	v_s = \sqrt{\frac{\mu}{\rho}}
-
 	
+
 Symbols used to define P-wave and S-wave velocities, as well as the elastic properties on which they depend, are summarized below:
 
 +----------------------------------------------+--------------+----------------------------------------+

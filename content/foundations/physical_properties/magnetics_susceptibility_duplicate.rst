@@ -83,7 +83,7 @@ The KT-10 magnetic susceptibility meter is a widely used tool for measuring magn
 Within the KT-10, there is an electrical circuit which produces a magnetic field.
 When held next to a rock, the magnetic field causes a magnetization within the rock.
 This magnetization changes the resonance frequency of the current within the circuit.
-Therefore, the KT-10 measures a change in resonance frequency, and uses it to approximate the suseptibility of the rock.
+Therefore, the KT-10 measures a change in resonance frequency, and uses it to approximate the susceptibility of the rock.
 
 .. figure:: 
 	./images/images_duplicates/magnetic_susceptibility_measurement_KT10.jpg

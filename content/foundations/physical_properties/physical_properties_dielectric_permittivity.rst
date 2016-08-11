@@ -61,13 +61,13 @@ where :math:`i = \sqrt{-1}`.
 +-------------------------+-----------------------------------+------------------+
 | Electric Polarization   | :math:`\vec P`                    | A/m :math:`\!^2` | 
 +-------------------------+-----------------------------------+------------------+
-| Dielectric Permittivity | :math:`varepsilon`                | F/m              |
+| Dielectric Permittivity | :math:`\varepsilon`               | F/m              |
 +-------------------------+-----------------------------------+------------------+
-| Relative Permeability   | :math:`varepsilon_r`              | *Unitless        |
+| Relative Permeability   | :math:`\varepsilon_r`             | *Unitless        |
 +-------------------------+-----------------------------------+------------------+
-| Real Permeability       | :math:`varepsilon^\prime`         | F/m              |
+| Real Permeability       | :math:`\varepsilon^\prime`        | F/m              |
 +-------------------------+-----------------------------------+------------------+
-| Imaginary Permeability  | :math:`varepsilon^{\prime\prime}` | F/m              |
+| Imaginary Permeability  | :math:`\varepsilon^{\prime\prime}`| F/m              |
 +-------------------------+-----------------------------------+------------------+
 | Electric Susceptibility | :math:`\chi_e`                    | *Unitsless       |
 +-------------------------+-----------------------------------+------------------+

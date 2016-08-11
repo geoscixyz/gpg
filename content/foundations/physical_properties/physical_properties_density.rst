@@ -100,8 +100,15 @@ Therefore, the intensity scattered signal can be used to obtain the bulk density
 Density of Common Rocks
 =======================
 
-Below, we have summarized the density ranges for common rock types (Telford et al., 1990).
+Below, the density ranges for common rock types are summarized (Telford et al., 1990).
 Although certain rock types are generally less dense than others, it is important to recognize that density values for certain rock types may overlap.
+From this table, we can infer several things:
+
+- Igneous and metamorphic rock are by and large more dense than sedimentary rocks.
+- Mafic igneous rocks are generally more dense than felsic igneous rocks.
+- Higher metamorphic grade rocks such as eclogite and amphibolite are more dense than low grade metamorphic rocks such as slate and phyllite.
+- Metal ore-bearing rocks are generally much denser than other rock types. One exception is bauxite.
+
 
 
 +-----------------------+-----------------------------------+
