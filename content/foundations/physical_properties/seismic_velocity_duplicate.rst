@@ -22,15 +22,53 @@ The P-wave velocity can be related to the elastic properties of the medium by th
 	:scale: 70%
 	:align: right
 
+where :math:`K` is the bulk modulus, :math:`\mu` is the shear modulus and :math:`\rho` is the density.
 
 For S-waves, elastic deformation associated with the wave occurs transverse (or parallel) to the direction of wave propagation.
 The S-wave velocity can be related to the elastic properties of the medium by the following expression:
 
 .. math::
 	v_s = \sqrt{\frac{\mu}{\rho}}
-	
 
-Symbols used to define P-wave and S-wave velocities, as well as the elastic properties on which they depend, are summarized below:
+
+Below, simple descriptions of the elastic properties governing wave propagation are provided:
+
+
+**Bulk Modulus**: The bulk modulus (:math:`K`) defines the resistance of a material to elastic compression.
+As a result, it is sometimes referred to as the modulus of incompressibility.
+When a block of material is subjected to compressional forces, its volume decreases and it becomes more dense (see figure).
+Once the compressional force is removed, the block of material returns to its original size if the deformation is elastic.
+The bulk modulus characterizes the compressional deformation as follows:
+
+.. math::
+	K = - V_0 \frac{\Delta V}{\Delta P}
+	
+where :math:`V_0` is the original volume of material, :math:`\Delta P` represents the pressure being applied to the material and :math:`\Delta V` is the resulting change in volume.
+
+
+
+**Shear Modulus** The shear modulus (:math:`\mu`) defines how resistant a material is to shear stress.
+As a result, it is sometimes referred to as the modulus of rigidity.
+When a block of material is subjected to a shear stress, it experiences a shear strain (see figure).
+The shear modulus defines the ratio of shear stress to shear strain:
+
+.. math::
+	\mu = \frac{Stress}{Strain} = \frac{F}{\Delta x l A}
+
+where the shear stress is represented by a force (:math:`F`) per unit area (:math:`A`).
+Shear strain represents a tangent angle between the shear deformation (:math:`\Delta x`) of the material along the direction of force and the perpendicular demension (:math:`l`) of the block of material.
+
+
+
+
+
+
+
+
+
+
+
+Symbols used to define P-wave and S-wave velocities, as well as the elastic properties on which they depend, are summarized in the following table:
 
 +----------------------------------------------+--------------+----------------------------------------+
 | Property                                     | Symbol       | Units                                  |
