@@ -1,4 +1,4 @@
-.. _seismic_refraction_introduction:
+.. _seismic_introduction:
 
 Introduction
 ************

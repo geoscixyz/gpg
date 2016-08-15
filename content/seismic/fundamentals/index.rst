@@ -1,12 +1,8 @@
-.. _seismic_refraction_index:
+.. _fundamentals_index:
 
 
-Seismic Refraction
-==================
-
-.. figure:: ./images/icon_refrac.gif
-   :align: right
-   :scale: 110 %
+Seismic Fundamentals
+====================
 
 In this section we will go over some of the fundamental physics of acoustic
 waves (two types, referred to as P and S waves) and their relationship to
@@ -21,12 +17,10 @@ Contents:
 .. toctree::
    :maxdepth: 1
 
-   seismic_raw_refraction_data
-   seismic_ray_paths
-   seismic_refraction_horizontal_layers
-   seismic_refraction_dipping_layers
-   seismic_refraction_irregular_layers
-   seismic_refraction_other_topics
-   seismic_refraction_advanced_techniques
+   seismic_introduction
+   seismic_fundamental_physics
+   seismic_velocity
+   seismic_sources
+   seismic_receivers
  
    

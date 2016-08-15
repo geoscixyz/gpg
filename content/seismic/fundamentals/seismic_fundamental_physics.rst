@@ -16,11 +16,8 @@ depends upon the elastic properties of the material, namely
 2. bulk modulus:  :math:`\kappa` (compressibility)
 3. shear modulus:  :math:`\mu` (twistability)
 
-By knowing the time at which the source occurred, and by measuring the travel
-time that it takes for the various waves to arrive at a receiver, it is
-possible to obtain information about the velocity and density of the material.
-This information is then used to provide information about structure and rock
-type.
+By knowing the time at which the source was excited and measuring the time needed for the excitation to travel from the source to a receiver, it is
+possible to obtain information about the structure and elastic properties of the subsurface.
 
 
 Applications of Seismic Surveying
@@ -37,7 +34,7 @@ Applications of Seismic Surveying
 Stress
 ======
 
-.. sidebar:: Compressive and Tensile Stress
+.. sidebar:: Compressive and Tensile Stress (replace w subsurfwiki images)
 
 	.. figure:: images/compressive.png
 		:align: center
@@ -47,7 +44,7 @@ Stress
 
 When an external force is applied to a body, there are balanced internal
 forces set up within the body. Stress is a measure of these internal forces.
-Units are "force per unit area" or N/m:math:`^2` . There are two types of
+Units are "force per unit area" or N/m :math:`^2` . There are two types of
 stress:
 
 Stress can be **normal** to the surface it is applied on, and hence
