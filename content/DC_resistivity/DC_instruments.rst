@@ -117,12 +117,12 @@ Variations on the theme
 
  .. figure:: ./images/field_site.jpg
 	:align: right
-	:scale: 100 
+	:scale: 100
 
 
  .. figure:: ./images/trawling.jpg
 	:align: right
-	:scale: 100 
+	:scale: 100
 
 Since the early 1990's manufacturers of instruments have been producing
 automated systems which permit the use of electrodes for either current source
@@ -139,7 +139,7 @@ following list (as of January 2007).
 
  .. figure:: ./images/ohm_mapper.jpg
 	:align: right
-	:scale: 100 
+	:scale: 100
 
 
 Another arrangement involves a towed array system in which all potential and
@@ -147,13 +147,13 @@ source electrodes are basically heavy metallic weights. This arrangement is
 efficient when the survey site is essentially flat and ground is relatively
 soft. Other similar systems used both for land and marine use use capacitively
 coupled electrodes rather than electrodes that make galvanic (direct) contact
-with earth materials. Two examples of this approach can be seen at at the
-`Iris Instruments`_ and `Geometrics`_ (image to the right) websites (as of
+with earth materials. One example of this approach can be seen at at the
+`Geometrics`_ (image to the right) website (as of
 January 2007), and others.
 
  .. figure:: ./images/gooddat1-sm.gif
 	:align: right
-	:scale: 100 
+	:scale: 100
 
 
 In the early 1990's receivers were developed that could record complete
@@ -174,7 +174,7 @@ not shown.
 References
 ==========
 
-Corwin, R.F., 1990, *The self-potential method for environmental and engineering applications*, in Geotechnical and Environmental Geophysics, Vol I: Review and Tutorial, (Ward, S.H., ed), Society of Exploration Geophysics, pg 127 - 146. 
+Corwin, R.F., 1990, *The self-potential method for environmental and engineering applications*, in Geotechnical and Environmental Geophysics, Vol I: Review and Tutorial, (Ward, S.H., ed), Society of Exploration Geophysics, pg 127 - 146.
 
 .. _Iris Instruments: http://www.iris-instruments.com/Pdf%20file/Corim_Gb.pdf
 .. _Geometrics: http://www.geometrics.com/
