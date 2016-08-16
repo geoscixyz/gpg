@@ -134,7 +134,6 @@ surveys. Examples of systems that work in this manner are given in the
 following list (as of January 2007).
 
 - http://www.agiusa.com/index.shtml (images to the right)
-- http://www.iris-instruments.com/Product/Brochure/syscal.html
 - http://www.zonge.com/
 
  .. figure:: ./images/ohm_mapper.jpg
