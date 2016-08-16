@@ -5,10 +5,11 @@ python:
   - "2.7"
 
 # command to install dependencies
-install: "pip install sphinx"
+install:
+  - pip install -r requirements.txt
 
 # command to run tests
-script: 
+script:
   - sphinx-build -nW -b html -d _build/doctrees . _build/html
   # - sphinx-build -nW -b latex -d _build/doctrees . _build/latex
   - sphinx-build -nW -b linkcheck -d _build/doctrees   . _build/linkcheck
