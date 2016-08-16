@@ -176,7 +176,6 @@ References
 
 Corwin, R.F., 1990, *The self-potential method for environmental and engineering applications*, in Geotechnical and Environmental Geophysics, Vol I: Review and Tutorial, (Ward, S.H., ed), Society of Exploration Geophysics, pg 127 - 146.
 
-.. _Iris Instruments: http://www.iris-instruments.com/Pdf%20file/Corim_Gb.pdf
 .. _Geometrics: http://www.geometrics.com/
 
 
