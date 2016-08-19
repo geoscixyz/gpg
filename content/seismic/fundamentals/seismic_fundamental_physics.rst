@@ -38,9 +38,18 @@ Stress
 
 	.. figure:: images/compressive.png
 		:align: center
+		
+		Compressive normal stress
 
 	.. figure:: images/tensile.png
 		:align: center
+		
+		Tensile normal stress
+	
+	.. figure:: images/Elastic_shear_modulus.png
+		:align: center
+		
+		Shear stress
 
 When an external force is applied to a body, there are balanced internal
 forces set up within the body. Stress is a measure of these internal forces.
