@@ -67,13 +67,19 @@ Conductivity Measurements
 
 Measuring a rock's conductivity/resistivity is fairly straightforward.
 First, a cylindrical core sample is taken from the rock.
-The core sample is then placed in a sample holder between two electrodes where it acts as a resistive element for a circuit.
+The core sample is then placed in a sample holder between two copper/graphite electrodes where it acts as a resistive element for a circuit.
+
+
+.. figure:: ./images/electrode_conductivity_measurements.png
+	:align: right
+	:scale: 35%
+
 
 Next, a source is used to drive direct current (:math:`I`) through the core sample.
-By measuring the voltage drop (:math:`V`) accross the length of the sample, Ohm's law can be used to determine the circuit resistance (:math:`R`) caused by the rock:
+By measuring the voltage drop (:math:`\Delta V`) accross the length of the sample, Ohm's law can be used to determine the circuit resistance (:math:`R`) caused by the rock:
 
 .. math::
-	R = \frac{V}{I}
+	R = \frac{\Delta V}{I}
 
 
 The measured resistance increases proportional to the length of the core sample.
