@@ -38,19 +38,46 @@ The electric susceptibility should not be confused with the magnetic susceptibil
 .. math::
 	\varepsilon_r = \frac{\varepsilon}{\varepsilon_0}
 	
+	
+	
+	
 
-**Dielectric Permittivity and Frequency-Dependence**: The electric polarization which is generated within dielectric materials does not occur instantaneously and depends on the frequency of the electric field.
+**Dielectric Permittivity and Frequency-Dependence**: Electrical polarization mechanisms relevant to ground-penetrating radar depend on the frequency of the electric field.
 Therefore, the dielectric permittivity must be expressed as a frequency-dependent quantity with both a real part (:math:`\varepsilon^\prime`) and an imaginary part (:math:`\varepsilon^{\prime\prime}`):
+
 
 .. math::
 	\varepsilon (\omega) = \varepsilon^\prime (\omega) + i \varepsilon^{\prime\prime} (\omega)
 
 
 where :math:`i = \sqrt{-1}`.
+The real component of the dielectric permittivity represents energy stored through electrical polarization whereas the imaginary component represents a measure of energy loss.
+This aspect of the real and imaginary dielectric permittivity will be discussed in more detail when learning about ground-penetrating radar (link).
 
-- Significance of Re and Im to energy storage and dissipation
 
-- That generally, permittivity decreases as frequency increases
+
+.. figure:: ./images/cole_cole_permittivity.png
+	:align: right
+	:scale: 40%
+
+A widely used model for describing dielectric permittivities relevant to ground-penetrating radar is the Cole-Cole model:
+
+.. math::
+	\varepsilon (\omega) = \varepsilon_\infty + \frac{\varepsilon_0 - \varepsilon_\infty}{1 + (i\omega \tau)^\alpha}
+
+
+where :math:`\varepsilon_0` is the DC or zero-frequency permittivity, and :math:`\varepsilon_\infty` represents a limit as frequency goes to infinity.
+Parameters :math:`\tau` and :math:`\alpha` define the span of frequencies in which the dielectric permittivity is frequency-dependent.
+As we can see from the plot:
+
+- Rrequency-dependence only occurs over a finite span of frequencies.
+- In general, the magnitude of the dielectric permittivity decreases with respect to an increase in frequency.
+- At suffiiently low frequencies, the dielectric permittivity is constant and real-valued.
+
+
+Parameters used to define the dielectric properties of materials and their associated units are tabulated below.
+
+
 
 +-------------------------+-----------------------------------+------------------+
 | **Property**            | **Symbol**                        | **Units**        |
@@ -59,15 +86,19 @@ where :math:`i = \sqrt{-1}`.
 +-------------------------+-----------------------------------+------------------+
 | Displacement Current    | :math:`\vec D`                    | A/m :math:`\!^2` |
 +-------------------------+-----------------------------------+------------------+
-| Electric Polarization   | :math:`\vec P`                    | A/m :math:`\!^2` | 
+| Electric Polarization   | :math:`\vec P`                    | A/m :math:`\!^2` |
 +-------------------------+-----------------------------------+------------------+
 | Dielectric Permittivity | :math:`\varepsilon`               | F/m              |
 +-------------------------+-----------------------------------+------------------+
-| Relative Permeability   | :math:`\varepsilon_r`             | *Unitless        |
+| Relative Permittivity   | :math:`\varepsilon_r`             | *Unitless        |
 +-------------------------+-----------------------------------+------------------+
-| Real Permeability       | :math:`\varepsilon^\prime`        | F/m              |
+| Real Permittivity       | :math:`\varepsilon^\prime`        | F/m              |
 +-------------------------+-----------------------------------+------------------+
-| Imaginary Permeability  | :math:`\varepsilon^{\prime\prime}`| F/m              |
+| Imaginary Permittivity  | :math:`\varepsilon^{\prime\prime}`| F/m              |
++-------------------------+-----------------------------------+------------------+
+| DC Permittivity         | :math:`\varepsilon_0`             | F/m              |
++-------------------------+-----------------------------------+------------------+
+| Infinite Permittivity   | :math:`\varepsilon_\infty`        | F/m              |
 +-------------------------+-----------------------------------+------------------+
 | Electric Susceptibility | :math:`\chi_e`                    | *Unitsless       |
 +-------------------------+-----------------------------------+------------------+
@@ -87,9 +118,95 @@ Measurements for Dielectric Permittivity
 Electrical Permittivity for Common Rocks
 ========================================
 
-- Really need to define specifically what the numbers mean.
+A table with the approximate relative permittivities for common rock, soils and other materials is shown below.
+In order to interpret this table correctly, it is important to understand the following:
 
-- Usually, the numbers represent the real component at a particularly relevant frequency
+- For hard rocks and dry soils, the dielectric permittivity is effectively constant and equal to the DC permittivity :math:`\varepsilon_0` (Butler).
+- The frequency-dependence of water-saturated sedimentary rocks and soils is negligible below ~100 MHz and small below ~1 GHz (Kaatze, 1989; Meissner and Wentz, 2004).
+
+As a result, the dielectric properties of rocks are generally given as real-valued.
+These constant values accurately describe the dielectric properties of most relevant materials below ~100 MHz and offer a reasonable approximation below ~1 GHz.
+By examining the table, several things can be inferred:
+
+- Water has a much higher dielectric permittivity than most rock forming minerals.
+- Water saturated rocks have much larger dielectric permittivities than dry rocks.
+- Sediments generally have larger dielectric permittivities than hard rocks.
+
+
+
++-----------------------------+---------------------------------------------+
+| **Rock/Soil Type**          |:math:`\varepsilon_r\;` **at Zero-Frequency**|
++=============================+=============================================+
+| Air                         | 1                                           |
++-----------------------------+---------------------------------------------+
+| Water (fresh)               | 81                                          |
++-----------------------------+---------------------------------------------+
+| Water (sea)                 | 81                                          |
++-----------------------------+---------------------------------------------+
+| Snow                        | 1.4-3                                       |
++-----------------------------+---------------------------------------------+
+| Ice                         | 3-8                                         |
++-----------------------------+---------------------------------------------+
+| Permafrost                  | 1-8                                         |
++-----------------------------+---------------------------------------------+
+| **Sediments**               |                                             |
++-----------------------------+---------------------------------------------+
+| Sand (dry)                  | 3-6                                         |
++-----------------------------+---------------------------------------------+
+| Sand (wet)                  | 25-30                                       |
++-----------------------------+---------------------------------------------+
+| Silt (wet)                  | 10                                          |
++-----------------------------+---------------------------------------------+
+| Clay Soil (dry)             | 3                                           |
++-----------------------------+---------------------------------------------+
+| Clay (wet)                  | 8-15                                        |
++-----------------------------+---------------------------------------------+
+| Marsh                       | 12                                          |
++-----------------------------+---------------------------------------------+
+| Agricultural Land           | 15                                          |
++-----------------------------+---------------------------------------------+
+| Pastoral Land               | 13                                          |
++-----------------------------+---------------------------------------------+
+| **Rocks**                   |                                             |
++-----------------------------+---------------------------------------------+
+| Granite                     | 5-8                                         |
++-----------------------------+---------------------------------------------+
+| Limestone                   | 7-9                                         |
++-----------------------------+---------------------------------------------+
+| Dolomite                    | 6.8-8                                       |
++-----------------------------+---------------------------------------------+
+| Basalt (wet)                | 8                                           |
++-----------------------------+---------------------------------------------+
+| Shale (wet)                 | 7                                           |
++-----------------------------+---------------------------------------------+
+| Sandstone (wet)             | 6                                           |
++-----------------------------+---------------------------------------------+
+| Coal                        | 4-5                                         |
++-----------------------------+---------------------------------------------+
+| **Contaminents**            |                                             |
++-----------------------------+---------------------------------------------+
+| Benzene                     | 2.3                                         |
++-----------------------------+---------------------------------------------+
+| Toulene                     | 2.4                                         |
++-----------------------------+---------------------------------------------+
+| Acetone                     | 20.7                                        |
++-----------------------------+---------------------------------------------+
+| Tetrachloroethene           | 2.3                                         |
++-----------------------------+---------------------------------------------+
+| Trichloroethene             | 3.4                                         |
++-----------------------------+---------------------------------------------+
+| Carbon Tetrachloride        | 2.2                                         |
++-----------------------------+---------------------------------------------+
+| **Other**                   |                                             |
++-----------------------------+---------------------------------------------+
+| Concrete                    | 6-30                                        |
++-----------------------------+---------------------------------------------+
+| Asphalt                     | 3-5                                         |
++-----------------------------+---------------------------------------------+
+| PVC, Epoxy, Polyesters      | 3                                           |
++-----------------------------+---------------------------------------------+
+
+
 
 
 
