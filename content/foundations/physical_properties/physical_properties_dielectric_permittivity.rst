@@ -52,7 +52,7 @@ Therefore, the dielectric permittivity must be expressed as a frequency-dependen
 
 where :math:`i = \sqrt{-1}`.
 The real component of the dielectric permittivity represents energy stored through electrical polarization whereas the imaginary component represents a measure of energy loss.
-This aspect of the real and imaginary dielectric permittivity will be discussed in more detail when learning about ground-penetrating radar (link).
+The significance of the real and imaginary components of the dielectric permittivity will be discussed in more detail when learning about ground-penetrating radar (link).
 
 
 
@@ -60,19 +60,19 @@ This aspect of the real and imaginary dielectric permittivity will be discussed 
 	:align: right
 	:scale: 40%
 
-A widely used model for describing dielectric permittivities relevant to ground-penetrating radar is the Cole-Cole model:
+A widely used model for describing the dielectric permittivity as it relates to ground-penetrating radar is the Cole-Cole model:
 
 .. math::
-	\varepsilon (\omega) = \varepsilon_\infty + \frac{\varepsilon_0 - \varepsilon_\infty}{1 + (i\omega \tau)^\alpha}
+	\varepsilon (\omega) = \varepsilon_\infty + \frac{\varepsilon_{DC} - \varepsilon_\infty}{1 + (i\omega \tau)^\alpha}
 
 
-where :math:`\varepsilon_0` is the DC or zero-frequency permittivity, and :math:`\varepsilon_\infty` represents a limit as frequency goes to infinity.
-Parameters :math:`\tau` and :math:`\alpha` define the span of frequencies in which the dielectric permittivity is frequency-dependent.
-As we can see from the plot:
+where :math:`\varepsilon_{DC}` is the DC or zero-frequency permittivity, and :math:`\varepsilon_\infty` represents a limit as frequency goes to infinity.
+Parameters :math:`\tau` and :math:`\alpha` define the span of frequencies in which the dielectric permittivity changes with respect to frequency.
+As we can see from this model:
 
-- Rrequency-dependence only occurs over a finite span of frequencies.
-- In general, the magnitude of the dielectric permittivity decreases with respect to an increase in frequency.
-- At suffiiently low frequencies, the dielectric permittivity is constant and real-valued.
+- Frequency-dependence only occurs over a finite span of frequencies.
+- The magnitude of the dielectric permittivity decreases with respect to an increase in frequency.
+- At sufficiently low frequencies, the dielectric permittivity is constant and real-valued.
 
 
 Parameters used to define the dielectric properties of materials and their associated units are tabulated below.
@@ -96,7 +96,7 @@ Parameters used to define the dielectric properties of materials and their assoc
 +-------------------------+-----------------------------------+------------------+
 | Imaginary Permittivity  | :math:`\varepsilon^{\prime\prime}`| F/m              |
 +-------------------------+-----------------------------------+------------------+
-| DC Permittivity         | :math:`\varepsilon_0`             | F/m              |
+| DC Permittivity         | :math:`\varepsilon_{DC}`          | F/m              |
 +-------------------------+-----------------------------------+------------------+
 | Infinite Permittivity   | :math:`\varepsilon_\infty`        | F/m              |
 +-------------------------+-----------------------------------+------------------+
@@ -121,14 +121,14 @@ Electrical Permittivity for Common Rocks
 A table with the approximate relative permittivities for common rock, soils and other materials is shown below.
 In order to interpret this table correctly, it is important to understand the following:
 
-- For hard rocks and dry soils, the dielectric permittivity is effectively constant and equal to the DC permittivity :math:`\varepsilon_0` (Butler).
+- For hard rocks and dry soils, the dielectric permittivity is effectively constant and equal to the DC permittivity :math:`\varepsilon_{DC}` (Butler).
 - The frequency-dependence of water-saturated sedimentary rocks and soils is negligible below ~100 MHz and small below ~1 GHz (Kaatze, 1989; Meissner and Wentz, 2004).
 
 As a result, the dielectric properties of rocks are generally given as real-valued.
 These constant values accurately describe the dielectric properties of most relevant materials below ~100 MHz and offer a reasonable approximation below ~1 GHz.
 By examining the table, several things can be inferred:
 
-- Water has a much higher dielectric permittivity than most rock forming minerals.
+- Water generally has a much higher dielectric permittivity than rock forming minerals.
 - Water saturated rocks have much larger dielectric permittivities than dry rocks.
 - Sediments generally have larger dielectric permittivities than hard rocks.
 
@@ -143,23 +143,23 @@ By examining the table, several things can be inferred:
 +-----------------------------+---------------------------------------------+
 | Water (sea)                 | 81                                          |
 +-----------------------------+---------------------------------------------+
-| Snow                        | 1.4-3                                       |
+| Snow                        | 1.4 - 3                                     |
 +-----------------------------+---------------------------------------------+
-| Ice                         | 3-8                                         |
+| Ice                         | 3 - 8                                       |
 +-----------------------------+---------------------------------------------+
-| Permafrost                  | 1-8                                         |
+| Permafrost                  | 1 - 8                                       |
 +-----------------------------+---------------------------------------------+
 | **Sediments**               |                                             |
 +-----------------------------+---------------------------------------------+
-| Sand (dry)                  | 3-6                                         |
+| Sand (dry)                  | 3 - 6                                       |
 +-----------------------------+---------------------------------------------+
-| Sand (wet)                  | 25-30                                       |
+| Sand (wet)                  | 25 - 30                                     |
 +-----------------------------+---------------------------------------------+
 | Silt (wet)                  | 10                                          |
 +-----------------------------+---------------------------------------------+
 | Clay Soil (dry)             | 3                                           |
 +-----------------------------+---------------------------------------------+
-| Clay (wet)                  | 8-15                                        |
+| Clay (wet)                  | 8 - 15                                      |
 +-----------------------------+---------------------------------------------+
 | Marsh                       | 12                                          |
 +-----------------------------+---------------------------------------------+
@@ -169,11 +169,11 @@ By examining the table, several things can be inferred:
 +-----------------------------+---------------------------------------------+
 | **Rocks**                   |                                             |
 +-----------------------------+---------------------------------------------+
-| Granite                     | 5-8                                         |
+| Granite                     | 5 - 8                                       |
 +-----------------------------+---------------------------------------------+
-| Limestone                   | 7-9                                         |
+| Limestone                   | 7 - 9                                       |
 +-----------------------------+---------------------------------------------+
-| Dolomite                    | 6.8-8                                       |
+| Dolomite                    | 6.8 - 8                                     |
 +-----------------------------+---------------------------------------------+
 | Basalt (wet)                | 8                                           |
 +-----------------------------+---------------------------------------------+
@@ -181,7 +181,17 @@ By examining the table, several things can be inferred:
 +-----------------------------+---------------------------------------------+
 | Sandstone (wet)             | 6                                           |
 +-----------------------------+---------------------------------------------+
-| Coal                        | 4-5                                         |
+| Coal                        | 4 - 5                                       |
++-----------------------------+---------------------------------------------+
+| **Minerals**                |                                             |
++-----------------------------+---------------------------------------------+
+| Quartz                      | 4.2 - 5                                     |
++-----------------------------+---------------------------------------------+
+| Orthoclase Feldspar         | 4.5 - 5.8                                   |
++-----------------------------+---------------------------------------------+
+| Kaolinite (clay)            | 9.5 - 13.7                                  |
++-----------------------------+---------------------------------------------+
+| Calcite                     | 7.8 - 8.5                                   |
 +-----------------------------+---------------------------------------------+
 | **Contaminents**            |                                             |
 +-----------------------------+---------------------------------------------+
@@ -216,10 +226,28 @@ Factors Impacting Electric Permittivity
 
 
 
-**Water**:
+**Porosity and Water Saturation**:
 
+By far the most important factors in determining a rock's dielectric permittivity are porosity and water saturation.
+Air has a relative permittivity of 1 whereas common rock forming minerals have much higher relative permittivities.
+This means that for dry samples, the rock's bulk dielectric permittivity decreases as the porosity increases.
 
+When rock samples are saturated with water, their dielectric permittivities can increase drastically.
+This is because water has a relative permittivity of 81, which is much higher than the relative permittivities of rock forming minerals.
+As a result, the bulk dielectric permittivity of a rock increases as pore water saturation increases.
 
+The relationship between a rock's bulk dielectric permittivity, porosity and water saturation is given by:
+
+.. math::
+	\sqrt{\varepsilon} = (1 - \phi ) \sqrt{\varepsilon_m} + \phi S_w \sqrt{\varepsilon_w} + \phi (1-S_w) \sqrt{\varepsilon_a}
+
+where
+
+- :math:`0 \leq \phi \leq 1` is the porosity
+- :math:`0 \leq S_w \leq 1` is the factional volume of the pore space saturated by water.
+- :math:`\varepsilon_m` is the dielectric permittivity of rock forming minerals.
+- :math:`\varepsilon_a` is the dielectric permittivity of air (equal to free-space).
+- :math:`\varepsilon_w` is the dielectric permittivity of water.
 
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
