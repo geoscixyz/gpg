@@ -3,6 +3,79 @@
 Chargeability
 *************
 
+Chargeability is one of two diagnostic physical properties in DC/IP surveys.
+Chargeability defines the magnitude of ionic charge build-up within a rock under the influence of an electric field.
+For chargeable rocks, Ohm's law can still be used to relate the density of electrical current (:math:`\vec J`) to an applied electric field (:math:`\vec E`):
+
+
+.. math::
+	\vec J = \sigma \vec E
+
+In this case however, :math:`\sigma` is represented by a frequency-dependent conductivity:
+
+.. math::
+	\sigma (\omega) = \sigma_0 \Bigg [ 1 - m \Bigg ( 1 - \frac{1}{1 + (i\omega\tau )^C} \Bigg ) \Bigg ]^{-1}
+	
+
+where :math:`\sigma_0` is the DC/zero-frequency conductivity and :math:`0 \leq m \leq 1` is the chargeability.
+Parameters :math:`\tau` and :math:`C` define the frequency-dependent aspect of the complex conductivity.
+
+
+
+
+Under a static field, a portion of the ionic charges within the rock's pore fluid will accumulate on grain boundaries.
+In this case:
+
+.. math::
+	\lim_{\omega \rightarrow 0} \sigma = \sigma_0.
+
+
+At high frequencies, none of the ionic charges to not have sufficient time to accumulate.
+As a result, these ions contribute towards the conductive mechanism occurring within the rock.
+Thus at high frequencies:
+
+.. math::
+	\lim_{\omega \rightarrow \infty} \sigma = \frac{\sigma_0}{1 - m}
+
+
+and the conductivity of the rock is larger.
+
+
+**Complex Resisitivity**
+
+In many cases, the electrical properties of chargeable rocks are described using a complex resistivity:
+
+.. math::
+	\rho = \frac{1}{\sigma} = \rho_0 \Bigg [ 1 - m \Bigg ( 1 - \frac{1}{1 + (i\omega\tau )^C} \Bigg ) \Bigg ]
+
+
+
+Chargeability Measurements
+==========================
+
+
+
+
+
+
+
+Chargeabilities of Common Rocks
+===============================
+
+
+
+
+
+
+Factors Impacting Chargeability
+===============================
+
+
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
 Introduction
 ============
 
