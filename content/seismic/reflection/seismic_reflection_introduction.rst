@@ -27,13 +27,13 @@ acoustic impedance is the product of the velocity and density. Information in
 the seismogram which comes after the first arrival is important. Reflection
 seismic data are acquired in the same manner as refraction data but the
 processing is considerably different. In reflection seismology, seismic
-records from many sets of shots and receivers are used to generate an ideal
-seismogram which has reflections that correspond to a vertically traveling
+records from many sets of shots and receivers are used to generate a Normal Incidence Reflection
+Seismogram which has reflections that correspond to a vertically traveling
 wave as shown in the diagram below. The reflections occur at travel times that
 are determined by the velocity and the length of the travel path in each
 layer. These seismograms are ideal for interpretation.
 
-The ideal seismograms are acquired at regular distances along the surface and
+The normal incidence reflection seismograms are acquired at regular distances along the surface and
 are composited into a seismic section. This generates an image of the
 substructure that can be used in an identical manner to a radar section. The
 examples below illustrate how the seismic images can be interpreted in terms
