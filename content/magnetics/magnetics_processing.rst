@@ -1,7 +1,7 @@
-.. _magnetics_plotting_processing:
+.. _magnetics_processing:
 
-Processing and plotting magnetic data
-****************************************
+Processing
+**********
 
 Removal of time variations
 ==========================
