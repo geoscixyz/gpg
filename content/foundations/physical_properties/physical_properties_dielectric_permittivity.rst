@@ -3,7 +3,8 @@
 Dielectric Permittivity
 ***********************
 
-The dielectric permittivity (:math:`\varepsilon`) represents an important diagnostic physical property in ground-penetrating radar; as the attenuation, wavelength and velocity of electromagnetic waves associated with this survey method are strongly dependent on the dielectric permittivity.
+Dielectric permittivity (:math:`\varepsilon`) represents an important diagnostic physical property for ground-penetrating radar.
+This physical property impacts the attenuation, wavelength and velocity of electromagnetic waves as they propagate through a material.
 Dielectric permittivity is defined as the ratio between the electric field (:math:`\vec E`) within a material and the corresponding electric displacement (:math:`\vec D`):
 
 
@@ -14,8 +15,9 @@ Dielectric permittivity is defined as the ratio between the electric field (:mat
 .. math::
 	\vec D = \varepsilon \vec E
 
-When exposed to an electric field, the average position of positive and negative charges within most materials become slightly separated on an atomic level.
-This separation results in a net electric polarization (:math:`\vec P`) within the material.
+When exposed to an electric field, positive and negative charges within individual atoms and molecules try to separate from one another.
+For example, the electron clouds of atoms will shift in position relative to their nuclei.
+The extent of electrical charge separation within a material is represented by the electric polarization (:math:`\vec P`).
 The electric field, electric displacement and electric polarization are related by the following expression:
 
 .. math::
@@ -33,47 +35,12 @@ where :math:`\chi_e` is known as the electric susceptibility.
 The electric susceptibility should not be confused with the magnetic susceptibility, as they describe different physical processes.
 
 
-**Relative Permittivity**: The dielectric properties of a material are frequently expressed using the relative permittivity (:math:`\varepsilon_r`), where:
+**Relative Permittivity**: The dielectric properties of materials are generally expressed using the relative permittivity (:math:`\varepsilon_r`).
+The relative permittivity defines the dielectric properties of a material relative to that of free-space:
 
 .. math::
 	\varepsilon_r = \frac{\varepsilon}{\varepsilon_0}
 	
-	
-	
-	
-
-**Dielectric Permittivity and Frequency-Dependence**: Electrical polarization mechanisms relevant to ground-penetrating radar depend on the frequency of the electric field.
-Therefore, the dielectric permittivity must be expressed as a frequency-dependent quantity with both a real part (:math:`\varepsilon^\prime`) and an imaginary part (:math:`\varepsilon^{\prime\prime}`):
-
-
-.. math::
-	\varepsilon (\omega) = \varepsilon^\prime (\omega) + i \varepsilon^{\prime\prime} (\omega)
-
-
-where :math:`i = \sqrt{-1}`.
-The real component of the dielectric permittivity represents energy stored through electrical polarization whereas the imaginary component represents a measure of energy loss.
-The significance of the real and imaginary components of the dielectric permittivity will be discussed in more detail when learning about ground-penetrating radar (link).
-
-
-
-.. figure:: ./images/cole_cole_permittivity.png
-	:align: right
-	:scale: 40%
-
-A widely used model for describing the dielectric permittivity as it relates to ground-penetrating radar is the Cole-Cole model:
-
-.. math::
-	\varepsilon (\omega) = \varepsilon_\infty + \frac{\varepsilon_{DC} - \varepsilon_\infty}{1 + (i\omega \tau)^\alpha}
-
-
-where :math:`\varepsilon_{DC}` is the DC or zero-frequency permittivity, and :math:`\varepsilon_\infty` represents a limit as frequency goes to infinity.
-Parameters :math:`\tau` and :math:`\alpha` define the span of frequencies in which the dielectric permittivity changes with respect to frequency.
-As we can see from this model:
-
-- Frequency-dependence only occurs over a finite span of frequencies.
-- The magnitude of the dielectric permittivity decreases with respect to an increase in frequency.
-- At sufficiently low frequencies, the dielectric permittivity is constant and real-valued.
-
 
 Parameters used to define the dielectric properties of materials and their associated units are tabulated below.
 
@@ -90,17 +57,9 @@ Parameters used to define the dielectric properties of materials and their assoc
 +-------------------------+-----------------------------------+------------------+
 | Dielectric Permittivity | :math:`\varepsilon`               | F/m              |
 +-------------------------+-----------------------------------+------------------+
-| Relative Permittivity   | :math:`\varepsilon_r`             | *Unitless        |
-+-------------------------+-----------------------------------+------------------+
-| Real Permittivity       | :math:`\varepsilon^\prime`        | F/m              |
-+-------------------------+-----------------------------------+------------------+
-| Imaginary Permittivity  | :math:`\varepsilon^{\prime\prime}`| F/m              |
-+-------------------------+-----------------------------------+------------------+
-| DC Permittivity         | :math:`\varepsilon_{DC}`          | F/m              |
-+-------------------------+-----------------------------------+------------------+
-| Infinite Permittivity   | :math:`\varepsilon_\infty`        | F/m              |
-+-------------------------+-----------------------------------+------------------+
 | Electric Susceptibility | :math:`\chi_e`                    | *Unitsless       |
++-------------------------+-----------------------------------+------------------+
+| Relative Permittivity   | :math:`\varepsilon_r`             | *Unitless        |
 +-------------------------+-----------------------------------+------------------+
 
 
@@ -118,16 +77,10 @@ Measurements for Dielectric Permittivity
 Electrical Permittivity for Common Rocks
 ========================================
 
-A table with the approximate relative permittivities for common rock, soils and other materials is shown below.
-In order to interpret this table correctly, it is important to understand the following:
-
-- For hard rocks and dry soils, the dielectric permittivity is effectively constant and equal to the DC permittivity :math:`\varepsilon_{DC}` (Butler).
-- The frequency-dependence of water-saturated sedimentary rocks and soils is negligible below ~100 MHz and small below ~1 GHz (Kaatze, 1989; Meissner and Wentz, 2004).
-
-As a result, the dielectric properties of rocks are generally given as a constant value.
-They values were obtained by performing physical property measurements at a particular frequency.
-In most cases, these values accurately describe the dielectric properties of relevant materials below ~100 MHz and offer a reasonable approximation below ~1 GHz.
-By examining the table, several things can be inferred:
+A table containing the relative permittivities for common rocks, soils and other materials is shown below (Martinez and Byrnes, 2001).
+Rocks within a certain classification vary significantly in composition.
+As a result, the relative permittivities of rock types are given as a range of values.
+By examining this table, several things can be inferred:
 
 - Water has a much higher dielectric permittivity than rock forming minerals.
 - Water saturated rocks have larger dielectric permittivities than dry rocks.
@@ -136,83 +89,83 @@ By examining the table, several things can be inferred:
 
 
 
-+-----------------------------+------------------------+---------------------------+
-| **Rock/Soil Type**          |:math:`\varepsilon_r\;` | **Measurement Frequency** |
-+=============================+========================+===========================+
-| Air                         | 1                      | 100 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Fresh Water                 | 80                     | 100 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Sea Water                   | 80                     | 100 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Ice                         | 3 - 4                  | 100 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Snow                        | 8 - 12                 | 100 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Permafrost                  | 4 - 8                  | 100 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| **Sediments**               |                        |                           |
-+-----------------------------+------------------------+---------------------------+
-| Silt                        | 5 - 30                 | 100 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Sand (dry)                  | 3 - 6                  | 100 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Sand (wet)                  | 10 - 30                | 100 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Sandy Soil (dry)            | 4 - 6                  | 100 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Sandy Soil (wet)            | 15 - 30                | 100 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Loamy Soil (dry)            | 4 - 6                  | 100 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Loamy Soil (wet)            | 10 - 20                | 100 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Clayey Soil (dry)           | 4 - 6                  | 100 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Clayey Soil (wet)           | 10 - 15                | 100 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Clay (dry)                  | 2 - 6                  | 100 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Clay (wet)                  | 15 - 40                | 100 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| **Rocks**                   |                        |                           |
-+-----------------------------+------------------------+---------------------------+
-| Shales                      | 5 - 15                 | 100 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Sandstones (dry)            | 2 - 3                  | 100 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Sandstones (wet)            | 5 - 10                 | 100 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Limestones                  | 4 - 8                  | 100 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Granite                     | 4 - 6                  | 100 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Coal (dry)                  | 3.5                    | 100 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Coal (wet)                  | 8                      | 100 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| **Minerals**                |                        |                           |
-+-----------------------------+------------------------+---------------------------+
-| Calcite                     | 6.4                    |   1 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Gypsum                      | 6.5                    | 750 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Halite                      | 5.9                    |   1 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Kaolinite                   | 11.8                   |   1 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Mica                        | 6.4                    | 750 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Olivine                     | 7.2                    |   1 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Orthoclase Feldspar         | 5.6                    |   1 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Plagioclase Feldspar        | 7                      |   1 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Pyroxene                    | 8.5                    |   1 MHz                   |
-+-----------------------------+------------------------+---------------------------+
-| Quartz                      | 4.5                    |   1 MHz                   |
-+-----------------------------+------------------------+---------------------------+
++-----------------------------+------------------------+
+| **Rock/Soil Type**          |:math:`\varepsilon_r\;` |
++=============================+========================+
+| Air                         | 1                      |
++-----------------------------+------------------------+
+| Fresh Water                 | 80                     |
++-----------------------------+------------------------+
+| Sea Water                   | 80                     |
++-----------------------------+------------------------+
+| Ice                         | 3 - 4                  |
++-----------------------------+------------------------+
+| Snow                        | 8 - 12                 |
++-----------------------------+------------------------+
+| Permafrost                  | 4 - 8                  |
++-----------------------------+------------------------+
+| **Sediments**               |                        |
++-----------------------------+------------------------+
+| Silt                        | 5 - 30                 |
++-----------------------------+------------------------+
+| Sand (dry)                  | 3 - 6                  |
++-----------------------------+------------------------+
+| Sand (wet)                  | 10 - 30                |
++-----------------------------+------------------------+
+| Sandy Soil (dry)            | 4 - 6                  |
++-----------------------------+------------------------+
+| Sandy Soil (wet)            | 15 - 30                |
++-----------------------------+------------------------+
+| Loamy Soil (dry)            | 4 - 6                  |
++-----------------------------+------------------------+
+| Loamy Soil (wet)            | 10 - 20                |
++-----------------------------+------------------------+
+| Clayey Soil (dry)           | 4 - 6                  |
++-----------------------------+------------------------+
+| Clayey Soil (wet)           | 10 - 15                |
++-----------------------------+------------------------+
+| Clay (dry)                  | 2 - 6                  |
++-----------------------------+------------------------+
+| Clay (wet)                  | 15 - 40                |
++-----------------------------+------------------------+
+| **Rocks**                   |                        |
++-----------------------------+------------------------+
+| Shales                      | 5 - 15                 |
++-----------------------------+------------------------+
+| Sandstones (dry)            | 2 - 3                  |
++-----------------------------+------------------------+
+| Sandstones (wet)            | 5 - 10                 |
++-----------------------------+------------------------+
+| Limestones                  | 4 - 8                  |
++-----------------------------+------------------------+
+| Granite                     | 4 - 6                  |
++-----------------------------+------------------------+
+| Coal (dry)                  | 3.5                    |
++-----------------------------+------------------------+
+| Coal (wet)                  | 8                      |
++-----------------------------+------------------------+
+| **Minerals**                |                        |
++-----------------------------+------------------------+
+| Calcite                     | 6.4                    |
++-----------------------------+------------------------+
+| Gypsum                      | 6.5                    |
++-----------------------------+------------------------+
+| Halite                      | 5.9                    |
++-----------------------------+------------------------+
+| Kaolinite                   | 11.8                   |
++-----------------------------+------------------------+
+| Mica                        | 6.4                    |
++-----------------------------+------------------------+
+| Olivine                     | 7.2                    |
++-----------------------------+------------------------+
+| Orthoclase Feldspar         | 5.6                    |
++-----------------------------+------------------------+
+| Plagioclase Feldspar        | 7                      |
++-----------------------------+------------------------+
+| Pyroxene                    | 8.5                    |
++-----------------------------+------------------------+
+| Quartz                      | 4.5                    |
++-----------------------------+------------------------+
 
 
 
@@ -246,6 +199,41 @@ where
 - :math:`\varepsilon_m` is the dielectric permittivity of rock forming minerals.
 - :math:`\varepsilon_a` is the dielectric permittivity of air (equal to free-space).
 - :math:`\varepsilon_w` is the dielectric permittivity of water.
+
+
+**Frequency**: 
+
+For hard rocks and unsaturated sedimentary samples, the dielectric permittivity can be considered constant for all intents and purposes.
+At sufficiently low frequencies, the same can be said about water-saturated sedimentary rocks and soils (Kaatze, 1989; Meissner and Wentz, 2004).
+At high frequencies however ( > 1 GHz), the electric polarization within water-saturated samples depends on the frequency of the electric field.
+As a result, these samples are sometimes characterized using a frequency-dependent dielectric permittivity:
+
+.. math::
+	\varepsilon (\omega) = \varepsilon^\prime (\omega) + i \varepsilon^{\prime\prime} (\omega)
+
+where :math:`i = \sqrt{-1}`.
+The real component of the dielectric permittivity (:math:`\varepsilon^\prime`) represents energy stored through electrical polarization whereas the imaginary component (:math:`\varepsilon^{\prime\prime}`) represents a measure of energy loss.
+The significance of the real and imaginary components of the dielectric permittivity will be discussed in more detail when learning about ground-penetrating radar (link).
+
+.. figure:: ./images/cole_cole_permittivity.png
+	:align: right
+	:scale: 40%
+
+A widely used model for describing the frequency-dependent dielectric permittivity is the Cole-Cole model:
+
+.. math::
+	\varepsilon (\omega) = \varepsilon_\infty + \frac{\varepsilon_{DC} - \varepsilon_\infty}{1 + (i\omega \tau)^\alpha}
+
+
+where :math:`\varepsilon_{DC}` is the DC or zero-frequency permittivity, and :math:`\varepsilon_\infty` represents a limit as frequency goes to infinity.
+Parameters :math:`\tau` and :math:`\alpha` define the span of frequencies in which the dielectric permittivity changes with respect to frequency.
+As we can see from this model:
+
+- Frequency-dependence only occurs over a finite span of frequencies.
+- The magnitude of the dielectric permittivity decreases with respect to an increase in frequency.
+- At sufficiently low frequencies, the dielectric permittivity is constant and real-valued.
+
+
 
 
 
