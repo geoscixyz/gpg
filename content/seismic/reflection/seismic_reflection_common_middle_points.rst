@@ -1,6 +1,6 @@
 .. _seismic_reflection_common_middle_points:
 
-Common Midpoint Points
+Common Middle Points
 ************************
   	
 
