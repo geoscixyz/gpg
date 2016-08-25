@@ -39,13 +39,13 @@ Two way travel time:
 Normal Moveout: 
 
 .. math::
- 		\Delta T = t(x) - t_0
+ 		\Delta t = t(x) - t_0
 
 
 In the above diagram :math:`t_0` is the 2-way vertical travel time. It is the
 minimum time at which a reflection will be recorded. The additional time taken
 for a signal to reach a receiver at offset :math:`x` is called the "Normal
-Moveout" time, :math:`\Delta T`.  This value is required for every trace in the
+Moveout" time, :math:`\Delta t`.  This value is required for every trace in the
 common depth point data set in order to shift echoes up so they align for
 stacking. How is it obtained? First let us find a way of determining velocity
 and :math:`t_0`.
@@ -68,21 +68,22 @@ at :math:`x`,  or :math:`t(x)`, and the ground's velocity, :math:`v`.
 
 
 .. math::
- 		t^2 &= \frac{x^2 + 4z^2}{v}
- 			= \frac{4z^2}{v^2}\left(\frac{x^2}{4z^2} + 1 \right)\
+ 		t^2 &= \frac{x^2 + 4z^2}{v} \\
+ 			&= \frac{4z^2}{v^2}\left(\frac{x^2}{4z^2} + 1 \right)\\
 
- 		  t &= \frac{2z}{v} \sqrt{ 1 + (\frac{x}{2z})^2 }
- 		    = t_0 \sqrt{ 1 + \left(\frac{x}{vt_0}\right)^2 }\
+ 		  t &= \frac{2z}{v} \sqrt{ 1 + (\frac{x}{2z})^2 } \\
+ 		    &= t_0 \sqrt{ 1 + \left(\frac{x}{vt_0}\right)^2 }
 
 Apply binomial expansion to get
 
 .. math::
- 		  t &\approx  t_0 \left(1 + \frac{1}{2} \left(\frac{x}{vt_0} \right)^2  \right)\quad if \quad \frac{x}{vt_0} << 1
+ 		t \approx  t_0 \left(1 + \frac{1}{2} \left(\frac{x}{vt_0} \right)^2  \right)\quad 
+ 		if \quad \frac{x}{vt_0} << 1
 
 Now, since normal moveout is :math:`\Delta T = t_x - t_0`
 
 .. math::
-		\Delta T \approx \left(t_0 + \frac{t_0x^2}{2v^2t_0^2} \right) - t_0 \approx \frac{x^2}{2v^2t_0}
+		\Delta t \approx \left(t_0 + \frac{t_0x^2}{2v^2t_0^2} \right) - t_0 \approx \frac{x^2}{2v^2t_0}
 
 The algebra has only one complicated step--a binomial expansion must be
 applied to obtain a simple relation without square roots etc.
