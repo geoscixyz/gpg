@@ -11,17 +11,20 @@ Density is defined as the mass (:math:`m`) contained within a material per unit 
 	
 Please note that mass (the quantity of matter within an object) should not be confused with weight (the downward force exerted by an object due to gravity).
 
-**Specific Gravity**: In some cases, the density of a material is represented instead by its specific gravity.
+**Specific Gravity**: 
+
+In some cases, the density of a material is represented instead by its specific gravity.
 Specific gravity defines the ratio of a material's density to that of water:
 
 .. math::
-	S.G. = \frac{\rho}{\rho_w}marized below:
+	S.G. = \frac{\rho}{\rho_w}
+	
+where the density of water :math:`\rho_w` = 1,000 kg/m :math:`\!^3` (or 1 g/cm :math:`\!^3`).
+Parameters used to define density and their associated units are summarized below.
+	
 
 +------------------+--------------+----------------------------------------+
-| Property         | Symbol       | Units                               
-
-where the density of water :math:`\rho_w` = 1,000 kg/m :math:`\!^3` (or 1 g/cm :math:`\!^3`).
-Parameters used to define density and their associated units are sum   |
+| Property         | Symbol       | Units                                  |
 +==================+==============+========================================+
 | Density          | :math:`\rho` | g/cm :math:`\!^3` or kg/m :math:`\!^3` |
 +------------------+--------------+----------------------------------------+
@@ -57,7 +60,7 @@ This method is simple but it is often not sufficiently accurate for geophysical 
 
 For this method, the mass of the rock (:math:`m_{a}`) is first measured using a conventional scale.
 The rock is then immersed into a bath of water, where its underwater weight is measured and used to obtain an apparent mass (:math:`m_{w}`).
-If :math:`\rho_w` = 1000 kg/m :math:`\!^3` is the density of water, the density of the rock is given by:
+Where :math:`\rho_w` = 1000 kg/m :math:`\!^3` is the density of water, the density of the rock is given by:
 
 .. figure:: ./images/hydrostatic_weighting_legend.jpg
 	:scale: 50%
@@ -76,10 +79,9 @@ Pycnometer measurements are generally used on porous rocks and sediments.
 Using a pycnometer, we can obtain a rock's skeletal density; that is, the average density of all solid material within the rock.
 Bulk density is not recovered using this method, as we are not accounting for the rock's pore space.
 
-Pycnometers typically have a chamber of known volume (:math:`V_c`).
-Once a rock has been placed in the chamber, the initial volume of the chamber is changed, thus changing the pressure.
-The change in gas pressure is used to determine how much of the chamber is comprised of gas.
-This can be used to determine the volume of solid material within the chamber (denoted by :math:`V_s`).
+Pycnometers typically consist of a hollow chamber with a known initial volume (:math:`V_c`).
+Once a rock has been placed in the chamber, the volume of the chamber is changed, resulting in a change in gas pressure around the rock.
+The change in gas pressure is used to determine how much of the chamber is filled with gas (:math:`V_s`).
 The difference between :math:`V_c` and :math:`V_s` represents the volume of solid material comprising the rock.
 The skeletal density of the rock is therefore:
 
@@ -100,109 +102,36 @@ Therefore, the intensity scattered signal can be used to obtain the bulk density
 Density of Common Rocks
 =======================
 
-Every rocktype has a range of densities and the density range for different rocks may overlap. The densities for some common rocks, minerals, and other materials are summarized in tables below 
-Some general comments pertaining to common rocks are:
+Every rock type has a range of densities which overlap with different rocks. The densities for some common rocks, minerals, and other materials are summarized below.
+Some general comments pertaining to densities are:
 
 - Igneous and metamorphic rock are generally more dense than sedimentary rocks.
 - Mafic igneous rocks are generally more dense than felsic igneous rocks.
 - Higher metamorphic grade rocks such as eclogite and amphibolite are more dense than low grade metamorphic rocks such as slate and phyllite.
 - Metal ore-bearing rocks are generally much denser than other rock types. One exception is bauxite.
 
-+-----------------------+-----------------------------------+
-| Material            | Density Range (g/cm :math:`\!^3`) |
-+=======================+===================================+
-|                       |                                   |
-+-----------------------+-----------------------------------+
-| Water                 |                                   |
-+-----------------------+-----------------------------------+
-| Ice                   |                                   |
-+-----------------------+-----------------------------------+
-| Sedimentary  rocks    |           1.50 -3.30              |
-+-----------------------+-----------------------------------+
-| Igneous  rocks        |           2.35 -3.50              |
-+-----------------------+-----------------------------------+
-| Metamorphic rocks     |           2.52- 3.54              |
-+-----------------------+-----------------------------------+
-| Minerals              |           2.30- 7.60              |
-+-----------------------+-----------------------------------+
+To see the range of densities for specific rock types, click the links in the table.
 
++------------------------------------------------------+-----------------------------------+
+| Material                                             | Density Range (g/cm :math:`\!^3`) |
++======================================================+===================================+
+| Air                                                  |           0.001225                |
++------------------------------------------------------+-----------------------------------+
+| Water                                                |           1.00                    |
++------------------------------------------------------+-----------------------------------+
+| Ice                                                  |           0.917                   |
++------------------------------------------------------+-----------------------------------+
+| Petroleum                                            |           0.60 - 0.90             |
++------------------------------------------------------+-----------------------------------+
+| :ref:`Sedimentary  Rocks<table_density_sedimentary>` |           1.50 -3.30              |
++------------------------------------------------------+-----------------------------------+
+| :ref:`Igneous Rocks<table_density_igneous>`          |           2.35 -3.50              |
++------------------------------------------------------+-----------------------------------+
+| :ref:`Metamorphic Rocks<table_density_metamorphic>`  |           2.52- 3.54              |
++------------------------------------------------------+-----------------------------------+
+| :ref:`Ore-Bearing Rocks<table_density_ore_bearing>`  |           2.30- 7.60              |
++------------------------------------------------------+-----------------------------------+
 
-
-+-----------------------+-----------------------------------+
-| Rock Type             | Density Range (g/cm :math:`\!^3`) |
-+=======================+===================================+
-| **Sedimentary Rocks** |                                   |
-+-----------------------+-----------------------------------+
-| Clay                  |           1.63 - 2.60             |
-+-----------------------+-----------------------------------+
-| Silt                  |           1.80 - 2.20             |
-+-----------------------+-----------------------------------+
-| Soil                  |           1.20 - 2.40             |
-+-----------------------+-----------------------------------+
-| Sand                  |           1.70 - 2.30             |
-+-----------------------+-----------------------------------+
-| Sandstone             |           1.61 - 2.76             |
-+-----------------------+-----------------------------------+
-| Shale                 |           1.77 - 3.30             |
-+-----------------------+-----------------------------------+
-| Limestone             |           1.93 - 2.90             |
-+-----------------------+-----------------------------------+
-| Dolomite              |           2.28 - 2.90             |
-+-----------------------+-----------------------------------+
-| Chalk                 |           1.52 - 2.60             |
-+-----------------------+-----------------------------------+
-| Halite                |           2.10 - 2.60             |
-+-----------------------+-----------------------------------+
-| Gypsum                |           2.20 - 2.60             |
-+-----------------------+-----------------------------------+
-| **Igneous Rocks**     |                                   |
-+-----------------------+-----------------------------------+
-| Rhyolite              |           2.35 - 2.70             |
-+-----------------------+-----------------------------------+
-| Granite               |           2.50 - 2.81             |
-+-----------------------+-----------------------------------+
-| Andesite              |           2.40 - 2.80             |
-+-----------------------+-----------------------------------+
-| Basalt                |           2.70 - 3.30             |
-+-----------------------+-----------------------------------+
-| Gabbro                |           2.70 - 3.50             |
-+-----------------------+-----------------------------------+
-| **Metamorphic Rocks** |                                   |
-+-----------------------+-----------------------------------+
-| Slate                 |           2.70 - 2.90             |
-+-----------------------+-----------------------------------+
-| Phyllite              |           2.68 - 2.80             |
-+-----------------------+-----------------------------------+
-| Schist                |           2.39 - 2.80             |
-+-----------------------+-----------------------------------+
-| Gneiss                |           2.59 - 3.00             |
-+-----------------------+-----------------------------------+
-| Granulite             |           2.52 - 2.73             |
-+-----------------------+-----------------------------------+
-| Amphibolite           |           2.90 - 3.04             |
-+-----------------------+-----------------------------------+
-| Eclogite              |           3.20 - 3.54             |
-+-----------------------+-----------------------------------+
-| **Ore-Bearing Rocks** |                                   |
-+-----------------------+-----------------------------------+
-| Bauxite               |           2.30 - 2.55             |
-+-----------------------+-----------------------------------+
-| Pyrite and Pyrrhotite |           4.50 - 5.20             |
-+-----------------------+-----------------------------------+
-| Magnetite             |           4.90 - 5.20             |
-+-----------------------+-----------------------------------+
-| Hematite              |           4.90 - 5.30             |
-+-----------------------+-----------------------------------+
-| Cobaltite             |           5.80 - 6.30             |
-+-----------------------+-----------------------------------+
-| Galena (Lead-Sulphide)|           7.40 - 7.60             |
-+-----------------------+-----------------------------------+
-| **Other**             |                                   |
-+-----------------------+-----------------------------------+
-| Water                 |              1.00                 |
-+-----------------------+-----------------------------------+
-| Petroleum             |           0.60 - 0.90             |
-+-----------------------+-----------------------------------+
 
 
 
