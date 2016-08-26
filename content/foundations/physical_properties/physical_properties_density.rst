@@ -15,13 +15,13 @@ Please note that mass (the quantity of matter within an object) should not be co
 Specific gravity defines the ratio of a material's density to that of water:
 
 .. math::
-	S.G. = \frac{\rho}{\rho_w}
-
-where the density of water :math:`\rho_w` = 1,000 kg/m :math:`\!^3` (or 1 g/cm :math:`\!^3`).
-Parameters used to define density and their associated units are summarized below:
+	S.G. = \frac{\rho}{\rho_w}marized below:
 
 +------------------+--------------+----------------------------------------+
-| Property         | Symbol       | Units                                  |
+| Property         | Symbol       | Units                               
+
+where the density of water :math:`\rho_w` = 1,000 kg/m :math:`\!^3` (or 1 g/cm :math:`\!^3`).
+Parameters used to define density and their associated units are sum   |
 +==================+==============+========================================+
 | Density          | :math:`\rho` | g/cm :math:`\!^3` or kg/m :math:`\!^3` |
 +------------------+--------------+----------------------------------------+
@@ -43,21 +43,21 @@ Below are four common ways to measure density. These are ordered from more basic
 **Basic Method**
 
 The most basic method for measuring a rock's bulk density can be performed in two steps.
-First, the mass of the rock is obtained using a scale.
+First, the mass (M) of the rock is obtained using a weight scale.
 Next, the rock is fully immersed into a volume of water contained in a graduated cylinder.
-The amount of water which is displaced by the rock is equal to its volume.
-Therefore, the volume of the rock is equal to the change in volume (:math:`\Delta V`) measured from the graduated cylinder:
+The amount of water which is displaced by the rock is equal to the volume (:math:`V`) of the sample.
+The density of the rock is obtained from
 
 .. math::
-	\rho = \frac{m}{\Delta V}
+	\rho = \frac{m}{V}
 
-Although it is simple, this method is not particularly accurate and is rarely used for practical purposes.
+This method is simple but it is often not sufficiently accurate for geophysical purposes. 
 
 **Hydrostatic Weighting**
 
 For this method, the mass of the rock (:math:`m_{a}`) is first measured using a conventional scale.
 The rock is then immersed into a bath of water, where its underwater weight is measured and used to obtain an apparent mass (:math:`m_{w}`).
-Where :math:`\rho_w` = 1000 kg/m :math:`\!^3` is the density of water, the density of the rock is given by:
+If :math:`\rho_w` = 1000 kg/m :math:`\!^3` is the density of water, the density of the rock is given by:
 
 .. figure:: ./images/hydrostatic_weighting_legend.jpg
 	:scale: 50%
@@ -66,8 +66,8 @@ Where :math:`\rho_w` = 1000 kg/m :math:`\!^3` is the density of water, the densi
 .. math::	
 	\rho = \frac{m_a}{m_a - m_w} \times \rho_w									
 
-Although this method is simple, it cannot be used effectively for rocks which are overly unconsolidated or porous.
-Unconsolidated rocks have a tendency to break apart when immersed in water.
+This method if satisfactory for unless the rock is unconsolidated or porous.
+Unconsolidated rocks tend to break apart when immersed in water.
 The pore-space within porous rocks becomes partially filled, resulting in an overestimation of the rock's density.
 
 **Pycnometer Measurements**
@@ -100,14 +100,31 @@ Therefore, the intensity scattered signal can be used to obtain the bulk density
 Density of Common Rocks
 =======================
 
-Below, the density ranges for common rock types are summarized (Telford et al., 1990).
-Although certain rock types are generally less dense than others, it is important to recognize that density values for certain rock types may overlap.
-From this table, we can infer several things:
+Every rocktype has a range of densities and the density range for different rocks may overlap. The densities for some common rocks, minerals, and other materials are summarized in tables below 
+Some general comments pertaining to common rocks are:
 
-- Igneous and metamorphic rock are by and large more dense than sedimentary rocks.
+- Igneous and metamorphic rock are generally more dense than sedimentary rocks.
 - Mafic igneous rocks are generally more dense than felsic igneous rocks.
 - Higher metamorphic grade rocks such as eclogite and amphibolite are more dense than low grade metamorphic rocks such as slate and phyllite.
 - Metal ore-bearing rocks are generally much denser than other rock types. One exception is bauxite.
+
++-----------------------+-----------------------------------+
+| Material            | Density Range (g/cm :math:`\!^3`) |
++=======================+===================================+
+|                       |                                   |
++-----------------------+-----------------------------------+
+| Water                 |                                   |
++-----------------------+-----------------------------------+
+| Ice                   |                                   |
++-----------------------+-----------------------------------+
+| Sedimentary  rocks    |           1.50 -3.30              |
++-----------------------+-----------------------------------+
+| Igneous  rocks        |           2.35 -3.50              |
++-----------------------+-----------------------------------+
+| Metamorphic rocks     |           2.52- 3.54              |
++-----------------------+-----------------------------------+
+| Minerals              |           2.30- 7.60              |
++-----------------------+-----------------------------------+
 
 
 
