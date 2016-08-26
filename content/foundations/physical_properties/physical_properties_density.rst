@@ -38,7 +38,7 @@ Density Measurements
 ====================
 
 Acquiring the density of a material requires an appropriate method of measurement.
-Below are four common ways to measure density ordered from more basic to more sophisticated.
+Below are four common ways to measure density. These are ordered from more basic to more sophisticated.
 
 **Basic Method**
 
