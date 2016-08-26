@@ -82,15 +82,15 @@ By measuring the voltage drop (:math:`\Delta V`) accross the length of the sampl
 	R = \frac{\Delta V}{I}
 
 
-The measured resistance increases proportional to the length of the core sample.
+The measured resistance increases proportional to the length (:math:`L`) of the core sample.
 We expect this given that the current must flow through more of the resistive material.
-The measured resistance is also inversely proportional to the cross-sectional area of the sample.
+The measured resistance is also inversely proportional to the cross-sectional area (:math:`A`) of the sample.
 This relationship can be understood by comparing the net resistance of two identical resistors in parallel to a single resistor in series.
 
-Ultimately, the resistivity of the sample can be obtained from the measured resistance, the length of the core (:math:`l`) and its cross-sectional area (:math:`A`) using Pouillet's law:
+Ultimately, the resistivity of the sample can be obtained from the measured resistance, the length of the core and its cross-sectional area using Pouillet's law:
 
 .. math::
-	\rho = \frac{R A}{l}
+	\rho = \frac{R A}{L}
 
 
 
