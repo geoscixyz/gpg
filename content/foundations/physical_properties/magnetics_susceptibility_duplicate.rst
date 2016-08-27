@@ -4,56 +4,85 @@
 Susceptibility
 **************
 
-Magnetic susceptibility (:math:`\kappa`) is the diagnostic physical property used in magnetic surveys.
-Magnetic susceptibility defines a constant of proportionality between an applied magnetic field (:math:`\vec H`) and the magnetization it induces (:math:`\vec M`) within a material:
+Magnetic susceptibility (:math:`\kappa`) quantifies the magnetization (:math:`\vec M`) of a rock or mineral when it is subjected to an applied magnetic field (:math:`\vec H`). The relationship takes the form 
 
 .. math::
 	\vec M = \kappa \vec H
 
 
+**M: Magnetization** The magnetization M is the dipole moment per unit volume. 
+Individual particles, minerals, and magnetic domains
+within rocks often have a net magnetic moment and behave like
+small magnets. Let :math:`\vec{m_i}` be
+the magnetic moment of the :math:`i'\text{th}` particle.  Within a volume
+:math:`V`, the total magnetic moment, which is the sum of the individual
+magnetic moments, is
 
-Within rocks and other materials, there exists a collection magnetic dipoles (:math:`\vec m`).
-Magnetic dipoles essentially behave like microscopic bar magnets. 
-In the absence of an external magnetic field, the magnetic dipoles (bar magnets) are generally disordered.
-As a result, their individual magnetizations cancel out one another, leading to a net magnetization of zero for the material.
-Once a magnetic field is applied, the magnetic dipoles (bar magnets) try to re-orient themselves along the field.
-The strength of the alignment represents the strength of the induced magnetization.
+ .. math::
+	\vec{m}= \sum_i \vec{m_i}	
 
+The magnetization :math:`\vec{M}` :math:`(\text{A/m})` is the dipole moment per
+unit volume:
 
-.. figure:: ./images/magnetization_physics.png
-	:align: center
-	:scale: 60%
+.. math::
+	\vec{M} = \frac {\vec{m}}{V} = \frac {1}{V} \sum_i \vec{m_i}	
 	
+The units of M are A-m^2/m^3 = A/m
 
-**Magnetic Permeability**: The magnetic properties of a material can also be expressed using the magnetic permeability (:math:`\mu`).
-Magnetic permeability relates the intensity of the magnetic field (:math:`\vec H`) within a material to the density of magnetic flux (:math:`\vec B`), where: 
+
+**H: magnetic field** This is the forcing field. Magnetic dipoles subjected
+to this field will tend to align with H. 
+
+The magnetization process is illustrated in the following interactive figure.
+
+
+When there is no external magnetic field, the individual particles in a volume are
+generally disordered and hence don't produce a net magnetic
+field. However, when the material is subjected to an external magnetic field, H, 
+the particles try to re-orient themselves along the direction of the field. 
+This results in a net magnetization which produces a secondary 
+magnetic field. The following interactive figure
+illustrates the process:
+
+.. raw:: html
+    :file: susceptibility_duplicate.html
+	
+For many materials, the number of magnetic particles that align with the forcing
+field increases linearly with the strength of the applied field. The proportionality constant 
+is the magnetic susceptiblity. 
+
+In magnetic problems is a more fundamental physical property is **magnetic susceptibility**   :math:`\mu`.
+Magnetic permeability relates the magnetic field (:math:`\vec H`) to the magnetic flux density, :math:`\vec B`. 
+This constitutive relationship is written as 
 
 .. math::
 	\vec B = \mu \vec H
 
-The density of magnetic flux through a material depends on the magnetization within the material.
-This dependence is represented by the following expression:
+The magnetic flux density depends on the magnetization within the material
+and can be written as
 
 .. math::
 	\vec B = \mu_0 \big ( \vec H + \vec M \big )
 	
 	
 where :math:`\mu_0 = 4\pi \times 10^{-7}` H/m is the permeability of free-space.
+
+
 The permeability of free-space represents the relationship between :math:`\vec B` and :math:`\vec H` when the material is non-magnetic.
-Using our definition of the magnetization, the magnetic permeability can be defined in terms of the magnetic susceptibility as follows:
+
+For materials in which M=kappa H,  the magnetic permeability can be defined in terms of the magnetic susceptibility as follows:
 
 .. math::
 	\mu = \mu_0 (1 + \kappa )
-	
-As a result, the magnetic permeability also represents a diagnostic physical property for magnetic surveys.
 
 
-**Relative Permeability**: The magnetic properties of materials are frequently given using the relative permeability.
-Relative Permeability (:math:`\mu_r`) defines the magnetic permeability of a material proportional to that of free-space:
+
+**Relative Permeability** :math:`\mu_r`) is the ratio of the magnetic permeability of the material and permeability of free-space:
 
 .. math::
 	\mu_r = \frac{\mu}{\mu_0}
 
+With the above definitions, both magnetic susceptibility and magnetic permeability can considered to be physical properties associated with the magnetic characteristics of the material. In the literature it is common to see tables of :math:`\mu`, :math:`\mu_r`, or :math:`\kappa`. For most rocks the susceptibility is small (see tables below) and  charcterizing the magnetic properties in terms of :math:`\kappa` is convenient. 
 
 Parameters used to define magnetic properties and their associated units are tabulated below.
 
@@ -72,6 +101,22 @@ Parameters used to define magnetic properties and their associated units are tab
 +--------------------------+----------------+-----------+
 | Relative Permeability    | :math:`\mu_r`  | *Unitless |
 +--------------------------+----------------+-----------+
+
+Some useful conversions for units:
+1T = Weber per meter squared
+1T = 10^9 nT
+1nt= gamma   
+
+The above units (with the exception of gamma) are all SI units which is based
+on the `mks` (meters, kilograms, seconds). 
+Historically `cgs` (centimeter, grams, seconds) were used and magnetic susceptibilities
+for rocks provided in tables. Although it is unit-less, the value of susceptibility 
+is different in the cgs and SI
+systems of measurement. Translation between cgs and SI systems of units is
+done via :math:`\kappa \text{(SI)} = 4 \pi \kappa \text{(cgs)}` . The SI
+system is the current preferred standard among most geophysicists, but you
+will find cgs used in older references and texts. This can cause great 
+confusion so be careful!
 
 
 Susceptibility Measurements
@@ -102,7 +147,7 @@ Susceptibility of Common Rocks
 ==============================
 
 A chart showing the range of magnetic susceptibility values for common rock types is shown below.
-Note that the scale is logarithmic, indicating a huge variability in magnetic susceptibility among rocks.
+Note that the scale is logarithmic, indicating a largevariability in magnetic susceptibility among rocks.
 From this chart we can infer several things:
 
 - Rocks with a high magnetite content are by far the most susceptible (see red vertical red lines denoting \% magnetite content).
