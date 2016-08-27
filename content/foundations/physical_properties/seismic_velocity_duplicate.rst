@@ -91,8 +91,31 @@ Symbols used to define P-wave and S-wave velocities, as well as the elastic prop
 P-Wave and S-Wave Velocity Measurements
 =======================================
 
-Need a simple description
+**Ultrasonic Elastic Wave Velocity Measurements**
 
+
+To measure the P-wave and S-wave velocities for a given rock, a core sample is taken.
+The core sample is then held in place between two piezometric transducers.
+Piezometric transducers contain materials which contract and expand in response to an applied voltage.
+
+.. figure:: ./images/transducer_seismic_velocity.png
+	:scale: 45%
+	:align: right
+
+The measurement apparatus works by generating a short current pulse.
+As a result of the incoming current pulse, materials within the source transducer undergo elastic deformation.
+This elastic deformation is then transferred to the rock core where it propagates as elastic waves.
+On the other side of the rock, a receiver transducer registers the elastic waves and transforms the corresponding energy back into a current signal.
+This current signal is then measured by an oscilloscope.
+
+Using the oscilloscope, we can determine the amount of time (:math:`\Delta t`) it took for the elastic waves to propagate through the rock core.
+Given that we know the length of the rock core (:math:`L`), the seismic velocity is given by:
+
+.. math::
+	V = \frac{L}{\Delta t}
+
+In practice, the user may control whether they are measuring P-wave or S-wave velocities by specifying the direction of elastic deformation within the source transducer.
+Elastic deformation parallel to the length of the core results in P-wave velocity measurements, whereas elastic deformation perpendicular to the length of the core results in S-wave velocity measurements.
 
 
 P-Wave and S-Wave Velocities in Common Rocks
