@@ -116,7 +116,7 @@ In order to derive the relation between measurements (:math:`I`, :math:`V`,
 geometry) and the required physical property (resistivity, :math:`\rho`  ) we
 start from first principles (see the section called "Physical principles of DC
 resistivity". The derivation is a three step process:
-	
+
 - First find a relation for potential due to a point source of current at the surface of a uniform medium. The expression will look like Ohm's law with the addition of terms involving the distance between source and potential measurement location.
 
 - Next, the potential due to two sources (actually, a source and a sink) is the superposition of potentials due to each one.
@@ -155,7 +155,7 @@ particular electrode geometry:
 	\rho_a = \frac{\Delta V}{IG}
 
 
-similarly, the apparent conductivity is 
+similarly, the apparent conductivity is
 
  .. math::
 	\sigma_a = \frac{1}{\rho_a} = \frac{IG}{\Delta V}
@@ -324,7 +324,7 @@ data look like the following:
 Appendix II has a brief comparison of pseudosections and the results of
 inverting data gathered using the arrays.
 
-.. appendix II is not included in the current version and therefore the preceding line needs to be modified. 
+.. appendix II is not included in the current version and therefore the preceding line needs to be modified.
 
 Processing options
 ==================
