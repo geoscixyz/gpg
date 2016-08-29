@@ -6,7 +6,7 @@ Electrical Conductivity
 
 	
 	
-Electrical conductivity (:math:`\sigma`) is the diagnostic physical property in DC resistivity and electromagnetic surveys.
+Electrical conductivity (:math:`\sigma`) is the diagnostic physical property in direct current resistivity and electromagnetic surveys.
 It also plays an important role in ground-penetrating radar and induced polarization surveys.
 Electrical conductivity defines the ratio between the density of electrical current (:math:`\vec J`) within a material, and the electric field (:math:`\vec E`) responsible for producing it:
 
@@ -31,7 +31,7 @@ Current density represents the amount of current flowing per unit cross-sectiona
 
 In essence, the electrical conductivity defines how easy it is for current to flow though a particular material when subjected to an electric field.
 In conductive materials (larger :math:`\sigma`), free charges move quite easily and strong currents may be induced by a relatively weak electrical field.
-In contrast, resistive materials (smaller :math:`\sigma`) require strong electrical fields in order to produce any significant current.
+In contrast, resistive materials (smaller :math:`\sigma`) require strong electrical fields or voltages in order to produce any significant current.
 
 **Resistivity**: An equivalent physical property to the conductivity is the resistivity (:math:`\rho`).
 By definition, the resistivity of a material is the reciprocal of its conductivity:
@@ -49,7 +49,7 @@ Parameters used to define the conductive properties and their associated units a
 +------------------+----------------+-------------------------+
 | **Property**     | **Symbol**     | **Units**               |
 +==================+================+=========================+
-| Electric Field   | :math:`\vec E` | F/m                     |
+| Electric Field   | :math:`\vec E` | V/m                     |
 +------------------+----------------+-------------------------+
 | Current Density  | :math:`\vec J` | A/m :math:`\!^2`        |
 +------------------+----------------+-------------------------+
@@ -126,7 +126,7 @@ These fluids include: fresh water, brackish water, ocean water and brine.
 Because pore fluids have a higher conductivity than most rock-forming minerals, electrical current generally prefers to flow through the pore-space whenever possible.
 As a result, the bulk conductivity of the rock depends significantly its porosity, fluid saturation and the type of fluid contained within the pore-space.
 
-For rocks which are unsaturated, the pore space is occupied solely by air.
+For rocks which are unsaturated, the pore-space is occupied solely by air.
 Because air is infinitely resistive, it forces the current to flow through the minerals comprising the rock.
 As a result, unsaturated rocks are poorly conductive.
 When a sufficient percentage of the pore-space is saturated, the pore fluid is able to offer a more efficient pathway for the current.
