@@ -3,44 +3,85 @@
 Seismic Velocity
 ****************
 
-Elastic energy propagates in the earth in different ways and at different velocities. The main wave types are body waves (P and S waves) which travel through the medium and surface waves (Rayleigh or Love waves) that are surface or interface waves. Each wave has its own particle motion and speed of propagation. The speed of propagation depends upon the bulk modulus, shear modulus and density of the medium.
+Elastic energy propagates through the earth in different ways and at different velocities.
+The main wave types are body waves (P and S waves) and surface waves (Rayleigh and Love waves).
+Body waves travel through a medium whereas surface waves travel along surfaces or interfaces.
+Each wave has its own particle motion and speed of propagation.
+The speed of propagation depends upon the bulk modulus, shear modulus and density of the medium.
 
 Body Waves
+==========
 
 In seismology, there are two fundamental types of waves that travel through a medium: pressure waves ("P-waves") and shear-waves ("S-waves").
 
-.. figure:: ./images/Pwave_physics_diagram.png
-	:scale: 70%
+**P-waves**
+
+
+
+.. image:: images/Pwave.gif
+	:scale: 40%
 	:align: right
 
-P-waves are compressional waves in which the particle motion is in the direction of the wave propagation. The compression and extension of the medium, and the propagation of the wave, can be seen in the diagram. Cells change volume as the wave passes through.
+
+P-waves are compressional waves in which particle motion is in the direction of the wave propagation.
+The compression and extension of the medium, and the propagation of the wave, can be seen in the diagram on the right.
+As we can see, cells change volume as the wave passes through.
 The P-wave velocity is related to the elastic properties of the medium by the following expression:
 
 .. math::
 	v_p = \sqrt{\frac{K+4/3\mu}{\rho}} 
 	
 
-.. figure:: ./images/Swave_physics_diagram.png
-	:scale: 70%
-	:align: right
-
 where :math:`K` is the bulk modulus, :math:`\mu` is the shear modulus and :math:`\rho` is the density.
 
-S-waves, are shear waves in which the particle motion is perpendicular to the direction of wave propagation. The shearing action and the propagation of the wave, can be seen in the diagram. Cells change shape but not volume as the wave passes through. When there is a reference interface, such as the surface of the earth, the S-waves are labelled as SH (horizontal shear) and SV (vertical shear) to indicate the particle motion with respect to that surface. In isotropic media SH and SV waves travel at the same speed. The S-wave velocity can be related to the elastic properties of the medium by the following expression:
+
+**S-waves**
+
+
+.. image:: images/Swave.gif
+	:scale: 40%
+	:align: right
+
+
+
+S-waves are shear waves in which the particle motion is perpendicular to the direction of wave propagation.
+The shearing action and the propagation of the wave can be seen in the diagram on the right.
+Cells change shape but do not change volume as the wave passes through.
+When there is a reference interface, such as the surface of the earth, S-waves are labelled as SH (horizontal shear) and/or SV (vertical shear).
+This is used to indicate the direction of particle motion with respect to the surface.
+In isotropic media, SH and SV waves travel at the same speed.
+The S-wave velocity can be related to the elastic properties of the medium by the following expression:
 
 .. math::
 	v_s = \sqrt{\frac{\mu}{\rho}}
 
-Surface Waves:
-    Rayleigh waves
-    Love waves
-    
-    
+
+
+Surface Waves
+=============
+
+**Rayleigh waves**
+
+.. image:: images/Rayleighwave.gif
+	:scale: 40%
+	:align: right
+
+
+
+**Love waves**
     
 
-Definitions of the elastic properties: 
+.. image:: images/Lovewave.gif
+	:scale: 40%
+	:align: right
+    
 
-**Bulk Modulus**: The bulk modulus (:math:`K`) defines the resistance of a material to elastic compression.
+Material Elastic Properties
+===========================
+
+**Bulk Modulus**
+
+The bulk modulus (:math:`K`) defines the resistance of a material to elastic compression.
 As a result, it is sometimes referred to as the modulus of incompressibility.
 When a block of material is subjected to compressional forces, its volume decreases and it becomes more dense (see figure).
 Once the compressional force is removed, the block of material returns to its original size if the deformation is elastic.
@@ -48,12 +89,15 @@ The bulk modulus characterizes the compressional deformation as follows:
 
 .. math::
 	K = - V_0 \frac{\Delta V}{\Delta P}
-	
+
+
 where :math:`V_0` is the original volume of material, :math:`\Delta P` represents the pressure being applied to the material and :math:`\Delta V` is the resulting change in volume.
 
 
 
-**Shear Modulus** The shear modulus (:math:`\mu`) defines how resistant a material is to shear stress.
+**Shear Modulus**
+
+The shear modulus (:math:`\mu`) defines how resistant a material is to shear stress.
 As a result, it is sometimes referred to as the modulus of rigidity.
 When a block of material is subjected to a shear stress, it experiences a shear strain (see figure).
 The shear modulus defines the ratio of shear stress to shear strain:
@@ -63,15 +107,6 @@ The shear modulus defines the ratio of shear stress to shear strain:
 
 where the shear stress is represented by a force (:math:`F`) per unit area (:math:`A`).
 Shear strain represents a tangent angle between the shear deformation (:math:`\Delta x`) of the material along the direction of force and the perpendicular demension (:math:`l`) of the block of material.
-
-
-
-
-
-
-
-
-
 
 
 Symbols used to define P-wave and S-wave velocities, as well as the elastic properties on which they depend, are summarized in the following table:
