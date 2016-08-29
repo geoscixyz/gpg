@@ -4,21 +4,21 @@
 Susceptibility
 **************
 
-Magnetic susceptibility (:math:`\kappa`) quantifies the magnetization (:math:`\vec M`) of a rock or mineral when it is subjected to an applied magnetic field (:math:`\vec H`). The relationship takes the form 
+Magnetic susceptibility (:math:`\kappa`) is the diagnostic physical property and magnetic surveys.
+Magnetic susceptibility quantifies the magnetization (:math:`\vec M`) a rock or mineral experiences when it is subjected to an applied magnetic field (:math:`\vec H`). This relationship takes the form 
 
 .. math::
 	\vec M = \kappa \vec H
 
 
-**M: Magnetization** The magnetization M is the dipole moment per unit volume. 
-Individual particles, minerals, and magnetic domains
-within rocks often have a net magnetic moment and behave like
-small magnets. Let :math:`\vec{m_i}` be
-the magnetic moment of the :math:`i'\text{th}` particle.  Within a volume
-:math:`V`, the total magnetic moment, which is the sum of the individual
-magnetic moments, is
+**Magnetization**
 
- .. math::
+Individual particles, minerals, and magnetic domains within rocks often have a net magnetic moment (:math:`\vec m`) and behave like small bar magnets.
+The magnetization (:math:`\vec M`) defines the dipole moment per unit volume. 
+Let :math:`\vec m_i` be the magnetic moment of the :math:`i^\textrm{th}` particle.
+Within a volume (:math:`V`), the total magnetic moment is the sum of the individual magnetic moments, thus:
+
+.. math::
 	\vec{m}= \sum_i \vec{m_i}	
 
 The magnetization :math:`\vec{M}` :math:`(\text{A/m})` is the dipole moment per
