@@ -3,4 +3,4 @@
 Interpretation
 **************
 
-Blabla
+Move/add filtering techniques.

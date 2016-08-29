@@ -89,8 +89,8 @@ Geomagnetism home page, or the Canadian National Geomagnetism Program's home
 page. Resources about Earth's global magnetic field are:
 
 
-* A page describing the International Geomagnetic Reference Field: :doc:`magnetics_IGRF`.
-* Three figures show how declination, inclination and field strength varies around the world, see: :doc:`magnetics_three_figures`.
+* A page describing the International Geomagnetic Reference Field (:ref:`IGRF<magnetics_IGRF>`).
+* :ref:`Three figures<magnetics_three_figures>` show how declination, inclination and field strength varies around the world.
 * `NOAA Geomagnetism home page`_ , and the Canadian National Geomagnetism Program's `home page`_ websites.
 * Find parameters describing Earth's field at a specific location (specified using date, latitude, longitude and elevation) at the NOAA National Geophysical Data Center's online `magnetic field calculator`_.
 
@@ -339,7 +339,7 @@ the observer to the body, :math:`R` is :math:`\gg` :math:`L`, then the magnetic
 field of the body will look like that due to a simple dipole. If the buried
 object has a complicated structure or the observer is very close to the
 magnetized object then it can no longer be represented as a single dipole.  In
-:doc:`magnetics_complex_structures`, we will present a general method for
+:ref:`magnetics_complex_structures<magnetics_complex_structures>`, we will present a general method for
 computing the magnetic response from an arbitrary object but here we look at
 objects that have a uniform magnetic susceptibility. We introduce the concept
 of magnetic charge and show how this can be used to compute the response for
