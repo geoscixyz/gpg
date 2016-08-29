@@ -3,16 +3,18 @@
 Seismic Velocity
 ****************
 
-Seismic velocity represents the diagnostic physical property in seismic refraction and seismic reflection surveys.
-Seismic velocity defines the speed at which elastic waves propagate through a particular medium.
-In seismology, there are two fundamental types of elastic waves: pressure waves ("P-waves") and shear-waves ("S-waves").
+Elastic energy propagates in the earth in different ways and at different velocities. The main wave types are body waves (P and S waves) which travel through the medium and surface waves (Rayleigh or Love waves) that are surface or interface waves. Each wave has its own particle motion and speed of propagation. The speed of propagation depends upon the bulk modulus, shear modulus and density of the medium.
+
+Body Waves
+
+In seismology, there are two fundamental types of waves that travel through a medium: pressure waves ("P-waves") and shear-waves ("S-waves").
 
 .. figure:: ./images/Pwave_physics_diagram.png
 	:scale: 70%
 	:align: right
 
-For P-waves, compressional and extentional deformation associated with the wave occurs along the direction of wave propagation.
-The P-wave velocity can be related to the elastic properties of the medium by the following expression:
+P-waves are compressional waves in which the particle motion is in the direction of the wave propagation. The compression and extension of the medium, and the propagation of the wave, can be seen in the diagram. Cells change volume as the wave passes through.
+The P-wave velocity is related to the elastic properties of the medium by the following expression:
 
 .. math::
 	v_p = \sqrt{\frac{K+4/3\mu}{\rho}} 
@@ -24,15 +26,19 @@ The P-wave velocity can be related to the elastic properties of the medium by th
 
 where :math:`K` is the bulk modulus, :math:`\mu` is the shear modulus and :math:`\rho` is the density.
 
-For S-waves, elastic deformation associated with the wave occurs transverse (or parallel) to the direction of wave propagation.
-The S-wave velocity can be related to the elastic properties of the medium by the following expression:
+S-waves, are shear waves in which the particle motion is perpendicular to the direction of wave propagation. The shearing action and the propagation of the wave, can be seen in the diagram. Cells change shape but not volume as the wave passes through. When there is a reference interface, such as the surface of the earth, the S-waves are labelled as SH (horizontal shear) and SV (vertical shear) to indicate the particle motion with respect to that surface. In isotropic media SH and SV waves travel at the same speed. The S-wave velocity can be related to the elastic properties of the medium by the following expression:
 
 .. math::
 	v_s = \sqrt{\frac{\mu}{\rho}}
 
+Surface Waves:
+    Rayleigh waves
+    Love waves
+    
+    
+    
 
-Below, simple descriptions of the elastic properties governing wave propagation are provided:
-
+Definitions of the elastic properties: 
 
 **Bulk Modulus**: The bulk modulus (:math:`K`) defines the resistance of a material to elastic compression.
 As a result, it is sometimes referred to as the modulus of incompressibility.
@@ -77,9 +83,9 @@ Symbols used to define P-wave and S-wave velocities, as well as the elastic prop
 +----------------------------------------------+--------------+----------------------------------------+
 | S-Wave Velocity                              | :math:`v_s`  | m/s or km/s                            |
 +----------------------------------------------+--------------+----------------------------------------+
-| Bulk Modulus (Constant of Incompressibility) | :math:`K`    | Pa or GPa                              |
+| Bulk Modulus(Incompressibility)              | :math:`K`    | Pa or GPa                              |
 +----------------------------------------------+--------------+----------------------------------------+
-| Shear Modulus (Modulus of Rigidity)          | :math:`\mu`  | Pa or GPa                              |
+| Shear Modulus (Rigidity)                     | :math:`\mu`  | Pa or GPa                              |
 +----------------------------------------------+--------------+----------------------------------------+
 | Density                                      | :math:`\rho` | kg/m :math:`\!^3` or g/cm :math:`\!^3` |
 +----------------------------------------------+--------------+----------------------------------------+
@@ -91,21 +97,44 @@ Symbols used to define P-wave and S-wave velocities, as well as the elastic prop
 P-Wave and S-Wave Velocity Measurements
 =======================================
 
-Need a simple description
+**Ultrasonic Elastic Wave Velocity Measurements**
 
+
+To measure the P-wave and S-wave velocities for a given rock, a core sample is taken.
+The core sample is then held in place between two piezometric transducers.
+Piezometric transducers contain materials which contract and expand in response to an applied voltage.
+
+.. figure:: ./images/transducer_seismic_velocity.png
+	:scale: 45%
+	:align: right
+
+The measurement apparatus works by generating a short current pulse.
+As a result of the incoming current pulse, materials within the source transducer undergo elastic deformation.
+This elastic deformation is then transferred to the rock core where it propagates as elastic waves.
+On the other side of the rock, a receiver transducer registers the elastic waves and transforms the corresponding energy back into a current signal.
+This current signal is then measured by an oscilloscope.
+
+Using the oscilloscope, we can determine the amount of time (:math:`\Delta t`) it took for the elastic waves to propagate through the rock core.
+Given that we know the length of the rock core (:math:`L`), the seismic velocity is given by:
+
+.. math::
+	V = \frac{L}{\Delta t}
+
+In practice, the user may control whether they are measuring P-wave or S-wave velocities by specifying the direction of elastic deformation within the source transducer.
+Elastic deformation parallel to the length of the core results in P-wave velocity measurements, whereas elastic deformation perpendicular to the length of the core results in S-wave velocity measurements.
 
 
 P-Wave and S-Wave Velocities in Common Rocks
 ============================================
 
-P-waves and S-waves travel at different speeds depending the media they are propagating through; with P-waves travelling faster than S-waves.
+P-waves and S-waves travel at different speeds depending on the media they are propagating through; P-waves travel faster than S-waves.
 P-waves are able to propagate through solids and fluids, however, S-waves can only propagate through solid materials.
 Given that there are so many factors which impact the velocity of seismic waves, it is impossible to assign a single value to a particular rock type.
 Therefore, the seismic velocities of rocks are generally defined over a range.
-The range of P-wave and S-wave velocities for common rock types are shown below:
+The range of P-wave and S-wave velocities for common materials are shown below:
 
 +---------------------------------+--------------+--------------+
-|      **Material**               | p-wave (m/s) | s-wave (m/s) |
+|      **Material**               | P-wave (m/s) | S-wave (m/s) |
 +=================================+==============+==============+
 | Air                             |  343         | N/A          |
 +---------------------------------+--------------+--------------+
@@ -158,7 +187,7 @@ Below are some of the factors which are known to affect the seismic velocities i
 
 The mineralogy and structure of a rock determines its bulk modulus, shear modulus and density; which define the P-wave and S-wave velocities.
 In general, igneous, metamorphic, carbonate and anhydrite rocks have relatively large seismic velocities compared to soils and most sedimentary rocks.
-This is because the aforementionned rocks only deform under extreme compressional and shear stresses, and are therefore characterized by larger bulk and shear moduli.
+This is because the aforementioned rocks only deform under extreme compressional and shear stresses, and are therefore characterized by larger bulk and shear moduli.
 In sandstones and soils, clays have a tendency to present in load-bearing positions.
 As a result, seismic velocities are heavily influenced by clay content.
 Even in small abundances, clays have been shown to significantly reduce the seismic velocity by reducing the shear modulus.
