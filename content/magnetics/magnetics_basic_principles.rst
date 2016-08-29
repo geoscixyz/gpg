@@ -3,7 +3,7 @@
 Basic Principles
 ****************
 
-
+.. _earth_s_field:
 
 Earth's Field
 =============
