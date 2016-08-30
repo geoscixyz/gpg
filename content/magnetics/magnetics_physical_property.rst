@@ -1,7 +1,7 @@
-.. _magnetics_susceptibility:
+.. _magnetics_physical_property:
 
-Susceptibility
-**************
+Physical property
+*****************
 
 For magnetic surveys, the relevant physical property is *magnetic
 susceptibility*, or less commonly the related property *magnetic
