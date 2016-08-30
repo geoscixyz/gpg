@@ -147,9 +147,9 @@ However, the circuit and sample holder used in laboratory measurements are more 
 Susceptibility of Common Rocks
 ==============================
 
-A chart showing the range of magnetic susceptibility values for common rock types is shown below.
+Charts showing the range of magnetic susceptibility values for common rock types are shown below.
 Note that the scale is logarithmic, indicating a large variability in magnetic susceptibility among rocks.
-From this chart we can infer several things:
+From these charts we can infer several things:
 
 - Rocks with a high magnetite content are by far the most susceptible (see red vertical red lines denoting \% magnetite content).
 - Although hematite and magnetite are both iron-oxide minerals, only magnetite is particularly susceptible.
@@ -164,6 +164,11 @@ A more detailed analysis of rock magnetic properties can be found in Clark and E
 .. figure:: ./images/rock_susceptibilities_adapted.png
 	:align: center
 	:scale: 100%
+
+
+.. figure:: ./images/images_duplicates/susceptibility_chart.gif
+	:align: center
+	:scale: 100%	
 
 
 
