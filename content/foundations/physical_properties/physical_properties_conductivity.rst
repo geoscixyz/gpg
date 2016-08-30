@@ -6,9 +6,9 @@ Electrical Conductivity
 
 	
 	
-Electrical conductivity (:math:`\sigma`) is the diagnostic physical property in DC resistivity and electromagnetic surveys.
-It also plays an important role in ground-penetrating radar and induced polarization surveys.
-Electrical conductivity defines the ratio between the density of electrical current (:math:`\vec J`) within a material, and the electric field (:math:`\vec E`) responsible for producing it:
+Electrical conductivity (:math:`\sigma`)  is a physicial property that 
+describes how easily electric currents can flow through a medium when subjected to an applied electric field. 
+More specifically, it defines the relationship  between the density of electrical current density (:math:`\vec J`) within a material, and the electric field (:math:`\vec E`) :
 
 .. figure:: ./images/conductivity_physics_diagram.png
 	:align: right
@@ -26,10 +26,9 @@ The size of the flow of electrical charges through a material is known as electr
 Current density represents the amount of current flowing per unit cross-sectional area (:math:`A`), where:
 
 .. math::
-	\vec J = \frac{d\vec I}{dA}
+	\vec J = \frac{\vec I}{A}
 	
 
-In essence, the electrical conductivity defines how easy it is for current to flow though a particular material when subjected to an electric field.
 In conductive materials (larger :math:`\sigma`), free charges move quite easily and strong currents may be induced by a relatively weak electrical field.
 In contrast, resistive materials (smaller :math:`\sigma`) require strong electrical fields in order to produce any significant current.
 
@@ -40,16 +39,16 @@ By definition, the resistivity of a material is the reciprocal of its conductivi
 	\rho = \frac{1}{\sigma}
 
 
-Resistivity therefore defines how difficult it is for current to flow though a particular material when subjected to an electric field.
-Both the electrical conductivity and resistivity are acceptable for describing the conductive properties of rocks, however, one should avoid confusing the two terms.
-Parameters used to define the conductive properties and their associated units are summarized below.
+
+Both the electrical conductivity and resistivity are acceptable for describing the conductive properties of rocks and they are sometimes used interchangeably. 
+Parameters used to define the conductive properties and their associated S.I. units are summarized below.
 
 
 
 +------------------+----------------+-------------------------+
 | **Property**     | **Symbol**     | **Units**               |
 +==================+================+=========================+
-| Electric Field   | :math:`\vec E` | F/m                     |
+| Electric Field   | :math:`\vec E` | V/m                     |
 +------------------+----------------+-------------------------+
 | Current Density  | :math:`\vec J` | A/m :math:`\!^2`        |
 +------------------+----------------+-------------------------+
@@ -59,6 +58,9 @@ Parameters used to define the conductive properties and their associated units a
 +------------------+----------------+-------------------------+
 | Resistivity      | :math:`\rho`   | :math:`\Omega\cdot\!` m |
 +------------------+----------------+-------------------------+
+
+where V is volts; A is ampere, S is Siemens. Millisiemens per meter (mS/m) are often used; 
+1000 mS/m = 1 S/m. So 1 mS/m = 1000 Ohm-m.
 
 
 Conductivity Measurements
@@ -124,10 +126,10 @@ Factors Affecting Rock Conductivity
 Most rocks contain pore-spaces which are at least partially saturated with ionic fluids.
 These fluids include: fresh water, brackish water, ocean water and brine.
 Because pore fluids have a higher conductivity than most rock-forming minerals, electrical current generally prefers to flow through the pore-space whenever possible.
-As a result, the bulk conductivity of the rock depends significantly its porosity, fluid saturation and the type of fluid contained within the pore-space.
+As a result, the bulk conductivity of the rock depends significantly upon its porosity, fluid saturation and the type of fluid contained within the pore-space.
 
 For rocks which are unsaturated, the pore space is occupied solely by air.
-Because air is infinitely resistive, it forces the current to flow through the minerals comprising the rock.
+Because air is very resistive, it forces the current to flow through the minerals comprising the rock.
 As a result, unsaturated rocks are poorly conductive.
 When a sufficient percentage of the pore-space is saturated, the pore fluid is able to offer a more efficient pathway for the current.
 Thus, the bulk conductivity of rocks generally increases as fluid saturation increases.
@@ -135,7 +137,7 @@ Thus, the bulk conductivity of rocks generally increases as fluid saturation inc
 Current flows through a rock's pore-fluid via ionic conduction.
 As a result, the conductivity of the pore-fluid depends on the concentration of dissolved ions.
 Pore-fluid conductivity increases as the concentration of dissolved ions increases.
-This implies rock's containing more brackish pore fluid are more conductive than rocks containing fresh-water.
+This implies that rocks containing more brackish pore fluid are more conductive than rocks containing fresh-water.
 
 
 **Tortuosity**
