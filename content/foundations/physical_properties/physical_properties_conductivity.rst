@@ -59,8 +59,9 @@ Parameters used to define the conductive properties and their associated S.I. un
 | Resistivity      | :math:`\rho`   | :math:`\Omega\cdot\!` m |
 +------------------+----------------+-------------------------+
 
-where V is volts; A is ampere, S is Siemens. Millisiemens per meter (mS/m) are often used; 
-1000 mS/m = 1 S/m. So 1 mS/m = 1000 Ohm-m.
+where V is volts, A is Amperes and S is Siemens.
+Millisiemens per meter (mS/m) are often used (1000 mS/m = 1 S/m).
+Thus 1 mS/m = 1000 :math:`\Omega\cdot\!` m.
 
 
 Conductivity Measurements
