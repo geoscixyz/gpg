@@ -68,7 +68,12 @@ Parameters used to define the dielectric properties of materials and their assoc
 Measurements for Dielectric Permittivity
 ========================================
 
-- Experiment by using the material to fill a parallel plate capacitor
+There are a host of methods for measuring the dielectric permittivity of a material.
+Here, we will describe two basic experiments.
+
+**Transmission Time Measurements**
+
+
 
 
 
