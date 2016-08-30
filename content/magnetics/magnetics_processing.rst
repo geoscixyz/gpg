@@ -1,22 +1,23 @@
-.. _magnetics_plotting_processing:
+.. _magnetics_processing:
 
-Processing and plotting magnetic data
-****************************************
+Processing
+**********
 
 Removal of time variations
 ==========================
 
-We saw in section :doc:`magnetics_earths_field` that the magnetic field at
-any point on the earth changes with time. These temporal variations are also
-referred to as diurnal variations. Our magnetometers record the Earth's inducing field as well
-as the secondary or anomalous fields induced in susceptible bodies. If the changes in earth's
+We saw that the :ref:`Earth's magnetic field<earth_s_field>` changes with time.
+These temporal variations are also referred to as diurnal variations. Our
+magnetometers record the Earth's inducing field as well as the secondary or
+anomalous fields induced in susceptible bodies. If the changes in earth's
 field have an amplitude that is significant compared to our anomalous signal,
-then we need to correct for the observed temporal variations. The general procedure 
-is to establish a "base-station" which is fixed in location and continually measures 
-the magnetic field. Each datum acquired by the roving sensor is also time-stamped. The assumption 
-is then made that the changes in the Earth's magnetic field caused by these natural sources have a
-long enough spatial wavelength that they are same at any point on the survey grid. 
-Field data, corrected for these time variations, is obtained through the following
+then we need to correct for the observed temporal variations. The general
+procedure  is to establish a "base-station" which is fixed in location and
+continually measures  the magnetic field. Each datum acquired by the roving
+sensor is also time-stamped. The assumption  is then made that the changes in
+the Earth's magnetic field caused by these natural sources have a long enough
+spatial wavelength that they are same at any point on the survey grid.  Field
+data, corrected for these time variations, is obtained through the following
 subtraction process
 
 .. math::
@@ -33,8 +34,8 @@ Two things happen with this procedure
 
 - Earth's field, associated with the location of the base-station, is removed. 
 
-The residual data would be similar to that in which the IGRF
-(:doc:`magnetics_IGRF`) has been removed.
+The residual data would be similar to that in which the 
+:ref:`IGRF<magnetics_IGRF>` has been removed.
 
 The residual field, :math:`\Delta B`, contains the sought anomalous field but
 it may also have some broad-scale background or "regional field". Thus
@@ -63,8 +64,7 @@ we designate magnetic fields as **B**, then we want to perform the following
 
 Estimates of the regional field may be obtained using:
 
-- the IGRF (International Geomagnetic Reference Field) discussed in
-  :doc:`magnetics_earths_field`;
+- the IGRF (International Geomagnetic Reference Field) discussed :ref:`here<earth_s_field>`
 
 - a constant value selected by the interpreter (when survey areas are small);
 
@@ -122,8 +122,7 @@ might be employed. Here we introduce some aspects of these topics.
 The most common form of magnetic survey data involves "total field"
 measurements. This means that the field's magnitude along the direction of the
 earth's field is measured at every location. To the right is a total field
-strength map for the whole world (a full size version is in the sidebar_
-mentioned in the section :doc:`magnetics_earths_field`).
+strength map for the whole world (a full size version is in the sidebar_).
 
 .. _sidebar: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/sidebar-fields.html
 

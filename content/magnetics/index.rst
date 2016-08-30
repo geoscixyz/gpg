@@ -26,14 +26,19 @@ Contents:
    :maxdepth: 1
 
    magnetics_introduction
-   magnetics_susceptibility
-   magnetics_earths_field
-   magnetics_IGRF
-   magnetics_three_figures
-   magnetics_buried_dipole
-   magnetics_extended_bodies
-   magnetics_line_profiles   
-   magnetics_complex_structures
-   magnetics_instruments
-   magnetics_gradient_magnetics   
-   magnetics_plotting_processing
+   magnetics_physical_property
+   magnetics_basic_principles
+   magnetics_survey
+   magnetics_data
+   magnetics_processing
+   magnetics_interpretation
+
+..  magnetics_IGRF
+..  magnetics_three_figures
+..   magnetics_buried_dipole
+..  magnetics_extended_bodies
+..   magnetics_line_profiles   
+..   magnetics_complex_structures
+   
+      
+   

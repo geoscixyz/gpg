@@ -1,7 +1,7 @@
-.. _magnetics_gradient_magnetics:
+.. _magnetics_data:
 
-Gradient Magnetics
-******************
+Data
+****
 
 .. sidebar:: Outline of gradient magnetics
 
