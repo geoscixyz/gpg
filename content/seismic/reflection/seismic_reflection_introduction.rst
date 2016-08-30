@@ -3,10 +3,10 @@
 Introduction
 ************
 
-.. figure:: ./images/titleicon.gif
-	:figclass: float-right-360
-	:align: right
-	:scale: 135 %
+.. ./images/titleicon.gif
+..	:figclass: float-right-360
+..	:align: right
+..	:scale: 135 %
 
 .. <<editorial comment>> The lithoprobe image info is to be omitted for now. 
 
@@ -16,10 +16,12 @@ separating media of different velocities and were recorded as first arrivals
 at the surface. These arrivals were then analyzed to yield information about
 the velocities and thicknesses of the layers.
 
-.. figure:: ./images/reflection_intro_layers.gif
-	:figclass: float-right-360
-	:align: right
-	:scale: 135 %
+.. figure:: ./images/logs.gif
+   :figclass: float-right-360
+   :align: right
+   :scale: 100 %
+
+..	./images/reflection_intro_layers.gif
 
 In reflection seismology we record seismic pulses that are reflected from
 boundaries which separate layers that have different acoustic impedances. The
@@ -42,26 +44,36 @@ of geologic structure:
 Two Examples
 ------------
 
+.. figure:: ./images/Usgs_examples_mexicogulf.png
 
-.. figure:: ./images/air_gun.gif
-	:align: right
-	:scale: 200 %
+ Hart, Patrick et al., High-Resolution Multichannel Seismic-Reflection Data Acquired in the Northern Gulf of Mexico, 1998-99, http://geopubs.wr.usgs.gov/open-file/of02-368/, USGS Open File report 02-368, public domain, converted to PNG
 
-	An air gun record from the Gulf of Patras, Greece, showing Holocene
-	hemipelagic (h) and deltaic (d) sediments overlying an irregular erosion
-	surface (rockhead, RH) cut into tectonized Mesozoic and Tertiary rocks of
-	the Hellenide (Alpine) orogenic belt. SB: sea bed reflection; SBM1 and
-	SBM2: first and second multiples of sea bed reflection; RHM1: first
-	multiple of rockhead reflection [#f1]_.
+.. figure:: ./images/Flat_Spot_in_Seismic.jpg
+
+ By Joshua Doubek - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=27279591
+
+  More Information about flat spot: https://en.wikipedia.org/wiki/Flat_spot_(reflection_seismology)
 
 
-.. figure:: ./images/seismic_section_intro.gif
-	:align: right
-	:scale: 200 %
+.. ./images/air_gun.gif
+..	:align: right
+..	:scale: 200 %
 
-	A seismic section from the northern Amadeus basin, central Australia,
-	illustrating a dispositional sequence bounded by major unconformities
-	[#f1]_.
+..	An air gun record from the Gulf of Patras, Greece, showing Holocene
+..	hemipelagic (h) and deltaic (d) sediments overlying an irregular erosion
+..	surface (rockhead, RH) cut into tectonized Mesozoic and Tertiary rocks of
+..	the Hellenide (Alpine) orogenic belt. SB: sea bed reflection; SBM1 and
+..	SBM2: first and second multiples of sea bed reflection; RHM1: first
+..	multiple of rockhead reflection [#f1]_.
+
+
+.. ./images/seismic_section_intro.gif
+..	:align: right
+..	:scale: 200 %
+..
+..	A seismic section from the northern Amadeus basin, central Australia,
+..	illustrating a dispositional sequence bounded by major unconformities
+..	[#f1]_.
 
 
 In order to generate the previous images there are numerous operations that
