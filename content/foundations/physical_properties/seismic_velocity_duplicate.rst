@@ -3,20 +3,21 @@
 Seismic Velocity
 ****************
 
-Elastic energy propagates through the earth in different ways and at different velocities.
+Elastic energy propagates through the earth in different ways and at different speeds.
 The main wave types are body waves (P and S waves) and surface waves (Rayleigh and Love waves).
-Body waves travel through a medium whereas surface waves travel along surfaces or interfaces.
-Each wave has its own particle motion and speed of propagation.
+Whereas body waves travel through a medium, surface waves travel along surfaces and interfaces.
+Each wave has a distinct particle motion and speed of propagation.
 The speed of propagation depends upon the bulk modulus, shear modulus and density of the medium.
+
+
 
 Body Waves
 ==========
 
-In seismology, there are two fundamental types of waves that travel through a medium: pressure waves ("P-waves") and shear-waves ("S-waves").
+In seismology, there are two fundamental types of body waves: pressure waves ("P-waves") and shear-waves ("S-waves").
+
 
 **P-waves**
-
-
 
 .. image:: images/Pwave.gif
 	:scale: 40%
@@ -24,8 +25,8 @@ In seismology, there are two fundamental types of waves that travel through a me
 
 
 P-waves are compressional waves in which particle motion is in the direction of the wave propagation.
-The compression and extension of the medium, and the propagation of the wave, can be seen in the diagram on the right.
-As we can see, cells change volume as the wave passes through.
+The compression and extension of the medium, and the propagation of the wave, can be seen in the diagram on the right [#f1]_.
+As we can see, cells change volume when they come in contact with the wave.
 The P-wave velocity is related to the elastic properties of the medium by the following expression:
 
 .. math::
@@ -45,8 +46,8 @@ where :math:`K` is the bulk modulus, :math:`\mu` is the shear modulus and :math:
 
 
 S-waves are shear waves in which the particle motion is perpendicular to the direction of wave propagation.
-The shearing action and the propagation of the wave can be seen in the diagram on the right.
-Cells change shape but do not change volume as the wave passes through.
+The shearing action and the propagation of the wave can be seen in the diagram on the right [#f1]_.
+Cells change shape but do not change volume when they come in contact with the wave.
 When there is a reference interface, such as the surface of the earth, S-waves are labelled as SH (horizontal shear) and/or SV (vertical shear).
 This is used to indicate the direction of particle motion with respect to the surface.
 In isotropic media, SH and SV waves travel at the same speed.
@@ -56,9 +57,15 @@ The S-wave velocity can be related to the elastic properties of the medium by th
 	v_s = \sqrt{\frac{\mu}{\rho}}
 
 
+S waves propagate through materials more slowly than P waves.
+In addition, S waves cannot propagate through fluids, as fluids do support shear particle motion.
+
+
 
 Surface Waves
 =============
+
+In seismology, there are two fundamental types of surface waver: Rayleigh waves and Love waves.
 
 **Rayleigh waves**
 
@@ -67,13 +74,33 @@ Surface Waves
 	:align: right
 
 
+Rayleigh waves are surface waves in which particle motion is elliptic.
+The particle motion which defines Rayleigh waves can be seen in the diagram on the right [#f1]_.
+In Rayleigh waves, elliptic particle motion can be prograde (in the same direction as the propagating wave) or retrograde (in the opposite direction as the propagating wave). 
+The amplitude of the elliptic motion decreases with depth.
+As a general rule, Rayleigh waves at the surface of the Earth have a propagation speed which is 90 % the speed of shear waves, thus:
+
+.. math::
+	v_R = 0.9 \, v_s
+
+
 
 **Love waves**
-    
 
 .. image:: images/Lovewave.gif
 	:scale: 40%
 	:align: right
+
+Love waves are surface waves in which particle motion is parallel to the Earth's surface and perpendicular to the direction of wave propagation.
+The particle motion which defines Love waves can be seen in the diagram on the right [#f1]_.
+The amplitude of lateral motion which describes Love waves decreases with depth.
+Love waves travel faster than Rayleigh waves but do not travel as fast as P or S waves.
+Thus Love waves have a propagation speed of:
+
+.. math::
+	0.9 \, v_s < v_L < v_s
+
+
     
 
 Material Elastic Properties
@@ -491,5 +518,14 @@ shallow unconsolidated medium with a velocity of 250 m/sec can result in the
 signal being reduced to two thirds is original amplitude after traveling only
 157 m. Therefore, it is reasonable to expect that the very high attenuation
 observed in near surface unconsolidated sediments is due to scattering.
+
+
+
+.. rubric:: Footnotes
+
+.. [#f1] L. Braile, http://web.ics.purdue.edu/~braile/edumod/waves/WaveDemo.htm, Copyright 2004-2010,
+
+
+
 
 
