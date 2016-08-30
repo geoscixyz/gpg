@@ -19,6 +19,10 @@ Material Elastic Properties
 
 **Bulk Modulus**
 
+.. image:: images/fig_bulk_deformation.png
+	:scale: 45%
+	:align: right
+
 The bulk modulus (:math:`K`) defines the resistance of a material to elastic compression.
 As a result, it is sometimes referred to as the modulus of incompressibility.
 When a block of material is subjected to compressional forces, its volume decreases and it becomes more dense (see figure).
@@ -34,6 +38,10 @@ where :math:`V_0` is the original volume of material, :math:`\Delta P` represent
 
 
 **Shear Modulus**
+
+.. image:: images/fig_shear_deformation.png
+	:scale: 35%
+	:align: right
 
 The shear modulus (:math:`\mu`) defines how resistant a material is to shear stress.
 As a result, it is sometimes referred to as the modulus of rigidity.
@@ -252,7 +260,7 @@ Factors Impacting the Seismic Velocity
 Given that P-wave and S-wave velocities both depend on the shear modulus and density of the material, many of the factors which impact the P-wave velocity will affect the S-wave velocity in a similar manner.
 Below are some of the factors which are known to affect the seismic velocities in materials.
 
-**Lithology**
+**Mineralogy and Structure**
 
 The mineralogy and structure of a rock determines its bulk modulus, shear modulus and density; which define the P-wave and S-wave velocities.
 In general, igneous, metamorphic, carbonate and anhydrite rocks have relatively large seismic velocities compared to soils and most sedimentary rocks.
