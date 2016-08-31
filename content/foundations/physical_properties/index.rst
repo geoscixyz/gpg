@@ -14,7 +14,7 @@ Contents:
 	:maxdepth: 1
 	
 	physical_properties_density
-	magnetics_susceptibility_duplicate
+	physical_properties_susceptibility
 	seismic_velocity_duplicate
 	physical_properties_dielectric_permittivity
 	physical_properties_conductivity
