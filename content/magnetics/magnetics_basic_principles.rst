@@ -23,53 +23,56 @@ approximately 25,000 nT at the magnetic equator.The figure below-left
 illustrates a cross-section of the field as it could be imagined from space.
 Below-right is a sketch of the directions of the field at Earth's surface.
 
-
-.. figure:: ./images/fig_2a.jpg
-	:align: left
-	:scale: 155% 
-
-.. figure:: ./images/earthfield.gif
-	:figclass: center
-	:align: left
-	:scale: 155 %
-
-
-
 There are, in fact, three different components to Earth's field:
 
-1. **The main dipolar field** of the earth (produced internally by large currents in the fluid outer core of the earth).
+ - **External variations** caused by currents flowing in the ionosphere. For magnetic surveys, these *diurnal variations* and considered to be source of noise and removed from the observed data. 
+ .. figure:: ./images/fig_2a.jpg
+	:align: center
+	:figwidth: 40%
 
-2. **External variations** caused by currents flowing in the ionosphere. For magnetic surveys, this is a source of "noise", and is the reason the field in the left-hand image above appears asymmetric.
+ - **The main dipolar field** of the earth produced internally by large currents in the fluid outer core of the earth. This is also refered to as the *inducing field*, and it is the main magnetic source for the magnetic geophysical surveys.
+ .. figure:: ./images/Earth_Field.png
+	:align: center
+	:figwidth: 40% 
 
-3. **Magnetic fields due to rocks or buried bodies** that are the objective of geophysical surveys. These fields are the "signals" we have to work with, and they may be either permanent (always present, regardless of the ambient local field) or induced (caused by Earth's field).
+
+ - **Secondary magnetic fields** due to rocks or buried bodies that are the objective of geophysical surveys. These fields are the *signals* we have to work with, and they may be either permanent (always present, regardless of the ambient local field) or induced (caused by Earth's field).
+ .. figure:: images/magnetic_anomaly.gif
+   :align: center
+   :figwidth: 40%
 
 Describing Earth's field
 ------------------------
 
+.. figure:: ./images/earthfield.gif
+	:align: right
+	:figwidth: 40% 
+	:name: earth_mag_vectors
+	
+	: Earth's magnetic field orientation
+
 The convention for drawing magnetic field lines is that they flow outward from
 a positive pole and inward to a negative pole. The Earth's field behaves like
 there is a negative pole in the northern hemisphere and a positive pole in the
-southern hemisphere. Therefore, the magnetic field on Earth's surface looks
-approximately like that given in the  figure above. Using B to represent the
-magnetic field of Earth as a vector in three dimensions, the field at any
-location on (or above or within) Earth can be described in either of three
-ways (refer to the next figure below):
-
-
- B = (:math:`B_x`, :math:`B_y`, :math:`B_z`) = (X, Y, Z) in the figure. These are Cartesian coordinates with X pointing to true (geographic) north, Y pointing east and Z pointing vertically down.
-
- B = (:math:`B_h` , :math:`B_z` , :math:`D`) = (H, Z, D) in the figure. These are horizontal and vertical components, plus declination (angle with respect to true north). 
-    
- B = (:math:`D`, :math:`I`, :math:`\mid B\mid` ). These are the commonly used polar coordinates which include two angles and a magnitude: D=declination, I=inclination, and :math:`\mid B \mid` =total field strength.
-
-
+southern hemisphere as shown in :ref:`earth_mag_vectors`. 
 In 2004, Earth's north magnetic pole was close to Melville Island at
 (Latitude, Longitude)=(79N, 70W). At Vancouver D ~ 20° east, I ~ 70° down from
 horizontal.
 
+Using B to represent the
+magnetic field of Earth as a vector in three dimensions, the field at any
+location on (or above or within) Earth can be described in either of three
+ways (refer to the next figure below):
+
+ - B = (:math:`B_x`, :math:`B_y`, :math:`B_z`) = (X, Y, Z) in the figure. These are Cartesian coordinates with X pointing to true (geographic) north, Y pointing east and Z pointing vertically down.
+
+ - B = (:math:`B_h` , :math:`B_z` , :math:`D`) = (H, Z, D) in the figure. These are horizontal and vertical components, plus declination (angle with respect to true north). 
+    
+ - B = (:math:`D`, :math:`I`, :math:`\mid B\mid` ). These are the commonly used polar coordinates which include two angles and a magnitude: D=declination, I=inclination, and :math:`\mid B \mid` =total field strength.
+
 .. figure:: ./images/components.gif
 	:align: center
-	:scale: 130% 
+	:scale: 100% 
 
 	Sketch of coordinates used to describe magnetic fields.
 
@@ -83,19 +86,15 @@ horizontal.
 
 The details of Earth's field at any location on Earth are described using a
 formula based upon a spherical harmonic decomposition of the field called the
-IGRF or International Geomagnetic Reference Field. Details about Earth's field
-can be found at government geoscience websites (listed below) such as the NOAA
-Geomagnetism home page, or the Canadian National Geomagnetism Program's home
-page. Resources about Earth's global magnetic field are:
+:ref:`IGRF<magnetics_IGRF>` or International Geomagnetic Reference Field. Details about Earth's field
+can be found at government geoscience websites such as the `NOAA`_ geomagnetism home page, or the `Canadian National Geomagnetism Program`_ home
+page. 
 
+**Other resources**
+ - Earth's `magnetic field calculator`_.
 
-* A page describing the International Geomagnetic Reference Field (:ref:`IGRF<magnetics_IGRF>`).
-* :ref:`Three figures<magnetics_three_figures>` show how declination, inclination and field strength varies around the world.
-* `NOAA Geomagnetism home page`_ , and the Canadian National Geomagnetism Program's `home page`_ websites.
-* Find parameters describing Earth's field at a specific location (specified using date, latitude, longitude and elevation) at the NOAA National Geophysical Data Center's online `magnetic field calculator`_.
-
-.. _NOAA Geomagnetism home page: http://www.ngdc.noaa.gov/geomag/geomag.shtml
-.. _home page: http://www.geomag.nrcan.gc.ca/index-eng.php
+.. _NOAA: http://www.ngdc.noaa.gov/geomag/geomag.shtml
+.. _Canadian National Geomagnetism Program: http://www.geomag.nrcan.gc.ca/index-eng.php
 .. _magnetic field calculator: http://www.ngdc.noaa.gov/geomag-web/
 
 

@@ -3,16 +3,17 @@
 Magnetics
 =========
 
-.. figure:: ./images/solarwind.jpg
+.. figure:: images/magnetic_anomaly.gif
    :align: right
-   :scale: 30 %
+   :figwidth: 30%
+   :name: mag_cover
 
+   : Schematic representation of a magnetically susceptible object buried at depth. Secondary magnetic fields can be observed from the surface.
 
 This section covers some basic information for magnetic surveys. The physical
 property of concern is magnetic susceptibility, which is a measure of how
 magnetized a material becomes in the presence of a magnetic field. The source
-for a magnetic  survey is the natural magnetic field of the earth. It is shown
-schematically in the accompanying photo.  Receivers measure either the
+for a magnetic  survey is the natural magnetic field of the earth. The physics behind the magnetic experiment is shown in :numref:`mag_cover`.  Receivers measure either the
 amplitude of the magnetic field or one or more of its components. The earth's
 field changes with latitude and longitude and hence magnetic surveys, carried
 out over the same  geologic structure or buried object, will generate
