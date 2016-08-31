@@ -4,8 +4,7 @@
 Susceptibility
 **************
 
-Magnetic susceptibility (:math:`\kappa`) is the diagnostic physical property in magnetic surveys.
-Magnetic susceptibility quantifies the magnetization (:math:`\vec M`) a rock or mineral experiences when it is subjected to an applied magnetic field (:math:`\vec H`). This relationship takes the form:
+Magnetic susceptibility (:math:`\kappa`) quantifies the magnetization (:math:`\vec M`) a rock or mineral experiences when it is subjected to an applied magnetic field (:math:`\vec H`). This relationship takes the form:
 
 .. math::
 	\vec M = \kappa \vec H

@@ -3,6 +3,23 @@
 Chargeability
 *************
 
+
+
+
+
+
+.. math::
+	V_{off} = m e^{-t/\lambda}
+
+
+
+
+
+
+Chargeability Measurements
+==========================
+
+
 Chargeability is one of two diagnostic physical properties in DC/IP surveys.
 Chargeability defines the magnitude of ionic charge build-up within a rock under the influence of an electric field.
 For chargeable rocks, Ohm's law can still be used to relate the density of electrical current (:math:`\vec J`) to an applied electric field (:math:`\vec E`):

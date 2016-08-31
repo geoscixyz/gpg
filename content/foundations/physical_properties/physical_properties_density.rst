@@ -3,8 +3,7 @@
 Density
 *******
 
-Density (:math:`\rho`) is the diagnostic physical property used in gravity surveys.
-Density is defined as the mass (:math:`m`) contained within a material per unit volume (:math:`V`):
+Density (:math:`\rho`) is defined as the mass (:math:`m`) contained within a material per unit volume (:math:`V`):
 
 .. math::
 	\rho = \frac{m}{V}
