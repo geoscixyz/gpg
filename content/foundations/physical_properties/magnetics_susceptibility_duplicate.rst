@@ -125,9 +125,9 @@ susceptibilities in geological materials. Some relevant remarks are:
 * Magnetite (SG ≈ 5) is heavy and often accumulates in sediments and alluvial environments in the same way that other heavy minerals form placer deposits. So, for example, ancient or hidden stream paths can sometimes be mapped because magnetite deposition will depend upon water flow rates. 
 * Maghemite, a magnetic form of hematite, is produced in highly organic soils. Surface soils can acquire a remanent magnetization that is stronger than the induced magnetization, often as a result of human interference with fires or other disturbances. Implications are important for archeology.
 
- .. figure:: ./images/images_duplicates/susceptibility_chart.gif
-	:align: center
-	:scale: 100%	
+ .. .. figure:: ./images/images_duplicates/susceptibility_chart.gif
+	.. :align: center
+	.. :scale: 100%	
 
 
 A table summarizing typical susceptibilities of common materials follows:
@@ -245,8 +245,8 @@ article (Stone et al, 2004).
 Field measurements of magnetic susceptibility using a KT10
 ----------------------------------------------------------
 
- .. figure:: 
-	./images/images_duplicates/magnetic_susceptibility_measurement_KT10.jpg
+ .. .. figure:: 
+	.. ./images/images_duplicates/magnetic_susceptibility_measurement_KT10.jpg
 
 References cited on this page 
 -----------------------------
