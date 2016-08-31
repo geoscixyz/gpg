@@ -26,17 +26,19 @@ Below-right is a sketch of the directions of the field at Earth's surface.
 There are, in fact, three different components to Earth's field:
 
  - **External variations** caused by currents flowing in the ionosphere. For magnetic surveys, these *diurnal variations* and considered to be source of noise and removed from the observed data. 
+
  .. figure:: ./images/fig_2a.jpg
 	:align: center
 	:figwidth: 40%
 
  - **The main dipolar field** of the earth produced internally by large currents in the fluid outer core of the earth. This is also refered to as the *inducing field*, and it is the main magnetic source for the magnetic geophysical surveys.
+
  .. figure:: ./images/Earth_Field.png
 	:align: center
 	:figwidth: 40% 
 
-
  - **Secondary magnetic fields** due to rocks or buried bodies that are the objective of geophysical surveys. These fields are the *signals* we have to work with, and they may be either permanent (always present, regardless of the ambient local field) or induced (caused by Earth's field).
+
  .. figure:: images/magnetic_anomaly.gif
    :align: center
    :figwidth: 40%
