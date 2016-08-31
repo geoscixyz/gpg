@@ -13,11 +13,74 @@ Chargeability
 
 
 
+**Membrane Polarization**
+
+
+
+**Electrode Polarization**
+
 
 
 
 Chargeability Measurements
 ==========================
+
+Chargeability measurements are very similar to conductivity/resistivity measurements.
+First, a cylindrical core sample is taken from the rock.
+The core sample is then placed in a sample holder between two copper/graphite electrodes where it acts as an impedence element for a circuit.
+
+
+.. figure:: ./images/electrode_chargeability_measurements.png
+	:align: right
+	:scale: 40%
+
+
+Next, a source is used to drive alternating current (:math:`I`) through the core sample.
+By measuring the voltage drop (:math:`\Delta V`) accross the length of the sample, Ohm's law can be used to determine the circuit impedence (:math:`Z`) caused by the rock:
+
+.. math::
+	Z(\omega ) = \frac{\Delta V (\omega)}{I (\omega)}
+
+
+In chargeable rocks, the measured voltage drop depends on the frequency of the alternating current.
+So in order to characterize the resistive properties of the rock, we need to determine the impedence over a spectrum of frequencies.
+
+The resistivity of the sample at each frequency can be obtained from the impedence, the length of the core (:math:`L`) and its cross-sectional area (:math:`A`) using Pouillet's law:
+
+.. math::
+	\rho (\omega) = \frac{Z(\omega) A}{L}
+
+
+In order to determine the rock's chargeability, we fit the experimentally acquired resistivity values to a mathematical model.
+This is illustrated below.
+A well-established model for explaining the resistivities of chargeable rocks is the Cole-Cole model:
+
+.. math::
+	\rho (\omega) = \rho_0 \Bigg [ 1 - m \Bigg ( 1 - \frac{1}{1 + (i\omega\tau )^C} \Bigg ) \Bigg ]
+
+
+where :math:`m` is the chargeability and :math:`\rho_0` is the DC resistivity.
+Parameters :math:`\tau` and :math:`C` control the rate at which ionic charges accumulate when subjected to an electric field.
+By setting :math:`C=1`, :math:`\tau` defines the exponential decay in voltage according to the first equation.
+The conductivity of the rock can be obtained by taking the reciprocal of the complex resistivity:
+
+.. math::
+	\sigma (\omega) = \frac{1}{\rho (\omega)}
+
+
+.. figure:: ./images/electrode_chargeability_curve_fit.png
+	:align: center
+	:scale: 40%
+
+
+
+
+
+
+
+
+
+
 
 
 Chargeability is one of two diagnostic physical properties in DC/IP surveys.
@@ -26,15 +89,12 @@ For chargeable rocks, Ohm's law can still be used to relate the density of elect
 
 
 .. math::
-	\vec J = \sigma \vec E
+	\vec E = \rho \vec J
 
 In this case however, :math:`\sigma` is represented by a frequency-dependent conductivity:
 
-.. math::
-	\sigma (\omega) = \sigma_0 \Bigg [ 1 - m \Bigg ( 1 - \frac{1}{1 + (i\omega\tau )^C} \Bigg ) \Bigg ]^{-1}
-	
 
-where :math:`\sigma_0` is the DC/zero-frequency conductivity and :math:`0 \leq m \leq 1` is the chargeability.
+where :math:`\rho_0` is the DC/zero-frequency resistivity and :math:`0 \leq m \leq 1` is the chargeability.
 Parameters :math:`\tau` and :math:`C` define the frequency-dependent aspect of the complex conductivity.
 
 
