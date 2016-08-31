@@ -21,6 +21,8 @@ the velocities and thicknesses of the layers.
    :align: right
    :scale: 100 %
 
+   Normal Incidence Seismogram of a layered Earth
+
 ..	./images/reflection_intro_layers.gif
 
 In reflection seismology we record seismic pulses that are reflected from

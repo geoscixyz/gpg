@@ -1,7 +1,7 @@
 .. _seismic_reflection_stacking:
 
-"Stacking" Data in CMP Gathers
-******************************
+Normal MoveOut (NMO): Stacking Data in CMP Gathers
+**************************************************
 
  	
 

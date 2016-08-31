@@ -1,7 +1,7 @@
 .. _seismic_reflection_common_middle_points:
 
-Common Middle Points
-************************
+Common MidPoints (CMP)
+**********************
   	
 
 Multiple shots and receivers are used in a reflection seismic profiling
