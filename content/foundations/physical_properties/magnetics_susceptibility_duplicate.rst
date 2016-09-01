@@ -1,5 +1,3 @@
-.. _magnetics_susceptibility_duplicate:
-
 Susceptibility
 **************
 
