@@ -3,17 +3,83 @@
 Chargeability
 *************
 
+Chargeability is a physical property which affects the conductive properties of certain rocks.
+Chargeability defines the electric potential energy stored within a rock, due to the accumulation of ionic charges; a phenomenon known as induced polarization.
 
 
+.. figure:: ./images/electrode_conductivity_measurements.png
+	:align: right
+	:scale: 35%
+	
+To demonstrate the effects of chargeability, consider a rock sample which is placed between two copper/graphite electrodes.
+When the source is switched on and current (:math:`I`) is forced through the rock, there is an instantaneous increase in voltage (:math:`V_\sigma`) across the rock.
+For rocks that are chargeable, the initial jump in voltage is followed by continuous increase towards a final or DC voltage (:math:`V_m`).
+The additional increase in the voltage across the rock is sometimes referred to as over-voltage.
+
+.. figure:: ./images/chargeability_physics1.png
+	:align: right
+	:scale: 70%
 
 
+The voltage (:math:`V_{on}`) measured across a chargeable rock once the source is switched on is given by:
 
 .. math::
-	V_{off} = m e^{-t/\lambda}
+	V_{on} = V_\sigma + V_s \Big [ 1 - e^{-t/\tau } \Big ]
 
+where :math:`V_s` is the amplitude of the over-voltage and :math:`\tau` is a constant which determines the rate at which the over-voltage is increasing.
+
+.. figure:: ./images/chargeability_physics2.png
+	:align: right
+	:scale: 100%
+
+
+When the source is switched off, there is an instantaneous drop in measured voltage equal to :math:`V_\sigma`.
+In rocks that are chargeable, there is a remaining voltage which decays during the off-time.
+The voltage across the rock during the off-time is given by:
+
+.. math::
+	V_{off} = V_s \, e^{-t/\tau}
+
+
+Thus from the two previous equations, it is apparent that electrical energy is being stored during the on-time.
+Once the source is switched off, this energy is then being dissipated over time.
+The chargeable properties of the rock ultimately determine its storage capacity for electrical energy and the rate at which electrical energy can be stored/dissipated.
+
+
+There are two widely used definitions for chargeability, the intrinsic chargeability and the integrated chargeability:
+
+
+**Intrinsic Chargeability**
+
+The intrinsic chargeability (:math:`\eta \,`) defines the ratio between the maximum off-time voltage (:math:`V_s`) and the DC voltage (:math:`V_m`):
+
+.. math::
+	\eta = \frac{V_s}{V_m}
+
+
+The intrinsic chargeability represents the proportion of ionic charges which accumulate within the rock under the influence of static electric field.
+
+
+
+**Integrated Chargeability**
+
+Another common definition of chargeability is the integrated chargeability (:math:`M`).
+The integrated chargeability defines the area under the discharge curve normalized by the DC voltage (:math:`V_m`):
+
+.. math::
+	M = \frac{1}{V_m} \int_{t_1}^{t_2} V_s(t) \, dt
+
+
+Induced Polarization
+====================
+
+The phenomenon responsible for the chargeable properties of certain rocks is known as induced polarization.
 
 
 **Membrane Polarization**
+
+Membrane polarization
+
 
 
 
@@ -22,10 +88,16 @@ Chargeability
 
 
 
-Chargeability Measurements
-==========================
+Induced Polarization Measurements
+=================================
 
-Chargeability measurements are very similar to conductivity/resistivity measurements.
+**Integrated Chargeability Measurements**
+
+
+
+**Intrinsic Chargeability Measurements**
+
+Intrinsic chargeability measurements are very similar to conductivity/resistivity measurements.
 First, a cylindrical core sample is taken from the rock.
 The core sample is then placed in a sample holder between two copper/graphite electrodes where it acts as an impedence element for a circuit.
 
@@ -51,16 +123,19 @@ The resistivity of the sample at each frequency can be obtained from the impeden
 	\rho (\omega) = \frac{Z(\omega) A}{L}
 
 
-In order to determine the rock's chargeability, we fit the experimentally acquired resistivity values to a mathematical model.
+In order to characterize the rock's chargeable properties, we fit the experimentally acquired resistivity values to a mathematical model.
 This is illustrated below.
 A well-established model for explaining the resistivities of chargeable rocks is the Cole-Cole model:
 
 .. math::
-	\rho (\omega) = \rho_0 \Bigg [ 1 - m \Bigg ( 1 - \frac{1}{1 + (i\omega\tau )^C} \Bigg ) \Bigg ]
+	\rho (\omega) = \rho_0 \Bigg [ 1 - \eta \Bigg ( 1 - \frac{1}{1 + (i\omega\tau )^C} \Bigg ) \Bigg ]
 
 
-where :math:`m` is the chargeability and :math:`\rho_0` is the DC resistivity.
-Parameters :math:`\tau` and :math:`C` control the rate at which ionic charges accumulate when subjected to an electric field.
+where :math:`\rho_0` is the DC resistivity and :math:`\eta` is the intrinsic chargeability.
+Parameters :math:`\tau` and :math:`C` define
+
+**stuff needed in relating Ohm's law**
+
 By setting :math:`C=1`, :math:`\tau` defines the exponential decay in voltage according to the first equation.
 The conductivity of the rock can be obtained by taking the reciprocal of the complex resistivity:
 
@@ -77,67 +152,102 @@ The conductivity of the rock can be obtained by taking the reciprocal of the com
 
 
 
-
-
-
-
-
-
-Chargeability is one of two diagnostic physical properties in DC/IP surveys.
-Chargeability defines the magnitude of ionic charge build-up within a rock under the influence of an electric field.
-For chargeable rocks, Ohm's law can still be used to relate the density of electrical current (:math:`\vec J`) to an applied electric field (:math:`\vec E`):
-
-
-.. math::
-	\vec E = \rho \vec J
-
-In this case however, :math:`\sigma` is represented by a frequency-dependent conductivity:
-
-
-where :math:`\rho_0` is the DC/zero-frequency resistivity and :math:`0 \leq m \leq 1` is the chargeability.
-Parameters :math:`\tau` and :math:`C` define the frequency-dependent aspect of the complex conductivity.
-
-
-
-
-Under a static field, a portion of the ionic charges within the rock's pore fluid will accumulate on grain boundaries.
-In this case:
-
-.. math::
-	\lim_{\omega \rightarrow 0} \sigma = \sigma_0.
-
-
-At high frequencies, none of the ionic charges to not have sufficient time to accumulate.
-As a result, these ions contribute towards the conductive mechanism occurring within the rock.
-Thus at high frequencies:
-
-.. math::
-	\lim_{\omega \rightarrow \infty} \sigma = \frac{\sigma_0}{1 - m}
-
-
-and the conductivity of the rock is larger.
-
-
-**Complex Resisitivity**
-
-In many cases, the electrical properties of chargeable rocks are described using a complex resistivity:
-
-.. math::
-	\rho = \frac{1}{\sigma} = \rho_0 \Bigg [ 1 - m \Bigg ( 1 - \frac{1}{1 + (i\omega\tau )^C} \Bigg ) \Bigg ]
-
-
-
-Chargeability Measurements
-==========================
-
-
-
-
-
-
-
 Chargeabilities of Common Rocks
 ===============================
+
+The following tables (from Telford et al, 1976) provides a very general guide to the chargeabilities of materials.
+From these tables we can infer several things:
+
+- The chargeability increases as the % abundance of sulphide minerals increases.
+
+
+**Table 1:** Charging and integration times were about 1 minute each, which is
+much longer than field survey systems; therefore, values are larger than
+field measurements.
+
++-----------------------+--------------------------+
+|  **Material type**    | **Chargeability (msec)** |
++=======================+==========================+
+| 20% sulfides          | 2000-3000                |
++-----------------------+--------------------------+
+| 8-20% sulfides        | 1000-2000                |  
++-----------------------+--------------------------+
+| 2-8% sulfides         | 500-1000                 |  
++-----------------------+--------------------------+
+| volcanic tuffs        | 300-800                  |  
++-----------------------+--------------------------+
+| sandstone, siltstone  | 100-500                  |  
++-----------------------+--------------------------+
+| dense volcanic rocks 	| 100-500                  |  
++-----------------------+--------------------------+
+| shale                 | 50-100                   |  
++-----------------------+--------------------------+
+| granite, granodiorite | 10-50                    |  
++-----------------------+--------------------------+
+| limestone, dolomite   | 10-20                    |  
++-----------------------+--------------------------+
+
+**Table 2:** The values below involved more realistic charging and integration
+times of 3 seconds and 0.02-1.0 seconds respectively.
+
++-----------------------+--------------------------+
+|  **Material type**    | **Chargeability (msec)** |
++=======================+==========================+
+| ground water          | 0                        |
++-----------------------+--------------------------+
+| alluvium              | 1-4                      |  
++-----------------------+--------------------------+
+| gravels               | 3-9                      |  
++-----------------------+--------------------------+
+| precambrian volcanics | 8-20                     |  
++-----------------------+--------------------------+
+| precambrian gneisses  | 6-30                     |  
++-----------------------+--------------------------+
+| schists           	| 5-20                     |  
++-----------------------+--------------------------+
+| sandstones            | 3-12                     |  
++-----------------------+--------------------------+
+| argilites             | 3-10                     |  
++-----------------------+--------------------------+
+| quartzites            | 5-12                     |  
++-----------------------+--------------------------+
+
+**Table 3:** Chargeability of minerals at 1% concentration in the samples (charging and integration times as per Table 2 above)
+
++-----------------------+--------------------------+
+|  **Material type**    | **Chargeability (msec)** |
++=======================+==========================+
+| pyrite                | 13.4                     |
++-----------------------+--------------------------+
+| chalcocite            | 13.2                     |  
++-----------------------+--------------------------+
+| copper                | 12.3                     |  
++-----------------------+--------------------------+
+| graphite              | 11.2                     |  
++-----------------------+--------------------------+
+| chalcopyrite          | 9.4                      |  
++-----------------------+--------------------------+
+| bornite            	| 6.3                      |  
++-----------------------+--------------------------+
+| galena                | 3.7                      |  
++-----------------------+--------------------------+
+| magnetite             | 2.2                      |  
++-----------------------+--------------------------+
+| malachite             | 0.2                      |  
++-----------------------+--------------------------+
+| hematite              | 0.0                      |  
++-----------------------+--------------------------+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
