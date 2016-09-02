@@ -260,6 +260,16 @@ The general principles of magnetic surveying are encapsulated into the following
 	When using a total field magnetometer we measure :math:`\left|\vec{B}\right|` which is equal to :math:`\left|\vec{B_0} + \vec{B_A}\right|`. Since we do not know the direction of :math:`\vec{B_A}` we assume that the anomalous field is mostly induced and that it's direction aligns with the Earth's inducing field :math:`\vec{B_0}`. This allows us to approximate the *total field* datum (:math:`B_t`) as the projection of :math:`\vec{B_A}` onto the direction of Earth's field :math:`\hat{B_0}`.
 
 
+.. _magnetics_dipole_demo:
+
+ .. list-table:: : Rotating magnetic dipole and secondary magnetic field response as observed from the surface
+   :header-rows: 0
+   :widths: 10
+   :stub-columns: 0
+
+   *  - .. raw:: html
+            :file: ./images/rotating_prism_demo.html
+
 In addition the vertical gradient of the field, obtained if measurements were
 acquired with a gradiometer, are listed as :math:`B_g`.  Sign conventions must
 be adopted when data are plotted. For magnetic surveying the coordinate system
