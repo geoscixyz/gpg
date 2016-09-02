@@ -3,111 +3,167 @@
 Chargeability
 *************
 
-Chargeability is a physical property which affects the conductive properties of certain rocks.
-Chargeability defines the electric potential energy stored within a rock, due to the accumulation of ionic charges; a phenomenon known as induced polarization.
+Chargeability is a physical property related to conductivity.
+As we learned previously, ionic charges within a rock's pore water begin to move under the influence of an electric field, resulting in electrical current.
+However, some of the pore ions do not move uninhibited through the rock and begin to accumulate at impermeable boundaries.
+This build-up of ionic charges is commonly referred to as induced polarization, as it is responsible for generating electric dipole moments within the rock.
+We use chargeability to characterize the formation and strength of induced polarization within a rock, under the influence of an electric field.
+
+There are two primary mechanisms which are responsible for the chargeable behaviour of rocks, membrane polarization and electrode polarization.
+
+**Membrane Polarization**
+
+Membrane polarization occurs when the pore space narrows to a width comparable to that of the ions. 
+
+
+ .. figure:: ./images/images_duplicates/memb1.gif
+	:align: center
+	:scale: 100 %
+
+ 
+Because ionic charges cannot flow easily through the pore throat, they accumulate on either side once an electric field is applied; with positive charges accumulating on one side of the pore throat and negative charges accumulating on the other.
+
+
+ .. figure:: ./images/images_duplicates/memb2.gif
+	:align: center
+	:scale: 100 %
+
+
+
+The separation of positive and negative charges across the pore throat induces an electric dipole moment which defines the induced polarization.
+
+ .. figure:: ./images/images_duplicates/memb3.gif
+ 	:align: center
+	:scale: 100 %
+
+
+
+**Electrode Polarization**
+
+Electrode polarization occurs when the pore space is blocked by metallic particles.
+In this case, the metallic particles act as a capacitive surface for the ionic charges.
+
+ .. figure:: ./images/images_duplicates/elec_pol_1.gif
+	:align: center
+	:scale: 100
+
+
+
+ .. figure:: ./images/images_duplicates/elec_pol_2.gif
+	:align: center
+	:scale: 100
+
+
+
+
+
+
+
+
+Impact on Geophysical Measurements
+----------------------------------
 
 
 .. figure:: ./images/electrode_conductivity_measurements.png
 	:align: right
 	:scale: 35%
-	
-To demonstrate the effects of chargeability, consider a rock sample which is placed between two copper/graphite electrodes.
-When the source is switched on and current (:math:`I`) is forced through the rock, there is an instantaneous increase in voltage (:math:`V_\sigma`) across the rock.
-For rocks that are chargeable, the initial jump in voltage is followed by continuous increase towards a final or DC voltage (:math:`V_m`).
-The additional increase in the voltage across the rock is sometimes referred to as over-voltage.
+
+
+To demonstrate the effects of induced polarization on geophysical measurements, consider a rock sample which is placed between two copper/graphite electrodes.
+In non-chargeable rocks, an instantaneous increase in the measured potential (:math:`\Delta V`) occurs the moment the source is switched on and current (:math:`I`) is forced through the rock.
+When the source is switched off, the current through the rock is zero and so is the measured potential.
+
 
 .. figure:: ./images/chargeability_physics1.png
 	:align: right
 	:scale: 70%
 
+Chargeable rocks also experience an instantaneous jump in the measured potential (:math:`V_\sigma`) once the source is switched on.
+However, a subsequent build-up of ionic charges during the on-time results in a corresponding increase in the measured potential; which is sometimes referred to as the over-voltage.
+Eventually, the build-up of ionic charges reaches saturation, resulting in a final measured potential (:math:`V_m`) across the rock.
+In general, the measured potential after the source is switched (:math:`V_{on}`) can be expressed as:
 
-The voltage (:math:`V_{on}`) measured across a chargeable rock once the source is switched on is given by:
-
-.. math::
-	V_{on} = V_\sigma + V_s \Big [ 1 - e^{-t/\tau } \Big ]
-
-where :math:`V_s` is the amplitude of the over-voltage and :math:`\tau` is a constant which determines the rate at which the over-voltage is increasing.
 
 .. figure:: ./images/chargeability_physics2.png
 	:align: right
 	:scale: 100%
 
 
-When the source is switched off, there is an instantaneous drop in measured voltage equal to :math:`V_\sigma`.
-In rocks that are chargeable, there is a remaining voltage which decays during the off-time.
-The voltage across the rock during the off-time is given by:
+.. math::
+	V_{on}(t) = V_\sigma + V_s \Big [ 1 - e^{-t/\tau } \Big ]
+
+
+where :math:`V_s` is the amplitude of the over-voltage and :math:`\tau` is a constant which determines the rate at which the over-voltage increases over time.
+
+When the source is switched off, there is an instantaneous drop in the measured potential equal to :math:`V_\sigma`.
+Subsequently, the accumulated charges begin to diffuse within the pore water, resulting in a measured potential which decays according to: 
+
 
 .. math::
-	V_{off} = V_s \, e^{-t/\tau}
+	V_{off}(t) = V_s \, e^{-t/\tau}
 
 
-Thus from the two previous equations, it is apparent that electrical energy is being stored during the on-time.
-Once the source is switched off, this energy is then being dissipated over time.
-The chargeable properties of the rock ultimately determine its storage capacity for electrical energy and the rate at which electrical energy can be stored/dissipated.
+This decaying off-time potential is commonly called the discharge curve.
+The chargeable properties of rocks are commonly understood by their discharge curves, as they can be used to characterize the energy which is stored and discharged                  
 
 
-There are two widely used definitions for chargeability, the intrinsic chargeability and the integrated chargeability:
 
+
+Definitions for Chargeability
+=============================
+
+There are two widely used definitions for chargeability, the intrinsic chargeability and the integrated chargeability.
 
 **Intrinsic Chargeability**
 
-The intrinsic chargeability (:math:`\eta \,`) defines the ratio between the maximum off-time voltage (:math:`V_s`) and the DC voltage (:math:`V_m`):
+Intrinsic chargeability (:math:`\eta \,`) characterizes the proportion of ionic charges to total charges which accumulate within a rock under the influence of an electric field.
+The intrinsic chargeability is defined as the ratio between the amplitude of the over-voltage (:math:`V_s`) and the DC voltage (:math:`V_m`):
 
 .. math::
 	\eta = \frac{V_s}{V_m}
 
 
-The intrinsic chargeability represents the proportion of ionic charges which accumulate within the rock under the influence of static electric field.
-
-
-
 **Integrated Chargeability**
 
-Another common definition of chargeability is the integrated chargeability (:math:`M`).
-The integrated chargeability defines the area under the discharge curve normalized by the DC voltage (:math:`V_m`):
+
+The integrated chargeability (:math:`M`) characterizes the quantity of potential energy stored within a chargeable rock due to the accumulation of ionic charges.
+The integrated chargeability is defined as the area under the discharge curve normalized by the DC voltage (:math:`V_m`):
 
 .. math::
-	M = \frac{1}{V_m} \int_{t_1}^{t_2} V_s(t) \, dt
-
-
-Induced Polarization
-====================
-
-The phenomenon responsible for the chargeable properties of certain rocks is known as induced polarization.
-
-
-**Membrane Polarization**
-
-Membrane polarization
+	M = \frac{1}{V_m} \int_{t_1}^{t_2} V_{off}(t) \, dt
 
 
 
 
-**Electrode Polarization**
 
 
 
 
-Induced Polarization Measurements
-=================================
+
+Chargeability Measurements
+==========================
+
+
+For integrated and intrinsic chargeability measurements, a core sample is taken from the rock.
+The core sample is then placed in a sample holder between two copper/graphite electrodes where it acts as an impedence element for a circuit.
+
 
 **Integrated Chargeability Measurements**
 
+For integrated chargeability measurements, a source is used to drive direct current (:math:`I`) through the rock core.
+During the on-time, the voltage (:math:`V_m`) is measured across the sample.
+Next, the source is switched off.
+During the off-time, the potential across the rock is measured as it decays.
+The off-time measurements are used to define the discharge curve for the sample, which is then used to obtain the integrated chargeability according to:
+
+.. math::
+	M = \frac{1}{V_m} \int_{t_1}^{t_2} V_{off}(t) \, dt
 
 
 **Intrinsic Chargeability Measurements**
 
 Intrinsic chargeability measurements are very similar to conductivity/resistivity measurements.
-First, a cylindrical core sample is taken from the rock.
-The core sample is then placed in a sample holder between two copper/graphite electrodes where it acts as an impedence element for a circuit.
-
-
-.. figure:: ./images/electrode_chargeability_measurements.png
-	:align: right
-	:scale: 40%
-
-
-Next, a source is used to drive alternating current (:math:`I`) through the core sample.
+In this case, the source is used to drive alternating current (:math:`I`) through the core sample.
 By measuring the voltage drop (:math:`\Delta V`) accross the length of the sample, Ohm's law can be used to determine the circuit impedence (:math:`Z`) caused by the rock:
 
 .. math::
@@ -132,15 +188,17 @@ A well-established model for explaining the resistivities of chargeable rocks is
 
 
 where :math:`\rho_0` is the DC resistivity and :math:`\eta` is the intrinsic chargeability.
-Parameters :math:`\tau` and :math:`C` define
-
-**stuff needed in relating Ohm's law**
-
-By setting :math:`C=1`, :math:`\tau` defines the exponential decay in voltage according to the first equation.
+Parameters :math:`\tau` and :math:`C` define the rate at which ionic charges accumulate when an electric field is applied.
+Assuming :math:`C=1`, :math:`\tau` defines the exponential decay in voltage according to the first equation.
 The conductivity of the rock can be obtained by taking the reciprocal of the complex resistivity:
 
 .. math::
 	\sigma (\omega) = \frac{1}{\rho (\omega)}
+
+where
+
+.. math::
+	\vec J (\omega) = \sigma (\omega) \vec E (\omega)
 
 
 .. figure:: ./images/electrode_chargeability_curve_fit.png
@@ -243,19 +301,30 @@ times of 3 seconds and 0.02-1.0 seconds respectively.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 Factors Impacting Chargeability
 ===============================
+
+
+**Sulphide Mineralization:**
+
+
+
+
+**Clays:**
+
+
+
+
+**Salinity of Pore-Water:**
+
+
+
+
+
+**Tortuosity:**
+
+
+
 
 
 
