@@ -1,6 +1,3 @@
-.. _magnetics_susceptibility_duplicate:
-
-
 Susceptibility
 **************
 
@@ -103,9 +100,9 @@ Parameters used to define magnetic properties and their associated units are tab
 
 Some useful conversions for units are:
 
-- 1 T = Weber per meter squared
-- 1 T = 10 :math:`\! ^9` nT
-- 1 nt= gamma   
+ .. .. figure:: ./images/images_duplicates/susceptibility_chart.gif
+	.. :align: center
+	.. :scale: 100%	
 
 The above units (with the exception of gamma) are all SI units; which can always be expressed using meters, kilograms, and seconds. 
 Historically, units of cgs (centimeter, grams, seconds) were used to define the magnetic susceptibilities for rocks. 
@@ -158,6 +155,8 @@ From these charts we can infer several things:
 
 A more detailed analysis of rock magnetic properties can be found in Clark and Emerson (1991).
 
+ .. .. figure:: 
+	.. ./images/images_duplicates/magnetic_susceptibility_measurement_KT10.jpg
 
 
 .. figure:: ./images/rock_susceptibilities_adapted.png
