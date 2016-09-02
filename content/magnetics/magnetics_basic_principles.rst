@@ -5,71 +5,61 @@ Basic Principles
 
 .. _earth_s_field:
 
-Earth's Field
-=============
+Magnetic Method
+===============
 
 .. figure:: ./images/ironfilings.gif
 	:align: right
 	:figclass: float-right-360
 	:scale: 110% 
+	:name: iron_filling
 
 Most people are familiar with the magnetic field that exists around a dipolar
-or "bar" magnet (shown to the right as the pattern of iron filings on paper
-over a bar magnet). To a first approximation, Earth's magnetic field looks
-like that of a dipolar source within the Earth, which is tilted about 11.5
-degrees from the spin axis and is slightly off center. This field has a
-strength of approximately 70,000 nanoTeslas (nT) at the magnetic poles and
-approximately 25,000 nT at the magnetic equator.The figure below-left
-illustrates a cross-section of the field as it could be imagined from space.
-Below-right is a sketch of the directions of the field at Earth's surface.
+or "bar" magnet as the pattern of iron filings on paper over a bar magnet
+(:numref:`iron_filling`). To a first approximation, Earth's magnetic field does 
+look a lot like a large dipolar source, with its north pole tilted about
+:math:`11.5^\circ` from the spin axis. 
+Near the surface however, the magnetic field gets much more complicated.
+There are, in fact, three different components to observed magnetic field:
 
+ - :ref:`The main dipolar field<magnetics_dipolar_field>` of the Earth produced internally by large currents in the fluid outer core of the earth. This is also refered to as the *inducing field*, and it is the main magnetic source for the magnetic geophysical surveys.
 
-.. figure:: ./images/fig_2a.jpg
-	:align: left
-	:scale: 155% 
+ .. figure:: ./images/Earth_Field.png
+	:align: center
+	:figwidth: 40% 
 
-.. figure:: ./images/earthfield.gif
-	:figclass: center
-	:align: left
-	:scale: 155 %
+ - :ref:`Anomalous fields<magnetics_buried_dipole>` due to rocks or buried bodies that are the objective of geophysical surveys. These fields are the *signals* we have to work with, and they may be either permanent (always present, regardless of the ambient local field) or induced (caused by Earth's field).
 
+ .. figure:: images/magnetic_anomaly.gif
+   :align: center
+   :figwidth: 40%
 
+ - :ref:`External variations<magnetics_variability>` caused by currents flowing in the ionosphere. For magnetic surveys, these *diurnal variations* and considered to be source of noise and removed from the observed data. 
 
-There are, in fact, three different components to Earth's field:
+ .. figure:: ./images/fig_2a.jpg
+	:align: center
+	:figwidth: 40%
 
-1. **The main dipolar field** of the earth (produced internally by large currents in the fluid outer core of the earth).
+The focus of magnetic methods is to make sense of the observed magnetic field and infer knowledge about the sub-surface.
 
-2. **External variations** caused by currents flowing in the ionosphere. For magnetic surveys, this is a source of "noise", and is the reason the field in the left-hand image above appears asymmetric.
-
-3. **Magnetic fields due to rocks or buried bodies** that are the objective of geophysical surveys. These fields are the "signals" we have to work with, and they may be either permanent (always present, regardless of the ambient local field) or induced (caused by Earth's field).
 
 Describing Earth's field
-------------------------
+========================
 
-The convention for drawing magnetic field lines is that they flow outward from
-a positive pole and inward to a negative pole. The Earth's field behaves like
-there is a negative pole in the northern hemisphere and a positive pole in the
-southern hemisphere. Therefore, the magnetic field on Earth's surface looks
-approximately like that given in the  figure above. Using B to represent the
+Using B to represent the
 magnetic field of Earth as a vector in three dimensions, the field at any
 location on (or above or within) Earth can be described in either of three
 ways (refer to the next figure below):
 
+ - B = (:math:`B_x`, :math:`B_y`, :math:`B_z`) = (X, Y, Z) in the figure. These are Cartesian coordinates with X pointing to true (geographic) north, Y pointing east and Z pointing vertically down.
 
- B = (:math:`B_x`, :math:`B_y`, :math:`B_z`) = (X, Y, Z) in the figure. These are Cartesian coordinates with X pointing to true (geographic) north, Y pointing east and Z pointing vertically down.
-
- B = (:math:`B_h` , :math:`B_z` , :math:`D`) = (H, Z, D) in the figure. These are horizontal and vertical components, plus declination (angle with respect to true north). 
+ - B = (:math:`B_h` , :math:`B_z` , :math:`D`) = (H, Z, D) in the figure. These are horizontal and vertical components, plus declination (angle with respect to true north). 
     
- B = (:math:`D`, :math:`I`, :math:`\mid B\mid` ). These are the commonly used polar coordinates which include two angles and a magnitude: D=declination, I=inclination, and :math:`\mid B \mid` =total field strength.
-
-
-In 2004, Earth's north magnetic pole was close to Melville Island at
-(Latitude, Longitude)=(79N, 70W). At Vancouver D ~ 20° east, I ~ 70° down from
-horizontal.
+ - B = (:math:`D`, :math:`I`, :math:`\mid B\mid` ). These are the commonly used polar coordinates which include two angles and a magnitude: D=declination, I=inclination, and :math:`\mid B \mid` =total field strength.
 
 .. figure:: ./images/components.gif
 	:align: center
-	:scale: 130% 
+	:scale: 100% 
 
 	Sketch of coordinates used to describe magnetic fields.
 
@@ -83,47 +73,112 @@ horizontal.
 
 The details of Earth's field at any location on Earth are described using a
 formula based upon a spherical harmonic decomposition of the field called the
-IGRF or International Geomagnetic Reference Field. Details about Earth's field
-can be found at government geoscience websites (listed below) such as the NOAA
-Geomagnetism home page, or the Canadian National Geomagnetism Program's home
-page. Resources about Earth's global magnetic field are:
+:ref:`IGRF<magnetics_IGRF>` or International Geomagnetic Reference Field. Details about Earth's field
+can be found at government geoscience websites such as the `NOAA`_ geomagnetism home page, or the `Canadian National Geomagnetism Program`_ home
+page. 
 
+**Other resources**
+ - Earth's `magnetic field calculator`_.
 
-* A page describing the International Geomagnetic Reference Field (:ref:`IGRF<magnetics_IGRF>`).
-* :ref:`Three figures<magnetics_three_figures>` show how declination, inclination and field strength varies around the world.
-* `NOAA Geomagnetism home page`_ , and the Canadian National Geomagnetism Program's `home page`_ websites.
-* Find parameters describing Earth's field at a specific location (specified using date, latitude, longitude and elevation) at the NOAA National Geophysical Data Center's online `magnetic field calculator`_.
-
-.. _NOAA Geomagnetism home page: http://www.ngdc.noaa.gov/geomag/geomag.shtml
-.. _home page: http://www.geomag.nrcan.gc.ca/index-eng.php
+.. _NOAA: http://www.ngdc.noaa.gov/geomag/geomag.shtml
+.. _Canadian National Geomagnetism Program: http://www.geomag.nrcan.gc.ca/index-eng.php
 .. _magnetic field calculator: http://www.ngdc.noaa.gov/geomag-web/
 
 
+.. _magnetics_dipolar_field:
+
+Earth's Dipolar Field
+======================
+
+.. figure:: ./images/earthfield.gif
+	:align: right
+	:figwidth: 40% 
+	:name: earth_mag_vectors
+	
+	: Earth's magnetic field orientation
+
+The convention for drawing magnetic field lines is that they flow outward from
+a positive pole and inward to a negative pole. The Earth's field behaves like
+there is a negative pole in the northern hemisphere and a positive pole in the
+southern hemisphere as shown in :numref:`earth_mag_vectors`. 
+This field has a strength of
+approximately 70,000 nanoTeslas (nT) at the magnetic poles and approximately
+25,000 nT at the magnetic equator. 
+Field orientation and strength
+varies around the world, as presented :ref:`below<magnetics_three_figures>` based upon the :ref:`IGRF<magnetics_IGRF>` for 2003. The images were
+generated using data obtained from the `NOAA`_ National Data Center.
+In 2004, Earth's north magnetic pole was close to Melville Island (Nunavut) at
+(Latitude, Longitude)=(79N, 70W). 
+In Vancouver (BC), the current field is orientated at D ~ 20°N,  ~ 70° Inclination.
+
 .. _magnetics_three_figures:
 
-Earth's magnetic field
-----------------------
+.. list-table::
+   :header-rows: 0
+   :widths: 10 10
+   :stub-columns: 0
+   :name: IGRF_three_figures
 
-These three figures show how declination, inclination and field strength
-varies around the world, based upon the IGRF for 2003. The images were
-generated using data obtained from the NOAA National Data Center.
+   *  - .. figure:: ./images/earth-decl.gif
 
 
-.. figure:: ./images/earth-decl.gif
-	:align: center
-	:scale: 100% 
+          Earth's declination.
+      - .. figure:: ./images/earth-incl.gif
 
-.. figure:: ./images/earth-incl.gif
-	:align: center
-	:scale: 100% 
+		  Earth's inclination.
 
-.. figure:: ./images/earth-strength.gif
-	:align: center
-	:scale: 100% 
+   *  - .. figure:: ./images/earth-strength.gif
 
+   		  Earth's field strentgh
+      - 
+
+.. _magnetics_IGRF:
+
+The IGRF
+--------
+
+Here are a few remarks about the IGRF or International Geomagnetic Reference Field.
+
+The IGRF is a mathematical model that describes the field and its secular
+changes as a spherical harmonic expansion. It is updated every five years, and
+**later** versions may re-define the field at **earlier** times. This is
+important to remember if you are comparing old maps to new ones. The IGRF is a
+product of the International Association of Geomagnetism and Aeronomy (IAGA_),
+and the original version was defined in 1968.
+
+.. _IAGA: http://www.ngdc.noaa.gov/IAGA/vmod/
+
+Every five years, the IAGA issues a contemporary main field model that
+predicts the field for the next five years. These models have names that are
+prefixed with "IGRF." Each new model updates the model that was used to
+predict the previous five (or more) years. Updated models are called **DGRF**
+for **Definitive Geomagnetic Reference Field**. Major updates since 1980 use
+data from MAGSAT, consisting of measurements of vector components and total
+intensity of the geomagnetic field between 350 and 560 km altitude.
+
+To correct data sets which had older versions of reference fields removed, add
+:math:`(F_0 - F_n)` to each data point, where the two parameters are total
+intensity values computed from the old and new reference fields respectively.
+See Peddie N.W. 1982, 1983, and 1986 for details. Charts of many types are
+available on-line, as downloadable postscript files, and for sale (less than
+$5.00 each) from the USGS, NOAA, GSC, and just about any other government
+geoscience agency. For example, you could use either the NOAA Geomagnetism
+page_, or the Canadian National Geomagnetism Program's homepage_.
+
+.. _page: http://www.ngdc.noaa.gov/ngdc.html
+.. _homepage: http://www.geomag.nrcan.gc.ca/index-eng.php
+
+.. References:
+
+.. * Peddie, N. W., 1986, Report on International Geomagnetic Reference Field revision 1985 by IAGA Division I Working Group 1: *Geophysics*, 51, no. 4, 1020-1023.
+.. * Peddie, N. W., 1983, International Geomagnetic Reference Field - its evolution and the difference in total field intensity between new and old models for 1965-1980 (short note): *Geophysics*, 48, no. 12, 1691-1696.
+.. * Peddie, N. W., 1982, Report on International Geomagnetic Reference Field 1980 by IAGA Division I Working Group 1: *Geophysics*, 47, no. 5, 841-842.
+
+
+.. _magnetics_variability:
 
 Variability of Earth's field
-----------------------------
+============================
 
 The source of the main (nearly dipolar) field varies slowly, causing changes
 in strength, declination and inclination over time scales of months to years.
@@ -178,53 +233,11 @@ about magnetics.
 
 .. _GSC Geomagnetic data page: http://www.geomag.nrcan.gc.ca/index-eng.php
 
-.. _magnetics_IGRF:
-
-The IGRF
-========
-
-Here are a few remarks about the IGRF or International Geomagnetic Reference Field.
-
-The IGRF is a mathematical model that describes the field and its secular
-changes as a spherical harmonic expansion. It is updated every five years, and
-**later** versions may re-define the field at **earlier** times. This is
-important to remember if you are comparing old maps to new ones. The IGRF is a
-product of the International Association of Geomagnetism and Aeronomy (IAGA_),
-and the original version was defined in 1968.
-
-.. _IAGA: http://www.ngdc.noaa.gov/IAGA/vmod/
-
-Every five years, the IAGA issues a contemporary main field model that
-predicts the field for the next five years. These models have names that are
-prefixed with "IGRF." Each new model updates the model that was used to
-predict the previous five (or more) years. Updated models are called **DGRF**
-for **Definitive Geomagnetic Reference Field**. Major updates since 1980 use
-data from MAGSAT, consisting of measurements of vector components and total
-intensity of the geomagnetic field between 350 and 560 km altitude.
-
-To correct data sets which had older versions of reference fields removed, add
-:math:`(F_0 - F_n)` to each data point, where the two parameters are total
-intensity values computed from the old and new reference fields respectively.
-See Peddie N.W. 1982, 1983, and 1986 for details. Charts of many types are
-available on-line, as downloadable postscript files, and for sale (less than
-$5.00 each) from the USGS, NOAA, GSC, and just about any other government
-geoscience agency. For example, you could use either the NOAA Geomagnetism
-page_, or the Canadian National Geomagnetism Program's homepage_.
-
-.. _page: http://www.ngdc.noaa.gov/ngdc.html
-.. _homepage: http://www.geomag.nrcan.gc.ca/index-eng.php
-
-References:
-
-* Peddie, N. W., 1986, Report on International Geomagnetic Reference Field revision 1985 by IAGA Division I Working Group 1: *Geophysics*, 51, no. 4, 1020-1023.
-* Peddie, N. W., 1983, International Geomagnetic Reference Field - its evolution and the difference in total field intensity between new and old models for 1965-1980 (short note): *Geophysics*, 48, no. 12, 1691-1696.
-* Peddie, N. W., 1982, Report on International Geomagnetic Reference Field 1980 by IAGA Division I Working Group 1: *Geophysics*, 47, no. 5, 841-842.
 
 .. _magnetics_buried_dipole:
 
 Fields due to a magnetic dipole
 ===============================
-
 
 The general principles of magnetic surveying are encapsulated into the following steps:
 
@@ -246,6 +259,16 @@ The general principles of magnetic surveying are encapsulated into the following
 
 	When using a total field magnetometer we measure :math:`\left|\vec{B}\right|` which is equal to :math:`\left|\vec{B_0} + \vec{B_A}\right|`. Since we do not know the direction of :math:`\vec{B_A}` we assume that the anomalous field is mostly induced and that it's direction aligns with the Earth's inducing field :math:`\vec{B_0}`. This allows us to approximate the *total field* datum (:math:`B_t`) as the projection of :math:`\vec{B_A}` onto the direction of Earth's field :math:`\hat{B_0}`.
 
+
+.. _magnetics_dipole_demo:
+
+ .. list-table:: : Rotating magnetic dipole and secondary magnetic field response as observed from the surface
+   :header-rows: 0
+   :widths: 10
+   :stub-columns: 0
+
+   *  - .. raw:: html
+            :file: ./images/rotating_prism_demo.html
 
 In addition the vertical gradient of the field, obtained if measurements were
 acquired with a gradiometer, are listed as :math:`B_g`.  Sign conventions must
@@ -400,7 +423,6 @@ As an aside we notice that magnetic charges behave exactly as point electric
 charges. An important distinction is that electric particles can exist by
 themselves whereas magnetic charges always occur in pairs. The reason for this
 is that all magnetic fields fundamentally arise from currents.
-
 
 
 Consider a magnetic field impinging upon a body of arbitrary shape and uniform
