@@ -22,7 +22,7 @@ The electric field, electric displacement and electric polarization are related 
 
 .. math::
 	\vec D = \varepsilon_0 \vec E + \vec P
-	
+
 
 where the permittivity of free-space (:math:`\varepsilon_0 = 8.8541878176 \times 10^{-12}` F/m) defines the relationship between :math:`\vec D` and :math:`\vec E` if the material is non-polarizable.
 Therefore, the dielectric permittivity and the electric displacement define how strongly a material becomes electrically polarized under the influence of an electric field.
@@ -40,7 +40,7 @@ The relative permittivity defines the dielectric properties of a material relati
 
 .. math::
 	\varepsilon_r = \frac{\varepsilon}{\varepsilon_0}
-	
+
 
 Parameters used to define the dielectric properties of materials and their associated units are tabulated below.
 
@@ -57,9 +57,9 @@ Parameters used to define the dielectric properties of materials and their assoc
 +-------------------------+-----------------------------------+------------------+
 | Dielectric Permittivity | :math:`\varepsilon`               | F/m              |
 +-------------------------+-----------------------------------+------------------+
-| Electric Susceptibility | :math:`\chi_e`                    | *Unitsless       |
+| Electric Susceptibility | :math:`\chi_e`                    | *Unitsless*      |
 +-------------------------+-----------------------------------+------------------+
-| Relative Permittivity   | :math:`\varepsilon_r`             | *Unitless        |
+| Relative Permittivity   | :math:`\varepsilon_r`             | *Unitless*       |
 +-------------------------+-----------------------------------+------------------+
 
 
@@ -213,7 +213,7 @@ where
 - :math:`\varepsilon_w` is the dielectric permittivity of water.
 
 
-**Frequency**: 
+**Frequency**:
 
 For hard rocks and unsaturated sedimentary samples, the dielectric permittivity can be considered constant for all intents and purposes.
 At sufficiently low frequencies, the same can be said about water-saturated sedimentary rocks and soils (Kaatze, 1989; Meissner and Wentz, 2004).
@@ -267,7 +267,7 @@ permittivity is a ratio: since dielectric permittivity :math:`\epsilon =
 \epsilon_R \epsilon_0`, relative dielectric permittivity :math:`\epsilon_R
 = \epsilon / \epsilon_0`.
 
- 
+
 Relative dielectric permittivity is the parameter usually referred to in GPR
 work. It is 1 (one) for free space or air, and 80 for water. Because it is a
 number that compares true value to free space value, it has no units.

@@ -78,8 +78,8 @@ As we can see, cells change volume when they come in contact with the wave.
 The P-wave velocity is related to the elastic properties of the medium by the following expression:
 
 .. math::
-	v_p = \sqrt{\frac{K+4/3\mu}{\rho}} 
-	
+	v_p = \sqrt{\frac{K+4/3\mu}{\rho}}
+
 
 where :math:`K` is the bulk modulus, :math:`\mu` is the shear modulus and :math:`\rho` is the density.
 
@@ -124,7 +124,7 @@ In seismology, there are two fundamental types of surface waver: Rayleigh waves 
 
 Rayleigh waves are surface waves in which particle motion is elliptic.
 The particle motion which defines Rayleigh waves can be seen in the diagram on the right [#f1]_.
-In Rayleigh waves, elliptic particle motion can be prograde (in the same direction as the propagating wave) or retrograde (in the opposite direction as the propagating wave). 
+In Rayleigh waves, elliptic particle motion can be prograde (in the same direction as the propagating wave) or retrograde (in the opposite direction as the propagating wave).
 The amplitude of the elliptic motion decreases with depth.
 As a general rule, Rayleigh waves at the surface of the Earth have a propagation speed which is 90 % the speed of shear waves, thus:
 
@@ -149,7 +149,7 @@ Thus Love waves have a propagation speed of:
 	0.9 \, v_s < v_L < v_s
 
 
-    
+
 
 Symbols used to define P-wave and S-wave velocities, as well as the elastic properties on which they depend, are summarized in the following table:
 

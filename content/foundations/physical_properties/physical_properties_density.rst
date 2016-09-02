@@ -7,20 +7,20 @@ Density (:math:`\rho`) is defined as the mass (:math:`m`) contained within a mat
 
 .. math::
 	\rho = \frac{m}{V}
-	
+
 Please note that mass (the quantity of matter within an object) should not be confused with weight (the downward force exerted by an object due to gravity).
 
-**Specific Gravity**: 
+**Specific Gravity**:
 
 In some cases, the density of a material is represented instead by its specific gravity.
 Specific gravity defines the ratio of a material's density to that of water:
 
 .. math::
 	S.G. = \frac{\rho}{\rho_w}
-	
+
 where the density of water :math:`\rho_w` = 1,000 kg/m :math:`\!^3` (or 1 g/cm :math:`\!^3`).
 Parameters used to define density and their associated units are summarized below.
-	
+
 
 +------------------+--------------+----------------------------------------+
 | Property         | Symbol       | Units                                  |
@@ -31,7 +31,7 @@ Parameters used to define density and their associated units are summarized belo
 +------------------+--------------+----------------------------------------+
 | Volume           | :math:`V`    | cm :math:`\!^3` or m :math:`\!^3`      |
 +------------------+--------------+----------------------------------------+
-| Specific Gravity | :math:`S.G.` | *Unitless                              |
+| Specific Gravity | :math:`S.G.` | *Unitless*                             |
 +------------------+--------------+----------------------------------------+
 
 
@@ -53,7 +53,7 @@ The density of the rock is obtained from
 .. math::
 	\rho = \frac{m}{V}
 
-This method is simple but it is often not sufficiently accurate for geophysical purposes. 
+This method is simple but it is often not sufficiently accurate for geophysical purposes.
 
 **Hydrostatic Weighting**
 
@@ -65,8 +65,8 @@ Where :math:`\rho_w` = 1000 kg/m :math:`\!^3` is the density of water, the densi
 	:scale: 50%
 	:align: right
 
-.. math::	
-	\rho = \frac{m_a}{m_a - m_w} \times \rho_w									
+.. math::
+	\rho = \frac{m_a}{m_a - m_w} \times \rho_w
 
 This method if satisfactory for unless the rock is unconsolidated or porous.
 Unconsolidated rocks tend to break apart when immersed in water.
@@ -86,7 +86,7 @@ The skeletal density of the rock is therefore:
 
 .. math::
 	\rho_{sk} = \frac{m}{V_c - V_s}
-	
+
 
 **Gamma-Gamma Density Logging**
 
@@ -95,7 +95,7 @@ For these measurements, gamma rays are emmitted by a radioactive source.
 While transmitting through the adjacent rock, the gamma rays interact with electrons and undergo Compton scattering.
 A detector within the borehole measures the intensity of the scattered gamma rays.
 Gamma rays experience a higher level of Compton scattering in denser materials.
-Therefore, the intensity scattered signal can be used to obtain the bulk density of the rocks within the borehole. 
+Therefore, the intensity scattered signal can be used to obtain the bulk density of the rocks within the borehole.
 
 
 Density of Common Rocks
