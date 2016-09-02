@@ -7,13 +7,13 @@ Chargeability is a physical property related to conductivity.
 As we learned previously, ionic charges within a rock's pore water begin to move under the influence of an electric field, resulting in electrical current.
 However, some of the pore ions do not move uninhibited through the rock and begin to accumulate at impermeable boundaries.
 This build-up of ionic charges is commonly referred to as induced polarization, as it is responsible for generating electric dipole moments within the rock.
-We use chargeability to characterize the formation and strength of induced polarization within a rock, under the influence of an electric field.
+We use chargeability to characterize the formation and strength of the induced polarization within a rock, under the influence of an electric field.
 
 There are two primary mechanisms which are responsible for the chargeable behaviour of rocks, membrane polarization and electrode polarization.
 
 **Membrane Polarization**
 
-Membrane polarization occurs when the pore space narrows to a width comparable to that of the ions. 
+Membrane polarization occurs when the pore space narrows to a within several ion widths. 
 
 
  .. figure:: ./images/images_duplicates/memb1.gif
@@ -21,7 +21,7 @@ Membrane polarization occurs when the pore space narrows to a width comparable t
 	:scale: 100 %
 
  
-Because ionic charges cannot flow easily through the pore throat, they accumulate on either side once an electric field is applied; with positive charges accumulating on one side of the pore throat and negative charges accumulating on the other.
+Because ionic charges cannot be forced through the pore throat, they accumulate on either side when an electric field is applied; with positive charges accumulating on one side of the pore throat and negative charges accumulating on the other.
 
 
  .. figure:: ./images/images_duplicates/memb2.gif
@@ -30,7 +30,7 @@ Because ionic charges cannot flow easily through the pore throat, they accumulat
 
 
 
-The separation of positive and negative charges across the pore throat induces an electric dipole moment which defines the induced polarization.
+The separation of positive and negative charges across narrow pore spaces generates a set of electric dipole moments which is ultimately responsible for the induced polarization.
 
  .. figure:: ./images/images_duplicates/memb3.gif
  	:align: center
@@ -41,7 +41,9 @@ The separation of positive and negative charges across the pore throat induces a
 **Electrode Polarization**
 
 Electrode polarization occurs when the pore space is blocked by metallic particles.
-In this case, the metallic particles act as a capacitive surface for the ionic charges.
+In this case, the metallic particles act as a capacitive surface for the ionic charges to accumulate.
+
+
 
  .. figure:: ./images/images_duplicates/elec_pol_1.gif
 	:align: center
@@ -145,7 +147,7 @@ Chargeability Measurements
 
 
 For integrated and intrinsic chargeability measurements, a core sample is taken from the rock.
-The core sample is then placed in a sample holder between two copper/graphite electrodes where it acts as an impedence element for a circuit.
+The core sample is then placed in a sample holder between two copper/graphite electrodes where it acts as an impedence element for a circuit (see the earlier schematic).
 
 
 **Integrated Chargeability Measurements**
