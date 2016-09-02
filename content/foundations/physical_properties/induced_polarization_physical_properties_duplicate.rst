@@ -41,7 +41,7 @@ The separation of positive and negative charges across narrow pore spaces genera
 **Electrode Polarization**
 
 Electrode polarization occurs when the pore space is blocked by metallic particles.
-In this case, the metallic particles act as a capacitive surface for the ionic charges to accumulate.
+When an electric field is applied, the metallic particles become electrically charged and attract nearby ions.
 
 
 
@@ -50,6 +50,17 @@ In this case, the metallic particles act as a capacitive surface for the ionic c
 	:scale: 100
 
 
+The attraction of the ions to the surface forms a primary layer of fixed ionic charges, followed by a secondary diffuse layer of opposing charges.
+This is known as an electric double layer.
+
+
+ .. figure:: ./images/images_duplicates/elec_pol_3.gif
+	:align: center
+	:scale: 100
+
+
+Each electric double layer results in an electric dipole moment which contributes towards the induced polarization within the rock.
+
 
  .. figure:: ./images/images_duplicates/elec_pol_2.gif
 	:align: center
@@ -57,32 +68,23 @@ In this case, the metallic particles act as a capacitive surface for the ionic c
 
 
 
-
-
-
-
-
 Impact on Geophysical Measurements
 ----------------------------------
 
 
-.. figure:: ./images/electrode_conductivity_measurements.png
-	:align: right
-	:scale: 35%
+To demonstrate the effects of induced polarization on geophysical measurements, consider what happens when a source is used to force current into the ground.
+At some location in proximity of the source, the electric potential (:math:`V`) is measured.
+In non-chargeable rocks, an instantaneous increase in the measured potential occurs the moment the source is switched on.
+When the source is switched off, the current through the Earth is zero and so is the measured potential.
 
 
-To demonstrate the effects of induced polarization on geophysical measurements, consider a rock sample which is placed between two copper/graphite electrodes.
-In non-chargeable rocks, an instantaneous increase in the measured potential (:math:`\Delta V`) occurs the moment the source is switched on and current (:math:`I`) is forced through the rock.
-When the source is switched off, the current through the rock is zero and so is the measured potential.
+.. figure:: ./images/images_duplicates/IP_source.gif
+	:align: center
+	:scale: 120%
 
-
-.. figure:: ./images/chargeability_physics1.png
-	:align: right
-	:scale: 70%
-
-Chargeable rocks also experience an instantaneous jump in the measured potential (:math:`V_\sigma`) once the source is switched on.
-However, a subsequent build-up of ionic charges during the on-time results in a corresponding increase in the measured potential; which is sometimes referred to as the over-voltage.
-Eventually, the build-up of ionic charges reaches saturation, resulting in a final measured potential (:math:`V_m`) across the rock.
+If the ground is chargeable, there will also be an instantaneous jump in the measured potential once the source is switched on; which we denote as :math:`V_\sigma`.
+However, the subsequent build-up of ionic charges during the on-time results in a corresponding increase in the measured potential; which is sometimes referred to as the over-voltage.
+Eventually, the build-up of ionic charges reaches saturation, resulting in a final measured potential (:math:`V_m`).
 In general, the measured potential after the source is switched (:math:`V_{on}`) can be expressed as:
 
 
@@ -95,10 +97,10 @@ In general, the measured potential after the source is switched (:math:`V_{on}`)
 	V_{on}(t) = V_\sigma + V_s \Big [ 1 - e^{-t/\tau } \Big ]
 
 
-where :math:`V_s` is the amplitude of the over-voltage and :math:`\tau` is a constant which determines the rate at which the over-voltage increases over time.
+where :math:`V_s` is the amplitude of the over-voltage and :math:`\tau` is a constant which determines the rate at which the induced polarization forms.
 
 When the source is switched off, there is an instantaneous drop in the measured potential equal to :math:`V_\sigma`.
-Subsequently, the accumulated charges begin to diffuse within the pore water, resulting in a measured potential which decays according to: 
+Subsequently, the accumulated charges begin to diffuse, resulting in a measured potential which decays according to: 
 
 
 .. math::
@@ -106,8 +108,7 @@ Subsequently, the accumulated charges begin to diffuse within the pore water, re
 
 
 This decaying off-time potential is commonly called the discharge curve.
-The chargeable properties of rocks are commonly understood by their discharge curves, as they can be used to characterize the energy which is stored and discharged                  
-
+We use the discharge curve to characterize the chargeable properties of the Earth.
 
 
 
@@ -140,14 +141,16 @@ The integrated chargeability is defined as the area under the discharge curve no
 
 
 
-
+.. figure:: ./images/electrode_conductivity_measurements.png
+	:align: right
+	:scale: 35%
 
 Chargeability Measurements
 ==========================
 
 
 For integrated and intrinsic chargeability measurements, a core sample is taken from the rock.
-The core sample is then placed in a sample holder between two copper/graphite electrodes where it acts as an impedence element for a circuit (see the earlier schematic).
+The core sample is then placed in a sample holder between two copper/graphite electrodes where it acts as an impedence element for a circuit.
 
 
 **Integrated Chargeability Measurements**
@@ -181,8 +184,7 @@ The resistivity of the sample at each frequency can be obtained from the impeden
 	\rho (\omega) = \frac{Z(\omega) A}{L}
 
 
-In order to characterize the rock's chargeable properties, we fit the experimentally acquired resistivity values to a mathematical model.
-This is illustrated below.
+In order to characterize the rock's chargeable properties, we fit the experimentally acquired resistivity values to a mathematical model (illstrated below).
 A well-established model for explaining the resistivities of chargeable rocks is the Cole-Cole model:
 
 .. math::
@@ -191,21 +193,26 @@ A well-established model for explaining the resistivities of chargeable rocks is
 
 where :math:`\rho_0` is the DC resistivity and :math:`\eta` is the intrinsic chargeability.
 Parameters :math:`\tau` and :math:`C` define the rate at which ionic charges accumulate when an electric field is applied.
-Assuming :math:`C=1`, :math:`\tau` defines the exponential decay in voltage according to the first equation.
-The conductivity of the rock can be obtained by taking the reciprocal of the complex resistivity:
-
-.. math::
-	\sigma (\omega) = \frac{1}{\rho (\omega)}
-
-where
-
-.. math::
-	\vec J (\omega) = \sigma (\omega) \vec E (\omega)
 
 
 .. figure:: ./images/electrode_chargeability_curve_fit.png
 	:align: center
 	:scale: 40%
+
+
+Assuming :math:`C=1`, :math:`\tau` defines the exponential decay in voltage during the off-time measurements (see earlier).
+The conductivity of the rock can be obtained by taking the reciprocal of the complex resistivity:
+
+.. math::
+	\sigma (\omega) = \frac{1}{\rho (\omega)}
+
+
+Additionally, Ohm's law still applies for chargeable rocks.
+Thus:
+
+
+.. math::
+	\vec J (\omega) = \sigma (\omega) \vec E (\omega)
 
 
 
@@ -215,10 +222,11 @@ where
 Chargeabilities of Common Rocks
 ===============================
 
-The following tables (from Telford et al, 1976) provides a very general guide to the chargeabilities of materials.
+The following tables (from Telford et al, 1976) provide a very general guide to the integrated chargeabilities of materials.
 From these tables we can infer several things:
 
-- The chargeability increases as the % abundance of sulphide minerals increases.
+- Chargeability increases as the % abundance of sulphide minerals increases (click :ref:`here<table_chargeability_sulphide>` for table).
+- Ore-mineralization impacts the chargeability of rocks to varying degrees (click :ref:`here<table_chargeability_minerals>` for table).
 
 
 **Table 1:** Charging and integration times were about 1 minute each, which is
@@ -309,23 +317,42 @@ Factors Impacting Chargeability
 
 **Sulphide Mineralization:**
 
-
+As we discussed earlier, electrode polarization occurs when the pore path is blocked by metallic particles.
+A major source of these metallic particles is sulphide mineralization.
+As the abundance of sulphide minerals within a rock increases, so does the electrode polarization.
+Therefore, highly mineralized rock tend to be very chargeable.
 
 
 **Clays:**
 
+ .. figure:: ./images/images_duplicates/memb_pol_2nd_type.gif
+	:align: right
+	:scale: 100	
+
+Clays have a tendancy to partially block the path which ions take through the rock's pore water.
+Upon application of an electric potential, positive charge carriers pass easily, while negative carriers accumulate.
+This results in an "ion-selective" membrane polarization.
+Clays represent a dominant source of induced polarization in unmineralized sedimentary rocks.
+
+A surplus of both cations and anions occurs at one end of the membrane, while a deficiency occurs at the other end.
+The reduction of mobility is most obvious at frequencies slower than the diffusion time of ions between adjacent membrane zones; i.e. slower than around 0.1 Hz. Conductivity increases at higher frequencies.
 
 
-
-**Salinity of Pore-Water:**
-
+**Pore-Water Salinity:**
 
 
+The induced polarization within a rock depends on having a mechanism for accumulating ionic charges.
+It also depends on the salinity of the pore water; i.e. the concentration of ions within the pore water.
+As the pore-water salinity increases, so does the capacity of the rock to support a build-up of ionic charges.
+This results in an increases chargeability for the rock.
 
 
 **Tortuosity:**
 
-
+Tortuosity defines the connectivity and complexity of a rock's pore-space network.
+As the tortuosity of the rock's pore-space increases, it becomes more difficult for ionic charges to move through the rock.
+As a result, and increases abundance of ionic charges will accumulate within the rock when it is subjected to an electric field.
+Thus, the chargeability of a rock increases and its tortuosity increases.
 
 
 
