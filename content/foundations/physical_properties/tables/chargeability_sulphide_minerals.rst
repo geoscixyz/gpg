@@ -1,10 +1,11 @@
 .. _table_chargeability_minerals:
 
 
-Rock Chageability for Various Mineralizations
-=============================================
+Rock Chageability for Various Minerals
+======================================
 
 This table shows the approximate integrated chargeabilities for 1 % content of various minerals.
+The values below were obtained by integrating from 0.02 - 1.0 seconds.
 
 
 +-----------------------+--------------------------+

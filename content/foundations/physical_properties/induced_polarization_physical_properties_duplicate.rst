@@ -115,15 +115,7 @@ We use the discharge curve to characterize the chargeable properties of the Eart
 Definitions for Chargeability
 =============================
 
-There are two widely used definitions for chargeability, the intrinsic chargeability and the integrated chargeability.
-
-**Intrinsic Chargeability**
-
-Intrinsic chargeability (:math:`\eta \,`) characterizes the proportion of ionic charges to total charges which accumulate within a rock under the influence of an electric field.
-The intrinsic chargeability is defined as the ratio between the amplitude of the over-voltage (:math:`V_s`) and the DC voltage (:math:`V_m`):
-
-.. math::
-	\eta = \frac{V_s}{V_m}
+There are two widely used definitions for chargeability, the integrated chargeability and the intrinsic chargeability.
 
 
 **Integrated Chargeability**
@@ -135,8 +127,21 @@ The integrated chargeability is defined as the area under the discharge curve no
 .. math::
 	M = \frac{1}{V_m} \int_{t_1}^{t_2} V_{off}(t) \, dt
 
+ 
+Numerical values for the integrated chargeability are typically given in ms.
 
 
+
+**Intrinsic Chargeability**
+
+Intrinsic chargeability (:math:`\eta \,`) characterizes the proportion of ionic charges to total charges which accumulate within a rock under the influence of an electric field.
+The intrinsic chargeability is defined as the ratio between the amplitude of the over-voltage (:math:`V_s`) and the DC voltage (:math:`V_m`):
+
+.. math::
+	\eta = \frac{V_s}{V_m}
+
+
+As we can see from the above equation, the intrinsic chargeability is a unitless quantity.
 
 
 
@@ -163,6 +168,11 @@ The off-time measurements are used to define the discharge curve for the sample,
 
 .. math::
 	M = \frac{1}{V_m} \int_{t_1}^{t_2} V_{off}(t) \, dt
+	
+
+For practical measurements, we do not integrate over the entire discharge curve.
+Instead, a finite interval of integration is chosen.
+For example, the Newmont standard chargeability integrates from t = 0.15 s to 1.1 s.
 
 
 **Intrinsic Chargeability Measurements**
@@ -222,89 +232,15 @@ Thus:
 Chargeabilities of Common Rocks
 ===============================
 
-The following tables (from Telford et al, 1976) provide a very general guide to the integrated chargeabilities of materials.
-From these tables we can infer several things:
+Tables (from Telford et al, 1976) provide a very general guide to the integrated chargeabilities of materials.
+Because different intervals of integration :math:`[t_1,t_2]` are used for each table, chargeability values cannot be compared between tables.
+However, we can infer several things from these tables:
 
+
+- The individual properties of rocks results in a variation in chargeability (click :ref:`here<table_chargeability_rocks>` for table).
 - Chargeability increases as the % abundance of sulphide minerals increases (click :ref:`here<table_chargeability_sulphide>` for table).
-- Ore-mineralization impacts the chargeability of rocks to varying degrees (click :ref:`here<table_chargeability_minerals>` for table).
-
-
-**Table 1:** Charging and integration times were about 1 minute each, which is
-much longer than field survey systems; therefore, values are larger than
-field measurements.
-
-+-----------------------+--------------------------+
-|  **Material type**    | **Chargeability (msec)** |
-+=======================+==========================+
-| 20% sulfides          | 2000-3000                |
-+-----------------------+--------------------------+
-| 8-20% sulfides        | 1000-2000                |  
-+-----------------------+--------------------------+
-| 2-8% sulfides         | 500-1000                 |  
-+-----------------------+--------------------------+
-| volcanic tuffs        | 300-800                  |  
-+-----------------------+--------------------------+
-| sandstone, siltstone  | 100-500                  |  
-+-----------------------+--------------------------+
-| dense volcanic rocks 	| 100-500                  |  
-+-----------------------+--------------------------+
-| shale                 | 50-100                   |  
-+-----------------------+--------------------------+
-| granite, granodiorite | 10-50                    |  
-+-----------------------+--------------------------+
-| limestone, dolomite   | 10-20                    |  
-+-----------------------+--------------------------+
-
-**Table 2:** The values below involved more realistic charging and integration
-times of 3 seconds and 0.02-1.0 seconds respectively.
-
-+-----------------------+--------------------------+
-|  **Material type**    | **Chargeability (msec)** |
-+=======================+==========================+
-| ground water          | 0                        |
-+-----------------------+--------------------------+
-| alluvium              | 1-4                      |  
-+-----------------------+--------------------------+
-| gravels               | 3-9                      |  
-+-----------------------+--------------------------+
-| precambrian volcanics | 8-20                     |  
-+-----------------------+--------------------------+
-| precambrian gneisses  | 6-30                     |  
-+-----------------------+--------------------------+
-| schists           	| 5-20                     |  
-+-----------------------+--------------------------+
-| sandstones            | 3-12                     |  
-+-----------------------+--------------------------+
-| argilites             | 3-10                     |  
-+-----------------------+--------------------------+
-| quartzites            | 5-12                     |  
-+-----------------------+--------------------------+
-
-**Table 3:** Chargeability of minerals at 1% concentration in the samples (charging and integration times as per Table 2 above)
-
-+-----------------------+--------------------------+
-|  **Material type**    | **Chargeability (msec)** |
-+=======================+==========================+
-| pyrite                | 13.4                     |
-+-----------------------+--------------------------+
-| chalcocite            | 13.2                     |  
-+-----------------------+--------------------------+
-| copper                | 12.3                     |  
-+-----------------------+--------------------------+
-| graphite              | 11.2                     |  
-+-----------------------+--------------------------+
-| chalcopyrite          | 9.4                      |  
-+-----------------------+--------------------------+
-| bornite            	| 6.3                      |  
-+-----------------------+--------------------------+
-| galena                | 3.7                      |  
-+-----------------------+--------------------------+
-| magnetite             | 2.2                      |  
-+-----------------------+--------------------------+
-| malachite             | 0.2                      |  
-+-----------------------+--------------------------+
-| hematite              | 0.0                      |  
-+-----------------------+--------------------------+
+- Highly porous rocks such as extrusive volcanics and sandstones are more chargeable than hard rocks such as granites and limestones (click :ref:`here<table_chargeability_sulphide>` for table).
+- The type of ore-mineralization impacts the chargeability of rocks to varying degrees (click :ref:`here<table_chargeability_minerals>` for table).
 
 
 
