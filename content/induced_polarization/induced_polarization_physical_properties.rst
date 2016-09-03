@@ -34,7 +34,7 @@ teh earth must be known in order to invert data to recover chargeability.
 
 
 What can be detected?
-=============================
+=====================
 
 The materials that are most chargeable include sulfide minerals (both massive
 and disseminated), clay-rich materials, and graphite. However, the
@@ -77,13 +77,13 @@ and fluids enhance the ability of these materials to hold charges.
  .. figure:: ./images/illite.gif
 	:align: center
 	:scale: 120 %
- 
+
 	Illite (a clay mineral) with surface area-to-volume ratio of :math:`100m^2/g` (1000 times greater than sandstone)
 
  .. figure:: ./images/quartz.gif
 	:align: center
 	:scale: 120 %
- 
+
  	Quartz overgrowths in sandstone with surface area-to-volume ratio of :math:`0.1m^2/g`
 
 Two microscopic effects cause macroscopic chargeability
@@ -223,7 +223,7 @@ The Cole-Cole model for complex impedance is often used for modeling the
 ground's impedance. The Cole-Cole model is written as:
 
  .. math::
-		\rho (\omega) = \rho_0 \left[1-m \left( 1- \frac{1}{1+(j \omega \tau)^c}\right) \right] 
+		\rho (\omega) = \rho_0 \left[1-m \left( 1- \frac{1}{1+(j \omega \tau)^c}\right) \right]
 
 This relation describes a complex impedance as a function of frequency,
 :math:`\omega` with three parameters. :math:`m` is intrinsic chargeability,
@@ -252,21 +252,21 @@ field measurements.
 +=======================+==========================+
 | 20% sulfides          | 2000-3000                |
 +-----------------------+--------------------------+
-| 8-20% sulfides        | 1000-2000                |  
+| 8-20% sulfides        | 1000-2000                |
 +-----------------------+--------------------------+
-| 2-8% sulfides         | 500-1000                 |  
+| 2-8% sulfides         | 500-1000                 |
 +-----------------------+--------------------------+
-| volcanic tuffs        | 300-800                  |  
+| volcanic tuffs        | 300-800                  |
 +-----------------------+--------------------------+
-| sandstone, siltstone  | 100-500                  |  
+| sandstone, siltstone  | 100-500                  |
 +-----------------------+--------------------------+
-| dense volcanic rocks 	| 100-500                  |  
+| dense volcanic rocks 	| 100-500                  |
 +-----------------------+--------------------------+
-| shale                 | 50-100                   |  
+| shale                 | 50-100                   |
 +-----------------------+--------------------------+
-| granite, granodiorite | 10-50                    |  
+| granite, granodiorite | 10-50                    |
 +-----------------------+--------------------------+
-| limestone, dolomite   | 10-20                    |  
+| limestone, dolomite   | 10-20                    |
 +-----------------------+--------------------------+
 
 **Table 2:** The values below involved more realistic charging and integration times of 3 seconds and 0.02-1.0 seconds respectively.
@@ -276,21 +276,21 @@ field measurements.
 +=======================+==========================+
 | ground water          | 0                        |
 +-----------------------+--------------------------+
-| alluvium              | 1-4                      |  
+| alluvium              | 1-4                      |
 +-----------------------+--------------------------+
-| gravels               | 3-9                      |  
+| gravels               | 3-9                      |
 +-----------------------+--------------------------+
-| precambrian volcanics | 8-20                     |  
+| precambrian volcanics | 8-20                     |
 +-----------------------+--------------------------+
-| precambrian gneisses  | 6-30                     |  
+| precambrian gneisses  | 6-30                     |
 +-----------------------+--------------------------+
-| schists           	| 5-20                     |  
+| schists           	| 5-20                     |
 +-----------------------+--------------------------+
-| sandstones            | 3-12                     |  
+| sandstones            | 3-12                     |
 +-----------------------+--------------------------+
-| argilites             | 3-10                     |  
+| argilites             | 3-10                     |
 +-----------------------+--------------------------+
-| quartzites            | 5-12                     |  
+| quartzites            | 5-12                     |
 +-----------------------+--------------------------+
 
 **Table 3:** Chargeability of minerals at 1% concentration in the samples (charging and integration times as per Table 2 above)
@@ -300,23 +300,23 @@ field measurements.
 +=======================+==========================+
 | pyrite                | 13.4                     |
 +-----------------------+--------------------------+
-| chalcocite            | 13.2                     |  
+| chalcocite            | 13.2                     |
 +-----------------------+--------------------------+
-| copper                | 12.3                     |  
+| copper                | 12.3                     |
 +-----------------------+--------------------------+
-| graphite              | 11.2                     |  
+| graphite              | 11.2                     |
 +-----------------------+--------------------------+
-| chalcopyrite          | 9.4                      |  
+| chalcopyrite          | 9.4                      |
 +-----------------------+--------------------------+
-| bornite            	| 6.3                      |  
+| bornite            	| 6.3                      |
 +-----------------------+--------------------------+
-| galena                | 3.7                      |  
+| galena                | 3.7                      |
 +-----------------------+--------------------------+
-| magnetite             | 2.2                      |  
+| magnetite             | 2.2                      |
 +-----------------------+--------------------------+
-| malachite             | 0.2                      |  
+| malachite             | 0.2                      |
 +-----------------------+--------------------------+
-| hematite              | 0.0                      |  
+| hematite              | 0.0                      |
 +-----------------------+--------------------------+
 
 Typical problems where chargeability is useful

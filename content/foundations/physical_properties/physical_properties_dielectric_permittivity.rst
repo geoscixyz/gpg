@@ -9,11 +9,11 @@ Dielectric permittivity is defined as the ratio between the electric field (:mat
 
 
 .. figure:: ./images/electric_polarization_physics_diagram.png
-	:align: right
-	:scale: 40%
+    :align: right
+    :scale: 40%
 
 .. math::
-	\vec D = \varepsilon \vec E
+    \vec D = \varepsilon \vec E
 
 When exposed to an electric field, positive and negative charges within individual atoms and molecules try to separate from one another.
 For example, the electron clouds of atoms will shift in position relative to their nuclei.
@@ -21,15 +21,15 @@ The extent of electrical charge separation within a material is represented by t
 The electric field, electric displacement and electric polarization are related by the following expression:
 
 .. math::
-	\vec D = \varepsilon_0 \vec E + \vec P
-	
+    \vec D = \varepsilon_0 \vec E + \vec P
+
 
 where the permittivity of free-space (:math:`\varepsilon_0 = 8.8541878176 \times 10^{-12}` F/m) defines the relationship between :math:`\vec D` and :math:`\vec E` if the material is non-polarizable.
 Therefore, the dielectric permittivity and the electric displacement define how strongly a material becomes electrically polarized under the influence of an electric field.
 The electrical polarization within the material can be defined in terms of the electric field as follows:
 
 .. math::
-	\vec P = (\varepsilon - \varepsilon_0 ) \vec E = \chi_e \varepsilon_0 \vec E
+    \vec P = (\varepsilon - \varepsilon_0 ) \vec E = \chi_e \varepsilon_0 \vec E
 
 where :math:`\chi_e` is known as the electric susceptibility.
 The electric susceptibility should not be confused with the magnetic susceptibility, as they describe different physical processes.
@@ -39,8 +39,8 @@ The electric susceptibility should not be confused with the magnetic susceptibil
 The relative permittivity defines the dielectric properties of a material relative to that of free-space:
 
 .. math::
-	\varepsilon_r = \frac{\varepsilon}{\varepsilon_0}
-	
+    \varepsilon_r = \frac{\varepsilon}{\varepsilon_0}
+
 
 Parameters used to define the dielectric properties of materials and their associated units are tabulated below.
 
@@ -57,9 +57,9 @@ Parameters used to define the dielectric properties of materials and their assoc
 +-------------------------+-----------------------------------+------------------+
 | Dielectric Permittivity | :math:`\varepsilon`               | F/m              |
 +-------------------------+-----------------------------------+------------------+
-| Electric Susceptibility | :math:`\chi_e`                    | *Unitsless       |
+| Electric Susceptibility | :math:`\chi_e`                    | *Unitsless*      |
 +-------------------------+-----------------------------------+------------------+
-| Relative Permittivity   | :math:`\varepsilon_r`             | *Unitless        |
+| Relative Permittivity   | :math:`\varepsilon_r`             | *Unitless*       |
 +-------------------------+-----------------------------------+------------------+
 
 
@@ -78,7 +78,7 @@ The speed at which high-frequency electromagnetic (EM) waves move through a mate
 Assuming the material is non-magnetic, this relationship is given by:
 
 .. math::
-	v = \frac{c}{\sqrt{\varepsilon_r}}
+    v = \frac{c}{\sqrt{\varepsilon_r}}
 
 
 where :math:`\varepsilon_r` is the relative permittivity and :math:`c = 2.998 \times 10^8` m/s is the speed light constant.
@@ -92,7 +92,7 @@ This is because the transmitted waves slow down as they propagates through the s
 An equation for the total travel time (:math:`\Delta t`) for transmitted EM waves as the go from the source to the receiver is given by:
 
 .. math::
-	\Delta t = \frac{L - \Delta x}{c} + \frac{\Delta x}{v}
+    \Delta t = \frac{L - \Delta x}{c} + \frac{\Delta x}{v}
 
 
 where :math:`L` is the distance from the source to the receiver, :math:`\Delta x` is the length of the sample, :math:`c` is the speed of light and :math:`v` is the velocity of the waves as they propagate through the material.
@@ -100,12 +100,12 @@ Using the signal measured by the receiver, we can determine the total travel tim
 By combining the previous two equations and solving for the relative permittivity:
 
 .. math::
-	\varepsilon_r = \Bigg ( 1 + \frac{c\Delta t - L}{\Delta x} \Bigg )^2
+    \varepsilon_r = \Bigg ( 1 + \frac{c\Delta t - L}{\Delta x} \Bigg )^2
 
 
 .. figure:: ./images/permittivity_transmission_measurements.png
-	:align: center
-	:scale: 40%
+    :align: center
+    :scale: 40%
 
 
 **Reflection Coefficient Measurements**
@@ -116,7 +116,7 @@ This relationship is generally characterized by a reflection coefficient.
 The reflection coefficient :math:`R` defines the ratio between the amplitude of the reflected wave and the amplitude of the incoming wave:
 
 .. math::
-	R = \frac{A_{ref}}{A_{inc}}
+    R = \frac{A_{ref}}{A_{inc}}
 
 
 Below is a diagram for a simplified experiment.
@@ -125,7 +125,7 @@ The reflected waves are measured by a sensor.
 Assuming the incoming waves have a zero incidence angle relative to the interface, the reflection coefficient is given by:
 
 .. math::
-	R = \frac{1 - \sqrt{\varepsilon_r}}{1 + \sqrt{\varepsilon_r}}
+    R = \frac{1 - \sqrt{\varepsilon_r}}{1 + \sqrt{\varepsilon_r}}
 
 
 where :math:`\varepsilon_r` is the relative permittivity of the sample.
@@ -136,8 +136,8 @@ Once obtained, the second equation may be used to solve for the relative permitt
 
 
 .. figure:: ./images/permittivity_reflection_measurements.png
-	:align: center
-	:scale: 40%
+    :align: center
+    :scale: 40%
 
 
 Electrical Permittivity for Common Rocks
@@ -202,7 +202,7 @@ As a result, the bulk dielectric permittivity of a rock increases as pore water 
 The relationship between a rock's bulk dielectric permittivity, porosity and water saturation is given by:
 
 .. math::
-	\sqrt{\varepsilon} = (1 - \phi ) \sqrt{\varepsilon_m} + \phi \big [ S_w \sqrt{\varepsilon_w} + (1-S_w) \sqrt{\varepsilon_a} \big ]
+    \sqrt{\varepsilon} = (1 - \phi ) \sqrt{\varepsilon_m} + \phi \big [ S_w \sqrt{\varepsilon_w} + (1-S_w) \sqrt{\varepsilon_a} \big ]
 
 where
 
@@ -213,7 +213,7 @@ where
 - :math:`\varepsilon_w` is the dielectric permittivity of water.
 
 
-**Frequency**: 
+**Frequency**:
 
 For hard rocks and unsaturated sedimentary samples, the dielectric permittivity can be considered constant for all intents and purposes.
 At sufficiently low frequencies, the same can be said about water-saturated sedimentary rocks and soils (Kaatze, 1989; Meissner and Wentz, 2004).
@@ -221,20 +221,20 @@ At high frequencies however ( > 1 GHz), the electric polarization within water-s
 As a result, these samples are sometimes characterized using a frequency-dependent dielectric permittivity:
 
 .. math::
-	\varepsilon (\omega) = \varepsilon^\prime (\omega) + i \varepsilon^{\prime\prime} (\omega)
+    \varepsilon (\omega) = \varepsilon^\prime (\omega) + i \varepsilon^{\prime\prime} (\omega)
 
 where :math:`i = \sqrt{-1}`.
 The real component of the dielectric permittivity (:math:`\varepsilon^\prime`) represents energy stored through electrical polarization whereas the imaginary component (:math:`\varepsilon^{\prime\prime}`) represents a measure of energy loss.
 The significance of the real and imaginary components of the dielectric permittivity will be discussed in more detail when learning about ground-penetrating radar (link).
 
 .. figure:: ./images/cole_cole_permittivity.png
-	:align: right
-	:scale: 40%
+    :align: right
+    :scale: 40%
 
 A widely used model for describing the frequency-dependent dielectric permittivity is the Cole-Cole model:
 
 .. math::
-	\varepsilon (\omega) = \varepsilon_\infty + \frac{\varepsilon_{DC} - \varepsilon_\infty}{1 + (i\omega \tau)^\alpha}
+    \varepsilon (\omega) = \varepsilon_\infty + \frac{\varepsilon_{DC} - \varepsilon_\infty}{1 + (i\omega \tau)^\alpha}
 
 
 where :math:`\varepsilon_{DC}` is the DC or zero-frequency permittivity, and :math:`\varepsilon_\infty` represents a limit as frequency goes to infinity.
@@ -267,7 +267,7 @@ permittivity is a ratio: since dielectric permittivity :math:`\epsilon =
 \epsilon_R \epsilon_0`, relative dielectric permittivity :math:`\epsilon_R
 = \epsilon / \epsilon_0`.
 
- 
+
 Relative dielectric permittivity is the parameter usually referred to in GPR
 work. It is 1 (one) for free space or air, and 80 for water. Because it is a
 number that compares true value to free space value, it has no units.
@@ -290,10 +290,10 @@ velocity of EM waves in a material. Note that :math:`\epsilon_R = 80` for
 water, whereas :math:`\epsilon_R < 10` for most other common materials.
 
  .. figure:: ./images/images_duplicates/dielectric_responses.jpg
-	:align: center
-	:scale: 100 %
+    :align: center
+    :scale: 100 %
 
-	A dielectric permittivity spectrum over a wide range of frequencies, for real (top curve) and "imaginary" (bottom curve) components. Borrowed from `Wikipedia Dielectric Permittivity Article`_.
+    A dielectric permittivity spectrum over a wide range of frequencies, for real (top curve) and "imaginary" (bottom curve) components. Borrowed from `Wikipedia Dielectric Permittivity Article`_.
 
 The so-called "imaginary" part, :math:`\epsilon_r^{\prime\prime}`,  is a loss
 component that generally indicates how much energy is dissipated at the
