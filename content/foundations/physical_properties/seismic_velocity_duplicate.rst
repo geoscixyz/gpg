@@ -20,8 +20,8 @@ Material Elastic Properties
 **Bulk Modulus**
 
 .. image:: images/fig_bulk_deformation.png
-	:scale: 45%
-	:align: right
+    :scale: 45%
+    :align: right
 
 The bulk modulus (:math:`K`) defines the resistance of a material to elastic compression.
 As a result, it is sometimes referred to as the modulus of incompressibility.
@@ -30,7 +30,7 @@ Once the compressional force is removed, the block of material returns to its or
 The bulk modulus characterizes the compressional deformation as follows:
 
 .. math::
-	K = - V_0 \frac{\Delta V}{\Delta P}
+    K = - V_0 \frac{\Delta V}{\Delta P}
 
 
 where :math:`V_0` is the original volume of material, :math:`\Delta P` represents the pressure being applied to the material and :math:`\Delta V` is the resulting change in volume.
@@ -40,8 +40,8 @@ where :math:`V_0` is the original volume of material, :math:`\Delta P` represent
 **Shear Modulus**
 
 .. image:: images/fig_shear_deformation.png
-	:scale: 35%
-	:align: right
+    :scale: 35%
+    :align: right
 
 The shear modulus (:math:`\mu`) defines how resistant a material is to shear stress.
 As a result, it is sometimes referred to as the modulus of rigidity.
@@ -49,7 +49,7 @@ When a block of material is subjected to a shear stress, it experiences a shear 
 The shear modulus defines the ratio of shear stress to shear strain:
 
 .. math::
-	\mu = \frac{Stress}{Strain} = \frac{F}{\Delta x l A}
+    \mu = \frac{Stress}{Strain} = \frac{F}{\Delta x l A}
 
 where the shear stress is represented by a force (:math:`F`) per unit area (:math:`A`).
 Shear strain represents a tangent angle between the shear deformation (:math:`\Delta x`) of the material along the direction of force and the perpendicular demension (:math:`l`) of the block of material.
@@ -68,8 +68,8 @@ In seismology, there are two fundamental types of body waves: pressure waves ("P
 **P-waves**
 
 .. image:: images/Pwave.gif
-	:scale: 40%
-	:align: right
+    :scale: 40%
+    :align: right
 
 
 P-waves are compressional waves in which particle motion is in the direction of the wave propagation.
@@ -78,7 +78,7 @@ As we can see, cells change volume when they come in contact with the wave.
 The P-wave velocity is related to the elastic properties of the medium by the following expression:
 
 .. math::
-	v_p = \sqrt{\frac{K+4/3\mu}{\rho}}
+    v_p = \sqrt{\frac{K+4/3\mu}{\rho}}
 
 
 where :math:`K` is the bulk modulus, :math:`\mu` is the shear modulus and :math:`\rho` is the density.
@@ -88,8 +88,8 @@ where :math:`K` is the bulk modulus, :math:`\mu` is the shear modulus and :math:
 
 
 .. image:: images/Swave.gif
-	:scale: 40%
-	:align: right
+    :scale: 40%
+    :align: right
 
 
 
@@ -102,7 +102,7 @@ In isotropic media, SH and SV waves travel at the same speed.
 The S-wave velocity can be related to the elastic properties of the medium by the following expression:
 
 .. math::
-	v_s = \sqrt{\frac{\mu}{\rho}}
+    v_s = \sqrt{\frac{\mu}{\rho}}
 
 
 S waves propagate through materials more slowly than P waves.
@@ -118,8 +118,8 @@ In seismology, there are two fundamental types of surface waver: Rayleigh waves 
 **Rayleigh waves**
 
 .. image:: images/Rayleighwave.gif
-	:scale: 40%
-	:align: right
+    :scale: 40%
+    :align: right
 
 
 Rayleigh waves are surface waves in which particle motion is elliptic.
@@ -129,15 +129,15 @@ The amplitude of the elliptic motion decreases with depth.
 As a general rule, Rayleigh waves at the surface of the Earth have a propagation speed which is 90 % the speed of shear waves, thus:
 
 .. math::
-	v_R = 0.9 \, v_s
+    v_R = 0.9 \, v_s
 
 
 
 **Love waves**
 
 .. image:: images/Lovewave.gif
-	:scale: 40%
-	:align: right
+    :scale: 40%
+    :align: right
 
 Love waves are surface waves in which particle motion is parallel to the Earth's surface and perpendicular to the direction of wave propagation.
 The particle motion which defines Love waves can be seen in the diagram on the right [#f1]_.
@@ -146,7 +146,7 @@ Love waves travel faster than Rayleigh waves but do not travel as fast as P or S
 Thus Love waves have a propagation speed of:
 
 .. math::
-	0.9 \, v_s < v_L < v_s
+    0.9 \, v_s < v_L < v_s
 
 
 
@@ -182,8 +182,8 @@ The core sample is then held in place between two piezometric transducers.
 Piezometric transducers contain materials which contract and expand in response to an applied voltage.
 
 .. figure:: ./images/transducer_seismic_velocity.png
-	:scale: 45%
-	:align: right
+    :scale: 45%
+    :align: right
 
 The measurement apparatus works by generating a short current pulse.
 As a result of the incoming current pulse, materials within the source transducer undergo elastic deformation.
@@ -195,7 +195,7 @@ Using the oscilloscope, we can determine the amount of time (:math:`\Delta t`) i
 Given that we know the length of the rock core (:math:`L`), the seismic velocity is given by:
 
 .. math::
-	V = \frac{L}{\Delta t}
+    V = \frac{L}{\Delta t}
 
 In practice, the user may control whether they are measuring P-wave or S-wave velocities by specifying the direction of elastic deformation within the source transducer.
 Elastic deformation parallel to the length of the core results in P-wave velocity measurements, whereas elastic deformation perpendicular to the length of the core results in S-wave velocity measurements.
@@ -288,7 +288,7 @@ As a result, P-wave and S-wave velocities increase as pore saturation increases.
 This can be described in a rudimentary manner using Wyllie's equation:
 
 .. math::
-	V_{bulk} = \Bigg [ \frac{\phi}{V_{fluid}} + \frac{1-\phi}{V_{matrix}} \Bigg ]^{-1}
+    V_{bulk} = \Bigg [ \frac{\phi}{V_{fluid}} + \frac{1-\phi}{V_{matrix}} \Bigg ]^{-1}
 
 where :math:`0 \leq \phi \leq 1` is the fractional \% fluid saturation, :math:`V_{fluid}` is the seismic velocity of the fluid, :math:`V_{matrix}` is the seismic velocity of the solid material within the rock, and :math:`V_{bulk}` is the bulk seismic velocity for the rock.
 

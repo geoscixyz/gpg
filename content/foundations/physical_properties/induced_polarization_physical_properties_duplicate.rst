@@ -23,8 +23,8 @@ ion widths.
 
 
  .. figure:: ./images/images_duplicates/memb1.gif
-	:align: center
-	:scale: 100 %
+    :align: center
+    :scale: 100 %
 
 
 Because ionic charges cannot be forced through the pore throat, they
@@ -34,8 +34,8 @@ accumulating on the other.
 
 
  .. figure:: ./images/images_duplicates/memb2.gif
-	:align: center
-	:scale: 100 %
+    :align: center
+    :scale: 100 %
 
 
 
@@ -44,8 +44,8 @@ generates a set of electric dipole moments which is ultimately responsible for
 the induced polarization.
 
  .. figure:: ./images/images_duplicates/memb3.gif
- 	:align: center
-	:scale: 100 %
+    :align: center
+    :scale: 100 %
 
 
 
@@ -58,8 +58,8 @@ electrically charged and attract nearby ions.
 
 
  .. figure:: ./images/images_duplicates/elec_pol_1.gif
-	:align: center
-	:scale: 100
+    :align: center
+    :scale: 100
 
 
 The attraction of the ions to the surface forms a primary layer of fixed ionic
@@ -68,8 +68,8 @@ known as an electric double layer.
 
 
  .. figure:: ./images/images_duplicates/elec_pol_3.gif
-	:align: center
-	:scale: 100
+    :align: center
+    :scale: 100
 
 
 Each electric double layer results in an electric dipole moment which
@@ -77,8 +77,8 @@ contributes towards the induced polarization within the rock.
 
 
  .. figure:: ./images/images_duplicates/elec_pol_2.gif
-	:align: center
-	:scale: 100
+    :align: center
+    :scale: 100
 
 
 
@@ -96,8 +96,8 @@ so is the measured potential.
 
 
 .. figure:: ./images/images_duplicates/IP_source.gif
-	:align: center
-	:scale: 120%
+    :align: center
+    :scale: 120%
 
 If the ground is chargeable, there will also be an instantaneous jump in the
 measured potential once the source is switched on; which we denote as
@@ -110,12 +110,12 @@ ionic charges reaches saturation, resulting in a final measured potential
 
 
 .. figure:: ./images/chargeability_physics2.png
-	:align: right
-	:scale: 100%
+    :align: right
+    :scale: 100%
 
 
 .. math::
-	V_{on}(t) = V_\sigma + V_s \Big[ 1 - e^{-t/\tau } \Big]
+    V_{on}(t) = V_\sigma + V_s \Big[ 1 - e^{-t/\tau } \Big]
 
 
 where :math:`V_s` is the amplitude of the over-voltage and :math:`\tau` is a
@@ -128,7 +128,7 @@ according to:
 
 
 .. math::
-	V_{off}(t) = V_s \, e^{-t/\tau}
+    V_{off}(t) = V_s \, e^{-t/\tau}
 
 
 This decaying off-time potential is commonly called the discharge curve.
@@ -147,7 +147,7 @@ Intrinsic chargeability (:math:`\eta \,`) characterizes the proportion of ionic 
 The intrinsic chargeability is defined as the ratio between the amplitude of the over-voltage (:math:`V_s`) and the DC voltage (:math:`V_m`):
 
 .. math::
-	\eta = \frac{V_s}{V_m}
+    \eta = \frac{V_s}{V_m}
 
 
 **Integrated Chargeability**
@@ -157,7 +157,7 @@ The integrated chargeability (:math:`M`) characterizes the quantity of potential
 The integrated chargeability is defined as the area under the discharge curve normalized by the DC voltage (:math:`V_m`):
 
 .. math::
-	M = \frac{1}{V_m} \int_{t_1}^{t_2} V_{off}(t) \, dt
+    M = \frac{1}{V_m} \int_{t_1}^{t_2} V_{off}(t) \, dt
 
 
 
@@ -166,8 +166,8 @@ The integrated chargeability is defined as the area under the discharge curve no
 
 
 .. figure:: ./images/electrode_conductivity_measurements.png
-	:align: right
-	:scale: 35%
+    :align: right
+    :scale: 35%
 
 Chargeability Measurements
 ==========================
@@ -186,7 +186,7 @@ During the off-time, the potential across the rock is measured as it decays.
 The off-time measurements are used to define the discharge curve for the sample, which is then used to obtain the integrated chargeability according to:
 
 .. math::
-	M = \frac{1}{V_m} \int_{t_1}^{t_2} V_{off}(t) \, dt
+    M = \frac{1}{V_m} \int_{t_1}^{t_2} V_{off}(t) \, dt
 
 
 **Intrinsic Chargeability Measurements**
@@ -196,7 +196,7 @@ In this case, the source is used to drive alternating current (:math:`I`) throug
 By measuring the voltage drop (:math:`\Delta V`) accross the length of the sample, Ohm's law can be used to determine the circuit impedence (:math:`Z`) caused by the rock:
 
 .. math::
-	Z(\omega ) = \frac{\Delta V (\omega)}{I (\omega)}
+    Z(\omega ) = \frac{\Delta V (\omega)}{I (\omega)}
 
 
 In chargeable rocks, the measured voltage drop depends on the frequency of the alternating current.
@@ -205,14 +205,14 @@ So in order to characterize the resistive properties of the rock, we need to det
 The resistivity of the sample at each frequency can be obtained from the impedence, the length of the core (:math:`L`) and its cross-sectional area (:math:`A`) using Pouillet's law:
 
 .. math::
-	\rho (\omega) = \frac{Z(\omega) A}{L}
+    \rho (\omega) = \frac{Z(\omega) A}{L}
 
 
 In order to characterize the rock's chargeable properties, we fit the experimentally acquired resistivity values to a mathematical model (illstrated below).
 A well-established model for explaining the resistivities of chargeable rocks is the Cole-Cole model:
 
 .. math::
-	\rho (\omega) = \rho_0 \Bigg [ 1 - \eta \Bigg ( 1 - \frac{1}{1 + (i\omega\tau )^C} \Bigg ) \Bigg ]
+    \rho (\omega) = \rho_0 \Bigg [ 1 - \eta \Bigg ( 1 - \frac{1}{1 + (i\omega\tau )^C} \Bigg ) \Bigg ]
 
 
 where :math:`\rho_0` is the DC resistivity and :math:`\eta` is the intrinsic chargeability.
@@ -220,15 +220,15 @@ Parameters :math:`\tau` and :math:`C` define the rate at which ionic charges acc
 
 
 .. figure:: ./images/electrode_chargeability_curve_fit.png
-	:align: center
-	:scale: 40%
+    :align: center
+    :scale: 40%
 
 
 Assuming :math:`C=1`, :math:`\tau` defines the exponential decay in voltage during the off-time measurements (see earlier).
 The conductivity of the rock can be obtained by taking the reciprocal of the complex resistivity:
 
 .. math::
-	\sigma (\omega) = \frac{1}{\rho (\omega)}
+    \sigma (\omega) = \frac{1}{\rho (\omega)}
 
 
 Additionally, Ohm's law still applies for chargeable rocks.
@@ -236,7 +236,7 @@ Thus:
 
 
 .. math::
-	\vec J (\omega) = \sigma (\omega) \vec E (\omega)
+    \vec J (\omega) = \sigma (\omega) \vec E (\omega)
 
 
 
@@ -270,7 +270,7 @@ field measurements.
 +-----------------------+--------------------------+
 | sandstone, siltstone  | 100-500                  |
 +-----------------------+--------------------------+
-| dense volcanic rocks 	| 100-500                  |
+| dense volcanic rocks  | 100-500                  |
 +-----------------------+--------------------------+
 | shale                 | 50-100                   |
 +-----------------------+--------------------------+
@@ -295,7 +295,7 @@ times of 3 seconds and 0.02-1.0 seconds respectively.
 +-----------------------+--------------------------+
 | precambrian gneisses  | 6-30                     |
 +-----------------------+--------------------------+
-| schists           	| 5-20                     |
+| schists               | 5-20                     |
 +-----------------------+--------------------------+
 | sandstones            | 3-12                     |
 +-----------------------+--------------------------+
@@ -319,7 +319,7 @@ times of 3 seconds and 0.02-1.0 seconds respectively.
 +-----------------------+--------------------------+
 | chalcopyrite          | 9.4                      |
 +-----------------------+--------------------------+
-| bornite            	| 6.3                      |
+| bornite               | 6.3                      |
 +-----------------------+--------------------------+
 | galena                | 3.7                      |
 +-----------------------+--------------------------+
@@ -350,8 +350,8 @@ Therefore, highly mineralized rock tend to be very chargeable.
 **Clays:**
 
  .. figure:: ./images/images_duplicates/memb_pol_2nd_type.gif
-	:align: right
-	:scale: 100
+    :align: right
+    :scale: 100
 
 Clays have a tendancy to partially block the path which ions take through the rock's pore water.
 Upon application of an electric potential, positive charge carriers pass easily, while negative carriers accumulate.
@@ -402,8 +402,8 @@ after a forcing current is removed. The following figure illustrates the
 measurable effect.
 
  .. figure:: ./images/images_duplicates/IP_source.gif
-	:align: center
-	:scale: 100 %
+    :align: center
+    :scale: 100 %
 
 
 Induced polarization can also be measured using low frequency sinusoidal
@@ -459,16 +459,16 @@ why this is true. In addition, the surface interactions between clay minerals
 and fluids enhance the ability of these materials to hold charges.
 
  .. figure:: ./images/images_duplicates/illite.gif
-	:align: center
-	:scale: 120 %
+    :align: center
+    :scale: 120 %
 
-	Illite (a clay mineral) with surface area-to-volume ratio of :math:`100m^2/g` (1000 times greater than sandstone)
+    Illite (a clay mineral) with surface area-to-volume ratio of :math:`100m^2/g` (1000 times greater than sandstone)
 
  .. figure:: ./images/images_duplicates/quartz.gif
-	:align: center
-	:scale: 120 %
+    :align: center
+    :scale: 120 %
 
- 	Quartz overgrowths in sandstone with surface area-to-volume ratio of :math:`0.1m^2/g`
+    Quartz overgrowths in sandstone with surface area-to-volume ratio of :math:`0.1m^2/g`
 
 Two microscopic effects cause macroscopic chargeability
 -------------------------------------------------------
@@ -491,28 +491,28 @@ boundary layer thicknesses (which is the thickness of ions adsorbed to a
 surface).
 
  .. figure:: ./images/images_duplicates/memb1.gif
-	:align: center
-	:scale: 100 %
+    :align: center
+    :scale: 100 %
 
 Charges cannot flow easily, so they accumulate when an electric field is applied.
 
  .. figure:: ./images/images_duplicates/memb2.gif
-	:figclass: center
-	:align: center
-	:scale: 100 %
+    :figclass: center
+    :align: center
+    :scale: 100 %
 
 
 The result is a net charge dipole which adds to any other voltages measured at the surface.
 
  .. figure:: ./images/images_duplicates/memb3.gif
-	:align: center
-	:scale: 100 %
+    :align: center
+    :scale: 100 %
 
 A second form of membrane polarization is similar to the first:
 
  .. figure:: ./images/images_duplicates/memb_pol_2nd_type.gif
-	:align: right
-	:scale: 100
+    :align: right
+    :scale: 100
 
 This occurs where clay particles partially block ionic solution paths, as in
 the adjacent figure. Upon application of an electric potential, positive
@@ -532,21 +532,21 @@ Electrode polarization occurs when pore space is blocked by metallic
 particles. Again, charges accumulate when an electric field is applied.
 
  .. figure:: ./images/images_duplicates/elec_pol_1.gif
-	:align: center
-	:scale: 100
+    :align: center
+    :scale: 100
 
 The result is two electrical double layers which add to voltages measured at the surface.
 
  .. figure:: ./images/images_duplicates/elec_pol_2.gif
-	:align: center
-	:scale: 100
+    :align: center
+    :scale: 100
 
 Comments on electrode polarization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
  .. figure:: ./images/images_duplicates/elec_pol_3.gif
-	:align: right
-	:scale: 100
+    :align: right
+    :scale: 100
 
 Some remarks are appropriate here in order to provide some sense of the
 complexity of the chargeability phenomenon.
@@ -557,8 +557,8 @@ flow across the barrier. These interfaces look like the top figure and have
 the simplified circuit analogue shown in the bottom figure.
 
  .. figure:: ./images/images_duplicates/elec_pol_4.gif
-	:align: right
-	:scale: 100 %
+    :align: right
+    :scale: 100 %
 
 Current can flow via charge transfer (or ion diffusion), which involves
 electrochemical processes, or via a capacitive effect (no charge transfer),
@@ -579,23 +579,23 @@ of the fixed layer near and on the liquid-solid interfaces.
 Summary of what affects the chargeability of material
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-	- Induced polarization is greater when there are larger regions of adsorbed anomalous charge (adjacent to an interface); i.e. when there is a large surface area-to-volume ratio.
-	- Non-ionic fluids (such as contaminants) can markedly change the behaviour of surface-electrolyte interactions.
-	- Changes in ion concentration (such as increased salinity) will also affect both types of polarization.
-	- Both effects (membrane and electrode polarization) are related to grain size as much as material type. Therefore, discrimination of mineral type on the basis of chargeability alone is not recommended.
+    - Induced polarization is greater when there are larger regions of adsorbed anomalous charge (adjacent to an interface); i.e. when there is a large surface area-to-volume ratio.
+    - Non-ionic fluids (such as contaminants) can markedly change the behaviour of surface-electrolyte interactions.
+    - Changes in ion concentration (such as increased salinity) will also affect both types of polarization.
+    - Both effects (membrane and electrode polarization) are related to grain size as much as material type. Therefore, discrimination of mineral type on the basis of chargeability alone is not recommended.
 
 Spectral Induced Polarization
 =============================
 
  .. figure:: ./images/images_duplicates/spectral_ip.gif
-	:align: right
-	:scale: 100 %
+    :align: right
+    :scale: 100 %
 
 The Cole-Cole model for complex impedance is often used for modeling the
 ground's impedance. The Cole-Cole model is written as:
 
  .. math::
-		\rho (\omega) = \rho_0 \left[1-m \left( 1- \frac{1}{1+(j \omega \tau)^c}\right) \right]
+        \rho (\omega) = \rho_0 \left[1-m \left( 1- \frac{1}{1+(j \omega \tau)^c}\right) \right]
 
 This relation describes a complex impedance as a function of frequency,
 :math:`\omega` with three parameters. :math:`m` is intrinsic chargeability,
@@ -632,7 +632,7 @@ field measurements.
 +-----------------------+--------------------------+
 | sandstone, siltstone  | 100-500                  |
 +-----------------------+--------------------------+
-| dense volcanic rocks 	| 100-500                  |
+| dense volcanic rocks  | 100-500                  |
 +-----------------------+--------------------------+
 | shale                 | 50-100                   |
 +-----------------------+--------------------------+
@@ -657,7 +657,7 @@ times of 3 seconds and 0.02-1.0 seconds respectively.
 +-----------------------+--------------------------+
 | precambrian gneisses  | 6-30                     |
 +-----------------------+--------------------------+
-| schists           	| 5-20                     |
+| schists               | 5-20                     |
 +-----------------------+--------------------------+
 | sandstones            | 3-12                     |
 +-----------------------+--------------------------+
@@ -681,7 +681,7 @@ times of 3 seconds and 0.02-1.0 seconds respectively.
 +-----------------------+--------------------------+
 | chalcopyrite          | 9.4                      |
 +-----------------------+--------------------------+
-| bornite            	| 6.3                      |
+| bornite               | 6.3                      |
 +-----------------------+--------------------------+
 | galena                | 3.7                      |
 +-----------------------+--------------------------+

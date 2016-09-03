@@ -4,29 +4,29 @@ Electrical Conductivity
 ***********************
 
 
-	
-	
-Electrical conductivity (:math:`\sigma`)  is a physicial property that describes how easily electric currents can flow through a medium when subjected to an applied electric field. 
+
+
+Electrical conductivity (:math:`\sigma`)  is a physicial property that describes how easily electric currents can flow through a medium when subjected to an applied electric field.
 More specifically, it defines the relationship  between the density of electrical current density (:math:`\vec J`) within a material, and the electric field (:math:`\vec E`) :
 
 .. figure:: ./images/conductivity_physics_diagram.png
-	:align: right
-	:scale: 50%
+    :align: right
+    :scale: 50%
 
 
 .. math::
-	\vec J = \sigma \vec E
+    \vec J = \sigma \vec E
 
 
 Within rocks and other materials, there are free electrical charges.
 When an electric field is applied to a material, these charges experience an electrical (Coulomb) force.
 This force causes the free charges to move through the material along the direction of the applied field; with positive charges moving parallel to the field and negative charges moving in the opposite direction.
-The size of the flow of electrical charges through a material is known as electrical current (:math:`\vec I`). 
+The size of the flow of electrical charges through a material is known as electrical current (:math:`\vec I`).
 Current density represents the amount of current flowing per unit cross-sectional area (:math:`A`), where:
 
 .. math::
-	\vec J = \frac{\vec I}{A}
-	
+    \vec J = \frac{\vec I}{A}
+
 
 In conductive materials (larger :math:`\sigma`), free charges move quite easily and strong currents may be induced by a relatively weak electrical field.
 In contrast, resistive materials (smaller :math:`\sigma`) require strong electrical fields in order to produce any significant current.
@@ -35,11 +35,11 @@ In contrast, resistive materials (smaller :math:`\sigma`) require strong electri
 By definition, the resistivity of a material is the reciprocal of its conductivity:
 
 .. math::
-	\rho = \frac{1}{\sigma}
+    \rho = \frac{1}{\sigma}
 
 
 
-Both the electrical conductivity and resistivity are acceptable for describing the conductive properties of rocks and they are sometimes used interchangeably. 
+Both the electrical conductivity and resistivity are acceptable for describing the conductive properties of rocks and they are sometimes used interchangeably.
 Parameters used to define the conductive properties and their associated S.I. units are summarized below.
 
 
@@ -73,15 +73,15 @@ The core sample is then placed in a sample holder between two copper/graphite el
 
 
 .. figure:: ./images/electrode_conductivity_measurements.png
-	:align: right
-	:scale: 35%
+    :align: right
+    :scale: 35%
 
 
 Next, a source is used to drive direct current (:math:`I`) through the core sample.
 By measuring the voltage drop (:math:`\Delta V`) accross the length of the sample, Ohm's law can be used to determine the circuit resistance (:math:`R`) caused by the rock:
 
 .. math::
-	R = \frac{\Delta V}{I}
+    R = \frac{\Delta V}{I}
 
 
 The measured resistance increases proportional to the length (:math:`L`) of the core sample.
@@ -92,7 +92,7 @@ This relationship can be understood by comparing the net resistance of two ident
 Ultimately, the resistivity of the sample can be obtained from the measured resistance, the length of the core and its cross-sectional area using Pouillet's law:
 
 .. math::
-	\rho = \frac{R A}{L}
+    \rho = \frac{R A}{L}
 
 
 
@@ -111,8 +111,8 @@ From this chart we can infer several things:
 
 
 .. figure:: ./images/images_duplicates/resistivity_table.png
-	:align: center
-	:scale: 100%
+    :align: center
+    :scale: 100%
 
 
 
@@ -152,7 +152,7 @@ As a result, conduction is inefficient, and the rock is more resistive.
 **Mineralization**
 
 Electrical current within a rock will choose not to flow through the pore-space if the rock forming minerals are more conductive.
-This occurs frequently in ore-bearing rocks due to the presence of metal-oxides (magnetite, illmenite, specular hematite), metal-sulphides (pyrite, pyrrhotite, galena) and native metals (gold, silver, copper). 
+This occurs frequently in ore-bearing rocks due to the presence of metal-oxides (magnetite, illmenite, specular hematite), metal-sulphides (pyrite, pyrrhotite, galena) and native metals (gold, silver, copper).
 One exception is graphite, which despite being entirely comprised of carbon, is very conductive.
 As expected, the conductivity increases as the concentration of conductive minerals within the rock increases.
 
