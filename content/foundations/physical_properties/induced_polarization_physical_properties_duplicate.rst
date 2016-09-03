@@ -139,9 +139,7 @@ We use the discharge curve to characterize the chargeable properties of the Eart
 Definitions for Chargeability
 =============================
 
-<<<<<<< HEAD
-There are two widely used definitions for chargeability, the integrated chargeability and the intrinsic chargeability.
-=======
+
 There are two widely used definitions for chargeability, the intrinsic chargeability and the integrated chargeability.
 
 **Intrinsic Chargeability**
@@ -151,7 +149,7 @@ The intrinsic chargeability is defined as the ratio between the amplitude of the
 
 .. math::
     \eta = \frac{V_s}{V_m}
->>>>>>> 236025e57f6d138890f90ab7b3908317f4e5e16e
+
 
 
 **Integrated Chargeability**
@@ -203,16 +201,12 @@ During the off-time, the potential across the rock is measured as it decays.
 The off-time measurements are used to define the discharge curve for the sample, which is then used to obtain the integrated chargeability according to:
 
 .. math::
-<<<<<<< HEAD
 	M = \frac{1}{V_m} \int_{t_1}^{t_2} V_{off}(t) \, dt
 	
 
 For practical measurements, we do not integrate over the entire discharge curve.
 Instead, a finite interval of integration is chosen.
 For example, the Newmont standard chargeability integrates from t = 0.15 s to 1.1 s.
-=======
-    M = \frac{1}{V_m} \int_{t_1}^{t_2} V_{off}(t) \, dt
->>>>>>> 236025e57f6d138890f90ab7b3908317f4e5e16e
 
 
 **Intrinsic Chargeability Measurements**
@@ -276,87 +270,11 @@ Tables (from Telford et al, 1976) provide a very general guide to the integrated
 Because different intervals of integration :math:`[t_1,t_2]` are used for each table, chargeability values cannot be compared between tables.
 However, we can infer several things from these tables:
 
-<<<<<<< HEAD
 
 - The individual properties of rocks results in a variation in chargeability (click :ref:`here<table_chargeability_rocks>` for table).
 - Chargeability increases as the % abundance of sulphide minerals increases (click :ref:`here<table_chargeability_sulphide>` for table).
 - Highly porous rocks such as extrusive volcanics and sandstones are more chargeable than hard rocks such as granites and limestones (click :ref:`here<table_chargeability_sulphide>` for table).
 - The type of ore-mineralization impacts the chargeability of rocks to varying degrees (click :ref:`here<table_chargeability_minerals>` for table).
-=======
-+-----------------------+--------------------------+
-|  **Material type**    | **Chargeability (msec)** |
-+=======================+==========================+
-| 20% sulfides          | 2000-3000                |
-+-----------------------+--------------------------+
-| 8-20% sulfides        | 1000-2000                |
-+-----------------------+--------------------------+
-| 2-8% sulfides         | 500-1000                 |
-+-----------------------+--------------------------+
-| volcanic tuffs        | 300-800                  |
-+-----------------------+--------------------------+
-| sandstone, siltstone  | 100-500                  |
-+-----------------------+--------------------------+
-| dense volcanic rocks  | 100-500                  |
-+-----------------------+--------------------------+
-| shale                 | 50-100                   |
-+-----------------------+--------------------------+
-| granite, granodiorite | 10-50                    |
-+-----------------------+--------------------------+
-| limestone, dolomite   | 10-20                    |
-+-----------------------+--------------------------+
-
-**Table 2:** The values below involved more realistic charging and integration
-times of 3 seconds and 0.02-1.0 seconds respectively.
-
-+-----------------------+--------------------------+
-|  **Material type**    | **Chargeability (msec)** |
-+=======================+==========================+
-| ground water          | 0                        |
-+-----------------------+--------------------------+
-| alluvium              | 1-4                      |
-+-----------------------+--------------------------+
-| gravels               | 3-9                      |
-+-----------------------+--------------------------+
-| precambrian volcanics | 8-20                     |
-+-----------------------+--------------------------+
-| precambrian gneisses  | 6-30                     |
-+-----------------------+--------------------------+
-| schists               | 5-20                     |
-+-----------------------+--------------------------+
-| sandstones            | 3-12                     |
-+-----------------------+--------------------------+
-| argilites             | 3-10                     |
-+-----------------------+--------------------------+
-| quartzites            | 5-12                     |
-+-----------------------+--------------------------+
-
-**Table 3:** Chargeability of minerals at 1% concentration in the samples (charging and integration times as per Table 2 above)
-
-+-----------------------+--------------------------+
-|  **Material type**    | **Chargeability (msec)** |
-+=======================+==========================+
-| pyrite                | 13.4                     |
-+-----------------------+--------------------------+
-| chalcocite            | 13.2                     |
-+-----------------------+--------------------------+
-| copper                | 12.3                     |
-+-----------------------+--------------------------+
-| graphite              | 11.2                     |
-+-----------------------+--------------------------+
-| chalcopyrite          | 9.4                      |
-+-----------------------+--------------------------+
-| bornite               | 6.3                      |
-+-----------------------+--------------------------+
-| galena                | 3.7                      |
-+-----------------------+--------------------------+
-| magnetite             | 2.2                      |
-+-----------------------+--------------------------+
-| malachite             | 0.2                      |
-+-----------------------+--------------------------+
-| hematite              | 0.0                      |
-+-----------------------+--------------------------+
->>>>>>> 236025e57f6d138890f90ab7b3908317f4e5e16e
-
 
 
 
