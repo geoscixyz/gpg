@@ -140,16 +140,7 @@ Definitions for Chargeability
 =============================
 
 
-There are two widely used definitions for chargeability, the intrinsic chargeability and the integrated chargeability.
-
-**Intrinsic Chargeability**
-
-Intrinsic chargeability (:math:`\eta \,`) characterizes the proportion of ionic charges to total charges which accumulate within a rock under the influence of an electric field.
-The intrinsic chargeability is defined as the ratio between the amplitude of the over-voltage (:math:`V_s`) and the DC voltage (:math:`V_m`):
-
-.. math::
-    \eta = \frac{V_s}{V_m}
-
+There are two widely used definitions for chargeability, the integrated chargeability and the intrinsic chargeability.
 
 
 **Integrated Chargeability**
