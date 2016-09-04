@@ -3,6 +3,18 @@
 Data
 ****
 
+Total field measurments
+=======================
+
+The general principles of the magnetic experiment are encapsulated into the following steps:
+
+(e) :math:`\vec{B_A}` is a vector field and hence requires three components to specify it :math:`(B_x,B_y,B_z)`. When using a total field magnetometer we measure :math:`\left|\vec{B}\right|` which is equal to :math:`\left|\vec{B_0} + \vec{B_A}\right|`. Since we do not know the direction of :math:`\vec{B_A}` we assume that the anomalous field is mostly induced and that it's direction aligns with the Earth's inducing field :math:`\vec{B_0}`. This allows us to approximate the *total field* datum (:math:`B_t`) as the projection of :math:`\vec{B_A}` onto the direction of Earth's field :math:`\hat{B_0}`
+
+.. figure:: ./images/TMI_anomaly.png
+    :align: center
+    :figwidth: 50%
+
+
 .. sidebar:: Outline of gradient magnetics
 
 	.. figure:: images/icon_maggrad.gif
@@ -13,6 +25,8 @@ two sensors for gradient surveys. The vertical gradient is measured using two
 sensors at (typically) 2 and 3 meters above the ground. Horizontal gradient
 surveys can be conducted if the sensors can be mounted some distance apart on
 a frame.
+
+.. _magnetics_gradient_data:
 
 Gradient measurements
 =====================
