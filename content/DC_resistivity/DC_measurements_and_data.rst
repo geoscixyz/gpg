@@ -202,7 +202,7 @@ several general types of surveys conducted on the surface.
 **Soundings** provide 1D solutions, or vertical structure under one surface
 location. Electrode geometry is varied symmetrically about a single
 measurement location. The most common configurations for soundings are the
-Wenner and Schulmberger arrays.
+Wenner and Schlumberger arrays.
 
 **Profiling** provides information about lateral variations, usually with some
 information about vertical variations. Most profiles involve placing all
