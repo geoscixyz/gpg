@@ -11,78 +11,72 @@ Magnetic Method
 .. figure:: ./images/ironfilings.gif
 	:align: right
 	:figclass: float-right-360
-	:scale: 110% 
+	:scale: 110%
 	:name: iron_filling
 
 Most people are familiar with the magnetic field that exists around a dipolar
 or "bar" magnet as the pattern of iron filings on paper over a bar magnet
-(:numref:`iron_filling`). To a first approximation, Earth's magnetic field does 
+(:numref:`iron_filling`). To a first approximation, Earth's magnetic field does
 look a lot like a large dipolar source, with its north pole tilted about
-:math:`11.5^\circ` from the spin axis. 
+:math:`11.5^\circ` from the spin axis.
 Near the surface however, the magnetic field gets much more complicated.
-There are, in fact, three different components to observed magnetic field:
+
+There are in fact three different components to the observed magnetic field:
 
  - :ref:`The main dipolar field<magnetics_dipolar_field>` of the Earth produced internally by large currents in the fluid outer core of the earth. This is also refered to as the *inducing field*, and it is the main magnetic source for the magnetic geophysical surveys.
 
  .. figure:: ./images/Earth_Field.png
 	:align: center
-	:figwidth: 40% 
+	:figwidth: 40%
+
+ - :ref:`External variations<magnetics_variability>` caused by currents flowing in the ionosphere. For magnetic surveys, these *diurnal variations* and considered to be source of noise and removed from the observed data.
+
+ .. figure:: ./images/fig_2a.jpg
+    :align: center
+    :figwidth: 40%
 
  - :ref:`Anomalous fields<magnetics_buried_dipole>` due to rocks or buried bodies that are the objective of geophysical surveys. These fields are the *signals* we have to work with, and they may be either permanent (always present, regardless of the ambient local field) or induced (caused by Earth's field).
 
- .. figure:: images/magnetic_anomaly.gif
+ .. figure:: images/TMA_Calsberg.PNG
    :align: center
-   :figwidth: 40%
+   :figwidth: 50%
 
- - :ref:`External variations<magnetics_variability>` caused by currents flowing in the ionosphere. For magnetic surveys, these *diurnal variations* and considered to be source of noise and removed from the observed data. 
-
- .. figure:: ./images/fig_2a.jpg
-	:align: center
-	:figwidth: 40%
+   Anomalous magnetic field over the Indian Ocean
 
 The focus of magnetic methods is to make sense of the observed magnetic field and infer knowledge about the sub-surface.
 
 
-Describing Earth's field
-========================
+Coordinate System
+=================
 
-Using B to represent the
-magnetic field of Earth as a vector in three dimensions, the field at any
-location on (or above or within) Earth can be described in either of three
-ways (refer to the next figure below):
+In order to represent the magnetic field of Earth :math:`\mathbf{B}` as a
+vector in three dimensions, we need to define a coordinate system. The field
+at any location on (or above or within) the Earth can be described in either
+of three ways (see :numref:`coord_sys`):
 
- - B = (:math:`B_x`, :math:`B_y`, :math:`B_z`) = (X, Y, Z) in the figure. These are Cartesian coordinates with X pointing to true (geographic) north, Y pointing east and Z pointing vertically down.
+ - **Grid** : B = (:math:`B_E`, :math:`B_N`, :math:`B_D`). These are grid coordinates with X pointing to geographic north (N), Y pointing east (E) and Z pointing vertically down.
 
- - B = (:math:`B_h` , :math:`B_z` , :math:`D`) = (H, Z, D) in the figure. These are horizontal and vertical components, plus declination (angle with respect to true north). 
-    
- - B = (:math:`D`, :math:`I`, :math:`\mid B\mid` ). These are the commonly used polar coordinates which include two angles and a magnitude: D=declination, I=inclination, and :math:`\mid B \mid` =total field strength.
+ - **UTM** : B = (:math:`B_X` , :math:`B_Y` , :math:`B_Z`). These are the usual Cartesian coordinates with X ponting east, Y pointing north and Z pointing vertically up.
+
+ - **Polar** : B = (:math:`D`, :math:`I`, :math:`\mid B\mid` ). These are the commonly used spherical coordinates which include two angles and a magnitude: I=inclination, D=declination, and :math:`\mid B \mid` =total field strength.
 
 .. figure:: ./images/components.gif
-	:align: center
-	:scale: 100% 
+    :align: center
+    :scale: 100%
+    :name: coord_sys
 
-	Sketch of coordinates used to describe magnetic fields.
+    : Sketch of coordinates used to describe magnetic fields.
 
-* **B** is the vector representing Earth's magnetic field. Its length represents the magnitude of the field strength (sometimes referred to as F).
-* **H** is the projection of the field, **B**, onto the surface.
+* **B** is the vector representing Earth's magnetic field. Its length
+* **X** is the projection of the field, **B**, onto the eastern **E** direction.
+* **Y** is the projection of the field, **B**, onto the northern **N** direction.
 * **Z** is the projection of the field, **B**, onto the vertical direction.
-* **X** is the projection of the field, **B**, onto the northward direction.
-* **Y** is the projection of the field, **B**, onto the eastward direction.
 * **D**: declination is the angle that *H* makes with respect to geographic north.
-* **I**: inclination is the angle between **B** and the horizontal. It can vary between -90° and +90°. 
+* **I**: inclination is the angle between **B** and the horizontal. It can vary between -90° and +90°.
 
 The details of Earth's field at any location on Earth are described using a
 formula based upon a spherical harmonic decomposition of the field called the
-:ref:`IGRF<magnetics_IGRF>` or International Geomagnetic Reference Field. Details about Earth's field
-can be found at government geoscience websites such as the `NOAA`_ geomagnetism home page, or the `Canadian National Geomagnetism Program`_ home
-page. 
-
-**Other resources**
- - Earth's `magnetic field calculator`_.
-
-.. _NOAA: http://www.ngdc.noaa.gov/geomag/geomag.shtml
-.. _Canadian National Geomagnetism Program: http://www.geomag.nrcan.gc.ca/index-eng.php
-.. _magnetic field calculator: http://www.ngdc.noaa.gov/geomag-web/
+:ref:`IGRF<magnetics_IGRF>` or International Geomagnetic Reference Field.
 
 
 .. _magnetics_dipolar_field:
@@ -92,24 +86,24 @@ Earth's Dipolar Field
 
 .. figure:: ./images/earthfield.gif
 	:align: right
-	:figwidth: 40% 
+	:figwidth: 40%
 	:name: earth_mag_vectors
-	
+
 	: Earth's magnetic field orientation
 
 The convention for drawing magnetic field lines is that they flow outward from
 a positive pole and inward to a negative pole. The Earth's field behaves like
 there is a negative pole in the northern hemisphere and a positive pole in the
-southern hemisphere as shown in :numref:`earth_mag_vectors`. 
-This field has a strength of
-approximately 70,000 nanoTeslas (nT) at the magnetic poles and approximately
-25,000 nT at the magnetic equator. 
-Field orientation and strength
-varies around the world, as presented :ref:`below<magnetics_three_figures>` based upon the :ref:`IGRF<magnetics_IGRF>` for 2003. The images were
-generated using data obtained from the `NOAA`_ National Data Center.
-In 2004, Earth's north magnetic pole was close to Melville Island (Nunavut) at
-(Latitude, Longitude)=(79N, 70W). 
-In Vancouver (BC), the current field is orientated at D ~ 20°N,  ~ 70° Inclination.
+southern hemisphere as shown in :numref:`earth_mag_vectors`. This field has a
+strength of approximately 70,000 nanoTeslas (nT) at the magnetic poles and
+approximately 25,000 nT at the magnetic equator.
+
+Field orientation and strength varies around the world, as presented in
+:numref:`IGRF_three_figures` based upon the :ref:`IGRF<magnetics_IGRF>` for
+2003. The images were generated using data obtained from the `NOAA`_ National
+Data Center. In 2004, Earth's north magnetic pole was close to Melville Island
+(Nunavut) at (Latitude, Longitude)=(79N, 70W). In Vancouver (BC), the current
+field is orientated at D ~ 20°N,  ~ 70° Inclination.
 
 .. _magnetics_three_figures:
 
@@ -130,49 +124,7 @@ In Vancouver (BC), the current field is orientated at D ~ 20°N,  ~ 70° Inclina
    *  - .. figure:: ./images/earth-strength.gif
 
    		  Earth's field strentgh
-      - 
-
-.. _magnetics_IGRF:
-
-The IGRF
---------
-
-Here are a few remarks about the IGRF or International Geomagnetic Reference Field.
-
-The IGRF is a mathematical model that describes the field and its secular
-changes as a spherical harmonic expansion. It is updated every five years, and
-**later** versions may re-define the field at **earlier** times. This is
-important to remember if you are comparing old maps to new ones. The IGRF is a
-product of the International Association of Geomagnetism and Aeronomy (IAGA_),
-and the original version was defined in 1968.
-
-.. _IAGA: http://www.ngdc.noaa.gov/IAGA/vmod/
-
-Every five years, the IAGA issues a contemporary main field model that
-predicts the field for the next five years. These models have names that are
-prefixed with "IGRF." Each new model updates the model that was used to
-predict the previous five (or more) years. Updated models are called **DGRF**
-for **Definitive Geomagnetic Reference Field**. Major updates since 1980 use
-data from MAGSAT, consisting of measurements of vector components and total
-intensity of the geomagnetic field between 350 and 560 km altitude.
-
-To correct data sets which had older versions of reference fields removed, add
-:math:`(F_0 - F_n)` to each data point, where the two parameters are total
-intensity values computed from the old and new reference fields respectively.
-See Peddie N.W. 1982, 1983, and 1986 for details. Charts of many types are
-available on-line, as downloadable postscript files, and for sale (less than
-$5.00 each) from the USGS, NOAA, GSC, and just about any other government
-geoscience agency. For example, you could use either the NOAA Geomagnetism
-page_, or the Canadian National Geomagnetism Program's homepage_.
-
-.. _page: http://www.ngdc.noaa.gov/ngdc.html
-.. _homepage: http://www.geomag.nrcan.gc.ca/index-eng.php
-
-.. References:
-
-.. * Peddie, N. W., 1986, Report on International Geomagnetic Reference Field revision 1985 by IAGA Division I Working Group 1: *Geophysics*, 51, no. 4, 1020-1023.
-.. * Peddie, N. W., 1983, International Geomagnetic Reference Field - its evolution and the difference in total field intensity between new and old models for 1965-1980 (short note): *Geophysics*, 48, no. 12, 1691-1696.
-.. * Peddie, N. W., 1982, Report on International Geomagnetic Reference Field 1980 by IAGA Division I Working Group 1: *Geophysics*, 47, no. 5, 841-842.
+      -
 
 
 .. _magnetics_variability:
@@ -180,16 +132,21 @@ page_, or the Canadian National Geomagnetism Program's homepage_.
 Variability of Earth's field
 ============================
 
-The source of the main (nearly dipolar) field varies slowly, causing changes
-in strength, declination and inclination over time scales of months to years.
-Changes in the exact location of the magnetic north pole are caused by this
-effect. See the Geological Survey of Canada's website for a conversational
-history of the location of the Magnetic North pole. Declination varies very
-widely in Canada. The correct value of declination can be found by entering
-your latitude, longitude and year at the GSC's website.
+Earth's main (nearly dipolar) field varies over time, causing
+changes in strength, declination and inclination of the field. These
+variations occur over different time scales depending on the physics behind
+them.
+
+Slow changes in the exact location of the magnetic north pole occur over long
+periods (months-years). These changes are thought to be caused by internal
+changes in mantle convection. Knowing the acquisition date of a magnetic
+survey is important in order to understand the observed magnetic anomalies.
+The Geological Survey of Canada is actively collecting and archiving
+information about the parameters of the field across Canada and can be queried
+with the `magnetic field calculator`_.
 
 The second component of Earth's field involves external contributions due
-primarily to currents in the ionized upper atmosphere.
+primarily to currents in the ionized upper atmosphere. These changes vary over much shorter periods (hours-day) and are due to two major phenomenon:
 
  .. figure:: ./images/solar_wind.jpg
 	:align: right
@@ -212,17 +169,12 @@ primarily to currents in the ionized upper atmosphere.
 
 Temporal variations are often larger than geophysical anomalies. They must be
 accounted for in all surveys and this is usually done by acquiring data at a
-fixed base-station. Another alternative is to acquire gradient data that use
-two fixed sensors. The figure below shows an example magnetic noise that may be 
-encountered as a result of a geomagnetic storm. These temporal variations have 
-an impact on magnetic data measured over time scales of several days, hours, or 
-minutes.
-
- .. figure:: ./images/pipe3_timelapse_edit.gif
-	:align: center
-	:scale: 75% 
-
-	Adapted from NRC http://www.spaceweather.gc.ca/tech/se-pip-en.php
+fixed base-station. Another alternative is to acquire :ref:`gradient
+data<magnetics_gradient_data>` that use two fixed sensors.
+:numref:`space_weather` shows an example of magnetic noise that may be
+encountered as a result of a geomagnetic storm. These temporal variations have
+an impact on magnetic data measured over time scales of several days, hours,
+or minutes.
 
 The Geological Survey of Canada has a web page, which can provide graphs of
 diurnal variations observed at any of 11 magnetic observatories in Canada, for
@@ -230,13 +182,63 @@ any day in the most recent 3 years. Find this facility by starting at the`GSC
 Geomagnetic data page`_. This resource is also a link to other information
 about magnetics.
 
-.. _GSC Geomagnetic data page: http://www.geomag.nrcan.gc.ca/index-eng.php
+.. figure:: ./images/pipe3_timelapse_edit.gif
+    :align: center
+    :scale: 75%
+    :name: space_weather
 
+    : Adapted from `NRC`_
+
+
+.. _GSC Geomagnetic data page: http://www.geomag.nrcan.gc.ca/index-eng.php
+.. _NRC: http://www.spaceweather.gc.ca/tech/se-pip-en.php
 
 .. _magnetics_buried_dipole:
 
+
+Anomalous Field
+===============
+
+Variations in the magnetic field become important when measuring near the
+Earth's surface. Local changes in :ref:`physical
+property<magnetic_physical_property>` may give rise to secondary fields
+measurable from a distance. For geological or engineering problems, these
+*anomalous fields* are the data to be interpreted.
+
+The basic ideas behind the magnetic problem are illustrated in
+:numref:`mag_object`.
+
+(a) An object with magnetic susceptibility :math:`\kappa` is buried in the
+    earth.
+
+(b) At the location of burial, the earth's field magnetic field is :math:`\vec{H}` and the magnetization in the object is :math:`\vec{M} = \kappa \vec{H}`.
+
+(c) If the object is "small", that is all of the object's dimensions are several times smaller than the depth to its center, then  the object acts as a :ref:`magnetic dipole<fields_magnetic_dipole>` -- that is, a little bar magnet with strength and direction caused by the inducing field. The  dipole moment of the object is :math:`\vec{m} = \text{Volume} * \vec{M}`
+
+(d) The magnetic field of the object is referred to as the "secondary" field or sometimes the "anomalous" field :math:`\vec{B_A}`. This is what we seek to measure.
+
+The pattern recorded at the surface arises by measuring
+the field strength everywhere on the surface, removing the Earth's field, and
+then plotting the results as a contour map of anomalous field strength. In the
+third figure, regions of blue anomalous field are "negative" because at those
+surface locations, the **anomalous** field crossing that surface points in the
+opposite direction for Earth's field.
+
+
+.. list-table:: : Buried magnetized object.
+   :header-rows: 0
+   :widths: 10
+   :stub-columns: 0
+   :name: mag_object
+
+   *  - .. raw:: html
+            :file: buried_dipole.html
+
+
+.. _fields_magnetic_dipole:
+
 Fields due to a magnetic dipole
-===============================
+-------------------------------
 
 Understanding the magnetic fields of a buried dipole, and the resultant
 observations, is crucial because all real scenarios can be thought of as a
@@ -244,36 +246,7 @@ combination (superposition) of dipoles (see the "Buried structures" section).
 More advanced applets will be used to look at the responses of some of these
 bodies.
 
-
-The figures below illustrate the problem. The pattern recorded at the surface
-arises by measuring the field strength everywhere on the surface, removing the
-Earth's field, and then plotting the results as a contour map of anomalous
-field strength. In the third figure, regions of blue anomalous field are
-"negative" because at those surface locations, the **anomalous** field
-crossing that surface points in the opposite direction for Earth's field.
-
-.. raw:: html
-    :file: buried_dipole.html
-
-
-The general principles of the magnetic experiment are encapsulated into the following steps:
-
-(a) An object with magnetic susceptibility :math:`\kappa` is buried in the
-    earth.
-
-(b) At the location of burial, the earth's field magnetic field is :math:`\vec{H}` and the magnetization in the object is :math:`\vec{M} = \kappa \vec{H}`.
-
-(c) If the object is "small", that is all of the object's dimensions are several times smaller than the depth to its center, then  the object acts as a "magnetic dipole" -- that is, a little bar magnet with strength and direction caused by the inducing field. The  dipole moment of the object is :math:`\vec{m} = \text{Volume} * \vec{M}`
-
-(d) The magnetic field of the object is referred to as the "secondary" field or sometimes the "anomalous" field :math:`\vec{B_A}`. This is what we seek to measure. 
-
-(e) :math:`\vec{B_A}` is a vector field and hence requires three components to specify it :math:`(B_x,B_y,B_z)`. When using a total field magnetometer we measure :math:`\left|\vec{B}\right|` which is equal to :math:`\left|\vec{B_0} + \vec{B_A}\right|`. Since we do not know the direction of :math:`\vec{B_A}` we assume that the anomalous field is mostly induced and that it's direction aligns with the Earth's inducing field :math:`\vec{B_0}`. This allows us to approximate the *total field* datum (:math:`B_t`) as the projection of :math:`\vec{B_A}` onto the direction of Earth's field :math:`\hat{B_0}`
-
-.. figure:: ./images/TMI_anomaly.png
-	:align: center
-	:figwidth: 50% 
-
-In the accompanying :ref:`applet<magnetics_applet>`, observations of individual components :math:`(B_x,B_y,B_z)` can be displayed. The projection of :math:`\vec{B_A}` onto the direction of Earth's field :math:`\hat{B_0}` is called the *total field* (:math:`B_t`). 
+In the accompanying :ref:`applet<magnetics_applet>`, observations of individual components :math:`(B_x,B_y,B_z)` can be displayed. The projection of :math:`\vec{B_A}` onto the direction of Earth's field :math:`\hat{B_0}` is called the *total field* (:math:`B_t`).
 
 In addition the vertical gradient of the field, obtained if measurements were
 acquired with a gradiometer, are listed as :math:`B_g`.  Sign conventions must
@@ -293,7 +266,7 @@ Magnetic dipoles: a Jupyter Notebook
 
 .. figure:: ./images/GPG_Mag_Notebook_Thumbnail.png
 	:align: right
-	:figwidth: 50% 
+	:figwidth: 50%
 
 The response that will be measured at points on a surface overlying a buried
 magnetic dipole can be explored using the UBC-GIF magnetic dipole notebook. Be sure to read the documentation provided in the notebook before using it. This tool allows you to vary the location and shape of a buried 3D prism and get the surface map of the anomalous magnetic. The app also allows to include a remanent  (permanent magnet) component to the total magnetization model. Changing the size and location of the prism allows the simulation of a wide range of scenarios, from vertical pipe <add case study here> to various kinds of :ref:`plate models<magnetics_extended_bodies>`.
@@ -311,11 +284,11 @@ physical dimensions are much smaller than the depth to the feature's center.
    *  - .. raw:: html
             :file: ./images/rotating_prism_demo.html
 
-  
+
 .. _magnetics_extended_bodies:
 
-Fields from extended bodies
-===========================
+.. Fields from extended bodies
+.. ===========================
 
 Approximating targets using magnetic charges
 --------------------------------------------
@@ -323,7 +296,7 @@ Approximating targets using magnetic charges
  .. figure:: ./images/buried_bodies1.gif
 	:align: right
 	:figclass: float-right-360
-	:scale: 100% 
+	:scale: 100%
 
 If :math:`L` denotes the scale length of a buried object and the distance from
 the observer to the body, :math:`R` is :math:`\gg` :math:`L`, then the magnetic
@@ -353,7 +326,7 @@ the field lines have the same shape but they point toward the source.
 
  .. figure:: ./images/Positive_magnetic_pole.png
 	:align: center
-	:scale: 75% 
+	:scale: 75%
 	:name: Positive_magnetic_pole
 
 	Magnetic field lines generated by a postive magnetic pole.
@@ -361,7 +334,7 @@ the field lines have the same shape but they point toward the source.
 
  .. figure:: ./images/Negative_magnetic_pole.png
 	:align: center
-	:scale: 75% 
+	:scale: 75%
 	:name: Negative_magnetic_pole
 
 	Magnetic field lines generated by a negative magnetic pole.
@@ -372,17 +345,17 @@ the field lines look like the diagram below.
 
  .. figure:: ./images/Magnetic_dipole.png
 	:align: center
-	:scale: 75% 
+	:scale: 75%
 	:name: Magnetic_dipole
 
 	Magnetic field lines generated by a postive and negative pole which form a dipole.
 
 
 If the distance between the two charges is :math:`s` then the dipole has a
-magnetic moment :math:`m=Qs` (units: :math:`\text{Amp m}^2`). As seen in the above 
-figure the magnetic field inside of the body points from the positive pole to the 
-negative pole. The dipole moment on the other hand extends from the negative(south) 
-pole to the positive(north) pole. Formulae for the magnetic field in cylindrical 
+magnetic moment :math:`m=Qs` (units: :math:`\text{Amp m}^2`). As seen in the above
+figure the magnetic field inside of the body points from the positive pole to the
+negative pole. The dipole moment on the other hand extends from the negative(south)
+pole to the positive(north) pole. Formulae for the magnetic field in cylindrical
 or cartesian coordinates can be found in standard texts.
 
 ------
@@ -405,7 +378,7 @@ computations and understanding.
 
 .. figure:: ./images/magnetic_charges.gif
 	:align: center
-	:scale: 100% 
+	:scale: 100%
 
 The resultant anomalous magnetic field can be thought of as being due to a
 distribution of magnetic poles on the surface of the body. Conceptually, a
@@ -413,11 +386,11 @@ picture of the large scale effect can be drawn as shown here:
 
 .. figure:: ./images/magnetic_poles.gif
 	:align: center
-	:scale: 100% 
+	:scale: 100%
 
 
 Working with magnetic charges
-=============================
+-----------------------------
 
 The magnetization in a body of constant magnetic susceptibility :math:`\kappa`
 is :math:`\vec{M} = \kappa \vec{H_0}`. As illustrated in the above diagram,
@@ -449,8 +422,8 @@ charge density :math:`\text{W/m}^2`.
 .. math::
 	Q = \kappa H_0 \pi a^2
 
-and the magnetic fields are like those given in equation :eq:`B_from_Q` and 
-shown in :numref:`Positive_magnetic_pole`. 
+and the magnetic fields are like those given in equation :eq:`B_from_Q` and
+shown in :numref:`Positive_magnetic_pole`.
 
 The same phenomenon is happening at the bottom of the pipe but there the
 charge is :math:`-Q`. At the surface the magnetic field is the sum of fields due
@@ -473,11 +446,11 @@ magnetic charge and write the expression using the earth's magnetic field
 :math:`B_0` then
 
 .. math::
-	B_t = \frac{\kappa \pi a^2 B_0}{4 \pi} \frac{z}{r^3} 	
+	B_t = \frac{\kappa \pi a^2 B_0}{4 \pi} \frac{z}{r^3}
 
 
-Geologic Features and representation for modeling 
-=================================================
+Geologic Features and representation for modeling
+-------------------------------------------------
 
 Some simplified geologic features that can be detected (and sometimes
 characterized) using magnetic data are shown below. They represent models of
@@ -487,14 +460,14 @@ the real earth.
 
 .. figure:: ./images/geomods.gif
 	:align: center
-	:scale: 100% 
+	:scale: 100%
 
 For each model, the concept of surface magnetic charges then permits
 evaluation of the fields; here are examples.
 
 .. figure:: ./images/modrep.gif
 	:align: center
-	:scale: 100% 
+	:scale: 100%
 
 As seen in the figures, for these types of features the responses can
 represented as monopoles, dipoles, lines of dipoles, sheets of charges etc.
@@ -507,3 +480,58 @@ been generated to accomplish this.
 Some images on this page adapted from "Applications manual for portable
 magnetometers" by S. Breiner, 1999, Geometrics 2190 Fortune Drive San Jose,
 California 95131 U.S.A.
+
+
+.. _magnetics_IGRF:
+
+The IGRF
+========
+
+Here are a few remarks about the IGRF or International Geomagnetic Reference Field.
+
+The IGRF is a mathematical model that describes the field and its secular
+changes as a spherical harmonic expansion. It is updated every five years, and
+**later** versions may re-define the field at **earlier** times. This is
+important to remember if you are comparing old maps to new ones. The IGRF is a
+product of the International Association of Geomagnetism and Aeronomy (IAGA_),
+and the original version was defined in 1968.
+
+.. _IAGA: http://www.ngdc.noaa.gov/IAGA/vmod/
+
+Every five years, the IAGA issues a contemporary main field model that
+predicts the field for the next five years. These models have names that are
+prefixed with "IGRF." Each new model updates the model that was used to
+predict the previous five (or more) years. Updated models are called **DGRF**
+for **Definitive Geomagnetic Reference Field**. Major updates since 1980 use
+data from MAGSAT, consisting of measurements of vector components and total
+intensity of the geomagnetic field between 350 and 560 km altitude.
+
+To correct data sets which had older versions of reference fields removed, add
+:math:`(F_0 - F_n)` to each data point, where the two parameters are total
+intensity values computed from the old and new reference fields respectively.
+See Peddie N.W. 1982, 1983, and 1986 for details. Charts of many types are
+available on-line, as downloadable postscript files, and for sale (less than
+$5.00 each) from the USGS, NOAA, GSC, and just about any other government
+geoscience agency. For example, you could use either the NOAA Geomagnetism
+page_, or the Canadian National Geomagnetism Program's homepage_.
+
+
+Details about Earth's field
+can be found at government geoscience websites such as the `NOAA`_ geomagnetism home page, or the `Canadian National Geomagnetism Program`_ home
+page.
+
+
+**Other resources**
+ - Earth's `magnetic field calculator`_.
+
+.. _NOAA: http://www.ngdc.noaa.gov/geomag/geomag.shtml
+.. _Canadian National Geomagnetism Program: http://www.geomag.nrcan.gc.ca/index-eng.php
+.. _magnetic field calculator: http://www.ngdc.noaa.gov/geomag-web/
+.. _page: http://www.ngdc.noaa.gov/ngdc.html
+.. _homepage: http://www.geomag.nrcan.gc.ca/index-eng.php
+
+.. References:
+
+.. * Peddie, N. W., 1986, Report on International Geomagnetic Reference Field revision 1985 by IAGA Division I Working Group 1: *Geophysics*, 51, no. 4, 1020-1023.
+.. * Peddie, N. W., 1983, International Geomagnetic Reference Field - its evolution and the difference in total field intensity between new and old models for 1965-1980 (short note): *Geophysics*, 48, no. 12, 1691-1696.
+.. * Peddie, N. W., 1982, Report on International Geomagnetic Reference Field 1980 by IAGA Division I Working Group 1: *Geophysics*, 47, no. 5, 841-842.

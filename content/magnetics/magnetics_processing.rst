@@ -32,9 +32,9 @@ Two things happen with this procedure
 
 - Time variations are removed.
 
-- Earth's field, associated with the location of the base-station, is removed. 
+- Earth's field, associated with the location of the base-station, is removed.
 
-The residual data would be similar to that in which the 
+The residual data would be similar to that in which the
 :ref:`IGRF<magnetics_IGRF>` has been removed.
 
 The residual field, :math:`\Delta B`, contains the sought anomalous field but
@@ -79,7 +79,7 @@ of a regional trend can be managed graphically, as shown here:
 
 .. figure:: ./images/regional.gif
 	:align: center
-	:scale: 110%	
+	:scale: 110%
 
 Clearly this process involves some degree of subjectivity and will depend upon
 how you draw a line that separates the desired "signal" from the background.
@@ -106,10 +106,10 @@ Plotting Data
 
 
 
-.. figure:: ./images/earth-strength-s.gif 
+.. figure:: ./images/earth-strength-s.gif
 	:figclass: float-right-360
 	:align: right
-	:scale: 100%	
+	:scale: 100%
 
 2D plots of magnetic data, often referred to as maps, can provide insight
 about the geologic units, contacts, and the horizontal location of structures.
@@ -148,7 +148,7 @@ sidebar`_.
 .. figure:: ./images/map-cust.gif
 	:figclass: float-right-360
 	:align: right
-	:scale: 40%	
+	:scale: 40%
 
 Such data sets were once too large to invert directly, but they still provide
 extremely valuable information about geology and structure, especially if some
@@ -158,48 +158,3 @@ inversion methodologies these large scale problems are becoming easier to
 invert.
 
 
-
-Processing Magnetic Maps
-========================
-
-.. DWO:   this section can benefit with additional development and figures. 
-
-
-.. figure:: ./images/airmag1-s.jpg 
-	:figclass: float-right-360
-	:align: right
-	:scale: 100%	
-
-There are numerous options for processing potential fields data in general,
-and magnetics data specifically. One example (figure shown here) is provided
-in `a sidebar`_. The processing was applied in this case in order to emphasize
-geologic structural trends.
-
-.. _a sidebar: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/sidebar-mageg1.html
-
-Other examples of magnetic data processing techniques include:
-
-- Upward continuation is commonly used to remove the effects of very nearby
-  (or shallow) susceptible material.
-
-- Second vertical derivative of total field anomaly is sometimes used to
-  emphasize the edges of anomalous zones.
-
-- Reduction to the pole rotates the data set so that it appears as if the
-  geology existed at the north magnetic pole. This removes the asymmetry
-  associated with mid-latitude anomalies.
-
-- Calculating the pseudo-gravity anomaly converts the magnetic data into a
-  form that would appear if buried sources were simply density anomalies
-  rather than dipolar sources.
-
-- Horizontal gradient of pseudo-gravity anomaly: gravity anomaly inflection
-  points (horizontal gradient peaks) align with vertical body boundaries;
-  therefore, mapping peaks of horizontal gradient of pseudo-gravity can help
-  map geologic contacts.
-
-The effects of these five processing options are illustrated in a `separate
-sidebar`_ on processing of magnetics data.
-
-.. _separate sidebar: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/blakely/blakely.html
-.. _next section: 
