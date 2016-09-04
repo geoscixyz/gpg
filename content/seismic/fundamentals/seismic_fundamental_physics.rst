@@ -184,8 +184,11 @@ introduced above and density :math:`\rho`, by the equation shown here
 .. math::
 	v_p = \sqrt{ \frac{\kappa + 4/3\mu}{\rho} }
 
-.. figure:: ./images/pwaves.gif
+.. figure:: ./images/pwave-animated-2.gif
 	:align: center
+	
+	Image from http://web.ics.purdue.edu/~braile/edumod/waves/WaveDemo.htm
+
 
 **Shear waves (S waves)** propagate by a pure shear strain perpendicular to the
 wave propagation. There are two planes of polarization. SV and SH waves
@@ -195,8 +198,10 @@ moduli introduced above and density :math:`\rho` ,
 .. math ::
 	v_s = \sqrt{\frac{\mu}{\rho} }
 
-.. figure:: ./images/swaves.gif
+.. figure:: ./images/s-wave-animated.gif
 	:align: center
+	
+	Image from http://web.ics.purdue.edu/~braile/edumod/waves/WaveDemo.htm
 
 Note that if :math:`\mu = 0` then :math:`v_s = 0`. This tells us that shear
 waves do not travel in a liquid.
@@ -221,8 +226,10 @@ earthquakes can generate Rayleigh waves that circumnavigate the globe. This
 provides information about the velocity structure in the upper few hundred
 kilometers of the earth.
 
-.. figure:: ./images/rayleigh.gif
+.. figure:: ./images/Rayleigh-wave-animated.gif
 	:align: center
+	
+	Image from http://web.ics.purdue.edu/~braile/edumod/waves/WaveDemo.htm
 
 
 **Love waves** exist in a surface layer when the shear wave velocity of the
@@ -233,8 +240,10 @@ the free surface and perpendicular to the direction of propagation.
 .. math::
 	v_{S1} < v_{Love} < v_{S2}
 
-.. figure:: ./images/love.gif
+.. figure:: ./images/Love-wave-animated.gif
 	:align: center
+	
+	Image from http://web.ics.purdue.edu/~braile/edumod/waves/WaveDemo.htm
 
 Both Love waves and Rayleigh waves are **dispersive**. That is, different
 frequency components travel at different speeds. So the wave changes shape as
