@@ -264,7 +264,7 @@ earth's field and negative if it is the opposite direction.
 Magnetic dipoles: a Jupyter Notebook
 ------------------------------------
 
-.. figure:: ./images/GPG_Mag_Notebook_Thumbnail.png
+.. figure:: ./images/Mag_Notebook_Thumbnail.png
 	:align: right
 	:figwidth: 50%
 
