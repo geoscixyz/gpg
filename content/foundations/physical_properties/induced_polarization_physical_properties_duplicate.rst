@@ -8,13 +8,22 @@ previously, ionic charges within a rock's pore water begin to move under the
 influence of an electric field, resulting in electrical current. However, some
 of the pore ions do not move uninhibited through the rock and begin to
 accumulate at impermeable boundaries. This build-up of ionic charges is
-commonly referred to as induced polarization, as it is responsible for
+commonly referred to as induced polarization (IP), as it is responsible for
 generating electric dipole moments within the rock. We use chargeability to
 characterize the formation and strength of the induced polarization within a
 rock, under the influence of an electric field.
 
-There are two primary mechanisms which are responsible for the chargeable
-behaviour of rocks, membrane polarization and electrode polarization.
+The physical explanation for causes of chargeabilty are complex and not 
+completely understood. Certainly the effects are dependent upon the
+microscopic nature the material and specifically upon the surface to
+volume ratio of pore material and the types of fluids in the rock. The
+two images below offer some insight into the complexity.
+
+Two images from the old gpg (need to ensure copyright)
+
+Despite the complexity are two primary phenomenological mechanisms which are 
+insightful in characterizing the chargeable
+behaviour of rocks: membrane polarization and electrode polarization.
 
 **Membrane Polarization**
 
@@ -30,7 +39,9 @@ ion widths.
 Because ionic charges cannot be forced through the pore throat, they
 accumulate on either side when an electric field is applied; with positive
 charges accumulating on one side of the pore throat and negative charges
-accumulating on the other.
+accumulating on the other. The accumulation of charges eventually stops 
+because the electric fields from the blocked charges becomes large enough
+that it prevents other ions of the same sign from joining the group.
 
 
  .. figure:: ./images/images_duplicates/memb2.gif
@@ -39,9 +50,9 @@ accumulating on the other.
 
 
 
-The separation of positive and negative charges across narrow pore spaces
+The net separation of positive and negative charges across narrow pore spaces
 generates a set of electric dipole moments which is ultimately responsible for
-the induced polarization.
+the voltages measured in induced polarization survey.
 
  .. figure:: ./images/images_duplicates/memb3.gif
     :align: center
@@ -82,17 +93,19 @@ contributes towards the induced polarization within the rock.
 
 
 
-Impact on Geophysical Measurements
-----------------------------------
+Effects of IP on Geophysical Measurements
+-----------------------------------------
 
 
 To demonstrate the effects of induced polarization on geophysical
-measurements, consider what happens when a source is used to force current
-into the ground. At some location in proximity of the source, the electric
+measurements, consider a specific example where a current generator,
+hooked to the ground as in a DC survey, is turned on. 
+At some location, the electric
 potential (:math:`V`) is measured. In non-chargeable rocks, an instantaneous
-increase in the measured potential occurs the moment the source is switched
-on. When the source is switched off, the current through the Earth is zero and
-so is the measured potential.
+increase in the measured potential occurs when the source is switched
+on. When the source is switched off, the current through the Earth returns
+immediately to zero and
+so is the measured potential. This is illustrated in the figure below. 
 
 
 .. figure:: ./images/images_duplicates/IP_source.gif
@@ -100,7 +113,7 @@ so is the measured potential.
     :scale: 120%
 
 If the ground is chargeable, there will also be an instantaneous jump in the
-measured potential once the source is switched on; which we denote as
+measured potential when the source is switched on; we denote as
 :math:`V_\sigma`. However, the subsequent build-up of ionic charges during the
 on-time results in a corresponding increase in the measured potential; which
 is sometimes referred to as the over-voltage. Eventually, the build-up of
@@ -139,8 +152,34 @@ We use the discharge curve to characterize the chargeable properties of the Eart
 Definitions for Chargeability
 =============================
 
+It is convenient to consider "chargeabilty" as an independent physical property but
+in reality it is an integral component of the electrical conductivity. It describes
+how the conductivity changes with frequency. If :math:`\sigma_0` denotes the conductivity
+at zero  frequency and if :math:`\sigma_\infty` is the conductivity at infinite frequency
+then the chargeability is 
 
-There are two widely used definitions for chargeability, the integrated chargeability and the intrinsic chargeability.
+.. math::
+	\eta = \frac{\sigma_\infty -\sigma_0}{\sigma_\infty}
+
+This is a dimensionless number varying between 0 < :math:`\eta` < 1. It is 
+often referred to as the intrinsic chargeability.  The above definition
+is equivalent to defining the 
+intrinsic chargeability as the ratio between the amplitude of the over-voltage (:math:`V_s`) 
+and the DC voltage (:math:`V_m`):
+
+.. math::
+	\eta = \frac{V_s}{V_m}
+
+The intrinsic chargeability for materials is rarely provided in tables. Rather, numbers
+based upon laboratory measurements of some characteristic of the induced polarization
+response is provided. Those measurements can be in time or frequency and the units
+of the "chargeability" are inherited from the data. We outline below:
+
+ToDo: Integrate the material currently in Induced polarization
+http://gpg.geosci.xyz/en/physprops/content/induced_polarization/induced_polarization_measurements_data.html
+so that go through each type of datum and hence the meanings and units for each of the 
+associated chargeabilities.
+
 
 
 **Integrated Chargeability**
@@ -157,16 +196,7 @@ Numerical values for the integrated chargeability are typically given in ms.
 
 
 
-**Intrinsic Chargeability**
 
-Intrinsic chargeability (:math:`\eta \,`) characterizes the proportion of ionic charges to total charges which accumulate within a rock under the influence of an electric field.
-The intrinsic chargeability is defined as the ratio between the amplitude of the over-voltage (:math:`V_s`) and the DC voltage (:math:`V_m`):
-
-.. math::
-	\eta = \frac{V_s}{V_m}
-
-
-As we can see from the above equation, the intrinsic chargeability is a unitless quantity.
 
 
 
