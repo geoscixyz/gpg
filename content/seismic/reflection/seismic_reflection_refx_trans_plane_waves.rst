@@ -8,10 +8,11 @@ If we are some distance away from the source, then the seismic wave will look
 like a plane wave. That is, the wavefront will look like a planar surface.
 Imagine such a plane wave which impinges at a boundary at normal incidence.
 
-.. figure:: ./images/R_and_T_amplitudes.png
-    :align: center
+ .. figure:: ./images/Reflection_Transmission.jpg
+  :scale: 70%
 
-    Energy across a velocity boundary, where, :math:`A_0` is the amplitude of the incident wave; :math:`A_1` is the amplitude of the reflected wave; :math:`A_2` is the amplitude of the transmitted wave
+
+  Energy across a velocity boundary, where, :math:`A_0` is the amplitude of the incident wave; :math:`A_1` is the amplitude of the reflected wave; :math:`A_2` is the amplitude of the transmitted wave
 
 We define here the "Acoustic Impedance" :math:`Z = \rho V`, or the product of
 density and velocity. Energy is reflected and transmitted at the interface. We

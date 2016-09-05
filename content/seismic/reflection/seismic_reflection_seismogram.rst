@@ -45,14 +45,14 @@ reflection is :math:`A_1`, then the reflection coefficient :math:`r` is
 The acoustic impedance for the ith layer is given by:
 
 .. math::
-	r_i =\frac{Z_{i+1} - Z_i}{Z_{i+1} + Z_i}
+	R_i =\frac{Z_{i+1} - Z_i}{Z_{i+1} + Z_i}
 
 
 The transmitted wave has amplitude :math:`A_2`, and the transmission coefficient
 :math:`A_2` to :math:`A_0` is
 
 .. math::
-	t_i = \frac{2Z_i}{Z_{i+1} + Z_i}
+	T_i = \frac{2Z_i}{Z_{i+1} + Z_i}
 
 The total travel time is the sum of the incremental times for a particular
 reflection. The incremental time is:
