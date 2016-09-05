@@ -4,12 +4,14 @@ Interpretation
 **************
 
 .. DWO:   this section can benefit with additional development and figures.
+
 There are numerous options for processing potential fields data in general,
 and magnetics data specifically. One example is shown below. The processing was applied in
 this case in order to emphasize geologic structural trends.
 
 .. raw:: html
   :file: Airborne_magnetics_example.html
+
 
 Other examples of magnetic data processing techniques include:
 
