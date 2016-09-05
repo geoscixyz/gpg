@@ -27,7 +27,7 @@ provided.
 
 Development of the GPG is ongoing, with the core development team consisting
 of researchers and students at the University of British Columbia. We welcome
-input and collaborators! Join the development on github_. 
+input and collaborators! Join the development on github_.
 
 .. _github: https://github.com/ubcgif/gpg
 
@@ -37,7 +37,7 @@ Contents:
 
 .. toctree::
    :maxdepth: 1
-   
+
    content/foundations/index
    content/magnetics/index
    content/seismic/refraction/index
@@ -54,7 +54,7 @@ Feedback:
 
 Have comments or suggestions? Submit feedback here_.
 
-.. _here: https://docs.google.com/forms/d/1Bv43lKncKaTQY3_J_B1DrPQr0ft0Qt1x6IjqM7iDbnc/viewform?usp=send_form>`.  
+.. _here: https://docs.google.com/forms/d/1Bv43lKncKaTQY3_J_B1DrPQr0ft0Qt1x6IjqM7iDbnc/viewform?usp=send_form>`.
 
 
 Contributors:
