@@ -14,10 +14,13 @@ may take up to several seconds to reach zero. Similarly, when the current is
 switched on, there may be a finite time taken for the voltage to reach a
 steady state value. In other words, current injected into the ground causes
 some materials to become polarized. The phenomenon is called induced
-polarization, and the physical property that is measured is usually called
-chargeability, which quantifies the material's capacity to retain charges
+polarization (IP), and the physical property that is measured, usually called
+chargeability, quantifies the material's capacity to retain charges
 after a forcing current is removed. The following figure illustrates the
-measurable effect.
+measurable effect. Notice that when the current is initially turned on, 
+the voltage rises immediately. As time proceeds, the voltage continues to
+increase and gradually reaches a steady state value. This increase in 
+voltage caused by IP effects and was first referred to as "over-voltage". 
 
  .. figure:: ./images/images_duplicates/IP_source.gif
 	:align: center
@@ -53,7 +56,7 @@ sources. The units could also be percent if the response at two or more source
 signal frequencies is compared, or units of milliradians may be used if the
 phase difference between source and received signals is recorded.
 
-Physical Phenomenons
+Physical Phenomenona
 ====================
 
 .. _induced polarization measurements data: http://gpg.geosci.xyz/en/latest/content/induced_polarization/induced_polarization_measurements_data.html
