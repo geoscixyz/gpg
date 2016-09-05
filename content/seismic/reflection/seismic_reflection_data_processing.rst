@@ -32,6 +32,7 @@ reflection section:
 .. toctree::
    :maxdepth: 1
 
+   seismic_reflection_filtering
    seismic_reflection_processing_fundamental
    seismic_reflection_static_corrections
    seismic_reflection_stacking

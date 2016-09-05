@@ -25,7 +25,6 @@ Contents:
    seismic_reflection_introduction
    seismic_physics
    seismic_reflection_surveys   
-   seismic_reflection_filtering
    seismic_reflection_data_processing
    seismic_reflection_vertical_resolution
    

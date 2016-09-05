@@ -54,7 +54,10 @@ Two Examples
 
  By Joshua Doubek - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=27279591
 
-  More Information about flat spot: https://en.wikipedia.org/wiki/Flat_spot_(reflection_seismology)
+  Flat spots are used as indicator for hydrocrbons. More Information about `flat spot`_: 
+
+  .. _flat spot: https://en.wikipedia.org/wiki/Flat_spot_(reflection_seismology)
+
 
 
 .. ./images/air_gun.gif
