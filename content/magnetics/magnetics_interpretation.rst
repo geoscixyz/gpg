@@ -5,18 +5,13 @@ Interpretation
 
 .. DWO:   this section can benefit with additional development and figures.
 
-
-.. figure:: ./images/airmag1-s.jpg
-    :figclass: float-right-360
-    :align: right
-    :scale: 100%
-
 There are numerous options for processing potential fields data in general,
-and magnetics data specifically. One example (figure shown here) is provided
-in `a sidebar`_. The processing was applied in this case in order to emphasize
-geologic structural trends.
+and magnetics data specifically. One example is shown below. The processing was applied in
+this case in order to emphasize geologic structural trends.
 
-.. _a sidebar: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/sidebar-mageg1.html
+.. raw:: html
+  :file: Airborne_magnetics_example.html
+
 
 Other examples of magnetic data processing techniques include:
 
@@ -43,4 +38,4 @@ The effects of these five processing options are illustrated in a `separate
 sidebar`_ on processing of magnetics data.
 
 .. _separate sidebar: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/blakely/blakely.html
-.. _next section:
+
