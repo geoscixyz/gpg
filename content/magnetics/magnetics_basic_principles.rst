@@ -5,6 +5,7 @@ Basic Principles
 
 .. _earth_s_field:
 
+
 Magnetic Method
 ===============
 
@@ -166,6 +167,7 @@ primarily to currents in the ionized upper atmosphere. These changes vary over m
   of the Aurora Borealis or Australis (northern or southern lights
   respectively). See the GSC's "Geomagnetic Hazards" web page for more.
 
+.. move to processing
 
 Temporal variations are often larger than geophysical anomalies. They must be
 accounted for in all surveys and this is usually done by acquiring data at a
@@ -292,6 +294,12 @@ physical dimensions are much smaller than the depth to the feature's center.
 
 Approximating targets using magnetic charges
 --------------------------------------------
+
+.. add depth of burial of pipe
+.. screenshot of buried pipe (pole anomaly)
+
+.. add remament
+
 
  .. figure:: ./images/buried_bodies1.gif
 	:align: right
