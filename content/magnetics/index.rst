@@ -7,17 +7,29 @@ Magnetics
    :align: right
    :scale: 100 %
 
+Measurements of the magnetic field contain information about subsurface
+variations in **magnetic susceptibility**. The measurements record the sum of
+Earth's field and fields induced in magnetic materials. More magnetic (i.e.
+susceptible) materials have stronger induced fields. Removing Earth's fiele
+from the observations yields anomalous fields that can be interpreted in terms
+of where magnetic material lies and also its susceptiblity and shape. Data can
+be acquired in the air (planes, satellites), on the ground (stationary, moving
+platforms, marine) and inderground (boreholes, tunnels). Processed data are
+presented as maps or profiles, and advanced processing, involving inversion,
+yields parametric structures or 3D models of the subsurface susceptibility
+distribution.  Magnetic surveying is extremely versatile and applied in many
+areas in the geosciences.
 
-This section covers some basic information for magnetic surveys. The physical
-property of concern is magnetic susceptibility, which is a measure of how
-magnetized a material becomes in the presence of a magnetic field. The source
-for a magnetic  survey is the natural magnetic field of the earth. Receivers
-measure either the amplitude of the magnetic field or one or more of its
-components. The earth's field changes with latitude and longitude and hence
-magnetic surveys, carried out over the same  geologic structure or buried
-object, will generate different data at different locations on the earth. In
-this module we present basic material for understanding the magnetic survey,
-how the data are processed and how they can be interpreted.
+.. This section covers some basic information for magnetic surveys. The physical
+.. property of concern is magnetic susceptibility, which is a measure of how
+.. magnetized a material becomes in the presence of a magnetic field. The source
+.. for a magnetic  survey is the natural magnetic field of the earth. Receivers
+.. measure either the amplitude of the magnetic field or one or more of its
+.. components. The earth's field changes with latitude and longitude and hence
+.. magnetic surveys, carried out over the same  geologic structure or buried
+.. object, will generate different data at different locations on the earth. In
+.. this module we present basic material for understanding the magnetic survey,
+.. how the data are processed and how they can be interpreted.
 
 Contents:
 
@@ -36,8 +48,8 @@ Contents:
 ..  magnetics_three_figures
 ..   magnetics_buried_dipole
 ..  magnetics_extended_bodies
-..   magnetics_line_profiles   
+..   magnetics_line_profiles
 ..   magnetics_complex_structures
-   
-      
-   
+
+
+

@@ -60,7 +60,7 @@ of three ways (see :numref:`coord_sys`):
 
  - **Polar** : B = (:math:`D`, :math:`I`, :math:`\mid B\mid` ). These are the commonly used spherical coordinates which include two angles and a magnitude: I=inclination, D=declination, and :math:`\mid B \mid` =total field strength.
 
-.. figure:: ./images/components.gif
+.. figure:: ./images/Mag_Coordinate_System.png
     :align: center
     :scale: 100%
     :name: coord_sys
