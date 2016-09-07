@@ -161,6 +161,7 @@ primarily to currents in the ionized upper atmosphere. These changes vary over m
 
 .. _geomagnetics website: http://www.geomag.bgs.ac.uk/
 
+
 * Magnetic storms are correlated with sunspot activity, usually on an 11-year
   cycle. These variations can be large enough to cause damage to satellites
   and north-south oriented power distribution systems. They are also the cause
@@ -271,7 +272,7 @@ Magnetic dipoles: a Jupyter Notebook
 	:figwidth: 50%
 
 The response that will be measured at points on a surface overlying a buried
-magnetic dipole can be explored using the UBC-GIF magnetic dipole notebook. Be sure to read the documentation provided in the notebook before using it. This tool allows you to vary the location and shape of a buried 3D prism and get the surface map of the anomalous magnetic. The app also allows to include a remanent  (permanent magnet) component to the total magnetization model. Changing the size and location of the prism allows the simulation of a wide range of scenarios, from vertical pipe <add case study here> to various kinds of :ref:`plate models<magnetics_extended_bodies>`.
+magnetic dipole can be explored using the UBC-GIF magnetic dipole magnetic_app_. Be sure to read the documentation provided in the notebook before using it. This tool allows you to vary the location and shape of a buried 3D prism and get the surface map of the anomalous magnetic. The app also allows to include a remanent  (permanent magnet) component to the total magnetization model. Changing the size and location of the prism allows the simulation of a wide range of scenarios, from vertical pipe <add case study here> to various kinds of :ref:`plate models<magnetics_extended_bodies>`.
 
 As noted in the :ref:`dipole animation<magnetics_dipole_demo>`, a real buried feature will look like a magnetic dipole if its
 physical dimensions are much smaller than the depth to the feature's center.
@@ -286,6 +287,7 @@ physical dimensions are much smaller than the depth to the feature's center.
    *  - .. raw:: html
             :file: ./images/rotating_prism_demo.html
 
+.. _magnetic_app: http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Mag/InducedMag2D.ipynb
 
 .. _magnetics_extended_bodies:
 
