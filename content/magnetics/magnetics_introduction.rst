@@ -7,31 +7,30 @@ Magnetic surveys
 ================
 
 In geophysical magnetic surveying the Earth's magnetic field causes, or
-induces, subsurface materials to become magnetized. Magnetic methods are used in wide range on problems: from geological mapping :numref:`mag_visual` and mineral exploration, to engirneering and reclamation work (UXO).
+induces, subsurface materials to become magnetized. Magnetic methods are used in wide range on problems: from geological mapping :numref:`intro_geomaping` and mineral exploration, to engirneering and reclamation work (UXO).
 
 
  - Visualization blbla
 
-.. figure:: ./images/intro_geomaping.png
-    :align: center
-    :scale: 100 %
-    :name: mag_visual
-.. flip order from data to geol
+    .. figure:: ./images/intro_geomaping.png
+        :align: center
+        :scale: 100 %
+        :name: intro_geomaping
 
 
  - parameter estimation to find location and size
 
-.. figure:: ./images/intro_geomaping.png
-    :align: center
-    :scale: 100 %
-    :name: mag_visual
+    .. figure:: ./images/intro_paramEstim.png
+        :align: center
+        :scale: 100 %
+        :name: mag_paramEstim
 
  - 3D inversion for mineral exploration
 
-.. figure:: ./images/intro_geomaping.png
-    :align: center
-    :scale: 100 %
-    :name: mag_visual
+    .. figure:: ./images/intro_exploration.png
+        :align: center
+        :scale: 100 %
+        :name: mag_exploration
 
 
 
@@ -62,6 +61,11 @@ in space, or within boreholes. The measured magnetic field will be a
 superposition of Earth's field and the induced secondary fields caused by
 magnetization of buried materials.
 
-.. raw:: html
-    :file: intro.html
-    :name: mag_survey
+.. list-table:: :Principals of magnetic surveys.
+   :header-rows: 0
+   :widths: 10
+   :stub-columns: 0
+   :name: mag_survey
+
+   *  - .. raw:: html
+            :file: intro.html
