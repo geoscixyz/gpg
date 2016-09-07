@@ -1,7 +1,7 @@
 .. _seismic_reflection_stacking:
 
-"Stacking" Data in CMP Gathers
-******************************
+Normal MoveOut (NMO): Stacking Data in CMP Gathers
+**************************************************
 
  	
 
@@ -109,15 +109,14 @@ Summary: Essential Elements in CMP Processing
 ---------------------------------------------
 
 
-.. figure:: ./images/workflow.gif
-	:figclass: center
+.. figure:: ./images/Baker_SeismicPrimer_fig.png
 	:align: right
-	:scale: 130 %
+	:scale: 25 %
 	
 .. <<editorial comment>> The original GPG had a "click to enlarge feature for the workfow." The small and large image file names are: workflow.gif to big_workflow.gif
 
-There are many different processing steps that *could* :math:`` be performed.
-An example from GS Baker, 1999, is shown in the flow chart image here (click
+There are many different processing steps that could be performed.
+An example from `GS Baker 1999`, is shown in the flow chart image here (click
 for a larger version.). However, the essential steps are summarized in the
 following short list.
 
@@ -136,4 +135,10 @@ may be used by experienced contractors and they may be necessary to produce
 more useful sections for interpretation, but the details are beyond the scope
 of this set of notes.
 
+.. figure:: ./images/CMPprocessing.png
+	:align: center
+	:scale: 70 %
+
+
+.. _GS Baker 1999: https://www.researchgate.net/profile/Gregory_Baker4/publication/49182348_Processing_near-surface_seismic-reflection_data_a_primer/links/5617dbbf08ae4780f241fe3d.pdf
 
