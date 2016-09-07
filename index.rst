@@ -39,6 +39,7 @@ Contents:
    :maxdepth: 1
 
    content/foundations/index
+   content/physical_properties/index
    content/magnetics/index
    content/seismic/refraction/index
    content/seismic/reflection/index

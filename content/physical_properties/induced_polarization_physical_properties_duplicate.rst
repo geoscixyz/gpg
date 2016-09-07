@@ -229,7 +229,7 @@ normalized by the source voltage.
             M = \frac{1}{V_P} \int  \! V_S(t) \, \mathrm{d}t
 
 
-.. figure:: ../../induced_polarization/images/source_and_measured_V.gif
+.. figure:: ../induced_polarization/images/source_and_measured_V.gif
     :align: center
     :scale: 100 %
 
@@ -274,7 +274,7 @@ described below.
    current.
 
 
-.. figure:: ../../induced_polarization/images/PFE.gif
+.. figure:: ../induced_polarization/images/PFE.gif
     :align: center
     :scale: 100 %
 
@@ -294,7 +294,7 @@ converted to a percent frequency effect by multiplying by 100.
    is recorded as a measure of chargeability. Units are usually milliradians. The
    following figure illustrates:
 
-.. figure:: ../../induced_polarization/images/sinusoids.gif
+.. figure:: ../induced_polarization/images/sinusoids.gif
     :align: center
     :scale: 100 %
 
