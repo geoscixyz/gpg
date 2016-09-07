@@ -19,13 +19,13 @@ microscopic nature the material and specifically upon the surface to
 volume ratio of pore material and the types of fluids in the rock. The
 two images below offer some insight into the complexity.
 
- .. figure:: ./images/images_duplicates/illite.gif
+ .. figure:: images/images_duplicates/illite.gif
     :align: center
     :scale: 120 %
 
     Illite (a clay mineral) with surface area-to-volume ratio of :math:`100m^2/g` (1000 times greater than sandstone)
 
- .. figure:: ./images/images_duplicates/quartz.gif
+ .. figure:: images/images_duplicates/quartz.gif
     :align: center
     :scale: 120 %
 
@@ -41,7 +41,7 @@ Membrane polarization occurs when the pore space narrows to a within several
 ion widths.
 
 
- .. figure:: ./images/images_duplicates/memb1.gif
+ .. figure:: images/images_duplicates/memb1.gif
     :align: center
     :scale: 100 %
 
@@ -54,7 +54,7 @@ because the electric fields from the blocked charges becomes large enough
 that it prevents other ions of the same sign from joining the group.
 
 
- .. figure:: ./images/images_duplicates/memb2.gif
+ .. figure:: images/images_duplicates/memb2.gif
     :align: center
     :scale: 100 %
 
@@ -64,7 +64,7 @@ The net separation of positive and negative charges across narrow pore spaces
 generates a set of electric dipole moments which is ultimately responsible for
 the voltages measured in induced polarization survey.
 
- .. figure:: ./images/images_duplicates/memb3.gif
+ .. figure:: images/images_duplicates/memb3.gif
     :align: center
     :scale: 100 %
 
@@ -78,7 +78,7 @@ electrically charged and attract nearby ions.
 
 
 
- .. figure:: ./images/images_duplicates/elec_pol_1.gif
+ .. figure:: images/images_duplicates/elec_pol_1.gif
     :align: center
     :scale: 100
 
@@ -88,7 +88,7 @@ charges, followed by a secondary diffuse layer of opposing charges. This is
 known as an electric double layer.
 
 
- .. figure:: ./images/images_duplicates/elec_pol_3.gif
+ .. figure:: images/images_duplicates/elec_pol_3.gif
     :align: center
     :scale: 100
 
@@ -97,7 +97,7 @@ Each electric double layer results in an electric dipole moment which
 contributes towards the induced polarization within the rock.
 
 
- .. figure:: ./images/images_duplicates/elec_pol_2.gif
+ .. figure:: images/images_duplicates/elec_pol_2.gif
     :align: center
     :scale: 100
 
@@ -118,7 +118,7 @@ immediately to zero and
 so is the measured potential. This is illustrated in the figure below.
 
 
-.. figure:: ./images/images_duplicates/IP_source.gif
+.. figure:: images/images_duplicates/IP_source.gif
     :align: center
     :scale: 120%
 
@@ -132,7 +132,7 @@ ionic charges reaches saturation, resulting in a final measured potential
 (:math:`V_{on}`) can be expressed as:
 
 
-.. figure:: ./images/chargeability_physics2.png
+.. figure:: images/chargeability_physics2.png
     :align: right
     :scale: 100%
 
@@ -229,7 +229,7 @@ normalized by the source voltage.
             M = \frac{1}{V_P} \int  \! V_S(t) \, \mathrm{d}t
 
 
-.. figure:: ./images/source_and_measured_V.gif
+.. figure:: ../../induced_polarization/images/source_and_measured_V.gif
     :align: center
     :scale: 100 %
 
@@ -247,7 +247,7 @@ Numerical values for the integrated chargeability are typically given in ms.
 
 
 
-.. figure:: ./images/electrode_conductivity_measurements.png
+.. figure:: ../../induced_polarization/images/electrode_conductivity_measurements.png
     :align: right
     :scale: 35%
 
@@ -274,7 +274,7 @@ described below.
    current.
 
 
-.. figure:: ./images/PFE.gif
+.. figure:: ../../induced_polarization/images/PFE.gif
     :align: center
     :scale: 100 %
 
@@ -294,7 +294,7 @@ converted to a percent frequency effect by multiplying by 100.
    is recorded as a measure of chargeability. Units are usually milliradians. The
    following figure illustrates:
 
-.. figure:: ./images/sinusoids.gif
+.. figure:: ../../induced_polarization/images/sinusoids.gif
     :align: center
     :scale: 100 %
 
@@ -372,7 +372,7 @@ where :math:`\rho_0` is the DC resistivity and :math:`\eta` is the intrinsic cha
 Parameters :math:`\tau` and :math:`C` define the rate at which ionic charges accumulate when an electric field is applied.
 
 
-.. figure:: ./images/electrode_chargeability_curve_fit.png
+.. figure:: images/electrode_chargeability_curve_fit.png
     :align: center
     :scale: 40%
 
@@ -427,7 +427,7 @@ Therefore, highly mineralized rock tend to be very chargeable.
 
 **Clays:**
 
- .. figure:: ./images/images_duplicates/memb_pol_2nd_type.gif
+ .. figure:: images/images_duplicates/memb_pol_2nd_type.gif
     :align: right
     :scale: 100
 
@@ -479,7 +479,7 @@ Thus, the chargeability of a rock increases and its tortuosity increases.
 .. after a forcing current is removed. The following figure illustrates the
 .. measurable effect.
 
-..  .. figure:: ./images/images_duplicates/IP_source.gif
+..  .. figure:: images/images_duplicates/IP_source.gif
 ..     :align: center
 ..     :scale: 100 %
 
@@ -536,13 +536,13 @@ Thus, the chargeability of a rock increases and its tortuosity increases.
 .. why this is true. In addition, the surface interactions between clay minerals
 .. and fluids enhance the ability of these materials to hold charges.
 
-..  .. figure:: ./images/images_duplicates/illite.gif
+..  .. figure:: images/images_duplicates/illite.gif
 ..     :align: center
 ..     :scale: 120 %
 
 ..     Illite (a clay mineral) with surface area-to-volume ratio of :math:`100m^2/g` (1000 times greater than sandstone)
 
-..  .. figure:: ./images/images_duplicates/quartz.gif
+..  .. figure:: images/images_duplicates/quartz.gif
 ..     :align: center
 ..     :scale: 120 %
 
@@ -568,13 +568,13 @@ Thus, the chargeability of a rock increases and its tortuosity increases.
 .. boundary layer thicknesses (which is the thickness of ions adsorbed to a
 .. surface).
 
-..  .. figure:: ./images/images_duplicates/memb1.gif
+..  .. figure:: images/images_duplicates/memb1.gif
 ..     :align: center
 ..     :scale: 100 %
 
 .. Charges cannot flow easily, so they accumulate when an electric field is applied.
 
-..  .. figure:: ./images/images_duplicates/memb2.gif
+..  .. figure:: images/images_duplicates/memb2.gif
 ..     :figclass: center
 ..     :align: center
 ..     :scale: 100 %
@@ -583,13 +583,13 @@ Thus, the chargeability of a rock increases and its tortuosity increases.
 .. The result is a net charge dipole which adds to any other voltages measured at
 .. the surface.
 
-..  .. figure:: ./images/images_duplicates/memb3.gif
+..  .. figure:: images/images_duplicates/memb3.gif
 ..     :align: center
 ..     :scale: 100 %
 
 .. A second form of membrane polarization is similar to the first:
 
-..  .. figure:: ./images/images_duplicates/memb_pol_2nd_type.gif
+..  .. figure:: images/images_duplicates/memb_pol_2nd_type.gif
 ..     :align: right
 ..     :scale: 100
 
@@ -610,21 +610,21 @@ Thus, the chargeability of a rock increases and its tortuosity increases.
 .. Electrode polarization occurs when pore space is blocked by metallic
 .. particles. Again, charges accumulate when an electric field is applied.
 
-..  .. figure:: ./images/images_duplicates/elec_pol_1.gif
+..  .. figure:: images/images_duplicates/elec_pol_1.gif
 ..     :align: center
 ..     :scale: 100
 
 .. The result is two electrical double layers which add to voltages measured at
 .. the surface.
 
-..  .. figure:: ./images/images_duplicates/elec_pol_2.gif
+..  .. figure:: images/images_duplicates/elec_pol_2.gif
 ..     :align: center
 ..     :scale: 100
 
 .. Comments on electrode polarization
 .. ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-..  .. figure:: ./images/images_duplicates/elec_pol_3.gif
+..  .. figure:: images/images_duplicates/elec_pol_3.gif
 ..     :align: right
 ..     :scale: 100
 
@@ -636,7 +636,7 @@ Thus, the chargeability of a rock increases and its tortuosity increases.
 .. flow across the barrier. These interfaces look like the top figure and have
 .. the simplified circuit analogue shown in the bottom figure.
 
-..  .. figure:: ./images/images_duplicates/elec_pol_4.gif
+..  .. figure:: images/images_duplicates/elec_pol_4.gif
 ..     :align: right
 ..     :scale: 100 %
 
@@ -667,7 +667,7 @@ Thus, the chargeability of a rock increases and its tortuosity increases.
 .. Spectral Induced Polarization
 .. =============================
 
-..  .. figure:: ./images/images_duplicates/spectral_ip.gif
+..  .. figure:: images/images_duplicates/spectral_ip.gif
 ..     :align: right
 ..     :scale: 100 %
 
