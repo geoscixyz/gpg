@@ -3,6 +3,34 @@
 Processing
 **********
 
+Temporal variations are often larger than geophysical anomalies. They must be
+accounted for in all surveys and this is usually done by acquiring data at a
+fixed base-station. Another alternative is to acquire :ref:`gradient
+data<magnetics_gradient_data>` that use two fixed sensors.
+:numref:`space_weather` shows an example of magnetic noise that may be
+encountered as a result of a geomagnetic storm. These temporal variations have
+an impact on magnetic data measured over time scales of several days, hours,
+or minutes.
+
+The Geological Survey of Canada has a web page, which can provide graphs of
+diurnal variations observed at any of 11 magnetic observatories in Canada, for
+any day in the most recent 3 years. Find this facility by starting at the`GSC
+Geomagnetic data page`_. This resource is also a link to other information
+about magnetics.
+
+.. figure:: ./images/pipe3_timelapse_edit.gif
+    :align: center
+    :scale: 75%
+    :name: space_weather
+
+    : Adapted from `NRC`_
+
+
+.. _GSC Geomagnetic data page: http://www.geomag.nrcan.gc.ca/index-eng.php
+.. _NRC: http://www.spaceweather.gc.ca/tech/se-pip-en.php
+
+.. _magnetics_buried_dipole:
+
 Removal of time variations
 ==========================
 

@@ -6,8 +6,8 @@ Introduction
 Magnetic surveys
 ================
 
-In geophysical magnetic surveying the Earth's magnetic field causes, or
-induces, subsurface materials to become magnetized. Magnetic methods are used in wide range on problems:
+In geophysical magnetic surveying, the Earth's magnetic field causes, or
+induces, subsurface materials to become magnetized. Magnetic methods are used in a wide range of applications such as:
 
  - visualization tool for geological mapping
 
@@ -53,7 +53,7 @@ Subsurface materials become magnetized by this field,
 and the data are measurements of the magnetic field at the Earth's
 surface, in the air, in space, or within boreholes. The measured magnetic
 field will be a superposition of Earth's field and the induced secondary
-fields caused by magnetization of buried materials.
+fields caused by magnetization of buried materials. The end goal of a magnetic survey is to infer information about the sub-surface from the measured magnetic field data above ground.
 
 .. list-table:: :Principals of magnetic surveys.
    :header-rows: 0

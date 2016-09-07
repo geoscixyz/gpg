@@ -3,7 +3,7 @@
 Susceptibility
 ==============
 
-For the magnetic survey, the physical property of interest is :ref:`magnetic susceptibility<physprop_mag_susc>`. It describes the ability of matter to become :ref:`magnetized<physprop_magnetization>` other an applied :ref:`magnetic field<physprop_magnetic_field>`. The straight of the anomalous field originating from magnetized objects depend on their shape, location and magnetization direction such that:
+For the magnetic survey, the physical property of interest is :ref:`magnetic susceptibility<physprop_mag_susc>`. It describes the ability of matter to become :ref:`magnetized<physprop_magnetization>` other an applied :ref:`magnetic field<physprop_magnetic_field>`. The straight of the anomalous field originating from magnetized objects depend on their shape, location and magnetization such that:
 
 :math:`\mathbf{b} = \frac{\mu_0}{4\pi}  \int_{V}   \mathbf{M} \cdot \nabla \nabla \left(\frac{1}{r}\right) \; dV`
 
