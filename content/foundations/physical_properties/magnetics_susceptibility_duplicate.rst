@@ -116,7 +116,7 @@ magnetic properties and their associated units are tabulated below.
 
 Some useful conversions for units are:
 
- .. .. figure:: images/images_duplicates/susceptibility_chart.gif
+ .. .. figure:: images/susceptibility_chart.gif
     .. :align: center
     .. :scale: 100%
 
@@ -144,7 +144,7 @@ This magnetization changes the resonance frequency of the current within the cir
 Therefore, the KT-10 measures a change in resonance frequency, and uses it to approximate the susceptibility of the rock.
 
 .. figure::
-    images/images_duplicates/magnetic_susceptibility_measurement_KT10.jpg
+    images/magnetic_susceptibility_measurement_KT10.jpg
     :align: center
     :width: 50%
 
@@ -176,7 +176,7 @@ A more detailed analysis of rock magnetic properties can be found in Clark and E
     :scale: 100%
 
 
-.. figure:: images/images_duplicates/susceptibility_chart.gif
+.. figure:: images/susceptibility_chart.gif
     :align: center
     :scale: 100%
 

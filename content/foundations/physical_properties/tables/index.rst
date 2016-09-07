@@ -16,5 +16,6 @@ Tables of Physical Properties
     permittivity_minerals
     permittivity_rocks
     permittivity_sediments
+    chargeability_sulphide_rocks
     chargeability_sulphide_minerals
     chargeability_sulphide_percent

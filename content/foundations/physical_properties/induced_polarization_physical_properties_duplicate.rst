@@ -247,7 +247,7 @@ Numerical values for the integrated chargeability are typically given in ms.
 
 
 
-.. figure:: ../../induced_polarization/images/electrode_conductivity_measurements.png
+.. figure:: images/electrode_conductivity_measurements.png
     :align: right
     :scale: 35%
 
@@ -399,9 +399,11 @@ Thus:
 Chargeabilities of Common Rocks
 ===============================
 
-Tables (from Telford et al, 1976) provide a very general guide to the integrated chargeabilities of materials.
-Because different intervals of integration :math:`[t_1,t_2]` are used for each table, chargeability values cannot be compared between tables.
-However, we can infer several things from these tables:
+Tables (from Telford et al, 1976) provide a very general guide to the
+integrated chargeabilities of materials. Because different intervals of
+integration :math:`[t_1,t_2]` are used for each table, chargeability values
+cannot be compared between tables. However, we can infer several things from
+these tables:
 
 
 - The individual properties of rocks results in a variation in chargeability (click :ref:`here<table_chargeability_rocks>` for table).
