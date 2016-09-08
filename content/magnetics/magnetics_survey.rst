@@ -3,6 +3,9 @@
 Survey
 ******
 
+.. create example with applet showing bad cases for survey area, sampling...
+
+
 A measurement of the magnetic field at any location will involve either
 recording the amplitude of the field or one of its three components.
 Instruments are deployed on the ground, in marine work, on helicopters and
@@ -30,7 +33,7 @@ Proton Precession Magnetometer
 
 - Advantages: Sensitive to 1 nT, small, rugged & reliable, not sensitive to orientation.
 
-- Disadvantages: Takes >1 sec to read, sensitive to high gradients. 
+- Disadvantages: Takes >1 sec to read, sensitive to high gradients.
 
 - The measurement process is related to nuclear magnetic resonance (NMR). A
   proton source (possibly as simple as a volume of water) is subjected to an
@@ -90,11 +93,11 @@ Magnetic Gradiometer
 Line profiles for a range of situations
 =======================================
 
-.. figure:: ./images/cartoon-2dykes.jpg 
+.. figure:: ./images/cartoon-2dykes.jpg
   :figclass: float-right-360
   :align: right
-  :scale: 100%  
-  
+  :scale: 100%
+
 Recall that the anomaly pattern recorded over any given target depends upon
 latitude, target orientation, profile orientation, remanent magnetization of
 the target, and possible superposition of adjacent targets. To illustrate,
@@ -153,9 +156,9 @@ use of these codes. See MAG3D in IAG's Chapter 10, "Sftwr & manuals" .
 +-------------------+----------------+-------------------+---------------+---------------+
 |  **Model**        | **model file** | **location file** | **mesh file** | **data file** |
 +===================+================+===================+===============+===============+
-| Single block:     |`block_sus`_    |`block_sus_loc`_   |`block_msh`_   |`block_mag`_   |       
+| Single block:     |`block_sus`_    |`block_sus_loc`_   |`block_msh`_   |`block_mag`_   |
 +-------------------+----------------+-------------------+---------------+---------------+
-| Five block:       |`block_5_sus`_  |`block_5_sus_loc`_ |`block_msh`_   |`block_5_mag`_ | 
+| Five block:       |`block_5_sus`_  |`block_5_sus_loc`_ |`block_msh`_   |`block_5_mag`_ |
 +-------------------+----------------+-------------------+---------------+---------------+
 | Continuous earth: |`v_sus`_        |                   |`v_msh`_       |`v_mag`_       |
 +-------------------+----------------+-------------------+---------------+---------------+

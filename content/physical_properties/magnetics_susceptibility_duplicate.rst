@@ -1,3 +1,5 @@
+.. _physprop_mag_susc:
+
 Susceptibility
 **************
 
@@ -6,6 +8,8 @@ Magnetic susceptibility (:math:`\kappa`) quantifies the magnetization (:math:`\v
 .. math::
     \vec M = \kappa \vec H
 
+
+.. _physprop_magnetization:
 
 **Magnetization**
 
@@ -28,6 +32,7 @@ Since magnetization is the dipole moment per unit volume:
 
 where the units for magnetization are Am :math:`\! ^2`/m :math:`\! ^3` = A/m.
 
+.. _physprop_magnetic_field:
 
 **Magnetic Field**
 
@@ -52,6 +57,7 @@ For many materials, the strength of the alignment of the magnetic moments
 increases linearly with the strength of the applied field. The magnetic
 susceptibility therefore defines a constant of proportionality.
 
+.. _physprop_mag_permeability:
 
 **Magnetic Permeability**
 
@@ -154,7 +160,7 @@ Therefore, the KT-10 measures a change in resonance frequency, and uses it to ap
 Laboratory measurements are based on the same physical principles as the KT-10.
 However, the circuit and sample holder used in laboratory measurements are more sophisticated, resulting in more accurate susceptibility values.
 
-
+.. _physprop_susc_common_rocks:
 
 Susceptibility of Common Rocks
 ==============================
