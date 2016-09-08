@@ -8,33 +8,20 @@ Fundamental Physics of Seismology
 
 If we strike the earth with a hammer, an explosive charge, or an earthquake,
 the material of the earth near the source becomes compressed (or extended) and
-twisted. Earth materials are elastic and these deformations propagate away
-from the source. The speed of propagation and the type of motion propagated
-depends upon the elastic properties of the material, namely
+twisted. These deformations propagate away from the source. The speed of propagation and the type of motion propagated depends upon the physical properties of the material. Most earth materials under normal seismic conditions can be described by density and two elastic parameters:
 
 1. density: :math:`\rho`
 2. bulk modulus:  :math:`\kappa` (compressibility)
 3. shear modulus:  :math:`\mu` (twistability)
 
-By knowing the time at which the source was excited and measuring the time needed for the excitation to travel from the source to a receiver, it is
-possible to obtain information about the structure and elastic properties of the subsurface.
+By knowing the time at which the source was excited and measuring the time needed for the excitation to travel from the source to an array of receivers, it is possible to obtain information about the structure and physical properties of the subsurface.
 
-
-Applications of Seismic Surveying
-=================================
-
-1. delineation of sedimentary layers
-2. determination of depth to bedrock, and topography of the
-3. bedrock horizon
-4. locating faults
-5. large scale structure of earth (using earthquakes)
-6. characterization of near surface material properties.
-
+The propagation of seismic waves in the earth is governed by the theory of linear elasticity. A detailed mathematical treatment of elasticity is beyond the scope of this course. In this page we will give a very brief introduction to the concepts of stress and strain, how they relate to elasticity, and how density and the elastic properties of a material relate to the propagation of seismic waves. We will then describe how seismic waves can be approximated using a simple ray model. The remainder of our study of seismic surveying in this course will then be conducted using the ray model.
 
 Stress
 ======
 
-.. sidebar:: Compressive and Tensile Stress (replace w subsurfwiki images)
+.. sidebar:: Compressive and Tensile Stress 
 
 	.. figure:: images/compressive.png
 		:align: center
@@ -46,36 +33,27 @@ Stress
 		
 		Tensile normal stress
 	
-	.. figure:: images/Elastic_shear_modulus.png
+	.. figure:: images/Elastic_shear_modulus-subwiki.png
 		:align: center
 		
-		Shear stress
+		Shear stress. Image from Subsurface Wiki.
 
-When an external force is applied to a body, there are balanced internal
-forces set up within the body. Stress is a measure of these internal forces.
-Units are "force per unit area" or N/m :math:`^2` . There are two types of
-stress:
-
-Stress can be **normal** to the surface it is applied on, and hence
-**compressive** or **tensile**.
-
-Stress can be **parallel** to the surface. This is **shear** stress (bottom
-figure)
+Stress is defined as the external force applied to a body divided by the cross-sectional area of the body over which the force is applied. Stress is a measure of these internal forces. It has units of "force per unit area"--N/m :math:`^2` in SI units. There are two main types of stress, normal and shear. As you would expect normal stress is applied in a direction normal to the surface it is applied on. Normal stresses can be further divided into compressive and tensile stresses. Shear stress is applied parallel to a surface. Compressive, tensile and shear stress are illustrated in the figure to the right.
 
 
 Strain
 ======
 
-If a body is stressed it will undergo a change in size and shape. The body is
+If a body is stressed it will undergo a change in size and shape. The body is said to be
 **strained**. If the strains are small then the body will recover its original
 shape when the stress is removed. This is **elastic strain**. If the strain is
 too great so that the **yield strength** is exceeded, then the body deforms
 **plastically** and may ultimately fracture. Plastic strain is not
 recoverable.
 
-The figure plots how strain (horizontal axis) accumulates as stress (vertical
+The figure below plots how strain (horizontal axis) accumulates as stress (vertical
 axis) is applied. While behaviour is elastic, increasing or decreasing the
-stress does nothing to change the material. Once stress is sufficient to make
+stress does nothing to permanently change the material. Once stress is sufficient to make
 material behave plastically, reducing the stress results in reduced strain
 along a different path on the graph. Once the fracture point is reached, the
 strain is released by breaking.
@@ -83,42 +61,12 @@ strain is released by breaking.
 .. figure :: ./images/stressstrain.png
 	:align: center
 	:scale: 80 %
-
+	
+	
 Elastic Moduli
 ==============
 
-The linear relationship between stress and strain is known as Hooke's Law and
-is specified by five elastic moduli or elastic constants which express the
-ratio of a particular stress to a resultant strain. Four important constants
-are explained briefly next. Elastic constants are defined in SubSurfWiki_
-
-.. _SubSurfWiki: http://www.subsurfwiki.org/wiki/Elastic_modulus
-
-
-Young's Modulus
----------------
-
-Consider a rod (figure right) of length l, cross-sectional area :math:`A`, to
-which a uniform force :math:`F` is applied to each end (a tensional force in
-this case): Young's modulus, :math:`E`, is given by
-
-.. math::
-	E = \frac{\text{longitudinal stress}~ (F/A)}{\text{longitudinal strain} ~(\Delta l/l)}
-
-.. figure:: ./images/youngs.png
-		:align: center
-		:scale: 60%
-
-
-Poisson's Ratio
----------------
-
-The rod will also contract in radius (because it is being extended). The
-radial strain is :math:`\Delta r / r`. **Poisson's ratio** is given by
-
-.. math::
-	\sigma = \frac{\text{lateral strain} ~(\Delta r / r)}{\text{longitudinal strain}~ (\Delta l/l)}
-
+In the elastic regime it is often acceptable to assume a linear relationship between stress and strain. This linear relationship is known as Hooke's Law. In addition to linear elasticity, basic seismic techniques also assume that earth materials are isotropic, meaning that their response to stress is independent of the direction from which the stress was applied. The relationship between stress and strain in a linear isotropic material can be described by two numbers, which are intrinsic properties of the material. Linear elasticity can be mathematically formalized in multiple ways and the different formulations lead to different definitons of these material parameters. They may be known as Lam\'e parameters or as the bulk and shear moduli. Different definitions of the elastic moduli may be more useful than others in different situations, or the reason for choosing one representation over another may be purely a matter of convention. Please see `here <https://en.wikipedia.org/wiki/Lam%C3%A9_parameters>`__ for a table that shows the relationship between various representations of isotropic elastic parameters in a convenient representation. In this course we are concerned with how the elastic moduli are related to the velocity of seismic waves in the earth and how they may be related to other material properties of interest such as porosity and permeability. Some important elastic moduli are listed below
 
 Bulk Modulus
 ------------
@@ -151,14 +99,36 @@ to :math:`\tan \theta`. The **shear modulus** is
 .. math::
 	\mu = \frac{\text{shear stress} ~ \tau}{\text{shear strain} ~ \tan\theta}
 
+Young's Modulus
+---------------
+
+Consider a rod (figure right) of length l, cross-sectional area :math:`A`, to
+which a uniform force :math:`F` is applied to each end (a tensional force in
+this case): Young's modulus, :math:`E`, is given by
+
+.. math::
+	E = \frac{\text{longitudinal stress}~ (F/A)}{\text{longitudinal strain} ~(\Delta l/l)}
+
+.. figure:: ./images/youngs.png
+		:align: center
+		:scale: 60%
+
+
+Poisson's Ratio
+---------------
+
+The rod will also contract in radius (because it is being extended). The
+radial strain is :math:`\Delta r / r`. **Poisson's ratio** is given by
+
+.. math::
+	\sigma = \frac{\text{lateral strain} ~(\Delta r / r)}{\text{longitudinal strain}~ (\Delta l/l)}
+
+
 
 Elastic model for the Earth rocks
 =================================
 
-Earth materials are **elastic**. The easiest way to obtain intuition is to
-think about rocks as being made up of a set of connected springs. Apply a
-force (stress) to any part and you will eventually get motion elsewhere. There
-are two general types of waves that can travel in the elastic material.
+When the earth is deformed elastically, the small strains will propagate away in all directions from the site of the original stress. The easiest way to obtain intuition about this is to think about rocks as being made up of a set of connected springs. Apply a force (stress) to any part and you will eventually get motion elsewhere. This propagation of energy is a type of wave motion. There are two general types of waves that can travel in the elastic material.
 
 .. sidebar:: Elastic model for rocks
 
@@ -171,7 +141,7 @@ are two general types of waves that can travel in the elastic material.
    as the ground / air boundary.
 
 Specific types of waves within these general types are described below. Each
-wave type travels with a velocity that depends upon the elastic properties.
+wave type travels through a given material with a velocity that depends upon the elastic properties and density of the material.
 
 
 Body Waves
