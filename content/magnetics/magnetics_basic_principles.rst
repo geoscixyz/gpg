@@ -30,27 +30,38 @@ pole in the southern hemisphere (:numref:`earth_mag_vectors`). The source of
 this magnetic field is thought to originate deep within the mantle due to
 convection.
 
-
 The field at any location on (or above or within) the Earth are generally described in terms described of magnitude (H), declination (D) and inclination (I) as illustrated in :numref:`coord_sys`.
 
 .. figure:: ./images/Mag_Coordinate_System.png
   :align: right
-  :figwidth: 50%
+  :figwidth: 40%
   :name: coord_sys
 
   : Sketch of coordinates used to describe magnetic fields.
 
-* **H**: The magnitude of the vector representing Earth's magnetic field straight.
+* **H**: The magnitude of the vector representing Earth's magnetic field strength.
 * **D**: Declination is the angle that *H* makes with respect to geographic north (positive angle clockwise).
 * **I**: Inclination is the angle between **B** and the horizontal. It can vary between -90° and +90° (positive angle down).
 
+.. _magnetics_IGRF:
+
+The IGRF
+--------
+
 The details of Earth's field at any location on Earth are described using a
 global reference model called the :ref:`IGRF<magnetics_IGRF>` or International
-Geomagnetic Reference Field. This field has a strength of approximately 70,000
-nanoTeslas (nT) at the magnetic poles and approximately 25,000 nT at the
-magnetic equator. Field orientation and strength varies around the world, as
-presented in :numref:`IGRF_three_figures` based upon the IGRF from 2003
-(NOAA_).
+Geomagnetic Reference Field. The IGRF is a mathematical model that describes
+the field and its secular changes as a spherical harmonic expansion. It is
+updated every five years, and **later** versions may re-define the field at
+**earlier** times. This is important to remember if you are comparing old maps
+to new ones.  This field has a strength of approximately 70,000 nanoTeslas
+(nT) at the magnetic poles and approximately 25,000 nT at the magnetic
+equator. Field orientation and strength varies around the world, as presented
+in :numref:`IGRF_three_figures` based upon the IGRF from 2003 (NOAA_). The
+IGRF is a product of the International Association of Geomagnetism and
+Aeronomy (IAGA_), and the original version was defined in 1968.
+
+.. _IAGA: http://www.ngdc.noaa.gov/IAGA/vmod/
 
 .. _magnetics_three_figures:
 
@@ -73,6 +84,16 @@ presented in :numref:`IGRF_three_figures` based upon the IGRF from 2003
           Earth's field strentgh
       -
 
+
+Details about Earth's field
+can be found at government geoscience websites such as the `NOAA`_ geomagnetism home page, or the `Canadian National Geomagnetism Program`_ home
+page.
+
+.. _NOAA: http://www.ngdc.noaa.gov/geomag/geomag.shtml
+.. _Canadian National Geomagnetism Program: http://www.geomag.nrcan.gc.ca/index-eng.php
+.. _magnetic field calculator: http://www.ngdc.noaa.gov/geomag-web/
+.. _page: http://www.ngdc.noaa.gov/ngdc.html
+.. _homepage: http://www.geomag.nrcan.gc.ca/index-eng.php
 
 
 
@@ -129,57 +150,25 @@ primarily to currents in the ionized upper atmosphere. These changes vary over m
 ..  - **Polar** :
 
 
-.. _magnetics_variability:
+..  - Every five years, the IAGA issues a contemporary main field model that
+.. predicts the field for the next five years. These models have names that are
+.. prefixed with "IGRF." Each new model updates the model that was used to
+.. predict the previous five (or more) years. Updated models are called **DGRF**
+.. for **Definitive Geomagnetic Reference Field**. Major updates since 1980 use
+.. data from MAGSAT, consisting of measurements of vector components and total
+.. intensity of the geomagnetic field between 350 and 560 km altitude.
+
+.. To correct data sets which had older versions of reference fields removed, add
+.. :math:`(F_0 - F_n)` to each data point, where the two parameters are total
+.. intensity values computed from the old and new reference fields respectively.
+.. See Peddie N.W. 1982, 1983, and 1986 for details. Charts of many types are
+.. available on-line, as downloadable postscript files, and for sale (less than
+.. $5.00 each) from the USGS, NOAA, GSC, and just about any other government
+.. geoscience agency. For example, you could use either the NOAA Geomagnetism
+.. page_, or the Canadian National Geomagnetism Program's homepage_.
 
 
 
-.. _magnetics_IGRF:
-
-The IGRF
---------
-
-Here are a few remarks about the IGRF or International Geomagnetic Reference Field.
-
-The IGRF is a mathematical model that describes the field and its secular
-changes as a spherical harmonic expansion. It is updated every five years, and
-**later** versions may re-define the field at **earlier** times. This is
-important to remember if you are comparing old maps to new ones. The IGRF is a
-product of the International Association of Geomagnetism and Aeronomy (IAGA_),
-and the original version was defined in 1968.
-
-.. _IAGA: http://www.ngdc.noaa.gov/IAGA/vmod/
-
-Every five years, the IAGA issues a contemporary main field model that
-predicts the field for the next five years. These models have names that are
-prefixed with "IGRF." Each new model updates the model that was used to
-predict the previous five (or more) years. Updated models are called **DGRF**
-for **Definitive Geomagnetic Reference Field**. Major updates since 1980 use
-data from MAGSAT, consisting of measurements of vector components and total
-intensity of the geomagnetic field between 350 and 560 km altitude.
-
-To correct data sets which had older versions of reference fields removed, add
-:math:`(F_0 - F_n)` to each data point, where the two parameters are total
-intensity values computed from the old and new reference fields respectively.
-See Peddie N.W. 1982, 1983, and 1986 for details. Charts of many types are
-available on-line, as downloadable postscript files, and for sale (less than
-$5.00 each) from the USGS, NOAA, GSC, and just about any other government
-geoscience agency. For example, you could use either the NOAA Geomagnetism
-page_, or the Canadian National Geomagnetism Program's homepage_.
-
-
-Details about Earth's field
-can be found at government geoscience websites such as the `NOAA`_ geomagnetism home page, or the `Canadian National Geomagnetism Program`_ home
-page.
-
-
-**Other resources**
- - Earth's `magnetic field calculator`_.
-
-.. _NOAA: http://www.ngdc.noaa.gov/geomag/geomag.shtml
-.. _Canadian National Geomagnetism Program: http://www.geomag.nrcan.gc.ca/index-eng.php
-.. _magnetic field calculator: http://www.ngdc.noaa.gov/geomag-web/
-.. _page: http://www.ngdc.noaa.gov/ngdc.html
-.. _homepage: http://www.geomag.nrcan.gc.ca/index-eng.php
 
 .. References:
 
@@ -309,7 +298,7 @@ some simple objects like a pipe or sheet.
 
 
 First we begin with the concept of magnetic charges or poles. They can't be
-generated in practise. If you cut a small magnet in half, you will have two
+generated in practice. If you cut a small magnet in half, you will have two
 smaller dipole magnets. Let :math:`Q` be a magnetic charge. It has units of
 Webers. The charge creates a magnetic field, :math:`B` that is given by
 
@@ -327,7 +316,7 @@ the field lines have the same shape but they point toward the source.
 	:scale: 75%
 	:name: Positive_magnetic_pole
 
-	Magnetic field lines generated by a postive magnetic pole.
+	Magnetic field lines generated by a positive magnetic pole.
 
 
  .. figure:: ./images/Negative_magnetic_pole.png
