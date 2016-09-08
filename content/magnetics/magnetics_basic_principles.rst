@@ -106,9 +106,9 @@ changes in mantle convection. Knowing the acquisition date of a magnetic
 survey is important in order to understand the observed magnetic anomalies. In
 2004, Earth's magnetic north pole was close to Melville Island (Nunavut) at
 (Latitude, Longitude)=(79N, 70W). In Vancouver (BC), the current field is
-orientated at D ~ 20°N,  ~ 70° Inclination. The Geological Survey of Canada is
+orientated at D ~ 20°N,  ~ 70° Inclination. Various governmental agencies are
 actively collecting and archiving information about the parameters of the
-field across Canada and can be queried with the `magnetic field calculator`_.
+field worldwide and can be queried with the `magnetic field calculator`_.
 
 
 Magnetic Weather
@@ -179,41 +179,60 @@ primarily to currents in the ionized upper atmosphere. These changes vary over m
 
 .. _anomalous_field:
 
-Anomalous Field
-===============
+Magnetic anomaly
+================
 
-Local variations in :ref:`physical property<magnetic_physical_property>` may
-give rise to secondary fields measurable from a distance. For geological or
-engineering problems, these *anomalous fields* are the data to be interpreted.
-The basic ideas behind the magnetic problem are illustrated in
-:numref:`mag_object`.
+Having identified the source of the magnetic experiment, we now look at the
+its effect on susceptible material. The basic ideas behind the induced
+magnetization process is illustrated below.
 
-(a) An object with magnetic susceptibility :math:`\kappa` is buried in the
-    earth.
+ .. raw:: html
+    :file: buried_dipole.html
 
-(b) At the location of burial, the earth's field magnetic field is :math:`\vec{H}` and the magnetization in the object is :math:`\vec{M} = \kappa \vec{H}`.
+An object with magnetic susceptibility :math:`\kappa` is buried in the
+earth. At the location of burial, the earth's magnetic field is
+:math:`\mathbf{H}` and the magnetization in the object is:
 
-(c) If the object is "small", that is all of the object's dimensions are several times smaller than the depth to its center, then  the object acts as a :ref:`magnetic dipole<fields_magnetic_dipole>` -- that is, a little bar magnet with strength and direction caused by the inducing field. The  dipole moment of the object is :math:`\vec{m} = \text{Volume} * \vec{M}`
+.. math:: \mathbf{M} = \kappa \mathbf{H}.
 
-(d) The magnetic field of the object is referred to as the "secondary" field or sometimes the "anomalous" field :math:`\vec{B_A}`. This is what we seek to measure.
+The straight of the anomalous field originating from the magnetized object depends on its shape, location and magnetization such that:
 
-The pattern recorded at the surface arises by measuring
-the field strength everywhere on the surface, removing the Earth's field, and
-then plotting the results as a contour map of anomalous field strength. In the
-third figure, regions of blue anomalous field are "negative" because at those
-surface locations, the **anomalous** field crossing that surface points in the
-opposite direction for Earth's field.
+.. math:: \mathbf{B}_A = \frac{\mu_0}{4\pi}  \int_{V}   \mathbf{M} \cdot \nabla \nabla \left(\frac{1}{r}\right) \; dV
+  :label: integral
+
+where :math:`\mu_0` is the :ref:`magnetic
+permeability<physprop_mag_permeability>`, :math:`\mathbf{M}` is the
+magnetization per unit volume :math:`\mathbf{V}`, and :math:`r` defines the
+distance between the object and the location of the observer. The magnetic
+field of the object is referred to as the "secondary" field or sometimes the
+"anomalous" field :math:`\mathbf{B}_A`. For geological or engineering
+problems, these anomalous fields are the *data* to be interpreted, and this is
+what we seek to measure. Unfortunately, the measured field data are a bit more
+complicated:
+
+.. math:: \mathbf{B}^{obs} = \mathbf{B}_0 + \mathbf{B}_A\;,
+
+where :math:`\mathbf{B}^{obs}` is the combined signal from the Earth's field :math:`\mathbf{B}_0` and from the ground :math:`\mathbf{B}_A`. Exactly how the anomalous field is extracted from the total field is explained in the :ref:`Data<magnetics_data>` section.
+
+From :eq:`integral`, we note that the induced response of the field will vary both in magnitude and orientation with respect to the inducing magnetic field :math:`\mathbf{H}`. Therefore, the magnetic response of an object buried in Canada may look a lot different if buried near the equator.
 
 
-.. list-table:: : Buried magnetized object.
-   :header-rows: 0
-   :widths: 10
-   :stub-columns: 0
-   :name: mag_object
+Note about :math:`\mathbf{B}` and :math:`\mathbf{H}`
+----------------------------------------------------
 
-   *  - .. raw:: html
-            :file: buried_dipole.html
+We often use both :math:`\mathbf{B}` and :math:`\mathbf{H}` interchangeably to describe the magnetic field. To be accurate, :math:`\mathbf{B}` should be refereed to as the *magnetic flux density*, although in air, both quantities proportional to each other (:ref:`read more<physprop_mag_permeability>`).
 
+
+Remanent Magnetization
+----------------------
+From :eq:`integral`, the
+
+
+
+Approximating the field
+=======================
+
+Solving the integral in xx can be challenging for objects with complicated geometry, as we expected to be when thinking of geological structures. We can in many cases approximate the response
 
 .. _fields_magnetic_dipole:
 
@@ -225,6 +244,8 @@ observations, is crucial because all real scenarios can be thought of as a
 combination (superposition) of dipoles (see the "Buried structures" section).
 More advanced applets will be used to look at the responses of some of these
 bodies.
+
+If the object is "small", that is all of the object's dimensions are several times smaller than the depth to its center, then  the object acts as a :ref:`magnetic dipole<fields_magnetic_dipole>` -- that is, a little bar magnet with strength and direction caused by the inducing field.
 
 In the accompanying :ref:`applet<magnetics_applet>`, observations of individual components :math:`(B_x,B_y,B_z)` can be displayed. The projection of :math:`\vec{B_A}` onto the direction of Earth's field :math:`\hat{B_0}` is called the *total field* (:math:`B_t`).
 

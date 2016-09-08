@@ -3,11 +3,7 @@
 Susceptibility
 ==============
 
-For the magnetic survey, the physical property of interest is :ref:`magnetic susceptibility<physprop_mag_susc>`. It describes the ability of matter to become :ref:`magnetized<physprop_magnetization>` other an applied :ref:`magnetic field<physprop_magnetic_field>`. The straight of the anomalous field originating from magnetized objects depend on their shape, location and magnetization such that:
-
-:math:`\mathbf{b} = \frac{\mu_0}{4\pi}  \int_{V}   \mathbf{M} \cdot \nabla \nabla \left(\frac{1}{r}\right) \; dV`
-
-where :math:`\mu_0` is the :ref:`magnetic permeability<physprop_mag_permeability>`, :math:`\mathbf{M}` is the magnetization per unit volume :math:`\mathbf{V}` and :math:`r` defines the distance between the object and the location of the measured field :math:`\mathbf{b}`. In a geological context, :ref:`magnetite-rich rocks<physprop_susc_common_rocks>` are the main source of magnetic signal, both in terms of abundance and susceptibility. In engineering, buried metallic objects are generally highly susceptible, but can also carry a substantial remanent component.
+For the magnetic survey, the physical property of interest is :ref:`magnetic susceptibility<physprop_mag_susc>`. It describes the ability of matter to become :ref:`magnetized<physprop_magnetization>` other an applied :ref:`magnetic field<physprop_magnetic_field>`. In a geological context, :ref:`magnetite-rich rocks<physprop_susc_common_rocks>` are the main source of magnetic signal, both in terms of abundance and susceptibility. In engineering, buried metallic objects are generally highly susceptible, but can also carry a substantial remanent component.
 
 .. raw:: html
 

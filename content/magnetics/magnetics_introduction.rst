@@ -55,11 +55,11 @@ surface, in the air, in space, or within boreholes. The measured magnetic
 field will be a superposition of Earth's field and the induced secondary
 fields caused by magnetization of buried materials. The end goal of a magnetic survey is to infer information about the sub-surface from the measured magnetic field data above ground.
 
-.. list-table:: :Principals of magnetic surveys.
-   :header-rows: 0
-   :widths: 10
-   :stub-columns: 0
-   :name: mag_survey
+.. .. list-table:: :Principals of magnetic surveys.
+..    :header-rows: 0
+..    :widths: 10
+..    :stub-columns: 0
+..    :name: mag_survey
 
-   *  - .. raw:: html
-            :file: intro.html
+..    *  - .. raw:: html
+..             :file: intro.html
