@@ -36,7 +36,7 @@ Stress
 	.. figure:: images/Elastic_shear_modulus-subwiki.png
 		:align: center
 		
-		Shear stress. Image from Subsurface Wiki.
+		Shear stress. `Image <http://www.subsurfwiki.org/wiki/File:Elastic_shear_modulus.png>`__ from `Subsurface Wiki`_, licensed under `CC BY 3.0`_.
 
 Stress is defined as the external force applied to a body divided by the cross-sectional area of the body over which the force is applied. Stress is a measure of these internal forces. It has units of "force per unit area"--N/m :math:`^2` in SI units. There are two main types of stress, normal and shear. As you would expect normal stress is applied in a direction normal to the surface it is applied on. Normal stresses can be further divided into compressive and tensile stresses. Shear stress is applied parallel to a surface. Compressive, tensile and shear stress are illustrated in the figure to the right.
 
@@ -45,7 +45,7 @@ Strain
 ======
 
 If a body is stressed it will undergo a change in size and shape. The body is said to be
-**strained**. If the strains are small then the body will recover its original
+**strained**. To be a bit more precise, strain is a dimensionless quantity describing the fractional change in the relative positions between points on a body. If strains are small the body will recover its original
 shape when the stress is removed. This is **elastic strain**. If the strain is
 too great so that the **yield strength** is exceeded, then the body deforms
 **plastically** and may ultimately fracture. Plastic strain is not
@@ -66,48 +66,50 @@ strain is released by breaking.
 Elastic Moduli
 ==============
 
-In the elastic regime it is often acceptable to assume a linear relationship between stress and strain. This linear relationship is known as Hooke's Law. In addition to linear elasticity, basic seismic techniques also assume that earth materials are isotropic, meaning that their response to stress is independent of the direction from which the stress was applied. The relationship between stress and strain in a linear isotropic material can be described by two numbers, which are intrinsic properties of the material. Linear elasticity can be mathematically formalized in multiple ways and the different formulations lead to different definitons of these material parameters. They may be known as Lam\'e parameters or as the bulk and shear moduli. Different definitions of the elastic moduli may be more useful than others in different situations, or the reason for choosing one representation over another may be purely a matter of convention. Please see `here <https://en.wikipedia.org/wiki/Lam%C3%A9_parameters>`__ for a table that shows the relationship between various representations of isotropic elastic parameters in a convenient representation. In this course we are concerned with how the elastic moduli are related to the velocity of seismic waves in the earth and how they may be related to other material properties of interest such as porosity and permeability. Some important elastic moduli are listed below
+In the elastic regime it is often acceptable to assume a linear relationship between stress and strain. This linear relationship is known as Hooke's Law. In addition to linear elasticity, basic seismic techniques also assume that earth materials are isotropic, meaning that their response to stress is invariant with respect to the direction from which the stress is applied. The relationship between stress and strain in a linear isotropic material can be described by two numbers, which are intrinsic properties of the material. Linear elasticity can be mathematically formalized in multiple ways and the different formulations lead to different definitons of these material parameters. They may be known as Lamé parameters or as the bulk and shear moduli. Different definitions of the elastic moduli may be more useful than others in different situations or the reason for choosing one representation over another may be purely a matter of convention. Please see `here <https://en.wikipedia.org/wiki/Lam%C3%A9_parameters>`__ for a table showing the relationship between various representations of isotropic elastic parameters in a convenient representation. In this course we are concerned with how the elastic moduli are related to the velocity of seismic waves in the earth and how they may be related to other material properties of interest such as porosity and permeability. Some important elastic moduli are described below.
 
 Bulk Modulus
 ------------
 
 Consider an initial volume :math:`V` which is subjected to a hydrostatic
-pressure (force per unit area is the same in each direction). Let :math:`\Delta
-V` be the change in volume. The **bulk modulus** is
+pressure (force per unit area is the same in each direction) :math:`P`. This pressure is a volumetric stress. Let :math:`\Delta
+V` be the change in volume resulting from this stress. The volumetric strain is :math:`\Delta V/V`. The **bulk modulus** is defined to be the volumetric stress divided by the volumetric strain:
 
 .. math::
-	\kappa = \frac{\text{Pressure (volumetric stress)} ~ P}{\text{volumetric strain} ~ (\Delta V/V)}
+	\kappa = \frac{P}{\Delta V/V}.
+	
 
-.. figure:: ./images/bulkmodulus.png
+
+.. figure:: ./images/bulk_modulus-subwiki.png
 		:align: center
-		:scale: 50%
-
+		:scale: 60%
+                
+                Bulk modulus. `Image <http://subsurfwiki.org/wiki/File:Elastic_bulk_modulus.png>`__ from `Subsurface Wiki`_, licensed under `CC BY 3.0`_.
 
 Shear Modulus
 -------------
 
-If we apply a force parallel to a surface the force per unit area is known as
-the shear stress :math:`\tau` . Consider a rectangular cube. Application of
-shear stresses to the top and bottom interfaces produce a strain proportional
-to :math:`\tan \theta`. The **shear modulus** is
-
-.. figure:: ./images/shearmodulus.png
-	:align: center
-	:scale: 70 %
-
+Consider a force :math:`F`, applied parallel to the top of a cube, with the force distributed evenly over the surface, as shown in the figure below. The force per unit area is known as the shear stress :math:`\tau`. Application of shear stresses to the top and bottom interfaces produce a strain proportional
+to the angle :math:`\tan \theta` in the image below. The **shear modulus** is defined as
 
 .. math::
-	\mu = \frac{\text{shear stress} ~ \tau}{\text{shear strain} ~ \tan\theta}
+	\mu = \frac{\tau}{\tan\theta}
+
+.. figure:: images/Elastic_shear_modulus-subwiki.png
+		:align: center
+		:scale: 60%
+		
+		Shear stress. `Image <http://www.subsurfwiki.org/wiki/File:Elastic_shear_modulus.png>`__ from `Subsurface Wiki`_, licensed under `CC BY 3.0`_.
+		
+As discussed above, the linear elastic isotropic stress-strain relationship of a material may be fully described by the bulk and shear moduli of the material. Another important alternative pair of parameters that define the elastic behaviour of a material are Young's modulus and Poisson's ratio.
 
 Young's Modulus
 ---------------
 
-Consider a rod (figure right) of length l, cross-sectional area :math:`A`, to
-which a uniform force :math:`F` is applied to each end (a tensional force in
-this case): Young's modulus, :math:`E`, is given by
+Young's modulus is defined to be the ratio of longitudinal normal stress to longitudinal normal strain. Consider the rectangular prism shown below with square cross-sectional area :math:`A = W^2` and length :math:`L`. A tensile force :math:`F` applied normal to the axis of the prism, distributed over the cross-sectional area, will generate a normal stress of :math:`P = F/A`. If this stress generates an elongation of the prism by length :math:`\Delta L`, the Young's modulus of the prism material is
 
 .. math::
-	E = \frac{\text{longitudinal stress}~ (F/A)}{\text{longitudinal strain} ~(\Delta l/l)}
+	E = \frac{P}{\Delta L/L)}
 
 .. figure:: ./images/youngs.png
 		:align: center
@@ -117,18 +119,17 @@ this case): Young's modulus, :math:`E`, is given by
 Poisson's Ratio
 ---------------
 
-The rod will also contract in radius (because it is being extended). The
-radial strain is :math:`\Delta r / r`. **Poisson's ratio** is given by
+As a result of the longitudinal stress described above the cross-sectional area of the prism may be reduced, compensating for the increase in length. Let us define the cross-sectional strain as :math:`\Delta W / W`. **Poisson's ratio** is the ratio of transverse strain to longitudinal strain due to a longitudinal stress:
 
 .. math::
-	\sigma = \frac{\text{lateral strain} ~(\Delta r / r)}{\text{longitudinal strain}~ (\Delta l/l)}
+	\sigma = \frac{\Delta W / W}{\Delta L/L}
 
+Note that it is possible for :math:`\sigma` to be zero. The increase in length could be compensated for by increasing pore space for example. Cork is an example of such a material.
 
-
-Elastic model for the Earth rocks
+Elastic model for Earth rocks
 =================================
 
-When the earth is deformed elastically, the small strains will propagate away in all directions from the site of the original stress. The easiest way to obtain intuition about this is to think about rocks as being made up of a set of connected springs. Apply a force (stress) to any part and you will eventually get motion elsewhere. This propagation of energy is a type of wave motion. There are two general types of waves that can travel in the elastic material.
+When the earth is deformed elastically, the small strains will propagate away in all directions from the site of the original stress. The easiest way to obtain intuition about this is to think about rocks as being made up of a set of connected springs. Apply a force (stress) to any part and you will eventually get motion elsewhere. This propagation of energy is a type of wave motion. Elastic waves can be divided into two categories:
 
 .. sidebar:: Elastic model for rocks
 
@@ -137,51 +138,46 @@ When the earth is deformed elastically, the small strains will propagate away in
 
 1. **Body waves** which travel through materials
 
-2. **Surface waves** which travel only along boundaries between materials such
-   as the ground / air boundary.
+2. **Surface waves** which propagate along boundaries between materials such
+   as the air/earth interface.
 
-Specific types of waves within these general types are described below. Each
-wave type travels through a given material with a velocity that depends upon the elastic properties and density of the material.
+Subtypes of these two categories are described below. Each wave type travels through a given material with a velocity that depends upon the elastic properties and density of the material.
 
 
 Body Waves
 ==========
 
-**Compressional waves (P waves)** propagate by compression and rarefaction, and
-the velocity of such waves, :math:`v_p` is given in terms of elastic moduli
-introduced above and density :math:`\rho`, by the equation shown here
+**Compressional waves (P waves)** propagate by compression and rarefaction and
+the velocity of such waves, :math:`v_p`, in a material with bulk modulus :math:`\kappa`, shear modulus :math:`\mu`, and density :math:`\rho` is given by the equation
 
 .. math::
-	v_p = \sqrt{ \frac{\kappa + 4/3\mu}{\rho} }
+	v_p = \sqrt{ \frac{\kappa + 4/3\mu}{\rho} }.
+	
+The figure below shows a simple animation of the motion associated with P waves.
 
 .. figure:: ./images/pwave-animated-2.gif
 	:align: center
 	
-	Image from http://web.ics.purdue.edu/~braile/edumod/waves/WaveDemo.htm
+	Animation by `L. Braile`_, from his `seismic wave demo`_, licensed for non-commercial reuse.
 
 
 **Shear waves (S waves)** propagate by a pure shear strain perpendicular to the
-wave propagation. There are two planes of polarization. SV and SH waves
-travel at the same speed, :math:`v_s` , which is given in terms of elastic
-moduli introduced above and density :math:`\rho` ,
+wave propagation. The propagation speed :math:`v_s` is given by
 
 .. math ::
-	v_s = \sqrt{\frac{\mu}{\rho} }
+	v_s = \sqrt{\frac{\mu}{\rho} }.
+	
+The below animation shows the propagation of a vertically polarized S wave. Note that an S wave could also be horizontally polarized, meaning that particle motion would be in the y direction in the coordinate system of the animation, as opposed to the z direction for vertical polarization. 
 
 .. figure:: ./images/s-wave-animated.gif
 	:align: center
 	
-	Image from http://web.ics.purdue.edu/~braile/edumod/waves/WaveDemo.htm
+	Animation by `L. Braile`_, from his `seismic wave demo`_, licensed for non-commercial reuse.
 
 Note that if :math:`\mu = 0` then :math:`v_s = 0`. This tells us that shear
 waves do not travel in a liquid.
 
-Seismic reflection and refraction surveying is usually carried out by
-observing how P-waves travel, reflect, and refract within the geologic layers
-near the surface. We will see that the energy is generated by an artificial
-source. S-waves can also be used, but they are a little harder to generate
-artificially (compared to P-waves), and require special ground motion sensors.
-However, since :math:`v_s < v_p`, there are situations where it is beneficial to
+Seismic reflection and refraction surveying is usually carried out by the analysis of P waves. S-waves can also be used but they are harder to generate artificially compared to P-waves and require more complex receivers than ones designed to measure just P waves. In marine surveys (unless sources and receivers are coupled directly to the ocean bottom) it is not possible to generate or measure P waves at all. However, since :math:`v_s < v_p`, there are situations where it is beneficial to
 use S-waves instead of P-waves.
 
 
@@ -199,7 +195,7 @@ kilometers of the earth.
 .. figure:: ./images/Rayleigh-wave-animated.gif
 	:align: center
 	
-	Image from http://web.ics.purdue.edu/~braile/edumod/waves/WaveDemo.htm
+	Animation by `L. Braile`_, from his `seismic wave demo`_, licensed for non-commercial reuse.
 
 
 **Love waves** exist in a surface layer when the shear wave velocity of the
@@ -213,7 +209,7 @@ the free surface and perpendicular to the direction of propagation.
 .. figure:: ./images/Love-wave-animated.gif
 	:align: center
 	
-	Image from http://web.ics.purdue.edu/~braile/edumod/waves/WaveDemo.htm
+	Animation by `L. Braile`_, from his `seismic wave demo`_, licensed for non-commercial reuse.
 
 Both Love waves and Rayleigh waves are **dispersive**. That is, different
 frequency components travel at different speeds. So the wave changes shape as
@@ -288,3 +284,8 @@ The amplitude of seismic waves falls off with distance from the source. There ar
 
 .. figure:: ./images/attenuation.gif
 	:align: center
+
+.. _CC BY 3.0: https://creativecommons.org/licenses/by/3.0/
+.. _Subsurface Wiki: http://subsurfwiki.org/
+.. _L. Braile: http://web.ics.purdue.edu/~braile/
+.. _seismic wave demo: http://web.ics.purdue.edu/~braile/edumod/waves/WaveDemo.htm
