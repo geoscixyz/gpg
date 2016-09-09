@@ -3,12 +3,13 @@
 Basic Principles
 ****************
 
-This section provides the key components to understand the geophysical magnetic experiment. As briefly summarized in the :ref:`Introduction<magnetic_physical_property>` section, the magnetic survey requires a magnetic :ref:`source<earth_s_field>` interacting with susceptible material, giving rise to measurable :ref:`anomalous magnetic field<anomalous_field>` data.
+This section provides the key components to understand the geophysical magnetic experiment. As briefly summarized in the :ref:`Introduction<magnetic_physical_property>` section, the magnetic survey requires a magnetic :ref:`source<earth_s_field>` interacting with the sub-surface creating a :ref:`magnetic response<magnetic_response>`, giving rise to measurable :ref:`anomalous magnetic field<anomalous_field>` data.
 
 .. figure:: ./images/Intro_Response.png
     :align: center
     :figwidth: 50 %
     :name: mag_response
+
 
 .. _earth_s_field:
 
@@ -106,9 +107,9 @@ changes in mantle convection. Knowing the acquisition date of a magnetic
 survey is important in order to understand the observed magnetic anomalies. In
 2004, Earth's magnetic north pole was close to Melville Island (Nunavut) at
 (Latitude, Longitude)=(79N, 70W). In Vancouver (BC), the current field is
-orientated at D ~ 20°N,  ~ 70° Inclination. The Geological Survey of Canada is
+orientated at D ~ 20°N,  ~ 70° Inclination. Various governmental agencies are
 actively collecting and archiving information about the parameters of the
-field across Canada and can be queried with the `magnetic field calculator`_.
+field worldwide and can be queried with the `magnetic field calculator`_.
 
 
 Magnetic Weather
@@ -177,43 +178,114 @@ primarily to currents in the ionized upper atmosphere. These changes vary over m
 .. * Peddie, N. W., 1982, Report on International Geomagnetic Reference Field 1980 by IAGA Division I Working Group 1: *Geophysics*, 47, no. 5, 841-842.
 
 
-.. _anomalous_field:
+.. _magnetic_response:
 
-Anomalous Field
-===============
+Magnetization (Response)
+========================
 
-Local variations in :ref:`physical property<magnetic_physical_property>` may
-give rise to secondary fields measurable from a distance. For geological or
-engineering problems, these *anomalous fields* are the data to be interpreted.
-The basic ideas behind the magnetic problem are illustrated in
-:numref:`mag_object`.
+Having identified the source of the magnetic experiment, we now look at the
+response from magnetic material. The straight of the anomalous field originating from the magnetized object depends on its shape, location and magnetization such that:
 
-(a) An object with magnetic susceptibility :math:`\kappa` is buried in the
-    earth.
+.. math:: \mathbf{B}_A = \frac{\mu_0}{4\pi}  \int_{V}   \mathbf{M} \cdot \nabla \nabla \left(\frac{1}{r}\right) \; dV
+  :label: integral
 
-(b) At the location of burial, the earth's field magnetic field is :math:`\vec{H}` and the magnetization in the object is :math:`\vec{M} = \kappa \vec{H}`.
+where :math:`\mu_0` is the :ref:`magnetic
+permeability<physprop_mag_permeability>`, :math:`\mathbf{M}` is the
+magnetization per unit volume :math:`\mathbf{V}`, and :math:`r` defines the
+distance between the object and the location of the observer. The magnetic
+field of the object is referred to as the "secondary" field or sometimes the
+"anomalous" field :math:`\mathbf{B}_A`. For geological or engineering
+problems, these anomalous fields are the *data* to be interpreted, and this is
+what we seek to measure. Unfortunately, the measured field data are a bit more
+complicated:
 
-(c) If the object is "small", that is all of the object's dimensions are several times smaller than the depth to its center, then  the object acts as a :ref:`magnetic dipole<fields_magnetic_dipole>` -- that is, a little bar magnet with strength and direction caused by the inducing field. The  dipole moment of the object is :math:`\vec{m} = \text{Volume} * \vec{M}`
+.. math:: \mathbf{B}^{obs} = \mathbf{B}_0 + \mathbf{B}_A\;,
 
-(d) The magnetic field of the object is referred to as the "secondary" field or sometimes the "anomalous" field :math:`\vec{B_A}`. This is what we seek to measure.
+where :math:`\mathbf{B}^{obs}` is the combined signal from the Earth's field :math:`\mathbf{B}_0` and from the ground :math:`\mathbf{B}_A`. Exactly how the anomalous field is extracted from the total field is explained in the :ref:`Data<magnetics_data>` section.
 
-The pattern recorded at the surface arises by measuring
-the field strength everywhere on the surface, removing the Earth's field, and
-then plotting the results as a contour map of anomalous field strength. In the
-third figure, regions of blue anomalous field are "negative" because at those
-surface locations, the **anomalous** field crossing that surface points in the
-opposite direction for Earth's field.
+.. _magnetics_induced:
 
+Induced Magnetization
+---------------------
 
-.. list-table:: : Buried magnetized object.
+An object with magnetic susceptibility :math:`\kappa` is buried in the
+earth. At the location of burial, the earth's magnetic field is
+:math:`\mathbf{H}` and the magnetization in the object is:
+
+.. math:: \mathbf{M} = \kappa \mathbf{H}.
+
+The magnetic response then simplifies to:
+
+.. math:: \mathbf{B}_A = \frac{\mu_0}{4\pi}  \int_{V}   \kappa \mathbf{H}_0 \cdot \nabla \nabla \left(\frac{1}{r}\right) \; dV
+  :label: integral_induced
+
+The basic ideas behind the induced magnetization process is illustrated below.
+
+ .. raw:: html
+    :file: buried_dipole.html
+
+From :eq:`integral_induced`, we note that the induced response of the field will vary both in magnitude and orientation with respect to the inducing magnetic field :math:`\mathbf{H}_0`. Therefore, the magnetic response of an object buried in Canada may look a lot different if buried near the equator as demonstrated in the :ref:`dipole animation<magnetics_induced_demo>`. This is an important point to keep in mind when interpreting magnetic data.
+
+.. _magnetics_induced_demo:
+
+ .. list-table:: : Changing magnetic response (:math:`B_z`) of a buried magnetic prism as a function of inducing field orientation.
    :header-rows: 0
    :widths: 10
    :stub-columns: 0
-   :name: mag_object
 
    *  - .. raw:: html
-            :file: buried_dipole.html
+            :file: ./images/induced_prism_demo.html
 
+
+
+.. _magnetics_remanent:
+
+Remanent Magnetization
+----------------------
+
+From :eq:`integral`, the magnetic response is function of position and magnetization per unit volume :math:`\mathbf{M}`. While in most cases the magnetization is assumed to be parallel to the inducing field direction, in some cases this doesn't hold true. The full magnetization vector should be written instead as:
+
+.. math:: \mathbf{M} = \kappa(\mathbf{H_0} + \mathbf{H_s}) + \mathbf{M_{rem}}
+
+where :math:`\mathbf{H_s}` are secondary fields from neighbouring magnetized objects and :math:`\mathbf{M_{rem}}` is known as the remanent component. A good example of remanently magnetized objects are bar magnets. While the outside surface of a refrigerator is susceptible, the permanent dipole moment of the magnet is used generate a strong local field, which can hold your family pictures up!
+
+Similar to the previous animation, we added a remanent component oriented east (x-axis) as presented in this :ref:`animation<magnetics_remanent_demo>`. Note that the remanent component is independent of the inducing direction, substantially distorting the magnetic data from the purely induced response. Interpreting magnetic data affected by remanence remains a key challenge in exploration geophysics.
+
+.. _magnetics_remanent_demo:
+
+ .. list-table:: : Changing magnetic response (:math:`B_z`) of a buried magnetic prism as a function of inducing field orientation with an added remanent component oriented along the x-axis (:math:`I:0^\circ,\; D:90^\circ`).
+   :header-rows: 0
+   :widths: 10
+   :stub-columns: 0
+
+   *  - .. raw:: html
+            :file: ./images/remanent_prism_demo.html
+
+
+.. _anomalous_field:
+
+Anomalous field (Data)
+======================
+
+The anomalous magnetic field introduced in :eq:`integral` is a vector quantity:
+
+.. math:: \mathbf{B}_A = [B_x \hat x, B_y \hat y, B_z \hat z ]
+
+usually given in Cartesian coordinates. As it is covered in the :ref:`Data<magnetics_data>` section, instruments more often measure the magnitude of the field, or Total Magnetic Intensity (TMI) data.
+
+.. math:: \mathbf{B}^{TMI} = | \mathbf{B}_T + \mathbf{B}_A |
+
+
+Note about :math:`\mathbf{B}` and :math:`\mathbf{H}`
+----------------------------------------------------
+
+We often use both :math:`\mathbf{B}` and :math:`\mathbf{H}` interchangeably to describe the magnetic field. To be accurate, :math:`\mathbf{B}` should be referred to as the *magnetic flux density*, although in air, both quantities are proportional to each other (:ref:`read more<physprop_mag_permeability>`).
+
+
+Approximating the response
+==========================
+
+Solving the integral in :eq:`integral` can be challenging for objects with complicated geometry, as we expected it to be when thinking of geological structures. In many cases however the magnetic response of objects can be approximated by a summation of dipole and monopoles.
 
 .. _fields_magnetic_dipole:
 
@@ -223,10 +295,10 @@ Fields due to a magnetic dipole
 Understanding the magnetic fields of a buried dipole, and the resultant
 observations, is crucial because all real scenarios can be thought of as a
 combination (superposition) of dipoles (see the "Buried structures" section).
-More advanced applets will be used to look at the responses of some of these
-bodies.
 
-In the accompanying :ref:`applet<magnetics_applet>`, observations of individual components :math:`(B_x,B_y,B_z)` can be displayed. The projection of :math:`\vec{B_A}` onto the direction of Earth's field :math:`\hat{B_0}` is called the *total field* (:math:`B_t`).
+If the object is "small", that is all of the object's dimensions are several times smaller than the depth to its center, then  the object acts as a :ref:`magnetic dipole<fields_magnetic_dipole>` -- that is, a little bar magnet with strength and direction caused by the inducing field.
+
+.. In the accompanying :ref:`applet<magnetics_applet>`, observations of individual components :math:`(B_x,B_y,B_z)` can be displayed. The projection of :math:`\vec{B_A}` onto the direction of Earth's field :math:`\hat{B_0}` is called the *total field* (:math:`B_t`).
 
 In addition the vertical gradient of the field, obtained if measurements were
 acquired with a gradiometer, are listed as :math:`B_g`.  Sign conventions must
@@ -251,19 +323,6 @@ Magnetic dipoles: a Jupyter Notebook
 The response that will be measured at points on a surface overlying a buried
 magnetic dipole can be explored using the UBC-GIF magnetic dipole magnetic_app_. Be sure to read the documentation provided in the notebook before using it. This tool allows you to vary the location and shape of a buried 3D prism and get the surface map of the anomalous magnetic. The app also allows to include a remanent  (permanent magnet) component to the total magnetization model. Changing the size and location of the prism allows the simulation of a wide range of scenarios, from vertical pipe <add case study here> to various kinds of :ref:`plate models<magnetics_extended_bodies>`.
 
-As noted in the :ref:`dipole animation<magnetics_dipole_demo>`, a real buried feature will look like a magnetic dipole if its
-physical dimensions are much smaller than the depth to the feature's center.
-
-.. _magnetics_dipole_demo:
-
- .. list-table:: : Rotating magnetic dipole and secondary magnetic field response (:math:`b_z`) as observed from the surface
-   :header-rows: 0
-   :widths: 10
-   :stub-columns: 0
-
-   *  - .. raw:: html
-            :file: ./images/rotating_prism_demo.html
-
 .. _magnetic_app: http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Mag/InducedMag2D.ipynb
 
 .. _magnetics_extended_bodies:
@@ -285,9 +344,7 @@ Approximating targets using magnetic charges
 	:figclass: float-right-360
 	:scale: 100%
 
-If :math:`L` denotes the scale length of a buried object and the distance from
-the observer to the body, :math:`R` is :math:`\gg` :math:`L`, then the magnetic
-field of the body will look like that due to a simple dipole. If the buried
+If the buried
 object has a complicated structure or the observer is very close to the
 magnetized object then it can no longer be represented as a single dipole.  In
 :ref:`magnetics_complex_structures<magnetics_complex_structures>`, we will present a general method for
