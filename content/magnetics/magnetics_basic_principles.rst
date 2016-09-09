@@ -3,7 +3,7 @@
 Basic Principles
 ****************
 
-This section provides the key components to understand the geophysical magnetic experiment. As briefly summarized in the :ref:`Introduction<magnetic_physical_property>` section, the magnetic survey requires a magnetic :ref:`source<earth_s_field>` interacting with the sub-surface creating a :ref:`magnetic response<magnetic_response>`, giving rise to measurable :ref:`anomalous magnetic field<anomalous_field>` data.
+This section provides the key components to understand the geophysical magnetic experiment. As briefly summarized in the :ref:`Introduction<magnetic_physical_property>` section, the magnetic survey requires a magnetic :ref:`source<earth_s_field>` interacting with the sub-surface creating a :ref:`magnetic response<magnetic_response>`, giving rise to measurable :ref:`anomalous magnetic field<anomalous_field>` data.  temporary corrct
 
 .. figure:: ./images/Intro_Response.png
     :align: center
