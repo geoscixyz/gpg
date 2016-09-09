@@ -3,7 +3,7 @@
 Susceptibility
 ==============
 
-For the magnetic survey, the physical property of interest is :ref:`magnetic susceptibility<physprop_mag_susc>`. It describes the ability of matter to become :ref:`magnetized<physprop_magnetization>` other an applied :ref:`magnetic field<physprop_magnetic_field>`. In a geological context, :ref:`magnetite-rich rocks<physprop_susc_common_rocks>` are the main source of magnetic signal, both in terms of abundance and susceptibility. In engineering, buried metallic objects are generally highly susceptible, but can also carry a substantial remanent component.
+For the magnetic survey, the physical property of interest is :ref:`magnetic susceptibility<physprop_mag_susc>`. It describes the ability of matter to become :ref:`magnetized<physprop_magnetization>` other an applied :ref:`magnetic field<physprop_magnetic_field>`. In a geological context, :ref:`magnetite-rich rocks<physprop_susc_common_rocks>` are the main source of magnetic signal, both in terms of abundance and susceptibility. In engineering, buried metallic objects are generally highly susceptible, but can also carry a substantial :ref:`remanent<magnetics_remanent>` component.
 
 .. raw:: html
 
