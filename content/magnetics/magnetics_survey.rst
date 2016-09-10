@@ -3,17 +3,26 @@
 Survey
 ******
 
-.. create example with applet showing bad cases for survey area, sampling...
+In this section, we focus on the acquisition of magnetic data. Designing an
+effective magnetic survey requires good knowledge about the
+:ref:`instrumentation<magnetics_instrumentation>` used, as well as an adequate
+:ref:`survey layout<magnetics_survey_layout>`. Surveys over simple and complex scenarios are provided to highlight some of the possible complications encountered in real-life applications.
 
+
+.. _magnetics_instrumentation:
+
+Instrumentation
+===============
 
 A measurement of the magnetic field at any location will involve either
 recording the amplitude of the field or one of its three components.
-Instruments are deployed on the ground, in marine work, on helicopters and
-fixed wing aircraft, and in space-borne geophysical platforms. Instrument types commonly
-used are outlined very briefly as follows:
+Instruments are deployed on the ground, in the air, on helicopters and fixed
+wing aircraft, and in space-borne geophysical platforms. Instrument types
+commonly used are outlined very briefly as follows:
+
 
 Fluxgate Magnetometer
-=====================
+---------------------
 
 - The fluxgate magnetometer was developed during WWII to detect submarines. It
   measures the magnetic field in a specific direction determined by the
@@ -27,7 +36,7 @@ Fluxgate Magnetometer
 - There are some fluxgates which generate a measure of the total field strength.
 
 Proton Precession Magnetometer
-==============================
+------------------------------
 
 - This instrument was the most common type before the mid 1990's. It measures the amplitude of the magnetic field which is sometimes referred to as the total field intensity, and has an accronym TMI.
 
@@ -51,7 +60,7 @@ Proton Precession Magnetometer
 	f= \frac{\gamma_p B_e}{2 \pi}
 
 Cesium (or optically pumped) magnetometer:
-==========================================
+------------------------------------------
 
 - The physics behind this type of sensor is related to that of the proton
   precession sensor, but it is more complicated. Although it is more expensive
@@ -80,12 +89,41 @@ in the field, and more applications will become evident in the coming decade
 magnetometer AND geophysics" as keywords.
 
 Magnetic Gradiometer
-====================
+--------------------
 
 - These instruments use two sensors (any of those mentioned above) to measure
   vertical or horizontal gradients.
 
 - They often employ two cesium magnetometers separated by about 1 m.
+
+
+
+.. _magnetics_survey_layout:
+
+Survey Design
+=============
+
+A key component of any geophysical experiment is the design of an effective survey that can optimize the amount of information gathered with the least amount time spent in the field. Here are few important parameters to keep in mind:
+
+Coverage
+--------
+
+
+While there might be logistical and permitting constraints associate with the footprint of a survey, it is important to capture the entire most of the magnetic anomaly. :numref:`magnetic_coverage` compares two surveys over a an elongated magnetic rod. In the first case, the survey fails in capturing the extremities of the anomaly, and little can be said about the horizontal extent of the rod. In the second case, the survey area extends far beyond the peak values, delineating the edges of the magnetized object.
+
+.. figure:: ./images/magnetic_coverage.png
+  :align: center
+  :figwidth: 100%
+  :name: magnetic_coverage
+
+  : (a) :math:`1 m^2` and (b) :math:`9 m^2` magnetic surveys over a 1 m magnetic prism. The wider survey successfully captured the full amplitude of the magnetic anomaly.
+
+
+Sampling interval
+-----------------
+
+
+
 
 
 .. _magnetics_line_profiles:
@@ -116,7 +154,7 @@ the graph.
 .. _magnetics_complex_structures:
 
 Working with complex structures
-===============================
+-------------------------------
 
 In previous sections we learned what the anomalous magnetic field will be over
 a :ref:`buried dipole <magnetics_buried_dipole>` and over :ref:`extended

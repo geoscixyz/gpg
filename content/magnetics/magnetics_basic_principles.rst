@@ -184,25 +184,25 @@ The basic ideas behind the induced magnetization process is illustrated below.
  .. raw:: html
     :file: buried_dipole.html
 
-From :eq:`integral_induced`, we note that the induced response of the field will vary both in magnitude and orientation with respect to the inducing magnetic field :math:`\mathbf{H}_0`. Therefore, the magnetic response of an object buried in Canada may look a lot different if buried near the equator as demonstrated in :numref:`magnetics_induced_demo`. This is an important point to keep in mind when interpreting magnetic data.
+From :eq:`integral_induced`, we note that the induced response of the field will vary both in magnitude and orientation with respect to the inducing magnetic field :math:`\mathbf{H}_0`. Therefore, the magnetic response of an object buried in Canada may look a lot different if buried near the equator as demonstrated in the :ref:`dipole animation<magnetics_induced_demo>` below. This is an important point to keep in mind when interpreting magnetic data.
 
-.. figure:: ./images/magnetics_induced_demo.png
-  :align: center
-  :figwidth: 100%
-  :name: magnetics_induced_demo
+.. .. figure:: ./images/magnetics_induced_demo.png
+..   :align: center
+..   :figwidth: 100%
+..   :name: magnetics_induced_demo
 
-  : This example was generated with the :ref:`magnetic applet'<magnetics_applet>`
+..   : This example was generated with the :ref:`magnetic applet'<magnetics_applet>`
 
 .. the :ref:`dipole animation<magnetics_induced_demo>`
-.. .. _magnetics_induced_demo:
+.. _magnetics_induced_demo:
 
-..  .. list-table:: : Changing magnetic response (:math:`B_z`) of a buried magnetic prism as a function of inducing field orientation.
-..    :header-rows: 0
-..    :widths: 10
-..    :stub-columns: 0
+ .. list-table:: : Changing magnetic response (:math:`B_z`) of a buried magnetic prism as a function of inducing field orientation.
+   :header-rows: 0
+   :widths: 10
+   :stub-columns: 0
 
-..    *  - .. raw:: html
-..             :file: ./images/induced_prism_demo.html
+   *  - .. raw:: html
+            :file: ./images/induced_prism_demo.html
 
 
 
@@ -217,26 +217,26 @@ From :eq:`integral`, the magnetic response is function of position and magnetiza
 
 where :math:`\mathbf{H_s}` are secondary fields from neighbouring magnetized objects and :math:`\mathbf{M_{rem}}` is known as the remanent component. A good example of remanently magnetized objects are bar magnets. While the outside surface of a refrigerator is susceptible, the permanent dipole moment of the magnet is used generate a strong local field, which can hold your family pictures up!
 
-Similar to the previous animation, we added a remanent component oriented east (x-axis) as presented in this :numref:`magnetics_remanent_demo`. Note that the remanent component is independent of the inducing direction, substantially distorting the magnetic data from the purely induced response. Interpreting magnetic data affected by remanence remains a key challenge in exploration geophysics.
+Similar to the previous animation, we added a remanent component oriented east (x-axis) as presented in the :ref:`dipole animation<magnetics_remanent_demo>` below. Note that the remanent component is independent of the inducing direction, substantially distorting the magnetic data from the purely induced response. Interpreting magnetic data affected by remanence remains a key challenge in exploration geophysics.
 
-.. figure:: ./images/magnetics_remanent_demo.png
-  :align: center
-  :figwidth: 100%
-  :name: magnetics_remanent_demo
+.. .. figure:: ./images/magnetics_remanent_demo.png
+..   :align: center
+..   :figwidth: 100%
+..   :name: magnetics_remanent_demo
 
-  : This example was generated with the :ref:`magnetic applet'<magnetics_applet>`
+..   : This example was generated with the :ref:`magnetic applet'<magnetics_applet>`
 
 
 
-.. .. _magnetics_remanent_demo:
+.. _magnetics_remanent_demo:
 
-..  .. list-table:: : Changing magnetic response (:math:`B_z`) of a buried magnetic prism as a function of inducing field orientation with an added remanent component oriented along the x-axis (:math:`I:0^\circ,\; D:90^\circ`).
-..    :header-rows: 0
-..    :widths: 10
-..    :stub-columns: 0
+ .. list-table:: : Changing magnetic response (:math:`B_z`) of a buried magnetic prism as a function of inducing field orientation with an added remanent component oriented along the x-axis (:math:`I:0^\circ,\; D:90^\circ`).
+   :header-rows: 0
+   :widths: 10
+   :stub-columns: 0
 
-..    *  - .. raw:: html
-..             :file: ./images/remanent_prism_demo.html
+   *  - .. raw:: html
+            :file: ./images/remanent_prism_demo.html
 
 
 .. _anomalous_field:
