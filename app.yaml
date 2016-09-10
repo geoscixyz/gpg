@@ -1,5 +1,5 @@
-application: gpggeosci
-version: 1
+# application: gpggeosci
+# version: 1
 runtime: python27
 api_version: 1
 threadsafe: yes
@@ -8,8 +8,8 @@ handlers:
 
 # favicon
 - url: /favicon\.ico
-  static_files: favicon.ico
-  upload: favicon\.ico
+  static_files: gpg.ico
+  upload: gpg\.ico
 
 # all css
 - url: /(.*\.css)
