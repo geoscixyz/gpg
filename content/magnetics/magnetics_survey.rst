@@ -108,7 +108,6 @@ A key component of any geophysical experiment is the design of an effective surv
 Coverage
 --------
 
-
 While there might be logistical and permitting constraints associate with the footprint of a survey, it is important to capture the entire most of the magnetic anomaly. :numref:`magnetic_coverage` compares two surveys over a an elongated magnetic rod. In the first case, the survey fails in capturing the extremities of the anomaly, and little can be said about the horizontal extent of the rod. In the second case, the survey area extends far beyond the peak values, delineating the edges of the magnetized object.
 
 .. figure:: ./images/magnetic_coverage.png
@@ -116,13 +115,19 @@ While there might be logistical and permitting constraints associate with the fo
   :figwidth: 100%
   :name: magnetic_coverage
 
-  : (a) :math:`1 m^2` and (b) :math:`9 m^2` magnetic surveys over a 1 m magnetic prism. The wider survey successfully captured the full amplitude of the magnetic anomaly.
-
+  : (a) :math:`1\;m^2` and (b) :math:`9\;m^2` magnetic surveys over a 4 m long magnetic rod. The wider survey successfully captured the full amplitude of the magnetic anomaly.
 
 Sampling interval
 -----------------
 
+The sampling interval, or distance between observation points, is also important for a meaningful interpretation of magnetic data. Two surveys with variable station spacing over a magnetic rod are presented in :numref:`magnetic_sampling`. From the data acquired at a lower resolution gives little indication about the orientation of the magnetic rod. Only when sampled at a lower sampling interval that we can distinguish a linear feature striking at :math:`30^{\circ}` N.
 
+.. figure:: ./images/magnetic_sampling.png
+  :align: center
+  :figwidth: 100%
+  :name: magnetic_sampling
+
+  : Magnetic surveys at (a) :math:`0.4\;m` and (b) :math:`1.2\;m` station spacing  acquired over a magnetic magnetic rod oriented :math:`30^{\circ}` N.
 
 
 
