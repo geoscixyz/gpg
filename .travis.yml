@@ -28,7 +28,7 @@ after_success:
   - gcloud auth activate-service-account --key-file credentials/client-secret.json
   - gcloud config set project gpggeosci
   - gcloud -q components update gae-python
-  - gcloud -q preview app deploy ./app.yaml --version 1 --promote;
+  - gcloud -q preview app deploy ./app.yaml --version ${TRAVIS_COMMIT} --promote;
 
 notifications:
   email:
