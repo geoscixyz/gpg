@@ -16,10 +16,9 @@ Instrumentation
 
 A measurement of the magnetic field at any location will involve either
 recording the amplitude of the field or one of its three components.
-Instruments are deployed on the ground, in the air, on helicopters and fixed
-wing aircraft, and in space-borne geophysical platforms. Instrument types
+Instruments are deployed on the ground, in the air (helicopters and fixed
+wing aircraft) and in space-borne geophysical platforms. Instrument types
 commonly used are outlined very briefly as follows:
-
 
 Fluxgate Magnetometer
 ---------------------
@@ -33,12 +32,12 @@ Fluxgate Magnetometer
 - It is generally difficult to get leveling and alignment accurate. Sensor
   accuracy is 1 nT so orientation must be known to within .001 degrees.
 
-- There are some fluxgates which generate a measure of the total field strength.
+.. - There are some fluxgates which generate a measure of the total field strength.
 
 Proton Precession Magnetometer
 ------------------------------
 
-- This instrument was the most common type before the mid 1990's. It measures the amplitude of the magnetic field which is sometimes referred to as the total field intensity, and has an accronym TMI.
+- This instrument was the most common type before the mid 1990's. It measures the amplitude of the magnetic field which is sometimes referred to as the Total Field Intensity (TMI).
 
 - Advantages: Sensitive to 1 nT, small, rugged & reliable, not sensitive to orientation.
 
@@ -78,15 +77,8 @@ Cesium (or optically pumped) magnetometer:
   works in high gradients.
 
 - Disadvantages: Optical pumping won't work when parallel or perpendicular to
-  the magnetic field direction (solved with multiple sensors), more expensive
-  than proton precession.
-
-**SQUIDS** (superconducting quantum interference devices): These are very
-sensitive, and are currently more common in laboratories that work on rock
-magnetism or paleomagnetic studies. However, they are beginning to be used
-in the field, and more applications will become evident in the coming decade
-(2000 - 2010). Search the internet using, for example, "squid AND
-magnetometer AND geophysics" as keywords.
+  the magnetic field direction (solved with multiple sensors), ans also more
+  expensive   than proton precession.
 
 Magnetic Gradiometer
 --------------------
@@ -96,7 +88,14 @@ Magnetic Gradiometer
 
 - They often employ two cesium magnetometers separated by about 1 m.
 
+SQUIDS
+------
 
+(Superconducting Quantum Interference Devices): These are very
+sensitive, and are currently more common in laboratories that work on rock
+magnetism or paleomagnetic studies. However, they are beginning to be used
+in the field, and more applications will become evident in the coming decade
+(2000 - 2010).
 
 .. _magnetics_survey_layout:
 
@@ -108,23 +107,35 @@ A key component of any geophysical experiment is the design of an effective surv
 Coverage
 --------
 
+While there might be logistical and permitting constraints associate with the footprint of a survey, it is important to capture most of the magnetic envelop. :numref:`magnetic_coverage` compares two surveys over a dipping plane [ Strike: :math:`315^{\circ}` , Dip: `45^{\circ}` ]. Both surveys used the same number of stations, hence would have cost roughly the same to acquire.
 
-While there might be logistical and permitting constraints associate with the footprint of a survey, it is important to capture the entire most of the magnetic anomaly. :numref:`magnetic_coverage` compares two surveys over a an elongated magnetic rod. In the first case, the survey fails in capturing the extremities of the anomaly, and little can be said about the horizontal extent of the rod. In the second case, the survey area extends far beyond the peak values, delineating the edges of the magnetized object.
+ - In the first case (a), the survey barely reaches the edge of the plane and little can be said about its horizontal extent. The survey managed to measure the peak magnetic anomalies, but nothing can be inferred about a possible geometry of the plane.
+
+ - In the second case (b), the survey area covers far beyond the peak values, delineating the edges of the magnetized object. A trained eye could potentially recognize the signature of a dipping magnetic plane.
 
 .. figure:: ./images/magnetic_coverage.png
   :align: center
   :figwidth: 100%
   :name: magnetic_coverage
 
-  : (a) :math:`1 m^2` and (b) :math:`9 m^2` magnetic surveys over a 1 m magnetic prism. The wider survey successfully captured the full amplitude of the magnetic anomaly.
-
+  : (a) :math:`1\;m^2` and (b) :math:`16\;m^2` magnetic surveys over a dipping magnetic plane. The wider survey successfully captured the full amplitude of the magnetic anomaly.
 
 Sampling interval
 -----------------
 
+The sampling interval, or distance between observation points, is also important for a meaningful interpretation of magnetic data. Two surveys with variable station spacing over a magnetic rod are presented in :numref:`magnetic_sampling`. From the data acquired at a lower resolution gives little indication about the orientation of the magnetic rod. Only when sampled at a lower sampling interval that we can distinguish a linear feature striking at :math:`30^{\circ}` N.
 
+.. figure:: ./images/magnetic_sampling.png
+  :align: center
+  :figwidth: 100%
+  :name: magnetic_sampling
 
+  : Magnetic surveys at (a) :math:`0.4\;m` and (b) :math:`1.2\;m` station spacing  acquired over a magnetic magnetic rod oriented :math:`30^{\circ}` N.
 
+Base Station
+------------
+
+A key component of the :ref:`Processing<magnetics_processing>` phase is the removal of daily variations of the inducing field due to :ref:`external sources<magnetics_external_sources>`. To do so, a base station is generally set up in the vicinity of the survey area, away from known magnetic sources. The magnetometer at the base station records continuously during the survey period and serves as a reference for later processing of the magnetic data.
 
 .. _magnetics_line_profiles:
 
