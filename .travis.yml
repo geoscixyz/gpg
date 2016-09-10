@@ -5,7 +5,7 @@ python:
   - "2.7"
 
 env:
-  - TEST_DIR=tests
+  - TEST_DIR=tests CLOUDSDK_CORE_DISABLE_PROMPTS=1
 
 # command to install dependencies
 install:
@@ -21,7 +21,9 @@ after_success:
   - export PATH=$PATH:${HOME}/google-cloud-sdk/bin
   - export PYTHONPATH=${PYTHONPATH}:${GAE_PYTHONPATH}
   - python _ext/fetch_gae_sdk.py $(dirname "${GAE_PYTHONPATH}");
-  - mkdir -p lib
+  - if [ ! -d ${HOME}/google-cloud-sdk ]; then
+       curl https://sdk.cloud.google.com | bash;
+    fi
   - gcloud auth activate-service-account --key-file client-secret.json
   - gcloud config set project gpggeosci
   - gcloud -q components update gae-python
