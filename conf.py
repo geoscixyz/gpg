@@ -15,6 +15,8 @@
 import sys
 import os
 
+sys.path.append(os.path.abspath('./_ext'))
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -34,6 +36,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
+    'edit_on_github',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -115,6 +118,10 @@ pygments_style = 'sphinx'
 # If true, keep warnings as "system message" paragraphs in the built documents.
 #keep_warnings = False
 
+# -- Edit on Github Extension ---------------------------------------------
+
+edit_on_github_project = 'ubcgif/gpg'
+edit_on_github_branch = 'master'
 
 # -- Options for HTML output ----------------------------------------------
 
@@ -137,7 +144,11 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {}
+# html_theme_options = {
+#   'display_github': 'True',
+# }
+
+check_meta = False
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
@@ -298,5 +309,7 @@ intersphinx_mapping = {'http://docs.python.org/': None}
 
 # -- User Defined Methods ------------------------------------------------
 sys.path.append(os.getcwd())
-from Add2Build import copyImages
+
+# from _ext import edit_on_github
+from _ext.Add2Build import copyImages
 copyImages()
