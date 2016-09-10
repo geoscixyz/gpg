@@ -111,6 +111,7 @@ orientated at D ~ 20°N,  ~ 70° Inclination. Various governmental agencies are
 actively collecting and archiving information about the parameters of the
 field worldwide and can be queried with the `magnetic field calculator`_.
 
+.. _magnetics_external_sources:
 
 Magnetic Weather
 ----------------
