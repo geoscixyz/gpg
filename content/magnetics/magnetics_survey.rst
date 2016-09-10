@@ -3,11 +3,10 @@
 Survey
 ******
 
-.. create example with applet showing bad cases for survey area, sampling...
 In this section, we focus on the acquisition of magnetic data. Designing an
 effective magnetic survey requires good knowledge about the
 :ref:`instrumentation<magnetics_instrumentation>` used, as well as an adequate
-:ref:`survey layout<magnetics_survey_layout>`.
+:ref:`survey layout<magnetics_survey_layout>`. Surveys over simple and complex scenarios are provided to highlight some of the possible complications encountered in real-life applications.
 
 
 .. _magnetics_instrumentation:
@@ -17,9 +16,9 @@ Instrumentation
 
 A measurement of the magnetic field at any location will involve either
 recording the amplitude of the field or one of its three components.
-Instruments are deployed on the ground, in marine work, on helicopters and
-fixed wing aircraft, and in space-borne geophysical platforms. Instrument types commonly
-used are outlined very briefly as follows:
+Instruments are deployed on the ground, in the air, on helicopters and fixed
+wing aircraft, and in space-borne geophysical platforms. Instrument types
+commonly used are outlined very briefly as follows:
 
 
 Fluxgate Magnetometer
@@ -101,8 +100,29 @@ Magnetic Gradiometer
 
 .. _magnetics_survey_layout:
 
-Survey Layout
+Survey Design
 =============
+
+A key component of any geophysical experiment is the design of an effective survey that can optimize the amount of information gathered with the least amount time spent in the field. Here are few important parameters to keep in mind:
+
+Coverage
+--------
+
+
+While there might be logistical and permitting constraints associate with the footprint of a survey, it is important to capture the entire most of the magnetic anomaly. :numref:`magnetic_coverage` compares two surveys over a an elongated magnetic rod. In the first case, the survey fails in capturing the extremities of the anomaly, and little can be said about the horizontal extent of the rod. In the second case, the survey area extends far beyond the peak values, delineating the edges of the magnetized object.
+
+.. figure:: ./images/magnetic_coverage.png
+  :align: center
+  :figwidth: 100%
+  :name: magnetic_coverage
+
+  : (a) :math:`1 m^2` and (b) :math:`9 m^2` magnetic surveys over a 1 m magnetic prism. The wider survey successfully captured the full amplitude of the magnetic anomaly.
+
+
+Sampling interval
+-----------------
+
+
 
 
 
@@ -134,7 +154,7 @@ the graph.
 .. _magnetics_complex_structures:
 
 Working with complex structures
-===============================
+-------------------------------
 
 In previous sections we learned what the anomalous magnetic field will be over
 a :ref:`buried dipole <magnetics_buried_dipole>` and over :ref:`extended
