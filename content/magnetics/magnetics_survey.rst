@@ -18,7 +18,7 @@ A key component of any geophysical experiment is the design of an effective surv
 Coverage
 --------
 
-While there might be logistical and permitting constraints associate with the footprint of a survey, it is important to capture most of the magnetic envelop. :numref:`magnetic_coverage` compares two surveys over a dipping plane [ Strike: :math:`315^{\circ}` , Dip: `45^{\circ}` ]. Both surveys used the same number of stations, hence would have cost roughly the same to acquire.
+While there might be logistical and permitting constraints associate with the footprint of a survey, it is important to capture most of the magnetic envelop. :numref:`magnetic_coverage` compares two surveys over a dipping plane [ Strike: :math:`315^{\circ}` , Dip: :math:`45^{\circ}` ]. Both surveys used the same number of stations, hence would have cost roughly the same to acquire.
 
  - In the first case (a), the survey barely reaches the edge of the plane and little can be said about its horizontal extent. The survey managed to measure the peak magnetic anomalies, but nothing can be inferred about a possible geometry of the plane.
 
