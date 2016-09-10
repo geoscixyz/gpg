@@ -3,11 +3,11 @@
 Susceptibility
 ==============
 
-For the magnetic survey, the physical property of interest is :ref:`magnetic susceptibility<physprop_mag_susc>`. It describes the ability of matter to become :ref:`magnetized<physprop_magnetization>` other an applied :ref:`magnetic field<physprop_magnetic_field>`. The straight of the anomalous field originating from magnetized objects depend on their shape, location and magnetization such that:
+The magnetic susceptibility (:math:`\kappa`) defines how easily a rock becomes magnetized when it is subjected to a magnetic field :math:`\mathbf{H}`. The relationship is:
 
-:math:`\mathbf{b} = \frac{\mu_0}{4\pi}  \int_{V}   \mathbf{M} \cdot \nabla \nabla \left(\frac{1}{r}\right) \; dV`
+.. math:: \mathbf{M}=\kappa \mathbf{H}.
 
-where :math:`\mu_0` is the :ref:`magnetic permeability<physprop_mag_permeability>`, :math:`\mathbf{M}` is the magnetization per unit volume :math:`\mathbf{V}` and :math:`r` defines the distance between the object and the location of the measured field :math:`\mathbf{b}`. In a geological context, :ref:`magnetite-rich rocks<physprop_susc_common_rocks>` are the main source of magnetic signal, both in terms of abundance and susceptibility. In engineering, buried metallic objects are generally highly susceptible, but can also carry a substantial remanent component.
+Background information about susceptility, how it is measured and tables of values are provided in :ref:`magnetic susceptibility<physprop_mag_susc>`.  In a geological context, :ref:`magnetite-rich rocks<physprop_susc_common_rocks>` are the main source of magnetic signal, both in terms of abundance and susceptibility. In engineering, buried metallic objects are generally highly susceptible, but they can also carry a substantial :ref:`remanent<magnetics_remanent>` component. The image below shows a rock that has a remanent component that it is strong enough for the rock to act as a magnetic and attract some paper clips, just as a bar magnet does.
 
 .. raw:: html
 
