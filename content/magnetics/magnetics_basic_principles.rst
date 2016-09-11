@@ -111,6 +111,7 @@ orientated at D ~ 20°N,  ~ 70° Inclination. Various governmental agencies are
 actively collecting and archiving information about the parameters of the
 field worldwide and can be queried with the `magnetic field calculator`_.
 
+.. _magnetics_external_sources:
 
 Magnetic Weather
 ----------------
@@ -136,46 +137,6 @@ primarily to currents in the ionized upper atmosphere. These changes vary over m
   and north-south oriented power distribution systems. They are also the cause
   of the Aurora Borealis or Australis (northern or southern lights
   respectively). See the GSC's "Geomagnetic Hazards" web page for more.
-
-.. Field conventions
-.. -----------------
-
-.. In order to represent the magnetic field of Earth :math:`\mathbf{B}` as a
-.. vector in three dimensions, we need to define a coordinate system.  in either
-.. of three ways (see :numref:`coord_sys`):
-
-..  - **Grid** : B = (:math:`B_E`, :math:`B_N`, :math:`B_D`). These are grid coordinates with X pointing to geographic north (N), Y pointing east (E) and Z pointing vertically down.
-
-..  - **UTM** : B = (:math:`B_X` , :math:`B_Y` , :math:`B_Z`). These are the usual Cartesian coordinates with X ponting east, Y pointing north and Z pointing vertically up.
-
-..  - **Polar** :
-
-
-..  - Every five years, the IAGA issues a contemporary main field model that
-.. predicts the field for the next five years. These models have names that are
-.. prefixed with "IGRF." Each new model updates the model that was used to
-.. predict the previous five (or more) years. Updated models are called **DGRF**
-.. for **Definitive Geomagnetic Reference Field**. Major updates since 1980 use
-.. data from MAGSAT, consisting of measurements of vector components and total
-.. intensity of the geomagnetic field between 350 and 560 km altitude.
-
-.. To correct data sets which had older versions of reference fields removed, add
-.. :math:`(F_0 - F_n)` to each data point, where the two parameters are total
-.. intensity values computed from the old and new reference fields respectively.
-.. See Peddie N.W. 1982, 1983, and 1986 for details. Charts of many types are
-.. available on-line, as downloadable postscript files, and for sale (less than
-.. $5.00 each) from the USGS, NOAA, GSC, and just about any other government
-.. geoscience agency. For example, you could use either the NOAA Geomagnetism
-.. page_, or the Canadian National Geomagnetism Program's homepage_.
-
-
-
-
-.. References:
-
-.. * Peddie, N. W., 1986, Report on International Geomagnetic Reference Field revision 1985 by IAGA Division I Working Group 1: *Geophysics*, 51, no. 4, 1020-1023.
-.. * Peddie, N. W., 1983, International Geomagnetic Reference Field - its evolution and the difference in total field intensity between new and old models for 1965-1980 (short note): *Geophysics*, 48, no. 12, 1691-1696.
-.. * Peddie, N. W., 1982, Report on International Geomagnetic Reference Field 1980 by IAGA Division I Working Group 1: *Geophysics*, 47, no. 5, 841-842.
 
 
 .. _magnetic_response:
@@ -224,8 +185,16 @@ The basic ideas behind the induced magnetization process is illustrated below.
  .. raw:: html
     :file: buried_dipole.html
 
-From :eq:`integral_induced`, we note that the induced response of the field will vary both in magnitude and orientation with respect to the inducing magnetic field :math:`\mathbf{H}_0`. Therefore, the magnetic response of an object buried in Canada may look a lot different if buried near the equator as demonstrated in the :ref:`dipole animation<magnetics_induced_demo>`. This is an important point to keep in mind when interpreting magnetic data.
+From :eq:`integral_induced`, we note that the induced response of the field will vary both in magnitude and orientation with respect to the inducing magnetic field :math:`\mathbf{H}_0`. Therefore, the magnetic response of an object buried in Canada may look a lot different if buried near the equator as demonstrated in the :ref:`dipole animation<magnetics_induced_demo>` below. This is an important point to keep in mind when interpreting magnetic data.
 
+.. .. figure:: ./images/magnetics_induced_demo.png
+..   :align: center
+..   :figwidth: 100%
+..   :name: magnetics_induced_demo
+
+..   : This example was generated with the :ref:`magnetic applet'<magnetics_applet>`
+
+.. the :ref:`dipole animation<magnetics_induced_demo>`
 .. _magnetics_induced_demo:
 
  .. list-table:: : Changing magnetic response (:math:`B_z`) of a buried magnetic prism as a function of inducing field orientation.
@@ -249,7 +218,16 @@ From :eq:`integral`, the magnetic response is function of position and magnetiza
 
 where :math:`\mathbf{H_s}` are secondary fields from neighbouring magnetized objects and :math:`\mathbf{M_{rem}}` is known as the remanent component. A good example of remanently magnetized objects are bar magnets. While the outside surface of a refrigerator is susceptible, the permanent dipole moment of the magnet is used generate a strong local field, which can hold your family pictures up!
 
-Similar to the previous animation, we added a remanent component oriented east (x-axis) as presented in this :ref:`animation<magnetics_remanent_demo>`. Note that the remanent component is independent of the inducing direction, substantially distorting the magnetic data from the purely induced response. Interpreting magnetic data affected by remanence remains a key challenge in exploration geophysics.
+Similar to the previous animation, we added a remanent component oriented east (x-axis) as presented in the :ref:`dipole animation<magnetics_remanent_demo>` below. Note that the remanent component is independent of the inducing direction, substantially distorting the magnetic data from the purely induced response. Interpreting magnetic data affected by remanence remains a key challenge in exploration geophysics.
+
+.. .. figure:: ./images/magnetics_remanent_demo.png
+..   :align: center
+..   :figwidth: 100%
+..   :name: magnetics_remanent_demo
+
+..   : This example was generated with the :ref:`magnetic applet'<magnetics_applet>`
+
+
 
 .. _magnetics_remanent_demo:
 
@@ -298,8 +276,6 @@ combination (superposition) of dipoles (see the "Buried structures" section).
 
 If the object is "small", that is all of the object's dimensions are several times smaller than the depth to its center, then  the object acts as a :ref:`magnetic dipole<fields_magnetic_dipole>` -- that is, a little bar magnet with strength and direction caused by the inducing field.
 
-.. In the accompanying :ref:`applet<magnetics_applet>`, observations of individual components :math:`(B_x,B_y,B_z)` can be displayed. The projection of :math:`\vec{B_A}` onto the direction of Earth's field :math:`\hat{B_0}` is called the *total field* (:math:`B_t`).
-
 In addition the vertical gradient of the field, obtained if measurements were
 acquired with a gradiometer, are listed as :math:`B_g`.  Sign conventions must
 be adopted when data are plotted. For magnetic surveying the coordinate system
@@ -310,20 +286,6 @@ for :math:`B_y` and vertical fields are positive if they point downward. For
 :math:`B_t` the anomaly is positive if it points in the same direction as the
 earth's field and negative if it is the opposite direction.
 
-
-.. _magnetics_applet:
-
-Magnetic dipoles: a Jupyter Notebook
-------------------------------------
-
-.. figure:: ./images/Mag_Notebook_Thumbnail.png
-	:align: right
-	:figwidth: 50%
-
-The response that will be measured at points on a surface overlying a buried
-magnetic dipole can be explored using the UBC-GIF magnetic dipole magnetic_app_. Be sure to read the documentation provided in the notebook before using it. This tool allows you to vary the location and shape of a buried 3D prism and get the surface map of the anomalous magnetic. The app also allows to include a remanent  (permanent magnet) component to the total magnetization model. Changing the size and location of the prism allows the simulation of a wide range of scenarios, from vertical pipe <add case study here> to various kinds of :ref:`plate models<magnetics_extended_bodies>`.
-
-.. _magnetic_app: http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Mag/InducedMag2D.ipynb
 
 .. _magnetics_extended_bodies:
 

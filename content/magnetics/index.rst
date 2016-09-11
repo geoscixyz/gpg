@@ -18,7 +18,7 @@ of where magnetic material lies and also its susceptiblity and shape. Processed 
 presented as maps or profiles, and advanced processing, involving inversion,
 yields parametric structures or 3D models of the subsurface susceptibility
 distribution.  Magnetic surveying is extremely versatile and can be applied in many
-areas in the geosciences including geologic mapping, mineral exploration, 
+areas in the geosciences including geologic mapping, mineral exploration,
 unexploded ordnance detection, and archeology.
 
 .. This section covers some basic information for magnetic surveys. The physical
@@ -44,6 +44,7 @@ Contents:
    magnetics_data
    magnetics_processing
    magnetics_interpretation
+   magnetics_applet
 
 ..  magnetics_IGRF
 ..  magnetics_three_figures
