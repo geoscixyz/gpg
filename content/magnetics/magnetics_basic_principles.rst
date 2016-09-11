@@ -3,22 +3,20 @@
 Basic Principles
 ****************
 
-Purpose: This section provides the key components to understand the geophysical magnetic experiment. As briefly summarized in the :ref:`Introduction<magnetic_physical_property>` section, the magnetic survey requires a magnetic :ref:`source<earth_s_field>`. Rocks inside the earth become magnetized and they produce an :ref:`anomalous magnetic field<anomalous_field>` data. A receiver records the sum of all magnetic fields.  
-
-Important topics are:
-Source
-Magnetization
-Data 
-Other important items
-	Remanence
-	Magnetic Charges
-
-
+Purpose: This section provides the key components to understand the geophysical magnetic experiment. As briefly summarized in the :ref:`Introduction<magnetic_physical_property>` section, the magnetic survey requires a magnetic :ref:`source<earth_s_field>`. Rocks inside the earth become magnetized and they produce an anomalous magnetic field :ref:`data<magnetics_responses>`. A receiver records the sum of all magnetic fields.
 
 .. figure:: ./images/Intro_Response.png
-    :align: center
+    :align: right
     :figwidth: 50 %
     :name: mag_response
+
+Important topics are:
+ - :ref:`Source<earth_s_field>`
+ - :ref:`Magnetization<magnetics_magnetization>`
+ - :ref:`Data<magnetics_responses>`
+ - Other important items
+	- :ref:`Remanence<magnetics_remanent>`
+	- :ref:`Magnetic Charges<magnetics_charges>`
 
 
 .. _earth_s_field:
@@ -26,45 +24,46 @@ Other important items
 Earth's magnetic field (Source)
 ===============================
 
- .. figure:: ./images/earthfield.gif
+.. figure:: ./images/Geodynamo_Between_Reversals.gif
   :align: right
-  :figwidth: 40%
-  :name: earth_mag_vectors
+  :figwidth: 25%
+  :name: Geodynamo_reversal
 
-  : Earth's magnetic field orientation
+  : Earth's geodynamo_ .
+
 
 All magnetic fields arise from currents. This is also true for the magnetic
 field of the earth. The outer core of the earth is molten and in a
 state of convection and a geomagnetic dynamo creates magnetic fields. Close
 to the surface of the core the magnetic fields are very complicated but
-as we move outward the magnetic field resembles that of a large 
-bar magnetic which is often referred to as a magnetic dipole. 
+as we move outward the magnetic field resembles that of a large
+bar magnetic which is often referred to as a magnetic dipole.
 
-images from slide #15
-
+ .. figure:: ./images/earthfield.gif
+  :align: right
+  :figwidth: 40%
+  :name: earth_mag_vectors
 
 To a first approximation, Earth's magnetic field resembles a large
 dipolar source with a negative pole in the northern hemisphere and a positive
 pole in the southern hemisphere (:numref:`earth_mag_vectors`). The dipole
 is offset from the center of the earth and also tilted. The north
 magnetic pole at the surface of the earth is approximately at
-Melville Island. 
+Melville Island.
 
-
-The field at any location on (or above or within) the Earth are generally described in terms described of magnitude (|B|), declination (D) and inclination (I) as illustrated in :numref:`coord_sys`.
-
-*** note that picture needs to be changed to substitute |B|
 
 .. figure:: ./images/Mag_Coordinate_System.png
   :align: right
-  :figwidth: 40%
+  :figwidth: 30%
   :name: coord_sys
 
   : Sketch of coordinates used to describe magnetic fields.
 
-* **H**: The magnitude of the vector representing Earth's magnetic field.
-* **D**: Declination is the angle that *H* makes with respect to geographic north (positive angle clockwise).
-* **I**: Inclination is the angle between **B** and the horizontal. It can vary between -90° and +90° (positive angle down).
+The field at any location on (or above or within) the Earth are generally described in terms described of magnitude (:math:`\mathbf{|B|}`), declination (:math:`\mathbf{D}`) and inclination (:math:`\mathbf{I}`) as illustrated in :numref:`coord_sys`.
+
+* :math:`\mathbf{|B|}`: The magnitude of the vector representing Earth's magnetic field.
+* :math:`\mathbf{D}`: Declination is the angle that *H* makes with respect to geographic north (positive angle clockwise).
+* :math:`\mathbf{I}`: Inclination is the angle between **B** and the horizontal. It can vary between -90° and +90° (positive angle down).
 
 .. _magnetics_IGRF:
 
@@ -79,13 +78,13 @@ IGRF is a product of the International Association of Geomagnetism and
 Aeronomy (IAGA_), and the original version was defined in 1968. It is
 updated every five years, and **later** versions may re-define the field at
 **earlier** times. This is important to remember if you are comparing old maps
-to new ones.  
+to new ones.
 
 
 Earth's field has a strength of approximately 70,000 nanoTeslas
 (nT) at the magnetic poles and approximately 25,000 nT at the magnetic
 equator. Field orientation and strength varies around the world, as presented
-in :numref:`IGRF_three_figures` based upon the IGRF from 2003 (NOAA_). 
+in :numref:`IGRF_three_figures` based upon the IGRF from 2003 (NOAA_).
 
 .. _IAGA: http://www.ngdc.noaa.gov/IAGA/vmod/
 
@@ -109,8 +108,8 @@ in :numref:`IGRF_three_figures` based upon the IGRF from 2003 (NOAA_).
 
           Earth's field strentgh
       -
-      
-   
+
+
 Slow changes in the exact location of the magnetic north pole occur over long
 periods (months-years). These changes are thought to be caused by internal
 changes in mantle convection. Knowing the acquisition date of a magnetic
@@ -126,17 +125,8 @@ can be found at government geoscience websites such as the
 `NOAA`_ geomagnetism home page, or the `Canadian National Geomagnetism Program`_ home
 page.
 
-.. _NOAA: http://www.ngdc.noaa.gov/geomag/geomag.shtml
-.. _Canadian National Geomagnetism Program: http://www.geomag.nrcan.gc.ca/index-eng.php
-.. _magnetic field calculator: http://www.ngdc.noaa.gov/geomag-web/
-.. _page: http://www.ngdc.noaa.gov/ngdc.html
-.. _homepage: http://www.geomag.nrcan.gc.ca/index-eng.php
-
 An overview of Earth's magnetic field (with good images, graphs, etc.) can
   be found on the British Geological Survey's `geomagnetics website`_.
-
-.. _geomagnetics website: http://www.geomag.bgs.ac.uk/
-
 
 
 Magnetic fields from External Sources
@@ -147,7 +137,7 @@ that location. Most of that field comes from inside the earth and it can
 be from the geomagnetic dynamo or from crustal rocks that have become
 magnetized. In addition there are also magnetic fields that come from outside
 the earth. The solar wind interacts with Earth's magnetic field and creates
-a magnetosphere that is "tear-dropped" shape as shown in the figure 
+a magnetosphere that is "tear-dropped" shape as shown in the figure
 below
 
 
@@ -155,35 +145,33 @@ below
   :align: right
   :figwidth: 50%
 
-Figure caption: The image shows an artist's
- rendition of the charged particles interacting with Earth's magnetic field.
- The volume containing Earth's field is called the magnetosphere. 
+  The image shows an artist' rendition of the charged particles interacting with Earth's magnetic field. The volume containing Earth's field is called the magnetosphere.
 
 
- The interaction between Earth's field and the solar wind allows charge
- particles to flow in the ionsphere which is a zone of ionized particles
- about 110 km above the earth's surface. These currents produce magnetic
- fields. The time-scales for these changes can be very short, in the order
- of micro-seconds, to large, in the order of days. Daily variations can
- typically be on the order of 20 - 50 nT in size.  Large scale variations
- are caused by magnetic storms and they may be 1000's of nT in size. 
- Magnetic storms are correlated with sunspot activity, usually on an 11-year
-  cycle. These variations can be large enough to cause damage to satellites
-  and power distribution systems. They are also the cause
-  of the Aurora Borealis or Australis (northern or southern lights
-  respectively). See the GSC's "Geomagnetic Hazards" web page for more.
+The interaction between Earth's field and the solar wind allows charge
+particles to flow in the ionsphere which is a zone of ionized particles about
+110 km above the earth's surface. These currents produce magnetic  fields. The
+time-scales for these changes can be very short, in the order  of micro-
+seconds, to large, in the order of days. Daily variations can  typically be on
+the order of 20 - 50 nT in size.  Large scale variations  are caused by
+magnetic storms and they may be 1000's of nT in size.  Magnetic storms are
+correlated with sunspot activity, usually on an 11-year cycle. These
+variations can be large enough to cause damage to satellites   and power
+distribution systems. They are also the cause   of the Aurora Borealis or
+Australis (northern or southern lights   respectively). See the GSC's
+"Geomagnetic Hazards" web page for more.
 
-  
 
-.. _magnetization:
+
+.. _magnetics_magnetization:
 
 Magnetization
 =============
 When the source field is applied to earth materials it causes the to become
 magnetized. Magnetization (link to physical properties) is the dipole moment
 per unit volume. This is a vector quantity because a dipole has
-a strength and a direction. For many cases of interest the relationship between 
-magnetization M and the source 
+a strength and a direction. For many cases of interest the relationship between
+magnetization M and the source
 :math:`\mathbf{H}` (earth's magnetic field) is given by
 
 .. math:: \mathbf{M} = \kappa \mathbf{H}.
@@ -193,7 +181,7 @@ same direction as the earth's field. Because Earth's field is different
 at different locations on the earth, then the same object, gets magnetized
 differently depending upon where it is situated. As a consequence, magnetic
 data from a steel drum buried at the north pole will be very  different
-from that from a drum buried at the equator. 
+from that from a drum buried at the equator.
 
 
 
@@ -202,25 +190,25 @@ The final magnetization of a rock or man-made object can be the result
 of a number of contributing factors. In the case of the metal drum, it can
 made of steel and it has complicated structure. It's walls are thin, it
 is hollow on the inside, and the steel have a very high magnetic
-susceptbility. The geometry and high susceptibility causes the 
+susceptbility. The geometry and high susceptibility causes the
 induced magnetic field of the drum to be in a different direction
 than the inducing earth's field and the relationship (above M=kappa H)
 is no longer valid. Also, the drum was manufactured by molding melted
-steel. When that material cooled through its Curie temperature it 
+steel. When that material cooled through its Curie temperature it
 acquired a permanent, or remanent,  magnetization. It's net magnetization,
 when it is buried at any location on the earth will be the sum of
 the induced and remanent magnetizations. This is an important topic
-and be further investigated by clicking here. 
+and be further investigated by clicking here.
 
 
 
-.. _responses:
+.. _magnetics_responses:
 
 Responses (Data)
 ================
 
-The magnetic field that results from the magnetized earth is evaluated 
-with the equation 
+The magnetic field that results from the magnetized earth is evaluated
+with the equation
 
 .. math:: \mathbf{B}_A = \frac{\mu_0}{4\pi}  \int_{V}   \mathbf{M} \cdot \nabla \nabla \left(\frac{1}{r}\right) \; dV
   :label: integral
@@ -232,11 +220,7 @@ distance between the object and the location of the observer. This magnetic
 field is referred to as the "secondary" field or sometimes the
 "anomalous" field :math:`\mathbf{B}_A`. For geological or engineering
 problems, these anomalous fields are the *data* to be interpreted, and this is
-what we seek to measure. 
-
-
-
-
+what we seek to measure.
 
 When the magnetization is governed by M=kappa H then the above anomalous field can
 be written as
@@ -245,26 +229,25 @@ be written as
   :label: integral_induced
 
 It is important to note that the left hand side of this equation is a magnetic field
-that is a vector. For simplicity, and for the remainder of this section, we shall 
+that is a vector. For simplicity, and for the remainder of this section, we shall
 drop the subscript "A" and remember that we are talking about anomalous fields.
 A vector in three dimensional space requires three numbers to specify it. These
-could be component values (Bx,By,Bz) or an amplitude and angles ( |B|, D, I). 
+could be component values (:math:`B_x,\;B_y,\;B_z`) or an amplitude and angles ( :math:`\mathbf{|B|},\;\mathbf{D},\;\mathbf{I}`).
 Generally a geophysical datum is a measurement of a component. For instance,
-B_x = \vec B cdot \hat x
-where (cdot) is a vector inner product. This means that B_x is the projection of
-the vector B onto a unit vector in the x-direction. Similar understandings 
-exist for By and Bz. When plotting magnetic field data over an object it is
+:math:`B_x = \vec B cdot \hat x`
+where (cdot) is a vector inner product. This means that :math:`B_x` is the projection of
+the vector B onto a unit vector in the x-direction. Similar understandings
+exist for :math:`B_y` and :math:`Bz`. When plotting magnetic field data over an object it is
 therefore usual to plot maps of a particular component. A special datum
 that is particularly important for magnetics is the projection of the
 anomalous field onto a unit vector that is in the direction of the
-earth's field. Let this be \hat B_0. Then the datum B_t is 
-B_t = \vec B cdot \hat B_0
+earth's field. Let this be :math:`\hat B_0`. Then the datum :math:`B_t` is
 
-
+.. math:: B_t = \vec B cdot \hat B_0
 
 The basic ideas behind the induced magnetization process, going
 from source to data, are illustrated below.
-The image of the data, corresponds to B_t. 
+The image of the data, corresponds to :math:`B_t`.
 
  .. raw:: html
     :file: buried_dipole.html
@@ -289,19 +272,20 @@ From :eq:`integral_induced`, we note that the induced response of the field will
    *  - .. raw:: html
             :file: ./images/induced_prism_demo.html
 
-**** Magnetic app:   binder link
-Student exercise:  
-(a) Generate a block and bury it at a depth that is somewhat greater than its size. 
+
+**Student exercise** (magnetic_app_):
+
+(a) Generate a block and bury it at a depth that is somewhat greater than its size.
 The block will produce a magnetic field that is like a dipole. Locate the block
 at the north pole, at mid-latitude and at the equator. Before you simulate the
 data with the applet, sketch the explected magnetic field.  Also, sketch the
-expected profile along a N-S transect, at the surface,  over the middle of the 
-buried target. Do this for all possible data types; Bx, By, Bz, B_t. 
+expected profile along a N-S transect, at the surface,  over the middle of the
+buried target. Do this for all possible data types; Bx, By, Bz, B_t.
 
 In addition to components in the cartesian framework, or projections
 onto the direction of the inducing field, the vertical gradient of the field,
-can be plotted. These data are those that would be 
-acquired with a gradiometer, and are listed as :math:`B_g`.  
+can be plotted. These data are those that would be
+acquired with a gradiometer, and are listed as :math:`B_g`.
 
 Note that when plotting any datum, sign conventions must
 be adopted. For the applet the coordinate system
@@ -317,16 +301,16 @@ earth's field and negative if it is the opposite direction.
 
 *** check that what is said really coincides with the app ****
 
-Note that traditionally in magnetics the coordinate system is 'x' is 
+Note that traditionally in magnetics the coordinate system is 'x' is
 northing, 'y' is easting and 'z' is postive down. To mitigate confusion
-we refer to these 'northing', 'easting' and 'down'. 
+we refer to these 'northing', 'easting' and 'down'.
 
 
 
-Unfortunately, for a field survey we measure the anomalous field 
+Unfortunately, for a field survey we measure the anomalous field
 plus Earth's field. (More correctly it is the anomalous field
 plus any other magnetic fields that are present, but we ignore that
-complexity for the present). 
+complexity for the present).
 Thus the observed field is
 
 .. math:: \mathbf{B}^{obs} = \mathbf{B}_0 + \mathbf{B}_A\;,
@@ -341,21 +325,21 @@ Remanent Magnetization
 ----------------------
 
 A toy bar magnetic is a quintessential example of an object that has a remanent magnetization. If
-taken to outer space where there is no inducing field, it still posesses a magnetic field like 
+taken to outer space where there is no inducing field, it still posesses a magnetic field like
 that of a dipole. The acquistion of remanence occurs when a body with magnetic minerals cools
 through its Curie temperature. Above the Curie temperature thermal agitation prevents the
 elementary dipoles from aligning with the ambient magnetic field. As the material cools
 the magnetic particles can stay aligned and eventually lock into place in a domain structure.
 Each domain has all of its constituent dipoles locked into a single direction. This structure
-stays in place after the ambient field is removed and the object will have a net 
-remanent magnetism. Some elements of the process are portrayed in Figure (slide 63). 
+stays in place after the ambient field is removed and the object will have a net
+remanent magnetism. Some elements of the process are portrayed in Figure (slide 63).
 
 Remanent magnetization is very common in man-made objects and in rocks. Figure  (slide 62)
-shows the magnetic signature of multiple UXO buried in a proving ground. Each has the 
+shows the magnetic signature of multiple UXO buried in a proving ground. Each has the
 signature of a dipole yet the data could not have been explained by induced magnetization
 of a set of compact objects. The orientation of the dipoles is too variable to be explained
 by that process. The proper understanding is that the magnetization of each UXO is composed
-of two parts: (a) An induced portion (M_I)  and (b) remanent portion  (M_r). The net magnetization is 
+of two parts: (a) An induced portion (M_I)  and (b) remanent portion  (M_r). The net magnetization is
 
 equation (vectors)   M = M_I + M_r
 
@@ -363,14 +347,14 @@ also a vector diagram.
 
 The magnetic field due to the UXO must be evaluated with equation xxxx
 
-Rocks are also frequently magnetized. This is particularly true of magnatic rocks. 
+Rocks are also frequently magnetized. This is particularly true of magnatic rocks.
 An example that had large consequences in understanding our dynamic earth is
 shown in Figure (slide 64). The is total field magnetic survey data off of
 the coast of British Columbia. The striped pattern of reversed polarity fields
 is the result of basaltic lavas erupting on the ocean bottom, cooling and
 aquiring a magnetization in the direction of Earth's field at that
 time. The fact that Earth's field periodically reverses in polarity, and
-that this was captured by the cooling lava, played a crucial role in 
+that this was captured by the cooling lava, played a crucial role in
 the development of the theory of plate tectonics.
 
 
@@ -397,8 +381,8 @@ Similar to the previous animation, we now add a remanent component oriented east
             :file: ./images/remanent_prism_demo.html
 
 
-Student exercise: Use the applet to explore the complicating effects of remanent magnetization 
-on your prismatic body worked with previously. 
+Student exercise: Use the applet to explore the complicating effects of remanent magnetization
+on your prismatic body worked with previously.
 
 
 
@@ -416,9 +400,9 @@ Understanding the magnetic fields of a buried dipole, and the resultant
 observations, is crucial because all real scenarios can be thought of as a
 combination (superposition) of dipoles (see the "Buried structures" section).
 
-If the object is "small", that is all of the object's dimensions are several times smaller than the depth to its center, then  the object acts as a :ref:`magnetic dipole<fields_magnetic_dipole>` -- that is, a bar magnet. If the magnetization is purely induced then the direction of the dipole will be aligned with the inducing field. In fact, this is the reason why, when one gets sufficiently distant from the center of the earth, Earth's field looks like a dipole. 
+If the object is "small", that is all of the object's dimensions are several times smaller than the depth to its center, then  the object acts as a :ref:`magnetic dipole<fields_magnetic_dipole>` -- that is, a bar magnet. If the magnetization is purely induced then the direction of the dipole will be aligned with the inducing field. In fact, this is the reason why, when one gets sufficiently distant from the center of the earth, Earth's field looks like a dipole.
 
-*** Can we use the app to simulate this? This could also initiate some good questions 
+.. *** Can we use the app to simulate this? This could also initiate some good questions
 
 
 
@@ -530,6 +514,8 @@ picture of the large scale effect can be drawn as shown here:
 	:scale: 100%
 
 
+.. _magnetics_charges:
+
 Working with magnetic charges
 -----------------------------
 
@@ -623,3 +609,12 @@ magnetometers" by S. Breiner, 1999, Geometrics 2190 Fortune Drive San Jose,
 California 95131 U.S.A.
 
 
+.. links:
+.. _NOAA: http://www.ngdc.noaa.gov/geomag/geomag.shtml
+.. _Canadian National Geomagnetism Program: http://www.geomag.nrcan.gc.ca/index-eng.php
+.. _magnetic field calculator: http://www.ngdc.noaa.gov/geomag-web/
+.. _page: http://www.ngdc.noaa.gov/ngdc.html
+.. _homepage: http://www.geomag.nrcan.gc.ca/index-eng.php
+.. _geomagnetics website: http://www.geomag.bgs.ac.uk/
+.. _magnetic_app: http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Mag/InducedMag2D.ipynb
+.. _geodynamo: https://commons.wikimedia.org/w/index.php?curid=1712490
