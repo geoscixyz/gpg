@@ -25,7 +25,7 @@ after_success:
       python _ext/fetch_gae_sdk.py $(dirname "${GAE_PYTHONPATH}");
       if [ ! -d ${HOME}/google-cloud-sdk ]; then
          curl https://sdk.cloud.google.com | bash;
-      fi
+      fi ;
       gcloud auth activate-service-account --key-file credentials/client-secret.json ;
       gcloud config set project gpggeosci ;
       gcloud -q components update gae-python ;
