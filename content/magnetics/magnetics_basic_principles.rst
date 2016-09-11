@@ -26,11 +26,8 @@ Earth's magnetic field (Source)
 
 .. figure:: ./images/Geodynamo_Between_Reversals.gif
   :align: right
-  :figwidth: 25%
+  :figwidth: 20%
   :name: Geodynamo_reversal
-
-  : Earth's geodynamo_ .
-
 
 All magnetic fields arise from currents. This is also true for the magnetic
 field of the earth. The outer core of the earth is molten and in a
@@ -40,7 +37,7 @@ as we move outward the magnetic field resembles that of a large
 bar magnetic which is often referred to as a magnetic dipole.
 
  .. figure:: ./images/earthfield.gif
-  :align: right
+  :align: left
   :figwidth: 40%
   :name: earth_mag_vectors
 
@@ -56,8 +53,6 @@ Melville Island.
   :align: right
   :figwidth: 30%
   :name: coord_sys
-
-  : Sketch of coordinates used to describe magnetic fields.
 
 The field at any location on (or above or within) the Earth are generally described in terms described of magnitude (:math:`\mathbf{|B|}`), declination (:math:`\mathbf{D}`) and inclination (:math:`\mathbf{I}`) as illustrated in :numref:`coord_sys`.
 
@@ -120,14 +115,14 @@ orientated at D ~ 20°N,  ~ 70° Inclination. Various governmental agencies are
 actively collecting and archiving information about the parameters of the
 field worldwide and can be queried with the `magnetic field calculator`_.
 
-Details about Earth's field
-can be found at government geoscience websites such as the
-`NOAA`_ geomagnetism home page, or the `Canadian National Geomagnetism Program`_ home
-page.
+Details about Earth's field can be found at government geoscience websites
+such as the `NOAA`_ geomagnetism home page, or the `Canadian National
+Geomagnetism Program`_ home page. An overview of Earth's magnetic field (with
+good images, graphs, etc.) can be found on the British Geological Survey's
+`geomagnetics website`_.
 
-An overview of Earth's magnetic field (with good images, graphs, etc.) can
-  be found on the British Geological Survey's `geomagnetics website`_.
 
+.. _magnetics_external_sources:
 
 Magnetic fields from External Sources
 -------------------------------------
@@ -141,12 +136,13 @@ a magnetosphere that is "tear-dropped" shape as shown in the figure
 below
 
 
- .. figure:: ./images/solar_wind.jpg
-  :align: right
-  :figwidth: 50%
+ .. figure:: ./images/Magnetosphere_rendition.jpg
+  :align: center
+  :figwidth: 75%
 
-  The image shows an artist' rendition of the charged particles interacting with Earth's magnetic field. The volume containing Earth's field is called the magnetosphere.
+  The image shows an artist' rendition of the charged particles interacting with Earth's magnetic field. The volume containing Earth's field is called the magnetosphere (by_NASA_).
 
+.. _by_NASA: https://commons.wikimedia.org/w/index.php?curid=192450
 
 The interaction between Earth's field and the solar wind allows charge
 particles to flow in the ionsphere which is a zone of ionized particles about
@@ -168,39 +164,35 @@ Australis (northern or southern lights   respectively). See the GSC's
 Magnetization
 =============
 When the source field is applied to earth materials it causes the to become
-magnetized. Magnetization (link to physical properties) is the dipole moment
+magnetized. :ref:`Magnetization<physprop_magnetization>` is the dipole moment
 per unit volume. This is a vector quantity because a dipole has
 a strength and a direction. For many cases of interest the relationship between
-magnetization M and the source
+magnetization :math:`\mathbf{M}` and the source
 :math:`\mathbf{H}` (earth's magnetic field) is given by
 
 .. math:: \mathbf{M} = \kappa \mathbf{H}.
+  :label: MkappaH
 
-where kappa is the magnetic susceptibility. Thus the magnetization has the
+where :math:`\kappa` is the magnetic susceptibility. Thus the magnetization has the
 same direction as the earth's field. Because Earth's field is different
-at different locations on the earth, then the same object, gets magnetized
+at different locations on the earth, then the same object gets magnetized
 differently depending upon where it is situated. As a consequence, magnetic
 data from a steel drum buried at the north pole will be very  different
 from that from a drum buried at the equator.
 
-
-
-
 The final magnetization of a rock or man-made object can be the result
 of a number of contributing factors. In the case of the metal drum, it can
 made of steel and it has complicated structure. It's walls are thin, it
-is hollow on the inside, and the steel have a very high magnetic
-susceptbility. The geometry and high susceptibility causes the
+is hollow on the inside, and the steel has a very high magnetic
+susceptibility. The geometry and high susceptibility causes the
 induced magnetic field of the drum to be in a different direction
-than the inducing earth's field and the relationship (above M=kappa H)
+than the inducing earth's field and the relationship :eq:`MkappaH`
 is no longer valid. Also, the drum was manufactured by molding melted
 steel. When that material cooled through its Curie temperature it
 acquired a permanent, or remanent,  magnetization. It's net magnetization,
 when it is buried at any location on the earth will be the sum of
 the induced and remanent magnetizations. This is an important topic
-and be further investigated by clicking here.
-
-
+and it is further investigated :ref:`here<magnetics_remanent>`.
 
 .. _magnetics_responses:
 
@@ -210,7 +202,7 @@ Responses (Data)
 The magnetic field that results from the magnetized earth is evaluated
 with the equation
 
-.. math:: \mathbf{B}_A = \frac{\mu_0}{4\pi}  \int_{V}   \mathbf{M} \cdot \nabla \nabla \left(\frac{1}{r}\right) \; dV
+.. math:: \mathbf{B}_A = \frac{\mu_0}{4\pi}  \int_{V}   \mathbf{M} \cdot \nabla \nabla \left(\frac{1}{r}\right) \; dV \;,
   :label: integral
 
 where :math:`\mu_0` is the :ref:`magnetic
@@ -222,46 +214,43 @@ field is referred to as the "secondary" field or sometimes the
 problems, these anomalous fields are the *data* to be interpreted, and this is
 what we seek to measure.
 
-When the magnetization is governed by M=kappa H then the above anomalous field can
-be written as
+When the magnetization is governed by the linear relationship :eq:`MkappaH`
+then the above anomalous field can be written as:
 
-.. math:: \mathbf{B}_A = \frac{\mu_0}{4\pi}  \int_{V}   \kappa \mathbf{H}_0 \cdot \nabla \nabla \left(\frac{1}{r}\right) \; dV
+.. math:: \mathbf{B}_A = \frac{\mu_0}{4\pi}  \int_{V}   \kappa \mathbf{H}_0 \cdot \nabla \nabla \left(\frac{1}{r}\right) \; dV \;.
   :label: integral_induced
 
-It is important to note that the left hand side of this equation is a magnetic field
-that is a vector. For simplicity, and for the remainder of this section, we shall
-drop the subscript "A" and remember that we are talking about anomalous fields.
-A vector in three dimensional space requires three numbers to specify it. These
-could be component values (:math:`B_x,\;B_y,\;B_z`) or an amplitude and angles ( :math:`\mathbf{|B|},\;\mathbf{D},\;\mathbf{I}`).
+It is important to note that the left hand side of this equation is a magnetic
+field that is a vector. For simplicity, and for the remainder of this section,
+we shall drop the subscript "A" and remember that we are talking about
+anomalous fields. A vector in three dimensional space requires three numbers
+to specify it. These could be component values (:math:`B_x,\;B_y,\;B_z`) or an
+amplitude and angles ( :math:`|B|,\;D,\;I`).
 Generally a geophysical datum is a measurement of a component. For instance,
-:math:`B_x = \vec B cdot \hat x`
-where (cdot) is a vector inner product. This means that :math:`B_x` is the projection of
-the vector B onto a unit vector in the x-direction. Similar understandings
-exist for :math:`B_y` and :math:`Bz`. When plotting magnetic field data over an object it is
-therefore usual to plot maps of a particular component. A special datum
-that is particularly important for magnetics is the projection of the
-anomalous field onto a unit vector that is in the direction of the
-earth's field. Let this be :math:`\hat B_0`. Then the datum :math:`B_t` is
 
-.. math:: B_t = \vec B cdot \hat B_0
+.. math:: B_x = \mathbf{B} \cdot \mathbf{\hat x} \;,
+
+where (:math:`\cdot`) is a vector inner product. This means that :math:`B_x`
+is the projection of the vector :math:`\mathbf{B}` onto a unit vector in the
+:math:`\mathbf{\hat x}` direction. Similar understandings exist for
+:math:`B_y` and :math:`B_z`. When plotting magnetic field data over an object
+it is therefore usual to plot maps of a particular component. A special datum
+that is particularly important for magnetics is the projection of the
+anomalous field onto a unit vector that is in the direction of the earth's
+field. Let this be :math:`\mathbf{\hat B_0}`. Then the datum
+:math:`\mathbf{B_t}` is
+
+.. math:: \mathbf{B_t} = \mathbf{B} \cdot \mathbf{\hat B_0}
 
 The basic ideas behind the induced magnetization process, going
 from source to data, are illustrated below.
-The image of the data, corresponds to :math:`B_t`.
+The image of the data, corresponds to :math:`\mathbf{B_t}`.
 
  .. raw:: html
     :file: buried_dipole.html
 
 From :eq:`integral_induced`, we note that the induced response of the field will vary both in magnitude and orientation with respect to the inducing magnetic field :math:`\mathbf{H}_0`. Therefore, the magnetic response of an object buried in Canada may look a lot different if buried near the equator as demonstrated in the :ref:`dipole animation<magnetics_induced_demo>` below. This is an important point to keep in mind when interpreting magnetic data.
 
-.. .. figure:: ./images/magnetics_induced_demo.png
-..   :align: center
-..   :figwidth: 100%
-..   :name: magnetics_induced_demo
-
-..   : This example was generated with the :ref:`magnetic applet'<magnetics_applet>`
-
-.. the :ref:`dipole animation<magnetics_induced_demo>`
 .. _magnetics_induced_demo:
 
  .. list-table:: : Changing magnetic response (:math:`B_z`) of a buried magnetic prism as a function of inducing field orientation.
@@ -275,35 +264,39 @@ From :eq:`integral_induced`, we note that the induced response of the field will
 
 **Student exercise** (magnetic_app_):
 
-(a) Generate a block and bury it at a depth that is somewhat greater than its size.
+Generate a block and bury it at a depth that is somewhat greater than its size.
 The block will produce a magnetic field that is like a dipole. Locate the block
-at the north pole, at mid-latitude and at the equator. Before you simulate the
+at:
+
+(a) the north pole
+(b) mid-latitude
+(c) the equator.
+
+Before you simulate the
 data with the applet, sketch the explected magnetic field.  Also, sketch the
-expected profile along a N-S transect, at the surface,  over the middle of the
-buried target. Do this for all possible data types; Bx, By, Bz, B_t.
+expected profile along a E-W transect, at the surface,  over the middle of the
+buried target. Do this for all possible data types; :math:`B_x,\;B_y,\;B_z,\;B_t`.
 
 In addition to components in the cartesian framework, or projections
 onto the direction of the inducing field, the vertical gradient of the field,
 can be plotted. These data are those that would be
 acquired with a gradiometer, and are listed as :math:`B_g`.
 
-Note that when plotting any datum, sign conventions must
-be adopted. For the applet the coordinate system
-used is UTM: {:math:`x` is east, :math:`y` is north, and :math:`z` is elevation
-which is positive up}.
+Note that when plotting any datum, sign conventions must be adopted. For the
+applet the coordinate system used is UTM: :math:`\mathbf{\hat x}` is east,
+:math:`\mathbf{\hat y}` is north, and :math:`\mathbf{\hat z}` is elevation
+which is positive up.
 
-The sign convention will be that 'x'field is positive if it points
-in the :math:`\hat{x}` direction, 'y' is positive if  :math:`B_y`, points
-in the :math:`\hat{y}` direction
+The sign convention will be that :math:`B_x` is positive if it points
+in the :math:`\mathbf{\hat x}` direction, :math:`B_y` is positive if it points
+in the :math:`\mathbf{\hat y}` direction
 and :math:`B_z` is positive if it  points upward. For
 :math:`B_t` the anomaly is positive if it points in the same direction as the
 earth's field and negative if it is the opposite direction.
 
-*** check that what is said really coincides with the app ****
-
-Note that traditionally in magnetics the coordinate system is 'x' is
-northing, 'y' is easting and 'z' is postive down. To mitigate confusion
-we refer to these 'northing', 'easting' and 'down'.
+*Note that traditionally in magnetics the coordinate system is 'x' is
+northing, 'y' is easting and 'z' is positive down. To mitigate confusion
+we refer to these 'northing', 'easting' and 'down'*.
 
 
 
