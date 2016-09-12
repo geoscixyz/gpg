@@ -338,7 +338,7 @@ magnetism. Some elements of the process are portrayed in :numref:`magnetic_domai
         :figwidth: 50 %
         :name: Magnetization_components
 
-Remanent magnetization is very common in man-made objects and in rocks. :numref:`mag_paramEstim` shows the magnetic signature of multiple UXO buried in a proving
+Remanent magnetization is very common in man-made objects and in rocks. :numref:`UXO` shows the magnetic signature of multiple UXO buried in a proving
 ground. Each has the signature of a dipole yet the data could not have been
 explained by induced magnetization of a set of compact objects. The
 orientation of the dipoles is too variable to be explained by that process.
@@ -355,7 +355,7 @@ The magnetic field due to the UXO must be evaluated with :eq:`total_magnetizatio
   .. figure:: ./images/intro_paramEstim.png
       :align: center
       :scale: 100 %
-      :name: mag_paramEstim
+      :name: UXO
 
       : (a) A typical UXO site.  There is no surface indications of ordnance items. (b) Typical ordance items (c) Magnetic field data over a  site contaminated with UXO.
 
@@ -416,7 +416,7 @@ If the object is "small", that is all of the object's dimensions are several tim
 
 .. _magnetics_dipole_demo:
 
- .. list-table:: : Changing magnetic response (:math:`B_z`) of a buried magnetic prism as a function of depth. The field is compared to a dipole with equivalent dipole moment and depth.
+ .. list-table:: : Changing magnetic response (:math:`B_z`) of a buried magnetic prism as a function of depth. The field is compared to a dipole with equivalent dipole moment and depth. Both responses are converging as the depth of burial increases.
    :header-rows: 0
    :widths: 10
    :stub-columns: 0
