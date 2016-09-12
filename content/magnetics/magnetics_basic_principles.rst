@@ -335,7 +335,7 @@ magnetism. Some elements of the process are portrayed in :numref:`magnetic_domai
 
 .. figure:: ./images/Magnetization_components.png
         :align: right
-        :figwidth: 50 %
+        :figwidth: 25 %
         :name: Magnetization_components
 
 Remanent magnetization is very common in man-made objects and in rocks. :numref:`UXO` shows the magnetic signature of multiple UXO buried in a proving
@@ -359,9 +359,16 @@ The magnetic field due to the UXO must be evaluated with :eq:`total_magnetizatio
 
       : (a) A typical UXO site.  There is no surface indications of ordnance items. (b) Typical ordance items (c) Magnetic field data over a  site contaminated with UXO.
 
+.. figure:: ./images/magnetics_BC_Coast.png
+    :align: right
+    :figwidth: 50 %
+    :name: remanent_BC_coast
+
+    : Residual Total Field map over the West Coast of Canada. Profile data along the parallel :math:`49^\circ` N shows multiple reversal in crustal magnetism.
+
 Rocks are also frequently magnetized. This is particularly true of magnetic rocks.
 An example that had large consequences in understanding our dynamic earth is
-shown in Figure (slide 64). The is total field magnetic survey data off of
+shown in :numref:`remanent_BC_coast`. The is total field magnetic survey data off of
 the coast of British Columbia. The striped pattern of reversed polarity fields
 is the result of basaltic lavas erupting on the ocean bottom, cooling and
 aquiring a magnetization in the direction of Earth's field at that
