@@ -36,7 +36,7 @@ to the surface of the core the magnetic fields are very complicated but
 as we move outward the magnetic field resembles that of a large
 bar magnetic which is often referred to as a magnetic dipole.
 
- .. figure:: ./images/earthfield.gif
+.. figure:: ./images/earthfield.gif
   :align: left
   :figwidth: 40%
   :name: earth_mag_vectors
@@ -310,37 +310,56 @@ Thus the observed field is
 
 where :math:`\mathbf{B}^{obs}` is the combined signal from the Earth's field :math:`\mathbf{B}_0` and from the ground :math:`\mathbf{B}_A`. The details about how the anomalous field is extracted from the observations is explained in the :ref:`Data<magnetics_data>` section.
 
-
-
 .. _magnetics_remanent:
 
 Remanent Magnetization
 ----------------------
 
-A toy bar magnetic is a quintessential example of an object that has a remanent magnetization. If
-taken to outer space where there is no inducing field, it still posesses a magnetic field like
-that of a dipole. The acquistion of remanence occurs when a body with magnetic minerals cools
-through its Curie temperature. Above the Curie temperature thermal agitation prevents the
-elementary dipoles from aligning with the ambient magnetic field. As the material cools
-the magnetic particles can stay aligned and eventually lock into place in a domain structure.
-Each domain has all of its constituent dipoles locked into a single direction. This structure
-stays in place after the ambient field is removed and the object will have a net
-remanent magnetism. Some elements of the process are portrayed in Figure (slide 63).
+.. figure:: ./images/Magnetization_Domain.png
+  :align: right
+  :figwidth: 50%
+  :name: magnetic_domains
 
-Remanent magnetization is very common in man-made objects and in rocks. Figure  (slide 62)
-shows the magnetic signature of multiple UXO buried in a proving ground. Each has the
-signature of a dipole yet the data could not have been explained by induced magnetization
-of a set of compact objects. The orientation of the dipoles is too variable to be explained
-by that process. The proper understanding is that the magnetization of each UXO is composed
-of two parts: (a) An induced portion (M_I)  and (b) remanent portion  (M_r). The net magnetization is
+A toy bar magnetic is a quintessential example of an object that has a
+remanent magnetization. If taken to outer space where there is no inducing
+field, it still posesses a magnetic field like that of a dipole. The
+acquisition of remanence occurs when a body with magnetic minerals cools
+through its Curie temperature. Above the Curie temperature thermal agitation
+prevents the elementary dipoles from aligning with the ambient magnetic field.
+As the material cools the magnetic particles can stay aligned and eventually
+lock into place in a domain structure. Each domain has all of its constituent
+dipoles locked into a single direction. This structure stays in place after
+the ambient field is removed and the object will have a net remanent
+magnetism. Some elements of the process are portrayed in :numref:`magnetic_domains`.
 
-equation (vectors)   M = M_I + M_r
 
-also a vector diagram.
+.. figure:: ./images/Magnetization_components.png
+        :align: right
+        :figwidth: 50 %
+        :name: Magnetization_components
 
-The magnetic field due to the UXO must be evaluated with equation xxxx
+Remanent magnetization is very common in man-made objects and in rocks. :numref:`mag_paramEstim` shows the magnetic signature of multiple UXO buried in a proving
+ground. Each has the signature of a dipole yet the data could not have been
+explained by induced magnetization of a set of compact objects. The
+orientation of the dipoles is too variable to be explained by that process.
+The proper understanding is that the magnetization of each UXO is composed of
+two parts: (a) An induced portion (:math:`\mathbf{M_I}`)  and (b) remanent portion  (:math:`\mathbf{M_R}`). The
+net magnetization is:
 
-Rocks are also frequently magnetized. This is particularly true of magnatic rocks.
+.. math::   \mathbf{M = M_I + M_r} \;.
+  :label: total_magnetization
+
+as depicted in :numref:`magnetization_components`.
+The magnetic field due to the UXO must be evaluated with :eq:`total_magnetization`.
+
+  .. figure:: ./images/intro_paramEstim.png
+      :align: center
+      :scale: 100 %
+      :name: mag_paramEstim
+
+      : (a) A typical UXO site.  There is no surface indications of ordnance items. (b) Typical ordance items (c) Magnetic field data over a  site contaminated with UXO.
+
+Rocks are also frequently magnetized. This is particularly true of magnetic rocks.
 An example that had large consequences in understanding our dynamic earth is
 shown in Figure (slide 64). The is total field magnetic survey data off of
 the coast of British Columbia. The striped pattern of reversed polarity fields
@@ -391,11 +410,19 @@ Fields due to a magnetic dipole
 
 Understanding the magnetic fields of a buried dipole, and the resultant
 observations, is crucial because all real scenarios can be thought of as a
-combination (superposition) of dipoles (see the "Buried structures" section).
+combination (superposition) of dipoles (see :ref:`Geological Features<magnetics_geological_feature>` section).
 
 If the object is "small", that is all of the object's dimensions are several times smaller than the depth to its center, then  the object acts as a :ref:`magnetic dipole<fields_magnetic_dipole>` -- that is, a bar magnet. If the magnetization is purely induced then the direction of the dipole will be aligned with the inducing field. In fact, this is the reason why, when one gets sufficiently distant from the center of the earth, Earth's field looks like a dipole.
 
-.. *** Can we use the app to simulate this? This could also initiate some good questions
+.. _magnetics_dipole_demo:
+
+ .. list-table:: : Changing magnetic response (:math:`B_z`) of a buried magnetic prism as a function of depth. The field is compared to a dipole with equivalent dipole moment and depth.
+   :header-rows: 0
+   :widths: 10
+   :stub-columns: 0
+
+   *  - .. raw:: html
+            :file: ./images/Magnetic_dipole.html
 
 
 
@@ -568,6 +595,7 @@ magnetic charge and write the expression using the earth's magnetic field
 .. math::
 	B_t = \frac{\kappa \pi a^2 B_0}{4 \pi} \frac{z}{r^3}
 
+.. _magnetics_geological_feature:
 
 Geologic Features and representation for modeling
 -------------------------------------------------
