@@ -8,7 +8,7 @@ for our problem, the next step is to choose an appropriate survey. Designing an
 effective magnetic survey requires choosing the field
 :ref:`instrumentation<magnetics_instrumentation>`, as well specifying
 an adequate
-:ref:`survey layout<magnetics_survey_layout>`. Surveys over simple and complex scenarios are provided to highlight some of the possible complications encountered in real-life applications.
+:ref:`survey layout<magnetics_survey_design>`. Surveys over simple and complex scenarios are provided to highlight some of the possible complications encountered in real-life applications.
 
 Further details about instrumentation are provided later in this section. For
 now it is only necessary to understand that magnetic instruments can measure:
@@ -62,9 +62,12 @@ The sampling interval, or distance between observation points, is also important
 
   : Magnetic surveys at (a) :math:`0.4\;m` and (b) :math:`1.2\;m` station spacing  acquired over a magnetic magnetic rod oriented :math:`30^{\circ}` N.
 
-The above example illustrates a "General Rule of Thumb for Sampling Interval":  In order capture the details about the anomalous field, data should be acquired so that there are at least about 3 points per halfwidth of the signal. This is illustrated in the figure. A more specific analysis, from a time series viewpoint, is that any frequency component of the signal needs to be sampled at least two times in each period. For our purposes, sampling the fields finely enough so that you produce the main features of the anomalous field is sufficient.
+.. figure:: ./images/Sampling_Frequency.png
+  :align: right
+  :figwidth: 50%
+  :name: sampling_frequency
 
-Needed:  a diagram to show sampling a Gaussian (or something like that)
+The above example illustrates a "General Rule of Thumb for Sampling Interval":  In order capture the details about the anomalous field, data should be acquired so that there are at least about 3 points per halfwidth of the signal. This is illustrated in :numref:`sampling_frequency`. A more specific analysis, from a time series viewpoint, is that any frequency component of the signal needs to be sampled at least two times in each period. For our purposes, sampling the fields finely enough so that you produce the main features of the anomalous field is sufficient.
 
 Important point: Note that survey area that is needed to capture the anomaly, and the sampling interval both depend upon the depth of burial of the object. If the object is small and buried very close to the surface then the footprint of the object is small. The station space is correspondingly reduced.
 
