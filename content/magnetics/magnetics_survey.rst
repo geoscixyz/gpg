@@ -147,6 +147,8 @@ Instruments are deployed on the ground, in the air (helicopters and fixed
 wing aircraft) and in space-borne geophysical platforms. Instrument types
 commonly used are outlined very briefly as follows:
 
+.. _magnetics_fluxgate:
+
 Fluxgate Magnetometer
 ---------------------
 
