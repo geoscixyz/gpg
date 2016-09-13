@@ -3,7 +3,7 @@
 Gravity gradients
 *****************
 
-Introduction 
+Introduction
 ============
 
 This page is an overview of this rapidly growing aspect of gravity surveying.
@@ -42,12 +42,12 @@ result is illustrated in the following figures:
 .. figure:: ./images/Bouger.jpg
     :align: center
 
-    Bouguer gravity, contour map plotted using "shading." 
+    Bouguer gravity, contour map plotted using "shading."
 
 .. figure:: ./images/gravhd.jpg
     :align: center
 
-    Total horizontal derivative of the adjacent gravity 
+    Total horizontal derivative of the adjacent gravity
 
 One way to think of spatial derivatives is to simply look at the change in
 "value" between adjacent stations. Another better approach for real data is to
@@ -94,7 +94,7 @@ beneficial, 2) a mineral exploration setting where it was not so useful.
 
 .. figure:: ./images/2ndvertsalt.gif
     :align: center
-    
+
     Observed, residual after removing a regional component, and second
     vertical derivative calculated using horizontal derivatives measured from
     the data set. Details about the salt domes are clearer in the second
@@ -102,13 +102,13 @@ beneficial, 2) a mineral exploration setting where it was not so useful.
 
 .. figure:: ./images/2ndvertnogood.gif
     :align: center
-    
+
     The Bouguer anomaly map (A) exhibits more useful information than the
     corresponding second vertical derivative map (B).
 
 An example
 ==========
-	
+
 One recommended short example describes contributions of gravity to
 hydrocarbon exploration in the complicated foothills environment, just
 southwest of Calgary, Alberta. The take home message from that example is that
@@ -120,7 +120,7 @@ the lower sensitivity of airborne measurements is sufficient for the task.
 Currently airborne surveys are sensitive enough for most oil and gas
 exploration problems, and for some large mineral exploration problems, but not
 sensitive enough for engineeri & environmentalng scale work. If you are
-interested (it is short and easy) see `Turner Valley`_, Canada – A Case
+interested (it is short and easy) see `Turner Valley`_ , Canada – A Case
 History in Contemporary Airborne Gravity (links to the Sander Geophysics
 Limited (SGL) website), by J.W. Peirce1, S. Sander2, R.A. Charters1, and V.
 Lavoie, presented at the EAGE 64th Conference & Exhibition — Florence, Italy,
