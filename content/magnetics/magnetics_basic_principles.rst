@@ -379,15 +379,6 @@ the development of the theory of plate tectonics.
 
 Similar to the previous animation, we now add a remanent component oriented east (x-axis) as presented in the :ref:`dipole animation<magnetics_remanent_demo>` below. Note that the remanent component is independent of the inducing direction and it substantially distorts the magnetic data compared to the purely induced response. Interpreting magnetic data affected by remanence remains a key challenge in exploration geophysics.
 
-.. .. figure:: ./images/magnetics_remanent_demo.png
-..   :align: center
-..   :figwidth: 100%
-..   :name: magnetics_remanent_demo
-
-..   : This example was generated with the :ref:`magnetic applet'<magnetics_applet>`
-
-
-
 
 .. _magnetics_remanent_demo:
 
@@ -402,7 +393,6 @@ Similar to the previous animation, we now add a remanent component oriented east
 
 Student exercise: Use the applet to explore the complicating effects of remanent magnetization
 on your prismatic body worked with previously.
-
 
 
 Approximating the response

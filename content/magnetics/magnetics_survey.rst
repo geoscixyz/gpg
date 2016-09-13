@@ -3,10 +3,24 @@
 Survey
 ******
 
-In this section, we focus on the acquisition of magnetic data. Designing an
-effective magnetic survey requires good knowledge about the
-:ref:`instrumentation<magnetics_instrumentation>` used, as well as an adequate
+Having decided that magnetic susceptiblity is a diagnostic property
+for our problem, the next step is to choose an appropriate survey. Designing an
+effective magnetic survey requires choosing the field
+:ref:`instrumentation<magnetics_instrumentation>`, as well specifying
+an adequate
 :ref:`survey layout<magnetics_survey_layout>`. Surveys over simple and complex scenarios are provided to highlight some of the possible complications encountered in real-life applications.
+
+Further details about instrumentation are provided later in this section. For
+now it is only necessary to understand that magnetic instruments can measure:
+(a) the total magnetic field :math:`|\mathbf{B}|`.
+(b) an individual component of :math:`\mathbf{B}`, such as :math:`B_x`, :math:`B_y` or :math:`B_z`
+(c) a gradient of the magnetic field
+
+Of the above choices, by far the most common is the measurement of the total
+magnetic field. However, the same principles of survey design discussed below apply to
+all of these measurements, in particular the total field anomaly datum which
+is the projection of the anomalous field onto the direction of Earth's field.
+
 
 .. _magnetics_survey_design:
 
@@ -15,26 +29,31 @@ Survey Design
 
 A key component of any geophysical experiment is the design of an effective survey that can optimize the amount of information gathered with the least amount time spent in the field. Here are few important parameters to keep in mind:
 
+  (a) Coverage:  the survey area must be large enough to capture the anomalous signal
+  (b) Sample interval: the data must be sampled finely enough so that the anomalous signal is captured with good fidelity.
+
+These concepts are clarified below:
+
 Coverage
 --------
 
-While there might be logistical and permitting constraints associate with the footprint of a survey, it is important to capture most of the magnetic envelop. :numref:`magnetic_coverage` compares two surveys over a dipping plane [ Strike: :math:`315^{\circ}` , Dip: :math:`45^{\circ}` ]. Both surveys used the same number of stations, hence would have cost roughly the same to acquire.
+The area over which the magnetic data are collected must be of great enough extent to capture the anomalous signal. If only part of the signal is measured it will be difficult to image the causative body or structure.  :numref:`magnetic_coverage` compares two surveys over a dipping plane [ Strike: :math:`315^{\circ}` , Dip: :math:`45^{\circ}` ]. Both surveys used the same number of stations, hence the data acquistion cost would have been about the same. The example is small scale, with a plane being only 3 x 3 meters but the survey design principles do not change with scale of the object.
 
- - In the first case (a), the survey barely reaches the edge of the plane and little can be said about its horizontal extent. The survey managed to measure the peak magnetic anomalies, but nothing can be inferred about a possible geometry of the plane.
+ - In the first case (a), the survey area is only 2m x 2m and it barely reaches the edge of the buried plane.  Little can be said about its horizontal extent. The survey managed to measure the peak magnetic anomaly, but nothing can be inferred about a possible geometry of the plane.
 
- - In the second case (b), the survey area covers far beyond the peak values, delineating the edges of the magnetized object. A trained eye could potentially recognize the signature of a dipping magnetic plane.
+ - In the second case (b), the survey area is 8m x 8m and the anomalous field has decayed to zero at the edges of the survey. This is ideal. The survey area extends far away from the peak values and approximately delineates the edges of the magnetized object. A trained eye could potentially recognize the signature of a dipping magnetic plane. (Of course we will do better by inverting the data!)
 
 .. figure:: ./images/magnetic_coverage.png
   :align: center
   :figwidth: 100%
   :name: magnetic_coverage
 
-  : (a) :math:`1\;m^2` and (b) :math:`16\;m^2` magnetic surveys over a dipping magnetic plane. The wider survey successfully captured the full amplitude of the magnetic anomaly.
+  : (a) :math:`4\;m^2` and (b) :math:`64\;m^2` magnetic surveys over a dipping magnetic plane. The wider survey successfully captured the full amplitude of the magnetic anomaly.
 
 Sampling interval
 -----------------
 
-The sampling interval, or distance between observation points, is also important for a meaningful interpretation of magnetic data. Two surveys with variable station spacing over a magnetic rod are presented in :numref:`magnetic_sampling`. From the data acquired at a lower resolution gives little indication about the orientation of the magnetic rod. Only when sampled at a lower sampling interval that we can distinguish a linear feature striking at :math:`30^{\circ}` N.
+The sampling interval, or distance between observation points, is also important for a meaningful interpretation of magnetic data. Two surveys with variable station spacing over a magnetic rod are presented in :numref:`magnetic_sampling`. The data acquired at a lower resolution gives little indication about the orientation of the magnetic rod. Only when the sampling interval is decreased can we distinguish a linear feature striking at :math:`30^{\circ}` N.
 
 .. figure:: ./images/magnetic_sampling.png
   :align: center
@@ -42,6 +61,15 @@ The sampling interval, or distance between observation points, is also important
   :name: magnetic_sampling
 
   : Magnetic surveys at (a) :math:`0.4\;m` and (b) :math:`1.2\;m` station spacing  acquired over a magnetic magnetic rod oriented :math:`30^{\circ}` N.
+
+The above example illustrates a "General Rule of Thumb for Sampling Interval":  In order capture the details about the anomalous field, data should be acquired so that there are at least about 3 points per halfwidth of the signal. This is illustrated in the figure. A more specific analysis, from a time series viewpoint, is that any frequency component of the signal needs to be sampled at least two times in each period. For our purposes, sampling the fields finely enough so that you produce the main features of the anomalous field is sufficient.
+
+Needed:  a diagram to show sampling a Gaussian (or something like that)
+
+Important point: Note that survey area that is needed to capture the anomaly, and the sampling interval both depend upon the depth of burial of the object. If the object is small and buried very close to the surface then the footprint of the object is small. The station space is correspondingly reduced.
+
+Student Exercise:
+Experiment with burying a prism. Using the magnetic_app_, place the object at different depths and assess what your estimates of survey area and sampling interval should be. In preparation for a future exercise, look at the relationship between the halfwidth of the anomaly and the depth of burial.
 
 .. _magnetics_base_station:
 
@@ -230,6 +258,7 @@ in the field, and more applications will become evident in the coming decade
 
 .. _magnetics_survey_layout:
 
+.. _magnetic_app: http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Mag/InducedMag2D.ipynb
 
 
 
