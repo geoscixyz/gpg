@@ -6,8 +6,8 @@ Interpretation
 In this we focus on various techniques used to interpret the magnetic data.
 From an applied geoscientists standpoint, this is where most of the data integration and decision making steps are made.
 
-Data Map
-========
+Inferences from data maps
+=========================
 
 .. figure:: ./images/earth-strength-s.gif
   :figclass: float-right-360
@@ -62,7 +62,7 @@ invert.
 
 
 Derivative Map
-==============
+--------------
 
 There are numerous options for processing potential fields data in general,
 and magnetics data specifically. One example is shown below. The processing was applied in
@@ -99,3 +99,13 @@ sidebar`_ on processing of magnetics data.
 .. _separate sidebar: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/blakely/blakely.html
 
 
+Parametric Simulation
+=====================
+
+
+
+Inversion
+=========
+
+Case Study
+==========
