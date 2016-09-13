@@ -43,6 +43,8 @@ The sampling interval, or distance between observation points, is also important
 
   : Magnetic surveys at (a) :math:`0.4\;m` and (b) :math:`1.2\;m` station spacing  acquired over a magnetic magnetic rod oriented :math:`30^{\circ}` N.
 
+.. _magnetics_base_station:
+
 Base Station
 ------------
 
@@ -79,7 +81,7 @@ Working with complex structures
 -------------------------------
 
 In previous sections we learned what the anomalous magnetic field will be over
-a :ref:`buried dipole <magnetics_buried_dipole>` and over :ref:`extended
+a :ref:`buried dipole <fields_magnetic_dipole>` and over :ref:`extended
 bodies of uniform susceptibility <magnetics_extended_bodies>`, and how those
 ideas apply to geologic structures that have a uniform susceptibility. In
 general however, the earth is complex and the rocks have variable
