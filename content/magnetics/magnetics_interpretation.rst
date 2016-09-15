@@ -12,17 +12,30 @@ Tli Kwi Cho (TKC): *A primer*
 .. figure:: ./images/TKC_Location.png
   :align: right
   :figwidth: 50%
+  :name: TKC_Location
 
 We start with a brief overview the Tli Kwi Cho kimberlite project.
+Tli Kwi Cho (TKC) is a kimberlite complex in the Northwest Territories,  Canada.
+The Northwest Territories have been surveyed extensively for diamondiferous kimberlites since the early 1980s. The Lac de Gras region has been particularly productive, and hosts two of the largest Canadian deposits: the Ekati and Diavik mines.
 
+The TKC kimberlite complex was identified from an airborne magnetic and frequency-domain electromagnetic DIGHEM survey in 1992.
+Geophysics had been used during the discovery phase of TKC, but little had been done to model the deposit prior to drilling.
+Consequently, the geological model used to explain the deposit underwent several revisions.
+In this section, we will attempt to extract as much information as possible about the deposit strictly from the original airborne magnetic data.
 
+Data interpretation
+===================
 
+The first and simplest analysis can be done directly on the :ref:`Total Field Anomaly<magnetics_field_data>` data as shown below. From the raw data, we notice a regional trend coming from the east of the survey area. In order to enhance the local anomalies, we first proceed with a :ref:`regional trend removal`<magnetics_regional_trend>`. A :math:`1^{th}` Order polynomial is subtracted from the raw data and presented below.
 
 .. raw:: html
     :file: TKC_Data_Processing.html
 
 
+Derivative Maps
+---------------
 
+While the data itself can be informative, image filtering techniques are commonly used by industry to
 
 
 .. raw:: html
