@@ -79,7 +79,7 @@ Experiment with burying a prism. Using the magnetic_app_, place the object at di
 Base Station
 ------------
 
-A key component of the :ref:`Processing<magnetics_processing>` phase is the removal of daily variations of the inducing field due to :ref:`external sources<magnetics_external_sources>`. To do so, a base station is generally set up in the vicinity of the survey area, away from known magnetic sources. The magnetometer at the base station records continuously during the survey period and serves as a reference for later processing of the magnetic data.
+An important component of the survey is setting up a base station. A base station is generally set up in the vicinity of the survey area, and away from known magnetic sources like powerlines. The magnetometer at the base station records continuously during the survey period and serves as a reference for later processing of the magnetic data where we attempt to remove the daily variations of the inducing field due to :ref:`external sources<magnetics_external_sources>`.
 
 .. _magnetics_line_profiles:
 
@@ -90,6 +90,14 @@ Line profiles for a range of situations
   :figclass: float-right-360
   :align: right
   :scale: 100%
+
+
+Magnetic surveys are (almost) always carried out over an area of interest.
+In some instances however the geology is 2D and hence a single line profile
+that is perpendicular to the strike of the geology contains the essential
+information about the buried bodies. The following examples are instructive
+in that they show how different such line profiles can be over different
+parts of the earth.
 
 Recall that the anomaly pattern recorded over any given target depends upon
 latitude, target orientation, profile orientation, remanent magnetization of
@@ -116,18 +124,12 @@ a :ref:`buried dipole <fields_magnetic_dipole>` and over :ref:`extended
 bodies of uniform susceptibility <magnetics_extended_bodies>`, and how those
 ideas apply to geologic structures that have a uniform susceptibility. In
 general however, the earth is complex and the rocks have variable
-susceptibility. How then do we determine the anomalous magnetic fields that
-arise from these geologic structures". The numerical procedure by which we
-simulate the data that would be obseved in a survey is often referred to as
-"forward modelling". In this context the term "model" refers to the 3D
-distribution of magnetic susceptibility in the earth.  There a numerous
-approaches but a common one is the following. Technically it is an integral
-equation solution but that is not particularly relevant here. The approach has
-three steps:
+susceptibility. We simulate the  anomalous magnetic fields in the
+following manner:
 
-1. Describe the subsurface as a finite collection of prismatic cells, each with uniform susceptibility.
+1. Describe the subsurface as a collection of prismatic cells, each of which has its own uniform susceptibility.
 
-2. The response of a single rectangular cell with constant susceptibility in an arbitrary magnetizing field can be calculated using expressions from the literature.
+2. The response of a single rectangular cell with constant susceptibility in an arbitrary magnetizing field can be calculated using expressions from the literature. (Think about each cell as being a magnetic dipole.)
 
 3. The principle of superposition holds.  At each location where a measurement is made, the responses from the individual cells are be added up to yield the total response.
 
@@ -180,21 +182,12 @@ Instruments are deployed on the ground, in the air (helicopters and fixed
 wing aircraft) and in space-borne geophysical platforms. Instrument types
 commonly used are outlined very briefly as follows:
 
-.. _magnetics_fluxgate:
 
-Fluxgate Magnetometer
----------------------
+Total Field magnetometers
+These instruments measure the amplitude of the magnetic field. The two most common devices are the proton precession and the cesium vapor magnetometers.
 
-- The fluxgate magnetometer was developed during WWII to detect submarines. It
-  measures the magnetic field in a specific direction determined by the
-  sensor's orientation. A complete measurement of the field requires three
-  individual (Cartesian) components of the field ( such as :math:`B_x`,
-  :math:`B_y`, :math:`B_z` ).
 
-- It is generally difficult to get leveling and alignment accurate. Sensor
-  accuracy is 1 nT so orientation must be known to within .001 degrees.
 
-.. - There are some fluxgates which generate a measure of the total field strength.
 
 Proton Precession Magnetometer
 ------------------------------
@@ -242,16 +235,31 @@ Cesium (or optically pumped) magnetometer:
   the magnetic field direction (solved with multiple sensors), ans also more
   expensive   than proton precession.
 
-Magnetic Gradiometer
---------------------
 
-- These instruments use two sensors (any of those mentioned above) to measure
-  vertical or horizontal gradients.
+3-component magnetometers
+-------------------------
 
-- They often employ two cesium magnetometers separated by about 1 m.
+Some sensors can record the magnetic field in a particular direction and hence combining three of them in an orthogonal framework allows three components of the magnetic field to be recorded. A principle challenge in using these in field surveys is that the instruments need to be consistently aligned at the various stations. This means knowing the orientation of the instrument to within a small fraction of a degree. There are two main types of component magnetometers: fluxgates and squids. The fluxgates can be made small enough to be put into a borehole.
+
+.. _magnetics_fluxgate:
+
+Fluxgate Magnetometer
+^^^^^^^^^^^^^^^^^^^^^
+
+- The fluxgate magnetometer was developed during WWII to detect submarines. It
+  measures the magnetic field in a specific direction determined by the
+  sensor's orientation. A complete measurement of the field requires three
+  individual (Cartesian) components of the field ( such as :math:`B_x`,
+  :math:`B_y`, :math:`B_z` ).
+
+- It is generally difficult to get leveling and alignment accurate. Sensor
+  accuracy is 1 nT so orientation must be known to within .001 degrees.
+
+.. - There are some fluxgates which generate a measure of the total field strength.
+
 
 SQUIDS
-------
+^^^^^^
 
 (Superconducting Quantum Interference Devices): These are very
 sensitive, and are currently more common in laboratories that work on rock
@@ -263,6 +271,15 @@ in the field, and more applications will become evident in the coming decade
 
 .. _magnetic_app: http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Mag/InducedMag2D.ipynb
 
+
+
+Magnetic Gradiometer
+--------------------
+
+- These instruments use two sensors (any of those mentioned above) to measure
+  vertical or horizontal gradients.
+
+- They often employ two cesium magnetometers separated by about 1 m.
 
 
 
