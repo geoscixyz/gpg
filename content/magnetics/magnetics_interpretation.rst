@@ -4,15 +4,47 @@ Interpretation
 **************
 
 In this we focus on various techniques used to interpret the magnetic data.
-From an applied geoscientists standpoint, this is where most of the data integration and decision making steps are made.
+From an applied geoscientists standpoint, this is where most of the data integration and decision making steps are made. We illustrate each the interpretation techniques on a mineral exploration example.
 
-Inferences from data maps
-=========================
+Tli Kwi Cho (TKC): *A primer*
+================================================
 
-.. figure:: ./images/earth-strength-s.gif
-  :figclass: float-right-360
+.. figure:: ./images/TKC_Location.png
   :align: right
-  :scale: 100%
+  :figwidth: 50%
+
+We start with a brief overview the Tli Kwi Cho kimberlite project.
+
+
+
+
+.. raw:: html
+    :file: TKC_Data_Processing.html
+
+
+
+
+
+.. raw:: html
+    :file: TKC_Data_Filters.html
+
+
+
+
+Parametric Simulation
+=====================
+
+
+Inversion
+=========
+
+
+
+Old Material
+============
+
+.. _separate sidebar: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/blakely/blakely.html
+
 
 2D plots of magnetic data, often referred to as maps, can provide insight
 about the geologic units, contacts, and the horizontal location of structures.
@@ -36,9 +68,6 @@ then the secondary magnetic field induced within those features will be
 superimposed upon the Earth's own field. The result would be a change in total
 field strength that can be plotted as a map. A small scale example is given
 here:
-
-.. raw:: html
-    :file: data_plotting1.html
 
 Large data sets are commonly gathered using airborne instruments. They may
 involve :math:`10^5` to :math:`10^6` data points to show magnetic variations over many square
@@ -96,15 +125,3 @@ Other examples of magnetic data processing techniques include:
 The effects of these five processing options are illustrated in a `separate
 sidebar`_ on processing of magnetics data.
 
-.. _separate sidebar: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/blakely/blakely.html
-
-
-Parametric Simulation
-=====================
-
-
-Inversion
-=========
-
-Case Study
-==========
