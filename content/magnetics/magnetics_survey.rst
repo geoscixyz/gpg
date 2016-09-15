@@ -79,7 +79,7 @@ Experiment with burying a prism. Using the magnetic_app_, place the object at di
 Base Station
 ------------
 
-An important component of the survey is setting up a base station. A base station is generally set up in the vicinity of the survey area, and away from known magnetic sources like powerlines. The magnetometer at the base station records continuously during the survey period and serves as a reference for later processing of the magnetic data where we attempt to remove the daily variations of the inducing field due to :ref:`external sources<magnetics_external_sources>`. 
+An important component of the survey is setting up a base station. A base station is generally set up in the vicinity of the survey area, and away from known magnetic sources like powerlines. The magnetometer at the base station records continuously during the survey period and serves as a reference for later processing of the magnetic data where we attempt to remove the daily variations of the inducing field due to :ref:`external sources<magnetics_external_sources>`.
 
 .. _magnetics_line_profiles:
 
@@ -125,11 +125,11 @@ bodies of uniform susceptibility <magnetics_extended_bodies>`, and how those
 ideas apply to geologic structures that have a uniform susceptibility. In
 general however, the earth is complex and the rocks have variable
 susceptibility. We simulate the  anomalous magnetic fields in the
-following manner: 
+following manner:
 
 1. Describe the subsurface as a collection of prismatic cells, each of which has its own uniform susceptibility.
 
-2. The response of a single rectangular cell with constant susceptibility in an arbitrary magnetizing field can be calculated using expressions from the literature. (Think about each cell as being a magnetic dipole.) 
+2. The response of a single rectangular cell with constant susceptibility in an arbitrary magnetizing field can be calculated using expressions from the literature. (Think about each cell as being a magnetic dipole.)
 
 3. The principle of superposition holds.  At each location where a measurement is made, the responses from the individual cells are be added up to yield the total response.
 
@@ -237,13 +237,14 @@ Cesium (or optically pumped) magnetometer:
 
 
 3-component magnetometers
+-------------------------
 
-Some sensors can record the magnetic field in a particular direction and hence combining three of them in an orthogonal framework allows three components of the magnetic field to be recorded. A principle challenge in using these in field surveys is that the instruments need to be consistently aligned at the various stations. This means knowing the orientation of the instrument to within a small fraction of a degree. There are two main types of component magnetometers: fluxgates and squids. The fluxgates can be made small enough to be put into a borehole. 
+Some sensors can record the magnetic field in a particular direction and hence combining three of them in an orthogonal framework allows three components of the magnetic field to be recorded. A principle challenge in using these in field surveys is that the instruments need to be consistently aligned at the various stations. This means knowing the orientation of the instrument to within a small fraction of a degree. There are two main types of component magnetometers: fluxgates and squids. The fluxgates can be made small enough to be put into a borehole.
 
 .. _magnetics_fluxgate:
 
 Fluxgate Magnetometer
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 - The fluxgate magnetometer was developed during WWII to detect submarines. It
   measures the magnetic field in a specific direction determined by the
@@ -258,7 +259,7 @@ Fluxgate Magnetometer
 
 
 SQUIDS
-------
+^^^^^^
 
 (Superconducting Quantum Interference Devices): These are very
 sensitive, and are currently more common in laboratories that work on rock
