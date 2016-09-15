@@ -35,7 +35,7 @@ The first and simplest analysis can be done directly on the :ref:`Total Field An
 Derivative Maps
 ---------------
 
-While the data itself can be informative, image filtering techniques are commonly used by industry to
+While the data itself can be informative, image filtering techniques are commonly used by industry to further highlight important features present in the data.
 
 
 .. raw:: html
