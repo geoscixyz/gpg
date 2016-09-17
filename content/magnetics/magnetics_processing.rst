@@ -5,6 +5,7 @@ Processing
 
 This section focusses on the the temporal and spatial correction of magnetic data prior to the interpretation phase. In most cases, these processing steps are completed by the acquisition team, providing both the raw and processed data as a final product.
 
+.. _mangetics_time_variations:
 
 Removal of time variations
 ==========================
@@ -38,6 +39,7 @@ any day in the most recent 3 years.
 .. _geomag: http://www.geomag.nrcan.gc.ca/index-eng.php
 .. _NRC: http://www.spaceweather.gc.ca/tech/se-pip-en.php
 
+.. _magnetics_regional_trend:
 
 Removal of regional trends
 ==========================

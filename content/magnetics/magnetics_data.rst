@@ -10,6 +10,8 @@ Data
 
 In this section we present a summary about the different types of magnetic data. Different assumptions are made depending on the type of :ref:`instrument<magnetics_instrumentation>` used during acquisition.
 
+.. _magnetics_field_data:
+
 Magnetic field data
 -------------------
 
