@@ -56,10 +56,18 @@ Consequently, the geological model used to explain the deposit underwent several
 In this section, we will attempt to extract as much information as possible about the deposit strictly from the original airborne magnetic survey.
 
 
-Data interpretation
-===================
+Data map
+========
 
-The first and simplest analysis can be done directly on the :ref:`Total Field Anomaly<magnetics_field_data>` data as shown below. From the raw data, we notice a regional trend coming from the east of the survey area. In order to enhance the local anomalies, we first proceed with a :ref:`regional trend removal`<magnetics_regional_trend>`. A :math:`1^{th}` Order polynomial is subtracted from the raw data and presented below.
+2D plots of magnetic data, often referred to as maps, can provide insight
+about the geologic units, contacts, and the horizontal location of structures.
+What is presented, and how it is presented can greatly alter interpretations
+obtained by visually analyzing the maps. Raw data are not usually presented
+directly. Choices of contour plotting parameters must be made; features not
+related to targets might be removed; and data or image enhancement processing
+might be employed. Here we introduce some aspects of these topics.
+
+The first and simplest analysis can be done directly on the :ref:`Total Field Anomaly<magnetics_field_data>` data as shown below. From the raw data, we notice a regional trend coming from the east of the survey area. In order to enhance the local anomalies, we first proceed with a :ref:`regional trend removal<magnetics_regional_trend>`. A :math:`1^{th}` Order polynomial is subtracted from the raw data.
 
 .. raw:: html
     :file: TKC_Data_Processing.html
@@ -68,30 +76,30 @@ The first and simplest analysis can be done directly on the :ref:`Total Field An
 Derivative Maps
 ---------------
 
-While the data itself can be informative, image filtering techniques are commonly used by industry to further highlight important features present in the data.
+While the data itself can be informative, image filtering techniques are commonly used by industry to further highlight important features present in the data. These filters a generally done in the frequency_domain_ and require the data to be interpolated on a regular grid. Here are few examples:
 
 
 .. raw:: html
     :file: TKC_Data_Filters.html
 
-
-
-
-Parametric Simulation
-=====================
-
-From the data map, we identified at least two important features.
+In this case, the 1VD map was most useful in identying at least two important features:
 
  - Elongated magnetic anomalies that may correspond to intrusive dykes.
 
  - A compact, near circular anomaly that could resemble a kimberlite pipe.
 
-In order to test these hypothesizes, we first attempt to approximate the magnetic features with simple parametric objects.
+.. _frequency_domain: https://en.wikipedia.org/wiki/Frequency_domain
+
+Parametric Simulation
+=====================
+
+From the data map, we have targeted two features of interest with different geometries: a narrow elongated anomaly and a compact body.
+In order to test these hypothesizes, we first attempt to approximate these magnetic features with simple parametric objects using the :ref:`magnetic app<magnetics_applet>`.
 
 Plate model
 -----------
 
-Using the :ref:`magnetic app<magnetics_applet>`, we first look at the elongated features. :numref:`TKC_param_dyke` compares the magnetic data over the elongated with the magnetic simulated plate. The parameter used for the plate model are presented in :numref:`Param_dyke`. This result seems to confirm the presence of thin, shallow dipping magnetic dykes.Turns out that these dykes, part of the Mackenzie dyke swarm, run through out the region and are related to major tectonic events. Although interesting scientifically, they are of little interest in diamond exploration.
+ :numref:`TKC_param_dyke` compares the observed and simulated magnetic data across elongated magnetic anomaly. The parameter used for the plate model are presented in :numref:`Param_dyke`. This result seems to confirm the presence of thin, shallow dipping magnetic dykes.Turns out that these dykes are part of the Mackenzie dyke swarm. These dykes run through out the Lac de Gras region and are related to major tectonic events. Although interesting scientifically, they are of little interest in diamond exploration.
 
 .. figure:: ./images/TKC_Parametric_Dyke.png
   :align: center
@@ -139,89 +147,119 @@ Inversion
 =========
 
 
+The parametric forward simulation gave us a first order estimate for the shape and susceptibility contrast of the main magnetic anomalies. Modeling the Earth with simple parametric objects rapidly becomes prohibitive however for large and complicated susceptibility distributions. For this reason, we must adopt a more mathematical approach. The inverse problem is illustrated in :numref:`mag_inverse`. Similar to medical imaging problem, the goal is to recover a 3D image of susceptibilities at depth. Several commercial and open-source algorithms are available to solve the inverse problem. We here used the SimPEG_ open-source package. Technical details about the inverse algorithm are provided in this tutorial_
 
-Old Material
-============
+.. figure:: ./images/Intro_Inverse.png
+    :align: center
+    :figwidth: 100 %
+    :name: mag_inverse
 
-.. _separate sidebar: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/blakely/blakely.html
+From the inversion algorithm, we recover a 3D model of magnetic susceptibility.
+:numref:`TKC_susc` presents multiple sections through this model.
 
-
-2D plots of magnetic data, often referred to as maps, can provide insight
-about the geologic units, contacts, and the horizontal location of structures.
-What is presented, and how it is presented can greatly alter interpretations
-obtained by visually analyzing the maps. Raw data are not usually presented
-directly. Choices of contour plotting parameters must be made; features not
-related to targets might be removed; and data or image enhancement processing
-might be employed. Here we introduce some aspects of these topics.
-
-The most common form of magnetic survey data involves "total field"
-measurements. This means that the field's magnitude along the direction of the
-earth's field is measured at every location. To the right is a total field
-strength map for the whole world (a full size version is in the sidebar_).
-
-.. _sidebar: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/sidebar-fields.html
-
-At the scale of most exploration or engineering surveys, a map of total field
-data gathered over ground with no buried susceptible material would appear
-flat. However, if there are rocks or objects that are magnetic (susceptible)
-then the secondary magnetic field induced within those features will be
-superimposed upon the Earth's own field. The result would be a change in total
-field strength that can be plotted as a map. A small scale example is given
-here:
-
-Large data sets are commonly gathered using airborne instruments. They may
-involve :math:`10^5` to :math:`10^6` data points to show magnetic variations over many square
-kilometers. An example of a large airborne data set is shown to the right,
-with a larger version, including alternative colour scale schemes, `shown in a
-sidebar`_.
-
-.. _shown in a sidebar: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/sidebar-airmaps.html
-
-.. figure:: ./images/map-cust.gif
-  :figclass: float-right-360
-  :align: right
-  :scale: 40%
-
-Such data sets were once too large to invert directly, but they still provide
-extremely valuable information about geology and structure, especially if some
-processing is applied to enhance desirable features and/or suppress noise or
-unwanted features. With recent advancements in computational power and
-inversion methodologies these large scale problems are becoming easier to
-invert.
+.. figure:: ./images/TKC_Inv_Susc.png
+    :align: center
+    :figwidth: 100 %
+    :name: TKC_susc
 
 
-Derivative Map
---------------
+.. _Simpeg: http://simpeg.xyz
 
-There are numerous options for processing potential fields data in general,
-and magnetics data specifically. One example is shown below. The processing was applied in
-this case in order to emphasize geologic structural trends.
+.. _tutorial: http://simpegtutorials.readthedocs.io/en/latest/content/stories/index.html
+
+A key component to asses the validity of our 3D model is to verify that the given solution honors the data. The figures below compares the true and predicted magnetic data. The residual map confirms that our model captures most of the signal contained in the airborne data set.
 
 .. raw:: html
-  :file: Airborne_magnetics_example.html
+    :file: TKC_Data_Inverted.html
 
 
-Other examples of magnetic data processing techniques include:
+Final Interpretation
+====================
 
-- Upward continuation is commonly used to remove the effects of very nearby
-  (or shallow) susceptible material.
 
-- Second vertical derivative of total field anomaly is sometimes used to
-  emphasize the edges of anomalous zones.
 
-- Reduction to the pole rotates the data set so that it appears as if the
-  geology existed at the north magnetic pole. This removes the asymmetry
-  associated with mid-latitude anomalies.
+.. Old Material
+.. ============
 
-- Calculating the pseudo-gravity anomaly converts the magnetic data into a
-  form that would appear if buried sources were simply density anomalies
-  rather than dipolar sources.
+.. .. _separate sidebar: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/blakely/blakely.html
 
-- Horizontal gradient of pseudo-gravity anomaly: gravity anomaly inflection
-  points (horizontal gradient peaks) align with vertical body boundaries;
-  therefore, mapping peaks of horizontal gradient of pseudo-gravity can help
-  map geologic contacts.
 
-The effects of these five processing options are illustrated in a `separate
-sidebar`_ on processing of magnetics data.
+.. 2D plots of magnetic data, often referred to as maps, can provide insight
+.. about the geologic units, contacts, and the horizontal location of structures.
+.. What is presented, and how it is presented can greatly alter interpretations
+.. obtained by visually analyzing the maps. Raw data are not usually presented
+.. directly. Choices of contour plotting parameters must be made; features not
+.. related to targets might be removed; and data or image enhancement processing
+.. might be employed. Here we introduce some aspects of these topics.
+
+.. The most common form of magnetic survey data involves "total field"
+.. measurements. This means that the field's magnitude along the direction of the
+.. earth's field is measured at every location. To the right is a total field
+.. strength map for the whole world (a full size version is in the sidebar_).
+
+.. .. _sidebar: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/sidebar-fields.html
+
+.. At the scale of most exploration or engineering surveys, a map of total field
+.. data gathered over ground with no buried susceptible material would appear
+.. flat. However, if there are rocks or objects that are magnetic (susceptible)
+.. then the secondary magnetic field induced within those features will be
+.. superimposed upon the Earth's own field. The result would be a change in total
+.. field strength that can be plotted as a map. A small scale example is given
+.. here:
+
+.. Large data sets are commonly gathered using airborne instruments. They may
+.. involve :math:`10^5` to :math:`10^6` data points to show magnetic variations over many square
+.. kilometers. An example of a large airborne data set is shown to the right,
+.. with a larger version, including alternative colour scale schemes, `shown in a
+.. sidebar`_.
+
+.. .. _shown in a sidebar: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/sidebar-airmaps.html
+
+.. .. figure:: ./images/map-cust.gif
+..   :figclass: float-right-360
+..   :align: right
+..   :scale: 40%
+
+.. Such data sets were once too large to invert directly, but they still provide
+.. extremely valuable information about geology and structure, especially if some
+.. processing is applied to enhance desirable features and/or suppress noise or
+.. unwanted features. With recent advancements in computational power and
+.. inversion methodologies these large scale problems are becoming easier to
+.. invert.
+
+
+.. Derivative Map
+.. --------------
+
+.. There are numerous options for processing potential fields data in general,
+.. and magnetics data specifically. One example is shown below. The processing was applied in
+.. this case in order to emphasize geologic structural trends.
+
+.. .. raw:: html
+..   :file: Airborne_magnetics_example.html
+
+
+.. Other examples of magnetic data processing techniques include:
+
+.. - Upward continuation is commonly used to remove the effects of very nearby
+..   (or shallow) susceptible material.
+
+.. - Second vertical derivative of total field anomaly is sometimes used to
+..   emphasize the edges of anomalous zones.
+
+.. - Reduction to the pole rotates the data set so that it appears as if the
+..   geology existed at the north magnetic pole. This removes the asymmetry
+..   associated with mid-latitude anomalies.
+
+.. - Calculating the pseudo-gravity anomaly converts the magnetic data into a
+..   form that would appear if buried sources were simply density anomalies
+..   rather than dipolar sources.
+
+.. - Horizontal gradient of pseudo-gravity anomaly: gravity anomaly inflection
+..   points (horizontal gradient peaks) align with vertical body boundaries;
+..   therefore, mapping peaks of horizontal gradient of pseudo-gravity can help
+..   map geologic contacts.
+
+.. The effects of these five processing options are illustrated in a `separate
+.. sidebar`_ on processing of magnetics data.
 
