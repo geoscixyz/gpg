@@ -20,8 +20,8 @@ The Northwest Territories have been surveyed extensively for diamondiferous kimb
 
 
 .. figure:: ./images/TKC_Kimbs.png
-  :align: right
-  :figwidth: 50%
+  :align: left
+  :figwidth: 30%
   :name: TKC_Sketch
 
 A common geophysical fingerprint for a kimberlite pipe is a circular strong magnetic anomaly, with a gravitational low and an anomalous electromagnetic (EM) response.
@@ -50,9 +50,15 @@ A generic model for kimberlite pipes found in the Lac de Gras region is presente
       - Low
 
 
-The TKC kimberlite complex was identified from an airborne magnetic and frequency-domain electromagnetic DIGHEM survey in 1992.
+.. figure:: ./images/TKC_RTF_Raw.png
+  :align: right
+  :figwidth: 50%
+  :name: DIGHEM_survey
+
+The TKC kimberlite complex was identified from an airborne magnetic and frequency-domain electromagnetic DIGHEM survey in 1992 (:numref:`DIGHEM_survey`).
 Geophysics had been used during the discovery phase of TKC, but little had been done to model the deposit prior to drilling. As we will later discover, the TKC deposit differ from the standard kimberlite model found in the region.
 Consequently, the geological model used to explain the deposit underwent several revisions over the following decades.
+
 In this section, we will attempt to extract as much information as possible about the deposit strictly from the original airborne magnetic survey.
 
 
@@ -67,7 +73,24 @@ directly. Choices of contour plotting parameters must be made; features not
 related to targets might be removed; and data or image enhancement processing
 might be employed. Here we introduce some aspects of these topics.
 
-The first and simplest analysis can be done directly on the :ref:`Total Field Anomaly<magnetics_field_data>` data as shown below. From the raw data, we notice a regional trend coming from the east of the survey area. In order to enhance the local anomalies, we first proceed with a :ref:`regional trend removal<magnetics_regional_trend>`. A :math:`1^{th}` Order polynomial is subtracted from the raw data.
+The first and simplest analysis can be done directly on the :ref:`Total Field Anomaly<magnetics_field_data>` data as shown below. The survey parameters are provided in :numref:`DIGHEM_param`.
+
+**Note**: The highest values observed on the gridded magnetic map are strongly correlated with the survey line locations. This is strictly an interpolation bias and should be ignore during the interpretation process.
+
+.. list-table:: : Airborne DIGHEM (1992) magnetic survey.
+   :header-rows: 0
+   :widths: 1 1
+   :stub-columns: 0
+   :name: DIGHEM_param
+
+   *  - Inducing field
+      - :math:`Inc:\;83.8^\circ,\;Dec:\;25.4^\circ,\;Strength:\;60308\;nT`
+   *  - Line spacing
+      - 200 m
+   *  - Instrument
+      -  Optical pump cesium vapor
+
+From the raw data, we notice a regional trend coming from the east of the survey area. In order to enhance the local anomalies, we first proceed with a :ref:`regional trend removal<magnetics_regional_trend>`. A :math:`1^{th}` Order polynomial is subtracted from the raw data.
 
 .. raw:: html
     :file: TKC_Data_Processing.html
@@ -82,11 +105,19 @@ While the data itself can be informative, image filtering techniques are commonl
 .. raw:: html
     :file: TKC_Data_Filters.html
 
-In this case, the 1VD map was most useful in identying at least two important features:
+The derivative maps were useful in identifying at least two important features :numref:`1th_interp`).
 
- - Elongated magnetic anomalies that may correspond to intrusive dykes.
+ - Two sets of elongated magnetic anomalies striking :math:`315^\circ` N and :math:`45^\circ` N. From the shape and strength of the magnetic field, they may correspond to intrusive dykes emplaced during separate events. From the THDR map, these dykes should be between 20 to 50 m in width.
 
- - A compact, near circular anomaly that could resemble a kimberlite pipe.
+ - Possible sinistral faulting post-intrusion striking at :math:`\approx 40^\circ`
+
+ - Two compact, near circular anomaly that could resemble a kimberlite pipes. These are features of interest in diamond exploration.
+
+
+.. figure:: ./images/TKC_1th_interp.png
+  :align: center
+  :name: 1th_Interp
+
 
 .. _frequency_domain: https://en.wikipedia.org/wiki/Frequency_domain
 
@@ -99,7 +130,7 @@ In order to test these hypothesizes, we first attempt to approximate these magne
 Plate model
 -----------
 
- :numref:`TKC_param_dyke` compares the observed and simulated magnetic data across elongated magnetic anomaly. The parameter used for the plate model are presented in :numref:`Param_dyke`. This result seems to confirm the presence of thin, shallow dipping magnetic dykes.Turns out that these dykes are part of the Mackenzie dyke swarm. These dykes run through out the Lac de Gras region and are related to major tectonic events. Although interesting scientifically, they are of little interest in diamond exploration.
+ :numref:`TKC_param_dyke` compares the observed and simulated magnetic data across an elongated magnetic anomaly. The parameter used for the plate model are presented in :numref:`Param_dyke`. This result seems to confirm the presence of thin, shallow dipping magnetic dykes.Turns out that these dykes are part of the Mackenzie dyke swarm that runs through out the Lac de Gras region. These intrusive dykes are related to major tectonic events, and although interesting scientifically, they are of little interest in diamond exploration.
 
 .. figure:: ./images/TKC_Parametric_Dyke.png
   :align: center
@@ -147,12 +178,15 @@ Inversion
 =========
 
 
-The parametric forward simulation gave us a first order estimate for the shape and susceptibility contrast of the main magnetic anomalies. Modeling the Earth with simple parametric objects rapidly becomes prohibitive however for large and complicated susceptibility distributions. For this reason, we must adopt a more mathematical approach. The inverse problem is illustrated in :numref:`mag_inverse`. Similar to medical imaging problem, the goal is to recover a 3D image of susceptibilities at depth. Several commercial and open-source algorithms are available to solve the inverse problem. We here used the SimPEG_ open-source package. Technical details about the inverse algorithm are provided in this tutorial_
+The parametric forward simulation gave us a first order estimate for the shape and susceptibility contrast of the main magnetic anomalies. Modeling the Earth with simple parametric objects rapidly becomes prohibitive however for large and complicated susceptibility distributions. For this reason, we must adopt a more mathematical approach. The inverse problem is illustrated in :numref:`mag_inverse`. Similar to medical imaging problem, the goal is to recover a 3D image from the magnetic data. Several commercial and open-source algorithms are available to solve the inverse problem. We here used the SimPEG_ open-source package. Technical details about the inverse algorithm are provided in this tutorial_
 
 .. figure:: ./images/Intro_Inverse.png
     :align: center
-    :figwidth: 100 %
+    :figwidth: 50 %
     :name: mag_inverse
+
+3D Model
+--------
 
 From the inversion algorithm, we recover a 3D model of magnetic susceptibility.
 :numref:`TKC_susc` presents multiple sections through this model.
