@@ -63,18 +63,14 @@ function MM_initInteractions(){}
 
               <p class="figureCaption">
 
-                  <input name="radiobutton" value="radiobutton" checked="checked"onclick="MM_swapImage('filters','','./../../_images/TKC_RTF_Detrend.png',1)" type="radio">
-                  De-trended residual total field data <br>
+                  <input name="radiobutton" value="radiobutton" checked="checked"onclick="MM_swapImage('inverse','','./../../_images/TKC_Obs.png',1)" type="radio">
+                  Observed data. <br>
 
-                  <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('filters','','./../../_images/TKC_Upward100m.png',1)" type="radio">
-                  Upward continuation (100 m). Upward continuation is commonly used to remove the effects of very nearby (or shallow) susceptible material. High frequency information decays rapidly, leaving only the broad features. <br>
+                  <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('inverse','','./../../_images/TKC_Pred.png',1)" type="radio">
+                  Predicted data from the recovered susceptibility model. <br>
 
-                  <input name="radiobutton" value="radiobutton"  onclick="MM_swapImage('filters','','./../../_images/TKC_1VD.png',1)" type="radio">
-                  First vertical derivative (1VD) map is commonly used to enhance the shorter wave length signal. Notice how well the linear features are defined compared to the RTF map. <br>
-
-                  <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('filters','','./../../_images/TKC_HD.png',1)" type="radio">
-                  Total horizontal derivative (THDR) map is used to highlight edges. This filter is most useful to delinate contacts between geological boundaries.<br>
-
+                  <input name="radiobutton" value="radiobutton"  onclick="MM_swapImage('inverse','','./../../_images/TKC_Residual.png',1)" type="radio">
+                  Normalized residual [ (obs-pred)/uncertainties ]. <br>
 
 
               </form>
@@ -85,7 +81,7 @@ function MM_initInteractions(){}
           <tr>
 
             <td>
-            <div align="center"><font size="-1"><img src="./../../_images/TKC_RTF_Detrend.png" name="filters" height="129" width="400"></font></div>
+            <div align="center"><font size="-1"><img src="./../../_images/TKC_Obs.png" name="inverse" height="129" width="400"></font></div>
             </td>
 
           </tr>
