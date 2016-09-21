@@ -127,6 +127,8 @@ Parametric Simulation
 From the data map, we have targeted two features of interest with different geometries: a narrow elongated anomaly and a compact body.
 In order to test these hypothesizes, we first attempt to approximate these magnetic features with simple parametric objects using the :ref:`magnetic app<magnetics_applet>`.
 
+.. _plate_model:
+
 Plate model
 -----------
 
@@ -149,6 +151,7 @@ Plate model
    *  - Susceptibility
       - 0.1 SI
 
+.. _pipe_model:
 
 Pipe model
 ----------
@@ -178,28 +181,76 @@ Inversion
 =========
 
 
-The parametric forward simulation gave us a first order estimate for the shape and susceptibility contrast of the main magnetic anomalies. Modeling the Earth with simple parametric objects rapidly becomes prohibitive however for large and complicated susceptibility distributions. For this reason, we must adopt a more mathematical approach. The inverse problem is illustrated in :numref:`mag_inverse`. Similar to medical imaging problem, the goal is to recover a 3D image from the magnetic data. Several commercial and open-source algorithms are available to solve the inverse problem. We here used the SimPEG_ open-source package. Technical details about the inverse algorithm are provided in this tutorial_
+The parametric forward simulation was helpful in understanding the shape and susceptibility contrast associated with the main magnetic anomalies. Modeling the Earth with simple parametric objects rapidly becomes prohibitive however for large and complicated susceptibility distributions. For this reason, we must adopt a more mathematical approach.
+
+The inverse problem is illustrated in :numref:`mag_inverse`. Similar to a medical imaging problem, the goal is to recover a 3D representation of the Earth from the magnetic data. Several commercial and open-source algorithms are available to solve the inverse problem. We here used the SimPEG_ open-source package. We present the various input parameters required for the inversion. More technical details regarding the inversion algorithm are provided in this tutorial_
 
 .. figure:: ./images/Intro_Inverse.png
     :align: center
     :figwidth: 50 %
     :name: mag_inverse
 
-3D Model
---------
+Inverse Problem
+---------------
+
+.. figure:: ./images/TKC_Mesh.png
+    :align: left
+    :figwidth: 50 %
+    :name: TKC_Mesh
+
+In its simplest form, the inverse problem attempts to image the Earth from the observed data. To do this, we need to *approximate* the continuous Earth with a set of *discrete* parameters that a computer can understand. A picture taken with a digital camera is a great analogy. The quality of the picture largely depends on the resolution of the camera, or the number of pixels used to capture the image. The higher the resolution, the larger the file size. Similarly for 3D inversion, we need to choose an appropriate *mesh* resolution to capture the right level of details, without getting too large for a computer to handle it. The chosen mesh parameters for this problem are shown in :numref:`Inversion_param`.
+
+.. figure:: ./images/TKC_DEM.png
+    :align: right
+    :figwidth: 50 %
+    :name: TKC_topo
+
+Secondly, we need a topographic surface that defines the relative distance between the observation point and the discrete Earth. A Digital Elevation Model (DEM) is downloaded from the NRCan Geogratis_ website as shown in :numref:`TKC_topo`.
+
+.. list-table:: : Inversion parameters
+   :header-rows: 0
+   :widths: 1 1
+   :stub-columns: 0
+   :name: Inversion_param
+
+   *  - Cell size
+      - 25 x 25 x 25 m
+   *  - Number of cells (X, Y, Z)
+      - 120 x 130 x 35 = 546,000 cells
+   *  - Number of data
+      - 1092
+   *  - Data uncertainties
+      - 10 nT
+
+.. _Geogratis: http://geogratis.gc.ca/site/eng/extraction
+
+3D Solution
+-----------
 
 From the inversion algorithm, we recover a 3D model of magnetic susceptibility.
-:numref:`TKC_susc` presents multiple sections through this model.
+We note the following features:
+
+- The inversion successfully recovered thin dipping planes similar to our :ref:`parametric model<plate_model>`. Despite getting smooth and broad at depth, the vertical length of these magnetic planes appear to extend from the surface down to over 500 m (:numref:`TKC_susc` ).
 
 .. figure:: ./images/TKC_Inv_Susc.png
     :align: center
     :figwidth: 100 %
     :name: TKC_susc
 
+- Two nearly vertical compact bodies are imaged west of the magnetic dykes (:numref:`TKC_DO27`). Susceptibility values vary greatly between the two anomalies. The largest (South) anomaly seems to dip slightly toward SW has predicted by our :ref:`parametric model<pipe_model>` and appears deeper than the northern anomaly.
+
+.. figure:: ./images/TKC_Susc_DO27.png
+    :align: center
+    :figwidth: 100 %
+    :name: TKC_DO27
+
 
 .. _Simpeg: http://simpeg.xyz
 
 .. _tutorial: http://simpegtutorials.readthedocs.io/en/latest/content/stories/index.html
+
+Validation
+----------
 
 A key component to asses the validity of our 3D model is to verify that the given solution honors the data. The figures below compares the true and predicted magnetic data. The residual map confirms that our model captures most of the signal contained in the airborne data set.
 
