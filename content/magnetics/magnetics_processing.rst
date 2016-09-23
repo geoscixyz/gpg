@@ -3,44 +3,17 @@
 Processing
 **********
 
-Temporal variations are often larger than geophysical anomalies. They must be
-accounted for in all surveys and this is usually done by acquiring data at a
-fixed base-station. Another alternative is to acquire :ref:`gradient
-data<magnetics_gradient_data>` that use two fixed sensors.
-:numref:`space_weather` shows an example of magnetic noise that may be
-encountered as a result of a geomagnetic storm. These temporal variations have
-an impact on magnetic data measured over time scales of several days, hours,
-or minutes.
+This section focusses on the the temporal and spatial correction of magnetic data prior to the interpretation phase. In most cases, these processing steps are completed by the acquisition team, providing both the raw and processed data as a final product.
 
-The Geological Survey of Canada has a web page, which can provide graphs of
-diurnal variations observed at any of 11 magnetic observatories in Canada, for
-any day in the most recent 3 years. Find this facility by starting at the`GSC
-Geomagnetic data page`_. This resource is also a link to other information
-about magnetics.
-
-.. figure:: ./images/pipe3_timelapse_edit.gif
-    :align: center
-    :scale: 75%
-    :name: space_weather
-
-    : Adapted from `NRC`_
-
-
-.. _GSC Geomagnetic data page: http://www.geomag.nrcan.gc.ca/index-eng.php
-.. _NRC: http://www.spaceweather.gc.ca/tech/se-pip-en.php
-
-.. _magnetics_buried_dipole:
+.. _mangetics_time_variations:
 
 Removal of time variations
 ==========================
 
-We saw that the :ref:`Earth's magnetic field<earth_s_field>` changes with time.
-These temporal variations are also referred to as diurnal variations. Our
-magnetometers record the Earth's inducing field as well as the secondary or
-anomalous fields induced in susceptible bodies. If the changes in earth's
+Earth's magnetic field changes over time for a variety of :ref:`reasons<magnetics_external_sources>`. If the changes in earth's
 field have an amplitude that is significant compared to our anomalous signal,
 then we need to correct for the observed temporal variations. The general
-procedure  is to establish a "base-station" which is fixed in location and
+procedure  is to establish a :ref:`base-station<magnetics_base_station>` which is fixed in location and
 continually measures  the magnetic field. Each datum acquired by the roving
 sensor is also time-stamped. The assumption  is then made that the changes in
 the Earth's magnetic field caused by these natural sources have a long enough
@@ -51,31 +24,22 @@ subtraction process
 .. math::
 	\Delta \textbf{B}(t) = \textbf{B}_{obs}(t) - \textbf{B}_{base}(t)
 
-.. The graphs below indicate the procedure.
+The Geological Survey of Canada geomag_ page can provide graphs of
+diurnal variations observed at any of 11 magnetic observatories in Canada, for
+any day in the most recent 3 years.
 
-.. DWO: same graphs as used in the lecture
+.. figure:: ./images/pipe3_timelapse_edit.gif
+    :align: center
+    :scale: 75%
+    :name: space_weather
+
+    : Adapted from `NRC`_
 
 
-Two things happen with this procedure
+.. _geomag: http://www.geomag.nrcan.gc.ca/index-eng.php
+.. _NRC: http://www.spaceweather.gc.ca/tech/se-pip-en.php
 
-- Time variations are removed.
-
-- Earth's field, associated with the location of the base-station, is removed.
-
-The residual data would be similar to that in which the
-:ref:`IGRF<magnetics_IGRF>` has been removed.
-
-The residual field, :math:`\Delta B`, contains the sought anomalous field but
-it may also have some broad-scale background or "regional field". Thus
-
-.. math::
-	\Delta \textbf{B} = \textbf{B}_a + \textbf{B}_{regional}
-
-The "regional field" is a smoothly varying field which characterizes the
-magnetic response of large scale background structures. If our primary
-interest is in the anomalous field produced by the taget body, we may want to
-remove this regional field.
-
+.. _magnetics_regional_trend:
 
 Removal of regional trends
 ==========================
@@ -92,7 +56,7 @@ we designate magnetic fields as **B**, then we want to perform the following
 
 Estimates of the regional field may be obtained using:
 
-- the IGRF (International Geomagnetic Reference Field) discussed :ref:`here<earth_s_field>`
+- the :ref:`IGRF<magnetics_IGRF>`
 
 - a constant value selected by the interpreter (when survey areas are small);
 
@@ -129,60 +93,5 @@ map is related to the ore body.
 
 
 
-Plotting Data
-=============
-
-
-
-.. figure:: ./images/earth-strength-s.gif
-	:figclass: float-right-360
-	:align: right
-	:scale: 100%
-
-2D plots of magnetic data, often referred to as maps, can provide insight
-about the geologic units, contacts, and the horizontal location of structures.
-What is presented, and how it is presented can greatly alter interpretations
-obtained by visually analyzing the maps. Raw data are not usually presented
-directly. Choices of contour plotting parameters must be made; features not
-related to targets might be removed; and data or image enhancement processing
-might be employed. Here we introduce some aspects of these topics.
-
-The most common form of magnetic survey data involves "total field"
-measurements. This means that the field's magnitude along the direction of the
-earth's field is measured at every location. To the right is a total field
-strength map for the whole world (a full size version is in the sidebar_).
-
-.. _sidebar: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/sidebar-fields.html
-
-At the scale of most exploration or engineering surveys, a map of total field
-data gathered over ground with no buried susceptible material would appear
-flat. However, if there are rocks or objects that are magnetic (susceptible)
-then the secondary magnetic field induced within those features will be
-superimposed upon the Earth's own field. The result would be a change in total
-field strength that can be plotted as a map. A small scale example is given
-here:
-
-.. raw:: html
-    :file: data_plotting1.html
-
-Large data sets are commonly gathered using airborne instruments. They may
-involve :math:`10^5` to :math:`10^6` data points to show magnetic variations over many square
-kilometers. An example of a large airborne data set is shown to the right,
-with a larger version, including alternative colour scale schemes, `shown in a
-sidebar`_.
-
-.. _shown in a sidebar: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/sidebar-airmaps.html
-
-.. figure:: ./images/map-cust.gif
-	:figclass: float-right-360
-	:align: right
-	:scale: 40%
-
-Such data sets were once too large to invert directly, but they still provide
-extremely valuable information about geology and structure, especially if some
-processing is applied to enhance desirable features and/or suppress noise or
-unwanted features. With recent advancements in computational power and
-inversion methodologies these large scale problems are becoming easier to
-invert.
 
 
