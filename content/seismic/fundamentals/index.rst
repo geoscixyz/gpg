@@ -15,7 +15,6 @@ Contents:
    :maxdepth: 1
 
    seismic_fundamental_physics
-   seismic_velocity
    seismic_sources
    seismic_receivers
  

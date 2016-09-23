@@ -11,7 +11,7 @@ the material of the earth near the source becomes compressed (or extended) and
 twisted. These deformations propagate away from the source. The speed of propagation and the type of motion propagated depends upon the physical properties of the material. Most earth materials under normal seismic conditions can be described by density and two elastic parameters:
 
 1. density: :math:`\rho`
-2. bulk modulus:  :math:`\kappa` (compressibility)
+2. bulk modulus:  :math:`K` (compressibility)
 3. shear modulus:  :math:`\mu` (twistability)
 
 By knowing the time at which the source was excited and measuring the time needed for the excitation to travel from the source to an array of receivers, it is possible to obtain information about the structure and physical properties of the subsurface.
@@ -76,7 +76,7 @@ pressure (force per unit area is the same in each direction) :math:`P`. This pre
 V` be the change in volume resulting from this stress. The volumetric strain is :math:`\Delta V/V`. The **bulk modulus** is defined to be the volumetric stress divided by the volumetric strain:
 
 .. math::
-	\kappa = \frac{P}{\Delta V/V}.
+	K = \frac{P}{\Delta V/V}.
 	
 
 
@@ -106,25 +106,27 @@ As discussed above, the linear elastic isotropic stress-strain relationship of a
 Young's Modulus
 ---------------
 
-Young's modulus is defined to be the ratio of longitudinal normal stress to longitudinal normal strain. Consider the rectangular prism shown below with square cross-sectional area :math:`A = W^2` and length :math:`L`. A tensile force :math:`F` applied normal to the axis of the prism, distributed over the cross-sectional area, will generate a normal stress of :math:`P = F/A`. If this stress generates an elongation of the prism by length :math:`\Delta L`, the Young's modulus of the prism material is
+Young's modulus is defined to be the ratio of longitudinal normal stress to longitudinal normal strain. Consider the rectangular prism shown below with square cross-sectional area :math:`A = W^2` and length :math:`L`. A force :math:`F` applied normal to the axis of the prism, distributed over the cross-sectional area, will generate a normal stress of :math:`P = F/A`. If this stress generates a reduction in length of the prism of :math:`\Delta L`, the Young's modulus of the prism material is
 
 .. math::
-	E = \frac{P}{\Delta L/L)}
+	E = \frac{P}{\Delta L/L}
 
-.. figure:: ./images/youngs.png
+.. figure:: ./images/Poisson-ratio-subwiki.png
 		:align: center
 		:scale: 60%
+		
+		Young's modulus. `Image <http://www.subsurfwiki.org/wiki/File:Elastic_Poisson_ratio.png>`__ from `Subsurface Wiki`_, licensed under `CC BY 3.0`_.
 
 
 Poisson's Ratio
 ---------------
 
-As a result of the longitudinal stress described above the cross-sectional area of the prism may be reduced, compensating for the increase in length. Let us define the cross-sectional strain as :math:`\Delta W / W`. **Poisson's ratio** is the ratio of transverse strain to longitudinal strain due to a longitudinal stress:
+As a result of the longitudinal stress described above the cross-sectional area of the prism may be increased, compensating for the reduction in length. Let us define the cross-sectional strain as :math:`\Delta W / W`. **Poisson's ratio** is the ratio of transverse strain to longitudinal strain due to a longitudinal stress:
 
 .. math::
 	\sigma = \frac{\Delta W / W}{\Delta L/L}
 
-Note that it is possible for :math:`\sigma` to be zero. The increase in length could be compensated for by increasing pore space for example. Cork is an example of such a material.
+Note that it is possible for :math:`\sigma` to be zero. The decrease in length could be compensated for by decrease in pore space for example. Cork is an example of such a material.
 
 Elastic model for Earth rocks
 =================================
@@ -148,10 +150,10 @@ Body Waves
 ==========
 
 **Compressional waves (P waves)** propagate by compression and rarefaction and
-the velocity of such waves, :math:`v_p`, in a material with bulk modulus :math:`\kappa`, shear modulus :math:`\mu`, and density :math:`\rho` is given by the equation
+the velocity of such waves, :math:`v_p`, in a material with bulk modulus :math:`K`, shear modulus :math:`\mu`, and density :math:`\rho` is given by the equation
 
 .. math::
-	v_p = \sqrt{ \frac{\kappa + 4/3\mu}{\rho} }.
+	v_p = \sqrt{ \frac{K + 4/3\mu}{\rho} }.
 	
 The figure below shows a simple animation of the motion associated with P waves.
 
@@ -236,6 +238,20 @@ travels.
 	:align: center
 
 
+Waves Incident on Interfaces
+============================
+
+Seismic wave from source at the surface will propagate in all directions away from source. Body Waves will be partially reflected partially transmitted at interfaces between rock types in the ground. 
+
+.. Transmitted wave will be refracted, meaning it will be bent. Check out https://www.youtube.com/watch?v=FygYDmm99SA. The direction of the refracted ray can be computed from Snell's law.
+
+.. At the critical angle, wave will travel along interface and head waves will be generated according to Huygen's principle. Head waves propagate back toward surface at the critical angle.
+
+
+.. Another refraction/head wave video https://www.iris.edu/hq/inclass/animation/seismic_wave_behavior_a_single_boundary_refracts__reflects
+
+.. Site with some head wave figures: http://www.ucl.ac.uk/EarthSci/people/lidunka/GEOL2014/Geophysics4%20-%20Seismic%20waves/SEISMOLOGY%20.htm
+	
 Wave Velocity and Particle Velocity
 ===================================
 
@@ -245,21 +261,8 @@ travels in air at approximately 0.33 km/s. The wave energy can be recorded
 many kilometers from the source even if the source is small. The velocity and
 displacements of individual particles in the rocks are however very small;
 typical particle speeds are :math:`10^{-8}` m/s and typical ground displacements
-are :math:`10^{-10}` m.
+are :math:`10^{-10}` m. For a list of velocities of some common earth materials and a discussion of the geological factors that affect velocities please see the `seismic velocity`_ page on the physical properties section of this site.
 
-
-P-wave velocity of earth materials
-==================================
-
-Some characteristics of P-wave velocities are:
-
-1. :math:`v_p` increases with confining pressure;
-
-2. sandstones and shales show a systematic increase in :math:`v_p` with depth of burial and age (progressive compaction and cementation);
-
-3. For a wide range of rocks there is an approximate relationship between density and :math:`v_p`;
-
-4. The presence of gas in sedimentary rocks reduces the elastic moduli, Poisson's ratio, and the ratio :math:`v_p / v_s`.
 
 
 Attenuation
@@ -289,3 +292,4 @@ The amplitude of seismic waves falls off with distance from the source. There ar
 .. _Subsurface Wiki: http://subsurfwiki.org/
 .. _L. Braile: http://web.ics.purdue.edu/~braile/
 .. _seismic wave demo: http://web.ics.purdue.edu/~braile/edumod/waves/WaveDemo.htm
+.. _seismic velocity: _seismic_velocity_duplicate
