@@ -277,6 +277,7 @@ We note the following features:
     :figwidth: 100 %
     :name: TKC_susc
 
+
 - Two nearly vertical compact bodies are imaged west of the magnetic dykes (:numref:`TKC_DO27`). Susceptibility values vary greatly between the two anomalies. The largest (South) anomaly seems to dip slightly toward SW has predicted by our :ref:`parametric model<pipe_model>` and appears deeper than the northern anomaly.
 
 .. figure:: ./images/TKC_Susc_DO27.png
@@ -284,6 +285,9 @@ We note the following features:
     :figwidth: 100 %
     :name: TKC_DO27
 
+.. image:: https://img.shields.io/badge/powered%20by-SimPEG-blue.svg
+    :target: http://simpeg.xyz
+    :alt: SimPEG</pre>
 
 .. _Simpeg: http://simpeg.xyz
 
