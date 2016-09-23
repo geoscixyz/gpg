@@ -291,7 +291,7 @@ We note the following features:
 
 .. _Simpeg: http://simpeg.xyz
 
-.. _tutorial: http://simpegtutorials.readthedocs.io/en/latest/content/stories/index.html
+.. _tutorial: http://simpegtutorials.readthedocs.io/en/latest/content/stories/PF_MAG.html
 
 Validation
 ----------
