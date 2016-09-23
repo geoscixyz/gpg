@@ -18,7 +18,6 @@ We start with a brief overview the Tli Kwi Cho kimberlite project.
 Tli Kwi Cho (TKC) is a kimberlite complex in the Northwest Territories,  Canada.
 The Northwest Territories have been surveyed extensively for diamondiferous kimberlites since the early 1980s. The Lac de Gras region has been particularly productive, and hosts two of the largest Canadian deposits: the Ekati and Diavik mines.
 
-
 .. figure:: ./images/TKC_Kimbs.png
   :align: left
   :figwidth: 30%
