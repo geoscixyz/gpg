@@ -96,6 +96,7 @@ exclude_patterns = [
 
 linkcheck_ignore = [
   'https://en.wikipedia.org/wiki/Seismic_source#/media/File:Vibroseis.jpg',
+  'http://www.sgl.com/technicalpapers/EAGEabst-final-TV.pdf'
 ]
 
 # The reST default role (used for this markup: `text`) to use for all
