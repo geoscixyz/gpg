@@ -98,6 +98,7 @@ linkcheck_ignore = [
   'https://en.wikipedia.org/wiki/Seismic_source#/media/*',
   'http://www.sgl.com/technicalpapers/EAGEabst-final-TV.pdf',
   'http://geogratis.gc.ca/site/eng/extraction'
+  'http://www.ngdc.noaa.gov/*',
 ]
 
 # The reST default role (used for this markup: `text`) to use for all
@@ -308,17 +309,6 @@ texinfo_documents = [
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
 
-def supress_nonlocal_image_warn():
-    import sphinx.environment
-    sphinx.environment.BuildEnvironment.warn_node = _supress_nonlocal_image_warn
-
-def _supress_nonlocal_image_warn(self, msg, node):
-    from docutils.utils import get_source_line
-
-    if not msg.startswith('nonlocal image URI found:'):
-        self._warnfunc(msg, '{0!s}:{1!s}'.format(*get_source_line(node)))
-
-supress_nonlocal_image_warn()
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'http://docs.python.org/': None}
