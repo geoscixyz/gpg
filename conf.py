@@ -95,7 +95,7 @@ exclude_patterns = [
   ]
 
 linkcheck_ignore = [
-  'https://en.wikipedia.org/wiki/Seismic_source#/media/File:Vibroseis.jpg',
+  'https://en.wikipedia.org/wiki/Seismic_source#/media/*',
   'http://www.sgl.com/technicalpapers/EAGEabst-final-TV.pdf'
 ]
 
