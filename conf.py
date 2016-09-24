@@ -317,5 +317,6 @@ intersphinx_mapping = {'http://docs.python.org/': None}
 sys.path.append(os.getcwd())
 
 # from _ext import edit_on_github
-from _ext.Add2Build import copyImages
+from _ext import copyImages, supress_nonlocal_image_warn
 copyImages()
+supress_nonlocal_image_warn()
