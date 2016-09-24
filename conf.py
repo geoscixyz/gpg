@@ -96,7 +96,8 @@ exclude_patterns = [
 
 linkcheck_ignore = [
   'https://en.wikipedia.org/wiki/Seismic_source#/media/*',
-  'http://www.sgl.com/technicalpapers/EAGEabst-final-TV.pdf'
+  'http://www.sgl.com/technicalpapers/EAGEabst-final-TV.pdf',
+  'http://geogratis.gc.ca/site/eng/extraction'
 ]
 
 # The reST default role (used for this markup: `text`) to use for all
