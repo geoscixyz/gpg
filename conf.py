@@ -95,7 +95,7 @@ exclude_patterns = [
   ]
 
 linkcheck_ignore = [
-  'http://www.ngdc.noaa.gov/'*,
+  'http://www.ngdc.noaa.gov/*',
 ]
 
 # The reST default role (used for this markup: `text`) to use for all
