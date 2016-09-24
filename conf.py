@@ -95,6 +95,9 @@ exclude_patterns = [
   ]
 
 linkcheck_ignore = [
+  'https://en.wikipedia.org/wiki/Seismic_source#/media/*',
+  'http://www.sgl.com/technicalpapers/EAGEabst-final-TV.pdf',
+  'http://geogratis.gc.ca/site/eng/extraction',
   'http://www.ngdc.noaa.gov/*',
 ]
 
