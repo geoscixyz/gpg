@@ -94,6 +94,10 @@ exclude_patterns = [
   'content/*/include/*'
   ]
 
+linkcheck_ignore = [
+  'https://en.wikipedia.org/wiki/Seismic_source#/media/File:Vibroseis.jpg',
+]
+
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
 #default_role = None
