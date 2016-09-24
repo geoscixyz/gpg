@@ -21,21 +21,21 @@ The propagation of seismic waves in the earth is governed by the theory of linea
 Stress
 ======
 
-.. sidebar:: Compressive and Tensile Stress 
+.. sidebar:: Compressive and Tensile Stress
 
 	.. figure:: images/compressive.png
 		:align: center
-		
+
 		Compressive normal stress
 
 	.. figure:: images/tensile.png
 		:align: center
-		
+
 		Tensile normal stress
-	
+
 	.. figure:: images/Elastic_shear_modulus-subwiki.png
 		:align: center
-		
+
 		Shear stress. `Image <http://www.subsurfwiki.org/wiki/File:Elastic_shear_modulus.png>`__ from `Subsurface Wiki`_, licensed under `CC BY 3.0`_.
 
 Stress is defined as the external force applied to a body divided by the cross-sectional area of the body over which the force is applied. Stress is a measure of these internal forces. It has units of "force per unit area"--N/m :math:`^2` in SI units. There are two main types of stress, normal and shear. As you would expect normal stress is applied in a direction normal to the surface it is applied on. Normal stresses can be further divided into compressive and tensile stresses. Shear stress is applied parallel to a surface. Compressive, tensile and shear stress are illustrated in the figure to the right.
@@ -61,8 +61,8 @@ strain is released by breaking.
 .. figure :: ./images/stressstrain.png
 	:align: center
 	:scale: 80 %
-	
-	
+
+
 Elastic Moduli
 ==============
 
@@ -77,13 +77,13 @@ V` be the change in volume resulting from this stress. The volumetric strain is 
 
 .. math::
 	K = \frac{P}{\Delta V/V}.
-	
+
 
 
 .. figure:: ./images/bulk_modulus-subwiki.png
 		:align: center
 		:scale: 60%
-                
+
                 Bulk modulus. `Image <http://subsurfwiki.org/wiki/File:Elastic_bulk_modulus.png>`__ from `Subsurface Wiki`_, licensed under `CC BY 3.0`_.
 
 Shear Modulus
@@ -98,9 +98,9 @@ to the angle :math:`\tan \theta` in the image below. The **shear modulus** is de
 .. figure:: images/Elastic_shear_modulus-subwiki.png
 		:align: center
 		:scale: 60%
-		
+
 		Shear stress. `Image <http://www.subsurfwiki.org/wiki/File:Elastic_shear_modulus.png>`__ from `Subsurface Wiki`_, licensed under `CC BY 3.0`_.
-		
+
 As discussed above, the linear elastic isotropic stress-strain relationship of a material may be fully described by the bulk and shear moduli of the material. Another important alternative pair of parameters that define the elastic behaviour of a material are Young's modulus and Poisson's ratio.
 
 Young's Modulus
@@ -114,7 +114,7 @@ Young's modulus is defined to be the ratio of longitudinal normal stress to long
 .. figure:: ./images/Poisson-ratio-subwiki.png
 		:align: center
 		:scale: 60%
-		
+
 		Young's modulus. `Image <http://www.subsurfwiki.org/wiki/File:Elastic_Poisson_ratio.png>`__ from `Subsurface Wiki`_, licensed under `CC BY 3.0`_.
 
 
@@ -154,12 +154,12 @@ the velocity of such waves, :math:`v_p`, in a material with bulk modulus :math:`
 
 .. math::
 	v_p = \sqrt{ \frac{K + 4/3\mu}{\rho} }.
-	
+
 The figure below shows a simple animation of the motion associated with P waves.
 
 .. figure:: ./images/pwave-animated-2.gif
 	:align: center
-	
+
 	Animation by `L. Braile`_, from his `seismic wave demo`_, licensed for non-commercial reuse.
 
 
@@ -168,12 +168,12 @@ wave propagation. The propagation speed :math:`v_s` is given by
 
 .. math ::
 	v_s = \sqrt{\frac{\mu}{\rho} }.
-	
-The below animation shows the propagation of a vertically polarized S wave. Note that an S wave could also be horizontally polarized, meaning that particle motion would be in the y direction in the coordinate system of the animation, as opposed to the z direction for vertical polarization. 
+
+The below animation shows the propagation of a vertically polarized S wave. Note that an S wave could also be horizontally polarized, meaning that particle motion would be in the y direction in the coordinate system of the animation, as opposed to the z direction for vertical polarization.
 
 .. figure:: ./images/s-wave-animated.gif
 	:align: center
-	
+
 	Animation by `L. Braile`_, from his `seismic wave demo`_, licensed for non-commercial reuse.
 
 Note that if :math:`\mu = 0` then :math:`v_s = 0`. This tells us that shear
@@ -196,7 +196,7 @@ kilometers of the earth.
 
 .. figure:: ./images/Rayleigh-wave-animated.gif
 	:align: center
-	
+
 	Animation by `L. Braile`_, from his `seismic wave demo`_, licensed for non-commercial reuse.
 
 
@@ -210,7 +210,7 @@ the free surface and perpendicular to the direction of propagation.
 
 .. figure:: ./images/Love-wave-animated.gif
 	:align: center
-	
+
 	Animation by `L. Braile`_, from his `seismic wave demo`_, licensed for non-commercial reuse.
 
 Both Love waves and Rayleigh waves are **dispersive**. That is, different
@@ -241,7 +241,7 @@ travels.
 Waves Incident on Interfaces
 ============================
 
-Seismic wave from source at the surface will propagate in all directions away from source. Body Waves will be partially reflected partially transmitted at interfaces between rock types in the ground. 
+Seismic wave from source at the surface will propagate in all directions away from source. Body Waves will be partially reflected partially transmitted at interfaces between rock types in the ground.
 
 .. Transmitted wave will be refracted, meaning it will be bent. Check out https://www.youtube.com/watch?v=FygYDmm99SA. The direction of the refracted ray can be computed from Snell's law.
 
@@ -251,7 +251,7 @@ Seismic wave from source at the surface will propagate in all directions away fr
 .. Another refraction/head wave video https://www.iris.edu/hq/inclass/animation/seismic_wave_behavior_a_single_boundary_refracts__reflects
 
 .. Site with some head wave figures: http://www.ucl.ac.uk/EarthSci/people/lidunka/GEOL2014/Geophysics4%20-%20Seismic%20waves/SEISMOLOGY%20.htm
-	
+
 Wave Velocity and Particle Velocity
 ===================================
 
@@ -260,15 +260,19 @@ at which the energy moves, not the particles themselves. For comparison, sound
 travels in air at approximately 0.33 km/s. The wave energy can be recorded
 many kilometers from the source even if the source is small. The velocity and
 displacements of individual particles in the rocks are however very small;
-typical particle speeds are :math:`10^{-8}` m/s and typical ground displacements
-are :math:`10^{-10}` m. For a list of velocities of some common earth materials and a discussion of the geological factors that affect velocities please see the `seismic velocity`_ page on the physical properties section of this site.
+typical particle speeds are :math:`10^{-8}` m/s and typical ground
+displacements are :math:`10^{-10}` m. For a list of velocities of some common
+earth materials and a discussion of the geological factors that affect
+velocities please see the :ref:`seismic velocity <seismic_velocity_duplicate>` page on the physical properties
+section of this site.
 
 
 
 Attenuation
 ===========
 
-The amplitude of seismic waves falls off with distance from the source. There are two primary reasons:
+The amplitude of seismic waves falls off with distance from the source. There
+are two primary reasons:
 
 1. Geometrical spreading - that is, energy falls off as 1/r2 and hence the amplitude falls of as 1/r.
 
@@ -292,4 +296,3 @@ The amplitude of seismic waves falls off with distance from the source. There ar
 .. _Subsurface Wiki: http://subsurfwiki.org/
 .. _L. Braile: http://web.ics.purdue.edu/~braile/
 .. _seismic wave demo: http://web.ics.purdue.edu/~braile/edumod/waves/WaveDemo.htm
-.. _seismic velocity: _seismic_velocity_duplicate
