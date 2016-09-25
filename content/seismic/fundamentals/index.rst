@@ -4,11 +4,7 @@
 Seismic Fundamentals
 ====================
 
-In this section we will go over some of the fundamental physics of acoustic
-waves (two types, referred to as P and S waves) and their relationship to
-material properties like bulk modulus, shear modulus, and density. We will
-then introduce a simplified model that describes sound waves as ray-paths, which we will use to study how refracted and reflected waves appear in seismic data.
-
+The energy from a seismic source is travels via different waves. The speed and particle motion of the different waves depends upon the material properties like bulk modulus, shear modulus, and density. The types of waves generated depends upon the source and the receivers can measure acceleration or velocity of the material to which it is attached. 
 Contents:
 
 .. toctree::
