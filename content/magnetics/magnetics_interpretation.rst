@@ -5,20 +5,25 @@ Interpretation
 
 In this we focus on various techniques used to interpret the magnetic data.
 From an applied geoscientists standpoint, this is where most of the data
-integration and decision making steps are made.
+integration and decision making steps are made. We illustrate common
+interpretation techniques on a :ref:`mineral exploration example
+<tkc_primer>`.
 
-For simple targets, a depth to the target can be estimated using the :ref:`half-width
-technique <half_width>`. Most geologic setting are more complex and thus require
-more advanced interpretation. We illustrate common
-interpretation techniques on a `mineral exploration example <tkc_primer>`.
+
+Data Processing
+===============
+
+We begin with direct data interpretation techniques. Informations about the sub-surface are inferred directly from the data, either through filtering methods or by analyzing the shape and amplitude of magnetic field anomalies.
 
 .. _half_width:
 
 Estimating Depth of Burial from Half-Width
-==========================================
+------------------------------------------
 
+For simple targets, a depth to the target can be estimated using the :ref:`half-width technique <half_width>`. Most geologic setting are more complex and thus require
+more advanced interpretation.
 As discussed in :ref:`magnetics_basic_principles`, in simple scenarios, the
-target of a survey be approximated:
+target of a survey can be approximated:
 
 - as a :ref:`dipole<fields_magnetic_dipole>` if it is a compact body
 - or as a :ref:`monopole <magnetics_extended_bodies>` if it is an extended body .
@@ -54,6 +59,53 @@ while for a **monopole** target, the depth of burial is
 
 You can explore this concept further with the :ref:`Jupyter Notebook app <magnetics_applet>`.
 
+.. _magnetics_filters:
+
+Derivative Maps
+---------------
+
+While the data itself can be informative, image filtering techniques are commonly used by industry to further highlight important features present in the data. These filters a generally done in the frequency_domain_ and require the data to be interpolated on a regular grid.
+Let :math:`M(x,y,0)` be a grid of magnetic data taken at some reference elevation :math:`z=0`.
+Here are few filters applied to a simple 1x1x0.1 m block anomaly (:numref:`Data_Filters`):
+
+- **Upward Continuation (UC)**: Magnetic data are synthetically moved vertically such that:
+
+  .. math:: UC = M(x,y,\delta z)
+
+ Upward continuation is commonly used to remove the effects of very nearby (or shallow) susceptible material. High frequency information decays rapidly, leaving only the broad features. Downward continuation is also possible in order to accentuate the high frequency content, but comes at the risk of enhancing noise in the gridded data.
+
+- **First vertical derivative (1VD)**: Quantifies the change in signal as a function of survey height.
+
+  .. math:: 1VD = \frac{\partial M}{\partial z}
+
+  1VD maps are commonly used to enhance the shorter wavelength signal.
+  Notice how well the linear features are defined compared to the Total Field profile.
+
+- **Total horizontal derivative (THDR)**: Measures the lateral rate of change of the measured field.
+
+  .. math:: THDR = \sqrt{\frac{\partial M}{\partial x}^2+\frac{\partial M}{\partial y}^2}
+
+  This filter is most useful to highlight edges and delineate boundaries. Notice that the peak values occur over the edges of the block at -1 and 1 m.
+
+
+.. figure:: ./images/Mag_Filters_Derivatives.png
+  :align: center
+  :figwidth:  100%
+  :name: Data_Filters
+
+
+Call for contributors
+^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+   <div class="col-md-2" align="center">
+      <a href="http://github.com/ubcgif/em"><i class="fa fa-wrench fa-4x" aria-hidden="true"></i></a>
+   </div>
+
+There are many other filters published in the literature. Please contact us if you would like to contribute to this page.
+
+
 .. _tkc_primer:
 
 Tli Kwi Cho (TKC): *A primer*
@@ -64,7 +116,7 @@ Tli Kwi Cho (TKC): *A primer*
     :figwidth: 50%
     :name: TKC_Location
 
-We start with a brief overview the Tli Kwi Cho kimberlite project.
+We demonstrate the various interpretation techniques on a mineral exploration case study, the Tli Kwi Cho diamond deposit.
 Tli Kwi Cho (TKC) is a kimberlite complex in the Northwest Territories,  Canada.
 The Northwest Territories have been surveyed extensively for diamondiferous kimberlites since the early 1980s. The Lac de Gras region has been particularly productive, and hosts two of the largest Canadian deposits: the Ekati and Diavik mines.
 
@@ -112,7 +164,7 @@ In this section, we will attempt to extract as much information as possible abou
 
 
 Data map
-========
+--------
 
 2D plots of magnetic data, often referred to as maps, can provide insight
 about the geologic units, contacts, and the horizontal location of structures.
@@ -145,40 +197,7 @@ From the raw data, we notice a regional trend coming from the east of the survey
     :file: TKC_Data_Processing.html
 
 
-Derivative Maps
----------------
-
-While the data itself can be informative, image filtering techniques are commonly used by industry to further highlight important features present in the data. These filters a generally done in the frequency_domain_ and require the data to be interpolated on a regular grid.
-Let :math:`M(x,y,0)` be a grid of magnetic data taken at some reference elevation :math:`z=0`.
-Here are few filters applied to a simple 1x1x0.1 m block anomaly (:numref:`Data_Filters`):
-
-- **Upward Continuation (UC)**: Magnetic data are synthetically moved vertically such that:
-
-  .. math:: UC = M(x,y,\delta z)
-
- Upward continuation is commonly used to remove the effects of very nearby (or shallow) susceptible material. High frequency information decays rapidly, leaving only the broad features. Downward continuation is also possible in order to accentuate the high frequency content, but comes at the risk of enhancing noise in the gridded data.
-
-- **First vertical derivative (1VD)**: Quantifies the change in signal as a function of survey height.
-
-  .. math:: 1VD = \frac{\partial M}{\partial z}
-
-  1VD maps are commonly used to enhance the shorter wavelength signal.
-  Notice how well the linear features are defined compared to the Total Field profile.
-
-- **Total horizontal derivative (THDR)**: Measures the lateral rate of change of the measured field.
-
-  .. math:: THDR = \sqrt{\frac{\partial M}{\partial x}^2+\frac{\partial M}{\partial y}^2}
-
-  This filter is most useful to highlight edges and delineate boundaries. Notice that the peak values occur over the edges of the block at -1 and 1 m.
-
-
-.. figure:: ./images/Mag_Filters_Derivatives.png
-  :align: center
-  :figwidth:  100%
-  :name: Data_Filters
-
-
-Back to our mineral exploration example, we apply the same filters to the TKC data set as shown below
+Having isolated the local anomalies, we can now look at various :ref:`filtering techniques<magnetics_filters>` as shown below:
 
 .. raw:: html
     :file: TKC_Data_Filters.html
@@ -198,21 +217,11 @@ The derivative maps were useful in identifying at least two important features :
   :name: 1th_Interp
 
 
-Call for contributors
-^^^^^^^^^^^^^^^^^^^^^
-
-.. raw:: html
-
-   <div class="col-md-2" align="center">
-      <a href="http://github.com/ubcgif/em"><i class="fa fa-wrench fa-4x" aria-hidden="true"></i></a>
-   </div>
-
-There are many other filters published in the literature. Please contact us if you would like to contribute to this page.
 
 .. _frequency_domain: https://en.wikipedia.org/wiki/Frequency_domain
 
 Parametric Simulation
-=====================
+---------------------
 
 From the data map, we have targeted two features of interest with different
 geometries: a narrow elongated anomaly and a compact body. In order to test
@@ -223,7 +232,7 @@ app<magnetics_applet>`.
 .. _plate_model:
 
 Plate model
------------
+^^^^^^^^^^^
 
  :numref:`TKC_param_dyke` compares the observed and simulated magnetic data across an elongated magnetic anomaly. The parameter used for the plate model are presented in :numref:`Param_dyke`. This result seems to confirm the presence of thin, shallow dipping magnetic dykes.Turns out that these dykes are part of the Mackenzie dyke swarm that runs through out the Lac de Gras region. These intrusive dykes are related to major tectonic events, and although interesting scientifically, they are of little interest in diamond exploration.
 
@@ -247,7 +256,7 @@ Plate model
 .. _pipe_model:
 
 Pipe model
-----------
+^^^^^^^^^^
 
 Second, we look at the compact, near circular magnetic anomaly in the center of the survey area. This feature may be of interest as it resemble the typical signature of a kimberlite pipe.
 :numref:`TKC_param_pipe` compares the magnetic data over the compact anomaly and the parametric pipe model (:numref:`Param_dyke`). This result seems to confirm the presence of a compact magnetic block SE dipping. The shape of the anomaly is surprisingly different than the expected shape of a vertical pipe. This result requires additional work for validation, hence the need to invert the data.
@@ -271,8 +280,7 @@ Second, we look at the compact, near circular magnetic anomaly in the center of 
 
 
 Inversion
-=========
-
+---------
 
 The parametric forward simulation was helpful in understanding the shape and susceptibility contrast associated with the main magnetic anomalies. Modeling the Earth with simple parametric objects rapidly becomes prohibitive however for large and complicated susceptibility distributions. For this reason, we must adopt a more mathematical approach.
 
@@ -284,7 +292,7 @@ The inverse problem is illustrated in :numref:`mag_inverse`. Similar to a medica
     :name: mag_inverse
 
 Inverse Problem
----------------
+^^^^^^^^^^^^^^^
 
 .. figure:: ./images/TKC_Mesh.png
     :align: left
@@ -318,7 +326,7 @@ Secondly, we need a topographic surface that defines the relative distance betwe
 .. _Geogratis: http://geogratis.gc.ca/site/eng/extraction
 
 3D Solution
------------
+^^^^^^^^^^^
 
 From the inversion algorithm, we recover a 3D model of magnetic susceptibility.
 We note the following features:
@@ -347,7 +355,7 @@ We note the following features:
 .. _tutorial: http://simpegtutorials.readthedocs.io/en/latest/content/stories/PF_MAG.html
 
 Validation
-----------
+^^^^^^^^^^
 
 A key component to asses the validity of our 3D model is to verify that the given solution honors the data. The figures below compares the true and predicted magnetic data. The residual map confirms that our model captures most of the signal contained in the airborne data set.
 
