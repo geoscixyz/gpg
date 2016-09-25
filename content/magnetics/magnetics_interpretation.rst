@@ -4,15 +4,67 @@ Interpretation
 **************
 
 In this we focus on various techniques used to interpret the magnetic data.
-From an applied geoscientists standpoint, this is where most of the data integration and decision making steps are made. We illustrate each the interpretation techniques on a mineral exploration example.
+From an applied geoscientists standpoint, this is where most of the data
+integration and decision making steps are made.
+
+For simple targets, a depth to the target can be estimated using the :ref:`half-width
+technique <half_width>`. Most geologic setting are more complex and thus require
+more advanced interpretation. We illustrate common
+interpretation techniques on a `mineral exploration example <tkc_primer>`.
+
+.. _half_width:
+
+Estimating Depth of Burial from Half-Width
+==========================================
+
+As discussed in :ref:`magnetics_basic_principles`, in simple scenarios, the
+target of a survey be approximated:
+
+- as a :ref:`dipole<fields_magnetic_dipole>` if it is a compact body
+- or as a :ref:`monopole <magnetics_extended_bodies>` if it is an extended body .
+
+Consider a vertical inducing field (or alternatively, a data set that has been
+`reduced to pole <MagneticsLecture5>`_), and a profile line of data over a target
+located at the origin. The total field anomaly is expected to take a shape similar
+to that show in figure :numref:`halfwidth`.
+
+.. _MagneticsLecture5: http://eosc350.geosci.xyz/en/latest/content/lectures.html#magnetics-5
+
+
+We define the **half-width**, :math:`x_{1/2}`, as the width of the anomaly at half
+its maximum (note that this is the **anomaly**, the background field has been removed).
+
+.. figure:: ./images/xhalf.png
+    :align: center
+    :figwidth: 70%
+    :name: halfwidth
+
+    Definition of half-width.
+
+
+For a **dipole** target, the depth of burial(to the top of the target), :math:`z`,  is
+approximately equal to the half-width
+
+.. math::
+    z \sim x_{1/2}
+
+while for a **monopole** target, the depth of burial is
+
+.. math::
+    z \sim \frac{1}{2} x_{1/2}
+
+
+You can explore this concept further with the :ref:`Jupyter Notebook app <magnetics_applet>`.
+
+.. _tkc_primer:
 
 Tli Kwi Cho (TKC): *A primer*
-================================================
+=============================
 
 .. figure:: ./images/TKC_Location.png
-  :align: right
-  :figwidth: 50%
-  :name: TKC_Location
+    :align: right
+    :figwidth: 50%
+    :name: TKC_Location
 
 We start with a brief overview the Tli Kwi Cho kimberlite project.
 Tli Kwi Cho (TKC) is a kimberlite complex in the Northwest Territories,  Canada.
@@ -164,8 +216,11 @@ There are many other filters published in the literature. Please contact us if y
 Parametric Simulation
 =====================
 
-From the data map, we have targeted two features of interest with different geometries: a narrow elongated anomaly and a compact body.
-In order to test these hypothesizes, we first attempt to approximate these magnetic features with simple parametric objects using the :ref:`magnetic app<magnetics_applet>`.
+From the data map, we have targeted two features of interest with different
+geometries: a narrow elongated anomaly and a compact body. In order to test
+these hypothesizes, we first attempt to approximate these magnetic features
+with simple parametric objects using the :ref:`magnetic
+app<magnetics_applet>`.
 
 .. _plate_model:
 
