@@ -5,25 +5,33 @@ Interpretation
 
 In this we focus on various techniques used to interpret the magnetic data.
 From an applied geoscientists standpoint, this is where most of the data
-integration and decision making steps are made. We illustrate common
-interpretation techniques on a :ref:`mineral exploration example
-<tkc_primer>`.
+integration and decision making steps are made. In some cases :ref:`direct
+data interpretation <direct_data_interpretation>` can be used. In others, in
+particular when a 3D geologic interpretation is needed, an :ref:`inversion
+<mag_inversion>` is required. On this page, we discuss these techniques and
+illustrate common interpretation techniques on a
+:ref:`mineral exploration example <tkc_primer>`.
 
+.. _direct_data_interpretation:
 
-Data Processing
-===============
+Direct Data Interpretation
+==========================
 
-We begin with direct data interpretation techniques. Informations about the sub-surface are inferred directly from the data, either through filtering methods or by analyzing the shape and amplitude of magnetic field anomalies.
+We begin with direct data interpretation techniques. Informations about the
+sub-surface are inferred directly from the data, either through filtering
+methods or by analyzing the shape and amplitude of magnetic field anomalies.
 
 .. _half_width:
 
 Estimating Depth of Burial from Half-Width
 ------------------------------------------
 
-For simple targets, a depth to the target can be estimated using the :ref:`half-width technique <half_width>`. Most geologic setting are more complex and thus require
-more advanced interpretation.
-As discussed in :ref:`magnetics_basic_principles`, in simple scenarios, the
-target of a survey can be approximated:
+For simple targets, a depth to the target can be estimated using the half-
+width. Most geologic setting are more complex and thus require more advanced
+interpretation.
+
+As discussed in :ref:`magnetics_basic_principles`, in simple
+scenarios, the target of a survey can be approximated:
 
 - as a :ref:`dipole<fields_magnetic_dipole>` if it is a compact body
 - or as a :ref:`monopole <magnetics_extended_bodies>` if it is an extended body .
@@ -278,6 +286,7 @@ Second, we look at the compact, near circular magnetic anomaly in the center of 
    *  - Susceptibility
       - 0.05 SI
 
+.. _mag_inversion:
 
 Inversion
 ---------
