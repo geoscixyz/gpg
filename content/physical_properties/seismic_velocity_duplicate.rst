@@ -6,28 +6,22 @@ Seismic Velocity
 Elastic energy propagates through the earth in different ways and at different speeds.
 The main wave types are body waves (P and S waves) and surface waves (Rayleigh and Love waves).
 Whereas body waves travel through a medium, surface waves travel along surfaces and interfaces.
-Each wave has a distinct particle motion and speed of propagation.
-The speed of propagation depends upon the bulk modulus, shear modulus and :ref:`density<physical_properties_density>` of the medium.
+Each wave has a distinct particle motion, elastic deformation and speed of propagation.
+The speed of propagation depends upon the elastic properties and the :ref:`density<physical_properties_density>` of the medium.
 Density has been discussed already and will not be presented again here.
 
-.. End Devin material
+Elastic properties are used to define the physical deformation that matter experiences in response to an applied mechanical force.
+In response to a hammer strike, earthquake or explosive detonation, nearby materials within the Earth experience elastic deformations.
+The energy from the initial elastic deformations are then transferred to adjacent materials.
+This process continues as the deformation propagates away from the source.
+We therefore use seismic waves to describe the speed, direction and location of elastic deformations as they propagate through materials.
 
-If we strike the earth with a hammer, an explosive charge, or an earthquake,
-the material of the earth near the source becomes compressed (or extended) and
-twisted. These deformations propagate away from the source. The speed of propagation and the type of motion propagated depends upon the physical properties of the material. Most earth materials under normal seismic conditions can be described by density and two elastic parameters:
 
-1. density: :math:`\rho`
-2. bulk modulus:  :math:`K` (compressibility)
-3. shear modulus:  :math:`\mu` (twistability)
 
-By knowing the time at which the source was excited and measuring the time needed for the excitation to travel from the source to an array of receivers, it is possible to obtain information about the structure and physical properties of the subsurface.
+Elastic Deformation
+===================
 
-The propagation of seismic waves in the earth is governed by the theory of linear elasticity. A detailed mathematical treatment of elasticity is beyond the scope of this course. In this page we will give a very brief introduction to the concepts of stress and strain, how they relate to elasticity, and how density and the elastic properties of a material relate to the propagation of seismic waves. We will then describe how seismic waves can be approximated using a simple ray model. The remainder of our study of seismic surveying in this course will then be conducted using the ray model.
-
-Stress
-======
-
-.. sidebar:: Compressive and Tensile Stress
+.. sidebar:: Normal and Shear Stress
 
 	.. figure:: images/compressive.png
 		:align: center
@@ -39,23 +33,48 @@ Stress
 
 		Tensile normal stress
 
-	.. figure:: images/Elastic_shear_modulus-subwiki.png
+	.. figure:: images/fig_shear_deformation.png
 		:align: center
 
-		Shear stress. `Image <http://www.subsurfwiki.org/wiki/File:Elastic_shear_modulus.png>`__ from `Subsurface Wiki`_, licensed under `CC BY 3.0`_.
+		Shear stress
 
-Stress is defined as the external force applied to a body divided by the cross-sectional area of the body over which the force is applied. Stress is a measure of these internal forces. It has units of "force per unit area"--N/m :math:`^2` in SI units. There are two main types of stress, normal and shear. As you would expect normal stress is applied in a direction normal to the surface it is applied on. Normal stresses can be further divided into compressive and tensile stresses. Shear stress is applied parallel to a surface. Compressive, tensile and shear stress are illustrated in the figure to the right.
+
+When a mechanical force is applied to a material, it may experience a change in volume and/or shape.
+If the deformation is elastic, it implies that once the applied force is removed, the material will return to its original volume and shape.
+As a result, elastic deformation conserves energy.
+Elastic deformation is commonly described in terms of stress and strain.
+
+Stress
+------
+
+
+Stress is defined as the external force applied to a body divided by the cross-sectional area of the body over which the force is applied.
+There are two main types of stress: normal stress and shear stress.
+Normal stress is perpendicular to the surface of an object whereas shear stressed are tanjential.
+Normal stresses can be further divided into compressive and tensile stresses.
+Compressive, tensile and shear stress are illustrated in the figure to the right.
+Stress is a force per unit area and has SI units units of N/m :math:`\! ^2`.
+
 
 
 Strain
-======
+------
 
-If a body is stressed it will undergo a change in size and shape. The body is said to be
-**strained**. To be a bit more precise, strain is a dimensionless quantity describing the fractional change in the relative positions between points on a body. If strains are small the body will recover its original
-shape when the stress is removed. This is **elastic strain**. If the strain is
-too great so that the **yield strength** is exceeded, then the body deforms
-**plastically** and may ultimately fracture. Plastic strain is not
-recoverable.
+Strain defines the deformation of a material under the influence of an applied stress.
+When a body is stressed it may undergo a change in size and shape.
+If this occurs, the body is said to be "strained".
+For relatively small strains, the body will recover its original shape and volume when the stress is removed. 
+This is known as "elastic strain".
+If the strain is too large, then the body deforms **plastically** and may even fracture.
+Unlike elastic strain, plastic strain permanently alters the shape of the body.
+
+
+.. figure :: ./images/stressstrain.png
+	:align: right
+	:figwidth: 35%
+	
+	Elastic and plastic deformation
+
 
 The figure below plots how strain (horizontal axis) accumulates as stress (vertical
 axis) is applied. While behaviour is elastic, increasing or decreasing the
@@ -64,87 +83,32 @@ material behave plastically, reducing the stress results in reduced strain
 along a different path on the graph. Once the fracture point is reached, the
 strain is released by breaking.
 
-.. figure :: ./images/stressstrain.png
-	:align: center
-	:scale: 80 %
-
-
-Elastic Moduli
-==============
-
-In the elastic regime it is often acceptable to assume a linear relationship between stress and strain. This linear relationship is known as Hooke's Law. In addition to linear elasticity, basic seismic techniques also assume that earth materials are isotropic, meaning that their response to stress is invariant with respect to the direction from which the stress is applied. The relationship between stress and strain in a linear isotropic material can be described by two numbers, which are intrinsic properties of the material. Linear elasticity can be mathematically formalized in multiple ways and the different formulations lead to different definitons of these material parameters. They may be known as Lamé parameters or as the bulk and shear moduli. Different definitions of the elastic moduli may be more useful than others in different situations or the reason for choosing one representation over another may be purely a matter of convention. Please see `here <https://en.wikipedia.org/wiki/Lam%C3%A9_parameters>`__ for a table showing the relationship between various representations of isotropic elastic parameters in a convenient representation. In this course we are concerned with how the elastic moduli are related to the velocity of seismic waves in the earth and how they may be related to other material properties of interest such as porosity and permeability. Some important elastic moduli are described below.
-
-Bulk Modulus
-------------
-
-Consider an initial volume :math:`V` which is subjected to a hydrostatic
-pressure (force per unit area is the same in each direction) :math:`P`. This pressure is a volumetric stress. Let :math:`\Delta
-V` be the change in volume resulting from this stress. The volumetric strain is :math:`\Delta V/V`. The **bulk modulus** is defined to be the volumetric stress divided by the volumetric strain:
-
-.. math::
-	K = \frac{P}{\Delta V/V}.
 
 
 
-.. figure:: ./images/bulk_modulus-subwiki.png
-		:align: center
-		:scale: 60%
 
-                Bulk modulus. `Image <http://subsurfwiki.org/wiki/File:Elastic_bulk_modulus.png>`__ from `Subsurface Wiki`_, licensed under `CC BY 3.0`_.
-
-Shear Modulus
--------------
-
-Consider a force :math:`F`, applied parallel to the top of a cube, with the force distributed evenly over the surface, as shown in the figure below. The force per unit area is known as the shear stress :math:`\tau`. Application of shear stresses to the top and bottom interfaces produce a strain proportional
-to the angle :math:`\tan \theta` in the image below. The **shear modulus** is defined as
-
-.. math::
-	\mu = \frac{\tau}{\tan\theta}
-
-.. figure:: images/Elastic_shear_modulus-subwiki.png
-		:align: center
-		:scale: 60%
-
-		Shear stress. `Image <http://www.subsurfwiki.org/wiki/File:Elastic_shear_modulus.png>`__ from `Subsurface Wiki`_, licensed under `CC BY 3.0`_.
-
-As discussed above, the linear elastic isotropic stress-strain relationship of a material may be fully described by the bulk and shear moduli of the material. Another important alternative pair of parameters that define the elastic behaviour of a material are Young's modulus and Poisson's ratio.
-
-Young's Modulus
----------------
-
-Young's modulus is defined to be the ratio of longitudinal normal stress to longitudinal normal strain. Consider the rectangular prism shown below with square cross-sectional area :math:`A = W^2` and length :math:`L`. A force :math:`F` applied normal to the axis of the prism, distributed over the cross-sectional area, will generate a normal stress of :math:`P = F/A`. If this stress generates a reduction in length of the prism of :math:`\Delta L`, the Young's modulus of the prism material is
-
-.. math::
-	E = \frac{P}{\Delta L/L}
-
-.. figure:: ./images/Poisson-ratio-subwiki.png
-		:align: center
-		:scale: 60%
-
-		Young's modulus. `Image <http://www.subsurfwiki.org/wiki/File:Elastic_Poisson_ratio.png>`__ from `Subsurface Wiki`_, licensed under `CC BY 3.0`_.
-
-
-Poisson's Ratio
----------------
-
-As a result of the longitudinal stress described above the cross-sectional area of the prism may be increased, compensating for the reduction in length. Let us define the cross-sectional strain as :math:`\Delta W / W`. **Poisson's ratio** is the ratio of transverse strain to longitudinal strain due to a longitudinal stress:
-
-.. math::
-	\sigma = \frac{\Delta W / W}{\Delta L/L}
-
-Note that it is possible for :math:`\sigma` to be zero. The decrease in length could be compensated for by decrease in pore space for example. Cork is an example of such a material.
-
-
-.. Start Devin material
 
 Material Elastic Properties
 ===========================
 
+Material elastic properties (or elastic moduli) are used to characterize the strains that materials experience as a result of various stresses.
+The elastic moduli which are used to define stress and strain relationships are sometimes called Lame parameters.
+Below are several commonly used pairs of elastic moduli.
+
+
+Bulk Modulus and Shear Modulus
+------------------------------
+
+
 **Bulk Modulus**
 
-.. image:: images/fig_bulk_deformation.png
-    :scale: 45%
-    :align: right
+.. figure:: images/fig_bulk_deformation.png
+	:align: right
+	:figwidth: 45%
+
+	Bulk modulus diagram.
+
+
 
 The bulk modulus (:math:`K`) defines the resistance of a material to elastic compression.
 As a result, it is sometimes referred to as the modulus of incompressibility.
@@ -159,12 +123,14 @@ The bulk modulus characterizes the compressional deformation as follows:
 where :math:`V_0` is the original volume of material, :math:`\Delta P` represents the pressure being applied to the material and :math:`\Delta V` is the resulting change in volume.
 
 
-
 **Shear Modulus**
 
-.. image:: images/fig_shear_deformation.png
-    :scale: 35%
-    :align: right
+.. figure:: images/fig_shear_deformation.png
+	:align: right
+	:figwidth: 45%
+
+	Shear modulus diagram.
+
 
 The shear modulus (:math:`\mu`) defines how resistant a material is to shear stress.
 As a result, it is sometimes referred to as the modulus of rigidity.
@@ -177,13 +143,58 @@ The shear modulus defines the ratio of shear stress to shear strain:
 where the shear stress is represented by a force (:math:`F`) per unit area (:math:`A`).
 Shear strain represents a tangent angle between the shear deformation (:math:`\Delta x`) of the material along the direction of force and the perpendicular demension (:math:`l`) of the block of material.
 
+Young's Modulus and Poisson's Ratio
+-----------------------------------
+
+**Young's Modulus**
+
+.. figure:: ./images/Poisson-ratio-subwiki.png
+		:align: right
+		:figwidth: 35%
+
+		Young's modulus and Poisson's ratio diagram. `Image <http://www.subsurfwiki.org/wiki/File:Elastic_Poisson_ratio.png>`__ from `Subsurface Wiki`_, licensed under `CC BY 3.0`_.
+
+
+Young's modulus is defined to be the ratio of longitudinal normal stress to longitudinal normal strain.
+Consider the rectangular prism shown below with square cross-sectional area :math:`A = W^2` and length :math:`L`.
+A force :math:`F` applied normal to the axis of the prism, distributed over the cross-sectional area, will generate a normal stress of :math:`P = F/A`.
+If this stress generates a reduction in length of the prism of :math:`\Delta L`, the Young's modulus of the prism material is
+
+.. math::
+	E = \frac{P}{\Delta L/L}
 
 
 
+**Poisson's Ratio**
+
+As a result of the longitudinal stress described above the cross-sectional area of the prism may be increased, compensating for the reduction in length. Let us define the cross-sectional strain as :math:`\Delta W / W`. **Poisson's ratio** is the ratio of transverse strain to longitudinal strain due to a longitudinal stress:
+
+.. math::
+	\sigma = \frac{\Delta W / W}{\Delta L/L}
+
+Note that it is possible for :math:`\sigma` to be zero. The decrease in length could be compensated for by decrease in pore space for example. Cork is an example of such a material.
+
+
+
+**Other Elastic Parameters**
+
+In addition to the bulk modulus, shear modulus, Young's modulus and Poisson's ratio, there are a multitude elastic parameters which can be used in pairs to define Hooke's law.
+We will not cover the entire range of parameters in this course.
+However, a conversion table for various Lame parameter pairs can be found here `here <https://en.wikipedia.org/wiki/Lame_parameters>`_.
+
+
+Seismic Wave Velocities
+=======================
+
+Rocks and other materials can be characterized by their elastic properties.
+However, seismic velocities represent a more practical set of physical properties for seismic methods.
+Seismic velocities define the speed at which various elastic deformations propagate through materials.
+And as we will see, seismic velocities for a given material can be expressed explicitly in terms of its elastic properties.
 
 
 Body Waves
-==========
+----------
+
 
 In seismology, there are two fundamental types of body waves: pressure waves ("P-waves") and shear-waves ("S-waves").
 
@@ -234,7 +245,7 @@ In addition, S waves cannot propagate through fluids, as fluids do support shear
 
 
 Surface Waves
-=============
+-------------
 
 In seismology, there are two fundamental types of surface waver: Rayleigh waves and Love waves.
 
