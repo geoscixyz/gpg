@@ -15,6 +15,8 @@
 import sys
 import os
 
+sys.path.append(os.path.abspath('./_ext'))
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -34,6 +36,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
+    'edit_on_github',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -52,7 +55,7 @@ master_doc = 'index'
 project = u'Geophysics for Practicing Geoscientists'
 copyright = u'2014-2016, UBCGIF'
 # copyright = """
-# <a rel="license" 
+# <a rel="license"
 #    href="http://creativecommons.org/licenses/by/4.0/"
 #    style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
 #    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
@@ -84,7 +87,19 @@ release = '0.0.1'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build','AUTHORS.rst','content/inversion/*','content/*/include/*']
+exclude_patterns = [
+  '_build',
+  'AUTHORS.rst',
+  'content/inversion/*',
+  'content/*/include/*'
+  ]
+
+linkcheck_ignore = [
+  'https://en.wikipedia.org/wiki/Seismic_source#/media/*',
+  'http://www.sgl.com/technicalpapers/EAGEabst-final-TV.pdf',
+  'http://geogratis.gc.ca/site/eng/extraction',
+  'http://www.ngdc.noaa.gov/*',
+]
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -110,6 +125,10 @@ pygments_style = 'sphinx'
 # If true, keep warnings as "system message" paragraphs in the built documents.
 #keep_warnings = False
 
+# -- Edit on Github Extension ---------------------------------------------
+
+edit_on_github_project = 'ubcgif/gpg'
+edit_on_github_branch = 'master'
 
 # -- Options for HTML output ----------------------------------------------
 
@@ -132,7 +151,11 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {}
+# html_theme_options = {
+#   'display_github': 'True',
+# }
+
+check_meta = False
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
@@ -293,5 +316,8 @@ intersphinx_mapping = {'http://docs.python.org/': None}
 
 # -- User Defined Methods ------------------------------------------------
 sys.path.append(os.getcwd())
-from Add2Build import copyImages
+
+# from _ext import edit_on_github
+from _ext import copyImages, supress_nonlocal_image_warn
 copyImages()
+supress_nonlocal_image_warn()
