@@ -116,7 +116,7 @@ Summary: Essential Elements in CMP Processing
 .. <<editorial comment>> The original GPG had a "click to enlarge feature for the workfow." The small and large image file names are: workflow.gif to big_workflow.gif
 
 There are many different processing steps that could be performed.
-An example from `GS Baker 1999`, is shown in the flow chart image here (click
+An example from `GS Baker 1999`_, is shown in the flow chart image here (click
 for a larger version.). However, the essential steps are summarized in the
 following short list.
 
