@@ -163,7 +163,9 @@ A wavefront indicates the locations at which the phase of the wave has the same 
 Reflection and transmission of plane waves
 ==========================================
 
-When a wave strikes an interface between two materials with differing physical properties, some of the wave energy will be reflected and the rest will be transmitted through or along the interface. All of the processing and interpretation methods we will discuss will assume that a seismic wave striking the interface between materials of differing physical properties can be approximated as a plane wave. We define a new quantity called acoustic impedance as :math:`Z = \rho V`, the product of density and velocity. The velocity in question could be for either P or S waves. The relative amplitudes of the reflected and transmitted waves will depend on the acoustic impedances of the two materials. Let :math:`A_0`, :math:`A_1` and :math:`A_2` be the amplitudes of the incident, reflected, and transmitted waves, respectively. The ratios of :math:`A_1` and :math:`A_2` to :math:`A_0` are given by the reflection and refraction coefficients:
+When a wave strikes an interface between two materials with differing physical properties, some of the wave energy will be reflected and the rest will be transmitted through or along the interface. All of the processing and interpretation methods we will discuss will assume that a seismic wave striking the interface between materials of differing physical properties can be approximated as a plane wave. We define a new quantity called acoustic impedance as :math:`Z = \rho V`, the product of density and velocity. The velocity in question could be for either P or S waves. 
+
+Let us first consider waves striking an interface at normal incidence, i.e. with the direction of propagation perpendicular to the interface. The relative amplitudes of the reflected and transmitted waves will depend on the acoustic impedances of the two materials. Let :math:`A_0`, :math:`A_1` and :math:`A_2` be the amplitudes of the incident, reflected, and transmitted waves, respectively. The ratios of :math:`A_1` and :math:`A_2` to :math:`A_0` are given by the reflection and refraction coefficients:
 
 **Reflection Coefficient:**
 
@@ -195,8 +197,7 @@ intuitive. However, the energy transported in an acoustic wave is
 
 So even though there is an enhanced amplitude of a transmitted wave in certain
 situations, there is still loss of energy. The ratio of incoming to reflected
-energy is :math:`E_R` and the ration of incoming to transmitted energy is :math:`
-E_T`. The values of these rations are
+energy is :math:`E_R` and the ratio of incoming to transmitted energy is :math:`E_T`. In terms of the impedances on either side of the interface, The energy ratios are
 
 .. math::
     E_R = \left( \frac{Z_2 - Z_1}{Z_2 + Z_1} \right)^2
@@ -206,6 +207,104 @@ E_T`. The values of these rations are
 
 .. math::
     E_R + E_T = 1    
+
+Mode Conversion
+===============
+
+A P-wave incident on an interface at a non-perpendicular angle will produce reflected and transmitted
+S-waves, as well as P-waves. Analogous conversions occur when there is an incident S wave on a plane boundary. The
+mode conversions (P :math:`\rightarrow` S, or S :math:`\rightarrow` P) can complicate interpretation, but S-waves are always slower than P-waves, so first arrivals will always be P-waves unless a special S-wave energy source is used. Interpretation of shear waves is still important in some contexts, especially in geotechnical applications, since they provide important information about the rigidity of the material.
+
+.. figure:: ./images/modeconversion.gif
+	:align: center
+	
+In seismic refraction surveying we are concerned with first arrivals and will not consider mode conversion further. It will be discussed again in the section on processing reflection survey data.
+
+Angles of reflection and refraction
+===================================
+
+Consider a P-wave which is incident at an  angle :math:`\theta_1` measured with
+respect to the normal of the interface, as seen in the figure below where the approaching wave is represented as a ray. The angles of the reflected and refracted rays are as follows:
+
+**Law of reflection:** The angle of reflection equals the angle of incidence. So
+:math:`\theta_r` = :math:`\theta_1` .
+
+**Law of refraction:** The angle of refraction :math:`\theta_2`  is determined
+through Snell's Law, which is
+
+.. math::
+	\frac{\sin\theta_1}{v_1} = \frac{\sin\theta_2}{v_2}
+
+If the wave travels from a low velocity medium to a high velocity medium the
+wave gets refracted away from the normal. Conversely, it gets refracted toward
+the normal if the wave goes from a high velocity to a low velocity medium.
+
+.. figure:: ./images/snell.gif
+	:align: center
+
+
+Critical angle
+==============
+
+The critical refraction angle, called :math:`\theta_c`, is a key concept in refraction seismology. This is the angle of incidence for which the corresponding angle of refraction is :math:`90^{\circ}`. In this case, the refracted ray travels horizontally along the interface. A formula for the critical angle can be derived from Snell's law as follows:
+
+.. math::
+	\frac{\sin\theta_c}{v_1} = \frac{\sin 90^{\circ}}{v_2} = \frac{1}{v_2}
+
+	\sin\theta_c = \frac{v_1}{v_2}
+
+When the wave in the second medium is critically refracted, it travels
+parallel to the interface at a speed of :math:`v_2`. As it travels, it radiates
+energy into the upper medium with the associated ray path making an angle
+:math:`\theta_c` with the normal. This critically refracted wave is also called
+a "head wave". It is somewhat analogous to the bow wave of a moving boat.
+
+.. figure:: ./images/criticalrefraction.gif
+	:align: center
+
+    
+Travel times
+============
+
+A seismic wave travelling through an isotropic homogeneous medium will propagate at a constant velocity. Therefore, the time :math:`t` required for a seismic wave to travel from source to receiver in a homogeneous earth layer with velocity :math:`v` is simply given by the formula 
+
+.. math::
+          t = \frac{d}{v}
+          
+where :math:`d` is the distance travelled in the layer. In a seismic survey we measure source to receiver travel times and use those data to estimate the properties of the subsurface. Basic seismic interpretation methods assume that the earth is composed of a series of uniform layers and attempt to compute the thicknesses, velocities, and sometimes dips of each layer. We will discuss specific techniques for computing layer thicknesses and velocities in the reflection and refraction survey sections, however, we will give a general overview of travel time computations and how they relate to geometry here.
+
+Consider a layer of thickness h and velocity :math:`v_1` overlying a uniform halfspace of velocity :math:`v_2`. A source is detonated at time :math:`t=0`. We are interested in the waves and arrival times of those waves at a receiver which is located at a distance :math:`x` from the source at position :math:`D` in the figure below.
+
+There are three principle waves that will travel through the earth and arrive at position D. i) direct waves, ii) reflected waves, and  iii) critically refracted waves.
+
+.. figure:: ./images/waveslayerhalfspace.gif
+	:align: center
+
+.. <<editorial comment>> This diagram is ok. If redrawn, put a source symbol (*) and a dashed line for the critically refracted ray.
+
+The travel time curves for these ray paths are shown to the right, and expressions for the ray paths and important parameters of these travel time curves are as follows:
+
+- :math:`x_{crit}`  is the critical distance at which the refracted arrival first arrives.
+
+- :math:`x_{cross}`  is the crossover distance. Beyond this distance the refracted arrival is the first arrival on the record.
+
+
+- Travel times of visible arrivals are related to distance between geophone
+  and source (:math:`x`), thickness of the layer (:math:`h`) and the velocities of
+  signals within the two layers (:math:`v_1` and :math:`v_2`). Three times are of
+  interest: :math:`t_{dir}` is travel time of direct arrivals, :math:`t_{ref}` is
+  arrival time of reflections and :math:`t_{cr}` is the refraction travel time
+  (see figure above). These parameters are all related as follows:
+
+.. figure:: ./images/timetravels.gif
+	:align: center
+
+.. math::
+	t_{dir} & = \frac{x}{v_1}\\
+	t_{ref} & = \frac{\sqrt{x^2 + 4h^2}}{v_1}\\
+	t_{cr}  & = \frac{x}{v_2} + \frac{2h\sqrt{v_2^2-v_1^2}}{v_1 v_2}
+
+
 
 .. Transmitted wave will be refracted, meaning it will be bent. Check out https://www.youtube.com/watch?v=FygYDmm99SA. The direction of the refracted ray can be computed from Snell's law.
 

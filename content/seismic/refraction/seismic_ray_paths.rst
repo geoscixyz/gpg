@@ -108,8 +108,8 @@ curves are as follows:
 	:align: center
 
 .. math::
-	t_{dir} & = \frac{x}{v_1}\
-	t_{ref} & = \frac{\sqrt{x^2 + 4h^2}}{v_1}\
+	t_{dir} & = \frac{x}{v_1}\\
+	t_{ref} & = \frac{\sqrt{x^2 + 4h^2}}{v_1}\\
 	t_{cr}  & = \frac{x}{v_2} + \frac{2h\sqrt{v_2^2-v_1^2}}{v_1 v_2}
 
 The first and third of these are important for interpretation of seismic

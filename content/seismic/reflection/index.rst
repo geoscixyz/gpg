@@ -1,7 +1,7 @@
 .. _seismic_reflection_index:
 
-Seismic Reflection
-==================
+Reflection
+==========
 
 .. figure:: ./images/SeismicReflection.png
    :align: right
