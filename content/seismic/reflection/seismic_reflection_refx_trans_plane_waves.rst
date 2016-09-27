@@ -12,7 +12,7 @@ Imagine such a plane wave which impinges at a boundary at normal incidence.
   :scale: 70%
 
 
-  Energy across a velocity boundary, where, :math:`A_0` is the amplitude of the incident wave; :math:`A_1` is the amplitude of the reflected wave; :math:`A_2` is the amplitude of the transmitted wave
+  Energy across a velocity boundary.
 
 We define here the "Acoustic Impedance" :math:`Z = \rho V`, or the product of
 density and velocity. Energy is reflected and transmitted at the interface. We
