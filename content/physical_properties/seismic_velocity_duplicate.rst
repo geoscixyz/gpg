@@ -11,17 +11,17 @@ The speed of propagation depends upon the elastic properties and the :ref:`densi
 Density has been discussed already and will not be presented again here.
 
 Elastic properties are used to define the physical deformation that matter experiences in response to an applied mechanical force.
-If we strike the earth with a hammer, detonate an explosive charge, or have an earthquake, nearby materials will experience elastic deformations.
-These elastic deformations are then transferred to adjacent materials.
-This process continues as elastic energy propagates away from the source.
-We therefore use elastic waves to describe the speed, direction and location of elastic deformations as they propagate through materials.
+In response to a hammer strike, earthquake or explosive detonation, nearby materials within the Earth experience elastic deformations.
+The energy from the initial elastic deformations are then transferred to adjacent materials.
+This process continues as the deformation propagates away from the source.
+We therefore use seismic waves to describe the speed, direction and location of elastic deformations as they propagate through materials.
 
 
 
 Elastic Deformation
 ===================
 
-.. sidebar:: Compressive and Tensile Stress
+.. sidebar:: Normal and Shear Stress
 
 	.. figure:: images/compressive.png
 		:align: center
@@ -33,6 +33,12 @@ Elastic Deformation
 
 		Tensile normal stress
 
+	.. figure:: images/fig_shear_deformation.png
+		:align: center
+
+		Shear stress
+
+
 When a mechanical force is applied to a material, it may experience a change in volume and/or shape.
 If the deformation is elastic, it implies that once the applied force is removed, the material will return to its original volume and shape.
 As a result, elastic deformation conserves energy.
@@ -43,35 +49,32 @@ Stress
 
 
 Stress is defined as the external force applied to a body divided by the cross-sectional area of the body over which the force is applied.
-Stress is a measure of these internal forces. It has units of "force per unit area"--N/m :math:`^2` in SI units.
-There are two main types of stress, normal and shear.
-As you would expect normal stress is applied in a direction normal to the surface it is applied on.
-Normal stresses can be further divided into compressive and tensile stresses. Shear stress is applied parallel to a surface.
+There are two main types of stress: normal stress and shear stress.
+Normal stress is perpendicular to the surface of an object whereas shear stressed are tanjential.
+Normal stresses can be further divided into compressive and tensile stresses.
 Compressive, tensile and shear stress are illustrated in the figure to the right.
+Stress is a force per unit area and has SI units units of N/m :math:`\! ^2`.
 
-
-.. sidebar:: Strain and Deformation
-
-	.. figure:: images/fig_shear_deformation.png
-		:align: center
-
-		Shear deformation diagram
-
-	.. figure :: ./images/stressstrain.png
-		:align: center
-	
-		Elastic and plastic deformation
 
 
 Strain
 ------
 
-If a body is stressed it will undergo a change in size and shape. The body is said to be
-**strained**. To be a bit more precise, strain is a dimensionless quantity describing the fractional change in the relative positions between points on a body.
-If strains are small the body will recover its original shape when the stress is removed. 
-This is **elastic strain**.
-If the strain is too great so that the **yield strength** is exceeded, then the body deforms **plastically** and may ultimately fracture.
-Plastic strain is not recoverable.
+Strain defines the deformation of a material under the influence of an applied stress.
+When a body is stressed it may undergo a change in size and shape.
+If this occurs, the body is said to be "strained".
+For relatively small strains, the body will recover its original shape and volume when the stress is removed. 
+This is known as "elastic strain".
+If the strain is too large, then the body deforms **plastically** and may even fracture.
+Unlike elastic strain, plastic strain permanently alters the shape of the body.
+
+
+.. figure :: ./images/stressstrain.png
+	:align: right
+	:figwidth: 35%
+	
+	Elastic and plastic deformation
+
 
 The figure below plots how strain (horizontal axis) accumulates as stress (vertical
 axis) is applied. While behaviour is elastic, increasing or decreasing the
@@ -180,8 +183,14 @@ We will not cover the entire range of parameters in this course.
 However, a conversion table for various Lame parameter pairs can be found here `here <https://en.wikipedia.org/wiki/Lame_parameters>`_.
 
 
-Seismic Waves
-=============
+Seismic Wave Velocities
+=======================
+
+Rocks and other materials can be characterized by their elastic properties.
+However, seismic velocities represent a more practical set of physical properties for seismic methods.
+Seismic velocities define the speed at which various elastic deformations propagate through materials.
+And as we will see, seismic velocities for a given material can be expressed explicitly in terms of its elastic properties.
+
 
 Body Waves
 ----------
