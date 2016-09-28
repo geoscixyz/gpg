@@ -7,9 +7,9 @@ Diagnostic Physical Properties
 Unlike the survey methods discussed previously, signals corresponding to ground penetrating radar (GPR) depend on a multitude of physical properties.
 The most important physical property to GPR is the dielectric permittivity (link), as it greatly influences the velocity, attenuation, reflection, refraction and transmission of radiowaves.
 In addition to the dielectric permittivity, the propagation of radiowaves through the Earth may depend significantly on the electrical conductivity (link); provided the electrical conductivity of the Earth is sufficiently large.
-If the Earth is sufficiently magnetic, the propagation of radiowaves may also depend on the magnetic permeability (link).
+If the Earth is magnetic, we may also need to consider the role of magnetic permeability (link).
 
-For the simplest cases, we generally assume that the propagation of radiowaves through the Earth is
+For simple cases, we generally assume that the propagation of radiowaves through the Earth is
 
 
 
