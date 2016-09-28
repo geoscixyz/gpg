@@ -10,7 +10,6 @@ Contents:
 .. toctree::
    :maxdepth: 1
 
-   seismic_reflection_refx_trans_plane_waves
    seismic_reflection_seismogram
    seismic_reflection_travel_time_curves
    seismic_reflection_travel_time_curves_multiple_layers

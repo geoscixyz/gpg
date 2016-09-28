@@ -91,9 +91,7 @@ strain is released by breaking.
 Material Elastic Properties
 ===========================
 
-Material elastic properties (or elastic moduli) are used to characterize the strains that materials experience as a result of various stresses.
-The elastic moduli which are used to define stress and strain relationships are sometimes called Lame parameters.
-Below are several commonly used pairs of elastic moduli.
+In this course---and for the vast majority of seismic analysis---we will assume that seismic waves cause the earth to undergo linear elastic deformation. In other words, we assume a linear relationship between stress and strain. This is known as Hooke's law. For a given material, that relationship can be characterized by a set of two independent material parameters that characterizes the strains produced as a result of various stresses. These parameters are intrinsic properties of the material. The parameters, or elastic moduli, can be defined in several ways and are also known as Lamé parameters. The most common set of parameters in seismology are the bulk and shear moduli. Young's modulus and Poisson's ratio are also commonly used. We describe these quantities here.
 
 
 Bulk Modulus and Shear Modulus
@@ -178,9 +176,7 @@ Note that it is possible for :math:`\sigma` to be zero. The decrease in length c
 
 **Other Elastic Parameters**
 
-In addition to the bulk modulus, shear modulus, Young's modulus and Poisson's ratio, there are a multitude elastic parameters which can be used in pairs to define Hooke's law.
-We will not cover the entire range of parameters in this course.
-However, a conversion table for various Lame parameter pairs can be found here `here <https://en.wikipedia.org/wiki/Lame_parameters>`_.
+In addition to the bulk modulus, shear modulus, Young's modulus and Poisson's ratio, there are a multitude elastic parameters which can be used in pairs to define Hooke's law. We will not cover the entire range of parameters in this course. A table showing the relationships between the various parameter pairs can be found here `here <https://en.wikipedia.org/wiki/Lame_parameters>`_.
 
 
 Seismic Wave Velocities

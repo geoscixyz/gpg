@@ -36,6 +36,4 @@ Contents:
    elastic_properties
    basic_principles
    survey/index
-   refraction/index
-   reflection/index
-   MASW/MASW
+   data/index

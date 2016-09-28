@@ -8,7 +8,7 @@ Survey
    :align: right
    :scale: 110 %
 
-This section will examine some elements of seismic surveying that are common to the three classes of surveying: refraction, reflection and MASW.
+This section will examine some elements of seismic surveying that are common to the three classes of surveying and discuss survey design considerations that might lead a geophysicist to suggest a particular survey.
 
 Contents:
 
@@ -17,5 +17,5 @@ Contents:
 
    seismic_sources
    seismic_receivers
- 
+   seismic_survey_design
    

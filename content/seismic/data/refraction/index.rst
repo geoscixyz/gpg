@@ -28,7 +28,6 @@ Contents:
 .. toctree::
    :maxdepth: 1
 
-   seismic_raw_refraction_data
    seismic_refraction_horizontal_layers
    seismic_refraction_dipping_layers
    seismic_refraction_irregular_layers

@@ -7,7 +7,7 @@ Basic principles
 Elastic model for Earth rocks
 =================================
 
-When the earth is deformed elastically, the small strains will propagate away in all directions from the site of the original stress. The easiest way to obtain intuition about this is to think about rocks as being made up of a set of connected springs. Apply a force (stress) to any part and you will eventually get motion elsewhere. This propagation of energy is a type of wave motion. Elastic waves can be divided into two categories:
+Recall from the :ref:`seismic velocity <seismic_velocity_duplicate>` page of the physical properties section that the earth deforms elastically when it is deformed by a source of seismic energy. These small elastic strains will propagate as waves away in all directions from the site of the original stress. The easiest way to obtain intuition about this is to think about rocks as being made up of a set of connected springs. Apply a force (stress) to any part and you will eventually get motion elsewhere. This propagation of energy is a type of wave motion. Elastic waves can be divided into two categories:
 
 .. sidebar:: Elastic model for rocks
 
@@ -114,6 +114,35 @@ velocities please see the :ref:`seismic velocity <seismic_velocity_duplicate>` p
 section of this site.
 
 
+Waves and Rays
+==============
+
+A wave is a representation of the propagation of energy. In the case of seismic waves, energy is propagated through the compressions and expansions of the earth. Energy propagates away from source with a distinct pattern. Most seismic sources can be represented spatially as point sources. In a uniform medium, energy propagates away from a point source in an expanding spherical pattern, much like ripples on a pond that's been disturbed. The figure below shows a snapshot of waves on a pond. Notice how each ring forms a coherent surface where the water is disturbed from equilibrium by an equal amount. These rings propagate outward in time, in a coherent manner.
+
+.. figure:: ./images/pondwaves-noleaves.jpg
+        :align: center
+        
+        Image reproduced with permission from The website of the `Gemini Observatory <http://www.gemini.edu/>`__. The original can be found `here <http://www.gemini.edu/images/stories/press_release/pr2003-2/pondwaves-noleaves.jpg>`__.
+
+A wavefront indicates the set of locations at which the phase of the wave has the same value. To continue with the pond example, visualize the peaks (or troughs) of water ripples after a rock has been thrown in. The direction of propagation of the energy is normal to the wavefront. **Seismic rays** are imaginary lines perpendicular to the wavefront that indicate the path along which the wavefront is traveling. Rays are not physical entities. They exist only to illustrate where the energy travels.
+
+.. figure:: ./images/wavefront.gif
+	:align: center
+
+Lets illustrate the connection between wavefronts and rays using a seismic example. Have a look at the following animation.
+
+.. figure:: ./images/two-layer-wavefront-animation.gif
+        :align: center
+
+The color represents a propagating wavefront due to a point source and the arrows are rays showing the direction of propagation. Note how the rays represent how the wavefront is bent when it hits the interface between two layers in the earth. 
+
+It is common in seismic processing and interpretation to represent waves as plane waves, that is, waves whose wavefronts are straight lines rather than circles. The wavefronts maintain a circular shape when propagating in a uniform medium but as they expand away from the source the circles get larger and larger, to the point where the curvature is negligible and they can be approximated as planes. this is illustrated in the figure below
+	
+.. figure:: ./images/Sonar_Principle_EN-modified-from-wikipedia-radar-article.svg.png
+        :align: center
+        
+        Adapted from `Wikipedia <https://commons.wikimedia.org/wiki/File:Sonar_Principle_EN.svg>`__, licensed under `CC BY 3.0`_.
+
 Attenuation
 ===========
 
@@ -137,28 +166,6 @@ are two primary reasons:
 
 .. figure:: ./images/attenuation.gif
 	:align: center
-
-
-Waves and Rays
-==============
-
-A wave is a representation of the propagation of energy. In the case of seismic waves, energy is propagated through the compressions and expansions of the earth. Energy propagates away from source with a distinct pattern. Most seismic sources can be represented spatially as point sources. In a uniform medium, energy propagates away from the source in an expanding spherical pattern, much like ripples on a pond that's been disturbed.
-
-.. figure:: ./images/pondwaves-noleaves.jpg
-        :align: center
-
-In the pond example, each ring forms a coherent surface where the water is disturbed from equilibrium by an equal amount. These rings propagate outward in time, in a coherent manner.
-        
-.. figure:: ./images/Sonar_Principle_EN-modified-from-wikipedia-radar-article.svg.png
-        :align: center
-        
-        Adapted from `Wikipedia <https://commons.wikimedia.org/wiki/File:Sonar_Principle_EN.svg>`__, licensed under `CC BY 3.0`_.
-
-A wavefront indicates the locations at which the phase of the wave has the same value. For example, visualize the peaks (or troughs) of water ripples after a rock has been thrown in. The direction of propagation of the energy is normal to the wavefront. **Seismic rays** are imaginary lines perpendicular to the wavefront that indicate the path along which the wavefront is traveling. Rays are not physical entities. They exist only to illustrate where the energy travels.
-
-.. figure:: ./images/wavefront.gif
-	:align: center
-
 
 Reflection and transmission of plane waves
 ==========================================
@@ -271,49 +278,28 @@ A seismic wave travelling through an isotropic homogeneous medium will propagate
 .. math::
           t = \frac{d}{v}
           
-where :math:`d` is the distance travelled in the layer. In a seismic survey we measure source to receiver travel times and use those data to estimate the properties of the subsurface. Basic seismic interpretation methods assume that the earth is composed of a series of uniform layers and attempt to compute the thicknesses, velocities, and sometimes dips of each layer. We will discuss specific techniques for computing layer thicknesses and velocities in the reflection and refraction survey sections, however, we will give a general overview of travel time computations and how they relate to geometry here.
+where :math:`d` is the distance travelled in the layer. In a seismic survey we measure source to receiver travel times and use those data to estimate the properties of the subsurface. Basic seismic interpretation methods assume that the earth is composed of a series of uniform layers and attempt to compute the thicknesses, velocities, and sometimes dips of each layer. We will discuss specific techniques for computing layer thicknesses and velocities in the reflection and refraction survey sections. However, we will introduce the concept of travel time computations and how they relate to geometry here, using the example of a two layered earth.
 
-Consider a layer of thickness h and velocity :math:`v_1` overlying a uniform halfspace of velocity :math:`v_2`. A source is detonated at time :math:`t=0`. We are interested in the waves and arrival times of those waves at a receiver which is located at a distance :math:`x` from the source at position :math:`D` in the figure below.
-
-There are three principle waves that will travel through the earth and arrive at position D. i) direct waves, ii) reflected waves, and  iii) critically refracted waves.
+Consider a layer of thickness h and velocity :math:`v_1` overlying a uniform halfspace of velocity :math:`v_2`. A source is detonated at time :math:`t=0`. We are interested in the waves and arrival times of those waves at a receiver which is located at a distance :math:`x` from the source at position :math:`D` in the figure below. There are three principle waves that will travel through the earth and arrive at position D. i) direct waves, ii) reflected waves, and  iii) critically refracted waves.
 
 .. figure:: ./images/waveslayerhalfspace.gif
 	:align: center
 
 .. <<editorial comment>> This diagram is ok. If redrawn, put a source symbol (*) and a dashed line for the critically refracted ray.
 
-The travel time curves for these ray paths are shown to the right, and expressions for the ray paths and important parameters of these travel time curves are as follows:
-
-- :math:`x_{crit}`  is the critical distance at which the refracted arrival first arrives.
-
-- :math:`x_{cross}`  is the crossover distance. Beyond this distance the refracted arrival is the first arrival on the record.
-
-
-- Travel times of visible arrivals are related to distance between geophone
-  and source (:math:`x`), thickness of the layer (:math:`h`) and the velocities of
-  signals within the two layers (:math:`v_1` and :math:`v_2`). Three times are of
-  interest: :math:`t_{dir}` is travel time of direct arrivals, :math:`t_{ref}` is
-  arrival time of reflections and :math:`t_{cr}` is the refraction travel time
-  (see figure above). These parameters are all related as follows:
+The travel time curves for these ray paths are shown below, where the horizontal axis represents distance from the source along the flat surface of the earth, :math:`x_{crit}` is called the critical distance, and :math:`x_{cross}` the crossover distance. The critical distance is the closest surface point to the source at which the refracted ray can be observed. The crossover distance is the surface point at which the direct and refracted rays arrive at the same time. At offsets from the source greater than the crossover distance the refracted ray will be the first signal to arrive from the source.
 
 .. figure:: ./images/timetravels.gif
 	:align: center
 
+Travel times of visible arrivals are related to the distance between source and receiver (:math:`x`), thickness of the layer (:math:`h`) and the wave velocities in the upper layer and basement (:math:`v_1` and :math:`v_2`). Let us denote the arrival times at point :math:`x` for the direct, reflected and refracted waves as :math:`t_{dir}`, :math:`t_{refl}` :math:`t_{refr}` respectively. These times are given by the following formulas
+
 .. math::
 	t_{dir} & = \frac{x}{v_1}\\
-	t_{ref} & = \frac{\sqrt{x^2 + 4h^2}}{v_1}\\
-	t_{cr}  & = \frac{x}{v_2} + \frac{2h\sqrt{v_2^2-v_1^2}}{v_1 v_2}
+	t_{refl} & = \frac{\sqrt{x^2 + 4h^2}}{v_1}\\
+	t_{refr}  & = \frac{x}{v_2} + \frac{2h\sqrt{v_2^2-v_1^2}}{v_1 v_2}.
 
-
-
-.. Transmitted wave will be refracted, meaning it will be bent. Check out https://www.youtube.com/watch?v=FygYDmm99SA. The direction of the refracted ray can be computed from Snell's law.
-
-.. At the critical angle, wave will travel along interface and head waves will be generated according to Huygen's principle. Head waves propagate back toward surface at the critical angle.
-
-
-.. Another refraction/head wave video https://www.iris.edu/hq/inclass/animation/seismic_wave_behavior_a_single_boundary_refracts__reflects
-
-.. Site with some head wave figures: http://www.ucl.ac.uk/EarthSci/people/lidunka/GEOL2014/Geophysics4%20-%20Seismic%20waves/SEISMOLOGY%20.htm
+Note that the formulas for the direct and refracted waves are linear in :math:`x` but that the reflected arrival time formula is not.
 
 
 
