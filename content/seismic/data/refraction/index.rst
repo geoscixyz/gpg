@@ -1,8 +1,8 @@
 .. _seismic_refraction_index:
 
 
-Seismic Refraction
-==================
+Refraction
+==========
 
 .. figure:: ./images/icon_refrac.gif
    :align: right
@@ -28,8 +28,6 @@ Contents:
 .. toctree::
    :maxdepth: 1
 
-   seismic_raw_refraction_data
-   seismic_ray_paths
    seismic_refraction_horizontal_layers
    seismic_refraction_dipping_layers
    seismic_refraction_irregular_layers

@@ -1,6 +1,6 @@
 .. _seismic_sources:
 
-Seismic Sources
+Sources
 ***************
 
 Elastic energy in the earth can be generated in many ways. These energy sources can be divided into two main categories. The first category, passive sources, such as earthquakes, create seismic energy by natural processes. Active, or artificial, sources use human produced energy. Earthquakes produce great quantities of energy but we can't control where they occur or characterize the nature of the energy released in sufficient detail for used in applied geophysics.

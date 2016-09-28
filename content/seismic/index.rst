@@ -1,8 +1,8 @@
 .. _seismic_index:
 
 
-Seismology
-==========
+Seismic
+=======
 
 .. figure:: ./images/icon_refrac.gif
    :align: right
@@ -32,7 +32,8 @@ Contents:
 .. toctree::
    :maxdepth: 1
 
-   fundamentals/index
-   refraction/index
-   reflection/index
-   MASW/MASW
+   introduction
+   elastic_properties
+   basic_principles
+   survey/index
+   data/index

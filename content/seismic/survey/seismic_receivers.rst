@@ -1,6 +1,6 @@
 .. _seismic_receivers:
 
-Seismic Receivers
+Receivers
 *****************
 
 A seismic detector measures the displacement, velocity or acceleration of
