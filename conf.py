@@ -100,6 +100,8 @@ linkcheck_ignore = [
   'http://geogratis.gc.ca/site/eng/extraction',
   'http://www.ngdc.noaa.gov/*',
 ]
+linkcheck_retries = 3
+linkcheck_timeout = 500
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.

@@ -100,7 +100,7 @@ Two Examples
 
 .. figure:: ./images/Usgs_examples_mexicogulf.png
 
- Hart, Patrick et al., High-Resolution Multichannel Seismic-Reflection Data Acquired in the Northern Gulf of Mexico, 1998-99, http://geopubs.wr.usgs.gov/open-file/of02-368/, USGS Open File report 02-368, public domain, converted to PNG
+ Hart, Patrick et al., High-Resolution Multichannel Seismic-Reflection Data Acquired in the Northern Gulf of Mexico, 1998-99, http://pubs.usgs.gov/of/2002/of02-368/, USGS Open File report 02-368, public domain, converted to PNG
 
 .. figure:: ./images/Flat_Spot_in_Seismic.jpg
 
