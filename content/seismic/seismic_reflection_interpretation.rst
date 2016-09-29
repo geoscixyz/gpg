@@ -1,7 +1,7 @@
-.. _seismic_reflection_vertical_resolution:
+.. _seismic_reflection_interpretation: 
 
 Vertical Resolution
-*******************
+===================
 
  	
 The vertical resolution of a seismic data sets describes how thin a layer can

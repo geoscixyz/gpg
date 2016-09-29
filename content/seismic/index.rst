@@ -32,8 +32,10 @@ Contents:
 .. toctree::
    :maxdepth: 1
 
-   introduction
    elastic_properties
    basic_principles
-   survey/index
-   data/index
+   seismic_survey
+   seismic_data
+   seismic_processing
+   seismic_interpretation
+   MASW
