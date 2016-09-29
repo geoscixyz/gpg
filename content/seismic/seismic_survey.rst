@@ -17,5 +17,5 @@ Contents:
 
    seismic_sources
    seismic_receivers
-   seismic_survey_design
+   seismic_survey_geometry
    
