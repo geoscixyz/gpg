@@ -17,7 +17,7 @@ Consider a layer of thickness h and velocity :math:`v_1` overlying a uniform hal
 
 .. <<editorial comment>> This diagram is ok. If redrawn, put a source symbol (*) and a dashed line for the critically refracted ray.
 
-The travel time curves for these ray paths are shown below, where the horizontal axis represents distance from the source along the flat surface of the earth, :math:`x_{crit}` is called the critical distance, and :math:`x_{cross}` the crossover distance. The critical distance is the closest surface point to the source at which the refracted ray can be observed. The crossover distance is the surface point at which the direct and refracted rays arrive at the same time. At offsets from the source greater than the crossover distance the refracted ray will be the first signal to arrive from the source.
+The travel time curves for these ray paths are shown below, where the horizontal axis represents distance from the source along the flat surface of the earth, :math:`x_{crit}` is called the critical distance, and :math:`x_{cross}` the crossover distance. The critical distance is the closest surface point to the source at which the refracted ray can be observed. The crossover distance is the surface point at which the direct and refracted rays arrive at the same time. At offsets from the source greater than the crossover distance the refracted ray will be the first signal to arrive from the source. You can explore these concepts interactively using the `3pt Science seismic refraction app <https://www.3ptscience.com/app/SeismicRefraction>`__. Instructions for using the app can be found :ref:`here <seismic_apps>`.
 
 .. figure:: ./images/timetravels.gif
 	:align: center
@@ -30,6 +30,11 @@ Travel times of visible arrivals are related to the distance between source and 
 	t_{refr}  & = \frac{x}{v_2} + \frac{2h\sqrt{v_2^2-v_1^2}}{v_1 v_2}.
 
 Note that the formulas for the direct and refracted waves are linear in :math:`x` but that the reflected arrival time formula is not.
+
+Before moving on, let's look at an example of how travel times show up in the field. The horizontal axis of the following plot shows offset from a seismic receiver. Each line plots the displacement vs time curve of a geophone at a given offset. The plot clearly shows a set of events moving linearly in time from one geophone to the next.
+
+.. figure:: ./images/case-study-seismogram.png
+   :align: center
 
 We will now discuss the computation of traveltimes in more detail. It is important to note here that computing traveltimes for an arbitrary, heterogeneous earth is a complex problem well beyond the scope of this course. However, much insight can be gained by assuming that the subsurface consists of a series of homogeneous layers with horizontal or possibly dipping interfaces. 
 
@@ -351,3 +356,5 @@ above. The RMS velocity for the :math:`n^{th}` layer is given by:
 
 where :math:`v_i` is the velocity of the :math:`i^{th}` layer, and :math:`\tau_i` is the one-way travel time through the :math:`` :math:`i^{th}`
 layer.
+
+Seismogram from case study goes here.
