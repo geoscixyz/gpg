@@ -15,6 +15,5 @@ Contents:
 
    seismic_refraction_dipping_layers
    seismic_refraction_irregular_layers
-   seismic_refraction_advanced_techniques
  
    

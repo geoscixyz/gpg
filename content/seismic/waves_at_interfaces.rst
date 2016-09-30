@@ -8,7 +8,7 @@ Reflection and transmission of plane waves
 
 When a wave strikes an interface between two materials with differing physical properties, some of the wave energy will be reflected and the rest will be transmitted through or along the interface. All of the processing and interpretation methods we will discuss will assume that a seismic wave striking the interface between materials of differing physical properties can be approximated as a plane wave. We define a new quantity called acoustic impedance as :math:`Z = \rho V`, the product of density and velocity. The velocity in question could be for either P or S waves. 
 
-Let us first consider waves striking an interface at normal incidence, i.e. with the direction of propagation perpendicular to the interface. The relative amplitudes of the reflected and transmitted waves will depend on the acoustic impedances of the two materials. Let :math:`A_0`, :math:`A_1` and :math:`A_2` be the amplitudes of the incident, reflected, and transmitted waves, respectively. The ratios of :math:`A_1` and :math:`A_2` to :math:`A_0` are given by the reflection and refraction coefficients:
+Let us first consider waves striking an interface at normal incidence, i.e. with the direction of propagation perpendicular to the interface. The relative amplitudes of the reflected and transmitted waves will depend on the acoustic impedances of the two materials. Let :math:`A_0`, :math:`A_1` and :math:`A_2` be the amplitudes of the incident, reflected, and transmitted waves, respectively. The ratios of :math:`A_1` and :math:`A_2` to :math:`A_0` are given by the reflection and transmission coefficients:
 
 **Reflection Coefficient:**
 
@@ -20,6 +20,11 @@ Let us first consider waves striking an interface at normal incidence, i.e. with
 .. math::
     T = \frac{A_2}{A_0} = \frac{2 Z_1}{Z_2 + Z_1} \qquad 0 \le T \le 2
 
+The following figure shows the progression of amplitude as a vertical seismic wave propagates through the earth.
+
+.. figure:: ./images/Reflection_Transmission.jpg
+    :align: center
+    
 Displacement of the earth from equilibrium position must be continuous across any interface. This guarantees that :math:`A_0 = A_1 + A_2`. We make note of the values of :math:`R` and :math:`Z` in some important special cases:
 
 1. If :math:`Z_1 = Z_2`:   :math:`R = 0`,  :math:`T = 1`
@@ -28,11 +33,19 @@ Displacement of the earth from equilibrium position must be continuous across an
    = -1` means that the pulse will be reflected with a polarity change, for
    example at the rock-air interface, with an upward traveling wave.
 
-3. If   :math:`Z_2 >> Z_1`   :math:`R = 1`,  :math:`T = 0` (air earth
-   interface with downward traveling wave).
+3. If   :math:`Z_2 >> Z_1`   :math:`R = 1`,  :math:`T = 0` (wave travelling down through the air and hitting the air earth interface).
    
-We can illustrate these using the example of a wave propagating on a string. 
+We can illustrate scenarios two and three using the example of a wave propagating on a string. A string with a free end represents scenario two and a string with a fixed end represents scenario three.  These are illustrated in the following video
 
+.. raw:: html
+
+    <div style="margin-top:10px; margin-bottom:20px;" align="center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/9OpL3OFuVXo" frameborder="0" allowfullscreen></iframe allowfullscreen>
+    </iframe>
+    </div>
+
+You can explore the concept further using an interactive web app `here <https://phet.colorado.edu/sims/html/wave-on-a-string/latest/wave-on-a-string_en.html>`__.
+    
 **Remark:**  Large amplitudes of the transmitted wave are sometimes counter-
 intuitive. However, the energy transported in an acoustic wave is
 
@@ -86,6 +99,14 @@ the normal if the wave goes from a high velocity to a low velocity medium.
 .. figure:: ./images/snell.gif
 	:align: center
 
+The animation of wavefront propagation shown earlier (and directly below) is again useful here. Although we have described Snell's law in terms of two rays it captures the bending of a spatially extended wavefront, as the animation clearly shows.
+	
+.. raw:: html
+
+    <div style="margin-top:10px; margin-bottom:20px;" align="center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0z2WTLLKjGY?rel=0" frameborder="0" allowfullscreen>
+    </iframe>
+    </div>
 
 Critical angle
 --------------
@@ -106,10 +127,32 @@ a "head wave". It is somewhat analogous to the bow wave of a moving boat. This i
 .. figure:: ./images/criticalrefraction.gif
 	:align: center
 
-The animation of wavefront propagation shown earlier (and directly below) is again useful here. The head wavefront is clearly visible after the initial downgoing wave from the source hits the interface.
+The following video from `the IRIS group <https://www.iris.edu/hq/programs/epo>`__ illustrates the propagation of reflected, sub-critically refracted and critically refracted rays.
 
-.. figure:: ./images/wavefront-animated-w-arrows-dom.gif
-        :align: center
+.. raw:: html
+
+    <div style="margin-top:10px; margin-bottom:20px;" align="center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FygYDmm99SA" frameborder="0" allowfullscreen></iframe>
+    </iframe>
+    </div>
+
+We will also once again return to our trusty wavefront animation which shows the head wave in actual wave form, rather than just the head-rays
+ 
+ .. raw:: html
+
+    <div style="margin-top:10px; margin-bottom:20px;" align="center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0z2WTLLKjGY?rel=0" frameborder="0" allowfullscreen>
+    </iframe>
+    </div>
+        
+A final very important point here is to note that energy will only be refracted back toward the surface if the velocity in the lower layer is greater than in the upper layer. Otherwise the ray will be bent toward the vertical downward direction. Examine Snell's law to convince yourself this is true. This scenario is illustrated below
+
+.. raw:: html
+
+    <div style="margin-top:10px; margin-bottom:20px;" align="center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/eI3epl0ek3g?rel=0" frameborder="0" allowfullscreen>
+    </iframe>
+    </div>
         
 .. _CC BY 3.0: https://creativecommons.org/licenses/by/3.0/
 .. _Subsurface Wiki: http://subsurfwiki.org/

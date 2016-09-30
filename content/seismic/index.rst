@@ -39,3 +39,4 @@ Contents:
    seismic_processing
    seismic_interpretation
    MASW
+   seismic_apps

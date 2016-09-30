@@ -1,62 +1,38 @@
 .. _seismic_survey_design:
 
-Survey design
-*************
+.. Survey geometry
+.. ***************
 
-Energy in the ground
-====================
+.. As a motivating example, consider the following two figures, showing typical reflection and refraction survey layouts.
 
-Seismic body waves travel away from the source, into the ground. The energy
-spreads in all possible directions away from the source, so wavefronts expand
-as hemispheres under a source point, if the ground is uniform. The energy will
-arrive at geophones at times depending upon the velocity of the waves in the
-subsurface materials. When energy reaches a change in material, some energy
-will be reflected from the interface, and some will pass through it. The
-geometry of this situation is shown in the next figure.
+.. .. figure:: ./images/reflect.jpg
+..	:align: center
 
-.. <<place holder>> This is a place holder for active links
+.. If seismic signals travel at higher velocity in the lower layer, then some of
+.. the seismic energy travels along the interface, returning to the surface as a
+.. "head wave" along a wave front similar to the bow wave of a ship (figure
+.. below). These are refracted waves, and for geophones a long way from the shot
+.. point, they represent the first arrival of seismic energy. In other words,
+.. because head waves travel along the interface at the velocity of the "faster"
+.. material, they eventually overtake the direct waves (green in the figure
+.. below) traveling in the slower surficial materials.
+.. 
+.. .. figure:: ./images/refract.jpg
+.. 	:align: center
+.. 
+.. Of course energy is both **reflected** and **refracted**, so ground motion
+.. detected at a geophone is a caused by the combination of direct, refracted and
+.. reflected energy arriving at the geophone's location. The different types of
+.. energy are distinguishable only because they have traveled along different
+.. pathways. Refraction surveying takes advantage of the fact that refracted
+.. waves arrive before reflected energy, so long as the geophone is at a great
+.. enough distance from the shot point.
 
-.. figure:: ./images/reflect.jpg
-	:align: center
-
-If seismic signals travel at higher velocity in the lower layer, then some of
-the seismic energy travels along the interface, returning to the surface as a
-"head wave" along a wave front similar to the bow wave of a ship (figure
-below). These are refracted waves, and for geophones a long way from the shot
-point, they represent the first arrival of seismic energy. In other words,
-because head waves travel along the interface at the velocity of the "faster"
-material, they eventually overtake the direct waves (green in the figure
-below) traveling in the slower surficial materials.
-
-.. figure:: ./images/refract.jpg
-	:align: center
-
-Of course energy is both **reflected** and **refracted**, so ground motion
-detected at a geophone is a caused by the combination of direct, refracted and
-reflected energy arriving at the geophone's location. The different types of
-energy are distinguishable only because they have traveled along different
-pathways. Refraction surveying takes advantage of the fact that refracted
-waves arrive before reflected energy, so long as the geophone is at a great
-enough distance from the shot point.
-
-Considerations for refraction surveys
-=====================================
-
-Seismic refraction is most useful when the velocity of seismic
-signals in each layer increases with depth. Therefore, where higher velocity
-(e.g. clay) layers may overlie lower velocity (e.g. sand or gravel) layers,
-seismic refraction may yield incorrect results. In addition, seismic
-refraction requires geophone arrays with lengths of approximately 4 to 5 times
-the depth to the layer of interest (for example the top of bedrock). Therefore
-seismic refraction is commonly limited to mapping layers to depths less than
-30-50 meters. Greater depths are possible, but the required array lengths may
-exceed site dimensions, and the shot energy required to transmit seismic
-arrivals for the required distances may necessitate the use of large explosive
-charges.
-
+Survey geometry
+===============
 
 Multichannel data collection
-============================
+----------------------------
 
 First consider the source-receiver geometry. The geometry can be "split
 spread" in which case there is a central shot with receivers on both sides, or
@@ -86,9 +62,8 @@ the triangular central portion is ground roll caused by surface waves. It
 masks the reflection events.
 
 Common MidPoints (CMP)
-======================
+----------------------
   	
-
 Multiple shots and receivers are used in seismic profiling
 specifically so that some subsurface points are sampled more than once.
 Ultimately the goal is to identify all the reflections due to that point on
@@ -120,8 +95,28 @@ strictly correct, as the bottom diagram illustrates.
     horizontal reflector. (b) The common depth point is not achieved in the
     case of a dipping  reflector.
 
-"Fold" in Seismic Surveying
-======================================
+Refraction surveys
+------------------
+
+Seismic refraction is most useful when the velocity of seismic
+signals in each layer increases with depth. Therefore, where higher velocity
+(e.g. clay) layers may overlie lower velocity (e.g. sand or gravel) layers,
+seismic refraction may yield incorrect results. In addition, seismic
+refraction requires geophone arrays with lengths of approximately 4 to 5 times
+the depth to the layer of interest (for example the top of bedrock). Therefore
+seismic refraction is commonly limited to mapping layers to depths less than
+30-50 meters. Greater depths are possible, but the required array lengths may
+exceed site dimensions, and the shot energy required to transmit seismic
+arrivals for the required distances may necessitate the use of large explosive
+charges.
+    
+Reflection surveys
+------------------
+
+By contrast, reflection surveys are not hampered by low velocity layers but they have difficulty imaging the top 50m of the earth because reflections from such shallow depth are difficult to distinguish from direct arrivals and sound waves travelling through the air. In general, identifying a reflection event in a seismic record is more difficult than picking first arrivals for a refraction survey. Much signal processing is typically involved. In order to improve the ability to detect and image a given reflection event geophysicists typically design reflection surveys to detect a reflection from a particular point in the subsurface multiple times.
+
+Fold
+----
 
 The fold refers to the number of times a particular subsurface point has been
 sampled. It is equal to the number of traces in the CMP gather and is
