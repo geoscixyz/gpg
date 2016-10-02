@@ -13,7 +13,7 @@ If the Earth is magnetic, we may also need to consider the role of :ref:`magneti
 For simple cases, it is generally assumed that the effects of electrical conductivity and magnetic permeability on radiowave propagation are minimal.
 As a result, the fundamental understanding of ground penetrating radar can be more or less understood by considering subsurface variations in the Earth's dielectric permittivity.
 It is important to note however, that electrical conductivity plays an important role in characterizing the attenuation of radio waves as well as determining the penetration depth of GPR systems.
-
+The diagnostic physical properties for GPR and their associated contitutive relationships are summarized in the table below.
 
 
 +--------------------------+---------------------+------------------------------------+
