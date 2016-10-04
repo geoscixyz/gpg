@@ -30,7 +30,7 @@ These include:
 		:align: right
 		:figwidth: 55%
 
-                Schematic of GPR setup.
+                Schematic of a zero-offset GPR setup.
 
 
 
@@ -44,7 +44,7 @@ Because of this, much of the understanding of seismic methods can be applied to 
 		:align: right
 		:figwidth: 55%
 
-                Radargram example. `Image source <https://commons.wikimedia.org/wiki/File:Calvary_line_23.jpg>`__ . Licensed under `CC BY 3.0`_.
+                Radargram example. Gray-scale shows the amplitude of the returning signal. `Image source <https://commons.wikimedia.org/wiki/File:Calvary_line_23.jpg>`__ . Licensed under `CC BY 3.0`_.
 
 
 Sensors (:math:`Rx`) at the Earth's surface measure the amplitudes and travel times of the distorted radiowave signals that return to the surface.
