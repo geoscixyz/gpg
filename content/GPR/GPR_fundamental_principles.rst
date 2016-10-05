@@ -1,11 +1,11 @@
 .. _GPR_fundamental_principles
 
-Fundamental Principles
-**********************
+Basic Principles
+****************
 
 Here, we present the fundamental principles which govern ground penetrating radar (GPR) signals.
 As we mentionned earlier, the source of the GPR system sends a pulse of high-frequency electromagnetic waves (radiowaves) into the Earth.
-And as these radiowaves propagate through the Earth, they are distorted due to the Earth's electromagnetic properties.
+And as these radiowaves propagate through the Earth, they are distorted due to the Earth's electromagnetic properties (:math:`\sigma , \; \mu` and :math:`\varepsilon`).
 
 For radiowaves which are propagating through a homogeneous medium, the associated electric and magnetic fields behave according to the wave equation:
 
@@ -51,7 +51,7 @@ In general, the velocity of radiowaves through a homogeneous material is given b
 
 
 This equation can be used to show that the velocity of electromagnetic waves is largest in free-space (i.e. when :math:`\sigma = 0`, :math:`\mu = \mu_0` and :math:`\varepsilon = \varepsilon_0`).
-Therefore, electromagnetic waves in matter travel slower than the speed of light (c = 2.999 :math:`\times 10^8` m/s).
+Therefore, electromagnetic waves in matter travel slower than the speed of light (c = 3.00 :math:`\times 10^8` m/s).
 
 GPR signals are characterized as being high-frequency.
 Thus in many cases (and for this course), it is safe to assume that :math:`\sigma \ll \omega \varepsilon`; especially if the Earth is resistive.
@@ -72,8 +72,8 @@ From this expression, we can see that radiowaves propagate more slowly in increa
 A table showing the dielectric permittivity, conductivity and radiowave velocity for various materials can be found :ref:`here <GPR_table_velocity>`.
 Notice that:
 	
-	- Increases water saturation decreases the propagation velocity of sediments
-	- Dry rocks and igneous rocks have the high propagation velocity
+	- Water saturation decreases the propagation velocity of sediments because they have high dielectric permittivities.
+	- Dry rocks and igneous rocks have the highest propagation velocity
 
 
 
@@ -85,7 +85,7 @@ Attenuation, Skin Depth and Probing Distance
 
 Attenuation defines the continuous loss of amplitude a wave experiences as it propagates through a particular medium.
 The rate at which the amplitude decreases is referred as the attenuation constant.
-For an electromagnetic wave that has travelled distance :math:`z`, the attenuation constant (:math:`\alpha`) is defined as follows:
+For an electromagnetic wave that has travelled a distance :math:`z`, the attenuation constant (:math:`\alpha`) is given by:
 
 .. math::
 	\frac{| \mathbf{A} |}{ | \mathbf{A_0} |} = e^{-\alpha z}
@@ -106,27 +106,78 @@ In general, the attenuation constant can be expressed as:
 
 **Skin Depth**
 
+
+
+
 Skin depth (:math:`\delta`) defines the propagation distance at which the amplitude of an electromagnetic wave is reduced by a factor of :math:`1/e`; i.e. reduced to 37\% of its original amplitude.
+By definition, the skin depth is just the reciprocal of the attenuation constant:
+
+.. figure:: images_new/GPR_attenuation_skin_depth.png
+		:align: right
+		:figwidth: 40%
+
+                Figure comparing the attenuation of radiowaves in air versus in a conductiv medium.
+
+
+.. math::
+	\delta = \frac{1}{\alpha}
+
+
 In conductive environments (:math:`\omega \varepsilon \ll \sigma`), a good approximation for  the skin depth is given by:
 
 .. math::
-	\delta \approx 500 \sqrt{\dfrac{\rho}{f}}
+	\delta \approx \sqrt{\frac{2 \rho}{\omega \mu}} \sim 1262 \sqrt{\frac{\rho}{\omega}}
 
+where :math:`\rho = 1/\sigma` is the resistivity of the medium.
+The second equation offers a simpler approximation if the Earth is non-magnetic (i.e. :math:`\mu = \mu_0`).
 
 For materials in which :math:`\omega \varepsilon \gg \sigma`, the skin depth is approximated by:
 
+
 .. math::
-	\delta \approx \frac{5.31 \, \sqrt{\varepsilon}}{\sigma}
+	\delta \approx 2 \rho \sqrt{\frac{\varepsilon}{\mu}}
 
 
-**Sigma here is mS/m which to me might be confusing**
+We can see from the two previous expressions that:
+
+	- The skin depth is smaller if the frequency of the radiowaves is higher.
+	- The skin depth is larger in materials with higher resistivities.
+	- The skin depth is larger is materials with higher dielectric permittivities.
 
 
+An example of the attenuation of electromagnetic waves in air versus inside a conductive is shown on the right.
+We can see that in the air, the wave experienced little to no loss in amplitude as it propagate.
+In the conductive material however, the amplitude of the wave decreases noticeably as it propagates.
 
 
 **Probing Distance**
 
-Probing distance is used to set to limit 
+.. figure:: images_new/GPR_probing_distance_2.jpg
+	:align: right
+	:figwidth: 50%
+
+	Proving distances for GPR signals for various materials.
+
+Probing distance characterizes the maximum depth in which GPR signals can be used to obtain information about subsurface structures.
+The probing distance depends on the skin depth of the material.
+For materials which have a larger skin depths, radiowaves can penetrate deeper into the ground and still provide a sufficiently strong returning signal.
+
+.. figure:: images_new/GPR_probing_distance.jpg
+	:align: right
+	:figwidth: 50%
+		
+	Probing distance for various materials from 1 MHz through 1 GHz.
+		
+		
+On the right we see figures which show probing distances for various materials.
+Using these figures, we can see that:
+
+	- As the frequency increases, the skin depth decreases and the probing distance decreases.
+	- Frequencies used for GPR are :math:`\sim` 1 GHz. Therefore, the probing distances for GPR signals are generally quite shallow.
+	- It is very difficult for GPR signals to penetrate concrete and asphalt, as the probing distance is only about 1 m for GPR.
+	- Water saturated sedimentary rocks, such as clays and sandstones, have much lower probing distances than dry sedimentary rocks.
+	- Rocks saturated with sea water have much smaller probing distances than rocks saturated with fresh water.
+	- The probing distances for hard rocks (granites, limestones, schists...) is quite large.
 
 
 
@@ -142,10 +193,10 @@ Reflection and Transmission of Radiowaves
 		:align: center
 		:figwidth: 100%
 	
-		`Link to source image <https://commons.wikimedia.org/wiki/File:Partial_transmittance.gif>`__
+		Reflection of an incident wave with a reverse in polarity (:math:`\varepsilon_1 <\varepsilon_2`). `Link to source image <https://commons.wikimedia.org/wiki/File:Partial_transmittance.gif>`__
 
 
-When a radiowave reaches an interface, some of its energy is reflected and some of it is transmitted accross the interface.
+When a radiowave reaches an interface, some of its energy is reflected and some of its energy is transmitted accross the interface.
 This results in both a reflected and a transmitted wave.
 
 The amplitude of the reflected wave proportional to that of the incident wave is defined by the reflection coefficient (:math:`R`).
@@ -156,42 +207,75 @@ Assuming the radiowave arrives at an angle perpendicular to the interface, the r
 	R = \frac{\textrm{Reflected Amplitude}}{\textrm{Incident Amplitude}} = \frac{\sqrt{\varepsilon_1} - \sqrt{\varepsilon_2}}{\sqrt{\varepsilon_1} + \sqrt{\varepsilon_2}}
 
 
-The transmission coefficient (the amplitude of the transmitted wave proportional to that of the incident wave) is given by:
-
-.. math::
-	T = 1 - R
-
+where :math:`\varepsilon_1` is the dielectric permittivity of the medium associated with the incident and reflected waves.
 
 The reflection coefficient can be either positive or negative and has values between :math:`-1 < R < 1`.
 The magnitude of :math:`R` determines how much of the incidend wave is reflected.
-The sign determines whether :math:`\varepsilon_1` is greater than or less than :math:`\varepsilon_2` (**not sure if this can be done on radiogram**).
+It should be noted that:
 
-	- :math:`R<0` indicates :math:`\varepsilon_1 < \varepsilon_2`
-	- :math:`R>0` indicates :math:`\varepsilon_1 > \varepsilon_2`
-
-
+	- If :math:`\varepsilon_1` and :math:`\varepsilon_2` are similar, most of the incident wave is transmitted through the interface.
+	- If one of the dielectric permittivities accross the interface is much smaller than the other, most of the incident wave is reflected. This case can prove problematic if you at attempting to gain information about structures below this interface.
 
 
+The sign of the reflection coefficient determines whether the reflected wave experiences a reverse in polarity.
+As a result, we can use the polarity of reflected radiowaves to determine whether :math:`\varepsilon_1` is greater than or less than :math:`\varepsilon_2`.
+This can be summarized as follows:
 
+	- If the returning signal (reflected wave) shows a reverse in polarity, :math:`R<0` and thus :math:`\varepsilon_1 < \varepsilon_2`
+	- If the returning signal (reflected wave) does not show a reverse in polarity, :math:`R>0` and thus :math:`\varepsilon_1 > \varepsilon_2`
 
-**Discuss the importance for relevant senarios**
 
 
 
 Refraction of Radiowaves
 ========================
 
+.. figure:: images_new/GPR_refraction.png
+	:align: right
+	:figwidth: 25%
+		
+	Reflection and refraction of an incoming radiowave.
+
+
+Refraction is used to describe the change in propagation direction of a wave due to a change in the propagation medium.
+When a radiowave reaches an interface, recall that some of its energy is reflected and some of its energy is transmitted accross the interface.
+The angles at which the incident wave is reflected and refracted are illustrated on the right.
+
+The angle of the reflected radiowave depends directly on the angle of the incident wave.
+The angle of the refracted wave can be obtained by using Snell's law (just like seismic waves):
+
 .. math::
 	\frac{\textrm{sin}\theta_1}{V_1} = \frac{\textrm{sin}\theta_2}{V_2}
 
 
+For radiowaves in resistive and non-magnetic media, the propagation velocity is equal to :math:`V = c/ \! \sqrt{\varepsilon_r}` (see here add link).
+In this case, Snell's law can be expressed as:
+
+.. math::
+	\sqrt{\varepsilon_1} \, \textrm{sin}\theta_1 = \sqrt{\varepsilon_2} \, \textrm{sin}\theta_2
+
+
+**Critical Refraction**
+
+.. figure:: images_new/GPR_critical_refraction.png
+	:align: right
+	:figwidth: 50%
+		
+	Critical refraction at interface and the resulting headwave.
+
+
+Just like in refraction seismology, radiowaves can undergo critical refraction.
+This occurs when the incident angle :math:`\theta_1` is such that the refracted wave propagates along the interface at velocity :math:`V_2`; ultimately leading to a head wave.
+The critical angle is given by:
+
+.. math::
+	\textrm{sin} \theta_c = \frac{V_2}{V_1}
 
 
 
 
-
-
-
+Example: Radargram for a Layered Earth
+======================================
 
 
 

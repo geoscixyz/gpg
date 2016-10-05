@@ -19,6 +19,7 @@ Physical properties important to GPR include: dielectric permittivity, electrica
 Ground penetrating radar is used for a variety of applications.
 These include:
 
+	- Investigating concrete structures and roads
 	- Mapping the thickness of peat-bogs and other sedimentary layers
 	- Obtaining the depth to groundwater or permafrost
 	- Locating buried infrastructure such as irrigation pipes, tunnels and electrical wires
