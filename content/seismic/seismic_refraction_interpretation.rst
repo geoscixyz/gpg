@@ -1,10 +1,8 @@
 .. _seismic_refraction_other_topics:
 
-Other topics: Hidden layers, Lateral velocity variations, Phantoming, and Statics
-*********************************************************************************
 
 Hidden Layers
--------------
+=============
 
 When acquiring refraction data we attempt to obtain first arrivals from each
 refractor (in fact first arrivals are the only useful data - signal energy
@@ -49,7 +47,7 @@ reasons why the second layer might go undetected.
 
 
 Lateral Velocity Changes
-------------------------
+========================
 
 The headwave travels at the speed of the underlying medium and that velocity
 might vary laterally. This produces another complication when interpreting the
@@ -81,7 +79,7 @@ location of the crossover remains the same.
 	:scale: 120 %
 
 Phantoming
-----------
+==========
 
 .. figure:: ./images/phantoming.gif
 	:align: right
@@ -106,7 +104,7 @@ The diagram here shows an example where the spread is moved.
  2. For the shot at 100 feet, data from 140 can phantom in artificial arrivals that arrive before :math:`x_{crit}`. The data can help define the intercept time because we now have more points to help estimate a straight line. Note that these phantomed values don't actually exist but they are valid data for helping us estimate the slope and intercept for the particular refractor.
 
 Static Data Corrections
------------------------
+=======================
 
 There are two corrections that are sometimes applied to the recorded travel
 times. These are corrections for elevations and similar corrections when there
