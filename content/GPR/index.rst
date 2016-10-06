@@ -40,17 +40,17 @@ As the radiowaves propagate through the Earth, they are distorted as a result of
 At boundaries where the Earth's electromagnetic properties change abruptly, radiowave signals may undergo transmission, reflection and/or refraction.
 Because of this, much of the understanding of seismic methods can be applied to ground penetrating radar.
 
-
-.. figure:: images_new/Radargram_example.jpg
+.. figure:: images_new/GPR_radargram_example.jpg
 		:align: right
-		:figwidth: 55%
+		:figwidth: 50%
 
-                Radargram example. Gray-scale shows the amplitude of the returning signal. `Image source <https://commons.wikimedia.org/wiki/File:Calvary_line_23.jpg>`__ . Licensed under `CC BY 3.0`_.
-
+                Radargram example of two underground tunnels (parabolas). Gray-scale shows the amplitude of the returning signal.
 
 Sensors (:math:`Rx`) at the Earth's surface measure the amplitudes and travel times of the distorted radiowave signals that return to the surface.
-These data are amalgamated and represented using a radiogram.
-It is from radiograms that we will do the majority of our interpretation of GPR data.
+These data are amalgamated and represented using a radargram.
+The horizontal axis (distance) is used to represent the location of the receiver relative to the source for a particular sounding.
+The vertical axis shows the amplitude of the measured signal as a function of time.
+It is from radargrams that we will do the majority of our interpretation of GPR data.
 
 
 
@@ -65,6 +65,8 @@ It is from radiograms that we will do the majority of our interpretation of GPR 
    
    GPR_physical_properties
    GPR_fundamental_principles
-   GPR_sources
+   GPR_survey_data
+   GPR_processing
+   GPR_interpretation
    GPR_concepts_and_examples
    

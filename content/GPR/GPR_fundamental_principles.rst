@@ -69,7 +69,7 @@ If the propagation material is non-magnetic, then :math:`\mu_r` = 1 and the radi
 	
 
 From this expression, we can see that radiowaves propagate more slowly in increasingly dielectric materials.
-A table showing the dielectric permittivity, conductivity and radiowave velocity for various materials can be found :ref:`here <GPR_table_velocity>`.
+A table showing the dielectric permittivity, conductivity and radiowave velocity for various materials can be found :ref:`here <GPR_table_velocity>` .
 Notice that:
 	
 	- Water saturation decreases the propagation velocity of sediments because they have high dielectric permittivities.
@@ -266,16 +266,93 @@ In this case, Snell's law can be expressed as:
 
 Just like in refraction seismology, radiowaves can undergo critical refraction.
 This occurs when the incident angle :math:`\theta_1` is such that the refracted wave propagates along the interface at velocity :math:`V_2`; ultimately leading to a head wave.
-The critical angle is given by:
+The critical angle (:math:`\theta_c`) is given by:
 
 .. math::
-	\textrm{sin} \theta_c = \frac{V_2}{V_1}
+	\textrm{sin} \theta_c = \frac{V_1}{V_2}
+
+
+Once again, we can see that critical refraction only occurs when :math:`V_1 < V_2`.
+Additionally the propagation direction of the head wave is characterized by :math:`\theta_c`.
 
 
 
 
-Example: Radargram for a Layered Earth
-======================================
+Example: Signal Paths for a 2-Layer Earth (:math:`V_1 < V_2`)
+=============================================================
+
+.. figure:: images_new/GPR_wave_paths_diagram.png
+		:align: right
+		:figwidth: 45%
+
+                Radiowaves signals measured by a receiver for a 2-layer Earth where :math:`V_1 < V_2`.
+
+Now that we understand the background theory, let's put it all together.
+At :math:`t` = 0 s, the source (Tx) generates a pulse of radio waves.
+As we can see on the right, there are many paths in which radiowaves can take in order to reach the receiver (Rx).
+The propagation velocities, reflections and refractions can all be explained using the equations found above.
+Let us now try and explain the nature of each ray path.
+
+**Path 1: Direct Air Wave**
+
+This was travels through the air in a direct line from the transmitter to the receiver.
+Recall that in the air, radiowaves propagate roughly at the speed of light (:math:`c = 3.00 \times 10^8` m/s).
+As a result, the direct air wave is **always** the first signal measured by the receiver.
+The time it takes this wave to reach the receiver is given by:
+
+.. math::
+	t_{air} = \frac{d}{c}
+
+
+**Path 2: Direct Ground Wave**
+
+This wave travels along the surface interface at velocity :math:`V_1`.
+Like the air wave, the ground wave also takes a direct path.
+Because :math:`V_1 < c`, the ground wave arrives later than the air wave.
+The time it takes for the ground wave to reach the receiver is given by:
+
+.. math::
+	t_{ground} = \frac{d}{V_1}
+
+
+**Path 3: Reflected Wave**
+
+The reflected wave travels through medium 1 at velocity :math:`V_1`.
+Because it takes a longer path than the direct ground wave, it arrives later.
+The time it takes for the reflected wave to reach the receiver is given by:
+
+.. math::
+	t_{ref} = \frac{\sqrt{d^2 + 4h^2}}{V_1}
+
+
+**Path 4: Critically Refracted Wave**
+
+If :math:`V_1 < V_2`, there will be a critical refraction at the interface between :math:`V_1` and :math:`V_2`.
+While the radiowave signal propagates along the interface, it travels at velocity :math:`V_2`.
+In general, the time it takes for this wave to reach the receiver is given by:
+
+.. math::
+	t_c = \frac{d}{V_2} + \textrm{Constant}
+
+
+It is important to note several things about the critically refracted wave:
+
+	- If the distance :math:`d` is too small, the receiver does not measured the head wave. Therefore, the signal from this wave path is only seen if the transmitter is at sufficient distance.
+	- At locations sufficiently close to the transmitter, the direct ground wave and reflected wave may arrive first because their travel distances are shorter.
+	- At sufficient distances, the critically refracted wave will arrive first.
+
+
+**Path 5: Critically Refracted at Surface**
+
+Because :math:`V_1 < c`, reflected waves can be critically refracted at the surface.
+While this wave propagates along the surface interface, it will have velocity :math:`c`.
+In general, the time it takes for this wave to reach the receiver is given by:
+
+.. math::
+	t_c = \frac{d}{c} + \textrm{Constant}
+
+
+Like the previously mentioned critically refracted wave, this wave may also be measured before or after other waves, depending on the problem geometries and the velocities of each medium.
 
 
 
