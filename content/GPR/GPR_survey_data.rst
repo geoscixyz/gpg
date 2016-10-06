@@ -18,13 +18,10 @@ On this page you will learn about:
 	- The source signal
 
 
-Common Survey Geometries
-========================
 
-Introduction
 
 Common Offset Survey
---------------------
+====================
 
 	.. figure:: images_new/GPR_common_offset.png
 		:align: right
@@ -44,7 +41,8 @@ Examples of this can be seen below.
 
 
 
-**Example: Buried Compact Object**
+Buried Compact Object
+---------------------
 
 
 Below we see a radargram for a zero-offset survey, which shows an obvious hyperbola.
@@ -90,13 +88,46 @@ This may come in handy when a portion of the hyperbola is obstructed by other si
 Also note that once :math:`V` is determined, the definition of :math:`t_0` can be used to determine the depth of the object.
 
 
-**Example: Dipping Layers**
+
+
+Dipping Layers
+--------------
+
+So far we have only considered interfaces which are approximately horizontal.
+However, the subsurface may consist of dipping layers.
+This can lead to challenges when attempting to interpret reflections in the data.
+
+For a zero-offset survey, we can see that the reflected signal returns at an angle.
+This is because the reflection happens perpendicular to the surface of the interface in this case.
+As a result, the two-way travel time does not correspond to the depth of the interface.
+Instead, it corresponds to the minimum travel distance.
+If we assume the reflected signal gives us the vertical distance to the interface, we will **under-estimate** the dip of the interface.
+
+.. figure:: images_new/GPR_dipping_layer.png
+		:align: center
+		:figwidth: 85%
+	
+		Reflections from a dipping layer for a common-offset survey.
+
+
+
+**Migration Correction**
+
+The true dip of the interface can be recovered using circular arcs.
+To apply the correction (assuming you have obtained the velocity of the top-layer from the direct ground wave or other means):
+
+1) Obtain the distance from the two-way travel time of the reflection. Assume this represents the vertical distance to the interface. Doing so will give you the dashed line shown in the figure above.
+
+2) For each Tx-Rx position, draw and arc centered at this location, which passes through the under-estimated vertical distance point (found on the dashed line).
+
+3) The true dipping interface is created by drawing a line which intersects all of the arcs at only a single point (black line).
+
 
 
 
 
 Common Midpoint Survey
-----------------------
+======================
 
         .. figure:: images_new/GPR_common_midpoint.png
 		:align: right
@@ -144,7 +175,7 @@ And once :math:`V` is determined, the definition of :math:`t_0` can be used to o
 
 
 Transillumination Survey
-------------------------
+========================
 
 When performing a transillumination GPR survey, multiple transmitters and receivers are placed on either side of an region of interest.
 There are many applications for transillumination surveys, some of which are mentionned here.
@@ -165,6 +196,8 @@ This represents a non-invasive approach for determining internal structures.
 
 
 
+
+
 .. sidebar:: Wavelet Example
 
 	.. figure:: images_new/GPR_wavelet_example.png
@@ -178,7 +211,6 @@ This represents a non-invasive approach for determining internal structures.
 		:figwidth: 100%
 			
 		Band of frequencies for a particular wavelet.
-
 
 Source Signal
 =============
@@ -230,9 +262,11 @@ As we can see from the figure below, the "wave envelope" is longer for wavelets 
 
                 
 
-
 Survey Resolution and Probing Distance
---------------------------------------
+======================================
+
+The pulse width, and thus the frequency content contained within the GPR signal, is a very important aspect of planning a GPR survey.
+Here, we will show that there is a compromise between the resolution of the radargram and the penetration depth of the signal.
 
 
 .. sidebar:: Radargrams at Several Resolutions (Underground tunnels)
@@ -253,7 +287,9 @@ Survey Resolution and Probing Distance
 		Low resolution radargram (200 MHz).
 
 
-The pulse width, and thus the frequency content contained within the GPR signal, is a very important aspect of planning a GPR survey.
-Here, we will show that there is a compromise between the resolution of the radargram and the penetration depth of the signal.
+Resolution
+----------
+
+
 
 
