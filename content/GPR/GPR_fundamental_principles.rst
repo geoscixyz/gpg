@@ -278,8 +278,8 @@ Additionally the propagation direction of the head wave is characterized by :mat
 
 
 
-Example: Signal Paths for a 2-Layer Earth (:math:`V_1 < V_2`)
-=============================================================
+Example: Signal Paths for a 2-Layer Earth
+=========================================
 
 .. figure:: images_new/GPR_wave_paths_diagram.png
 		:align: right
@@ -291,17 +291,30 @@ Now that we understand the background theory, let's put it all together.
 At :math:`t` = 0 s, the source (Tx) generates a pulse of radio waves.
 As we can see on the right, there are many paths in which radiowaves can take in order to reach the receiver (Rx).
 The propagation velocities, reflections and refractions can all be explained using the equations found above.
+On the right, we have an example of a radargram, which shows the returning signal at increasing distances :math:`x` from the source.
 Let us now try and explain the nature of each ray path.
 
 **Path 1: Direct Air Wave**
 
+
+.. figure:: images_new/GPR_radargram_2layer_example.png
+		:align: right
+		:figwidth: 45%
+
+                Radargram for a 2-layer Earth.
+               
+               
 This was travels through the air in a direct line from the transmitter to the receiver.
 Recall that in the air, radiowaves propagate roughly at the speed of light (:math:`c = 3.00 \times 10^8` m/s).
 As a result, the direct air wave is **always** the first signal measured by the receiver.
 The time it takes this wave to reach the receiver is given by:
 
 .. math::
-	t_{air} = \frac{d}{c}
+	t_{air} = \frac{x}{c}
+
+
+The direct wave is shown in **red** on the radargram.
+According to the above equation, the velocity of the air wave is 1 divided by the slope of this line.
 
 
 **Path 2: Direct Ground Wave**
@@ -312,7 +325,10 @@ Because :math:`V_1 < c`, the ground wave arrives later than the air wave.
 The time it takes for the ground wave to reach the receiver is given by:
 
 .. math::
-	t_{ground} = \frac{d}{V_1}
+	t_{ground} = \frac{x}{V_1}
+
+The direct ground wave is shown in **pink**.
+Like the air wave, the direct ground wave velocity can also be obtained from the slope of the line.
 
 
 **Path 3: Reflected Wave**
@@ -322,7 +338,14 @@ Because it takes a longer path than the direct ground wave, it arrives later.
 The time it takes for the reflected wave to reach the receiver is given by:
 
 .. math::
-	t_{ref} = \frac{\sqrt{d^2 + 4h^2}}{V_1}
+	t_{ref} = \frac{\sqrt{x^2 + 4h^2}}{V_1}
+
+
+The reflected wave is shown in **green**.
+Unlike direct waves, the arrival time for the reflected wave is hyperbolic, which makes it distinguishable from other signals.
+After sufficient distances (:math:`h \ll x`), the previous equation becomes approximately linear.
+This portion of the curve can be used to estimate the velocity of the top-most layer.
+Notice how the slope of the direct ground wave and reflected wave are parallel.
 
 
 **Path 4: Critically Refracted Wave**
@@ -332,7 +355,7 @@ While the radiowave signal propagates along the interface, it travels at velocit
 In general, the time it takes for this wave to reach the receiver is given by:
 
 .. math::
-	t_c = \frac{d}{V_2} + \textrm{Constant}
+	t_c = \frac{x}{V_2} + \textrm{Constant}
 
 
 It is important to note several things about the critically refracted wave:
@@ -342,6 +365,11 @@ It is important to note several things about the critically refracted wave:
 	- At sufficient distances, the critically refracted wave will arrive first.
 
 
+Notice that the arrival time for the critically refracted wave is also linear.
+As a result, the critical wave signal could be used to determine the propagation velocity of the lower layer.
+In this radargram example, we cannot easily see the critically refracted wave.
+
+
 **Path 5: Critically Refracted at Surface**
 
 Because :math:`V_1 < c`, reflected waves can be critically refracted at the surface.
@@ -349,10 +377,17 @@ While this wave propagates along the surface interface, it will have velocity :m
 In general, the time it takes for this wave to reach the receiver is given by:
 
 .. math::
-	t_c = \frac{d}{c} + \textrm{Constant}
+	t_c = \frac{x}{c} + \textrm{Constant}
 
 
 Like the previously mentioned critically refracted wave, this wave may also be measured before or after other waves, depending on the problem geometries and the velocities of each medium.
+
+
+
+
+
+
+
 
 
 
