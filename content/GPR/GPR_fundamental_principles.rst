@@ -5,7 +5,7 @@ Basic Principles
 
 Here, we present the fundamental principles which govern ground penetrating radar (GPR) signals.
 As we mentionned earlier, the source of the GPR system sends a pulse of high-frequency electromagnetic waves (radiowaves) into the Earth.
-And as these radiowaves propagate through the Earth, they are distorted due to the Earth's electromagnetic properties (:math:`\sigma , \; \mu` and :math:`\varepsilon`).
+And as these radiowaves propagate through the Earth, they are distorted due to the distribution of subsurface electromagnetic properties (:math:`\sigma , \; \mu` and :math:`\varepsilon`).
 
 For radiowaves which are propagating through a homogeneous medium, the associated electric and magnetic fields behave according to the wave equation:
 
@@ -30,7 +30,9 @@ This is illustrated in the figure below.
 The reflection, transmission and refraction of radiowaves depends on the electromagnetic properties defining each side of the interface as well as the incident angle of the incoming radiowave signal.
 
 For the purposes of GPR, the Earth may be thought of as a set of homogeneous regions separated by interfaces.
-Using signals measured by the receivers, the goal of GPR is to define these interfaces and thus gain information about structures under the Earth.
+Using signals measured by the receivers, the goal of GPR is to define these interfaces and thus gain information about structures under the Earth's; which can be naturally occurring or man-made.
+
+
 
 .. figure:: images_new/GPR_schematic_example.jpg
 		:align: center
@@ -225,6 +227,17 @@ This can be summarized as follows:
 	- If the returning signal (reflected wave) does not show a reverse in polarity, :math:`R>0` and thus :math:`\varepsilon_1 > \varepsilon_2`
 
 
+Reflection at Conductive Object Boundaries
+==========================================
+
+Many compact objects relevant to GPR applications (buried pipes, landmines, etc...) are highly conductive.
+For highly conductive objects, the reflection and transmission of radiowaves cannot be characterized by the dielectric permittivities.
+Instead, we must consider the electrical conductivity of the object.
+
+From the general equation for propagation velocity, we see that as :math:`\sigma \rightarrow \infty`, the propagation velocity goes to zero.
+Thus radiowaves cannot propagate through extremely conductive objects.
+Because of this, when radiowaves reach the interface between the Earth and a highly conductive object, the wave is completely reflected.
+This occurs regardless of the incident angle.
 
 
 Refraction of Radiowaves
@@ -274,6 +287,7 @@ The critical angle (:math:`\theta_c`) is given by:
 
 Once again, we can see that critical refraction only occurs when :math:`V_1 < V_2`.
 Additionally the propagation direction of the head wave is characterized by :math:`\theta_c`.
+
 
 
 

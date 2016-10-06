@@ -14,7 +14,7 @@ Ground Penetrating Radar
 
 Ground penetrating radar (GPR) is an electromagnetic method used for very near surface exploration; i.e. depths on the order of a few meters.
 It is sometimes referred to as echo-sounding.
-GPR exploits contrasts in the Earth's electromagnetic properties in order to define the physical boundaries of shallow structures.
+GPR exploits contrasts in electromagnetic properties in order to define the physical boundaries of shallow structures (both natural and man-made).
 Physical properties important to GPR include: dielectric permittivity, electrical conductivity and magnetic permeability.
 Ground penetrating radar is used for a variety of applications.
 These include:
@@ -37,7 +37,7 @@ These include:
 
 During GPR surveys, a source (:math:`Tx`) is used to send a pulse of high-frequency electromagnetic waves (radiowaves) into the ground.
 As the radiowaves propagate through the Earth, they are distorted as a result of the Earth's electromagnetic properties.
-At boundaries where the Earth's electromagnetic properties change abruptly, radiowave signals may undergo transmission, reflection and/or refraction.
+At boundaries where the subsurface electromagnetic properties change abruptly, radiowave signals may undergo transmission, reflection and/or refraction.
 Because of this, much of the understanding of seismic methods can be applied to ground penetrating radar.
 
 .. figure:: images_new/GPR_radargram_example.jpg
