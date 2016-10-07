@@ -79,11 +79,8 @@ Notice that:
 
 
 
-
-
-
-Attenuation, Skin Depth and Probing Distance
-============================================
+Attenuation
+===========
 
 Attenuation defines the continuous loss of amplitude a wave experiences as it propagates through a particular medium.
 The rate at which the amplitude decreases is referred as the attenuation constant.
@@ -104,11 +101,12 @@ In general, the attenuation constant can be expressed as:
 
 
 
+.. _GPR_fundamental_principles_skin_depth:
 
 
-**Skin Depth**
 
-
+Skin Depth
+==========
 
 
 Skin depth (:math:`\delta`) defines the propagation distance at which the amplitude of an electromagnetic wave is reduced by a factor of :math:`1/e`; i.e. reduced to 37\% of its original amplitude.
@@ -150,38 +148,6 @@ We can see from the two previous expressions that:
 An example of the attenuation of electromagnetic waves in air versus inside a conductive is shown on the right.
 We can see that in the air, the wave experienced little to no loss in amplitude as it propagate.
 In the conductive material however, the amplitude of the wave decreases noticeably as it propagates.
-
-
-**Probing Distance**
-
-.. figure:: images_new/GPR_probing_distance_2.jpg
-	:align: right
-	:figwidth: 50%
-
-	Proving distances for GPR signals for various materials.
-
-Probing distance characterizes the maximum depth in which GPR signals can be used to obtain information about subsurface structures.
-The probing distance depends on the skin depth of the material.
-For materials which have a larger skin depths, radiowaves can penetrate deeper into the ground and still provide a sufficiently strong returning signal.
-
-.. figure:: images_new/GPR_probing_distance.jpg
-	:align: right
-	:figwidth: 50%
-		
-	Probing distance for various materials from 1 MHz through 1 GHz.
-		
-		
-On the right we see figures which show probing distances for various materials.
-Using these figures, we can see that:
-
-	- As the frequency increases, the skin depth decreases and the probing distance decreases.
-	- Frequencies used for GPR are :math:`\sim` 1 GHz. Therefore, the probing distances for GPR signals are generally quite shallow.
-	- It is very difficult for GPR signals to penetrate concrete and asphalt, as the probing distance is only about 1 m for GPR.
-	- Water saturated sedimentary rocks, such as clays and sandstones, have much lower probing distances than dry sedimentary rocks.
-	- Rocks saturated with sea water have much smaller probing distances than rocks saturated with fresh water.
-	- The probing distances for hard rocks (granites, limestones, schists...) is quite large.
-
-
 
 
 
@@ -289,6 +255,11 @@ Once again, we can see that critical refraction only occurs when :math:`V_1 < V_
 Additionally the propagation direction of the head wave is characterized by :math:`\theta_c`.
 
 
+
+Scattering
+==========
+
+**Needs Content**
 
 
 

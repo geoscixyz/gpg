@@ -4,20 +4,16 @@ Survey and Data
 ***************
 
 Here, we discuss the various survey geometries used in GPR and some of their applications.
-Radargrams will be used to show the data we expect to see in each case.
+In addition, we discuss important aspects of choosing an appropriate source signal.
 
-Depending of the goal or the GPR survey, certain configurations may be more effective.
+On this page, you will learn about:
 
-
-Furthermore, interpretation of GPR data is made significantly easier by using an appropriate survey configuration.
-
-On this page you will learn about:
-
-	- Commonly used GPR survey configurations and their applications
-	- The data collected by GPR surveys
-	- The source signal
-
-
+	- Common offset, common midpoint and transillumination surveys.
+	- Where these surveys are most effective.
+	- What is the source signal used in GPR.
+	- The properties of the source signal and how it impacts the effectiveness of GPR surveys.
+	- The resolution of GPR surveys.
+	- The probing distance of GPR surveys.
 
 
 Common Offset Survey
@@ -226,7 +222,7 @@ Before we move forward let us define a few terms:
 	- **Wavelet**: A wave-like oscillation of short duration.
 	- **Bandwidth**: The range of frequencies present in the source wavelet.
 	- **Pulse Width**: The time duration of the wavelet.
-	- **Spatial Length**: The physical length of the wavelet signal while it propagates through a medium.
+	- **Spatial Length (wavelength)**: The physical length of the wavelet signal while it propagates through a medium.
 	- **Central Frequency**: The central frequency corresponding to the bandwidth. In general, the central frequency defines the propagation of the GPR signal.
 
 
@@ -251,7 +247,7 @@ This results in pulse widths around 1 ns to 10 ns.
 In order to create a wavelet with a longer pulse width, only frequencies near the central frequency are needed.
 However, a large range of frequencies (or bandwidth) is needed to create wavelets that have short pulse widths.
 
-**3) The spatial length increases as the pulse with increases**.
+**3) The spatial length (wavelength) increases as the pulse with increases**.
 As we can see from the figure below, the "wave envelope" is longer for wavelets that have a long pulse width.
 
 
@@ -266,7 +262,7 @@ Survey Resolution and Probing Distance
 ======================================
 
 The pulse width, and thus the frequency content contained within the GPR signal, is a very important aspect of planning a GPR survey.
-Here, we will show that there is a compromise between the resolution of the radargram and the penetration depth of the signal.
+The concepts of resolution and probing distance are discussed here.
 
 
 .. sidebar:: Radargrams at Several Resolutions (Underground tunnels)
@@ -289,6 +285,97 @@ Here, we will show that there is a compromise between the resolution of the rada
 
 Resolution
 ----------
+
+Resolution defines the smallest features which can be distinguished in a GPR survey.
+The resolution for GPR surveys depends on the pulse width of the signal.
+
+**Detecting Layers**
+
+In order for a layer to be detected using a GPR survey, it must be sufficiently thick compared to the wavelength of the incomming wavelet.
+As a general rule, the layer must be at least 1/4 the wavelength of the incoming wavelet to be detectable.
+Thus:
+
+.. math::
+	L > \frac{c \Delta t}{4 \sqrt{\varepsilon}} = \frac{c}{4 f_c \sqrt{\varepsilon}}
+
+where :math:`L` is the layer thickness, :math:`c/\sqrt{\varepsilon}` is the propagation velocity for radiowaves, :math:`\Delta t` is the pulse width and :math:`f_c` is the central frequency.
+As we can see from this expression, higher frequencies/shorter pulse widths are required to observe smaller features.
+This means higher frequencies/shorter pulse widths are used for higher resolution surveys.
+
+**Choosing an Optimum Resolution**
+
+On the right we see several radargrams corresponding to data collected over two buried tunnels (hyperbolic features).
+Surrounding the tunnels are rocks with a texture on the scale of 30 cm.
+Each radargram was collected using at a different frequency.
+
+At 50 MHz, the resolution is too low to recognize the structure of the background rocks.
+As a result, the hyperbolic signature of the two tunnels is easily recognizable.
+At 100 MHz, we start to see finer details in the radiogram.
+The hyperbolic signature of the tunnels are easily visible and well-defined within the radargram.
+When examining the radargram at 200 MHz, the hyperbolic signatures from the tunnels are no longer easily visible.
+This is because the wavelength of the signal is very short and treats the textures of background structures as interfaces.
+
+We can see from this example that by using higher frequencies/shorter pulses, we can obtain information about smaller features.
+However, we should not choose a pulse length which is unnecessarily small, is important features cannot be differentiated from clutter.
+
+
+
+
+Probing Distance
+----------------
+
+
+.. figure:: images_new/GPR_probing_distance_2.jpg
+	:align: right
+	:figwidth: 50%
+
+	Proving distances for GPR signals for various materials.
+
+Probing distance characterizes the maximum depth in which GPR signals can be used to obtain information about subsurface structures.
+As a general rule, the probing distance (:math:`D`) is approximated 3 :ref:`skin depths <GPR_fundamental_principles_skin_depth>` .
+Thus:
+
+.. math::
+	D = 3 \delta \approx
+	\begin{cases} 3 \sqrt{\dfrac{2\rho}{\omega \mu}} \; \; &\textrm{for} \;\; \omega \varepsilon \ll \sigma \\ 
+	6\rho \sqrt{\dfrac{\varepsilon}{\mu}}  \; \; &\textrm{for} \;\; \omega \varepsilon \gg \sigma \end{cases}
+	
+
+
+For materials which have larger skin depths, radiowaves can penetrate deeper into the ground and still provide a sufficiently strong returning signal.
+
+
+.. figure:: images_new/GPR_probing_distance.jpg
+	:align: right
+	:figwidth: 50%
+		
+	Probing distance for various materials from 1 MHz through 1 GHz.
+		
+		
+On the right we see figures which show probing distances for various materials.
+Using these figures, we can see that:
+
+	- As the frequency increases, the skin depth decreases and the probing distance decreases.
+	- Frequencies used for GPR are :math:`\sim` 1 GHz. Therefore, the probing distances for GPR signals are generally quite shallow.
+	- It is very difficult for GPR signals to penetrate concrete and asphalt, as the probing distance is only about 1 m for GPR.
+	- Water saturated sedimentary rocks, such as clays and sandstones, have much lower probing distances than dry sedimentary rocks.
+	- Rocks saturated with sea water have much smaller probing distances than rocks saturated with fresh water.
+	- The probing distances for hard rocks (granites, limestones, schists...) is quite large.
+
+
+Probing Distance versus Resolution
+----------------------------------
+
+An important thing to note here, is that the probing distance can be increases by using a lower frequency/longer pulse width.
+However, as we saw previously, this would have the effect of decreasing the resolution of the radargram.
+Because of this, prior knowledge of the target as well as the background physical properties is very important.
+This information can be used to choose the correct operating frequency of the GPR survey.
+
+
+
+
+
+
 
 
 
