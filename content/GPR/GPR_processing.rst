@@ -3,9 +3,14 @@
 Processing
 **********
 
-Here, we discuss aspects of data processing which may be required.
+On the previous page, assumed that the GPR data 
 
 
+	- Stacking
+	- Gain
+	- Smoothing
+	- Averaging
+	- Ringing
 
 
 
