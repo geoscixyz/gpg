@@ -44,10 +44,10 @@ Because of this, much of the understanding of seismic methods can be applied to 
 		:align: right
 		:figwidth: 50%
 
-                Radargram example of two underground tunnels (parabolas). Gray-scale shows the amplitude of the returning signal.
+                Radargram example of two underground tunnels (hyperbolas). Gray-scale shows the amplitude of the returning signal.
 
 Sensors (:math:`Rx`) at the Earth's surface measure the amplitudes and travel times of the distorted radiowave signals that return to the surface.
-These data are amalgamated and represented using a radargram.
+These data are amalgamated and represented using a radargram (similar to a seismogram).
 The horizontal axis (distance) is used to represent the location of the receiver relative to the source for a particular sounding.
 The vertical axis shows the amplitude of the measured signal as a function of time.
 It is from radargrams that we will do the majority of our interpretation of GPR data.

@@ -16,6 +16,14 @@ On this page, you will learn about:
 	- The probing distance of GPR surveys.
 
 
+
+Traces and Radargrams
+=====================
+
+
+
+
+
 Common Offset Survey
 ====================
 
@@ -265,31 +273,12 @@ The pulse width, and thus the frequency content contained within the GPR signal,
 The concepts of resolution and probing distance are discussed here.
 
 
-.. sidebar:: Radargrams at Several Resolutions (Underground tunnels)
-
-	.. figure:: images_new/GPR_resolution_low.jpg
-		:align: center
-	
-		Low resolution radargram (50 MHz).
-
-	.. figure:: images_new/GPR_resolution_mid.jpg
-		:align: center
-		
-		Low resolution radargram (100 MHz).
-	
-	.. figure:: images_new/GPR_resolution_high.jpg
-		:align: center
-		
-		Low resolution radargram (200 MHz).
-
 
 Resolution
 ----------
 
 Resolution defines the smallest features which can be distinguished in a GPR survey.
 The resolution for GPR surveys depends on the pulse width of the signal.
-
-**Detecting Layers**
 
 In order for a layer to be detected using a GPR survey, it must be sufficiently thick compared to the wavelength of the incomming wavelet.
 As a general rule, the layer must be at least 1/4 the wavelength of the incoming wavelet to be detectable.
@@ -301,22 +290,6 @@ Thus:
 where :math:`L` is the layer thickness, :math:`c/\sqrt{\varepsilon}` is the propagation velocity for radiowaves, :math:`\Delta t` is the pulse width and :math:`f_c` is the central frequency.
 As we can see from this expression, higher frequencies/shorter pulse widths are required to observe smaller features.
 This means higher frequencies/shorter pulse widths are used for higher resolution surveys.
-
-**Choosing an Optimum Resolution**
-
-On the right we see several radargrams corresponding to data collected over two buried tunnels (hyperbolic features).
-Surrounding the tunnels are rocks with a texture on the scale of 30 cm.
-Each radargram was collected using at a different frequency.
-
-At 50 MHz, the resolution is too low to recognize the structure of the background rocks.
-As a result, the hyperbolic signature of the two tunnels is easily recognizable.
-At 100 MHz, we start to see finer details in the radiogram.
-The hyperbolic signature of the tunnels are easily visible and well-defined within the radargram.
-When examining the radargram at 200 MHz, the hyperbolic signatures from the tunnels are no longer easily visible.
-This is because the wavelength of the signal is very short and treats the textures of background structures as interfaces.
-
-We can see from this example that by using higher frequencies/shorter pulses, we can obtain information about smaller features.
-However, we should not choose a pulse length which is unnecessarily small, is important features cannot be differentiated from clutter.
 
 
 
@@ -337,8 +310,8 @@ Thus:
 
 .. math::
 	D = 3 \delta \approx
-	\begin{cases} 3 \sqrt{\dfrac{2\rho}{\omega \mu}} \; \; &\textrm{for} \;\; \omega \varepsilon \ll \sigma \\ 
-	6\rho \sqrt{\dfrac{\varepsilon}{\mu}}  \; \; &\textrm{for} \;\; \omega \varepsilon \gg \sigma \end{cases}
+	\begin{cases} 3 \sqrt{\dfrac{2}{\omega \mu \sigma}} \; \; &\textrm{for} \;\; \omega \varepsilon \ll \sigma \\ 
+	\frac{6}{\sigma} \sqrt{\dfrac{\varepsilon}{\mu}}  \; \; &\textrm{for} \;\; \omega \varepsilon \gg \sigma \end{cases}
 	
 
 
@@ -366,10 +339,41 @@ Using these figures, we can see that:
 Probing Distance versus Resolution
 ----------------------------------
 
-An important thing to note here, is that the probing distance can be increases by using a lower frequency/longer pulse width.
-However, as we saw previously, this would have the effect of decreasing the resolution of the radargram.
-Because of this, prior knowledge of the target as well as the background physical properties is very important.
-This information can be used to choose the correct operating frequency of the GPR survey.
+.. sidebar:: Radargrams at Several Resolutions (Underground tunnels)
+
+	.. figure:: images_new/GPR_resolution_low.jpg
+		:align: center
+	
+		Higher resolution radargram (200 MHz).
+
+	.. figure:: images_new/GPR_resolution_mid.jpg
+		:align: center
+		
+		 Medium resolution radargram (100 MHz).
+	
+	.. figure:: images_new/GPR_resolution_high.jpg
+		:align: center
+		
+		Lower resolution radargram (50 MHz).
+
+
+
+On the right we see several radargrams corresponding to data collected over two buried tunnels (hyperbolic features).
+Each radargram was collected using at a different frequency.
+
+By using a 200 MHz central frequency, we are hoping to obtain a high resolution radargram.
+However, the attenuation of radiowaves is more severe at higher frequencies.
+As a result, the GPR signal does not penetrate deep enough to image either of the tunnels.
+At 100 MHz, both tunnels become partially visible in the radargram (hyperbolic signatures).
+This is made possible because because the probing distance is larger.
+In the 50MHz radargram, both tunnels are easily recognizable.
+This is made possible because the probing distance is now large enough.
+Notice however, that the hyperbolic features in the radargram are slightly less distinct.
+
+We can see from this example that there is a compromise between resolution and probing distance.
+It is important to choose which is high enough to image sufficient small features.
+However, the probing distance of the background medium must be large enough to obtain a return signal.
+
 
 
 
