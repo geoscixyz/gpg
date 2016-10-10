@@ -175,7 +175,7 @@ And once :math:`V` is determined, the definition of :math:`t_0` can be used to o
 		:align: right
 		:figwidth: 40%
 	
-	        (A) Mine-shaft structural integrity (B) Borehole survey. (C) Concrete pillar testing.
+	        Transillumination surveys. (A) Mine-shaft structural integrity (B) Borehole survey. (C) Concrete pillar testing.
 
 
 Transillumination Survey
@@ -194,10 +194,6 @@ Although it is more expensive and time-consuming, this type of survey may be req
 
 In panel (C), a GPR transmitter and receiver are placed on opposing sides of an object; in this case, a concrete pillar.
 This represents a non-invasive approach for determining internal structures.
-
-
-
-
 
 
 
@@ -311,7 +307,7 @@ Thus:
 .. math::
 	D = 3 \delta \approx
 	\begin{cases} 3 \sqrt{\dfrac{2}{\omega \mu \sigma}} \; \; &\textrm{for} \;\; \omega \varepsilon \ll \sigma \\ 
-	\frac{6}{\sigma} \sqrt{\dfrac{\varepsilon}{\mu}}  \; \; &\textrm{for} \;\; \omega \varepsilon \gg \sigma \end{cases}
+	\dfrac{6}{\sigma} \sqrt{\dfrac{\varepsilon}{\mu}}  \; \; &\textrm{for} \;\; \omega \varepsilon \gg \sigma \end{cases}
 	
 
 
@@ -349,7 +345,7 @@ Probing Distance versus Resolution
 	.. figure:: images_new/GPR_resolution_mid.jpg
 		:align: center
 		
-		 Medium resolution radargram (100 MHz).
+		Medium resolution radargram (100 MHz).
 	
 	.. figure:: images_new/GPR_resolution_high.jpg
 		:align: center
@@ -373,12 +369,6 @@ Notice however, that the hyperbolic features in the radargram are slightly less 
 We can see from this example that there is a compromise between resolution and probing distance.
 It is important to choose which is high enough to image sufficient small features.
 However, the probing distance of the background medium must be large enough to obtain a return signal.
-
-
-
-
-
-
 
 
 
