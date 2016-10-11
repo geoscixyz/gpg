@@ -386,7 +386,7 @@ Below are some source of noise relevant to GPR and their impact.
 Much of 21st century communication is made possible with radiowaves.
 Cellular phones, radio towers and other transmitting systems all use radiowave frequencies to transmit information through the air.
 These signals can be measured by the receiver and have the potential to mask responses from desired targets.
-To limit the effects of external sources, the transmitter and receiver are refrequently protected by a sheild (as depicted in the image).
+To limit the effects of external sources, the transmitter and receiver are frequently protected by a sheild (as depicted in the image).
 
 
 **Returning Signals from Above-Ground Objects**
@@ -395,11 +395,26 @@ GPR is used to gain information about structures below the Earth.
 However, since radiowaves propagate through the air, it is possible to measure returning signals from nearby objects as well.
 This is common in urban and wooded environments where GPR signals can reflect off of buildings and trees.
 
-Below, we see an example of a radargram for a zero-offset configuration.
-Because the tree acts as a point reflector, it produces a hyperbolic signature in the radargram (see earlier).
-Using the slope on either end of the hyperbola, we find that the propagation velocity associated with this reflection is :math:`1/c`.
-As a result, this signature must correspond to an object which is above the ground.
-The same can be inferred from the wider signature for the building; which unlike the tree, is not a point reflector.
+.. figure:: images_new/GPR_noise_trees.jpg
+	:align: right
+	:figwidth: 50%
+		
+	Zero-offset radargram example containing returning signals from nearby trees.
+
+
+
+On the right, we see an example of a radargram for a zero-offset configuration.
+The survey was performed in a wooded area without using a sheild.
+Because the trees acts as point reflectors, they produce hyperbolic signatures in the radargram.
+Using the slope on either end of the hyperbola, we find that the propagation velocity associated with this reflection is :math:`1/c`; this is demonstrated with a line.
+This verifies that the signature must correspond to an object which is above the ground.
+And we can infer that signatures after 100 ns correspond to nearby trees.
+
+Below, we show the two-way travel path for reflected signals off a tree and a building.
+A diagram showing the different radargram signatures for both the tree and the building is also provided.
+Unlike the tree, the face of the building is not a point reflector.
+However, the ends of the signature corresponding to the building also have slopes which are :math:`1/c`.
+Thus, we can infer the propagation velocity.
 
 To avoid measuring signals such as these, sheilds may also be used on the transmitter and receiver.
 However, if signals from above ground objects are present in the radargram, they can be be identified for zero-offset configurations.
@@ -426,6 +441,22 @@ Instead, it becomes present over all times.
 	:figwidth: 80%
 		
 	(Left) Radargram showing ringing from a small metal wire near the surface. (Right) Ringing from two nearby objects.
+
+
+**Noise from Scattering**
+
+As we mentionned earlier, scattering is used to describe deviations in the paths of electromagnetic waves due to localized non-uniformities; which are less than 1/4 the wavelength of the radiowave signal.
+Scattering is problematic for GPR because it reduces the amplitudes of useful signals while increasing extraneous noise.
+If the Earth is made up of homogeneous units, scattering is negligible and returning GPR signals are easily visible.
+If the Earth is very inhomogeneous, the effects of scattering may produce significant extraneous noise.
+
+Below, we show a representation of data from a single Tx-Rx shot.
+On the left, scattering is negligible and the returning wavelet is easily visible.
+On the right, the returning wavelet is hard to see due to incoherent noise cause by scattering.
+
+**Needs some kind of image**
+
+
 
 
 **Reflections from Near-Surface Debris**

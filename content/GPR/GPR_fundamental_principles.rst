@@ -242,11 +242,23 @@ Additionally the propagation direction of the head wave is characterized by :mat
 Scattering
 ==========
 
+
+	
+	
 Scattering is used to describe deviations in the paths of electromagnetic waves due to localized non-uniformities; which are less than 1/4 the wavelength of the radiowave signal.
 Scattering is problematic for GPR because it reduces the amplitudes of useful signals while increasing extraneous noise.
-Rocky soils are the largest contributor to the scattering of GPR signals.
-Scattering can also be caused by large gas bubbles within layers of ice.
+Several sources of scattering are:
 
+	- Irregular surface shape of larger buried objects (below left).
+	- Rocky soils, which are a large contributor to the scattering of GPR signals (below right).
+	- Gas bubbles trapped in ice.
+	- Clutter made up of small buried objects
+
+.. figure:: images_new/GPR_scattering_examples.png
+	:align: center
+	:figwidth: 60%
+		
+	Examples of scattering. A) Scattering from irregular surface texture. B) Scattering in rocky soils.
 
 
 Wave Fronts and Ray Paths
