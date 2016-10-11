@@ -49,7 +49,9 @@ Because of this, much of the understanding of seismic methods can be applied to 
 Sensors (:math:`Rx`) at the Earth's surface measure the amplitudes and travel times of the distorted radiowave signals that return to the surface.
 These data are amalgamated and represented using a radargram (similar to a seismogram).
 The horizontal axis (distance) is used to represent the location of the receiver relative to the source for a particular sounding.
-The vertical axis shows the amplitude of the measured signal as a function of time.
+The vertical axis shows the travel times of measured signal.
+By assuming some a-priori knowledge of the radiowave velocity, the vertical axis is sometimes represented by an approximate travel distance.
+The gray-scale denotes the amplitude of the returning signal at each time and location.
 It is from radargrams that we will do the majority of our interpretation of GPR data.
 
 

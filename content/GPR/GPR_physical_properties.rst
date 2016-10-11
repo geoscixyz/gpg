@@ -23,13 +23,21 @@ We know that microwaves heat food using electromagnetic radiation, but how do th
 	:align: right
 	:figwidth: 50%
 	
-	A microwave.
+	Electromagnetic waves in a microwaves.
 
 
 Within a microwave, there is a source which generates high-frequency electromagnetic waves (f = 2.45 GHz).
 These waves move at roughly the speed of light (c = :math:`3.00 \times 10^8` m/s) and have wavelengths of about 12.2 cm.
 The walls within the microwave are made out of materials which reflects elecromagnetic waves.
 As a result, the walls are not supposed to heat up while the microwave is on.
+
+
+.. figure:: images_new/GPR_EMwaves.png
+	:align: right
+	:figwidth: 50%
+	
+	The electric and magnetic fields of an electromagnetic wave.
+
 
 All foods contain water to varying degrees.
 Water is unique from most other molecules because it is naturally polarized (carries an electric dipole moment).
@@ -43,7 +51,7 @@ For waves at 2.45 GHz, this is occuring over 2 billion times per second!
 		:align: center
 		:figwidth: 80%
 		
-		Polarization of water molecules. (A) Dis-ordered water molecules. B) Water molecules rotate to align with E-field. C) Water molecules polarized under E-field.
+		Polarization of water molecules. (A) Disordered water molecules. B) Water molecules rotate to align with E-field. C) Water molecules polarized under E-field.
 
 
 

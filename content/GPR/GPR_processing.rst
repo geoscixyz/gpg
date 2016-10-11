@@ -5,21 +5,7 @@ Processing
 
 So far, we have used radargrams to represent the data collect by GPR sensors.
 In order to create these images, some processing is required.
-Here, we discuss how raw GPR data are used to create radargrams.
-We will also talk about some source of noise which must be accounted for when attempting to generate radargrams.
-
-
-
-
-	- Noise 
-	- Stacking
-	- Gain
-	- Smoothing
-	- Averaging
-	- Ringing
-
-
-
+Here, we discuss how raw GPR data are processed before they are represented using radargrams.
 
 
 
@@ -63,22 +49,14 @@ This is not necessary for common offset surveys, but may be important in common 
 Stacking
 ========
 
-Generally speaking, stacking refers to the amalgamation of separate traces, in order to reduce noise and improve interpretation.
+GPR signals travel at velocities close to the speed of light (c = :math:`3.00 \times 10^8` m/s).
+As a result, the total travel times for GPR signals are on the order of 100s of nanoseconds.
+Because of this, it is easy to repeat the same GPR shot many times over a short interval.
 
-
-Stacking (Averaging) Individual Readings
-----------------------------------------
-
-The stacking of individual readings is used to improve the signal to noise ratio by reducing incoherent noise.
-In order to apply this type of stacking:
-
-1) Multiple traces are obtained for the same Tx-Rx location (i.e. multiple readings).
-
-2) The traces are then averaged.
-
-What results from this process is a clearer picture of the GPR signals we are intending to investigate.
-By averaging the data in this fashion, we ultimately reduce the coherent noise relative to the signal.
+Stacking describes the process of averaging a set of repeated GPR shots in order to reduce noise and improve interpretation.
+Essentially, stacking acts as a way of improving the signal to noise ratio for GPR data collected at a certain location.
 An example of this is demonstrated below.
+As we can see, the more readings we stack, the clearer we see coherent GPR signals.
 
 
 .. figure:: images_new/GPR_stacking_times.png
@@ -90,22 +68,16 @@ An example of this is demonstrated below.
 
 
 
-Stacking (Averaging) Neighbouring Traces
-----------------------------------------
-
-
-
-
-
-
-
 
 Smoothing
 =========
 
-Smoothing is another technique used to improve the interpretation of field collected data.
-This technique has the advantage over stacking individual readings because it requires the collection of less data.
-
+Smoothing is another technique used to improve the interpretation of field collected GPR data.
+In GPR systems, the data sampling rate is such that the returning wavelet signals should be reasonably smooth and visible.
+Random noise on the other hand is completely incoherent.
+When smoothing is applied to the data, it has the effect of reducing the amplitude of incoherent noise while retaining naturally smooth signals in the data.
+One example of smoothing techniques is the moving average (shown below).
+We can see that as more data points in time are used for the average, the more easily recognizable the wavelet signal is.
 
 
 

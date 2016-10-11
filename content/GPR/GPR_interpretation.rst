@@ -3,11 +3,7 @@
 Interpretation
 **************
 
-Here, we discuss the various types of survey configuations used in GPR.
-
-	- Noise sources
-	- If noise is cause by a tree or something, we can recognize it because the associate propagation velocity would be the speed of light.
-	- Show some neat examples
+Here, we look at some real examples of GPR surveys and try to interpret the radargram data.
 
 
 
@@ -15,3 +11,11 @@ Here, we discuss the various types of survey configuations used in GPR.
 
 
 
+
+
+GPR Survey in a Wooded Area
+===========================
+
+
+For this example, a zero-offset GPR survey was performed in a wooded area.
+The goal of this survey was to examine the 

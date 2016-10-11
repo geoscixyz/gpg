@@ -4,26 +4,9 @@ Basic Principles
 ****************
 
 Here, we present the fundamental principles which govern ground penetrating radar (GPR) signals.
+As you will see, many of the basic fundaments which are used to describe seismic methods can also be applied to GPR.
 As we mentionned earlier, the source of the GPR system sends a pulse of high-frequency electromagnetic waves (radiowaves) into the Earth.
 And as these radiowaves propagate through the Earth, they are distorted due to the distribution of subsurface electromagnetic properties (:math:`\sigma , \; \mu` and :math:`\varepsilon`).
-
-For radiowaves which are propagating through a homogeneous medium, the associated electric and magnetic fields behave according to the wave equation:
-
-.. math::
-	\begin{split}
-	\nabla^2 \vec E + k^2 \vec E &= 0 \\
-	\nabla^2 \vec H + k^2 \vec H &= 0
-	\end{split}
-
-
-where the properties of the wave (velocity, attenuation, wavelength etc...) are defined by the wavenumber (:math:`k`):
-
-.. math::
-	k = \sqrt{-i \omega \mu \sigma + \omega^2 \mu \varepsilon}
-
-
-Notice that :math:`k` depends on the physical properties of the medium.
-Therefore, so do the properties of the wave.
 
 When radiowaves come into contact with an interface (a boundary defined by an abrupt change in the Earth's electromagnetic properties), energy associated with the incoming radiowaves can be reflected, transmitted and/or refracted.
 This is illustrated in the figure below.
@@ -57,7 +40,8 @@ Therefore, electromagnetic waves in matter travel slower than the speed of light
 
 GPR signals are characterized as being high-frequency.
 Thus in many cases (and for this course), it is safe to assume that :math:`\sigma \ll \omega \varepsilon`; especially if the Earth is resistive.
-As a result, the velocity of radiowaves can be simplified to:
+This is known as the **wave regime approximation**.
+Using the approximation, the velocity of radiowaves can be simplified to:
 
 .. math::
 	V = \frac{1}{\sqrt{\mu \varepsilon}} = \frac{c}{\sqrt{\mu_r \varepsilon_r}}
@@ -123,14 +107,14 @@ By definition, the skin depth is just the reciprocal of the attenuation constant
 	\delta = \frac{1}{\alpha}
 
 
-In conductive environments (:math:`\omega \varepsilon \ll \sigma`), a good approximation for  the skin depth is given by:
+In conductive environments (:math:`\omega \varepsilon \ll \sigma`), the **quasi-static approximation** provides a good estimate of the skin depth:
 
 .. math::
 	\delta \approx \sqrt{\frac{2}{\omega \mu \sigma}} \sim 1262 \sqrt{\frac{1}{\omega \sigma}}
 
 The second equation offers a simpler approximation if the Earth is non-magnetic (i.e. :math:`\mu = \mu_0`).
 
-For materials in which :math:`\omega \varepsilon \gg \sigma`, the skin depth is approximated by:
+For materials in which :math:`\omega \varepsilon \gg \sigma` (wave regime), the skin depth is approximated by:
 
 
 .. math::
@@ -258,9 +242,10 @@ Additionally the propagation direction of the head wave is characterized by :mat
 Scattering
 ==========
 
-Scattering is used to describe deviations in the paths of electromagnetic waves due to localized non-uniformities.
-For the interfaces of larger-scale features, the deviation of the incoming wave path is explained through reflection and refraction.
-
+Scattering is used to describe deviations in the paths of electromagnetic waves due to localized non-uniformities; which are less than 1/4 the wavelength of the radiowave signal.
+Scattering is problematic for GPR because it reduces the amplitudes of useful signals while increasing extraneous noise.
+Rocky soils are the largest contributor to the scattering of GPR signals.
+Scattering can also be caused by large gas bubbles within layers of ice.
 
 
 

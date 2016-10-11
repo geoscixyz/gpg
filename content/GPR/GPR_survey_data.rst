@@ -4,7 +4,8 @@ Survey and Data
 ***************
 
 Here, we discuss the various survey geometries used in GPR and some of their applications.
-In addition, we discuss important aspects of choosing an appropriate source signal.
+Information about the GPR source signal and its impact on planning surveys is presented.
+We also discuss sources of noise which may contaminate GPR data.
 
 On this page, you will learn about:
 
@@ -14,14 +15,7 @@ On this page, you will learn about:
 	- The properties of the source signal and how it impacts the effectiveness of GPR surveys.
 	- The resolution of GPR surveys.
 	- The probing distance of GPR surveys.
-
-
-
-Traces and Radargrams
-=====================
-
-
-
+	- Sources of noise and their impact on GPR surveys.
 
 
 Common Offset Survey
@@ -109,7 +103,7 @@ If we assume the reflected signal gives us the vertical distance to the interfac
 
 .. figure:: images_new/GPR_dipping_layer.png
 		:align: center
-		:figwidth: 85%
+		:figwidth: 70%
 	
 		Reflections from a dipping layer for a common-offset survey.
 
@@ -369,6 +363,85 @@ Notice however, that the hyperbolic features in the radargram are slightly less 
 We can see from this example that there is a compromise between resolution and probing distance.
 It is important to choose which is high enough to image sufficient small features.
 However, the probing distance of the background medium must be large enough to obtain a return signal.
+
+
+GPR and Sources of Noise
+========================
+
+Noise is used to describe any measured signal which does not correspond to signals from desired targets.
+When the sources of noise are sufficiently large, it can be difficult to identify and classify signals in radargrams.
+That is why it is necessary to take steps which minimize the impact of external noise sources on the data.
+Below are some source of noise relevant to GPR and their impact.
+
+
+**Radiowaves from Other Sources**
+
+.. figure:: images_new/GPR_noise_sheild.jpg
+	:align: right
+	:figwidth: 50%
+		
+	Some external sources of noise related to GPR system, which can be reduced through sheilding.
+
+
+Much of 21st century communication is made possible with radiowaves.
+Cellular phones, radio towers and other transmitting systems all use radiowave frequencies to transmit information through the air.
+These signals can be measured by the receiver and have the potential to mask responses from desired targets.
+To limit the effects of external sources, the transmitter and receiver are refrequently protected by a sheild (as depicted in the image).
+
+
+**Returning Signals from Above-Ground Objects**
+
+GPR is used to gain information about structures below the Earth.
+However, since radiowaves propagate through the air, it is possible to measure returning signals from nearby objects as well.
+This is common in urban and wooded environments where GPR signals can reflect off of buildings and trees.
+
+Below, we see an example of a radargram for a zero-offset configuration.
+Because the tree acts as a point reflector, it produces a hyperbolic signature in the radargram (see earlier).
+Using the slope on either end of the hyperbola, we find that the propagation velocity associated with this reflection is :math:`1/c`.
+As a result, this signature must correspond to an object which is above the ground.
+The same can be inferred from the wider signature for the building; which unlike the tree, is not a point reflector.
+
+To avoid measuring signals such as these, sheilds may also be used on the transmitter and receiver.
+However, if signals from above ground objects are present in the radargram, they can be be identified for zero-offset configurations.
+
+
+.. figure:: images_new/GPR_above_ground_objects.png
+	:align: center
+	:figwidth: 100%
+		
+	Zero-offset radargram example for returning signals from a tree and building wall.
+
+
+**Ringing**
+
+
+Ringing occurs when radiowave signals reverberate in regular fashion.
+This is created when GPR signals repeatedly bounce within or between nearby objects.
+In response to ringing, the returning signal from a particular interface(s) is not 'sharp' in the radargram.
+Instead, it becomes present over all times.
+
+
+.. figure:: images_new/GPR_wire_surface.png
+	:align: center
+	:figwidth: 80%
+		
+	(Left) Radargram showing ringing from a small metal wire near the surface. (Right) Ringing from two nearby objects.
+
+
+**Reflections from Near-Surface Debris**
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
