@@ -4,22 +4,7 @@ Interpretation
 **************
 
 Here, we look at some real examples of GPR surveys and try to interpret the radargram data.
-
-
-
-
-
-
-
-
-Good Interpretation Questions
-=============================
-
-
-For a given radargram, here are some questions which may help your interpretation:
-
-	- What are the latest features recorded in the radargram and what are their two-way travel times?
-	- What is the two-way travel time of the earlier useful signal?
+Although we are focussing on the interpretation of data, it will be contained within the 7-step framework.
 
 
 
@@ -76,7 +61,7 @@ Because these two units have such different dielectric permittivities, we expect
 
 **Survey**: GPR profiles were collected along the lengths of mine shafts using a common offset configuration.
 
-**Data**: Radargrams along several profiles.
+**Data**: Radargrams along several profiles within mine shafts.
 
 **Processing**: By assuming a propagation velocity of 0.13 m/ns (approximately known for potash), the two-way travel time was converted an apparent depth/distance.
 
@@ -101,18 +86,57 @@ Ultimately, we were successful in locating the water and determining its source 
 
 
 
+Burial Site (Alabama)
+=====================
+
+**Setup**: Archaelogical study of historic burial grounds in Alabama. Attempting to locate burial sites.
+
+**Physical Properties** In this case, the contrast in physical properties is between the host rock and items buried along with human remains.
+We expect that objects buried in the ground will act as point reflectors for the GPR signal.
+
+**Survey**: Zero-offset survey along a 20 m profile.
+
+**Data**: Radargram along a 20 m profile.
+
+**Processing**: By using the hyperbolic signatures in the data, the host layer velocity was determined.
+This was used to obtain the apparent depth.
+
+
+
+.. figure:: images_new/GPR_interp_burial_site.jpg
+		:align: center
+		:figwidth: 80%
+
+                Radargram hyperbolic signatures associated with indigenous burials.
+
+
+**Interpretation**: Yellow arrows indicate very distinct point reflections (hyperbolas), probably associated with human burials. 
+Less distinct hyperbolic reflections are indicated by red arrows.
+The apparent depth indicates that burials are between 0.75 m and 1.5 m.
+Dashed blue lines are used to indicate horizontal and sloping reflectors, probably bedrock.
+Smaller reflections near the surface are likely to be caused by tree roots.
+
+**Synthesis**: Because of the nature of the site, subsurface testing was not used to confirm the interpretation.
+However, the interpretation is supported by surface indications (grave markers and depressions).
+
+
+
+
 Mapping Permafrost
 ==================
 
-**Setup**: We would like to map the thickness and stability of a permafrost layer.
+**Setup**: We would like to map the thickness and stability of a permafrost layer and identify key features.
 
-**Physical Properties**: 
+**Physical Properties**: Permafrost has a relative permittivity of roughly 4-8 whereas the saturated fluvial sediments below have a much higher relative permittivity.
+We expect this contrast in dielectric permittivity to provide a large reflection which can be measured by the GPR system.
+We expect to see scattering where methane gas bubbles are percolating up through the ground.
 
-**Survey**: 
+**Survey**: Another common offset survey.
 
-**Data**: 
+**Data**: Radargram over a 400 m profile.
 
-**Processing**: 
+**Processing**: By assuming a propagation velocity of the speed of light, the two-way travel time was converted an apparent depth.
+
 
 
 .. figure:: images_new/GPR_interp_permafrost.png
@@ -120,4 +144,22 @@ Mapping Permafrost
 		:figwidth: 100%
 
 
-**Interpretation**:               
+**Interpretation**: The topmost layer is interpreted as being comprised of frozen silts followed by frozen gravels and sand.
+Because rocky soils result in scattering of radiowave signals, data corresponding to the signal from the frozen gravel is noisy.
+At about 400 ns, we clearly see a well-defined lower boundary for the permafrost (mostly on the right).
+One of the most interesting features is found in the middle.
+We see a change in character of GPR signal where the boundary should be defined.
+This has been interpreted as an area where methane gas is bubbling to the surface.
+
+
+**Synthesis**: The features in this radargram are much noisier and hard to interpret than previous examples.
+Boreholes were used to confirm the interpretation.
+Although penetration depth may have been an important aspect of planning the survey (due to scattering), a higher frequency survey may have provided more details near the surface.
+
+
+
+
+
+
+
+
