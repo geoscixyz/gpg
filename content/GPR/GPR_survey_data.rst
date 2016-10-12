@@ -264,11 +264,11 @@ The concepts of resolution and probing distance are discussed here.
 
 
 
-Resolution
-----------
+Vertical Resolution for Layers
+------------------------------
 
 Resolution defines the smallest features which can be distinguished in a GPR survey.
-The resolution for GPR surveys depends on the pulse width of the signal.
+The vertical resolution for GPR surveys depends on the pulse width of the signal.
 
 In order for a layer to be detected using a GPR survey, it must be sufficiently thick compared to the wavelength of the incomming wavelet.
 As a general rule, the layer must be at least 1/4 the wavelength of the incoming wavelet to be detectable.
@@ -282,6 +282,25 @@ As we can see from this expression, higher frequencies/shorter pulse widths are 
 This means higher frequencies/shorter pulse widths are used for higher resolution surveys.
 
 
+Horizontal Resolution for Objects
+---------------------------------
+
+.. figure:: images_new/GPR_resolution_horizontal.png
+		:align: right
+		:figwidth: 35%
+		
+		
+When the resolution of the survey is sufficient, returning signals from separate burried objects are distinguishable.
+However, if buried objects are too close to one another, their respective returning GPR signals can be hard to differentiate.
+In general, we can distinguish the signals from two nearby objects so long as:
+
+.. math::
+	L > \sqrt{\dfrac{V \, d}{2 f_c}}
+
+
+where :math:`V` is the propagation velocity, :math:`f_c` is the central frequency for the wavelet, :math:`d` is the depth to the objects and :math:`L` is the separation distance from both objects.
+We can see from this equation, that by reducing the pulse length, we can see objects that are closer together.
+Additionally, it is harder to distinguish objects which are further away from the transmitters and receivers.
 
 
 Probing Distance

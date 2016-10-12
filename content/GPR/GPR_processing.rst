@@ -8,6 +8,32 @@ In order to create these images, some processing is required.
 Here, we discuss how raw GPR data are processed before they are represented using radargrams.
 
 
+Travel Time to Depth Conversion
+===============================
+
+The data measured by the GPR system is the two-way travel time.
+However, interpretation can be made easier if the information can be represented in terms of depth.
+Because of this, an apparent depth axis is frequently added to the right side of the radargram.
+
+For to convert the two-way travel time to apparent depth, we much choose a propagation velocity.
+This may be acquired from the initial radargram, from a-priori information, or sometimes left as the speed of light (:math:`c = 3.00 \times 10^8` m/s).
+The conversion between each vertical axis is given by:
+
+.. math::
+	d_a = \frac{V t}{2}
+
+
+where :math:`d_a` is the apparent depth, :math:`V` is the propagation velocity and :math:`t` is the two-way travel time.
+Below, we see an example where the propagation velocity is :math:`V = 0.13 m/ns`.
+
+.. figure:: images_new/GPR_travel_time_2_depth.png
+	:align: center
+	:figwidth: 100%
+	
+	Example of a radargram with apparent depth on the right axis. This assumes a propagation velocity of 0.13 m/ns.
+
+
+
 
 
 Gain Correction
