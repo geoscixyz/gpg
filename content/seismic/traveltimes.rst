@@ -17,7 +17,14 @@ Consider a layer of thickness h and velocity :math:`v_1` overlying a uniform hal
 
 .. <<editorial comment>> This diagram is ok. If redrawn, put a source symbol (*) and a dashed line for the critically refracted ray.
 
-The travel time curves for these ray paths are shown below, where the horizontal axis represents distance from the source along the flat surface of the earth, :math:`x_{crit}` is called the critical distance, and :math:`x_{cross}` the crossover distance. The critical distance is the closest surface point to the source at which the refracted ray can be observed. The crossover distance is the surface point at which the direct and refracted rays arrive at the same time. At offsets from the source greater than the crossover distance the refracted ray will be the first signal to arrive from the source. You can explore these concepts interactively using the `3pt Science seismic refraction app <https://www.3ptscience.com/app/SeismicRefraction>`__. Instructions for using the app can be found :ref:`here <seismic_apps>`.
+The travel time curves for these ray paths are shown below, where the horizontal axis represents distance from the source along the flat surface of the earth, :math:`x_{crit}` is called the critical distance, and :math:`x_{cross}` the crossover distance. The critical distance is the closest surface point to the source at which the refracted ray can be observed. The crossover distance is the surface point at which the direct and refracted rays arrive at the same time. At offsets from the source greater than the crossover distance the refracted ray will be the first signal to arrive from the source. You can explore these concepts interactively using the `3pt Science seismic refraction app <https://www.3ptscience.com/app/SeismicRefraction>`__. Instructions for using the app can be found :ref:`here <seismic_apps>`. The following video illustrates the propagation of headwaves and how they relate to the crossover distance
+
+.. raw:: html
+
+    <div style="margin-top:10px; margin-bottom:20px;" align="center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5_q5RuDCe1A?rel=0" frameborder="0" allowfullscreen></iframe>
+    </iframe>
+    </div>
 
 .. figure:: ./images/timetravels.gif
 	:align: center
