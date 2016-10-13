@@ -5,7 +5,7 @@ Physical Properties
 
 
 Unlike the survey methods discussed previously, signals corresponding to ground penetrating radar (GPR) depend on a multitude of physical properties.
-The most important physical property to GPR is the :ref:`dielectric permittivity<physical_properties_dielectric_permittivity>` (:math:`\varepsilon`), as it greatly influences the velocity, attenuation, reflection, refraction and transmission of radiowaves.
+The most important physical property to GPR is the :ref:`dielectric permittivity <physical_properties_dielectric_permittivity>` (:math:`\varepsilon`), as it greatly influences the velocity, attenuation, reflection, refraction and transmission of radiowaves.
 These concepts will be presented in the following section.
 In addition to the dielectric permittivity, the propagation of radiowaves through the Earth may depend significantly on the :ref:`electrical conductivity<physical_properties_conductivity>` (:math:`\sigma`); provided the electrical conductivity of the Earth is sufficiently large.
 Radiowaves will also reflect off of very conductive objects buried in the Earth.
@@ -44,7 +44,7 @@ Water is unique from most other molecules because it is naturally polarized (car
 This property of water molecules makes them align with electric fields very easily; giving them a :ref:`high dielectric permittivity <GPR_table_velocity>` (:math:`\varepsilon_r` = 80).
 When electromagnetic waves come into contact with the water molecules in the food, the water molecules physically re-orient with the oscillation of the wave.
 This is because of the electric field which the wave carries.
-For waves at 2.45 GHz, this is occuring over 2 billion times per second!
+For waves at 2.45 GHz, this is occurring over 2 billion times per second!
 
 
 .. figure:: images_new/GPR_water_molecules.png
@@ -68,7 +68,7 @@ So what have we learned from this example?
 
 	- Very conductive materials will reflect incoming electromagnetic waves.
 	- Materials containing water will become polarized from electromagnetic waves.
-	- Some materials do not absorb electromagnetic radiation eaily.
+	- Some materials do not absorb electromagnetic radiation easily.
 	- The operating frequency of the source has a great impact on the response of materials.
 
 

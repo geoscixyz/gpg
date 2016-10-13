@@ -4,7 +4,7 @@ Interpretation
 **************
 
 Here, we look at some real examples of GPR surveys and try to interpret the radargram data.
-Although we are focussing on the interpretation of data, it will be contained within the 7-step framework.
+Although we are focusing on the interpretation of data, it will be contained within the 7-step framework.
 
 
 
@@ -56,7 +56,7 @@ As a result, our interpretation of the data was correct and the GPR survey was s
 Underground Potash Mine
 =======================
 
-**Setup**: Water is a serious problem for potash mines, as it can desolve the rock and decrease structural integrity. The goal of this survey was to map the location of intruding water and locate its source.
+**Setup**: Water is a serious problem for potash mines, as it can dissolve the rock and decrease structural integrity. The goal of this survey was to map the location of intruding water and locate its source.
 
 **Physical Properties** In general, anhydrite minerals such as potash have relative permittivities :math:`\varepsilon_r \sim 5`.
 On the other hand, water as a very high dielectric permittivity (:math:`\varepsilon = 80`).
@@ -92,7 +92,7 @@ Ultimately, we were successful in locating the water and determining its source 
 Burial Site (Alabama)
 =====================
 
-**Setup**: Archaelogical study of historic burial grounds in Alabama. Attempting to locate burial sites.
+**Setup**: Archaeological study of historic burial grounds in Alabama. Attempting to locate burial sites.
 
 **Physical Properties** In this case, the contrast in physical properties is between the host rock and items buried along with human remains.
 We expect that objects buried in the ground will act as point reflectors for the GPR signal.

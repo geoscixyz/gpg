@@ -8,7 +8,7 @@ Ground Penetrating Radar
 		:align: right
 		:figwidth: 25%
 
-                Archaelogical GPR survey in Jordan. `Image source <https://commons.wikimedia.org/wiki/File:Radarsurvey.jpg>`__ . Licensed under `CC BY 3.0`_.
+                Archaeological GPR survey in Jordan. `Image source <https://commons.wikimedia.org/wiki/File:Radarsurvey.jpg>`__ . Licensed under `CC BY 3.0`_.
 
 
 
@@ -23,7 +23,7 @@ These include:
 	- Mapping the thickness of peat-bogs and other sedimentary layers
 	- Obtaining the depth to groundwater or permafrost
 	- Locating buried infrastructure such as irrigation pipes, tunnels and electrical wires
-	- Finding landmines and unexploded ordnance
+	- Finding land mines and unexploded ordnance
 
 
 
@@ -70,5 +70,4 @@ It is from radargrams that we will do the majority of our interpretation of GPR 
    GPR_survey_data
    GPR_processing
    GPR_interpretation
-   GPR_concepts_and_examples
    

@@ -176,7 +176,7 @@ Transillumination Survey
 ========================
 
 When performing a transillumination GPR survey, multiple transmitters and receivers are placed on either side of an region of interest.
-There are many applications for transillumination surveys, some of which are mentionned here.
+There are many applications for transillumination surveys, some of which are mentioned here.
 
 In panel (A), a transillumination survey is being used to assess the structural integrity between two mine shafts.
 By using GPR, we can determine if there are void spaces between the mine shafts or any potential planes of weakness.
@@ -210,7 +210,7 @@ Source Signal
 =============
 
 
-As we have already discussed, the source attena sends a pulse of radiowaves into the ground.
+As we have already discussed, the source antenna sends a pulse of radiowaves into the ground.
 This pulse however, is not made up entirely of radiowaves of a single frequency.
 Instead, a set of sinusoidal waves of different frequencies are used create what is called a wavelet.
 As a result, the wavelet contains information over a range of frequencies (generally between :math:`10^6` and :math:`10^9` Hz).
@@ -227,7 +227,7 @@ Before we move forward let us define a few terms:
 GPR Signals and Bandwidth
 -------------------------
 
-The figure below can be used to examine the relationships between the 5 aforementionned terms.
+The figure below can be used to examine the relationships between the 5 aforementioned terms.
 As we can see, the bandwidth and central frequency for the GPR signal depends on the pulse width of the wavelet.
 Here are a few important relationships to keep in mind:
 
@@ -270,7 +270,7 @@ Vertical Resolution for Layers
 Resolution defines the smallest features which can be distinguished in a GPR survey.
 The vertical resolution for GPR surveys depends on the pulse width of the signal.
 
-In order for a layer to be detected using a GPR survey, it must be sufficiently thick compared to the wavelength of the incomming wavelet.
+In order for a layer to be detected using a GPR survey, it must be sufficiently thick compared to the wavelength of the incoming wavelet.
 As a general rule, the layer must be at least 1/4 the wavelength of the incoming wavelet to be detectable.
 Thus:
 
@@ -290,7 +290,7 @@ Horizontal Resolution for Objects
 		:figwidth: 35%
 		
 		
-When the resolution of the survey is sufficient, returning signals from separate burried objects are distinguishable.
+When the resolution of the survey is sufficient, returning signals from separate buried objects are distinguishable.
 However, if buried objects are too close to one another, their respective returning GPR signals can be hard to differentiate.
 In general, we can distinguish the signals from two nearby objects so long as:
 
@@ -399,13 +399,13 @@ Below are some source of noise relevant to GPR and their impact.
 	:align: right
 	:figwidth: 50%
 		
-	Some external sources of noise related to GPR system, which can be reduced through sheilding.
+	Some external sources of noise related to GPR system, which can be reduced through shielding.
 
 
 Much of 21st century communication is made possible with radiowaves.
 Cellular phones, radio towers and other transmitting systems all use radiowave frequencies to transmit information through the air.
 These signals can be measured by the receiver and have the potential to mask responses from desired targets.
-To limit the effects of external sources, the transmitter and receiver are frequently protected by a sheild (as depicted in the image).
+To limit the effects of external sources, the transmitter and receiver are frequently protected by a shield (as depicted in the image).
 
 
 **Returning Signals from Above-Ground Objects**
@@ -423,7 +423,7 @@ This is common in urban and wooded environments where GPR signals can reflect of
 
 
 On the right, we see an example of a radargram for a zero-offset configuration.
-The survey was performed in a wooded area without using a sheild.
+The survey was performed in a wooded area without using a shield.
 Because the trees acts as point reflectors, they produce hyperbolic signatures in the radargram.
 Using the slope on either end of the hyperbola, we find that the propagation velocity associated with this reflection is :math:`1/c`; this is demonstrated with a line.
 This verifies that the signature must correspond to an object which is above the ground.
@@ -435,7 +435,7 @@ Unlike the tree, the face of the building is not a point reflector.
 However, the ends of the signature corresponding to the building also have slopes which are :math:`1/c`.
 Thus, we can infer the propagation velocity.
 
-To avoid measuring signals such as these, sheilds may also be used on the transmitter and receiver.
+To avoid measuring signals such as these, shields may also be used on the transmitter and receiver.
 However, if signals from above ground objects are present in the radargram, they can be be identified for zero-offset configurations.
 
 
@@ -464,7 +464,7 @@ Instead, it becomes present over all times.
 
 **Noise from Scattering**
 
-As we mentionned earlier, scattering is used to describe deviations in the paths of electromagnetic waves due to localized non-uniformities; which are less than 1/4 the wavelength of the radiowave signal.
+As we mentioned earlier, scattering is used to describe deviations in the paths of electromagnetic waves due to localized non-uniformities; which are less than 1/4 the wavelength of the radiowave signal.
 Scattering is problematic for GPR because it reduces the amplitudes of useful signals while increasing extraneous noise.
 If the Earth is made up of homogeneous units, scattering is negligible and returning GPR signals are easily visible.
 If the Earth is very inhomogeneous, the effects of scattering may produce significant extraneous noise.

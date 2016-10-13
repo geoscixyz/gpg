@@ -4,8 +4,8 @@ Basic Principles
 ****************
 
 Here, we present the fundamental principles which govern ground penetrating radar (GPR) signals.
-As you will see, many of the basic fundaments which are used to describe seismic methods can also be applied to GPR.
-As we mentionned earlier, the source of the GPR system sends a pulse of high-frequency electromagnetic waves (radiowaves) into the Earth.
+As you will see, many of the basic fundamentals which are used to describe seismic methods can also be applied to GPR.
+As we mentioned earlier, the source of the GPR system sends a pulse of high-frequency electromagnetic waves (radiowaves) into the Earth.
 And as these radiowaves propagate through the Earth, they are distorted due to the distribution of subsurface electromagnetic properties (:math:`\sigma , \; \mu` and :math:`\varepsilon`).
 
 When radiowaves come into contact with an interface (a boundary defined by an abrupt change in the Earth's electromagnetic properties), energy associated with the incoming radiowaves can be reflected, transmitted and/or refracted.
@@ -68,7 +68,7 @@ Attenuation
 
 Attenuation defines the continuous loss of amplitude a wave experiences as it propagates through a particular medium.
 The rate at which the amplitude decreases is referred as the attenuation constant.
-For an electromagnetic wave that has travelled a distance :math:`z`, the attenuation constant (:math:`\alpha`) is given by:
+For an electromagnetic wave that has traveled a distance :math:`z`, the attenuation constant (:math:`\alpha`) is given by:
 
 .. math::
 	\frac{| \mathbf{A} |}{ | \mathbf{A_0} |} = e^{-\alpha z}
@@ -100,7 +100,7 @@ By definition, the skin depth is just the reciprocal of the attenuation constant
 		:align: right
 		:figwidth: 40%
 
-                Figure comparing the attenuation of radiowaves in air versus in a conductiv medium.
+                Figure comparing the attenuation of radiowaves in air versus in a conductive medium.
 
 
 .. math::
@@ -124,7 +124,7 @@ For materials in which :math:`\omega \varepsilon \gg \sigma` (wave regime), the 
 We can see from the two previous expressions that:
 
 	- The skin depth is smaller if the frequency of the radiowaves is higher.
-	- The skin depth is larger in materials with higher resistivities.
+	- The skin depth is larger in materials with lower conductivities.
 	- The skin depth is larger is materials with higher dielectric permittivities.
 
 
@@ -147,7 +147,7 @@ Reflection and Transmission of Radiowaves
 		Reflection of an incident wave with a reverse in polarity (:math:`\varepsilon_1 <\varepsilon_2`). `Link to source image <https://commons.wikimedia.org/wiki/File:Partial_transmittance.gif>`__
 
 
-When a radiowave reaches an interface, some of its energy is reflected and some of its energy is transmitted accross the interface.
+When a radiowave reaches an interface, some of its energy is reflected and some of its energy is transmitted across the interface.
 This results in both a reflected and a transmitted wave.
 
 The amplitude of the reflected wave proportional to that of the incident wave is defined by the reflection coefficient (:math:`R`).
@@ -161,11 +161,11 @@ Assuming the radiowave arrives at an angle perpendicular to the interface, the r
 where :math:`\varepsilon_1` is the dielectric permittivity of the medium associated with the incident and reflected waves.
 
 The reflection coefficient can be either positive or negative and has values between :math:`-1 < R < 1`.
-The magnitude of :math:`R` determines how much of the incidend wave is reflected.
+The magnitude of :math:`R` determines how much of the incident wave is reflected.
 It should be noted that:
 
 	- If :math:`\varepsilon_1` and :math:`\varepsilon_2` are similar, most of the incident wave is transmitted through the interface.
-	- If one of the dielectric permittivities accross the interface is much smaller than the other, most of the incident wave is reflected. This case can prove problematic if you at attempting to gain information about structures below this interface.
+	- If one of the dielectric permittivities across the interface is much smaller than the other, most of the incident wave is reflected. This case can prove problematic if you at attempting to gain information about structures below this interface.
 
 
 The sign of the reflection coefficient determines whether the reflected wave experiences a reverse in polarity.
@@ -223,7 +223,7 @@ In this case, Snell's law can be expressed as:
 	:align: right
 	:figwidth: 50%
 		
-	Critical refraction at interface and the resulting headwave.
+	Critical refraction at interface and the resulting head-wave.
 
 
 Just like in refraction seismology, radiowaves can undergo critical refraction.
@@ -267,7 +267,7 @@ Wave Fronts and Ray Paths
 Like in seismology, it is very important to understand the difference between wave-fronts and ray paths.
 One way to thing about it as follows:
 
-	- **Wave-front**: The physical location of the radiowaves as they propagate throught the Earth.
+	- **Wave-front**: The physical location of the radiowaves as they propagate through the Earth.
 	- **Ray path**: A particular path which a portion of the wave-front can take in order to reach a particular location.
 
 Thus the wave-front represents the actual set of radiowaves, and the ray path is used to represent paths which signals can take to reach a receiver location.
@@ -287,7 +287,7 @@ Geometric Spreading
                 Wave-front at time :math:`\Delta t`. Shows geometric spreading for radiowaves in the ground and in the air.
 
 
-We have seen how radiowave signals lose their amplitude through attenutaion.
+We have seen how radiowave signals lose their amplitude through attenuation.
 They also lose energy due to geometric spreading.
 This makes sense given that the energy of the wave-front is now spread over a larger area.
 For geometric spreading, the loss in amplitude of the radiowaves is represented by:
