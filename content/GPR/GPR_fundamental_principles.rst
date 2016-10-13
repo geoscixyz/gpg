@@ -145,7 +145,7 @@ Reflection and Transmission of Radiowaves
 		:align: center
 		:figwidth: 100%
 	
-		Reflection of an incident wave with a reverse in polarity (:math:`\varepsilon_1 <\varepsilon_2`). `Link to source image <https://commons.wikimedia.org/wiki/File:Partial_transmittance.gif>`__
+		Reflection of an incident wave with a reverse in polarity (:math:`\varepsilon_1 <\varepsilon_2`). `Link to source image <https://commons.wikimedia.org/wiki/File:Partial_transmittance.gif>`__ .
 
 
 When a radiowave reaches an interface, some of it is reflected and some of it is transmitted across the interface.

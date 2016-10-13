@@ -8,7 +8,7 @@ Ground Penetrating Radar
 		:align: right
 		:figwidth: 25%
 
-                Archaeological GPR survey in Jordan. `Image source <https://commons.wikimedia.org/wiki/File:Radarsurvey.jpg>`__ . Licensed under `CC BY 3.0`_.
+                Archaeological GPR survey in Jordan. `Image source <https://commons.wikimedia.org/wiki/File:Radarsurvey.jpg>`__ .
 
 
 
