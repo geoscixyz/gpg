@@ -66,6 +66,7 @@ It is from radargrams that we will do the majority of our interpretation of GPR 
  
    
    GPR_physical_properties
+   table_velocity
    GPR_fundamental_principles
    GPR_survey_data
    GPR_processing
