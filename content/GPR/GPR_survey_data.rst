@@ -1,4 +1,4 @@
-.. _GPR_survey_data
+.. _GPR_survey_data:
 
 Survey and Data
 ***************
@@ -32,7 +32,7 @@ In common offset survey, the distance between the transmitter and a single recei
 Data are collected each time the transmitter-receiver pair are moved to a new position.
 In some cases, the transmitter and receiver are placed at a zero-offset; otherwise known as a coincident source and receiver.
 
-Common-offset surveys are effective for locating the depths of near-horizontal interfaces.
+Common-offset surveys are effective for locating the depths of approximately horizontal interfaces.
 In addition, zero-offset surveys are very affective a locating pipes, tunnels and compact buried objects; as they generate hyperbolic signatures in radargram data.
 Examples of this can be seen below.
 
@@ -44,7 +44,7 @@ Buried Compact Object
 
 
 Below we see a radargram for a zero-offset survey, which shows an obvious hyperbola.
-For this example, the hyperbola corresponds to a buried pipe.
+For this example, the hyperbola corresponds to a buried pipe aligned going into the page.
 
 
 .. figure:: images_new/GPR_example_buried_object.png
@@ -78,7 +78,7 @@ The minimum travel time (when the source and receiver are directly above) is giv
 Using this to re-write the previous expression, we see that:
 
 .. math::
-	V = \frac{4x^2}{t^2 - t_0^2}
+	V = \sqrt{\dfrac{4x^2}{t^2 - t_0^2}}
 
 
 Therefore by determining :math:`t_0`, **any point** on the hyperbola can be used to determine the propagation velocity of the top layer.
@@ -158,7 +158,7 @@ where :math:`d` is the thickness of the top layer and :math:`x` is the distance 
 Once again by defining :math:`t_0 = 2d/V`, the top-layer velocity is given by:
 
 .. math::
-	V = \frac{4x^2}{t^2 - t_0^2}
+	V = \sqrt{ \dfrac{4x^2}{t^2 - t_0^2} }
 
 
 Thus, **any point** on the parabola can be used to determine the top-layer velocity from a common mid-point survey.
@@ -206,6 +206,8 @@ This represents a non-invasive approach for determining internal structures.
 			
 		Band of frequencies for a particular wavelet.
 
+
+
 Source Signal
 =============
 
@@ -228,7 +230,7 @@ GPR Signals and Bandwidth
 -------------------------
 
 The figure below can be used to examine the relationships between the 5 aforementioned terms.
-As we can see, the bandwidth and central frequency for the GPR signal depends on the pulse width of the wavelet.
+As we can see, the bandwidth and central frequency for the GPR signal depend on the pulse width of the wavelet.
 Here are a few important relationships to keep in mind:
 
 **1)** For a pulse width :math:`\Delta t`, the central frequency :math:`f_c` is given by:
@@ -275,9 +277,9 @@ As a general rule, the layer must be at least 1/4 the wavelength of the incoming
 Thus:
 
 .. math::
-	L > \frac{c \Delta t}{4 \sqrt{\varepsilon}} = \frac{c}{4 f_c \sqrt{\varepsilon}}
+	L >  \frac{c}{4 f_c \sqrt{\varepsilon}} = \frac{c \Delta t}{4 \sqrt{\varepsilon}}
 
-where :math:`L` is the layer thickness, :math:`c/\sqrt{\varepsilon}` is the propagation velocity for radiowaves, :math:`\Delta t` is the pulse width and :math:`f_c` is the central frequency.
+where :math:`L` is the layer thickness, :math:`c/\!\sqrt{\varepsilon}` is the propagation velocity for radiowaves, :math:`\Delta t` is the pulse width and :math:`f_c` is the central frequency.
 As we can see from this expression, higher frequencies/shorter pulse widths are required to observe smaller features.
 This means higher frequencies/shorter pulse widths are used for higher resolution surveys.
 
@@ -314,7 +316,7 @@ Probing Distance
 	Proving distances for GPR signals for various materials.
 
 Probing distance characterizes the maximum depth in which GPR signals can be used to obtain information about subsurface structures.
-As a general rule, the probing distance (:math:`D`) is approximated 3 :ref:`skin depths <GPR_fundamental_principles_skin_depth>` .
+As a general rule, the probing distance (:math:`D`) is approximated 3 :ref:`skin depths <GPR_fundamental_principles_skin_depth>`.
 Thus:
 
 .. math::
@@ -350,7 +352,7 @@ Probing Distance versus Resolution
 
 .. sidebar:: Radargrams at Several Resolutions (Underground tunnels)
 
-	.. figure:: images_new/GPR_resolution_low.jpg
+	.. figure:: images_new/GPR_resolution_high.jpg
 		:align: center
 	
 		Higher resolution radargram (200 MHz).
@@ -360,7 +362,7 @@ Probing Distance versus Resolution
 		
 		Medium resolution radargram (100 MHz).
 	
-	.. figure:: images_new/GPR_resolution_high.jpg
+	.. figure:: images_new/GPR_resolution_low.jpg
 		:align: center
 		
 		Lower resolution radargram (50 MHz).
@@ -368,7 +370,7 @@ Probing Distance versus Resolution
 
 
 On the right we see several radargrams corresponding to data collected over two buried tunnels (hyperbolic features).
-Each radargram was collected using at a different frequency.
+Each radargram was collected using a different frequency.
 
 By using a 200 MHz central frequency, we are hoping to obtain a high resolution radargram.
 However, the attenuation of radiowaves is more severe at higher frequencies.
@@ -380,7 +382,7 @@ This is made possible because the probing distance is now large enough.
 Notice however, that the hyperbolic features in the radargram are slightly less distinct.
 
 We can see from this example that there is a compromise between resolution and probing distance.
-It is important to choose which is high enough to image sufficient small features.
+It is important to choose a frequency which is high enough to image sufficient small features.
 However, the probing distance of the background medium must be large enough to obtain a return signal.
 
 
@@ -390,7 +392,7 @@ GPR and Sources of Noise
 Noise is used to describe any measured signal which does not correspond to signals from desired targets.
 When the sources of noise are sufficiently large, it can be difficult to identify and classify signals in radargrams.
 That is why it is necessary to take steps which minimize the impact of external noise sources on the data.
-Below are some source of noise relevant to GPR and their impact.
+Below are some sources of noise relevant to GPR and their impact.
 
 
 **Radiowaves from Other Sources**
@@ -436,7 +438,7 @@ However, the ends of the signature corresponding to the building also have slope
 Thus, we can infer the propagation velocity.
 
 To avoid measuring signals such as these, shields may also be used on the transmitter and receiver.
-However, if signals from above ground objects are present in the radargram, they can be be identified for zero-offset configurations.
+However, if signals from above ground objects are present in the radargram, they can be be identified for zero-offset configurations by their slope.
 
 
 .. figure:: images_new/GPR_above_ground_objects.png
@@ -469,16 +471,25 @@ Scattering is problematic for GPR because it reduces the amplitudes of useful si
 If the Earth is made up of homogeneous units, scattering is negligible and returning GPR signals are easily visible.
 If the Earth is very inhomogeneous, the effects of scattering may produce significant extraneous noise.
 
+.. figure:: images_new/GPR_scattering_examples.png
+	:align: center
+	:figwidth: 60%
+		
+	Examples of scattering. A) Scattering from irregular surface texture. B) Scattering in rocky soils.
+
+
+
 Below, we show a representation of data from a single Tx-Rx shot.
 On the left, scattering is negligible and the returning wavelet is easily visible.
 On the right, the returning wavelet is hard to see due to incoherent noise cause by scattering.
-
-**Needs some kind of image**
-
+In addition, we see that the amplitude of the returning wavelet signal is less, as scattering resulted in a loss in amplitude.
 
 
-
-**Reflections from Near-Surface Debris**
+.. figure:: images_new/GPR_scattering_return_signal.png
+	:align: center
+	:figwidth: 70%
+	
+	Return signals with different levels of scattering noise (Left) Minimal noise. (Right) Significant scattering noise. 
 
 
 

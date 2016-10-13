@@ -12,6 +12,42 @@ Things to Keep in Mind
 ======================
 
 
+When attempting to interpret radargram data, here are a few things to keep in mind.
+Try to consider these things when examining the radargram below.
+
+
+**Regarding the Survey**
+
+	- What is the Tx-Rx separation distance?
+	- What is the operating frequency and wavelet pulse width?
+	- What do you know about the local physical properties? high/low conductivity? high/low dielectric permittivity?
+	- Is the ground dry or saturated (permittivity)? Does the ground contain features which may scatter the signal?
+	- Having considered the previous statements, what do you think the resolution and probing distance are?
+
+**Regarding the Data**
+
+	- When is the earliest useful signal you measure? When is the latest?
+	- Why can't you see anything after the latest signal? Attenuation? Strong reflector?
+	- Can you infer a layer velocity and turn the travel time axis into an apparent distance axis?
+	- Is there a reverse in polarity of the wavelet signal? What does that tell you about :math:`\varepsilon_1` and :math:`\varepsilon_2` for an interface?
+
+**Recognizing Features**
+
+	- Do you notice any hyperbolic features? Indicates point reflector for zero-offset. Indicates layer for common midpoint.
+	- For hyperbolic signatures (or signatures from other discrete shapes), what does the slope tell you about the propagation velocity of the medium it's in?
+	- Based on the slope, is the object above ground (noise), or below ground (potential target)?
+	- Are there any linear features (zero-offset)?
+	- Do linear features indicate a flat or dipping interface? Is the a method you can use to get the dip?
+	- Are you able to get signals from anything below an obvious reflector? What does that say about :math:`\varepsilon_1` and :math:`\varepsilon_2`?
+	- Can slopes and hyperbolas be used to obtain layer velocities?
+
+
+
+.. figure:: images_new/GPR_interp_check_list.png
+		:align: center
+		:figwidth: 100%
+
+                Zero-offset radargram example.
 
 
 Mapping Peat Thickness (Ireland)

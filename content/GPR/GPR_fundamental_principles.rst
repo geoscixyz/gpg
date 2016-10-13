@@ -8,9 +8,9 @@ As you will see, many of the basic fundamentals which are used to describe seism
 As we mentioned earlier, the source of the GPR system sends a pulse of high-frequency electromagnetic waves (radiowaves) into the Earth.
 And as these radiowaves propagate through the Earth, they are distorted due to the distribution of subsurface electromagnetic properties (:math:`\sigma , \; \mu` and :math:`\varepsilon`).
 
-When radiowaves come into contact with an interface (a boundary defined by an abrupt change in the Earth's electromagnetic properties), energy associated with the incoming radiowaves can be reflected, transmitted and/or refracted.
+When radiowaves come into contact with an interface (a boundary defined by an abrupt change in the Earth's electromagnetic properties), portions of the incoming radiowaves can be reflected, transmitted and/or refracted.
 This is illustrated in the figure below.
-The reflection, transmission and refraction of radiowaves depends on the electromagnetic properties defining each side of the interface as well as the incident angle of the incoming radiowave signal.
+The reflection, transmission and refraction of the radiowaves depends on the electromagnetic properties defining each side of the interface as well as the incident angle of the incoming radiowave signal.
 
 For the purposes of GPR, the Earth may be thought of as a set of homogeneous regions separated by interfaces.
 Using signals measured by the receivers, the goal of GPR is to define these interfaces and thus gain information about structures under the Earth's; which can be naturally occurring or man-made.
@@ -27,15 +27,15 @@ Using signals measured by the receivers, the goal of GPR is to define these inte
 Wave Velocity
 =============
 
-Radiowaves corresponding to GPR signals propagate through different materials at different speeds.
-The velocity of radiowaves depends on the physical properties of the medium.
+Radiowaves propagate through different materials at different speeds.
+The velocity of the radiowaves depends on the physical properties of the medium.
 In general, the velocity of radiowaves through a homogeneous material is given by:
 
 .. math::
 	V = \sqrt{\frac{2}{\mu \varepsilon}} \Bigg [ 1 + \Bigg ( 1 + \bigg ( \frac{\sigma}{\omega \varepsilon} \bigg )^2 \, \Bigg )^{1/2} \; \Bigg ]^{-1/2}
 
 
-This equation can be used to show that the velocity of electromagnetic waves is largest in free-space (i.e. when :math:`\sigma = 0`, :math:`\mu = \mu_0` and :math:`\varepsilon = \varepsilon_0`).
+This equation can be used to show that the radiowave velocity is largest in free-space (i.e. when :math:`\sigma = 0`, :math:`\mu = \mu_0` and :math:`\varepsilon = \varepsilon_0`).
 Therefore, electromagnetic waves in matter travel slower than the speed of light (c = 3.00 :math:`\times 10^8` m/s).
 
 GPR signals are characterized as being high-frequency.
@@ -54,7 +54,8 @@ If the propagation material is non-magnetic, then :math:`\mu_r` = 1 and the radi
 	V = \frac{c}{\sqrt{\varepsilon_r}}
 	
 
-From this expression, we can see that radiowaves propagate more slowly in increasingly dielectric materials.
+This expression is considered a good approximation when considering GPR signals.
+From the previous expression, we can see that radiowaves propagate more slowly in increasingly dielectric materials.
 A table showing the dielectric permittivity, conductivity and radiowave velocity for various materials can be found :ref:`here <GPR_table_velocity>` .
 Notice that:
 	
@@ -67,8 +68,8 @@ Attenuation
 ===========
 
 Attenuation defines the continuous loss of amplitude a wave experiences as it propagates through a particular medium.
-The rate at which the amplitude decreases is referred as the attenuation constant.
-For an electromagnetic wave that has traveled a distance :math:`z`, the attenuation constant (:math:`\alpha`) is given by:
+The rate at which the amplitude decreases is referred as the attenuation constant (:math:`\alpha`).
+For an electromagnetic wave that has traveled a distance :math:`z`, the attenuation constant is given by:
 
 .. math::
 	\frac{| \mathbf{A} |}{ | \mathbf{A_0} |} = e^{-\alpha z}
@@ -81,7 +82,7 @@ The attenuation constant depends on the physical properties of the media.
 In general, the attenuation constant can be expressed as:
 
 .. math::
-	\alpha = \omega \sqrt{\frac{\mu \varepsilon}{2}} \Bigg [ \Bigg ( 1 + \bigg ( \frac{\sigma}{\omega \varepsilon} \bigg )^2 \Bigg )^{1/2} - \; 1 \; \Bigg ]^{1/2}
+	\alpha = \omega \sqrt{\frac{\mu \varepsilon}{2}} \Bigg [ \Bigg ( 1 + \bigg ( \frac{\sigma}{\omega \varepsilon} \bigg )^2 \Bigg )^{1/2} - \; 1 \; \Bigg ]^{1/2} = \begin{cases} \sqrt{\dfrac{\omega \mu \sigma}{2}} \; \; &\textrm{for} \; \; \omega \varepsilon \ll \sigma \\ \dfrac{2}{\sigma} \sqrt{\dfrac{\mu}{\varepsilon}}  \; \; &\textrm{for} \; \; \sigma \ll \omega \varepsilon \end{cases}
 
 
 
@@ -129,7 +130,7 @@ We can see from the two previous expressions that:
 
 
 An example of the attenuation of electromagnetic waves in air versus inside a conductive is shown on the right.
-We can see that in the air, the wave experienced little to no loss in amplitude as it propagate.
+We can see that in the air, the wave experienced little to no loss in amplitude as it propagates.
 In the conductive material however, the amplitude of the wave decreases noticeably as it propagates.
 
 
@@ -147,7 +148,7 @@ Reflection and Transmission of Radiowaves
 		Reflection of an incident wave with a reverse in polarity (:math:`\varepsilon_1 <\varepsilon_2`). `Link to source image <https://commons.wikimedia.org/wiki/File:Partial_transmittance.gif>`__
 
 
-When a radiowave reaches an interface, some of its energy is reflected and some of its energy is transmitted across the interface.
+When a radiowave reaches an interface, some of it is reflected and some of it is transmitted across the interface.
 This results in both a reflected and a transmitted wave.
 
 The amplitude of the reflected wave proportional to that of the incident wave is defined by the reflection coefficient (:math:`R`).
@@ -158,14 +159,14 @@ Assuming the radiowave arrives at an angle perpendicular to the interface, the r
 	R = \frac{\textrm{Reflected Amplitude}}{\textrm{Incident Amplitude}} = \frac{\sqrt{\varepsilon_1} - \sqrt{\varepsilon_2}}{\sqrt{\varepsilon_1} + \sqrt{\varepsilon_2}}
 
 
-where :math:`\varepsilon_1` is the dielectric permittivity of the medium associated with the incident and reflected waves.
+where :math:`\varepsilon_1` is the dielectric permittivity of the medium carrying the incident and reflected waves.
 
 The reflection coefficient can be either positive or negative and has values between :math:`-1 < R < 1`.
 The magnitude of :math:`R` determines how much of the incident wave is reflected.
 It should be noted that:
 
 	- If :math:`\varepsilon_1` and :math:`\varepsilon_2` are similar, most of the incident wave is transmitted through the interface.
-	- If one of the dielectric permittivities across the interface is much smaller than the other, most of the incident wave is reflected. This case can prove problematic if you at attempting to gain information about structures below this interface.
+	- If one of the dielectric permittivities across the interface is much smaller than the other, most of the incident wave is reflected. This can be a problem if you at attempting to gain information about structures below this interface.
 
 
 The sign of the reflection coefficient determines whether the reflected wave experiences a reverse in polarity.
@@ -200,17 +201,17 @@ Refraction of Radiowaves
 
 
 Refraction is used to describe the change in propagation direction of a wave due to a change in the propagation medium.
-When a radiowave reaches an interface, recall that some of its energy is reflected and some of its energy is transmitted accross the interface.
+When a radiowave reaches an interface, recall that some of it is reflected and some of it is transmitted accross the interface.
 The angles at which the incident wave is reflected and refracted are illustrated on the right.
 
-The angle of the reflected radiowave depends directly on the angle of the incident wave.
+The angle of the reflected portion depends directly on the angle of the incident wave.
 The angle of the refracted wave can be obtained by using Snell's law (just like seismic waves):
 
 .. math::
 	\frac{\textrm{sin}\theta_1}{V_1} = \frac{\textrm{sin}\theta_2}{V_2}
 
 
-For radiowaves in resistive and non-magnetic media, the propagation velocity is equal to :math:`V = c/ \! \sqrt{\varepsilon_r}` (see here add link).
+For radiowaves in resistive and non-magnetic media, the propagation velocity is equal to :math:`V = c/ \! \sqrt{\varepsilon_r}` (shown earlier).
 In this case, Snell's law can be expressed as:
 
 .. math::
@@ -226,7 +227,7 @@ In this case, Snell's law can be expressed as:
 	Critical refraction at interface and the resulting head-wave.
 
 
-Just like in refraction seismology, radiowaves can undergo critical refraction.
+Just like in refraction seismology, radiowaves can undergo critical refractions.
 This occurs when the incident angle :math:`\theta_1` is such that the refracted wave propagates along the interface at velocity :math:`V_2`; ultimately leading to a head wave.
 The critical angle (:math:`\theta_c`) is given by:
 
@@ -253,6 +254,9 @@ Several sources of scattering are:
 	- Rocky soils, which are a large contributor to the scattering of GPR signals (below right).
 	- Gas bubbles trapped in ice.
 	- Clutter made up of small buried objects
+	
+
+
 
 .. figure:: images_new/GPR_scattering_examples.png
 	:align: center
@@ -288,8 +292,8 @@ Geometric Spreading
 
 
 We have seen how radiowave signals lose their amplitude through attenuation.
-They also lose energy due to geometric spreading.
-This makes sense given that the energy of the wave-front is now spread over a larger area.
+They also lose amplitude due to geometric spreading.
+This makes sense given that the energy of the wave-front is now spread over an increasingly larger area.
 For geometric spreading, the loss in amplitude of the radiowaves is represented by:
 
 

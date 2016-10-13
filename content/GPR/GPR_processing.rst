@@ -3,7 +3,7 @@
 Processing
 **********
 
-So far, we have used radargrams to represent the data collect by GPR sensors.
+So far, we have used radargrams to represent the data collected by GPR sensors.
 In order to create these images, some processing is required.
 Here, we discuss how raw GPR data are processed before they are represented using radargrams.
 
@@ -11,11 +11,11 @@ Here, we discuss how raw GPR data are processed before they are represented usin
 Travel Time to Depth Conversion
 ===============================
 
-The data measured by the GPR system is the two-way travel time.
+The data measured by the GPR system is the amplitude of the signal as a function of its two-way travel time.
 However, interpretation can be made easier if the information can be represented in terms of depth.
-Because of this, an apparent depth axis is frequently added to the right side of the radargram.
+Because of this, an apparent depth axis is frequently added to the right-hand side of the radargram.
 
-For to convert the two-way travel time to apparent depth, we much choose a propagation velocity.
+To convert the two-way travel time to apparent depth, we must choose a propagation velocity.
 This may be acquired from the initial radargram, from a-priori information, or sometimes left as the speed of light (:math:`c = 3.00 \times 10^8` m/s).
 The conversion between each vertical axis is given by:
 
@@ -24,7 +24,9 @@ The conversion between each vertical axis is given by:
 
 
 where :math:`d_a` is the apparent depth, :math:`V` is the propagation velocity and :math:`t` is the two-way travel time.
-Below, we see an example where the propagation velocity is :math:`V = 0.13 m/ns`.
+Below, we see an example where the propagation velocity is :math:`V = 0.13` m/ns.
+From this, we can infer that the linear feature in the radargram is roughly 7-8 m away from the source and receiver.
+
 
 .. figure:: images_new/GPR_travel_time_2_depth.png
 	:align: center
@@ -47,6 +49,7 @@ Gain Correction
 
 
 Signals measured at earlier times are much stronger than signals which are measured at later times.
+This may be due to scattering, attenuation, geometric spreading or reflection/transmission events.
 As a result, it may not be easy to distinguish important features in the data at later times.
 To account for this, the raw data :math:`d_{raw}(t)` for each reading is multiplied by a gain function :math:`g(t)` as follows:
 
@@ -55,7 +58,8 @@ To account for this, the raw data :math:`d_{raw}(t)` for each reading is multipl
 
 
 where :math:`d(t)` is the data represented in the radargram.
-The gain function itself is a positive function which increases in magnitude as a function of :math:`t`.
+The gain function itself is a positive function which increases in magnitude as a function of time.
+Thus a larger gain is applied to raw data at later times.
 An example of the gain function is shown on the right.
 As we can see, the gain function increases in value exponentially to account for the exponential loss in return signal strength over time.
 However, the gain function is generally bounded by a maximum value.
