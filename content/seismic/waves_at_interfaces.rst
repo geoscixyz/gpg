@@ -40,7 +40,7 @@ We can illustrate scenarios two and three using the example of a wave propagatin
 .. raw:: html
 
     <div style="margin-top:10px; margin-bottom:20px;" align="center">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/9OpL3OFuVXo" frameborder="0" allowfullscreen></iframe allowfullscreen>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/9OpL3OFuVXo?rel=0" frameborder="0" allowfullscreen></iframe allowfullscreen>
     </iframe>
     </div>
 
@@ -132,7 +132,7 @@ The following video from `the IRIS group <https://www.iris.edu/hq/programs/epo>`
 .. raw:: html
 
     <div style="margin-top:10px; margin-bottom:20px;" align="center">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/FygYDmm99SA" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FygYDmm99SA?rel=0" frameborder="0" allowfullscreen></iframe>
     </iframe>
     </div>
 
