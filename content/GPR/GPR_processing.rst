@@ -1,4 +1,4 @@
-.. _GPR_processing
+.. _GPR_processing:
 
 Processing
 **********

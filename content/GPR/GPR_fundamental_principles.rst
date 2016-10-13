@@ -1,4 +1,4 @@
-.. _GPR_fundamental_principles
+.. _GPR_fundamental_principles:
 
 Basic Principles
 ****************

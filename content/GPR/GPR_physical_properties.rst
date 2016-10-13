@@ -1,4 +1,4 @@
-.. _GPR_physical_properties
+.. _GPR_physical_properties:
 
 Physical Properties
 *******************

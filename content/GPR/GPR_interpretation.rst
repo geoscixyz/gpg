@@ -1,4 +1,4 @@
-.. _GPR_interpretation
+.. _GPR_interpretation:
 
 Interpretation
 **************
