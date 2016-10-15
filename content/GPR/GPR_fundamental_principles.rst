@@ -32,7 +32,7 @@ The velocity of the radiowaves depends on the physical properties of the medium.
 In general, the velocity of radiowaves through a homogeneous material is given by:
 
 .. math::
-	V = \sqrt{\frac{2}{\mu \varepsilon}} \Bigg [ 1 + \Bigg ( 1 + \bigg ( \frac{\sigma}{\omega \varepsilon} \bigg )^2 \, \Bigg )^{1/2} \; \Bigg ]^{-1/2}
+	V = \sqrt{\frac{2}{\mu \varepsilon}} \Bigg [ \Bigg ( 1 + \bigg ( \frac{\sigma}{\omega \varepsilon} \bigg )^2 \, \Bigg )^{1/2} \; + 1 \; \Bigg ]^{-1/2}
 
 
 This equation can be used to show that the radiowave velocity is largest in free-space (i.e. when :math:`\sigma = 0`, :math:`\mu = \mu_0` and :math:`\varepsilon = \varepsilon_0`).
@@ -82,7 +82,10 @@ The attenuation constant depends on the physical properties of the media.
 In general, the attenuation constant can be expressed as:
 
 .. math::
-	\alpha = \omega \sqrt{\frac{\mu \varepsilon}{2}} \Bigg [ \Bigg ( 1 + \bigg ( \frac{\sigma}{\omega \varepsilon} \bigg )^2 \Bigg )^{1/2} - \; 1 \; \Bigg ]^{1/2} = \begin{cases} \sqrt{\dfrac{\omega \mu \sigma}{2}} \; \; &\textrm{for} \; \; \omega \varepsilon \ll \sigma \\ \dfrac{2}{\sigma} \sqrt{\dfrac{\mu}{\varepsilon}}  \; \; &\textrm{for} \; \; \sigma \ll \omega \varepsilon \end{cases}
+	\alpha = \omega \sqrt{\frac{\mu \varepsilon}{2}} \Bigg [ \Bigg ( 1 + \bigg ( \frac{\sigma}{\omega \varepsilon} \bigg )^2 \Bigg )^{1/2} - \; 1 \; \Bigg ]^{1/2} \approx \begin{cases} \sqrt{\dfrac{\omega \mu \sigma}{2}} \; \; &\textrm{for} \; \; \omega \varepsilon \ll \sigma \\ \dfrac{\sigma}{2} \sqrt{\dfrac{\mu}{\varepsilon}}  \; \; &\textrm{for} \; \; \sigma \ll \omega \varepsilon \end{cases}
+
+
+Once again, we see that the wave regime approximation (:math:`\sigma \ll \omega \varepsilon`) for GPR provides a much simpler expression.
 
 
 
@@ -108,26 +111,22 @@ By definition, the skin depth is just the reciprocal of the attenuation constant
 	\delta = \frac{1}{\alpha}
 
 
-In conductive environments (:math:`\omega \varepsilon \ll \sigma`), the **quasi-static approximation** provides a good estimate of the skin depth:
+
+If we use the approximations found above and assume the Earth is non-magnetic (:math:`\mu_r = 1`), the skin depth is given by:
 
 .. math::
-	\delta \approx \sqrt{\frac{2}{\omega \mu \sigma}} \sim 1262 \sqrt{\frac{1}{\omega \sigma}}
-
-The second equation offers a simpler approximation if the Earth is non-magnetic (i.e. :math:`\mu = \mu_0`).
-
-For materials in which :math:`\omega \varepsilon \gg \sigma` (wave regime), the skin depth is approximated by:
+	\delta \approx \begin{cases} 503 \sqrt{\dfrac{1}{\sigma f}} \; \; &\textrm{for} \; \; \omega \varepsilon \ll \sigma \\ 0.0053 \dfrac{\sqrt{\varepsilon_r}}{\sigma}  \; \; &\textrm{for} \; \; \sigma \ll \omega \varepsilon \end{cases}
 
 
-.. math::
-	\delta \approx \frac{2}{\sigma} \sqrt{\frac{\varepsilon}{\mu}}
-
-
+Where :math:`f` is the frequency of the wave in Hz.
 We can see from the two previous expressions that:
 
-	- The skin depth is smaller if the frequency of the radiowaves is higher.
+	- Generally, the skin depth is smaller if the frequency of the electromagnetic waves is higher.
+	- For the wave regime approximation (:math:`\sigma \ll \omega \varepsilon`), skin depth reaches a limit which doesn't depend on frequency. 
 	- The skin depth is larger in materials with lower conductivities.
 	- The skin depth is larger is materials with higher dielectric permittivities.
 
+	
 
 An example of the attenuation of electromagnetic waves in air versus inside a conductive is shown on the right.
 We can see that in the air, the wave experienced little to no loss in amplitude as it propagates.
@@ -141,7 +140,7 @@ Reflection and Transmission of Radiowaves
 
 .. sidebar:: Normal Incidence Reflection/Transmission
 
-	.. figure:: images/normal_incidence_reflection.gif
+	.. figure:: images_new/normal_incidence_reflection.gif
 		:align: center
 		:figwidth: 100%
 	
@@ -152,21 +151,26 @@ When a radiowave reaches an interface, some of it is reflected and some of it is
 This results in both a reflected and a transmitted wave.
 
 The amplitude of the reflected wave proportional to that of the incident wave is defined by the reflection coefficient (:math:`R`).
-For radiowaves, the reflection coefficient can be expressed as a function of the dielectric permittivities on each side of the interface.
+For radiowaves, the reflection coefficient can be expressed as a function of the **relative permittivities** on each side of the interface.
 Assuming the radiowave arrives at an angle perpendicular to the interface, the reflection coefficient is given by:
 
 .. math::
 	R = \frac{\textrm{Reflected Amplitude}}{\textrm{Incident Amplitude}} = \frac{\sqrt{\varepsilon_1} - \sqrt{\varepsilon_2}}{\sqrt{\varepsilon_1} + \sqrt{\varepsilon_2}}
 
 
-where :math:`\varepsilon_1` is the dielectric permittivity of the medium carrying the incident and reflected waves.
+where :math:`\varepsilon_1` is the **relative permittivity** of the medium carrying the incident and reflected waves.
+The transmission coefficient is given by:
+
+.. math::
+	T = \frac{\textrm{Transmitted Amplitude}}{\textrm{Incident Amplitude}} = \frac{2 \sqrt{\varepsilon_2}}{\sqrt{\varepsilon_1} + \sqrt{\varepsilon_2}}
+
 
 The reflection coefficient can be either positive or negative and has values between :math:`-1 < R < 1`.
 The magnitude of :math:`R` determines how much of the incident wave is reflected.
 It should be noted that:
 
 	- If :math:`\varepsilon_1` and :math:`\varepsilon_2` are similar, most of the incident wave is transmitted through the interface.
-	- If one of the dielectric permittivities across the interface is much smaller than the other, most of the incident wave is reflected. This can be a problem if you at attempting to gain information about structures below this interface.
+	- If one of the relative permittivities across the interface is much smaller than the other, most of the incident wave is reflected. This can be a problem if you at attempting to gain information about structures below this interface.
 
 
 The sign of the reflection coefficient determines whether the reflected wave experiences a reverse in polarity.
@@ -216,6 +220,9 @@ In this case, Snell's law can be expressed as:
 
 .. math::
 	\sqrt{\varepsilon_1} \, \textrm{sin}\theta_1 = \sqrt{\varepsilon_2} \, \textrm{sin}\theta_2
+
+
+where :math:`\varepsilon_1` and :math:`\varepsilon_2` are **relative permittivities**.
 
 
 **Critical Refraction**

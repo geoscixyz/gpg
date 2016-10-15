@@ -316,17 +316,16 @@ Probing Distance
 	Proving distances for GPR signals for various materials.
 
 Probing distance characterizes the maximum depth in which GPR signals can be used to obtain information about subsurface structures.
+For materials which have larger skin depths, radiowaves can penetrate deeper into the ground and still provide a sufficiently strong returning signal.
+
 As a general rule, the probing distance (:math:`D`) is approximated 3 :ref:`skin depths <GPR_fundamental_principles_skin_depth>`.
-Thus:
+If we assume the Earth is non-magnetic (:math:`\mu_r = 1`):
 
 .. math::
 	D = 3 \delta \approx
-	\begin{cases} 3 \sqrt{\dfrac{2}{\omega \mu \sigma}} \; \; &\textrm{for} \;\; \omega \varepsilon \ll \sigma \\ 
-	\dfrac{6}{\sigma} \sqrt{\dfrac{\varepsilon}{\mu}}  \; \; &\textrm{for} \;\; \omega \varepsilon \gg \sigma \end{cases}
+	\begin{cases} 1510 \sqrt{\dfrac{1}{\sigma f}} \; \; &\textrm{for} \;\; \omega \varepsilon \ll \sigma \\ 
+	0.0159 \dfrac{\sqrt{\varepsilon_r}}{\sigma}  \; \; &\textrm{for} \;\; \omega \varepsilon \gg \sigma \end{cases}
 	
-
-
-For materials which have larger skin depths, radiowaves can penetrate deeper into the ground and still provide a sufficiently strong returning signal.
 
 
 .. figure:: images_new/GPR_probing_distance.jpg
@@ -339,7 +338,7 @@ For materials which have larger skin depths, radiowaves can penetrate deeper int
 On the right we see figures which show probing distances for various materials.
 Using these figures, we can see that:
 
-	- As the frequency increases, the skin depth decreases and the probing distance decreases.
+	- In general, as the frequency increases, the skin depth decreases and the probing distance decreases.
 	- Frequencies used for GPR are :math:`\sim` 1 GHz. Therefore, the probing distances for GPR signals are generally quite shallow.
 	- It is very difficult for GPR signals to penetrate concrete and asphalt, as the probing distance is only about 1 m for GPR.
 	- Water saturated sedimentary rocks, such as clays and sandstones, have much lower probing distances than dry sedimentary rocks.
