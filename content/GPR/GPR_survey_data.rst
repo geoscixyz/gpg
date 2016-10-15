@@ -277,9 +277,9 @@ As a general rule, the layer must be at least 1/4 the wavelength of the incoming
 Thus:
 
 .. math::
-	L >  \frac{c}{4 f_c \sqrt{\varepsilon}} = \frac{c \Delta t}{4 \sqrt{\varepsilon}}
+	L >  \frac{c}{4 f_c \sqrt{\varepsilon_r}} = \frac{c \Delta t}{4 \sqrt{\varepsilon_r}}
 
-where :math:`L` is the layer thickness, :math:`c/\!\sqrt{\varepsilon}` is the propagation velocity for radiowaves, :math:`\Delta t` is the pulse width and :math:`f_c` is the central frequency.
+where :math:`L` is the layer thickness, :math:`c/\!\sqrt{\varepsilon_r}` is the propagation velocity for radiowaves, :math:`\Delta t` is the pulse width and :math:`f_c` is the central frequency.
 As we can see from this expression, higher frequencies/shorter pulse widths are required to observe smaller features.
 This means higher frequencies/shorter pulse widths are used for higher resolution surveys.
 
