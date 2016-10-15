@@ -18,10 +18,10 @@ Using signals measured by the receivers, the goal of GPR is to define these inte
 
 
 .. figure:: images_new/GPR_schematic_example.jpg
-		:align: center
-		:figwidth: 70%
+    :align: center
+    :figwidth: 70%
 
-                Schematic of a zero-offset GPR setup.
+    Schematic of a zero-offset GPR setup.
 
 
 Wave Velocity
@@ -32,7 +32,7 @@ The velocity of the radiowaves depends on the physical properties of the medium.
 In general, the velocity of radiowaves through a homogeneous material is given by:
 
 .. math::
-	V = \sqrt{\frac{2}{\mu \varepsilon}} \Bigg [ 1 + \Bigg ( 1 + \bigg ( \frac{\sigma}{\omega \varepsilon} \bigg )^2 \, \Bigg )^{1/2} \; \Bigg ]^{-1/2}
+    V = \sqrt{\frac{2}{\mu \varepsilon}} \Bigg [ 1 + \Bigg ( 1 + \bigg ( \frac{\sigma}{\omega \varepsilon} \bigg )^2 \, \Bigg )^{1/2} \; \Bigg ]^{-1/2}
 
 
 This equation can be used to show that the radiowave velocity is largest in free-space (i.e. when :math:`\sigma = 0`, :math:`\mu = \mu_0` and :math:`\varepsilon = \varepsilon_0`).
@@ -44,23 +44,23 @@ This is known as the **wave regime approximation**.
 Using the approximation, the velocity of radiowaves can be simplified to:
 
 .. math::
-	V = \frac{1}{\sqrt{\mu \varepsilon}} = \frac{c}{\sqrt{\mu_r \varepsilon_r}}
+    V = \frac{1}{\sqrt{\mu \varepsilon}} = \frac{c}{\sqrt{\mu_r \varepsilon_r}}
 
 
 where :math:`\mu_r` is the relative permeability and :math:`\varepsilon_r` is the relative permittivity.
 If the propagation material is non-magnetic, then :math:`\mu_r` = 1 and the radiowave velocity simplifies to:
 
 .. math::
-	V = \frac{c}{\sqrt{\varepsilon_r}}
-	
+    V = \frac{c}{\sqrt{\varepsilon_r}}
+
 
 This expression is considered a good approximation when considering GPR signals.
 From the previous expression, we can see that radiowaves propagate more slowly in increasingly dielectric materials.
 A table showing the dielectric permittivity, conductivity and radiowave velocity for various materials can be found :ref:`here <GPR_table_velocity>` .
 Notice that:
-	
-	- Water saturation decreases the propagation velocity of sediments because they have high dielectric permittivities.
-	- Dry rocks and igneous rocks have the highest propagation velocity
+
+    - Water saturation decreases the propagation velocity of sediments because they have high dielectric permittivities.
+    - Dry rocks and igneous rocks have the highest propagation velocity
 
 
 
@@ -72,7 +72,7 @@ The rate at which the amplitude decreases is referred as the attenuation constan
 For an electromagnetic wave that has traveled a distance :math:`z`, the attenuation constant is given by:
 
 .. math::
-	\frac{| \mathbf{A} |}{ | \mathbf{A_0} |} = e^{-\alpha z}
+    \frac{| \mathbf{A} |}{ | \mathbf{A_0} |} = e^{-\alpha z}
 
 where :math:`\mathbf{A_0}` is the initial amplitude of the wave and :math:`\mathbf{A}` is the amplitude of the wave after it has travel distance :math:`z`.
 We can see that as :math:`z \rightarrow \infty`, the amplitude of the wave goes to zero.
@@ -82,7 +82,7 @@ The attenuation constant depends on the physical properties of the media.
 In general, the attenuation constant can be expressed as:
 
 .. math::
-	\alpha = \omega \sqrt{\frac{\mu \varepsilon}{2}} \Bigg [ \Bigg ( 1 + \bigg ( \frac{\sigma}{\omega \varepsilon} \bigg )^2 \Bigg )^{1/2} - \; 1 \; \Bigg ]^{1/2} = \begin{cases} \sqrt{\dfrac{\omega \mu \sigma}{2}} \; \; &\textrm{for} \; \; \omega \varepsilon \ll \sigma \\ \dfrac{2}{\sigma} \sqrt{\dfrac{\mu}{\varepsilon}}  \; \; &\textrm{for} \; \; \sigma \ll \omega \varepsilon \end{cases}
+    \alpha = \omega \sqrt{\frac{\mu \varepsilon}{2}} \Bigg [ \Bigg ( 1 + \bigg ( \frac{\sigma}{\omega \varepsilon} \bigg )^2 \Bigg )^{1/2} - \; 1 \; \Bigg ]^{1/2} = \begin{cases} \sqrt{\dfrac{\omega \mu \sigma}{2}} \; \; &\textrm{for} \; \; \omega \varepsilon \ll \sigma \\ \dfrac{2}{\sigma} \sqrt{\dfrac{\mu}{\varepsilon}}  \; \; &\textrm{for} \; \; \sigma \ll \omega \varepsilon \end{cases}
 
 
 
@@ -98,20 +98,20 @@ Skin depth (:math:`\delta`) defines the propagation distance at which the amplit
 By definition, the skin depth is just the reciprocal of the attenuation constant:
 
 .. figure:: images_new/GPR_attenuation_skin_depth.png
-		:align: right
-		:figwidth: 40%
+    :align: right
+    :figwidth: 40%
 
-                Figure comparing the attenuation of radiowaves in air versus in a conductive medium.
+    Figure comparing the attenuation of radiowaves in air versus in a conductive medium.
 
 
 .. math::
-	\delta = \frac{1}{\alpha}
+    \delta = \frac{1}{\alpha}
 
 
 In conductive environments (:math:`\omega \varepsilon \ll \sigma`), the **quasi-static approximation** provides a good estimate of the skin depth:
 
 .. math::
-	\delta \approx \sqrt{\frac{2}{\omega \mu \sigma}} \sim 1262 \sqrt{\frac{1}{\omega \sigma}}
+    \delta \approx \sqrt{\frac{2}{\omega \mu \sigma}} \sim 1262 \sqrt{\frac{1}{\omega \sigma}}
 
 The second equation offers a simpler approximation if the Earth is non-magnetic (i.e. :math:`\mu = \mu_0`).
 
@@ -119,14 +119,14 @@ For materials in which :math:`\omega \varepsilon \gg \sigma` (wave regime), the 
 
 
 .. math::
-	\delta \approx \frac{2}{\sigma} \sqrt{\frac{\varepsilon}{\mu}}
+    \delta \approx \frac{2}{\sigma} \sqrt{\frac{\varepsilon}{\mu}}
 
 
 We can see from the two previous expressions that:
 
-	- The skin depth is smaller if the frequency of the radiowaves is higher.
-	- The skin depth is larger in materials with lower conductivities.
-	- The skin depth is larger is materials with higher dielectric permittivities.
+    - The skin depth is smaller if the frequency of the radiowaves is higher.
+    - The skin depth is larger in materials with lower conductivities.
+    - The skin depth is larger is materials with higher dielectric permittivities.
 
 
 An example of the attenuation of electromagnetic waves in air versus inside a conductive is shown on the right.
@@ -141,11 +141,11 @@ Reflection and Transmission of Radiowaves
 
 .. sidebar:: Normal Incidence Reflection/Transmission
 
-	.. figure:: images/normal_incidence_reflection.gif
-		:align: center
-		:figwidth: 100%
-	
-		Reflection of an incident wave with a reverse in polarity (:math:`\varepsilon_1 <\varepsilon_2`). `Link to source image <https://commons.wikimedia.org/wiki/File:Partial_transmittance.gif>`__ .
+    .. figure:: images/normal_incidence_reflection.gif
+        :align: center
+        :figwidth: 100%
+
+        Reflection of an incident wave with a reverse in polarity (:math:`\varepsilon_1 <\varepsilon_2`). `Link to source image <https://commons.wikimedia.org/wiki/File:Partial_transmittance.gif>`__ .
 
 
 When a radiowave reaches an interface, some of it is reflected and some of it is transmitted across the interface.
@@ -156,7 +156,7 @@ For radiowaves, the reflection coefficient can be expressed as a function of the
 Assuming the radiowave arrives at an angle perpendicular to the interface, the reflection coefficient is given by:
 
 .. math::
-	R = \frac{\textrm{Reflected Amplitude}}{\textrm{Incident Amplitude}} = \frac{\sqrt{\varepsilon_1} - \sqrt{\varepsilon_2}}{\sqrt{\varepsilon_1} + \sqrt{\varepsilon_2}}
+    R = \frac{\textrm{Reflected Amplitude}}{\textrm{Incident Amplitude}} = \frac{\sqrt{\varepsilon_1} - \sqrt{\varepsilon_2}}{\sqrt{\varepsilon_1} + \sqrt{\varepsilon_2}}
 
 
 where :math:`\varepsilon_1` is the dielectric permittivity of the medium carrying the incident and reflected waves.
@@ -165,16 +165,16 @@ The reflection coefficient can be either positive or negative and has values bet
 The magnitude of :math:`R` determines how much of the incident wave is reflected.
 It should be noted that:
 
-	- If :math:`\varepsilon_1` and :math:`\varepsilon_2` are similar, most of the incident wave is transmitted through the interface.
-	- If one of the dielectric permittivities across the interface is much smaller than the other, most of the incident wave is reflected. This can be a problem if you at attempting to gain information about structures below this interface.
+    - If :math:`\varepsilon_1` and :math:`\varepsilon_2` are similar, most of the incident wave is transmitted through the interface.
+    - If one of the dielectric permittivities across the interface is much smaller than the other, most of the incident wave is reflected. This can be a problem if you at attempting to gain information about structures below this interface.
 
 
 The sign of the reflection coefficient determines whether the reflected wave experiences a reverse in polarity.
 As a result, we can use the polarity of reflected radiowaves to determine whether :math:`\varepsilon_1` is greater than or less than :math:`\varepsilon_2`.
 This can be summarized as follows:
 
-	- If the returning signal (reflected wave) shows a reverse in polarity, :math:`R<0` and thus :math:`\varepsilon_1 < \varepsilon_2`
-	- If the returning signal (reflected wave) does not show a reverse in polarity, :math:`R>0` and thus :math:`\varepsilon_1 > \varepsilon_2`
+    - If the returning signal (reflected wave) shows a reverse in polarity, :math:`R<0` and thus :math:`\varepsilon_1 < \varepsilon_2`
+    - If the returning signal (reflected wave) does not show a reverse in polarity, :math:`R>0` and thus :math:`\varepsilon_1 > \varepsilon_2`
 
 
 Reflection at Conductive Object Boundaries
@@ -194,10 +194,10 @@ Refraction of Radiowaves
 ========================
 
 .. figure:: images_new/GPR_refraction.png
-	:align: right
-	:figwidth: 25%
-		
-	Reflection and refraction of an incoming radiowave.
+    :align: right
+    :figwidth: 25%
+
+    Reflection and refraction of an incoming radiowave.
 
 
 Refraction is used to describe the change in propagation direction of a wave due to a change in the propagation medium.
@@ -208,23 +208,23 @@ The angle of the reflected portion depends directly on the angle of the incident
 The angle of the refracted wave can be obtained by using Snell's law (just like seismic waves):
 
 .. math::
-	\frac{\textrm{sin}\theta_1}{V_1} = \frac{\textrm{sin}\theta_2}{V_2}
+    \frac{\textrm{sin}\theta_1}{V_1} = \frac{\textrm{sin}\theta_2}{V_2}
 
 
 For radiowaves in resistive and non-magnetic media, the propagation velocity is equal to :math:`V = c/ \! \sqrt{\varepsilon_r}` (shown earlier).
 In this case, Snell's law can be expressed as:
 
 .. math::
-	\sqrt{\varepsilon_1} \, \textrm{sin}\theta_1 = \sqrt{\varepsilon_2} \, \textrm{sin}\theta_2
+    \sqrt{\varepsilon_1} \, \textrm{sin}\theta_1 = \sqrt{\varepsilon_2} \, \textrm{sin}\theta_2
 
 
 **Critical Refraction**
 
 .. figure:: images_new/GPR_critical_refraction.png
-	:align: right
-	:figwidth: 50%
-		
-	Critical refraction at interface and the resulting head-wave.
+    :align: right
+    :figwidth: 50%
+
+    Critical refraction at interface and the resulting head-wave.
 
 
 Just like in refraction seismology, radiowaves can undergo critical refractions.
@@ -232,7 +232,7 @@ This occurs when the incident angle :math:`\theta_1` is such that the refracted 
 The critical angle (:math:`\theta_c`) is given by:
 
 .. math::
-	\textrm{sin} \theta_c = \frac{V_1}{V_2}
+    \textrm{sin} \theta_c = \frac{V_1}{V_2}
 
 
 Once again, we can see that critical refraction only occurs when :math:`V_1 < V_2`.
@@ -244,25 +244,25 @@ Scattering
 ==========
 
 
-	
-	
+
+
 Scattering is used to describe deviations in the paths of electromagnetic waves due to localized non-uniformities; which are less than 1/4 the wavelength of the radiowave signal.
 Scattering is problematic for GPR because it reduces the amplitudes of useful signals while increasing extraneous noise.
 Several sources of scattering are:
 
-	- Irregular surface shape of larger buried objects (below left).
-	- Rocky soils, which are a large contributor to the scattering of GPR signals (below right).
-	- Gas bubbles trapped in ice.
-	- Clutter made up of small buried objects
-	
+    - Irregular surface shape of larger buried objects (below left).
+    - Rocky soils, which are a large contributor to the scattering of GPR signals (below right).
+    - Gas bubbles trapped in ice.
+    - Clutter made up of small buried objects
+
 
 
 
 .. figure:: images_new/GPR_scattering_examples.png
-	:align: center
-	:figwidth: 60%
-		
-	Examples of scattering. A) Scattering from irregular surface texture. B) Scattering in rocky soils.
+    :align: center
+    :figwidth: 60%
+
+    Examples of scattering. A) Scattering from irregular surface texture. B) Scattering in rocky soils.
 
 
 Wave Fronts and Ray Paths
@@ -271,8 +271,8 @@ Wave Fronts and Ray Paths
 Like in seismology, it is very important to understand the difference between wave-fronts and ray paths.
 One way to thing about it as follows:
 
-	- **Wave-front**: The physical location of the radiowaves as they propagate through the Earth.
-	- **Ray path**: A particular path which a portion of the wave-front can take in order to reach a particular location.
+    - **Wave-front**: The physical location of the radiowaves as they propagate through the Earth.
+    - **Ray path**: A particular path which a portion of the wave-front can take in order to reach a particular location.
 
 Thus the wave-front represents the actual set of radiowaves, and the ray path is used to represent paths which signals can take to reach a receiver location.
 To see a simple example of the wavefront generated by radar source, `see here <https://www.youtube.com/watch?v=eqfgP4qVK4s>`__ .
@@ -285,10 +285,10 @@ Geometric Spreading
 ===================
 
 .. figure:: images_new/GPR_geometric_spreading.png
-		:align: right
-		:figwidth: 45%
+    :align: right
+    :figwidth: 45%
 
-                Wave-front at time :math:`\Delta t`. Shows geometric spreading for radiowaves in the ground and in the air.
+    Wave-front at time :math:`\Delta t`. Shows geometric spreading for radiowaves in the ground and in the air.
 
 
 We have seen how radiowave signals lose their amplitude through attenuation.
@@ -298,7 +298,7 @@ For geometric spreading, the loss in amplitude of the radiowaves is represented 
 
 
 .. math::
-	\frac{| \mathbf{A} |}{ | \mathbf{A_0} |} \propto \frac{1}{R}
+    \frac{| \mathbf{A} |}{ | \mathbf{A_0} |} \propto \frac{1}{R}
 
 where :math:`\mathbf{A_0}` is the amplitude of the waves as their leave the source and :math:`\mathbf{A}` is the amplitude of the waves after they have traveled distance :math:`R`.
 As we can see from the figure, the rate of geometric spreading loss is higher in the air than it is in the ground.
@@ -309,10 +309,10 @@ Example: Signal Paths for a 2-Layer Earth
 =========================================
 
 .. figure:: images_new/GPR_wave_paths_diagram.png
-		:align: right
-		:figwidth: 50%
+    :align: right
+    :figwidth: 50%
 
-                Radiowaves signals measured by a receiver for a 2-layer Earth.
+    Radiowaves signals measured by a receiver for a 2-layer Earth.
 
 Now that we understand the background theory, let's put it all together.
 At :math:`t` = 0 s, the source (Tx) generates a pulse of radio waves.
@@ -325,19 +325,19 @@ Let us now try and explain the nature of each ray path.
 
 
 .. figure:: images_new/GPR_radargram_2layer_example.png
-		:align: right
-		:figwidth: 45%
+    :align: right
+    :figwidth: 45%
 
-                Radargram for a 2-layer Earth.
-               
-               
+    Radargram for a 2-layer Earth.
+
+
 This was travels through the air in a direct line from the transmitter to the receiver.
 Recall that in the air, radiowaves propagate roughly at the speed of light (:math:`c = 3.00 \times 10^8` m/s).
 As a result, the direct air wave is **always** the first signal measured by the receiver.
 The time it takes this wave to reach the receiver is given by:
 
 .. math::
-	t_{air} = \frac{x}{c}
+    t_{air} = \frac{x}{c}
 
 
 The direct wave is shown in **red** on the radargram.
@@ -352,7 +352,7 @@ Because :math:`V_1 < c`, the ground wave arrives later than the air wave.
 The time it takes for the ground wave to reach the receiver is given by:
 
 .. math::
-	t_{ground} = \frac{x}{V_1}
+    t_{ground} = \frac{x}{V_1}
 
 The direct ground wave is shown in **pink**.
 Like the air wave, the direct ground wave velocity can also be obtained from the slope of the line.
@@ -365,7 +365,7 @@ Because it takes a longer path than the direct ground wave, it arrives later.
 The time it takes for the reflected wave to reach the receiver is given by:
 
 .. math::
-	t_{ref} = \frac{\sqrt{x^2 + 4h^2}}{V_1}
+    t_{ref} = \frac{\sqrt{x^2 + 4h^2}}{V_1}
 
 
 The reflected wave is shown in **green**.
@@ -384,7 +384,7 @@ While this wave propagates along the surface interface, it will have velocity a 
 In general, the time it takes for this wave to reach the receiver is given by:
 
 .. math::
-	t_c = \frac{x}{c} + \textrm{Constant}
+    t_c = \frac{x}{c} + \textrm{Constant}
 
 
 Notice that the arrival time for the critically refracted wave is linear.
