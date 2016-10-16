@@ -5,33 +5,33 @@ Ground Penetrating Radar
 
 
 .. figure:: images_new/GPR_picture_example.jpg
-		:align: right
-		:figwidth: 25%
+    :align: right
+    :figwidth: 25%
 
-                Archaeological GPR survey in Jordan. `Image source <https://commons.wikimedia.org/wiki/File:Radarsurvey.jpg>`__ .
+    Archaeological GPR survey in Jordan. `Image source <https://commons.wikimedia.org/wiki/File:Radarsurvey.jpg>`__ .
 
 
 
 Ground penetrating radar (GPR) is an electromagnetic method used for very near surface exploration; metres through 10s of metres.
 It is sometimes referred to as echo-sounding.
 GPR exploits contrasts in electromagnetic properties in order to define the physical boundaries of shallow structures (both natural and man-made).
-Physical properties important to GPR include: dielectric permittivity, electrical conductivity and occasionally magnetic permeability.
+Physical properties important to GPR include: :ref:`physical_properties_dielectric_permittivity`, :ref:`physical_properties_conductivity` and :ref:`Magnetic Permeability <physprop_mag_susc>`.
 Ground penetrating radar is used for a variety of applications.
 These include:
 
-	- Investigating concrete structures and roads
-	- Mapping the thickness of peat-bogs and other sedimentary layers
-	- Obtaining the depth to groundwater or permafrost
-	- Locating buried infrastructure such as irrigation pipes, tunnels and electrical wires
-	- Finding land mines and unexploded ordnance
+    - Investigating concrete structures and roads
+    - Mapping the thickness of peat-bogs and other sedimentary layers
+    - Obtaining the depth to groundwater or permafrost
+    - Locating buried infrastructure such as irrigation pipes, tunnels and electrical wires
+    - Finding land mines and unexploded ordnance
 
 
 
 .. figure:: images_new/GPR_schematic_example.jpg
-		:align: right
-		:figwidth: 55%
+    :align: right
+    :figwidth: 55%
 
-                Schematic of a zero-offset GPR setup.
+    Schematic of a zero-offset GPR setup.
 
 
 
@@ -41,10 +41,10 @@ At boundaries where the subsurface electromagnetic properties change abruptly, r
 Because of this, much of the understanding of seismic methods can be applied to ground penetrating radar.
 
 .. figure:: images_new/GPR_radargram_example.jpg
-		:align: right
-		:figwidth: 50%
+    :align: right
+    :figwidth: 50%
 
-                Radargram example of two underground tunnels (hyperbolas). Gray-scale shows the amplitude of the returning signal.
+    Radargram example of two underground tunnels (hyperbolas). Gray-scale shows the amplitude of the returning signal.
 
 Sensors (:math:`Rx`) at the Earth's surface measure the amplitudes and travel times of signals returning to the surface.
 These data from each trace (Tx-Rx pair) are amalgamated and represented using a radargram (similar to a seismogram).
@@ -56,19 +56,17 @@ It is from radargrams that we will do the majority of our interpretation of GPR 
 
 
 
-                
-
 
 **Contents**
 
 .. toctree::
    :maxdepth: 1
- 
-   
+
+
    GPR_physical_properties
    table_velocity
    GPR_fundamental_principles
    GPR_survey_data
    GPR_processing
    GPR_interpretation
-   
+
