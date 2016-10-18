@@ -91,7 +91,8 @@ exclude_patterns = [
   '_build',
   'AUTHORS.rst',
   'content/inversion/*',
-  'content/*/include/*'
+  'content/*/include/*',
+  'table_*'
   ]
 
 linkcheck_ignore = [
