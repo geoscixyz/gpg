@@ -39,13 +39,10 @@ Using signals measured by the receivers, the goal of GPR is to define these inte
 
 
 .. figure:: images_new/GPR_schematic_example.jpg
-		:align: center
-		:figwidth: 70%
-    :align: center
-    :figwidth: 70%
+	:align: center
+	:figwidth: 70%
 
-                Schematic of a zero-offset GPR setup.
-    Schematic of a zero-offset GPR setup.
+	Schematic of a zero-offset GPR setup.
 
 
 Wave Velocity
