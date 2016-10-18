@@ -37,18 +37,20 @@ The walls within the microwave are made out of materials which reflect elecromag
 As a result, the walls designed not to heat up while the microwave is on.
 
 
-.. figure:: images_new/GPR_EMwaves.png
-	:align: right
-	:figwidth: 50%
-	
-	The electric and magnetic fields of an electromagnetic wave.
+.. figure:: images_new/Electromagneticwave3D.gif
+		:align: right
+		:figwidth: 40%
+
+                Oscillating electric and magnetic fields being carried by an electromagnetic wave. `Image source <https://commons.wikimedia.org/wiki/File:Electromagneticwave3D.gif>`__ . 
+
+
 
 
 All foods contain water to varying degrees.
 Water is unique from most other molecules because it is naturally polarized (carries an electric dipole moment).
 This property of water molecules makes them align with electric fields very easily; giving them a :ref:`high dielectric permittivity <GPR_table_velocity>` (:math:`\varepsilon_r` = 80).
 When electromagnetic waves come into contact with the water molecules in the food, the water molecules physically re-orient with the oscillation of the wave.
-This is because of the electric field which the wave carries.
+This is because of the oscillating electric field carried by the wave.
 For waves at 2.45 GHz, this is occurring over 2 billion times per second!
 
 

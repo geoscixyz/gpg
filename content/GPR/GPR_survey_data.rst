@@ -199,6 +199,15 @@ This represents a non-invasive approach for determining internal structures.
 		:figwidth: 100%
 		
 		Example of a wavelet signal.
+		
+		
+	
+	.. figure:: images_new/Electromagneticwave3D.gif
+			:align: center
+	
+			Electromagnetic waves contained within the GPR pulse. `Image source <https://commons.wikimedia.org/wiki/File:Electromagneticwave3D.gif>`__ .
+	
+	
 	
 	.. figure:: images_new/GPR_wavelet_frequencies_example.png
 		:align: center
@@ -213,8 +222,9 @@ Source Signal
 
 
 As we have already discussed, the source antenna sends a pulse of radiowaves into the ground.
-This pulse however, is not made up entirely of radiowaves of a single frequency.
-Instead, a set of sinusoidal waves of different frequencies are used create what is called a wavelet.
+Radiowaves carry oscillating electric and magnetic fields.
+As it turns out, the pulse is not made up entirely of radiowaves of a single frequency.
+Instead, a set of sinusoidal EM waves of similar frequencies are used create what is called a wavelet.
 As a result, the wavelet contains information over a range of frequencies (generally between :math:`10^6` and :math:`10^9` Hz).
 
 Before we move forward let us define a few terms:
@@ -256,7 +266,41 @@ As we can see from the figure below, the "wave envelope" is longer for wavelets 
 		:align: center
 		:figwidth: 65%
 
-                
+
+
+
+GPR Signals and Spatial Length
+------------------------------
+
+
+The spatial length of the GPR wavelet signal is different as it moves through different materials.
+For a wavelet with central frequency :math:`f_c` moving at velocity :math:`V`, the wavelength :math:`\lambda` is given by:
+
+
+.. math::
+	\lambda = \frac{V}{f_c} = \frac{c}{f_c \sqrt{\varepsilon_r}}
+
+
+where :math:`c = 3.00 \times 10^8` m/s is the speed of light and :math:`\varepsilon_r` is the relative permittivity.
+This expressions shows that if the signal is moving through a material with a higher dielectric permittivity, it will move slower and it will have a larger spatial width.
+It also shows that GPR signals with higher central frequencies have shorter spatial widths.
+
+Recall that the central frequency is the reciprocal of the pulse width (:math:`f_c = 1/\Delta t`).
+Thus:
+
+.. math::
+	\lambda = V \, \Delta t = \frac{c \, \Delta t}{\sqrt{\varepsilon}}
+
+
+Therefore, shorter pulse widths result in shorter spatial lengths.
+This was stated in the previous subsection.
+
+Let us go back to the `example GPR video <https://www.youtube.com/watch?v=eqfgP4qVK4s>`__ .
+Examine the wave as it propagates through both the ground and the Earth.
+In which medium is the wavefront thicker/thinner?
+In which medium is the GPR signal moving slower/faster?
+Does this make sense from the equations above?
+
 
 Survey Resolution and Probing Distance
 ======================================
@@ -277,7 +321,7 @@ As a general rule, the layer must be at least 1/4 the wavelength of the incoming
 Thus:
 
 .. math::
-	L >  \frac{c}{4 f_c \sqrt{\varepsilon_r}} = \frac{c \Delta t}{4 \sqrt{\varepsilon_r}}
+	L >  \frac{\lambda}{4} = \frac{c}{4 f_c \sqrt{\varepsilon_r}} = \frac{c \Delta t}{4 \sqrt{\varepsilon_r}}
 
 where :math:`L` is the layer thickness, :math:`c/\!\sqrt{\varepsilon_r}` is the propagation velocity for radiowaves, :math:`\Delta t` is the pulse width and :math:`f_c` is the central frequency.
 As we can see from this expression, higher frequencies/shorter pulse widths are required to observe smaller features.
