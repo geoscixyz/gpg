@@ -289,7 +289,7 @@ Recall that the central frequency is the reciprocal of the pulse width (:math:`f
 Thus:
 
 .. math::
-	\lambda = V \, \Delta t = \frac{c \, \Delta t}{\sqrt{\varepsilon}}
+	\lambda = V \, \Delta t = \frac{c \, \Delta t}{\sqrt{\varepsilon_r}}
 
 
 Therefore, shorter pulse widths result in shorter spatial lengths.
