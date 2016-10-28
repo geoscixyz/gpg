@@ -1,4 +1,4 @@
-.. _frequency_domain_data:
+.. _electromagnetic_data:
 
 Frequency Domain Data
 **********************
@@ -118,7 +118,7 @@ as
 
 .. math::
         H_s \cos(\omega t + \psi) &= H_s { \cos(\omega t) \cos(\psi) - \sin(\omega t) \sin(\psi)   }\
-                                  &= [H_s \cos(\psi)] \cos(\omega t)  - [H_s \sin(\psi)] \sin(\omega t)   
+                                  &= [H_s \cos(\psi)] \cos(\omega t)  - [H_s \sin(\psi)] \sin(\omega t)
 
 The first term has the same phase as the primary field and is referred to as
 the "in-phase" response. This is also sometimes referred to as the "real" part
@@ -145,9 +145,9 @@ Similar terminology is summarized as follows:
 +-----------------------+-----------------------+
 |  **In-Phase**         | **Out-of-Phase**      |
 +=======================+=======================+
-|   Real                |    Imaginary          | 
+|   Real                |    Imaginary          |
 +-----------------------+-----------------------+
-|                       |    Quadrature         | 
+|                       |    Quadrature         |
 +-----------------------+-----------------------+
 
 Since both in-phase and out-of-phase quantities are small, their values are

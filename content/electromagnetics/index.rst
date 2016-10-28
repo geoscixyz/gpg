@@ -13,11 +13,12 @@ Contents:
 
 .. toctree::
    :maxdepth: 1
- 
-   electromagnetic_fields
-   principles_of_em_induction
-   frequency_domain_data
-   responses_from_a_conductor_in_free_space
-   conductive_host
-   primary_field_in_the_earth
-   dual_loop_systems
+
+   electromagnetic_introduction
+   electromagnetic_physical_properties
+   electromagnetic_basic_principals
+   electromagnetic_survey
+   electromagnetic_data
+   electromagnetic_processing
+   electromagnetic_interpretation
+   electromagnetic_applet

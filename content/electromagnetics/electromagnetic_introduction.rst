@@ -1,7 +1,7 @@
-.. _electromagnetic_fields:
+.. _electromagnetic_introduction:
 
-Electromagnetic Fields
-**********************
+Introduction
+************
 
 Electromagnetic methods are sensitive principally to electrical conductivity
 :math:`\sigma` (units are S/m or Siemens/meter). We sometimes work with the
@@ -24,7 +24,7 @@ Electrical force can be generated, in two ways:
    attract, the negative charges will be attracted to the positive terminal of
    the battery and the positive charges will be attracted to the negative
    terminal.
-   
+
 .. figure:: ./images/circuit.jpg
     :align: center
     :scale: 100 %
