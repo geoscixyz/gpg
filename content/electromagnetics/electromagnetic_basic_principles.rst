@@ -3,13 +3,7 @@
 Basic Principles
 ****************
 
-Electromagnetic methods are sensitive principally to electrical conductivity
-:math:`\sigma` (units are S/m or Siemens/meter). We sometimes work with the
-inverse of conductivity which is electrical resistivity :math:`\rho` which has
-units :math:`\Omega m` (ohm-meters). Electrical conductivity characterizes the
-ease that current flows through the material when an electrical force is
-applied. Electric current (units of Amperes) quantifies the amount of charge
-that is moving by an observer in one second.
+
 
 Electrical force can be generated, in two ways:
 
