@@ -34,7 +34,7 @@ The reflection, transmission and refraction of the radiowaves depends on the ele
 To see an example of the GPR signal as it propagates through the Earth, see the `link <https://www.youtube.com/watch?v=eqfgP4qVK4s>`__ to this video.
 
 For the purposes of GPR, the Earth may be thought of as a set of homogeneous regions separated by interfaces.
-Using signals measured by the receivers, the goal of GPR is to define these interfaces and thus gain information about structures under the Earth's; which can be naturally occurring or man-made.
+Using signals measured by the receivers, the goal of GPR is to define these interfaces and thus gain information about structures under the Earth's surface; which can be naturally occurring or man-made.
 
 
 

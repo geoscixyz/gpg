@@ -23,7 +23,7 @@ These include:
     - Mapping the thickness of peat-bogs and other sedimentary layers
     - Obtaining the depth to groundwater or permafrost
     - Locating buried infrastructure such as irrigation pipes, tunnels and electrical wires
-    - Finding land mines and unexploded ordnance
+    - Finding land mines and unexploded ordnance 
 
 
 
