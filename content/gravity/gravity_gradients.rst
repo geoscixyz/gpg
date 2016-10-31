@@ -154,7 +154,7 @@ on `a separate page of images`_. Evidently, different components emphasize
 different aspects of a buried density contrast or target. Look at these
 figures and consider these questions:
 
-#. Which emphasizes the feature’s location? (answer = :math:`T_{zz}`)
+#. Which emphasizes the feature's location? (answer = :math:`T_{zz}`)
 
 #. Which emphasize lineations in one or another direction? (answer =
    :math:`T_{xx}`, :math:`T_{yy}`)?
