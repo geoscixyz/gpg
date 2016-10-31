@@ -3,11 +3,10 @@
 Basic Principles
 ****************
 
-
-
+Purpose: This section provides the key components to understand the electromagnetic experiment. As briefly summarized in the :ref:`Introduction<electromagnetic_introduction>` section, theelectromagnetic survey requires a magnetic or electric source. Rocks inside the earth respond to the electric and magnetic field and give rise to secondary fields.
 Electrical force can be generated, in two ways:
 
-1. battery (Each terminal of the battery can be thought of as storing a
+1. Battery (Each terminal of the battery can be thought of as storing a
    positive or negative charge. The "voltage" of the battery is directly
    proportional to the amount of stored charge). Upon completion of the circuit
    there will be an electric field :math:`\vec{E}` (volts/m) set up in the body.
