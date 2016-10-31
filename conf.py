@@ -104,7 +104,7 @@ linkcheck_ignore = [
   'http://www.eos.ubc.ca/courses/eosc350/content/*',
 ]
 linkcheck_retries = 3
-linkcheck_timeout = 500
+linkcheck_timeout = 1000
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
