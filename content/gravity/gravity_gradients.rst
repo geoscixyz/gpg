@@ -203,6 +203,6 @@ following locations:
 
 .. _a separate page of images: http://www.eoas.ubc.ca/courses/eosc350/content/methods/meth_4/assets/gravgrad-figs.pdf
 .. _Turner Valley: http://www.sgl.com/technicalpapers/EAGEabst-final-TV.pdf
-.. _here: http://www.eaos.ubc.ca/courses/eosc350/content/methods/meth_4/assets/g-limits.pdf
+.. _here: http://www.eoas.ubc.ca/courses/eosc350/content/methods/meth_4/assets/g-limits.pdf
 
 
