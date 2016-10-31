@@ -50,6 +50,62 @@ Try to consider these things when examining the radargram below.
                 Zero-offset radargram example.
 
 
+
+Locating Buried Storage Tanks
+=============================
+
+
+.. figure:: images_new/GPR_buried_tanks_diagram.png
+		:align: center
+		:figwidth: 60%
+
+                Diagram showing underground storage tanks.
+
+
+.. figure:: images_new/GPR_buried_tanks_radargram.png
+		:align: center
+		:figwidth: 65%
+
+                Corresponding radargram for a zero offset survey.
+
+
+**Setup**: Real estate transactions regularly create the need for an environmental site assessment. Confirming the presence or absence of underground storage tanks (USTs) can be a  critical factor in contract closing.
+
+
+**Physical Properties**: Storage tanks have a large conductivity. These will act as strong reflectors of GPR signals.
+
+
+**Survey**: Survey line are done perpendicular to the known orientation of the storage tanks. A zero offset survey was used.
+
+
+**Data**: GPR data were collected along several profile lines. These were used to generate radargrams.
+
+
+**Processing**: An arrival time to depth conversion was done in order to approximate the depth to the storage tanks. The radargrams for several profile lines were interpolated in order to generate a 3D image.
+
+
+
+.. figure:: images_new/GPR_buried_tanks_interpolated.png
+		:align: center
+		:figwidth: 65%
+
+                3D interpolation from several GPR survey lines.
+
+
+
+**Interpretation**: From the radargram and 3D interpolated image, we can easily see five storage tanks buried at a depth of 3.5 ft (1 metre).
+In the radargram, the signatures from the pipes are hyperbolic.
+Below the tanks, we can see two tank beds.
+The goal of the tank bed is to ensure that any leakage stays contained.
+Because the storage tanks themselves are such strong reflectors, we do not see the reflection of the tank beds for certain Tx-Rx positions.
+
+
+
+**Synthesis**: This survey was successful in locating the buried storage tanks at a potential building site.
+
+
+
+
 Mapping Peat Thickness (Ireland)
 ================================
 
