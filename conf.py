@@ -102,6 +102,7 @@ linkcheck_ignore = [
   'http://www.ngdc.noaa.gov/*',
   'http://www.eoas.ubc.ca/courses/eosc350/content/*',
   'http://www.eos.ubc.ca/courses/eosc350/content/*',
+  'https://vimeo.com/*',
 ]
 linkcheck_retries = 3
 linkcheck_timeout = 1000
