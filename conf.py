@@ -100,9 +100,12 @@ linkcheck_ignore = [
   'http://www.sgl.com/technicalpapers/EAGEabst-final-TV.pdf',
   'http://geogratis.gc.ca/site/eng/extraction',
   'http://www.ngdc.noaa.gov/*',
+  'http://www.eoas.ubc.ca/courses/eosc350/content/*',
+  'http://www.eos.ubc.ca/courses/eosc350/content/*',
+  'https://vimeo.com/*',
 ]
 linkcheck_retries = 3
-linkcheck_timeout = 500
+linkcheck_timeout = 1000
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
