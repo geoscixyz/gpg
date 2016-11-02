@@ -3,87 +3,102 @@
 Basic Principles
 ****************
 
-Purpose: This section provides the key components to understand the electromagnetic experiment. As briefly summarized in the :ref:`Introduction<electromagnetic_introduction>` section, theelectromagnetic survey requires a magnetic or electric source. Rocks inside the earth respond to the electric and magnetic field and give rise to secondary fields.
-Electrical force can be generated, in two ways:
+.. Purpose: This section provides the key components to understand the electromagnetic experiment. As briefly summarized in the :ref:`Introduction<electromagnetic_introduction>` section, theelectromagnetic survey requires a magnetic or electric source. Rocks inside the earth respond to the electric and magnetic field and give rise to secondary fields. Electrical force can be generated, in two ways:
 
-1. Battery (Each terminal of the battery can be thought of as storing a
-   positive or negative charge. The "voltage" of the battery is directly
-   proportional to the amount of stored charge). Upon completion of the circuit
-   there will be an electric field :math:`\vec{E}` (volts/m) set up in the body.
-   The electric field is a vector: it has both direction and magnitude. The force
-   that any charge :math:`q` feels is given by :math:`\vec{F} = q \vec{E}`. Unit
-   positive or negative charges will feel the same magnitude of force but
-   directions will be opposite. Since like charges repel and unlike charges
-   attract, the negative charges will be attracted to the positive terminal of
-   the battery and the positive charges will be attracted to the negative
-   terminal.
+.. 1. Battery (Each terminal of the battery can be thought of as storing a
+..    positive or negative charge. The "voltage" of the battery is directly
+..    proportional to the amount of stored charge). Upon completion of the circuit
+..    there will be an electric field :math:`\vec{E}` (volts/m) set up in the body.
+..    The electric field is a vector: it has both direction and magnitude. The force
+..    that any charge :math:`q` feels is given by :math:`\vec{F} = q \vec{E}`. Unit
+..    positive or negative charges will feel the same magnitude of force but
+..    directions will be opposite. Since like charges repel and unlike charges
+..    attract, the negative charges will be attracted to the positive terminal of
+..    the battery and the positive charges will be attracted to the negative
+..    terminal.
+.. 
+.. .. figure:: ./images/grounded-source.svg
+..     :align: center
+..     :scale: 60 %
 
-.. figure:: ./images/circuit.jpg
-    :align: center
-    :scale: 100 %
+Electromagnetic survey methods are based on two fundamental principles: Faraday's law of electromagnetic induction and the fact that electric currents generate magnetic fields, expressed in Ampère's law. In its simplest form Faraday's law states that the electromotive force (EMF) in a closed circuit is proportional to the rate of change of magnetic flux through the circuit, or in even simpler terms: a changing magnetic field will induce an EMF. 
 
-2. A time varying magnetic field can generate or "induce" an electric field in
-   a conductor. Consider the simple example of a permanent magnetic moving toward
-   a loop of wire. A current is observed and hence there must have been an
-   electrical force which has caused the charges to move.
+.. In a typical EM experiment, a time varying electric current is passed through a wire loop to generate a time-varying magnetic field. 
 
-.. figure:: ./images/induced_field.jpg
-    :align: center
-    :scale: 100 %
-
-In the above example the changing the magnetic field was produced by a moving
-magnet. There are other ways in which we can generate a magnetic field. A
-current in a wire produces a magnetic field outside the wire. It follows that
-a changing magnetic field outside the wire can be achieved by changing the
-current in the wire. This can be done by:
-
-a. having the wire connected to a generator which produces a sinusoidal
-   current. This leads to Frequency Domain methods.
-
-.. figure:: ./images/sinusoidal_current.jpg
-    :align: center
-    :scale: 100 %
-
-b. having a steady-state current and then switching it off. This leads to Time
-   Domain methods.
-
-.. figure:: ./images/steady_state_current.jpg
-    :align: center
-    :scale: 100 %
-
-**Magnetic Flux**: In discussing the phenomena of EM induction it is important
-to have a concept of magnetic flux. We had previous defined the magnetic flux
-density :math:`\vec{B}`. The magnetic flux :math:`\phi_B` which crosses a closed
-loop is given by
+The magnetic flux :math:`\phi_B` which crosses a closed loop is given by
 
 .. math::
-        \phi_B = \int_{area} \vec{B} \cdot \hat{n} \; d\vec{a}
+    \phi_B = \int_{area} \vec{B} \cdot \hat{n} \; d\vec{a}
 
-where :math:`\hat{n}` is the outward pointing normal vector for the loop.
+where :math:`\hat{n}` is the outward pointing normal vector for the loop and :math:`\vec{B}` is the magnetic flux density, which is proportional to the magnetic field in free space. This is illustrated in the diagram below
 
-**Faraday's Law**: A lime varying magnetic field impinging upon a conductor
-induces an electromotive force (or voltage) in the conductor.
+.. figure:: ./images/IntFaradayDiagram.png
+     :align: center
+     :scale: 50 %
+
+Faraday's law relates the magnetic flux through the surface bordered by the loop to the induced EMF in the loop 
 
 .. math::
-        V = - \frac{d \phi_B}{dt}
+  V = - \frac{d \phi_B}{dt}.
+        
+Recall that the current :math:`I` flowing in the wire is related to the EMF through Ohm's law
 
-This would be the voltage measured in a loop of wire if :math:`\phi_B` is the
-magnetic flux crossing the wire loop.
+.. math:: 
+  V = IR,
+  
+where :math:`R` is the electrical resistance of the circuit.
+     
+We can start to develop an intuition about Faraday's law using the example of a permanent magnet moving through a coil of wire. The electric field generated by the moving magnet creates an electric force on the charges in the wire, causing current to flow. You can explore this example interactively using the applet below from `PhET <https://phet.colorado.edu/en/simulation/legacy/faraday>`__.
+    
+.. raw:: html
+
+  <iframe src="https://phet.colorado.edu/sims/html/faradays-law/latest/faradays-law_en.html" width="700" height="525" scrolling="no" allowfullscreen></iframe>
+    
+We can observe several characteristics of EM induction using the applet: 
+
+1) The voltmeter only registers a signal when the magnet is moving, regardless of its absolute position. 
+2) The sign of the induced voltage changes depending on the direction of motion and orientation of the magnet
+3) The magnitude of the voltage depends on how quickly the magnet is moving
+4) All else being equal, the voltage induced in the four coil loop is larger than in the two coil loop.
+
+
+.. .. figure:: ./images/induced_field.jpg
+..     :align: center
+..     :scale: 100 %
+.. 
+.. In the above example the changing the magnetic field was produced by a moving
+.. magnet. There are other ways in which we can generate a magnetic field. A
+.. current in a wire produces a magnetic field outside the wire. It follows that
+.. a changing magnetic field outside the wire can be achieved by changing the
+.. current in the wire. This can be done by:
+.. 
+.. a. having the wire connected to a generator which produces a sinusoidal
+..    current. This leads to Frequency Domain methods.
+.. 
+.. .. figure:: ./images/sinusoidal_current.jpg
+..     :align: center
+..     :scale: 100 %
+.. 
+.. b. having a steady-state current and then switching it off. This leads to Time
+..    Domain methods.
+.. 
+.. .. figure:: ./images/steady_state_current.jpg
+..     :align: center
+..     :scale: 100 %
+    
 
 **Lens' Law**:The direction of the induced current in the conductor is such
 that its magnetic field opposes the changing field across the conductor. That
 is, nature does not like to have changing magnetic fields. This is the reason
-for the minus sign in the above equation.
+for the minus sign in Faraday's law. 
 
-Comment: If the input source is a battery or generator which has electrode
-terminals connected to the earth then this is called a "grounded" source. It
-forms the input for many geophysical experiments (DC resistivity, IP, CSAMT).
+.. raw:: html
 
-If the source is a loop of wire then this is an "inductive source". The EM-31
-experiment falls into this category. Inductive experiments are generally less
-labor intensive (no electrodes need be pounded into the ground) and they can
-be flown in aircraft so large amounts of data can be acquired quickly and
-(fairly) cheaply.
+    <div style="position: relative; padding-bottom: 2%; height: 0; overflow: hidden; max-width: 100%; height: auto;"><iframe width="560" height="315" src="https://www.youtube.com/embed/N7tIi71-AjA?rel=0" frameborder="0" allowfullscreen></iframe></div>
+
+.. Comment: If the input source is a battery or generator which has electrode terminals connected to the earth then this is called a "grounded" source. It forms the input for many geophysical experiments (DC resistivity, IP, CSAMT).
+
+.. If the source is a loop of wire then this is an "inductive source". The EM-31 experiment falls into this category. Inductive experiments are generally less labor intensive (no electrodes need be pounded into the ground) and they can be flown in aircraft so large amounts of data can be acquired quickly and (fairly) cheaply.
 
 Electromagnetic (EM) Induction
 ==============================
