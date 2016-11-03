@@ -1,10 +1,14 @@
-.. _dual_loop_systems:
+.. _electromagnetic_survey:
+
+Survey
+******
+
 
 Dual Loop Systems
-*****************
+=================
 
 EM-31
-=====
+-----
 
 Loop-loop system mounted on a 4 meter boom. The transmitting coil operates at
 a frequency of 9.8 kHz and the receiving coil is located 3.66 meters from the
@@ -21,7 +25,7 @@ dipole mode. Data can be acquired with the device held at hip level or it can
 be put on the ground.
 
 EM-34
-=====
+-----
 
 This uses two vertical or horizontal coplanar coils that are not attached to
 each other. The coils and analysis system are designed so that different coil
@@ -107,7 +111,7 @@ We often have a multi-layer earth (e.g. a thin resistive layer overlying a
 more conductive stratum, or vice versa) and we would like to estimate the
 thickness of the layer and the two conductivities. Cumulative response curves
 are useful for carrying out computations. Define
- 
+
 .. math::
         R_V (z) &= \int_{z}^{\infty} \phi_V (z) dz \\[0.8em]
         R_H (z) &= \int_{z}^{\infty} \phi_H (z) dz
@@ -124,32 +128,6 @@ of the signal arises. According to this rule the depth of investigation for
 the vertical dipole is about 2.0 s while the depth for the horizontal dipole
 is only half that amount.
 
-Apparent Conductivity from the Quadrature Component
-===================================================
-
-If the spacing :math:`s` between the coils is much less than the skin depth,
-that is, :math:`s << \delta` then the ratio of secondary to primary field is
-approximately
-
-.. math::
-         \left| \frac{H_s}{H_p} \right| \simeq \frac{\omega \mu_0 \sigma s^2}{4}  
-
-The response is purely imaginary or is found in the quadrature component. The
-constant conductivity which gives rise to the observed response can be found
-from the above formula. It is referred to as the apparent conductivity
-:math:`\sigma_a`.
-
-.. math::
-        \sigma_a = \frac{4}{\omega \mu_0 \sigma s^2} \left| \frac{H_s}{H_p} \right| 
-
-Further insight about the apparent conductivity is obtained by incorporating
-the response curves :math:`\phi_V(z)` and :math:`\phi_H(z)`. We have
-
-.. math::
-        \sigma_a &= \int_{0}^{\infty} \phi_V (z) \sigma (z) dz \\[0.8em]
-        \sigma_a &= \int_{0}^{\infty} \phi_H (z) \sigma (z) dz
-
-respectively for the vertical and horizontal dipoles.
 
 Multilayer Earth Structures
 ===========================
@@ -168,13 +146,13 @@ The apparent conductivity would be
 
 .. math::
         \sigma_a &= \int_{0}^{h} \sigma_1 \phi_V (z) dz + \int_{h}^{\infty} \sigma_2  \phi_V (z) dz \\[0.8em]
-                 &= \sigma_1 (1-R_V(h)) + \sigma_2 R_V(h)   
+                 &= \sigma_1 (1-R_V(h)) + \sigma_2 R_V(h)
 
 Either the curves shown previously or the following formulae are therefore useful:
 
 .. math::
         \phi_V (z) &= \frac{4z}{(4z^2 + 1)^{3/2}} \\[0.8em]
-        \phi_H (z) &= 2- \frac{4z}{(4z^2 + 1)^{1/2}} \\[0.8em]  
+        \phi_H (z) &= 2- \frac{4z}{(4z^2 + 1)^{1/2}} \\[0.8em]
                R_V &= \frac{1}{(4z^2 + 1)^{1/2} }\\[0.8em]
                R_H &=  (4z^2 + 1)^{1/2} - 2z \\[0.8em]
 
