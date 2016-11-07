@@ -9,7 +9,7 @@ Nature of the total field
 Consider a frequency domain source. This could be a loop on the ground or in
 the air.
 
-.. figure:: ./images/Hp_Hs_schematic.jpg
+.. figure:: ./images/FrequencyDomainData.png
     :align: center
     :scale: 100 %
 
@@ -90,12 +90,12 @@ faced with finding, and interpreting, a small signal in the presence of a
 large signal. It would be more advantageous to measure the secondary field
 directly. This can be done in two ways:
 
-1. One can have a "bucking" coil or "compensator" which provides a magnetic
+1. One can have a ":ref:`bucking" coil<electromagnetic_bucking_coil>` or "compensator" which provides a magnetic
    field at the receiver which has the same amplitude and phase as the primary
    field but is in the opposite direction. As a result :math:`\vec{H}_p` is
    annihilated at the receiver, (eg. aircraft systems. Lab systems, EM-31).
 
-.. figure:: ./images/bucking_coil.jpg
+.. figure:: ./images/BuckingCoil_Altitude.png
     :align: center
     :scale: 100 %
 
