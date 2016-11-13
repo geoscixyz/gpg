@@ -32,7 +32,7 @@ The magnetic flux :math:`\phi_B` which crosses a closed loop is given by
 
 where :math:`\hat{n}` is the outward pointing normal vector for the loop and :math:`\vec{B}` is the magnetic flux density, which is proportional to the magnetic field in free space. This is illustrated in the diagram below
 
-.. figure:: ./images/IntFaradayDiagram.png
+.. figure:: ./images/IntFaradayDiagram-emf-version.svg
      :align: center
      :scale: 50 %
 
@@ -87,71 +87,63 @@ We can observe several characteristics of EM induction using the applet:
 ..     :scale: 100 %
     
 
-**Lens' Law**:The direction of the induced current in the conductor is such
-that its magnetic field opposes the changing field across the conductor. That
-is, nature does not like to have changing magnetic fields. This is the reason
-for the minus sign in Faraday's law. 
+**Lenz's Law**:The direction of the induced current in Faraday's law is such that its magnetic field opposes the change in flux. That is, nature does not like changing magnetic fields. This is the reason for the minus sign in Faraday's law. The following video from the Technical Services Group at MIT's physics department shows Lenz's law in action.
 
 .. raw:: html
 
     <div style="position: relative; padding-bottom: 2%; height: 0; overflow: hidden; max-width: 100%; height: auto;"><iframe width="560" height="315" src="https://www.youtube.com/embed/N7tIi71-AjA?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
+The magnetic fields of various current sources
+==============================================
+
+The shape of the magnetic field due to an electric current in a wire depends on the shape of the wire. The magnetic field of a closed loop source will be approximately that of a perfect magnetic dipole when observed far enough from the loop. A good rule of thumb is that we can use the dipole approximation when the distance from the loop is more than five times its diameter, for a circular loop.
+
+.. figure:: ./images/primary-field-from-lec-notes.svg
+     :align: center
+     :scale: 50 %
+     
+See the following video from the University of Sydney to help visualize the fields of various current loop configurations
+
+.. raw:: html
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/V-M07N4a6-Y?rel=0" frameborder="0" allowfullscreen></iframe>
+
 .. Comment: If the input source is a battery or generator which has electrode terminals connected to the earth then this is called a "grounded" source. It forms the input for many geophysical experiments (DC resistivity, IP, CSAMT).
 
 .. If the source is a loop of wire then this is an "inductive source". The EM-31 experiment falls into this category. Inductive experiments are generally less labor intensive (no electrodes need be pounded into the ground) and they can be flown in aircraft so large amounts of data can be acquired quickly and (fairly) cheaply.
 
-Electromagnetic (EM) Induction
+Circuit Model for EM Induction
 ==============================
 
-Consider the goal of using an inductive EM source to locate a conductive body
-buried in a relatively non-conducting (or resistive) host material. The basic
-picture is shown below
+Consider the goal of using an inductive EM source to locate a conductive body buried in a relatively non-conducting (or resistive) host material. The basic picture is shown in the first part of the figure below
 
-.. figure:: ./images/Tx_Rx_schematic.jpg
+.. figure:: ./images/Concepts_3loops.png
     :align: center
     :scale: 100 %
 
 Transmitter
-===========
+-----------
 
-The transmitter may be a loop of wire connected to a generator which outputs a
-sinusoidal current. For examples, the current is :math:`I_0 \cos(\omega t)`
-where :math:`\omega = 2 \pi f`.
+In this course we will consider small loop transmitters with current varying sinusoidally in time. This is known as a harmonic or frequency domain transmitter.
 
 Primary EM field
-================
+----------------
 
-The current in the transmitter loop produces a magnetic field. In air
-(sometimes referred to as free space) this magnetic field travels at the speed
-of light :math:`c = 3.0 \times 10^8` m/s and therefore reaches the receiver
-"instantaneously." The magnetic field observed at the receiver is called the
-"primary field." Mathematically, the magnetic field would be written as
-:math:`\vec{H}_p = \vec{H}_0 \cos(\omega t)`. The direction of the field
-would depend upon the orientation of the wire. When we discussed magnetism we
-showed that the magnetic field from a loop source was identical to that of a
-permanent bar magnet at the center of the loop provided that the observer is
-"far" from the loop. That is, this approximation holds when :math:`r\, >>\,
-a` where :math:`r` is the distance from the observer to the center of the loop
-and :math:`a` is the radius of the loop. The magnetic moment from a loop is
-:math:`\vec{m} = IA \hat{n}`, where :math:`I` is the current in the loop,
-:math:`A` is its area, and :math:`\hat{n}` is the unit vector perpendicular to
-the plane of the loop.
+The current in the transmitter loop produces a magnetic field, known as the primary field. In air this magnetic field propagates at approximately the speed of light :math:`c = 3.0 \times 10^8` m/s and therefore reaches the receiver in a neglibibly small period of time. The direction of the field depends on the orientation of the transmitter loop. Recall that the magnetic field from a loop source is approximately equal to that of a permanent bar magnet at the center of the loop provided that the observer is "far" from the loop. That is, this approximation holds when :math:`r\, >>\, a` where :math:`r` is the distance from the observer to the center of the loop and :math:`a` is the radius of the loop. The magnetic moment from a loop is :math:`\vec{m} = IA \hat{n}`, where :math:`I` is the current in the loop, :math:`A` is its area, and :math:`\hat{n}` is the unit vector perpendicular to the plane of the loop. In this course we will consider frequency domain transmitters. These are transmitters driven by a harmonic current, that is, a current that varies sinusoidally in time. The magnetic field of a dipole is given by the magnetization multiplied by a geometric factor, which implies that the primary magnetic field due to the transmitter will be harmonic in time: :math:`\vec{H}_p = \vec{H}_0 \cos(\omega t)`.
+
+.. The magnetic field observed at the receiver is called the "primary field." Mathematically, the magnetic field would be written as :math:`\vec{H}_p = \vec{H}_0 \cos(\omega t)`. 
 
 Receiver
-========
+--------
 
-This is an instrument which measures the magnetic field. The receiver could be
-a magnetometer oriented to record one component of the field or it could
-possibly measure multiple components of the magnetic field. It could also be a
-coil . In this case, a voltage is measured and the voltage is related to the
-rate of change of magnetic flux crossing the loop.
+The receiver is most often also a wire coil The voltage recorded in the receiver coil will be proportional to the rate of change of magnetic flux through the loop. One could also measure the magnetic field directly using a magnetometer but this is common practice.
 
 At the Buried Body
-==================
+------------------
 
 There is a time varying magnetic field impinging upon the conductor. This sets
 up an electric force which causes currents to flow. The strength of the
-currents is governed by Ohm's law:
+current is determined by Ohm's law:
 
 .. math::
         \vec{J} = \sigma \vec{E}
@@ -160,16 +152,13 @@ where :math:`\vec{J}` is current density in :math:`A/m^2` (amperes per meter
 squared) and :math:`\vec{E}` is the electric field with units of Volts/meter.
 
 The currents in the body produce their own magnetic field (This is known as
-Ampere's Law or Biot Savart Law). These currents will also vary with time and
-their magnetic field can be measured at the transmitter. We refer to these
-fields as the "secondary" magnetic field, :math:`\vec{H_s}`.
+Ampere's Law or the Biot Savart Law at low frequencies). These currents will also vary with time and their magnetic field can be measured at the transmitter. We refer to these fields as the "secondary" magnetic field, :math:`\vec{H_s}`. Note that the secondary field may be out of phase with the primary field.
 
 **Observation**: The receiver measures the sum of the primary and secondary
 fields or it measures the associated voltages that are induced in a coil
 caused by the time varying magnetic flux.
 
-Summary
-=======
+**Summary**
 
 1. A time varying current in a transmitter produces a time varying magnetic
    field which impinges upon a conductor in the ground.
@@ -180,40 +169,24 @@ Summary
    (or it measures associated voltages.)
 
 Responses from a Conductor in Free Space
-========================================
+----------------------------------------
 
-.. figure:: ./images/Hp_Hs_schematic.jpg
-    :align: center
-    :scale: 80 %
+.. .. figure:: ./images/Hp_Hs_schematic.jpg
+..     :align: center
+..     :scale: 80 %
 
-The basic understanding of the different coupling between
-the source and receiver that is due to geometry, allows us to sketch the
-expected responses that arise from a frequency domain horizontal loop survey
-taken over a conductor which is buried in a resistive host. This is a two-
-stage process.
+We can start to understand the response of a buried conductor by modelling it as a loop of wire connected to a resistor and an inductor. This is the circuit model of the geophysical electromagnetic experiment. Shown in the lower half of the previous figure. 
 
-1. Use the geometries of the source and receiver to sketch the characteristic
-   curve.
-2. Use the response diagram and the knowledge of whether you are
-   dealing with a good conductor or poor conductor to determine the relative
-   amplitude of the in-phase and out-of-phase parts.
+.. The basic understanding of the different coupling between the source and receiver that is due to geometry, allows us to sketch the expected responses that arise from a frequency domain horizontal loop survey taken over a conductor which is buried in a resistive host. This is a two-stage process.
+
+.. 1. Use the geometries of the source and receiver to sketch the characteristic
+..    curve.
+.. 2. Use the response diagram and the knowledge of whether you are
+..    dealing with a good conductor or poor conductor to determine the relative
+..    amplitude of the in-phase and out-of-phase parts.
 
 
-**Part I:** Consider the basic geometry given below. For any placement of the
-transmitter there will be a varying magnetic field crossing the plate and
-hence induced currents. Those currents generate secondary magnetic fields.
-Adopt a convention that if the secondary field is in (he same direction as
-the primary field then the response will be plotted as a positive value.
-Alternatively, when the two fields are in opposition the response will be
-negative. The distance between the transmitter and receiver loops is held
-fixed and the-datum is plotted at the midpoint between the coils. When both
-loops are to the left, or to the right, of the plate then the response is
-positive. The response will be zero when either coil is over the plate. When
-the receiver, which is a horizontal coil, is over the plate, then no
-magnetic flux is passing through the coil. There will be zero voltage
-induced. When the transmitter is directly over the thin conducting plate,
-there is no flux crossing the plate, hence no currents will be generated in
-the plate and the secondary magnetic field is zero.
+.. **Part I:** Consider the basic geometry shown above. For any placement of the transmitter there will be a varying magnetic field through the loop and hence induced currents. Those currents generate secondary magnetic fields. We adopt the convention that if the secondary field is in the same direction as the primary field then the response will be plotted as a positive value. Alternatively, when the two fields are in opposition the response will be negative. The distance between the transmitter and receiver loops is held fixed and the-datum is plotted at the midpoint between the coils. When both loops are to the left, or to the right, of the plate then the response is positive. The response will be zero when either coil is over the plate. When the receiver, which is a horizontal coil, is over the plate, then no magnetic flux is passing through the coil. There will be zero voltage induced. When the transmitter is directly over the thin conducting plate, there is no flux crossing the plate, hence no currents will be generated in the plate and the secondary magnetic field is zero.
 
 
  .. figure:: ./images/source_receiver_signal.jpg
