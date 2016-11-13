@@ -117,7 +117,7 @@ Circuit Model for EM Induction
 
 Consider the goal of using an inductive EM source to locate a conductive body buried in a relatively non-conducting (or resistive) host material. The basic picture is shown in the first part of the figure below
 
-.. figure:: ./images/Concepts_3loops.png
+.. figure:: ./images/Concepts_3loops-conductor-and-loop.png
     :align: center
     :scale: 100 %
 
