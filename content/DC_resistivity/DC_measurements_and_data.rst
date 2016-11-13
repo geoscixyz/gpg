@@ -53,7 +53,7 @@ Geophysics of the Elura Orebody, Cobar NSW," 1980, Australian Society of
 Exploration Geophysicists.
 
 The relation between charge distribution, current flow and resulting
-potentials is discussed more fully in the section :doc:`DC_basic_principles`.
+potentials is discussed more fully in the section :ref:`DC_basic_principles_heterogeneous_earth`.
 
 Sources
 =======
