@@ -28,7 +28,7 @@ Contents:
    :maxdepth: 1
  
    DC_physical_properties
-   Basic_principles/index
+   DC_basic_principles_index
    DC_surveys
    DC_measurements_and_data
    DC_instruments

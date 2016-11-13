@@ -3,7 +3,7 @@
 Equations for modeling DC phenomenona
 =====================================
 
-.. figure:: ../images/principles_dcresf1.gif
+.. figure:: ./images/principles_dcresf1.gif
 	:align: right
 	:scale: 100 %
 

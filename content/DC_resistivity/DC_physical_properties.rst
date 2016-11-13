@@ -23,6 +23,7 @@ conductivity for rocks and minerals is presented in :numref:`resistivity_table`.
  .. figure:: ./images/resistivity_table.png
 	:align: center
 	:scale: 100%
+	:name: resistivity_table
 
 Soils and rocks are composed mostly of silicate minerals, which are
 essentially insulators. Exceptions include magnetite, specular hematite,

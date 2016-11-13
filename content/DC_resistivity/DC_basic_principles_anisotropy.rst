@@ -26,11 +26,11 @@ where :math:`\lambda = (\rho_i / \rho_h)^{1/2}` is called the coefficient of
 anisotropy. See the table below for some values of :math:`\lambda` encountered
 in common geological materials.
 
-.. figure:: ../images/layers.gif
+.. figure:: ./images/layers.gif
 	:align: left
 	:scale: 100 %
 
-.. figure:: ../images/table13.gif
+.. figure:: ./images/table13.gif
 	:figclass: center
 	:align: left
 	:scale: 100 %

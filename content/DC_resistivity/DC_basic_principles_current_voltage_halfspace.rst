@@ -14,7 +14,7 @@ strength, :math:`E` (Volts per meter), current density, :math:`J` (Amps per unit
 area), and resistivity  (Ohm-m) in the three dimensional situation of a field
 survey (the introduction defines resistivity and conductivity).
 
-.. figure:: ../images/currents_in_earth.gif
+.. figure:: ./images/currents_in_earth.gif
 	:align: right
 	:scale: 100 %
 
@@ -67,11 +67,11 @@ The electric potential inside the earth caused by the radial flow of current
 is illustrated in the diagram below.
 
 
-.. figure:: ../images/radial_flow.gif
+.. figure:: ./images/radial_flow.gif
 	:align: center
 	:scale: 100 %
 
-.. figure:: ../images/pot_decay.gif
+.. figure:: ./images/pot_decay.gif
 	:align: right
 	:scale: 100 %
 
@@ -86,7 +86,7 @@ current electrode because :math:`r=0`, and it decays with distance.
 Two electrode current sources
 =============================
 
-.. figure:: ../images/two_electrodes.gif
+.. figure:: ./images/two_electrodes.gif
 	:align: right
 	:scale: 100 %
 
@@ -96,7 +96,7 @@ electrodes. It is convenient to label the electrodes as
 A. positive current electrode (carries a current :math:`+I`)		
 B. negative current electrode (carries a current :math:`-I`)
 
-.. figure:: ../images/fieldlines.gif
+.. figure:: ./images/fieldlines.gif
 	:align: right
 	:scale: 100 %
 
@@ -134,6 +134,20 @@ surface of the earth for a fixed 2-electrode source. The voltage we would
 observe with our voltmeter (between purple electrodes) is the **difference**
 in potential at the two voltage electrodes, :math:`\Delta V`.
 
-.. figure:: ../images/pot_difference.gif
+.. figure:: ./images/pot_difference.gif
 	:align: center
 	:scale: 100 %
+
+Current flow in the ground
+==========================
+
+The path of the current in the earth after it is injected with two electrodes
+depends upon the distribution of electrical resistivity. If the Earth is
+uniform, current flows in a regular three dimensional pattern under the
+electrodes as illustrated Figure 1. The north slice number 8 (flagged with a
+:math:`\ast`) is similar to the type of image commonly shown in texts to
+indicate how current flows in two dimensions under a pair of source
+electrodes.
+
+ .. raw:: html
+    :file: ./figure1.html
