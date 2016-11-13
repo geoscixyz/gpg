@@ -121,7 +121,7 @@ between two locations (say :math:`r_1` and :math:`r_2`).
 	:align: center
 	:scale: 1
 
-You can visualize it with this two sphere example. Can you tell which one is conductive and which one is resistive?
+You can visualize it with this two spheres example. Can you tell which one is conductive and which one is resistive?
 
  .. raw:: html
     :file: ./images/TwoSphere_Current_Anim.html

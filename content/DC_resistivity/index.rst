@@ -30,6 +30,6 @@ Contents:
    DC_physical_properties
    DC_basic_principles_index
    DC_surveys
-   DC_measurements_and_data
+   DC_data
    DC_instruments
    DC_examples

@@ -1,6 +1,6 @@
 .. _DC_examples:
 
-Case Hsitories
+Case Histories
 **************
 
 `Mont Isa`_ is great example of the use of DC as part of a mining exploration campaign.
