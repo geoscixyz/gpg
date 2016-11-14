@@ -10,9 +10,6 @@ Interpretation
 
 In this section, we use a real-world example to illustrate the use of electromagnetic (EM) methods. In this industrial reclamation case study, the interpretation of EM data had proven useful in characterizing the sub-surface and answering the following questions:
 
-
-
-
  1- What is the thickness of the mixed fill layer (i.e. what is the depth to till)?
 
  2- What is the distribution of buried objects? Many objects are thought to exist, possibly ranging in size from small pieces of industrial trash, to railway lines, reinforced concrete building foundations, and buried tanks.
@@ -176,9 +173,7 @@ Since data were gathered using two different instrument orientations, it is easy
           : Differenced EW and NS In-phase map
 
 
-Interpretation
-==============
-
-
+.. Interpretation
+.. ==============
 
 

@@ -67,17 +67,15 @@ that is, :math:`s << \delta` then the ratio of secondary to primary field is
 approximately
 
 .. math::
-         \left| \frac{H_s}{H_p} \right| \simeq \frac{\omega \mu_0 \sigma s^2}{4}
+          \frac{H_s}{H_p} \simeq i\frac{\omega \mu_0 \sigma s^2}{4}
 
-The response is purely imaginary or is found in the quadrature component. The
-constant conductivity which gives rise to the observed response can be found
-from the above formula. It is referred to as the apparent conductivity
-:math:`\sigma_a`.
+where :math:`i` is the imaginary unit. The response is purely imaginary, that is, it is found in the quadrature component of the data. The constant conductivity which gives rise to the observed response can be found from the above formula. It is referred to as the apparent conductivity
+:math:`\sigma_a`:
 
 .. math::
-        \sigma_a = \frac{4}{\omega \mu_0 \sigma s^2} \left| \frac{H_s}{H_p} \right|
+        \sigma_a = \frac{4}{\omega \mu_0 \sigma s^2} \mathrm{Im}\left\{\frac{H_s}{H_p} \right\},
 
-Further insight about the apparent conductivity is obtained by incorporating
+where :math:`\mathrm{Im}\left\{\frac{H_s}{H_p} \right\}` is the imaginary part of the secondary field to primary field ratio. Further insight about the apparent conductivity is obtained by incorporating
 the response curves :math:`\phi_V(z)` and :math:`\phi_H(z)`. We have
 
 .. math::
@@ -182,4 +180,6 @@ Either the curves shown previously or the following formulae are therefore usefu
         \phi_H (z) &= 2- \frac{4z}{(4z^2 + 1)^{1/2}} \\[0.8em]
                R_V &= \frac{1}{(4z^2 + 1)^{1/2} }\\[0.8em]
                R_H &=  (4z^2 + 1)^{1/2} - 2z \\[0.8em]
+               
+You can explore the response of a multilayered earth further using the `layered earth response app <http://mybinder.org/repo/ubcgif/gpgLabs//notebooks/EM/ResponseFct/ResponseFct.ipynb>`__.
 
