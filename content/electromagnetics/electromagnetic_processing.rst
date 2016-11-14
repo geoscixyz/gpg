@@ -8,7 +8,7 @@ This section summarizes some of the data processing steps required during or aft
 Primary field removal
 =====================
 
-.. figure:: ./images/Concepts_3loops.png
+.. figure:: ./images/Concepts_3loops-just-3D-conductor.png
     :align: right
     :figwidth: 40%
     :name: 3Loops
