@@ -52,7 +52,7 @@ Subsurface structures are usually interpreted either in terms of objects, layers
 	:align: center
 	:scale: 100 
 
-	Figure 1: A field crew initializes geophysical acquisition equipment used to conduct a mineral exploration survey at a site near the Iskut River, in west-central British Columbia. 
+	A field crew initializes geophysical acquisition equipment used to conduct a mineral exploration survey at a site near the Iskut River, in west-central British Columbia. 
 
 In the face of ongoing demand for increasingly quantitative information, however, sophisticated techniques are now being used to numerically estimate the distribution of the earth's physical properties. These modeling procedures give geoscientists a more cost effective, reliable and accurate means of extracting as much information as possible from conventional survey data. They also make it possible to present the rather technical information in more visual and meaningful ways to managers, shareholders, regulatory agencies and other interest groups. 
 
