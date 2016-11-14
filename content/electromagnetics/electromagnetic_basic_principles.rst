@@ -96,12 +96,15 @@ We can observe several characteristics of EM induction using the applet:
 The magnetic fields of various current sources
 ==============================================
 
-The shape of the magnetic field due to an electric current in a wire depends on the shape of the wire. The magnetic field of a closed loop source will be approximately that of a perfect magnetic dipole when observed far enough from the loop. A good rule of thumb is that we can use the dipole approximation when the distance from the loop is more than five times its diameter, for a circular loop.
+The shape of the magnetic field due to an electric current in a wire depends on the shape of the wire. The magnetic field of a closed loop source will be approximately that of a perfect magnetic dipole when observed far enough from the loop. A good rule of thumb is that we can use the dipole approximation when the distance from the loop is more than five times its diameter. Put mathematically, the approximation holds when :math:`r\, >>\, a` where :math:`r` is the distance from the observer to the center of the loop and :math:`a` is the radius of the loop. The magnetic moment from a loop is :math:`\vec{m} = IA \hat{n}`, where :math:`I` is the current in the loop, :math:`A` is its area, and :math:`\hat{n}` is the unit vector perpendicular to the plane of the loop. In this course we will consider frequency domain transmitters. These are transmitters driven by a harmonic current, that is, a current that varies sinusoidally in time. The magnetic field of a dipole is given by the magnetization multiplied by a geometric factor, which implies that the primary magnetic field due to the transmitter will be harmonic in time: :math:`\vec{H}_p = \vec{H}_0 \cos(\omega t)`.
 
-.. figure:: ./images/primary-field-from-lec-notes.svg
+.. figure:: ./images/mag-field-current-loop-v2.png
      :align: center
      :scale: 50 %
-     
+     :name: loop_dipole_field
+ 
+If you're interested in a more detailed discussion of the field of a magnetic dipole, please see the `Wikipedia page <https://en.wikipedia.org/wiki/Magnetic_dipole>`__.
+
 See the following video from the University of Sydney to help visualize the fields of various current loop configurations
 
 .. raw:: html
@@ -112,31 +115,51 @@ See the following video from the University of Sydney to help visualize the fiel
 
 .. If the source is a loop of wire then this is an "inductive source". The EM-31 experiment falls into this category. Inductive experiments are generally less labor intensive (no electrodes need be pounded into the ground) and they can be flown in aircraft so large amounts of data can be acquired quickly and (fairly) cheaply.
 
-Circuit Model for EM Induction
+Everyday examples of EM induction
+=================================
+
+EM induction is at work in everyday devices as well as in geophysics. A common example is the metal detector. Figure :numref:`metal_detectors` shows metal detectors at work at airport security and searching for a buried object.
+
+.. figure:: ./images/metal-detector-example.jpg
+    :align: center
+    :figwidth: 100%
+    :name: metal_detectors
+    
+In both cases we see that a current :math:`I_0` flowing in a transmitter coil generates a magnetic flux density :math:`\mathbf{B}_0`. As :math:`\mathbf{B}_0` changes in time, eddy currents are generated in metallic objects. These eddy currents oscillate in time with the same periodicity as the transmitter current and generate a secondary magnetic field :math:`\mathbf{B}'`. The primary and secondary fields both pass through the receiver coil (in the handheld metal detector the transmitter and receiver coils are concentric) generating a secondary current :math:`I'` that can be measured.
+
+Circuit model for EM induction
 ==============================
 
-Consider the goal of using an inductive EM source to locate a conductive body buried in a relatively non-conducting (or resistive) host material. The basic picture is shown in the first part of the figure below
+Consider the goal of using an inductive EM source to locate a conductive body buried in a relatively non-conducting (or resistive) host material. The basic picture is shown in the figure :numref:`3loops_conductor_loop` below.
 
 .. figure:: ./images/Concepts_3loops-conductor-and-loop.png
     :align: center
     :scale: 100 %
+    :name: 3loops_conductor_loop
 
-Transmitter
------------
+Eddy currents are generated in the buried body by changing magnetic flux passing through the body. We can learn a lot about the coupling between the transmitter, buried body and receiver by approximating the buried body by a wire coil with resistance :math:`R` and inductance :math:`L`. The resistance approximates the electrical resistivity of the earth and the inductance is a geometrical quantity that depends on the shape of the loop.
+    
+Transmitter and primary field
+-----------------------------
 
-In this course we will consider small loop transmitters with current varying sinusoidally in time. This is known as a harmonic or frequency domain transmitter.
+In this course we will consider small loop transmitters with current varying sinusoidally in time. These are known as harmonic or frequency domain transmitters. We will only consider transmitters small enough that the primary magnetic fields they generate are approximately dipolar, as illustrated in figure :numref:`loop_dipole_field` above. Electromagnetic induction transmitters operate over range of frequencies---roughly :math:`10^1` Hz - :math:`10^4` Hz. Note that this is a much lower frequency band than is used in GPR surveys, which can range from :math:`10^6` Hz - :math:`10^9` Hz.
 
-Primary EM field
-----------------
-
-The current in the transmitter loop produces a magnetic field, known as the primary field. In air this magnetic field propagates at approximately the speed of light :math:`c = 3.0 \times 10^8` m/s and therefore reaches the receiver in a neglibibly small period of time. The direction of the field depends on the orientation of the transmitter loop. Recall that the magnetic field from a loop source is approximately equal to that of a permanent bar magnet at the center of the loop provided that the observer is "far" from the loop. That is, this approximation holds when :math:`r\, >>\, a` where :math:`r` is the distance from the observer to the center of the loop and :math:`a` is the radius of the loop. The magnetic moment from a loop is :math:`\vec{m} = IA \hat{n}`, where :math:`I` is the current in the loop, :math:`A` is its area, and :math:`\hat{n}` is the unit vector perpendicular to the plane of the loop. In this course we will consider frequency domain transmitters. These are transmitters driven by a harmonic current, that is, a current that varies sinusoidally in time. The magnetic field of a dipole is given by the magnetization multiplied by a geometric factor, which implies that the primary magnetic field due to the transmitter will be harmonic in time: :math:`\vec{H}_p = \vec{H}_0 \cos(\omega t)`.
-
-.. The magnetic field observed at the receiver is called the "primary field." Mathematically, the magnetic field would be written as :math:`\vec{H}_p = \vec{H}_0 \cos(\omega t)`. 
+.. The direction of the field depends on the orientation of the transmitter loop. 
 
 Receiver
 --------
 
-The receiver is most often also a wire coil The voltage recorded in the receiver coil will be proportional to the rate of change of magnetic flux through the loop. One could also measure the magnetic field directly using a magnetometer but this is common practice.
+The receiver is most often also a wire coil The voltage recorded in the receiver coil will be proportional to the rate of change of magnetic flux through the loop. One could also measure the magnetic field directly using a magnetometer but this is not common practice.
+
+Coupling between transmitter and buried loop
+--------------------------------------------
+
+Recall that current is only generated in a loop by the normal component of the changing magnetic flux passing through it. The magnetic flux is vector quantity. The closer the direction of the primary magnetic flux is to the normal of the buried loop, the better the coupling between the transmitter and buried loop, as illustrated in figure :numref:`coupling_effects` below
+
+.. figure:: ./images/CouplingEffects.png
+    :align: center
+    :scale: 75 %
+    :name: coupling_effects
 
 At the Buried Body
 ------------------
@@ -149,14 +172,11 @@ current is determined by Ohm's law:
         \vec{J} = \sigma \vec{E}
 
 where :math:`\vec{J}` is current density in :math:`A/m^2` (amperes per meter
-squared) and :math:`\vec{E}` is the electric field with units of Volts/meter.
+squared) and :math:`\vec{E}` is the electric field with units of Volts/meter. This is the version of Ohm's law for extended three-dimensional bodies, analogous to Ohm's law for circuits: :math:`I=V/R`, where :math:`R` is the electrical resistance of the circuit.
 
-The currents in the body produce their own magnetic field (This is known as
-Ampere's Law or the Biot Savart Law at low frequencies). These currents will also vary with time and their magnetic field can be measured at the transmitter. We refer to these fields as the "secondary" magnetic field, :math:`\vec{H_s}`. Note that the secondary field may be out of phase with the primary field.
+The currents in the body produce their own magnetic fields just as in the case of a loop. These currents will also vary with time and their magnetic field can be measured at the transmitter. We refer to these fields as the "secondary" magnetic field, :math:`\vec{H_s}`. Note that the secondary field may be out of phase with the primary field.
 
-**Observation**: The receiver measures the sum of the primary and secondary
-fields or it measures the associated voltages that are induced in a coil
-caused by the time varying magnetic flux.
+
 
 **Summary**
 
@@ -168,25 +188,33 @@ caused by the time varying magnetic flux.
 5. The receiver measures the sum of the primary and secondary fields,
    (or it measures associated voltages.)
 
-Responses from a Conductor in Free Space
-----------------------------------------
+Measured responses
+------------------
 
 .. .. figure:: ./images/Hp_Hs_schematic.jpg
 ..     :align: center
 ..     :scale: 80 %
 
-We can start to understand the response of a buried conductor by modelling it as a loop of wire connected to a resistor and an inductor. This is the circuit model of the geophysical electromagnetic experiment. Shown in the lower half of the previous figure. 
+We can start to understand the geophysical survey anomaly of a conductive body usin g the three-loop model.
 
-.. The basic understanding of the different coupling between the source and receiver that is due to geometry, allows us to sketch the expected responses that arise from a frequency domain horizontal loop survey taken over a conductor which is buried in a resistive host. This is a two-stage process.
+The basic understanding of the different coupling between the source and receiver that is due to geometry allows us to sketch the expected responses that arise from a frequency domain horizontal loop survey taken over a conductor which is buried in a resistive host. This is a two-stage process.
 
-.. 1. Use the geometries of the source and receiver to sketch the characteristic
-..    curve.
-.. 2. Use the response diagram and the knowledge of whether you are
-..    dealing with a good conductor or poor conductor to determine the relative
-..    amplitude of the in-phase and out-of-phase parts.
+1. Use the geometries of the source and receiver to sketch the characteristic
+   curve.
+2. Use the response diagram and the knowledge of whether you are
+   dealing with a good conductor or poor conductor to determine the relative
+   amplitude of the in-phase and out-of-phase parts.
 
 
-.. **Part I:** Consider the basic geometry shown above. For any placement of the transmitter there will be a varying magnetic field through the loop and hence induced currents. Those currents generate secondary magnetic fields. We adopt the convention that if the secondary field is in the same direction as the primary field then the response will be plotted as a positive value. Alternatively, when the two fields are in opposition the response will be negative. The distance between the transmitter and receiver loops is held fixed and the-datum is plotted at the midpoint between the coils. When both loops are to the left, or to the right, of the plate then the response is positive. The response will be zero when either coil is over the plate. When the receiver, which is a horizontal coil, is over the plate, then no magnetic flux is passing through the coil. There will be zero voltage induced. When the transmitter is directly over the thin conducting plate, there is no flux crossing the plate, hence no currents will be generated in the plate and the secondary magnetic field is zero.
+**Part I:** Consider the basic geometry shown in the figure below 
+
+ .. figure:: ./images/Coupling_3loops.png
+    :align: center
+    :scale: 100 %
+
+There is a time-varying magnetic field due to the transmitter passing through the buried loop and hence induced currents in the buried loop. Those currents generate secondary magnetic fields. The primary field is shown in grey in the left-hand image and the secondary field due to that transmitter is shown in red on the right. Note that the primary and secondary fields point in opposite directions as they pass through the receiver loop.
+
+We adopt the convention that if the secondary field is in the same direction as the primary field then the response will be plotted as a positive value. Alternatively, when the two fields are in opposition the response will be negative. The distance between the transmitter and receiver loops is held fixed and the-datum is plotted at the midpoint between the coils. When both loops are to the left, or to the right, of the plate then the response is positive. The response will be zero when either coil is over the plate. When the receiver, which is a horizontal coil, is over the plate, then no magnetic flux is passing through the coil. There will be zero voltage induced. When the transmitter is directly over the thin conducting plate, there is no flux crossing the plate, hence no currents will be generated in the plate and the secondary magnetic field is zero.
 
 
  .. figure:: ./images/source_receiver_signal.jpg
@@ -244,16 +272,16 @@ electromagnetic energy to heat. As a consequence the energy from the source
 does not propagate to arbitrarily large depths in the earth. The amplitude of
 the EM fields thus decrease due to geometrical spreading and attenuation.
 
-Primary Field in the Earth
-==========================
+Primary field in a conductive earth
+-----------------------------------
 
-The strength of the primary field depends upon:
+We have gained insight in the material above by ignoring the background earth and assuming the EM induction happens only in an isolated target of interest. In that setting, the primary field propagates through the background earth as if it was free-space. In reality the earth has some non-zero electrical conductivity, which will cause it to decay more quickly than it would in free-space. The strength of the primary field in the earth will depend upon:
 
 #. frequency of the transmitter
-#. conductivity of the host material
+#. conductivity of the background material
 #. geometry of the source
 
-Considerable insight can be obtained by first ignoring the geometry of the
+Considerable insight can be obtained by ignoring the geometry of the
 source and observing how a plane electromagnetic wave decays as it propagates
 into the earth. An incoming sinusoidal wave with frequency :math:`\omega = 2 \pi
 f` travels in the atmosphere at the speed of light :math:`c = 3 \times 10^8`
@@ -282,9 +310,9 @@ diagram given below.
        \mid H \mid &= H_0 e^\frac{-z}{\delta}
 
 **Skin Depth:** This is the depth by which the amplitude has decayed to
-:math:`1/e` of its surface value. For a uniform halfspace of conductivity
-:math:`\sigma` the skin depth :math:`\delta` is
+:math:`1/e` of its surface value. We have already encountered the concept of skin depth in the GPR unit. For a uniform halfspace of conductivity
+:math:`\sigma`, and at the low frequencies used in EM induction surveys, the skin depth :math:`\delta` may be approximated as
 
 .. math::
-        \delta = \sqrt{\frac{2}{\mu_0 \omega \sigma} } \simeq 500 \sqrt{\frac{1}{\omega f}} = 500 \sqrt{\frac{\rho}{f}} \text{meters}
+        \delta \approx \sqrt{\frac{2}{\mu_0 \omega \sigma} }
 

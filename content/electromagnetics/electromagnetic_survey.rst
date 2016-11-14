@@ -70,7 +70,7 @@ approximately
           \frac{H_s}{H_p} \simeq i\frac{\omega \mu_0 \sigma s^2}{4}
 
 where :math:`i` is the imaginary unit. The response is purely imaginary, that is, it is found in the quadrature component of the data. The constant conductivity which gives rise to the observed response can be found from the above formula. It is referred to as the apparent conductivity
-:math:`\sigma_a`.
+:math:`\sigma_a`:
 
 .. math::
         \sigma_a = \frac{4}{\omega \mu_0 \sigma s^2} \mathrm{Im}\left\{\frac{H_s}{H_p} \right\},
