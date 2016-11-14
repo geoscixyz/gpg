@@ -130,14 +130,14 @@ In both cases we see that a current :math:`I_0` flowing in a transmitter coil ge
 Circuit model for EM induction
 ==============================
 
-Consider the goal of using an inductive EM source to locate a conductive body buried in a relatively non-conducting (or resistive) host material. The basic picture is shown in the figure :numref:`3loops_conductor_loop` below.
+Consider the goal of using an inductive EM source to locate a conductive body buried in a relatively non-conductive (also called resistive) host material. The basic picture is shown in the figure :numref:`3loops_conductor_loop` below.
 
 .. figure:: ./images/Concepts_3loops-conductor-and-loop.png
     :align: center
     :scale: 100 %
     :name: 3loops_conductor_loop
 
-Eddy currents are generated in the buried body by changing magnetic flux passing through the body. We can learn a lot about the coupling between the transmitter, buried body and receiver by approximating the buried body by a wire coil with resistance :math:`R` and inductance :math:`L`. The resistance approximates the electrical resistivity of the earth and the inductance is a geometrical quantity that depends on the shape of the loop.
+Eddy currents are generated in the buried body by changing magnetic flux passing through the body. We can learn a lot about the coupling between the transmitter, buried body and receiver by approximating the buried body by a wire coil with resistance :math:`R` and inductance :math:`L`. The resistance approximates the electrical resistivity of the earth and the inductance is a geometrical quantity that depends on the shape of the loop. The following discussion of the circuit model will be mostly conceptual. For a more detailed and quantitative discussion please see the `em.geosci <http://em.geosci.xyz/content/maxwell3_fdem/circuitmodel_for_eminduction/index.html>`__ resource--(not required for eosc 350.
     
 Transmitter and primary field
 -----------------------------
@@ -154,39 +154,27 @@ The receiver is most often also a wire coil The voltage recorded in the receiver
 Coupling between transmitter and buried loop
 --------------------------------------------
 
-Recall that current is only generated in a loop by the normal component of the changing magnetic flux passing through it. The magnetic flux is vector quantity. The closer the direction of the primary magnetic flux is to the normal of the buried loop, the better the coupling between the transmitter and buried loop, as illustrated in figure :numref:`coupling_effects` below
+Recall that current is only generated in a loop by the normal component of the changing magnetic flux passing through it. The magnetic flux is vector quantity. The closer the direction of the primary magnetic flux is to the normal of the buried loop, the better the coupling, as illustrated in figure :numref:`coupling_effects` below
 
 .. figure:: ./images/CouplingEffects.png
     :align: center
     :scale: 75 %
     :name: coupling_effects
 
-At the Buried Body
-------------------
-
-There is a time varying magnetic field impinging upon the conductor. This sets
-up an electric force which causes currents to flow. The strength of the
-current is determined by Ohm's law:
+The effect on the secondary field of the relative positions and orientations of the transmitter, receiver, and buried loop can be summarized by a coupling coefficient, which we will denote :math:`C` . The ratio of the secondary field to the primary field is the product of coupling coefficient and an inductive response function :math:`Q` that depends on the frequency of the transmitter and the resistance and inductance of the target loop:
 
 .. math::
-        \vec{J} = \sigma \vec{E}
+  \frac{H_s}{H_p} = CQ(\alpha) = \frac{\alpha^2 + i\alpha}{1 + \alpha^2}
+  
+where :math:`\alpha = \omega L/R` is called the induction number. See `em.geosci <http://em.geosci.xyz/content/maxwell3_fdem/circuitmodel_for_eminduction/understanding_harmonicEMresponse.html#>`__ for full derivations of the coupling coefficient and inductive response function. 
 
-where :math:`\vec{J}` is current density in :math:`A/m^2` (amperes per meter
-squared) and :math:`\vec{E}` is the electric field with units of Volts/meter. This is the version of Ohm's law for extended three-dimensional bodies, analogous to Ohm's law for circuits: :math:`I=V/R`, where :math:`R` is the electrical resistance of the circuit.
+The secondary field will have a much smaller amplitude than the primary field (units of field measurements are often parts per million) and also a phase shift. We can decompose the signal into a component in phase with the transmitter and another component one quarter period out of phase, called the quadrature component. These components can be represented as a complex number whose real part is the in-phase secondary field and whose imaginary part is the quadrature signal.
 
-The currents in the body produce their own magnetic fields just as in the case of a loop. These currents will also vary with time and their magnetic field can be measured at the transmitter. We refer to these fields as the "secondary" magnetic field, :math:`\vec{H_s}`. Note that the secondary field may be out of phase with the primary field.
+For a given coupling constant, the character of the secondary field can vary considerably as a function of the induction number :math:`\alpha`, as illustrated in the following plot
 
-
-
-**Summary**
-
-1. A time varying current in a transmitter produces a time varying magnetic
-   field which impinges upon a conductor in the ground.
-2. The changing flux generates and electric field everywhere.
-3. The electric field generates currents via Ohm's Law, :math:`\vec{J} = \sigma \vec{E}` .
-4. The currents produce their own magnetic fields.
-5. The receiver measures the sum of the primary and secondary fields,
-   (or it measures associated voltages.)
+.. figure:: ./images/induction-response.png
+   :align: center
+   :scale: 100 %
 
 Measured responses
 ------------------
@@ -194,8 +182,6 @@ Measured responses
 .. .. figure:: ./images/Hp_Hs_schematic.jpg
 ..     :align: center
 ..     :scale: 80 %
-
-We can start to understand the geophysical survey anomaly of a conductive body usin g the three-loop model.
 
 The basic understanding of the different coupling between the source and receiver that is due to geometry allows us to sketch the expected responses that arise from a frequency domain horizontal loop survey taken over a conductor which is buried in a resistive host. This is a two-stage process.
 
@@ -214,30 +200,20 @@ The basic understanding of the different coupling between the source and receive
 
 There is a time-varying magnetic field due to the transmitter passing through the buried loop and hence induced currents in the buried loop. Those currents generate secondary magnetic fields. The primary field is shown in grey in the left-hand image and the secondary field due to that transmitter is shown in red on the right. Note that the primary and secondary fields point in opposite directions as they pass through the receiver loop.
 
-We adopt the convention that if the secondary field is in the same direction as the primary field then the response will be plotted as a positive value. Alternatively, when the two fields are in opposition the response will be negative. The distance between the transmitter and receiver loops is held fixed and the-datum is plotted at the midpoint between the coils. When both loops are to the left, or to the right, of the plate then the response is positive. The response will be zero when either coil is over the plate. When the receiver, which is a horizontal coil, is over the plate, then no magnetic flux is passing through the coil. There will be zero voltage induced. When the transmitter is directly over the thin conducting plate, there is no flux crossing the plate, hence no currents will be generated in the plate and the secondary magnetic field is zero.
+We adopt the convention that if the secondary field is in the same direction as the primary field then the response will be plotted as a positive value. Alternatively, when the two fields are in opposition the response will be negative. The distance between the transmitter and receiver loops is held fixed and the-datum is plotted at the midpoint between the coils. When both loops are to the left, or to the right, of the buried loop then the response is positive. The response will be zero when either coil is over the buried loop. When the receiver, which is a horizontal coil, is over the loop, then no magnetic flux is passing through the coil. There will be zero voltage induced. When the transmitter is directly over the buried loop, there is no flux crossing the loop, hence no currents will be generated in it and the secondary magnetic field is zero.
 
 
- .. figure:: ./images/source_receiver_signal.jpg
-    :align: center
-    :scale: 100 %
+..  .. figure:: ./images/source_receiver_signal.jpg
+..     :align: center
+..     :scale: 100 %
 
 **Part II:** The basic sketch for the shape of the anomalous signal is
 determined from the geometry of the coils and the relative locations of
 transmitter, receiver and the conductive body. In practice we measure both an
-in-phase and an out-of-phase component. Each of these curves will look like
-the basic curve (given above). We need only establish relative amplitude. From
-the general response curve we find that the in-phase (or real component) is
-larger than the out-of-phase (imaginary) component when :math:`\omega \sigma`
+in-phase and an out-of-phase component. Each of these curves will have the same general shape as the one plotted above. We need only establish their relative amplitudes. From the general response curve we find that the in-phase (or real component) is larger than the out-of-phase (imaginary) component when :math:`\omega \sigma`
 (or :math:`\omega L / R`) is large.
 
-Below we plot the responses for a horizontal loop survey taken over a vertical
-conductive plate in which:
-
-1.  strike length of the plate: S = 1.0 units
-2.  width of the plate W= 0.5 units (length in vertical extent)
-3.  depth of burial Z=0.13 units
-4.  L=distance between source and transmitter coil L=0.76 units (Z/L=0.17)
-5.  conductivity-thickness product = 1.0
+Below we plot the responses for a survey taken over a buried loop
 
 Because the body is conductive and the frequency of the survey is high, the
 value of :math:`\omega L / R` is large and the in-phase response is larger than
@@ -247,7 +223,8 @@ the quadrature response.
     :align: center
     :scale: 80 %
 
-
+You can explore the three-loop circuit model interactively using the `FEM3loop app <http://mybinder.org/repo/ubcgif/gpgLabs//notebooks/EM/FEM3Loop/Fem3loop.ipynb>`__.
+    
 Conductive Host
 ===============
 
@@ -314,5 +291,31 @@ diagram given below.
 :math:`\sigma`, and at the low frequencies used in EM induction surveys, the skin depth :math:`\delta` may be approximated as
 
 .. math::
-        \delta \approx \sqrt{\frac{2}{\mu_0 \omega \sigma} }
+        \delta \approx \sqrt{\frac{2}{\mu_0 \omega \sigma} } \approx 500\sqrt{{\rho}{f}}
 
+where :math:`\rho = 1/\sigma` is resistivity and :math:`\omega/(2\pi)` is frequency.
+        
+At the Buried Body
+------------------
+
+There is a time varying magnetic field impinging upon the conductor. This sets
+up an electric force which causes currents to flow. The strength of the
+current is determined by Ohm's law:
+
+.. math::
+        \vec{J} = \sigma \vec{E}
+
+where :math:`\vec{J}` is current density in :math:`A/m^2` (amperes per meter
+squared) and :math:`\vec{E}` is the electric field with units of Volts/meter. This is the version of Ohm's law for extended three-dimensional bodies, analogous to Ohm's law for circuits: :math:`I=V/R`, where :math:`R` is the electrical resistance of the circuit.
+
+The currents in the body produce their own magnetic fields just as in the case of a loop. These currents will also vary with time and their magnetic field can be measured at the transmitter. We refer to these fields as the "secondary" magnetic field, :math:`\vec{H_s}`. Note that the secondary field may be out of phase with the primary field.
+
+**Summary**
+
+1. A time varying current in a transmitter produces a time varying magnetic
+   field which impinges upon a conductor in the ground.
+2. The changing flux generates and electric field everywhere.
+3. The electric field generates currents via Ohm's Law, :math:`\vec{J} = \sigma \vec{E}` .
+4. The currents produce their own magnetic fields.
+5. The receiver measures the sum of the primary and secondary fields,
+   (or it measures associated voltages.)
