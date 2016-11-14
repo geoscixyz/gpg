@@ -180,4 +180,6 @@ Either the curves shown previously or the following formulae are therefore usefu
         \phi_H (z) &= 2- \frac{4z}{(4z^2 + 1)^{1/2}} \\[0.8em]
                R_V &= \frac{1}{(4z^2 + 1)^{1/2} }\\[0.8em]
                R_H &=  (4z^2 + 1)^{1/2} - 2z \\[0.8em]
+               
+You can explore the response of a multilayered earth further using the `layered earth response app <http://mybinder.org/repo/ubcgif/gpgLabs//notebooks/EM/ResponseFct/ResponseFct.ipynb>`__.
 
