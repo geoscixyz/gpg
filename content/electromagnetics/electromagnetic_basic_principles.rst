@@ -291,7 +291,7 @@ diagram given below.
 :math:`\sigma`, and at the low frequencies used in EM induction surveys, the skin depth :math:`\delta` may be approximated as
 
 .. math::
-        \delta \approx \sqrt{\frac{2}{\mu_0 \omega \sigma} } \approx 500\sqrt{{\rho}{f}}
+        \delta \approx \sqrt{\frac{2}{\mu_0 \omega \sigma} } \approx 500\sqrt{\frac{\rho}{f}}
 
 where :math:`\rho = 1/\sigma` is resistivity and :math:`\omega/(2\pi)` is frequency.
         
