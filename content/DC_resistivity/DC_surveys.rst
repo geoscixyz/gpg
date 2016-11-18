@@ -130,7 +130,7 @@ resistivity". The derivation is a three step process:
 
  .. figure:: ./images/DCR_Gradient-Schlumberger_Array.svg
 	:align: center
-	:scale: 50 %
+	:figwidth: 50 %
 	:name: surveydesign
 	
 	Survey Design
