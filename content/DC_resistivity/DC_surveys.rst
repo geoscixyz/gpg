@@ -128,25 +128,25 @@ resistivity". The derivation is a three step process:
 
 - Finally, since we must make potential measurements using two electrodes, an expression for potential difference can be derived as the difference between relations for potential at single electrodes.
 
-The actual measurement configuration can be summarized as shown in :numref:`Survey Design`.
+ .. figure:: ./images/DCR_Gradient-Schlumberger_Array.svg
+	:align: center
+	:figwidth: 50 %
+	:name: surveydesign
+	
+	Survey Design
+
+The actual measurement configuration can be summarized as shown in :numref:`surveydesign`.
 This conceptualization is useful, regardless of the actual placement of
 electrodes on the surface.
 
- .. figure:: ./images/figure5.gif
-	:align: center
-	:scale: 100 %
-	:name: Survey Design
-
-	Survey Design
-
 The measured voltage for any arrangement of electrodes can be derived from
-:numref:`Survey Design` as follows for an half-space:
+:numref:`surveydesign` as follows for an half-space:
 
  .. math::
 	
 	\Delta V &= \frac{I \rho}{2 \pi} \left \{ \frac{1}{r_{AM}} - \frac{1}{r_{BM}} - \frac{1}{r_{AN}} + \frac{1}{r_{BN}}  	 \right \}\\[0.8em]
 
-	
+ ..math::
 	\Delta V &=I \rho G
 
 **G** is a geometric factor (including the factor :math:`1/2 \pi`), which depends
@@ -156,34 +156,78 @@ For heterogeneous subsurface, see the secton :ref:`DC_data` for more information
 Survey configurations
 =====================
 
+ .. figure:: ./images/dcr_2dgeneral.png
+    :name: dcr_2dgeneral
+    :align: right
+    :figwidth: 50%
+
+There are many geometries of electrodes that can be used in the field for gathering DC
+resistivity (and induced polarization) data. The electrodes can be co-linear 
+or they can be in an arbitrary configuration.
+Current and potential electrodes can be on the surface or in boreholes. The
+choice of which survey geometry to use is governed by:
+
+	1.  what conductivity structure is sought. For example, the location of a target may be all that is needed, or it may be necessary to characterize the details of the target.
+	2. field constraints for laying out electrodes.
+	3. The economics of the situation and which equipment is used. Since wires must be placed to all electrode locations, and electrodes must be planted in the ground, surveys covering large areas in difficult terrain with hard or gravelly surface materials can rapidly become very expensive.
+
+The most common specific arrays are detailed in :numref:`SurveyConfiguration` and in the interactive figure below, but there are several general types of surveys conducted on the surface.
+
  .. figure:: ./images/figure6.gif
 	:align: center
 	:scale: 100 %
 	:name: SurveyConfiguration
 
-There is a wide assortment of configurations commonly used for gathering DC
-resistivity (and induced polarization) data. In the field, the choice of array
-depends upon:
+**Soundings**: 
+  a fixed geometry of electrodes is expanded symetrically about a
+  central point of the array. The data provide information about how the
+  electrical structure varies with depth. The data curve is often called a
+  "sounding" and a single sounding can be inverted to produce a 1D
+  conductivity model. If multiple soundings are available they can be inverted
+  in 2D or 3D. The most common sounding configurations are the Wenner and
+  Schlumberger arrays.
 
-	1. The type of information needed. For example, the location of a target may be all that is needed, or it may be necessary to characterize the details of the target.
-	2. The most likely type of model (1D, 2D, or 3D) that will be used for interpretation.
-	3. The economics of the situation. Since wires must be placed to all electrode locations, and electrodes must be planted in the ground, surveys covering large areas in difficult terrain with hard or gravelly surface materials can rapidly become very expensive.
+**Profiling**:
+  a fixed array is moved along a line. The data  provide
+  information about lateral variations to a depth that is determined by the
+  length of the array. All seven types shown in :numref:`SurveyConfiguration` 
+  and in the interactive figure below can be used for profiling.
 
-The most common specific arrays are detailed in :numref:`SurveyConfiguration` and in the interactive figure below, but there are several general types of surveys conducted on the surface.
+**General configuration**: 
+  These are combinations of profiling and sounding
+  arrays. They are often obtained by defining an electrode array and expanding
+  and translating it along a line. In practice, this is achieved by laying out
+  a line of electrodes, each of which can be used as a current or potential
+  electrode. The most common acquistion arrays are dipole-dipole, pole-dipole,
+  or pole-pole arrays.
 
-**Soundings** provide 1D solutions, or vertical structure under one surface
-location. Electrode geometry is varied symmetrically about a single
-measurement location. The most common configurations for soundings are the
-Wenner and Schlumberger arrays.
+**Gradient array**:
+  This is a reconnaissance array that uses a fixed location
+  for the A and B electrodes which are far apart. Measurements are taken in an
+  area between the current electrodes. Potential differences in orthogonal
+  directions can be acquired but usually only potential differences between
+  electrodes aligned in the same direction as the A and B electrodes are
+  obtained.
 
-**Profiling** provides information about lateral variations, usually with some
-information about vertical variations. Most profiles involve placing all
-electrodes on survey lines so that 2D models of the earth's electrical
-structure can be found. All seven types shown in :numref:`SurveyConfiguration` 
-and in the interactive figure below can be used for profiling.
+Traditionally, data have been collected using co-linear electrodes. Depending
+upon the relative placement, the geometries have been given specific names.
+The interactive figure below shows how electrodes are placed for various named
+arrays. Electrodes placed on lines imply that the array is usually used for
+profiling. A circle at the array's center implies that the array is generally
+expanded symmetrically about its center for acquiring sounding data.
+
+.. raw:: html
+    :file: figure7.html
 
 **Three dimensional configurations** of several types exist, in which electrodes
 are not in line. Examples include:
+
+.. figure:: images/dcr_3dgeneral.png
+    :name: dcr_3dgeneral
+    :align: right
+    :figwidth: 50%
+
+    Electrodes can be placed at the surface or along boreholes.
 
 - Equatorial dipole-dipole array (:numref:`SurveyConfiguration`), which is used primarily for very shallow work such as archaeological investigations.
 - Twin Probe configuration (basically a Wenner Gamma in :numref:`SurveyConfiguration` above, but with spacing more like dipole-dipole) is also used mainly for very shallow investigations such as archaeological work.
@@ -206,17 +250,52 @@ section.
 receivers in various combinations of surface and down-hole locations. These
 are not discussed further here.
 
-The following images show how electrodes are placed for the various named
-arrays. Electrodes placed on lines imply that the array is usually used for
-profiling. A circle at the array's center implies that the array is generally
-expanded symmetrically about its center for acquiring sounding data.
+.. list-table::
+   :header-rows: 0
+   :widths: 10 10
+   :stub-columns: 0
 
+   *  - .. figure:: images/dcr_colinear.png
+          :name: dcr_colinear
+          :figwidth: 100%
 
-.. raw:: html
-    :file: figure7.html
+          An example of a co-linear survey with multiple lines.
+      - .. figure:: images/dcr_offset.png
+          :name: dcr_offset
+          :figwidth: 100%
 
+          An example of an offset acquisition survey in 3D. The potential
+          electrodes are on a different line than the current electrodes, as
+          shown for two sets of MN electrodes.
 
+   *  - .. figure:: images/dcr_escan.png
+          :name: dcr_escan
+          :figwidth: 100%
 
+          An example of an E-Scan survey, which uses a pole-pole configuration
+          in a non-grid format.
+
+      - .. figure:: images/dcr_crosswell.png
+          :name: dcr_crosswell
+          :figwidth: 100%
+
+          A cross-well survey has electrodes in boreholes and each electrode
+          can be either a current or potential electrode. The figure shows an
+          example of an along-well transmitter, where A and B are in the same
+          well, and a cross-well transmitter, where A and B are in different
+          wells.
+
+   *  - .. figure:: images/dcr_tunnel.png
+          :name: dcr_tunnel
+          :figwidth: 100%
+
+          DC resistivity surveys can also be conducted underground, in a
+          tunnel environment. The tunnel restricts where the electrodes can be
+          placed but any of the above mentioned surveys can be collected. The
+          figure shows an example where the current electrode and potential
+          electrodes are in different tunnels.
+
+      -
 
 
 
