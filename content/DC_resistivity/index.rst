@@ -31,5 +31,6 @@ Contents:
    DC_basic_principles_index
    DC_surveys
    DC_data
+   DC_interpretation
    DC_instruments
    DC_examples
