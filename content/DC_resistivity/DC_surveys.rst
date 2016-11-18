@@ -129,10 +129,10 @@ resistivity". The derivation is a three step process:
 - Finally, since we must make potential measurements using two electrodes, an expression for potential difference can be derived as the difference between relations for potential at single electrodes.
 
  .. figure:: ./images/DCR_Gradient-Schlumberger_Array.svg
-    :align: right
-    :figwidth: 50%
-    :name: surveydesign
-
+	:align: center
+	:scale: 50 %
+	:name: surveydesign
+	
 	Survey Design
 
 The actual measurement configuration can be summarized as shown in :numref:`surveydesign`.
