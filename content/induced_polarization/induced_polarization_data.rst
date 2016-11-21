@@ -15,13 +15,13 @@ of frequency) of the phenomenon is observed in the frequency domain.
 Two types of time domain data
 =============================
 
-.. figure:: ./images/IP_source.gif
+ .. figure:: ./images/IP_source.gif
 	:align: center
 	:scale: 100 %
-	:name: duty cylce
+	:name: duty_cylce
 
 
-.. figure:: ./images/potentials.gif
+ .. figure:: ./images/potentials.gif
 	:align: right
 	:scale: 100 %
 
@@ -29,7 +29,7 @@ Consider the experiment illustrated in the following figure. Current, :math:`I`,
 is injected into the ground at the source electrodes and voltage, :math:`V`, is
 measured at the potential electrodes. The source is DC (direct current) in the
 sense that when it is on, there is no variation. However, in this case it is
-turned on and off with a duty cycle as shown in the :numref:`duty cycle`. Two methods of
+turned on and off with a duty cycle as shown in the :numref:`duty_cycle`. Two methods of
 measuring chargeability in the time domain are described below.
 
 
@@ -167,7 +167,7 @@ Data acquisition in Time domain IP
 ==================================
 
 
-The source is here duty-cycle on-off as shown in :numref:`duty cycle`. As noted above, when time domain IP is recorded, chargeability is measured as
+The source is here duty-cycle on-off as shown in :numref:`duty_cycle`. As noted above, when time domain IP is recorded, chargeability is measured as
 the area under the decay curve normalized by "primary" voltage :math:`V_P`,
 using
 
