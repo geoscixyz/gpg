@@ -29,7 +29,7 @@ Consider the experiment illustrated in the following figure. Current, :math:`I`,
 is injected into the ground at the source electrodes and voltage, :math:`V`, is
 measured at the potential electrodes. The source is DC (direct current) in the
 sense that when it is on, there is no variation. However, in this case it is
-turned on and off with a duty cycle as shown in the :numref:`duty_cycle`. Two methods of
+turned on and off with a duty cycle as shown above. Two methods of
 measuring chargeability in the time domain are described below.
 
 
@@ -211,7 +211,7 @@ time domain systems.
 Data acquisition in Frequency domain IP
 =======================================
 
-The source is here a sinusoid as shown in :numref:`sinusoids`.
+The source is here a sinusoid.
 
 Frequency effect
 ----------------
