@@ -1,8 +1,8 @@
 
 .. _induced_polarization_data:
 
-Measurements and Data
-*********************
+Data
+****
 
 Introduction
 ============
@@ -91,11 +91,6 @@ For practical measurements, we do not integrate over the entire discharge curve.
 Instead, a finite interval of integration is chosen.
 For example, the Newmont standard chargeability integrates from t = 0.15 s to 1.1 s.
 
-
-
-.. figure:: images/electrode_conductivity_measurements.png
-    :align: right
-    :scale: 35%
 
 Two types of frequency domain data
 ==================================
@@ -231,8 +226,8 @@ Hertz.
 Apparent Chargeability Measurements
 -----------------------------------
 
-When the phase of voltage ($\Delta V$) with respect to input current ( I ) is measured directly,
-the impedance Z of the ground at different frequencies ($\omega$) can be determined based on the material. This
+When the phase of voltage (:math:`\Delta V`) with respect to input current ( I ) is measured directly,
+the impedance Z of the ground at different frequencies (:math:`\omega`) can be determined based on the material. This
 requires careful synchronization between the receiver and the transmitter.
 
 .. math::
