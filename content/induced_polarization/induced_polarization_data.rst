@@ -167,7 +167,7 @@ Data acquisition in Time domain IP
 ==================================
 
 
-The source is here duty-cycle on-off as shown in :numref:`duty_cycle`. As noted above, when time domain IP is recorded, chargeability is measured as
+The source is here an on-off duty cycle. As noted above, when time domain IP is recorded, chargeability is measured as
 the area under the decay curve normalized by "primary" voltage :math:`V_P`,
 using
 
