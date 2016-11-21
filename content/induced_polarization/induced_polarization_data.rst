@@ -1,4 +1,5 @@
-.. _induced_polarization_measurements_data:
+
+.. _induced_polarization_data:
 
 Measurements and Data
 *********************
@@ -18,13 +19,14 @@ Consider the experiment illustrated in the following figure. Current, :math:`I`,
 is injected into the ground at the source electrodes and voltage, :math:`V`, is
 measured at the potential electrodes. The source is DC (direct current) in the
 sense that when it is on, there is no variation. However, in this case it is
-turned on and off with a duty cycle as shown in the figure. Two methods of
+turned on and off with a duty cycle as shown in the :numref:`duty cycle`. Two methods of
 measuring chargeability in the time domain are described below.
 
 
 .. figure:: ./images/IP_source.gif
 	:align: center
 	:scale: 100 %
+	:name: duty cylce
 
 
 .. figure:: ./images/potentials.gif
@@ -70,6 +72,30 @@ normalized by the source voltage.
 .. figure:: ./images/source_and_measured_V.gif
 	:align: center
 	:scale: 100 %
+
+
+Integrated Chargeability
+------------------------
+
+
+The integrated chargeability (:math:`M`) characterizes the quantity of potential energy stored within a chargeable rock due to the accumulation of ionic charges.
+The integrated chargeability is defined as the area under the discharge curve normalized by the DC voltage (:math:`V_m`):
+
+.. math::
+    M = \frac{1}{V_m} \int_{t_1}^{t_2} V_{off}(t) \, dt
+
+
+Numerical values for the integrated chargeability are typically given in ms. 
+
+For practical measurements, we do not integrate over the entire discharge curve.
+Instead, a finite interval of integration is chosen.
+For example, the Newmont standard chargeability integrates from t = 0.15 s to 1.1 s.
+
+
+
+.. figure:: images/electrode_conductivity_measurements.png
+    :align: right
+    :scale: 35%
 
 Two types of frequency domain data
 ==================================
@@ -117,6 +143,7 @@ converted to a percent frequency effect by multiplying by 100.
 .. figure:: ./images/sinusoids.gif
 	:align: center
 	:scale: 100 %
+	:name: sinusoids
 
 Relating the four types of data
 ===============================
@@ -136,13 +163,11 @@ thumb allows conversion between the different data sets:
 										|               70 msec                |
 										+------------+------------+------------+
 
-Data acquisition
-================
+Data acquisition in Time domain IP
+==================================
 
-Time domain IP
---------------
 
-As noted above, when time domain IP is recorded, chargeability is measured as
+The source is here duty-cycle on-off as shown in :numref:`duty cycle`. As noted above, when time domain IP is recorded, chargeability is measured as
 the area under the decay curve normalized by "primary" voltage :math:`V_P`,
 using
 
@@ -183,8 +208,13 @@ time domain systems.
 
 
 
-Frequency domain IP
--------------------
+Data acquisition in Frequency domain IP
+=======================================
+
+The source is here a sinusoid as shown in :numref:`sinusoids`.
+
+Frequency effect
+----------------
 
 The percent frequency effect was defined above as either 
 
@@ -198,12 +228,54 @@ frequency (a few tens to hundreds of Hertz) the second type of resistivities
 can be measured at frequencies on the order of a few tens to hundreds of
 Hertz.
 
-Phase IP
---------
+Apparent Chargeability Measurements
+-----------------------------------
 
-When the phase of voltage with respect to input current is measured directly,
-the impedance of the ground can be determined based on the material. This
+When the phase of voltage ($\Delta V$) with respect to input current ( I ) is measured directly,
+the impedance Z of the ground at different frequencies ($\omega$) can be determined based on the material. This
 requires careful synchronization between the receiver and the transmitter.
+
+.. math::
+    Z(\omega ) = \frac{\Delta V (\omega)}{I (\omega)}
+
+
+In chargeable rocks, the measured voltage depends on the frequency of the alternating current.
+So in order to characterize the resistive properties of the rock, we need to determine the impedence over a spectrum of frequencies.
+
+The apparent resistivity of the ground at each frequency can be obtained from the impedance and the geometric factor (see :ref:`dc_surveys`)
+
+
+In order to characterize the ground's chargeable properties, we fit the experimentally acquired resistivity values to a mathematical model (illstrated below).
+A well-established model for explaining the resistivities of chargeable rocks is the Cole-Cole model:
+
+.. math::
+    \rho (\omega) = \rho_0 \Bigg [ 1 - \eta \Bigg ( 1 - \frac{1}{1 + (i\omega\tau )^C} \Bigg ) \Bigg ]
+
+
+where :math:`\rho_0` is the DC resistivity and :math:`\eta` is the intrinsic chargeability.
+Parameters :math:`\tau` and :math:`C` define the rate at which ionic charges accumulate when an electric field is applied.
+
+
+.. figure:: images/electrode_chargeability_curve_fit.png
+    :align: center
+    :scale: 40%
+
+
+Assuming :math:`C=1`, :math:`\tau` defines the exponential decay in voltage during the off-time measurements (see earlier).
+The conductivity of the rock can be obtained by taking the reciprocal of the complex resistivity:
+
+.. math::
+    \sigma (\omega) = \frac{1}{\rho (\omega)}
+
+
+Additionally, Ohm's law still applies for chargeable rocks.
+Thus:
+
+
+.. math::
+    \vec J (\omega) = \sigma (\omega) \vec E (\omega)
+
+
 
 
 Choice of time, frequency or phase measurements 
