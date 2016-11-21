@@ -26,4 +26,4 @@ Contents:
    induced_polarization_basic_principles
    induced_polarization_survey
    induced_polarization_data
-   induced_polarization_forward_modeling
+   induced_polarization_interpretation

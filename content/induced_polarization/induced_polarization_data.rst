@@ -15,14 +15,6 @@ of frequency) of the phenomenon is observed in the frequency domain.
 Two types of time domain data
 =============================
 
-Consider the experiment illustrated in the following figure. Current, :math:`I`,
-is injected into the ground at the source electrodes and voltage, :math:`V`, is
-measured at the potential electrodes. The source is DC (direct current) in the
-sense that when it is on, there is no variation. However, in this case it is
-turned on and off with a duty cycle as shown in the :numref:`duty cycle`. Two methods of
-measuring chargeability in the time domain are described below.
-
-
 .. figure:: ./images/IP_source.gif
 	:align: center
 	:scale: 100 %
@@ -32,6 +24,14 @@ measuring chargeability in the time domain are described below.
 .. figure:: ./images/potentials.gif
 	:align: right
 	:scale: 100 %
+
+Consider the experiment illustrated in the following figure. Current, :math:`I`,
+is injected into the ground at the source electrodes and voltage, :math:`V`, is
+measured at the potential electrodes. The source is DC (direct current) in the
+sense that when it is on, there is no variation. However, in this case it is
+turned on and off with a duty cycle as shown in the :numref:`duty cycle`. Two methods of
+measuring chargeability in the time domain are described below.
+
 
 1. The following is a definition of chargeability but it is not possible to
    measure it exactly in the field. The figure to the right shows voltage
