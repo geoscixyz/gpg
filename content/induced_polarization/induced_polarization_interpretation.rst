@@ -1,7 +1,10 @@
-.. _induced_polarization_forward_modeling:
+.. _induced_polarization_Interpretation:
+
+Interpretation
+**************
 
 Forward Modeling
-****************
+================
 	
 Essential equations 
 -------------------
@@ -39,7 +42,8 @@ using the following formulation:
 The matrix form for this equation is   :math:`Jm = d`,  where :math:`J` is an N x
 M sensitivity matrix (N is the number of data points and M is the number of
 cells in a rectangular discretization grid), and the :math:`J_{ij}` are
-sensitivities for the DC resistivity problem.
+sensitivities for the DC resistivity problem. So in order to model (and invert) IP
+data for interpretation, we need to solve the DC problem first.
 
 Finally, if "small" chargeabilities are assumed, the linear relationship means
 measured data and chargeabilities recovered by inversion have the same units.
@@ -48,6 +52,22 @@ This means that the common types of IP data (time domain, phase, or PFE) can
 be employed as input to inversion routines without change.
 
 These points are made in Oldenburg and Li, 1994.
+
+Inversion of IP data
+====================
+
+Inversion of IP data is related to the inversion of DC data (see :ref:`DC_interpretation`). Concepts such
+as Depth of Investigation still hold in the IP case.
+
+Inversion of IP data requires a conductivity model obtained by inverted the DC data, as the sensitivity of an IP
+survey depends on the electrical conductivity distribution.
+
+ .. figure:: ./images/IP_inversion.jpg
+ 	:scale: 70%
+ 	:align: center
+ 	:name: ip_inversion 
+
+
 
 References
 ==========

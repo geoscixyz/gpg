@@ -1,4 +1,4 @@
-.. _dcr_interpretation:
+.. _DC_interpretation:
 
 Interpretation
 ==============
