@@ -52,7 +52,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Geophysics for Practicing Geoscientists'
+project = u'Applied Geophysics for Practicing Geoscientists'
 copyright = u'2014-2016, UBCGIF'
 # copyright = """
 # <a rel="license"
