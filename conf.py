@@ -105,7 +105,7 @@ linkcheck_ignore = [
   'https://vimeo.com/*',
 ]
 linkcheck_retries = 3
-linkcheck_timeout = 1000
+linkcheck_timeout = 2000
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
