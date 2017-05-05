@@ -52,8 +52,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Applied Geophysics for Practicing Geoscientists'
-copyright = u'2014-2016, UBCGIF'
+project = u'GPG'
+# copyright = u'2014-2016, UBCGIF'
 # copyright = """
 # <a rel="license"
 #    href="http://creativecommons.org/licenses/by/4.0/"
@@ -223,7 +223,7 @@ html_favicon = "gpg.ico"
 #html_show_sphinx = True
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
-#html_show_copyright = True
+html_show_copyright = False
 
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the
