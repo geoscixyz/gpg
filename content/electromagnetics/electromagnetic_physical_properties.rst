@@ -26,4 +26,4 @@ While conductivity is the generally the main physical property of interest, EM i
 
 .. _magnetic permeability: http://em.geosci.xyz/content/physical_properties/magnetic_permeability/index.html
 
-.. _electrical permitivity: http://em.geosci.xyz/content/physical_properties/electrical_permittivity/index.html
+.. _electrical permitivity: http://em.geosci.xyz/content/physical_properties/dielectric_permittivity/index.html
