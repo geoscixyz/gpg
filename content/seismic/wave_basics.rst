@@ -54,7 +54,7 @@ The below animation shows the propagation of a vertically polarized S wave. Note
 Note that if :math:`\mu = 0` then :math:`v_s = 0`. This tells us that shear
 waves do not travel in a liquid.
 
-Seismic reflection and refraction surveying is usually carried out by the analysis of P waves. S-waves can also be used but they are harder to generate artificially compared to P-waves and require more complex receivers than ones designed to measure just P waves. In marine surveys (unless sources and receivers are coupled directly to the ocean bottom) it is not possible to generate or measure P waves at all. However, since :math:`v_s < v_p`, there are situations where it is beneficial to
+Seismic reflection and refraction surveying is usually carried out by the analysis of P waves. S-waves can also be used but they are harder to generate artificially compared to P-waves and require more complex receivers than ones designed to measure just P-waves. In marine surveys (unless sources and receivers are coupled directly to the ocean bottom) it is not possible to generate or measure S-waves at all. However, since :math:`v_s < v_p`, there are situations where it is beneficial to
 use S-waves instead of P-waves.
 
 
