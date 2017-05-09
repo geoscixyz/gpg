@@ -29,6 +29,8 @@ import jinja2
 import urllib, hashlib
 import json
 
+from flask import request
+
 from webapp2 import Route, RedirectHandler
 
 TEMPLATEFOLDER = '_build/html/'
