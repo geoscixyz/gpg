@@ -21,11 +21,11 @@ Fundamental procedure
 	:scale: 152 %
 
 	type (1)
-	
+
 
 **Objective:** We want to image reflections across layers where there is an impedance change.
 
-**Reason for using many "redundant" echoes--to reduce noise:** We need to gather several versions of the experiment and stack.   
+**Reason for using many "redundant" echoes--to reduce noise:** We need to gather several versions of the experiment and stack.
 
 **Logistics:** However, surveying with one shot and many geophones is more cost-effective.
 
@@ -55,5 +55,5 @@ Fundamental procedure
 	:align: center
 	:scale: 100 %
 
-.. [#f1] From Kearey, Philip and Micheal Brooks, 'An Introduction to Geophysical Exploration'. 2nd ed. Blackwell Science: 1991. 
+.. note:: From Kearey, Philip and Micheal Brooks, 'An Introduction to Geophysical Exploration'. 2nd ed. Blackwell Science: 1991.
 
