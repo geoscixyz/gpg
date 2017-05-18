@@ -63,7 +63,7 @@ Strain
 Strain defines the deformation of a material under the influence of an applied stress.
 When a body is stressed it may undergo a change in size and shape.
 If this occurs, the body is said to be "strained".
-For relatively small strains, the body will recover its original shape and volume when the stress is removed. 
+For relatively small strains, the body will recover its original shape and volume when the stress is removed.
 This is known as "elastic strain".
 If the strain is too large, then the body deforms **plastically** and may even fracture.
 Unlike elastic strain, plastic strain permanently alters the shape of the body.
@@ -72,7 +72,7 @@ Unlike elastic strain, plastic strain permanently alters the shape of the body.
 .. figure :: ./images/stressstrain.png
 	:align: right
 	:figwidth: 35%
-	
+
 	Elastic and plastic deformation
 
 
@@ -270,7 +270,7 @@ As a general rule, Rayleigh waves at the surface of the Earth have a propagation
     :align: right
 
 Love waves are surface waves in which particle motion is parallel to the Earth's surface and perpendicular to the direction of wave propagation.
-The particle motion which defines Love waves can be seen in the diagram on the right [#f1]_.
+The particle motion which defines Love waves can be seen in the diagram on the right :ref:[#f1].
 The amplitude of lateral motion which describes Love waves decreases with depth.
 Love waves travel faster than Rayleigh waves but do not travel as fast as P or S waves.
 Thus Love waves have a propagation speed of:
