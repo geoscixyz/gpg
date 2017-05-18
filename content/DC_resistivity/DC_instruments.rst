@@ -133,7 +133,7 @@ procedure is being implemented in borehole projects, as well as surface
 surveys. Examples of systems that work in this manner are given in the
 following list (as of January 2007).
 
-- http://www.agiusa.com/index.shtml (images to the right)
+- https://www.agiusa.com (images to the right)
 - http://www.zonge.com/
 
  .. figure:: ./images/ohm_mapper.jpg
