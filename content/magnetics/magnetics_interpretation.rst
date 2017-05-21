@@ -355,9 +355,11 @@ We note the following features:
     :figwidth: 100 %
     :name: TKC_DO27
 
+
 .. image:: https://img.shields.io/badge/powered%20by-SimPEG-blue.svg
     :target: http://simpeg.xyz
     :alt: SimPEG</pre>
+
 
 .. _Simpeg: http://simpeg.xyz
 
