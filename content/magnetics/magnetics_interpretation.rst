@@ -300,6 +300,7 @@ The inverse problem is illustrated in :numref:`mag_inverse`. Similar to a medica
     :figwidth: 50 %
     :name: mag_inverse
 
+
 Inverse Problem
 ^^^^^^^^^^^^^^^
 
@@ -363,7 +364,7 @@ We note the following features:
 
 .. _Simpeg: http://simpeg.xyz
 
-.. _tutorial: http://simpegtutorials.readthedocs.io/en/latest/content/stories/PF_MAG.html
+.. _tutorial: http://computation.geosci.xyz/case-studies/PF/TKC_PF.html
 
 Validation
 ^^^^^^^^^^
