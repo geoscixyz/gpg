@@ -46,7 +46,7 @@ object experiencing acceleration:
 
 
 Comparing these two equations, it should be clear that most of Eq1 represents
-an acceleration: \:math:`a = GM/r^2`. In fact this is gravitational
+an acceleration: :math:`a = GM/r^2`. In fact this is gravitational
 acceleration, and we call it :math:`g`. This gravitational acceleration :math:`g`
 is nominally approximately 9.8 m/s\ :sup:`2`\  on Earth's surface at the
 equator. Local variations in :math:`g` will be caused by local variations in
