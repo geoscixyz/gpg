@@ -11,38 +11,38 @@ As you will see, many of the basic fundamentals which are used to describe seism
 
 .. sidebar:: GPR Source
 	
-	.. figure:: images_new/GPR_wavelet_example.png
-			:align: center
-	
-	                Wavelet representing the pulse of EM waves within the GPR signal.
+    .. figure:: images_new/GPR_wavelet_example.png
+            :align: center
+            :name: fig_gpr_wavelet_0
+
+            Wavelet representing the pulse of EM waves within the GPR signal.
 
 
-	.. figure:: images_new/Electromagneticwave3D.gif
-			:align: center
+    .. figure:: images_new/Conductor.gif
+            :align: center
+            :name: fig_gpr_conductor_gif_0
 
-			Electromagnetic waves. `Image source <https://commons.wikimedia.org/wiki/File:Electromagneticwave3D.gif>`__ .
+            GPR signals reflecting off a buried conductor.
 
 
-As we mentioned earlier, the source of the GPR system sends a pulse of high-frequency electromagnetic waves (radiowaves) into the Earth.
+As we mentioned earlier, the source of the GPR system sends a pulse of high-frequency electromagnetic waves (radiowaves) into the Earth (:numref:`fig_gpr_wavelet_0`).
 Therefore, GPR equipment does **not** send a continuous signal into the Earth.
 The signal pulse contains a set of electromagnetic waves which oscillate near a particular frequency.
 And as these radiowaves propagate through the Earth, they are distorted due to the distribution of subsurface electromagnetic properties (:math:`\sigma , \; \mu` and :math:`\varepsilon`).
 
-When radiowaves within the pulse come into contact with an interface (a boundary defined by an abrupt change in the Earth's electromagnetic properties), portions of the incoming radiowaves can be reflected, transmitted and/or refracted.
-This is illustrated in the figure below.
-The reflection, transmission and refraction of the radiowaves depends on the electromagnetic properties defining each side of the interface as well as the incident angle of the incoming radiowave signal.
-To see an example of the GPR signal as it propagates through the Earth, see the `link <https://www.youtube.com/watch?v=eqfgP4qVK4s>`__ to this video.
+When radiowaves within the pulse come into contact with an interface (a boundary defined by an abrupt change in the Earth's electromagnetic properties), portions of the incoming radiowaves can be reflected, transmitted and/or refracted (:numref:`fig_gpr_conductor_gif_0`). The reflection, transmission and refraction of the radiowaves depends on the electromagnetic properties defining each side of the interface as well as the incident angle of the incoming radiowave signal.
 
-For the purposes of GPR, the Earth may be thought of as a set of homogeneous regions separated by interfaces.
+For the purposes of GPR, the Earth may be thought of as a set of homogeneous regions separated by interfaces (:numref:`fig_schematic_gpr_fundamentals`).
 Using signals measured by the receivers, the goal of GPR is to define these interfaces and thus gain information about structures under the Earth's surface; which can be naturally occurring or man-made.
 
 
 
 .. figure:: images_new/GPR_schematic_example.jpg
-	:align: center
-	:figwidth: 70%
+    :align: center
+    :figwidth: 70%
+    :name: fig_schematic_gpr_fundamentals
 
-	Schematic of a zero-offset GPR setup.
+    Schematic of a zero-offset GPR setup.
 
 
 Wave Velocity
@@ -75,6 +75,15 @@ If the propagation material is non-magnetic, then :math:`\mu_r` = 1 and the radi
     V = \frac{c}{\sqrt{\varepsilon_r}}
 
 
+.. figure:: images_new/LayeredEarth.gif
+    :align: right
+    :scale: 130%
+    :name: fig_gpr_layeredearth_gif
+
+    GPR signal propagating through a layered Earth.
+
+
+
 This expression is considered a good approximation when considering GPR signals.
 From the previous expression, we can see that radiowaves propagate more slowly in increasingly dielectric materials.
 A table showing the dielectric permittivity, conductivity and radiowave velocity for various materials can be found :ref:`here <GPR_table_velocity>` .
@@ -84,7 +93,7 @@ Notice that:
     - Dry rocks and igneous rocks have the highest propagation velocity
 
 
-Go back to the `video <https://www.youtube.com/watch?v=eqfgP4qVK4s>`__ .
+Examine the GIF in :numref:`fig_gpr_layeredearth_gif`.
 What medium has the higher velocity?
 What medium has the higher relative permittivity?
 
@@ -215,7 +224,7 @@ This can be summarized as follows:
     - If the returning signal (reflected wave) does not show a reverse in polarity, :math:`R>0` and thus :math:`\varepsilon_1 > \varepsilon_2`
 
 
-Go back to the `video <https://www.youtube.com/watch?v=eqfgP4qVK4s>`__ .
+Examine the GIF in :numref:`fig_gpr_layeredearth_gif`.
 Look at the reflected wave as it returns to the surface.
 When it reaches the surface, is most of the wave reflected or transmitted?
 From this, are the relative permittivities of the air and the ground very different or similar?
@@ -229,12 +238,17 @@ Many compact objects relevant to GPR applications (buried pipes, landmines, etc.
 For highly conductive objects, the reflection and transmission of radiowaves cannot be characterized by the dielectric permittivities.
 Instead, we must consider the electrical conductivity of the object.
 
+.. figure:: images_new/Conductor.gif
+    :align: right
+    :scale: 120%
+    :name: fig_gpr_conductor_gif
+
 From the general equation for propagation velocity, we see that as :math:`\sigma \rightarrow \infty`, the propagation velocity goes to zero.
 Thus radiowaves cannot propagate through extremely conductive objects.
 Because of this, when radiowaves reach the interface between the Earth and a highly conductive object, the wave is completely reflected.
 This occurs regardless of the incident angle.
 
-Go back to the `video <https://www.youtube.com/watch?v=eqfgP4qVK4s>`__ .
+Examine the GIF in :numref:`fig_gpr_conductor_gif`.
 Can you see any of the wave being transmitted through the conductor?
 
 
@@ -272,7 +286,7 @@ Remember that the GPR signal is a wavefront.
 If :math:`V_2 > V_1`, the wave wants to refract towards the horizontal.
 As a result, we expect the wavefront the 'spread out'.
 Transversely, if :math:`V_2 < V_1`, the wave wants to refract towards the vertical and the wavefront should do the opposite.
-Go back to the `video <https://www.youtube.com/watch?v=eqfgP4qVK4s>`__ and examine the reflected wave that returns to the surface.
+Go back to the GIF in :numref:`fig_gpr_layeredearth_gif` and examine the reflected wave that returns to the surface.
 Is the transmitted wave from the ground into the air spreading or contracting?
 What can you say about the velocities of both media?
 
@@ -302,8 +316,11 @@ Additionally the propagation direction of the head wave is characterized by :mat
 Scattering
 ==========
 
+.. figure:: images_new/Scattering.gif
+    :align: right
+    :scale: 120%
 
-
+    Scattering due to inhomogeneities.
 
 Scattering is used to describe deviations in the paths of electromagnetic waves due to localized non-uniformities; which are less than 1/4 the wavelength of the radiowave signal.
 Scattering is problematic for GPR because it reduces the amplitudes of useful signals while increasing extraneous noise.
@@ -315,11 +332,9 @@ Several sources of scattering are:
     - Clutter made up of small buried objects
 
 
-
-
 .. figure:: images_new/GPR_scattering_examples.png
     :align: center
-    :figwidth: 60%
+    :figwidth: 80%
 
     Examples of scattering. A) Scattering from irregular surface texture. B) Scattering in rocky soils.
 
@@ -336,7 +351,7 @@ One way to thing about it as follows:
 
 
 Thus the wave-front represents the actual pulse of radiowaves, and the ray path is used to represent paths which signals can take to reach a receiver location.
-To see a simple example of the wavefront generated by radar source, `see here <https://www.youtube.com/watch?v=eqfgP4qVK4s>`__ .
+To see a simple example of the wavefront generated by radar source, see :numref:`fig_gpr_layeredearth_gif` of :numref:`fig_gpr_conductor_gif`.
 To follow a ray path, choose a small sliver of the wavefront and follow it as it reflects, refracts and propagates.
 If at any time this portion of the wavefron reaches the receiver, it is a ray path which is measured.
 
@@ -365,7 +380,7 @@ For geometric spreading, the loss in amplitude of the radiowaves is represented 
 where :math:`\mathbf{A_0}` is the amplitude of the waves as their leave the source and :math:`\mathbf{A}` is the amplitude of the waves after they have traveled distance :math:`R`.
 As we can see from the figure, the rate of geometric spreading loss is higher in the air than it is in the ground.
 This is due to the fact that radiowaves propagate faster in the air than they do in the ground.
-Go back to the `video <https://www.youtube.com/watch?v=eqfgP4qVK4s>`__ .
+Examine :numref:`fig_gpr_layeredearth_gif`.
 Can you see spherical spreading?
 In what medium is spherical spreading happening more quickly?
 
