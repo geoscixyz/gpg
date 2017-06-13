@@ -106,12 +106,19 @@ The magnetic anomalies from susceptible bodies depend significantly on the incli
   :figwidth: 100%
   :name: fig_reduce_to_pole_1
 
-  Magnetic anomaly from a vertically orientation 2 m pole for differing inclinations of the Earth's field. a) 90 :math:`\!\,^o`. b) 45 :math:`\!\,^o`. c) 0 :math:`\!\,^o`.
+  Magnetic anomaly from a vertically orientation 2 m pole for differing inclinations of the Earth's field: a) 90 :math:`\!\,^o`, b) 45 :math:`\!\,^o` and c) 0 :math:`\!\,^o`.
+
+
+To demonstrate the effectiveness of reduction to pole, let us consider a magnetic UXO survey (:numref:`fig_reduce_to_pole_2`). On the left, we see the total magnetic field data collected at the survey site. Although anomalies indicate the presence of a number of potential targets, the location of each object relative to the anomaly it produces is inconsistent. However after completing a reduction to pole (right), the location of each potential targets becomes easily visible.
 
 
 
+.. figure:: ./images/RTP_UXOdata.png
+  :align: center
+  :figwidth: 100%
+  :name: fig_reduce_to_pole_2
 
-
+  Total field magnetic data over UXO before (left) reduction to pole and after (right) reduction to pole. The true location of each object is labeled by a black dot.
 
 
 
