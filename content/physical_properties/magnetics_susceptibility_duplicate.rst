@@ -22,7 +22,7 @@ within a material. Let :math:`\vec m_i` be the magnetic moment of the
 moments, thus:
 
 .. figure::
-    images/figMagDipoles.png
+    images/magnetization_physics.png
     :align: right
     :figwidth: 60%
 
