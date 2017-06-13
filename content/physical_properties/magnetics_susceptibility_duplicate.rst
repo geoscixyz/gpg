@@ -21,6 +21,11 @@ within a material. Let :math:`\vec m_i` be the magnetic moment of the
 (:math:`V`), the total magnetic moment is the sum of all individual magnetic
 moments, thus:
 
+.. figure::
+    images/figMagDipoles.png
+    :align: right
+    :figwidth: 60%
+
 .. math::
     \vec{m}= \sum_i \vec m_i
 
