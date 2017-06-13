@@ -91,7 +91,34 @@ map is related to the ore body.
 .. raw:: html
     :file: data_plotting2.html
 
+|
+|
 
+Reduction to Pole
+=================
+
+Reduction to pole is a processing step which allows for easier interpretation of magnetic data. During a reduction to pole, the observed data are used to compute the magnetic anomaly that would have been measured if the Earth's field had been vertical (90 :math:`\!\,^o` inclination). 
+
+The magnetic anomalies from susceptible bodies depend significantly on the inclination and declination of the Earth's magnetic field; see :numref:`fig_reduce_to_pole_1`. As a result, it may be challenging to resolve the location/orientation of a susceptible body solely by examining the anomaly it produces. In :numref:`fig_reduce_to_pole_1` b, we see that the location of maximum anomaly amplitude is offset from the location of the steel pipe. However, the location of the pipe and the maximum anomaly amplitude are the same when the inclination is 90 :math:`\!\,^o`; this is the case for most susceptible bodies. For an inclination of 90 :math:`\!\,^o`, it is also easier to determine if the object is elongated or dipping.
+
+.. figure:: ./images/ReduceToPole1.png
+  :align: center
+  :figwidth: 100%
+  :name: fig_reduce_to_pole_1
+
+  Magnetic anomaly from a vertically orientation 2 m pole for differing inclinations of the Earth's field: a) 90 :math:`\!\,^o`, b) 45 :math:`\!\,^o` and c) 0 :math:`\!\,^o`.
+
+
+To demonstrate the effectiveness of reduction to pole, let us consider a magnetic UXO survey (:numref:`fig_reduce_to_pole_2`). On the left, we see the total magnetic field data collected at the survey site. Although anomalies indicate the presence of a number of potential targets, the location of each object relative to the anomaly it produces is inconsistent. However after completing a reduction to pole (right), the location of each potential targets becomes easily visible.
+
+
+
+.. figure:: ./images/RTP_UXOdata.png
+  :align: center
+  :figwidth: 100%
+  :name: fig_reduce_to_pole_2
+
+  Total field magnetic data over UXO before (left) reduction to pole and after (right) reduction to pole. The true location of each object is labeled by a black dot.
 
 
 
