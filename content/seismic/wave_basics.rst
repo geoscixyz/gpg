@@ -152,14 +152,14 @@ Attenuation
 The amplitude of seismic waves falls off with distance from the source. There
 are two primary reasons:
 
-1. Geometrical spreading - that is, energy falls off as 1/r2 and hence the amplitude falls of as 1/r.
+1. Geometrical spreading - that is, energy falls off as :math:`1/r^2` and hence the amplitude falls of as :math:`1/r`.
 
 2. Earth materials are not perfectly elastic. Some frictional heating occurs
    as the waves propagate through the earth. This is often described as
    "absorption" and the absorption coefficient expresses the proportion of energy
    lost as the wave travels a distance of one wavelength. The figure here shows
    the progressive change of shape of an original spike pulse during its
-   propagation through the ground due to the effects of absorption (After Anstey
+   propagation through the ground due to the effects of absorption (after Anstey
    1977.) The spike's shape changes as well as experiencing reduced amplitude.
    This is because the different frequencies making up the pulse decay at
    different rates - in fact, higher frequencies decay more rapidly than lower
