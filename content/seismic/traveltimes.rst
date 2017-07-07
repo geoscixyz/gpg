@@ -359,9 +359,9 @@ above. The RMS velocity for the :math:`n^{th}` layer is given by:
 
 
 .. math::
- 		  v_n^{rms} = \left( \frac{\sum_{i=1}^{n} v_i^2 \tau_i}{\sum_{i=1}^{n} \tau_i}	 \right)
+ 		  v_n^{rms} = \sqrt{\frac{\sum_{i=1}^{n} v_i^2 \tau_i}{\sum_{i=1}^{n} \tau_i}}
 
-where :math:`v_i` is the velocity of the :math:`i^{th}` layer, and :math:`\tau_i` is the one-way travel time through the :math:`` :math:`i^{th}`
+where :math:`v_i` is the velocity of the :math:`i^{th}` layer, and :math:`\tau_i` is the one-way travel time through the :math:`i^{th}`
 layer.
 
 Seismogram from case study goes here.
