@@ -363,5 +363,3 @@ above. The RMS velocity for the :math:`n^{th}` layer is given by:
 
 where :math:`v_i` is the velocity of the :math:`i^{th}` layer, and :math:`\tau_i` is the one-way travel time through the :math:`i^{th}`
 layer.
-
-Seismogram from case study goes here.
