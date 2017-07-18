@@ -10,7 +10,7 @@ A seismic wave travelling through an isotropic homogeneous medium will propagate
           
 where :math:`d` is the distance travelled in the layer. In a seismic survey we measure source to receiver travel times and use those data to estimate the properties of the subsurface. Basic seismic interpretation methods assume that the earth is composed of a series of uniform layers and attempt to compute the thicknesses, velocities, and sometimes dips of each layer. We will discuss specific techniques for computing layer thicknesses and velocities in the reflection and refraction survey sections. However, we will introduce the concept of travel time computations and how they relate to geometry here, using the example of a two layered earth.
 
-Consider a layer of thickness h and velocity :math:`v_1` overlying a uniform halfspace of velocity :math:`v_2`. A source is detonated at time :math:`t=0`. We are interested in the waves and arrival times of those waves at a receiver which is located at a distance :math:`x` from the source at position :math:`D` in the figure below. There are three principle waves that will travel through the earth and arrive at position D. i) direct waves, ii) reflected waves, and  iii) critically refracted waves.
+Consider a layer of thickness h and velocity :math:`v_1` overlying a uniform halfspace of velocity :math:`v_2`. A source is detonated at time :math:`t=0`. We are interested in the waves and arrival times of those waves at a receiver which is located at a distance :math:`x` from the source at position :math:`D` in the figure below. There are three principal waves that will travel through the earth and arrive at position D. i) direct waves, ii) reflected waves, and  iii) critically refracted waves.
 
 .. figure:: ./images/waveslayerhalfspace.gif
 	:align: center
@@ -359,9 +359,7 @@ above. The RMS velocity for the :math:`n^{th}` layer is given by:
 
 
 .. math::
- 		  v_n^{rms} = \left( \frac{\sum_{i=1}^{n} v_i^2 \tau_i}{\sum_{i=1}^{n} \tau_i}	 \right)
+ 		  v_n^{rms} = \sqrt{\frac{\sum_{i=1}^{n} v_i^2 \tau_i}{\sum_{i=1}^{n} \tau_i}}
 
-where :math:`v_i` is the velocity of the :math:`i^{th}` layer, and :math:`\tau_i` is the one-way travel time through the :math:`` :math:`i^{th}`
+where :math:`v_i` is the velocity of the :math:`i^{th}` layer, and :math:`\tau_i` is the one-way travel time through the :math:`i^{th}`
 layer.
-
-Seismogram from case study goes here.

@@ -25,7 +25,7 @@ Induced polarization can also be measured using low frequency sinusoidal
 signals, as discussed in the "Measurements and data" section of this chapter.
 The signals or data that are measured depend upon which of the various types
 of source signals are used. Note that IP surveys always include resistivity
-measurements because the electrical resistivity of teh earth must be known in
+measurements because the electrical resistivity of the earth must be known in
 order to invert data to recover chargeability.
 
 
