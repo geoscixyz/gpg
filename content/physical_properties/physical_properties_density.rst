@@ -146,7 +146,7 @@ Composition impacts the density of all rock types.
 Most common rocks are made up of sillicate minerals due to the abundance of silicon and oxygen in the Earth's crust.
 The distinct densities of these rocks, however, are dictated by the abundances of other elements such as: aluminum, iron, calcium, sodium, potassium and magnesium.
 
-In igeneous rocks, density generally decreases with respect to the \% abundance of silica (Si0 :math:`\!_2`) contained within the rock.
+In igneous rocks, density generally decreases with respect to the \% abundance of silica (Si0 :math:`\!_2`) contained within the rock.
 Using this relationship, igeneous rocks are classified as being felsic, intermediate, mafic or ultramafic.
 Rocks with lower silica content (mafic) tend to contain higher abundances of heavier elements like magnesium and iron; making them denser than rocks with a higher silica content (felsic).
 This explains why the oceanic crust (mafic) is typically more dense than the continental crust (felsic).

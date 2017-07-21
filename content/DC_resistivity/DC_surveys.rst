@@ -145,9 +145,10 @@ The measured voltage for any arrangement of electrodes can be derived from
  .. math::
 	
 	\Delta V &= \frac{I \rho}{2 \pi} \left \{ \frac{1}{r_{AM}} - \frac{1}{r_{BM}} - \frac{1}{r_{AN}} + \frac{1}{r_{BN}}  	 \right \}\\[0.8em]
-
- ..math::
-	\Delta V &=I \rho G
+	
+ .. math::
+    
+	\Delta V &=I \rho G\\
 
 **G** is a geometric factor (including the factor :math:`1/2 \pi`), which depends
 upon the locations of electrodes. :math:`\rho` is the resistivity of the half-space.
