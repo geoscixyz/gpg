@@ -115,7 +115,7 @@ Once the compressional force is removed, the block of material returns to its or
 The bulk modulus characterizes the compressional deformation as follows:
 
 .. math::
-    K = - V_0 \frac{\Delta V}{\Delta P}
+    K = - V_0 \frac{\Delta P}{\Delta V}
 
 
 where :math:`V_0` is the original volume of material, :math:`\Delta P` represents the pressure being applied to the material and :math:`\Delta V` is the resulting change in volume.
