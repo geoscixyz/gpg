@@ -243,7 +243,7 @@ In addition, S waves cannot propagate through fluids, as fluids do support shear
 Surface Waves
 -------------
 
-In seismology, there are two fundamental types of surface waver: Rayleigh waves and Love waves.
+In seismology, there are two fundamental types of surface waves: Rayleigh waves and Love waves.
 
 **Rayleigh waves**
 
@@ -270,7 +270,7 @@ As a general rule, Rayleigh waves at the surface of the Earth have a propagation
     :align: right
 
 Love waves are surface waves in which particle motion is parallel to the Earth's surface and perpendicular to the direction of wave propagation.
-The particle motion which defines Love waves can be seen in the diagram on the right :ref:[#f1].
+The particle motion which defines Love waves can be seen in the diagram on the right [#f1]_.
 The amplitude of lateral motion which describes Love waves decreases with depth.
 Love waves travel faster than Rayleigh waves but do not travel as fast as P or S waves.
 Thus Love waves have a propagation speed of:
