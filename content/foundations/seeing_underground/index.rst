@@ -8,7 +8,8 @@ Seeing Underground
    :align: right
    :scale: 90 %
 
-The purpose of this section is to explain very briefly how applied geophysics can contribute unique and important information that helps solve a wide range of practical problems in the earth sciences and engineering. The article was adapted from Geophysical Inversion: New Ways of Seeing the Earth's Subsurface, by Francis Jones and Doug Oldenburg, in *Innovation*, October 1998, Association of Professional Engineers and Geoscientists of British Columbia.
+In a geophysical survey energy is put into the ground and responses are measured. The responses depend upon the physical properties in the ground and the survey itself. The geophysical data can be used to generate images that convey geologic information and they can be further processed to yield information about the distribution of the physcial property. Geophysics is therefore useful if the connection between the geologic or engineering problem and the physical property is known. In this section we introduce some fundamental concepts and definitions about geophysical surveys, physical properties, terminology and provide examples that illustrate how geophysics can be used. 
+
 
 Contents:
 

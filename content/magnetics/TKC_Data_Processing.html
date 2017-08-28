@@ -1,0 +1,97 @@
+<script language="JavaScript" type="text/JavaScript">
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+  </script>
+  <script language="JavaScript">
+<!--
+function MM_initInteractions(){}
+//-->
+  </script><!-- InstanceEndEditable -->
+
+
+<br>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="99%">
+
+  <tbody>
+    <tr>
+
+  </tr>
+
+  </tbody>
+</table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="99%">
+
+  <tbody>
+    <tr>
+
+      <table border="0" cellpadding="2" cellspacing="1" width="100%">
+
+        <tbody>
+
+          <tr>
+
+            <td>
+            <form name="form1" method="post" action="">
+
+              <p class="figureCaption">
+                  <input name="radiobutton" value="radiobutton" checked="checked" onclick="MM_swapImage('lawnmap','','./../../_images/TKC_RTF_Raw.png',1)" type="radio">
+                  Total field strength is measured along 15 lines covering an area of 2.5 x 3 kilometers. The raw data appears to include A large trend from the east<br>
+
+                  <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('lawnmap','','./../../_images/TKC_RTF_Trend.png',1)" type="radio">
+                  First order polynomial is calculated <br>
+
+                  <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('lawnmap','','./../../_images/TKC_RTF_Detrend.png',1)" type="radio">
+                  The de-trended residual total field data highlights the local anomalies. <br>
+
+              </form>
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div align="center"><font size="-1"><img src="./../../_images/TKC_RTF_Raw.png" name="lawnmap" height="129" width="400"></font></div>
+            </td>
+
+          </tr>
+
+
+        </tbody>
+
+      </table>
+
+    <!-- InstanceEndEditable --></td>
+
+  </tr>
+
+  </tbody>
+</table>

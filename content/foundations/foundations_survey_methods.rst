@@ -21,7 +21,7 @@ Magnetics
 Measurements of the magnetic field contain information about subsurface
 variations in **magnetic susceptibility**. The measurements record the sum of
 Earth's field and fields induced in magnetic materials. More magnetic (i.e.
-susceptible) materials have stronger induced fields. Removing Earth's fiele
+susceptible) materials have stronger induced fields. Removing Earth's field
 from the observations yields anomalous fields that can be interpreted in terms
 of where magnetic material lies and also its susceptiblity and shape. Data can
 be acquired in the air (planes, satellites), on the ground (stationary, moving
@@ -319,3 +319,4 @@ Survey methods not discussed on this page include:
  - Radiometric methods, which involve investigating the radioactivity of ground materials
  - Natural source and controlled source magnetotelluric methods (which involve low frequency EM sources)
  - Spontaneous Potential methods, which involve measuring natural voltages that occur in the ground due to movement of fluids or chemical reactions between fluids and minerals
+ - Nuclear magnetic resonance imaging, which uses the interaction of time-varying magnetic fields with proton spins to measure the amount of non-bound water. 
