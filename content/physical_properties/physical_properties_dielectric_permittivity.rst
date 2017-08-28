@@ -57,7 +57,7 @@ Parameters used to define the dielectric properties of materials and their assoc
 +-------------------------+-----------------------------------+------------------+
 | Dielectric Permittivity | :math:`\varepsilon`               | F/m              |
 +-------------------------+-----------------------------------+------------------+
-| Electric Susceptibility | :math:`\chi_e`                    | *Unitless*      |
+| Electric Susceptibility | :math:`\chi_e`                    | *Unitless*       |
 +-------------------------+-----------------------------------+------------------+
 | Relative Permittivity   | :math:`\varepsilon_r`             | *Unitless*       |
 +-------------------------+-----------------------------------+------------------+
