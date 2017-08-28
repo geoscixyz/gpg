@@ -94,6 +94,8 @@ map is related to the ore body.
 |
 |
 
+.. _magnetics_rtp:
+
 Reduction to Pole
 =================
 
