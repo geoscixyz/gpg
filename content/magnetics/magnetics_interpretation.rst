@@ -37,7 +37,7 @@ scenarios, the target of a survey can be approximated:
 - or as a :ref:`monopole <magnetics_extended_bodies>` if it is an extended body .
 
 Consider a vertical inducing field (or alternatively, a data set that has been
-`reduced to pole <http://eosc350.geosci.xyz/en/latest/content/lectures.html#magnetics-5>`_), and a profile line of data over a target
+:ref:`reduced to pole <magnetics_rtp>`), and a profile line of data over a target
 located at the origin. The total field anomaly is expected to take a shape similar
 to that show in figure :numref:`halfwidth`.
 
