@@ -47,6 +47,7 @@ Contents:
    content/DC_resistivity/index
    content/induced_polarization/index
    content/gravity/index
+   content/appendix/lectures
 
 
 Feedback:
