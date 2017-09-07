@@ -1,0 +1,165 @@
+{
+    "0":{
+        "title": "Introduction to EOSC 350: Environmental, Geotechnical and Exploration Geophysics",
+        "date": "2016-09-07",
+        "author": "Doug Oldenburg",
+        "youtube": "C1U2okdfMbU",
+        "pdf": "a_Intro_350.pdf"
+    },
+    "1":{
+        "title": "Introduction to Applied Geophysics",
+        "date": "2016-09-09",
+        "author": "Doug Oldenburg",
+        "youtube": "xw5o3TYYWUE",
+        "pdf": "b_Intro_to_applied_geophysics.pdf"
+    },
+    "2":{
+        "title": "Magnetics 1",
+        "date": "2016-09-14",
+        "author": "Doug Oldenburg",
+        "youtube": "-WeOfAh6Hm8",
+        "pdf": "3_Magnetics.pdf"
+    },
+    "3":{
+        "title": "Magnetics 2",
+        "date": "2016-09-16",
+        "author": "Doug Oldenburg",
+        "youtube": "iaF2Fb7WtfM",
+        "pdf": "3_Magnetics.pdf",
+        "jupyter": "Mag/InducedMag2D.ipynb"
+    },
+    "4":{
+        "title": "Magnetics 3",
+        "date": "2016-09-19",
+        "author": "Doug Oldenburg",
+        "youtube": "dd7bJ9rhJUE",
+        "pdf": "3_Magnetics.pdf",
+        "jupyter": "Mag/InducedMag2D.ipynb"
+    },
+    "5":{
+        "title": "Magnetics 4",
+        "date": "2016-09-21",
+        "author": "Doug Oldenburg",
+        "youtube": "IK7z_-XjN7M",
+        "pdf": "3_Magnetics.pdf",
+        "jupyter": "Mag/InducedMag2D.ipynb"
+    },
+    "6":{
+        "title": "Magnetics 5",
+        "date":"2016-09-23",
+        "author": "Doug Oldenburg",
+        "youtube": "CtihJA84qm4",
+        "pdf": "3_Magnetics.pdf",
+        "jupyter": "Mag/InducedMag2D.ipynb"
+    },
+    "7":{
+        "title": "Magnetics 6",
+        "date": "2016-09-28",
+        "author": "Doug Oldenburg",
+        "youtube": "cHiPFgc_1DM",
+        "pdf": "3_Magnetics.pdf"
+    },
+    "8":{
+        "title": "Seismic 1",
+        "date": "2016-09-30",
+        "author": "Doug Oldenburg",
+        "youtube": "Q_4WzrzU2uM",
+        "pdf": "Seismology.pdf",
+        "app": "https://www.3ptscience.com/app/SeismicRefraction"
+    },
+    "9":{
+        "title": "Seismic 2",
+        "date": "2016-10-03",
+        "author": "Doug Oldenburg",
+        "youtube": "ucLEddbzOEc",
+        "pdf": "Seismology.pdf",
+        "app": "https://www.3ptscience.com/app/SeismicRefraction"
+    },
+    "10":{
+        "title": "Seismic 3",
+        "date": "2016-10-05",
+        "author": "Doug Oldenburg",
+        "youtube": "NUrUbOjUMq4",
+        "pdf": "Seismology.pdf"
+    },
+    "11":{
+        "title": "Seismic 4",
+        "date": "2016-10-07",
+        "author": "Doug Oldenburg",
+        "youtube": "8XhqadeTofg",
+        "pdf": "Seismology.pdf"
+    },
+    "12":{
+        "title": "Seismic 5",
+        "date": "2016-10-12",
+        "author": "Doug Oldenburg",
+        "youtube": "4kLwlwMoPbA",
+        "pdf": "Seismology.pdf",
+        "jupyter": "Seismic/NMO/SeismicNMOapp.ipynb"
+    },
+    "13":{
+        "title": "GPR",
+        "date": "2016-10-24",
+        "author": "Doug Oldenburg",
+        "youtube": "fIe0iE59yWg",
+        "pdf": "GPR_2016.pdf"
+    },
+    "14":{
+        "title": "Electromagnetics 1",
+        "date": "2016-11-07",
+        "author": "Doug Oldenburg",
+        "youtube": "cofxA5JGpJg",
+        "pdf": "5_EM.pdf"
+    },
+    "15":{
+        "title": "Electromagnetics 2",
+        "date": "2016-11-09",
+        "author": "Doug Oldenburg",
+        "youtube": "2s831k1MLx0",
+        "pdf": "5_EM.pdf",
+        "jupyter": "EM/ResponseFct/ResponseFct.ipynb"
+    },
+    "16":{
+        "title": "Electromagnetics 3",
+        "date": "2016-11-14",
+        "author": "Doug Oldenburg",
+        "youtube": "xWORpeGyhwE",
+        "pdf": "5_EM.pdf",
+        "jupyter": "EM/ResponseFct/ResponseFct.ipynb"
+    },
+    "17":{
+        "title": "DC Resistivity 1",
+        "date": "2016-11-18",
+        "author": "Doug Oldenburg",
+        "youtube": "ywlpOsYRTww",
+        "jupyter": "DC/DCLab.ipynb"
+    },
+    "18":{
+        "title": "DC Resistivity 2",
+        "date": "2016-11-21",
+        "author": "Doug Oldenburg",
+        "youtube": "-0Z_jGz-1T0",
+        "pdf": "9_DC_Resistivity.pdf",
+        "jupyter": "DC/DCLab.ipynb"
+    },
+    "19":{
+        "title": "Induced Polarization",
+        "date": "2016-11-23",
+        "author": "Doug Oldenburg",
+        "youtube": "hmZGxFYmpm8",
+        "pdf":"IP.pdf"
+    },
+    "20":{
+        "title": "EM Wrap Up",
+        "date": "2016-11-28",
+        "author": "Doug Oldenburg",
+        "youtube": "nmwVFxxizH4",
+        "pdf": "5_EM.pdf"
+    },
+    "21":{
+        "title":"Final Lecture",
+        "date": "2016-12-2",
+        "author": "Doug Oldenburg",
+        "youtube": "OeJVz4T5gRw"
+    }
+}
