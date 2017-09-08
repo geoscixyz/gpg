@@ -68,7 +68,7 @@ Where :math:`\rho_w` = 1000 kg/m :math:`\!^3` is the density of water, the densi
 .. math::
     \rho = \frac{m_a}{m_a - m_w} \times \rho_w
 
-This method if satisfactory for unless the rock is unconsolidated or porous.
+This method is satisfactory if the rock is unconsolidated or porous.
 Unconsolidated rocks tend to break apart when immersed in water.
 The pore-space within porous rocks becomes partially filled, resulting in an overestimation of the rock's density.
 
@@ -95,7 +95,7 @@ For these measurements, gamma rays are emmitted by a radioactive source.
 While transmitting through the adjacent rock, the gamma rays interact with electrons and undergo Compton scattering.
 A detector within the borehole measures the intensity of the scattered gamma rays.
 Gamma rays experience a higher level of Compton scattering in denser materials.
-Therefore, the intensity scattered signal can be used to obtain the bulk density of the rocks within the borehole.
+Therefore, the intensity of scattered signal can be used to obtain the bulk density of the rocks within the borehole.
 
 
 Density of Common Rocks
