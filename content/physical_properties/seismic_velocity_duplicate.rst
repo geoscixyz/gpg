@@ -136,7 +136,7 @@ When a block of material is subjected to a shear stress, it experiences a shear 
 The shear modulus defines the ratio of shear stress to shear strain:
 
 .. math::
-    \mu = \frac{Stress}{Strain} = \frac{F}{\Delta x l A}
+    \mu = \frac{Stress}{Strain} = \frac{F l}{\Delta x A}
 
 where the shear stress is represented by a force (:math:`F`) per unit area (:math:`A`).
 Shear strain represents a tangent angle between the shear deformation (:math:`\Delta x`) of the material along the direction of force and the perpendicular dimension (:math:`l`) of the block of material.
