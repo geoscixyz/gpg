@@ -4,12 +4,12 @@ Currents and voltages in an heterogeneous earth
 ***********************************************
 
 Usually the subsurface is not uniform (otherwise Geophysics and Earth Sciences would be meaningless).
-Some analytics solutions exist for very simple cases such as a sphere in an uniform field (see the `electrostatic sphere example`_) or a layered Earth.
+Some analytics solutions exist for very simple cases such as a sphere in a uniform field (see the `electrostatic sphere example`_) or a layered Earth.
 
 .. _electrostatic sphere example: http://mybinder.org/repo/ubcgif/em_examples/notebooks/notebooks/maxwell2_dc/ElectrostaticSphere_example.ipynb
 
 In all others cases, the use of numerical modeling techniques is required to compute the response of
-a particular physical property distribution. We use the differential equations describe in :ref:`DC_basic_principles_equations` to achieve it. You can also see the article Leading Edge for more information
+a particular physical property distribution. We use the differential equations described in :ref:`DC_basic_principles_equations` to achieve it. You can also see the article Leading Edge for more information
 about numerical technics.
 
 The animation below, taken from the `Mont Isa`_ case history shows an example of such computation to visualize the current distribution for different sources in a highly structure underground: 
