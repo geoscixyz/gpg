@@ -58,13 +58,13 @@ situations, there is still conservation of energy. The ratio of incoming to refl
 energy is :math:`E_R` and the ratio of incoming to transmitted energy is :math:`E_T`. In terms of the impedances on either side of the interface, The energy ratios are
 
 .. math::
-    E_R = \left( \frac{Z_2 - Z_1}{Z_2 + Z_1} \right)^2
+    E_R = Z_1 \left( \frac{Z_2 - Z_1}{Z_2 + Z_1} \right)^2 A_0^2
 
 .. math::
-    E_T = \frac{4 Z_1 Z_1}{(Z_2 + Z_1 )^2}
+    E_T = Z_2 \frac{4 Z_1 Z_1}{(Z_2 + Z_1 )^2} A_0^2 
 
 .. math::
-    E_R + E_T = 1    
+    E_R + E_T = Z_1 A_0^2   
 
 Mode Conversion
 ---------------
