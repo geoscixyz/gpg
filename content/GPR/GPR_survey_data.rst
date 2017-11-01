@@ -529,7 +529,7 @@ And we can infer that signatures after 100 ns correspond to nearby trees.
 Below, we show the two-way travel path for reflected signals off a tree and a building.
 A diagram showing the different radargram signatures for both the tree and the building is also provided.
 Unlike the tree, the face of the building is not a point reflector.
-However, the ends of the signature corresponding to the building also have slopes which are :math:`1/c`.
+However, the ends of the signature corresponding to the building also have slopes which are :math:`2/c`.
 Thus, we can infer the propagation velocity.
 
 To avoid measuring signals such as these, shields may also be used on the transmitter and receiver.
