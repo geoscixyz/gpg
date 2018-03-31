@@ -82,8 +82,8 @@ Note:
 Measurement of Secondary Fields
 ===============================
 
-The easiest quantity to measure is some component of the total field. From an
-interpretation viewpoint however we are interested in the secondary field
+The easiest quantity to measure is some component of the total field. However, from an
+interpretation viewpoint, we are interested in the secondary field
 produced by the body. Unfortunately the primary field is generally very much
 larger than the secondary field and hence if we measure their sum then we are
 faced with finding, and interpreting, a small signal in the presence of a
