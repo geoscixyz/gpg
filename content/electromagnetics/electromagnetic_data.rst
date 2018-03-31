@@ -23,7 +23,7 @@ the air.
    frequency dependence and hence can be written as :math:`\vec{H}_s \cos(\omega
    t + \psi)`, where :math:`\psi` is a phase angle.
 
-At the receiver we observe the sun of the primary and secondary fields which
+At the receiver we observe the sum of the primary and secondary fields which
 is
 
 .. math::
@@ -82,8 +82,8 @@ Note:
 Measurement of Secondary Fields
 ===============================
 
-The easiest quantity to measure is some component of the total field. From an
-interpretation viewpoint however we are interested in the secondary field
+The easiest quantity to measure is some component of the total field. However, from an
+interpretation viewpoint, we are interested in the secondary field
 produced by the body. Unfortunately the primary field is generally very much
 larger than the secondary field and hence if we measure their sum then we are
 faced with finding, and interpreting, a small signal in the presence of a
