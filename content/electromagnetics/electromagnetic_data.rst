@@ -161,7 +161,7 @@ the receiver is a coil) is given by
     \frac{H_S}{H_P} = \text{(Coupling Coefficients)} \cdot f(\alpha)
 
 where :math:`\alpha = \omega L / R`. A plot of :math:`f(\alpha)` provides
-considerable insight into electromagnetic data. Such plot is probably one of the most
+considerable insight into electromagnetic data. Such a plot is probably one of the most
 important plots in electromagnetic induction. :math:`f(\alpha)` is a complex
 number and has real and imaginary parts.
 
