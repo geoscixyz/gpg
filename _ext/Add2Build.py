@@ -3,8 +3,9 @@ import shutil
 
 def copyImages():
     # get relevant directories
-    cwd = os.getcwd()
-    contentdir = cwd+'/content'
+    dirname, filename = os.path.split(os.path.abspath(__file__))
+    cwd = dirname.split(os.path.sep)[-1]
+    contentdir = os.path.sep.join(cwd + ['content']
     buildimagesdir = cwd+'/_build/html/_images'
 
     # check if images directory exists
