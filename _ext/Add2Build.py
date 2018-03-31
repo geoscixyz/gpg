@@ -10,7 +10,7 @@ def copyImages():
 
     # check if images directory exists
     if not os.path.isdir(buildimagesdir):
-        os.mkdirs(buildimagesdir)
+        os.makedirs(buildimagesdir)
 
     # images that have been copied
     imnames = os.listdir(buildimagesdir)
