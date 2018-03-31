@@ -23,7 +23,7 @@ the air.
    frequency dependence and hence can be written as :math:`\vec{H}_s \cos(\omega
    t + \psi)`, where :math:`\psi` is a phase angle.
 
-At the receiver we observe the sun of the primary and secondary fields which
+At the receiver we observe the sum of the primary and secondary fields which
 is
 
 .. math::
