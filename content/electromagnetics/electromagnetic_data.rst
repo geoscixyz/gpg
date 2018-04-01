@@ -14,17 +14,17 @@ the air.
     :scale: 100 %
 
 
-1. The primary field is harmonic :math:`\cos(\omega t)`. At the receiver the
+1. The primary field is harmonic :math:`\cos(\omega t)`. At the receiver, the
    primary field can be written as :math:`\vec{H}_p \cos(\omega t)`.
 
 2. The currents induced in the conductor will also be harmonic with the same
    frequency :math:`\omega`. They will, however, have a different phase. The
    resultant secondary field from these currents must also have the same
-   frequency dependence and hence can be written as :math:`\vec{H}_s \cos(\omega
+   frequency dependence. Hence, the secondary field can be written as :math:`\vec{H}_s \cos(\omega
    t + \psi)`, where :math:`\psi` is a phase angle.
 
-At the receiver we observe the sun of the primary and secondary fields which
-is
+At the receiver, we observe the sum of the primary and secondary fields, which
+is given by
 
 .. math::
         \vec{H}_{total} = \vec{H}_p \cos (\omega t) + \vec{H}_s \cos (\omega t + \psi)
@@ -82,16 +82,16 @@ Note:
 Measurement of Secondary Fields
 ===============================
 
-The easiest quantity to measure is some component of the total field. From an
-interpretation viewpoint however we are interested in the secondary field
+The easiest quantity to measure is some component of the total field. However, from an
+interpretation viewpoint, we are interested in the secondary field
 produced by the body. Unfortunately the primary field is generally very much
 larger than the secondary field and hence if we measure their sum then we are
 faced with finding, and interpreting, a small signal in the presence of a
 large signal. It would be more advantageous to measure the secondary field
 directly. This can be done in two ways:
 
-1. One can have a ":ref:`bucking" coil<electromagnetic_bucking_coil>` or "compensator" which provides a magnetic
-   field at the receiver which has the same amplitude and phase as the primary
+1. One can have a ":ref:`bucking" coil<electromagnetic_bucking_coil>` or "compensator" that provides a magnetic
+   field at the receiver, which has the same amplitude and phase as the primary
    field but is in the opposite direction. As a result :math:`\vec{H}_p` is
    annihilated at the receiver, (eg. aircraft systems. Lab systems, EM-31).
 
@@ -101,7 +101,7 @@ directly. This can be done in two ways:
 
 2. There can be a direct link between the transmitter and receiver through a
    connecting cable. This allows for a phase reference and hence the field,
-   adjusted for amplitude loss due to geometrical spreading, can be subtracted
+   which is adjusted for amplitude loss due to geometrical spreading, can be subtracted
    from the measured signal.
 
 In-Phase and Quadrature Phase
@@ -112,7 +112,7 @@ the secondary field. What is generally presented as data is the ratio of the
 secondary field to primary field for a particular component of the field.
 (Remember that data could be magnetic fields measured with a magnetometer or
 voltages measured with a coil.) The data will be ratio of the secondary field
-to the primary field. Let the primary field be :math:`H_p \cos(\omega t`.
+to the primary field. Let the primary field be :math:`H_p \cos(\omega t`).
 The secondary field is :math:`H_s \cos(\omega t + \psi)` and can be written
 as
 
@@ -122,7 +122,7 @@ as
 
 The first term has the same phase as the primary field and is referred to as
 the "in-phase" response. This is also sometimes referred to as the "real" part
-of the response. That terminology because derivations are made in terms of
+of the response. Such terminology is used due to derivations are made in terms of
 complex quantities.
 
 In-phase:
@@ -151,7 +151,7 @@ Similar terminology is summarized as follows:
 +-----------------------+-----------------------+
 
 Since both in-phase and out-of-phase quantities are small, their values are
-usually given in ppm (parts per million).Insight regarding the expected value
+usually given in ppm (parts per million). Insight regarding the expected value
 of the In-phase and Out-of-phase components can be obtained by examining the
 response of a single loop of wire (of resistance :math:`R` and inductance
 :math:`L`. The ratio :math:`H_{secondary} / H_{primary}` or ( :math:`V_s/V_p` if
@@ -161,7 +161,7 @@ the receiver is a coil) is given by
     \frac{H_S}{H_P} = \text{(Coupling Coefficients)} \cdot f(\alpha)
 
 where :math:`\alpha = \omega L / R`. A plot of :math:`f(\alpha)` provides
-considerable insight into electromagnetic data is probably one of the most
+considerable insight into electromagnetic data. Such a plot is probably one of the most
 important plots in electromagnetic induction. :math:`f(\alpha)` is a complex
 number and has real and imaginary parts.
 
