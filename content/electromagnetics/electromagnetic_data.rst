@@ -14,17 +14,17 @@ the air.
     :scale: 100 %
 
 
-1. The primary field is harmonic :math:`\cos(\omega t)`. At the receiver the
+1. The primary field is harmonic :math:`\cos(\omega t)`. At the receiver, the
    primary field can be written as :math:`\vec{H}_p \cos(\omega t)`.
 
 2. The currents induced in the conductor will also be harmonic with the same
    frequency :math:`\omega`. They will, however, have a different phase. The
    resultant secondary field from these currents must also have the same
-   frequency dependence and hence can be written as :math:`\vec{H}_s \cos(\omega
+   frequency dependence. Hence, the secondary field can be written as :math:`\vec{H}_s \cos(\omega
    t + \psi)`, where :math:`\psi` is a phase angle.
 
-At the receiver we observe the sum of the primary and secondary fields which
-is
+At the receiver, we observe the sum of the primary and secondary fields, which
+is given by
 
 .. math::
         \vec{H}_{total} = \vec{H}_p \cos (\omega t) + \vec{H}_s \cos (\omega t + \psi)
