@@ -2,10 +2,13 @@ GPG: Geophysics for Practicing Geoscientists
 ============================================
 
 [![Build Status](https://travis-ci.org/ubcgif/gpg.svg?branch=master)](https://travis-ci.org/ubcgif/gpg)
+[![license](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg)](/LICENSE)
+[![DOI](https://zenodo.org/badge/24121664.svg)](https://zenodo.org/badge/latestdoi/24121664)
+
 
 A learning resource for applied geophysics.
 
-Originally created by Francis H.M. Jones and Douglas W. Oldenburg.
+Originally created by Douglas W. Oldenburg and Francis H.M. Jones
 
 http://gpg.geosci.xyz
 
@@ -28,6 +31,7 @@ Example of how to reference a Figure.
 
 - Insert and name your Figure
 
+```
  .. figure:: ./ExampleImage.png
 	:align: center
 	:scale: 110% 
