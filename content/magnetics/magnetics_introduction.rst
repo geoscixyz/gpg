@@ -7,9 +7,10 @@ Introduction
 The generic magnetic survey is summarized in :numref:`mag_response`.
 The energy source is a magnetic field. The physical
 property of interest is the magnetic susceptibility. The data
-are also magnetic field values.
-
-Signals are interpreted in terms of the subsurface
+are magnetic field values.
+Signals are sometimes interpreted in terms of geologic units, or
+geologic structure (such as faults or dykes) but most often the 
+data are inverted to yield the subsurface
 distribution of the magnetc susceptibility.
 
 .. figure:: ./images/Intro_Response.png
@@ -17,17 +18,30 @@ distribution of the magnetc susceptibility.
     :scale: 50 %
     :name: mag_response
 
-A more pictoral summary of magnetic surveying is
-illustrated in :numref:`mag_survey` In
-this case, the **energy source** is the Earth's global magnetic field,
-which has a strength and direction at every location on the Earth.
-Subsurface materials become magnetized by this field,
-and the data are measurements of the magnetic field at the Earth's
-surface, in the air, in space, or within boreholes. The measured magnetic
-field will be a superposition of Earth's field and the induced secondary
-fields caused by magnetization of buried materials.
+A pictoral summary of magnetic surveying is
+illustrated in :numref:`mag_survey` There are four main
+elements:
+
+The **energy source** is the Earth's magnetic field.
+It has a strength and direction at every location on the Earth.
+
+Subsurface materials can often be thought of as acting like a 
+small magnetics. The material therefore becomes magnetized when
+a magnetic field is applied. The physical property that quantifies
+this is the **magnetic susceptibiilty**.
+
+The magnetized material creates a magnetic field (often called the
+induced field).  The data from the survey 
+will be a superposition of Earth's field and the induced 
+fields caused by the magnetization of the buried materials.
+
 The end goal of a magnetic survey is to infer information about the
-sub-surface from the measured magnetic field data.
+sub-surface from the measured magnetic field data. The data are processed
+and sometimes resultant data maps can be used to infer
+geologic information. More generally, the data are inverted to
+generate 2D or 3D images of the subsurface. 
+
+
 
 .. list-table:: :Principals of magnetic surveys.
    :header-rows: 0
