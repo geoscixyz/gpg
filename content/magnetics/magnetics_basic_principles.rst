@@ -555,8 +555,8 @@ There are some circumstances in which the concept of magnetic charge greatly
 simplifies the problem. Consider a pipe, or vertical prism, and an incident
 magnetic field that is pointing down. The magnetization points vertically
 downward and :math:`\vec{M} \cdot \hat{n}` is zero except at the two ends. At
-the top the charge density is :math:`\left|M\right| \text{W/m}^2` and at the
-bottom it is :math:`-\left|M\right| \text{W/m}^2`. Suppose the pipe has a
+the top the charge density is :math:`-\left|M\right| \text{W/m}^2` and at the
+bottom it is :math:`\left|M\right| \text{W/m}^2`. Suppose the pipe has a
 radius :math:`a` and thus an area :math:`\pi a^2`. If the radius of the pipe is
 small compared to the distance from the observer then the effect is the same
 as if all of the charge was sitting at the top of the pipe at its center. The
@@ -570,10 +570,12 @@ and the magnetic fields are like those given in equation :eq:`B_from_Q` and
 shown in :numref:`Positive_magnetic_pole`.
 
 The same phenomenon is happening at the bottom of the pipe but there the
-charge is :math:`-Q`. At the surface the magnetic field is the sum of fields due
+charge is positive and the magnetic fields are those given in equation :eq:`B_from_Q` and
+shown in :numref:`Positive_magnetic_pole`. At the 
+surface the magnetic field is the sum of fields due
 to the two charges, but if the pipe is very long, then the contribution from
 the bottom of the pipe becomes negligible. The resultant observed field is
-effectively that due to a monopole, or point charge, of strength :math:`Q`.
+effectively that due to a monopole, or point charge, :math:`-Q`.
 This handy simplification often arises in practise.
 
 The equation :eq:`B_from_Q` provides the anomalous magnetic field due to a charge of
