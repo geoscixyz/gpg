@@ -27,7 +27,7 @@ provided.
 
 To ease readers' understanding in applied geophysics and its applocations,
 materials in GPG are integrated with the Jupyter apps. We strongly promote readers to use both text materials in GPG and apps together.
-By clicking below link
+By clicking below **binder** badge
 will show you list of the apps, and there you can run the app.
 
 .. image:: https://mybinder.org/badge.svg
