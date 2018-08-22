@@ -6,3 +6,4 @@
 - Rowan Cockett, (`@rowanc1 <https://github.com/rowanc1/>`_)
 - Thibaut Astic, (`@thast <https://github.com/thast>`_)
 - Sarah Devriese, (`@sdevriese <https://github.com/sdevriese>`_)
+- Seogi Kang, (`@sgkang <https://github.com/sgkang>`_)

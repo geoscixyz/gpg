@@ -25,6 +25,20 @@ geological engineers, geologists, and undergraduate geophysicists.  The GPG is
 light on mathematical development but links to deeper levels of analysis are
 provided.
 
+To ease readers' understanding in applied geophysics and its applocations,
+materials in GPG are integrated with the Jupyter apps. We strongly promote readers to use both text materials in GPG and apps together.
+By clicking below **binder** badge
+will show you list of the apps, and there you can run the app.
+
+.. image:: https://mybinder.org/badge.svg
+    :target: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/master?filepath=Notebooks%2Findex.ipynb
+    :align: center
+
+.. figure:: gpgLabs.png
+    :align: center
+    :figwidth: 100%
+
+
 Development of the GPG is ongoing, with the core development team consisting
 of researchers and students at the University of British Columbia. We welcome
 input and collaborators! Join the development on github_.
