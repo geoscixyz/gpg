@@ -13,10 +13,11 @@ Magnetic susceptibility (:math:`\kappa`) quantifies the magnetization (:math:`\v
 
 **Magnetization**
 
-Individual particles, minerals, and magnetic domains within rocks each have a
-net magnetic moment (:math:`\vec m`) and behave like small bar magnets.
-Magnetization (:math:`\vec M`) defines the dipole moment per unit volume
-within a material. Let :math:`\vec m_i` be the magnetic moment of the
+Within the mineral grains comprising rocks, there are tiny magnetized volumes (magnetic domains) which behave like small bar magnets.
+The direction and magnitude of each magnetic domain is defined by its magnetic dipole moment (:math:`\vec m`).
+Magnetization (:math:`\vec M`) is defined as the dipole moment per unit volume within a material.
+
+Let :math:`\vec m_i` be the magnetic dipole moment of the
 :math:`i^\textrm{th}` particle or magnetic domain. Within a volume
 (:math:`V`), the total magnetic moment is the sum of all individual magnetic
 moments, thus:
@@ -30,7 +31,7 @@ moments, thus:
     \vec{m}= \sum_i \vec m_i
 
 
-Since magnetization is the dipole moment per unit volume:
+And since magnetization is the dipole moment per unit volume:
 
 .. math::
     \vec M = \frac {\vec m}{V} = \frac {1}{V} \sum_i \vec m_i

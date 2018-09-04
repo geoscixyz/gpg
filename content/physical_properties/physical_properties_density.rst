@@ -68,7 +68,7 @@ Where :math:`\rho_w` = 1000 kg/m :math:`\!^3` is the density of water, the densi
 .. math::
     \rho = \frac{m_a}{m_a - m_w} \times \rho_w
 
-This method is satisfactory if the rock is unconsolidated or porous.
+This method is does poorly if the rock is unconsolidated or porous.
 Unconsolidated rocks tend to break apart when immersed in water.
 The pore-space within porous rocks becomes partially filled, resulting in an overestimation of the rock's density.
 
@@ -101,7 +101,8 @@ Therefore, the intensity of scattered signal can be used to obtain the bulk dens
 Density of Common Rocks
 =======================
 
-Every rock type has a range of densities which overlap with different rocks. The densities for some common rocks, minerals, and other materials are summarized below.
+Each rock type is defined by a range of density values (not a specific value). The densities for some common rocks, minerals, and other materials are summarized below.
+Note that the density ranges for different rock types can overlap.
 Some general comments pertaining to densities are:
 
 - Igneous and metamorphic rock are generally more dense than sedimentary rocks.
@@ -148,7 +149,7 @@ The distinct densities of these rocks, however, are dictated by the abundances o
 
 In igneous rocks, density generally decreases with respect to the \% abundance of silica (Si0 :math:`\!_2`) contained within the rock.
 Using this relationship, igeneous rocks are classified as being felsic, intermediate, mafic or ultramafic.
-Rocks with lower silica content (mafic) tend to contain higher abundances of heavier elements like magnesium and iron; making them denser than rocks with a higher silica content (felsic).
+Rocks with lower silica content (mafic) tend to contain higher abundances of heavier elements like magnesium and iron; making mafic rocks denser than rocks with a higher silica content (felsic).
 This explains why the oceanic crust (mafic) is typically more dense than the continental crust (felsic).
 The classification of igeneous rocks based on \% silica content can be seen below:
 
