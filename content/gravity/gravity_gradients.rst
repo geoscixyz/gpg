@@ -198,7 +198,7 @@ following locations:
 - There is a good summary of Advanced Processing of Potential Fields by Getech
   (Houston, and Leeds). See the tutorial on-line at Getech via Advanced
   Processing of Potential Field Data. The Getech home page is at
-  https://www.getech.com.
+  https://getech.com/gravity-magnetic-data-services/.
 
 
 .. _a separate page of images: http://www.eoas.ubc.ca/courses/eosc350/content/methods/meth_4/assets/gravgrad-figs.pdf
