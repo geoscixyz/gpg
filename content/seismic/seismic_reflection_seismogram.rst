@@ -26,7 +26,7 @@ The procedure for generating the ideal seismogram is as follows:
     depth. This yields a reflection log.
 
 (d) Convert to time. Each layer has a defined velocity. The incremental (two-
-    way) travel time on each layer is :math:`\Delta t_i = \rho_i / v_i`. This
+    way) travel time on each layer is :math:`\Delta t_i = 2h_i / v_i`. This
     yields a reflection function on the two-way travel time domain.
 
 (e) Convolve the reflectivity function with a source wavelet. This yields the
