@@ -56,7 +56,9 @@ reflection is :math:`A_1`, then the reflection coefficient :math:`R` is
 
 Using boundary conditions to ensure the continuity of
 stresses and displacements at the interface between we can express the 
- reflection and transmission coefficients in terms of the acoustic impedance.     
+reflection and transmission coefficients in terms of the acoustic 
+impedance. Where :math:`i` denotes the layer the wave is in and :math:`j` 
+denotes the layer that the transmitted wave passes into.       
 
 .. math::
 	R_{i,j} =\frac{Z_{j} - Z_{i}}{Z_{j} + Z_{i}}
