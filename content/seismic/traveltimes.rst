@@ -3,11 +3,11 @@
 Travel times
 ============
 
-A seismic wave travelling through an isotropic homogeneous medium will propagate at a constant velocity. Therefore, the time :math:`t` required for a seismic wave to travel from source to receiver in a homogeneous earth layer with velocity :math:`v` is simply given by the formula 
+A seismic wave travelling through an isotropic homogeneous medium will propagate at a constant velocity. Therefore, the time :math:`t` required for a seismic wave to travel from source to receiver in a homogeneous earth layer with velocity :math:`v` is simply given by the formula
 
 .. math::
           t = \frac{d}{v}
-          
+
 where :math:`d` is the distance travelled in the layer. In a seismic survey we measure source to receiver travel times and use those data to estimate the properties of the subsurface. Basic seismic interpretation methods assume that the earth is composed of a series of uniform layers and attempt to compute the thicknesses, velocities, and sometimes dips of each layer. We will discuss specific techniques for computing layer thicknesses and velocities in the reflection and refraction survey sections. However, we will introduce the concept of travel time computations and how they relate to geometry here, using the example of a two layered earth.
 
 Consider a layer of thickness h and velocity :math:`v_1` overlying a uniform halfspace of velocity :math:`v_2`. A source is detonated at time :math:`t=0`. We are interested in the waves and arrival times of those waves at a receiver which is located at a distance :math:`x` from the source at position :math:`D` in the figure below. There are three principal waves that will travel through the earth and arrive at position D. i) direct waves, ii) reflected waves, and  iii) critically refracted waves.
@@ -43,7 +43,7 @@ Before moving on, let's look at an example of how travel times show up in the fi
 .. figure:: ./images/case-study-seismogram.png
    :align: center
 
-We will now discuss the computation of traveltimes in more detail. It is important to note here that computing traveltimes for an arbitrary, heterogeneous earth is a complex problem well beyond the scope of this course. However, much insight can be gained by assuming that the subsurface consists of a series of homogeneous layers with horizontal or possibly dipping interfaces. 
+We will now discuss the computation of traveltimes in more detail. It is important to note here that computing traveltimes for an arbitrary, heterogeneous earth is a complex problem well beyond the scope of this course. However, much insight can be gained by assuming that the subsurface consists of a series of homogeneous layers with horizontal or possibly dipping interfaces.
 
 Refracted ray in a two layered-earth
 ------------------------------------
@@ -177,7 +177,7 @@ segments in the two top layers. Consider the diagrams below:
 .. figure:: ./images/twoHorizontalLayers.gif
 	:align: center
 
-.. figure:: ./images/twoHorizontalLayersTime.gif
+.. figure:: ./images/twoHorizontalLayersTime.png
 	:align: center
 
 
@@ -186,7 +186,7 @@ travel time for the wave refracted at the top of layer three is given by
 
 .. math::
 	t &= \frac{x}{v_3} + \frac{2 z_1 \cos\theta_1}{v_1} + \frac{2z_2\cos\theta_2}{v_2} \\
-	&= \frac{x}{v_3} + t_{i1} + t_{i2}
+	&= \frac{x}{v_3} + t_{i2}
 
 All quantities are defined in the diagrams, and the angles are
 
@@ -238,9 +238,9 @@ the source wavelet) would look like.
 Two way travel time:
 
 .. math::
- 		t_0 = \frac{2z}{v} 
+ 		t_0 = \frac{2z}{v}
 
-Normal Moveout: 
+Normal Moveout:
 
 .. math::
  		\Delta t = t(x) - t_0
@@ -281,7 +281,7 @@ at :math:`x`,  or :math:`t(x)`, and the ground's velocity, :math:`v`.
 Apply binomial expansion to get
 
 .. math::
- 		t \approx  t_0 \left(1 + \frac{1}{2} \left(\frac{x}{vt_0} \right)^2  \right)\quad 
+ 		t \approx  t_0 \left(1 + \frac{1}{2} \left(\frac{x}{vt_0} \right)^2  \right)\quad
  		if \quad \frac{x}{vt_0} << 1
 
 Now, since normal moveout is :math:`\Delta T = t_x - t_0`
@@ -340,14 +340,14 @@ true interval velocity.
 For each hyperbola:
 
 .. math::
- 		  t \approx \frac{\left(x^2 + 4z_n^2 \right)^2 } {v_n^{rms}} 
+ 		  t \approx \frac{\left(x^2 + 4z_n^2 \right)^2 } {v_n^{rms}}
 
 By fitting hyperbolas to each reflection event one can obtain
 :math:`t_n,v_n^{rms}` for n = 1, 2, ... The interval velocity and layer
 thickness of each layer can be found using the formulae below:
 
 .. math::
- 		  v_n \approx \left[ \frac{(v_n^{rms})^2 t_n - (v_{n-1}^{rms})^2 t_{n-1}  }{t_n-t_{n-1}} \right] 
+ 		  v_n \approx \left[ \frac{(v_n^{rms})^2 t_n - (v_{n-1}^{rms})^2 t_{n-1}  }{t_n-t_{n-1}} \right]
 
 
  		  \Delta z = z_n - z_{n-1} = v_n \left( \frac{t_n - t_{n-1}}{2} \right)
