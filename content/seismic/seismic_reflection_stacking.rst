@@ -50,7 +50,7 @@ where :math:`v_{st}` is a "stacking" velocity, or sometimes called the Normal Mo
 	From Kearey, Philip and Micheal Brooks, An Introduction to Geophysical Exploration. 2nd ed. Blackwell Science: 1991.
 
 3. Calculate the Normal Moveout Correction: Again, using the hyperbola
-   corresponding to :math:`v_st`, compute the normal moveout for each trace and
+   corresponding to :math:`v_{st}`, compute the normal moveout for each trace and
    then adjust the reflection time by the amount :math:`\Delta T`.
 
 
@@ -68,20 +68,19 @@ As an example consider the two CMP gathers in the figure below left (click for
 a larger version). The most prominent seismic wavelet at times between 50 and
 70 ms is a bedrock reflection from about 9 m below the surface. The geophone
 offsets were 3.7 m (12 ft) for the nearest traces and 17 m (56 ft) for the
-farthest trace with 1.22 m (4 ft) between geophones. The reflection even of
+farthest trace with 1.22 m (4 ft) between geophones. The reflection event of
 interest is at about 55 msec.
 
 .. figure:: ./images/CMP_gather.gif
 	:align: left
-	:scale: 125 %
+	:scale: 128 %
 
 .. figure:: ./images/velocity_analysis.gif
 	:figclass: center
 	:align: left
-	:scale: 125 %
+	:scale: 128 %
 
-
-In the figure above right, the CMP gather for point 988 has been moveout
+In this figure, the CMP gather for point 988 has been moveout
 corrected using different velocities. The moveout correction using a velocity
 of 1225 ft/s (328 m/s) causes the reflection events to occur at about the same
 time for all traces. Stacking these signals will produce a high quality
