@@ -45,8 +45,8 @@ Before moving on, let's look at an example of how travel times show up in the fi
 
 We will now discuss the computation of traveltimes in more detail. It is important to note here that computing traveltimes for an arbitrary, heterogeneous earth is a complex problem well beyond the scope of this course. However, much insight can be gained by assuming that the subsurface consists of a series of homogeneous layers with horizontal or possibly dipping interfaces. 
 
-Refracted ray in a two layer earth
-----------------------------------
+Refracted ray in a two layered-earth
+------------------------------------
 
 We need to identify specific ray paths and their associated travel times.
 Consider an earth composed of a uniform layer with velocity :math:`v_1` and
@@ -161,7 +161,7 @@ Thus
 This can be used as a consistency check, or it can be used to compute one of
 the variables given values for two others.
 
-Two Horizontal Layers Over a Halfspace
+Refracted ray in a three layered-earth
 --------------------------------------
 
 The extension to more layers is in principle straight forward. Snell's law
