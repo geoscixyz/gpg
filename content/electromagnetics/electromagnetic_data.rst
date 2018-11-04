@@ -117,8 +117,9 @@ The secondary field is :math:`H_s \cos(\omega t + \psi)` and can be written
 as
 
 .. math::
-        H_s \cos(\omega t + \psi) &= H_s [ \cos(\omega t) \cos(\psi) - \sin(\omega t) \sin(\psi) ] 
-                                  &= [H_s \cos(\psi)] \cos(\omega t)  - [H_s \sin(\psi)] \sin(\omega t)
+        H_s \cos(\omega t + \psi)
+        = H_s [ \cos(\omega t) \cos(\psi) - \sin(\omega t) \sin(\psi) ] \\
+        = [H_s \cos(\psi)] \cos(\omega t)  - [H_s \sin(\psi)] \sin(\omega t)
 
 The first term has the same phase as the primary field and is referred to as
 the "in-phase" response. This is also sometimes referred to as the "real" part
@@ -179,3 +180,4 @@ given by:
 
 The coupling coefficients depend upon the orientation of the transmitter and
 receiver as well as the geometry of the target body.
+
