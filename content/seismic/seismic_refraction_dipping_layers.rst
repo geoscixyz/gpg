@@ -127,7 +127,7 @@ What about true refractor velocity, :math:`v_2` ? Snell's law can of course be
 invoked. The critical angle :math:`\theta` (referred to above) is obtained from
 the relation involving updip and downdip velocities, and the known value of
 :math:`v_1` . A less accurate version of :math:`v_2` can be obtained by averaging
-:math:`v_2` and :math:`v_2` but your average value will be wrong by a factor of
+:math:`v_2d` and :math:`v_2u` but your average value will be wrong by a factor of
 :math:`\cos(\gamma)` , or 2% to 3% for dips of about 12 degrees.
 
 Profile Geometries

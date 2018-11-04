@@ -68,7 +68,7 @@ Where :math:`\rho_w` = 1000 kg/m :math:`\!^3` is the density of water, the densi
 .. math::
     \rho = \frac{m_a}{m_a - m_w} \times \rho_w
 
-This method is does poorly if the rock is unconsolidated or porous.
+This method does poorly if the rock is unconsolidated or porous.
 Unconsolidated rocks tend to break apart when immersed in water.
 The pore-space within porous rocks becomes partially filled, resulting in an overestimation of the rock's density.
 
