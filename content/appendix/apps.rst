@@ -4,7 +4,7 @@ Apps
 ====
 
 .. image:: https://mybinder.org/badge.svg
-    :target: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/master?filepath=Notebooks%2Findex.ipynb
+    :target: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/master?filepath=notebooks%2Findex.ipynb
     :align: center
 
 There are apps available as Jupyter_ notebooks that accompany the GPG. We recommend using :ref:`binder` to access the apps. 
