@@ -142,9 +142,10 @@ radius, :math:`R`, the mass and its density are related according to :math:`4/3(
 R^3)dρ` where :math:`dρ` is **density contrast**; that is, density of host
 rocks minus the density of anomalous mass.
 
-This relation (profile) is plotted in the figure to the right. Also plotted is
-the similar result of surveying over a 2D “point” mass - i.e. a “line mass,"
-or horizontal cylinder.
+This relation (profile) is plotted (figure to the right) 
+assuming the survey crosses over a 2D “point” mass - i.e. 
+a “line mass," or horizontal cylinder. The pattern would be similar 
+but slightly narrower if the buried feature was a point mass or sphere.
 
 - Note that the “mass” must involve the density *contrast*. In other words, the difference between host and target densities.
 - An estimate of vertical depth to the center of mass can be obtained by equating amplitude at :math:`x=0` to twice the amplitude at :math:`x`.
