@@ -68,8 +68,9 @@ Measuring gravity
 =================
 
 Measurable geophysical gravity anomalies generally range between 0.1 and
-0.00001 Gal. This means we must measure accelerations of 1 part in 108 or 109;
-not a trivial task! How is this done?
+0.00001 Gal. This means we must measure accelerations of 
+1 part in 10 \ :sup:`8`\  or 10 \ :sup:`9`\; not a trivial task! 
+How is this done?
 
 If a mass hangs on a spring, a force on the mass :math:`(F = ma)` will stretch
 the spring. Hooke's law states that the extension of a spring is proportional
