@@ -16,7 +16,7 @@ fundamental relations:
 
 .. math::
 	&(a) \quad \textbf{J} = \sigma \textbf{E} \quad &&\textrm{Ohm's Law}  \\[0.4em]
-	&(b) \quad \textbf{E} = \nabla V \quad  &&\textrm{The electric field is the gradient of a scalar potential.}  \\[0.4em]
+	&(b) \quad \textbf{E} = - \nabla V \quad  &&\textrm{The electric field is the negative gradient of a scalar potential.}  \\[0.4em]
 	&(c) \quad \nabla \cdot\ \textbf{J} = - \partial{Q} / \partial{t} \quad &&\textrm{The divergence of current density equals the rate of change of free charge density.}
 
 We want to obtain a differential equation and boundary conditions to define
@@ -25,7 +25,7 @@ potential everywhere. Start by combining (a) and (b) to say :math:`\textbf{J} =
 \sigma \nabla V`, then plug this into (c) to get
 
 .. math:: 
-		\nabla \cdot\ (\sigma \nabla V) = - \partial{Q} / \partial{t} \quad (2)
+		\nabla \cdot\ (\sigma \nabla V) = \partial{Q} / \partial{t} \quad (2)
 
 This holds for steady state conditions everywhere, except at the source
 position :math:`r = r_s`, where it equals the input current, :math:`I`. In other
@@ -35,7 +35,7 @@ point of the source.
 Equation (2) can be re-written as
 
 .. math:: 
-	\nabla \cdot\ (\sigma \nabla V) = -I \delta (r-r_s) \quad (3)
+	\nabla \cdot\ (\sigma \nabla V) = I \delta (r-r_s) \quad (3)
 
 The Dirac delta function is used here to indicate that charge density is
 varying only at the point source of current.
