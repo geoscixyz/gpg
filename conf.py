@@ -106,10 +106,15 @@ linkcheck_ignore = [
   'https://www.researchgate.net/*',
   'https://em.geosci.xyz/content/case_histories/mt_isa/index.html',
   'http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Mag/InducedMag2D.ipynb',
+  'http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/EM/ResponseFct/ResponseFct.ipynb',
+  'http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/DC/DCLab.ipynb',
+  'http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/DC/DCLab.ipynb',
   'https://storage.googleapis.com/simpeg/eosc350lectures/3_Magnetics.pdf',
   'https://storage.googleapis.com/simpeg/eosc350lectures/Seismology.pdf',
   'https://storage.googleapis.com/simpeg/eosc350lectures/GPR_2016.pdf',
   'https://storage.googleapis.com/simpeg/eosc350lectures/5_EM.pdf',
+  'https://storage.googleapis.com/simpeg/eosc350lectures/9_DC_Resistivity.pdf',
+  'https://storage.googleapis.com/simpeg/eosc350lectures/IP.pdf',
 ]
 linkcheck_retries = 3
 linkcheck_timeout = 2000
