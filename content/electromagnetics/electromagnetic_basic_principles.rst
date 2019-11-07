@@ -227,8 +227,6 @@ the quadrature response.
     :align: center
     :scale: 80 %
 
-You can explore the three-loop circuit model interactively using the `FEM3loop app <http://mybinder.org/repo/ubcgif/gpgLabs//notebooks/EM/FEM3Loop/Fem3loop.ipynb>`__.
-
 Conductive Host
 ===============
 
