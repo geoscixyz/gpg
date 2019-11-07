@@ -34,4 +34,3 @@ Contents:
    DC_interpretation
    DC_instruments
    DC_examples
-   DC_applet

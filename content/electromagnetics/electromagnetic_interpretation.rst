@@ -173,7 +173,3 @@ Since data were gathered using two different instrument orientations, it is easy
           : Differenced EW and NS In-phase map
 
 
-.. Interpretation
-.. ==============
-
-
