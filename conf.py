@@ -109,6 +109,7 @@ linkcheck_ignore = [
   'http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Seismic/NMO/SeismicNMOapp.ipynb',
   'http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/EM/ResponseFct/ResponseFct.ipynb',
   'http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/DC/DCLab.ipynb',
+  'https://www.3ptscience.com/app/SeismicRefraction',
   'https://storage.googleapis.com/simpeg/eosc350lectures/3_Magnetics.pdf',
   'https://storage.googleapis.com/simpeg/eosc350lectures/Seismology.pdf',
   'https://storage.googleapis.com/simpeg/eosc350lectures/GPR_2016.pdf',
