@@ -153,8 +153,3 @@ A final very important point here is to note that energy will only be refracted 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/eI3epl0ek3g?rel=0" frameborder="0" allowfullscreen>
     </iframe>
     </div>
-        
-.. _CC BY 3.0: https://creativecommons.org/licenses/by/3.0/
-.. _Subsurface Wiki: http://subsurfwiki.org/
-.. _L. Braile: http://web.ics.purdue.edu/~braile/
-.. _seismic wave demo: http://web.ics.purdue.edu/~braile/edumod/waves/WaveDemo.htm

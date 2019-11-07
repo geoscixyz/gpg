@@ -65,13 +65,6 @@ Contents:
    content/appendix/lectures
 
 
-Feedback:
-^^^^^^^^^
-
-Have comments or suggestions? Submit feedback here_.
-
-.. _here: https://docs.google.com/forms/d/1Bv43lKncKaTQY3_J_B1DrPQr0ft0Qt1x6IjqM7iDbnc/viewform?usp=send_form>`.
-
 
 Contributors:
 ^^^^^^^^^^^^^
