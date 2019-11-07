@@ -105,6 +105,7 @@ linkcheck_ignore = [
   'https://vimeo.com/*',
   'https://www.researchgate.net/*',
   'https://em.geosci.xyz/content/case_histories/mt_isa/index.html',
+  'http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Mag/InducedMag2D.ipynb',
 ]
 linkcheck_retries = 3
 linkcheck_timeout = 2000
