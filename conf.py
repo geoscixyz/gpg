@@ -104,6 +104,7 @@ linkcheck_ignore = [
   'http://www.eos.ubc.ca/courses/eosc350/content/*',
   'https://vimeo.com/*',
   'https://www.researchgate.net/*',
+  'https://em.geosci.xyz/content/case_histories/mt_isa/index.html',
 ]
 linkcheck_retries = 3
 linkcheck_timeout = 2000
