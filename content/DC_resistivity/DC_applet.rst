@@ -8,8 +8,8 @@ Here is a very nice Jupyter Notebook to experiment and visualize the DC experime
 Author: Seogi Kang
 
 
-- Live version (DCLab_app_)
-- Source code (DCLab_zip_)
+- Live version (`DCLab_app`_)
+- Source code (`DCLab_zip`_)
 
 .. _DCLab_zip: https://github.com/ubcgif/eosc350website/raw/master/assets/2016/6_DC/DCLab.zip
 
