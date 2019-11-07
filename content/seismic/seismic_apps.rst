@@ -6,7 +6,7 @@ Seismic apps
 There are four seismic related apps used in this course. They are referenced throughout the seismic course material. They are collected here for reference:
 
 1) `Seismic NMO App`_
-2) `Seismic Reflection App`__
+2) `Seismic Reflection App`_
 3) `Seismic Refraction App`_
 4) `Seismic Vertical Resolution App`_
 5) `Seismic General App`_
