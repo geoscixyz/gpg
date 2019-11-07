@@ -181,5 +181,5 @@ Either the curves shown previously or the following formulae are therefore usefu
                R_V &= \frac{1}{(4z^2 + 1)^{1/2} }\\[0.8em]
                R_H &=  (4z^2 + 1)^{1/2} - 2z \\[0.8em]
                
-You can explore the response of a multilayered earth further using the `layered earth response app <http://mybinder.org/repo/ubcgif/gpgLabs//notebooks/EM/ResponseFct/ResponseFct.ipynb>`__.
+You can explore the response of a multilayered earth further using the `layered earth response app <https://mybinder.org/v2/gh/geoscixyz/gpgLabs/master?filepath=notebooks%2FEM_EM31.ipynb>`__.
 
