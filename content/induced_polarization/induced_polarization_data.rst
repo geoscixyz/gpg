@@ -89,7 +89,7 @@ Numerical values for the integrated chargeability are typically given in ms.
 
 For practical measurements, we do not integrate over the entire discharge curve.
 Instead, a finite interval of integration is chosen.
-For example, the Newmont standard chargeability integrates from t = 0.15 s to 1.1 s.
+For example, the Newmont standard chargeability integrates from t = 0.45 s to 1.1 s (Swift, 1973).
 
 
 Two types of frequency domain data
@@ -335,3 +335,5 @@ References
 ==========
 
     Smith, M.J., 1980, *Comparison of induced polarization measurements over the Elura orebody, The Geophysics of the Elura Orebody, Cobar NSW*, ASEG, 1980, 77-80.
+    
+    Swift, C.M., Jr, 1973, The L/M parameter of time domain IP measurement - a computational analysis, Geophysics, v 38, p 61-67. 
