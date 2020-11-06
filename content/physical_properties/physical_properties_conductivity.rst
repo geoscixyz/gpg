@@ -7,7 +7,7 @@ Electrical Conductivity
 
 
 Electrical conductivity (:math:`\sigma`)  is a physical property that describes how easily electric currents can flow through a medium when subjected to an applied electric field.
-More specifically, it defines the relationship  between the density of electrical current density (:math:`\vec J`) within a material, and the electric field (:math:`\vec E`) :
+More specifically, it defines the relationship  between the electrical current density (:math:`\vec J`) within a material, and the electric field (:math:`\vec E`) :
 
 .. figure:: ./images/conductivity_physics_diagram.png
     :align: right
