@@ -14,8 +14,8 @@ Notebooks:
 
 
 
-.. _EM Induction App: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/master?filepath=notebooks%2Fem%2FInductionRLcircuit_Harmonic.ipynb
-.. _EM Loops App: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/master?filepath=notebooks%2Fem%2FFDEM_ThreeLoopModel.ipynb
-.. _EM Pipe App: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/master?filepath=notebooks%2Fem%2FEM_Pipeline.ipynb
-.. _EM 31 App: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/master?filepath=notebooks%2FEM_EM31.ipynb
+.. _EM Induction App: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/main?filepath=notebooks%2Fem%2FInductionRLcircuit_Harmonic.ipynb
+.. _EM Loops App: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/main?filepath=notebooks%2Fem%2FFDEM_ThreeLoopModel.ipynb
+.. _EM Pipe App: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/main?filepath=notebooks%2Fem%2FEM_Pipeline.ipynb
+.. _EM 31 App: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/main?filepath=notebooks%2FEM_EM31.ipynb
 

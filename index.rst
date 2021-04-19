@@ -31,7 +31,7 @@ By clicking below **binder** badge
 will show you list of the apps, and there you can run the app.
 
 .. image:: https://mybinder.org/badge.svg
-    :target: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/master?filepath=notebooks%2Findex.ipynb
+    :target: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/main?filepath=notebooks%2Findex.ipynb
     :align: center
 
 .. figure:: gpgLabs.png

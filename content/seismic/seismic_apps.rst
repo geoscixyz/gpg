@@ -22,8 +22,8 @@ We also link to a `seismic refraction app <https://row1.ca/seismic-layers>`__. I
 Instructions for using the app are as follows: You can toggle the visibility of each ray using buttons on the left hand side of the page. Adjust the velocity of each layer using the controls on the right of the page and adjust the depth of each layer by dragging the horizontal sliders on the ray path plot. You can adjust the receiver offset by dragging the vertical slider on either plot. Finally, you can use the horizontal slider on the traveltime plot to explore how the rays progress as time advances. On the top plot, the path of each ray up to the time specified by the time slider are shown as thick solid lines. Thin dashed lines show how the rays will continue to propagate after the specified time. The traveltime vs offset plots for the refracted rays will be dashed for offsets at which the rays will arrive after the direct wave.
 
 
-.. _Seismic NMO App: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/master?filepath=notebooks%2Fseismic%2FSeis_NMO.ipynb
-.. _Seismic Reflection App: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/master?filepath=notebooks%2Fseismic%2FSeis_Reflection.ipynb
-.. _Seismic Refraction App: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/master?filepath=notebooks%2Fseismic%2FSeis_Refraction.ipynb
-.. _Seismic Vertical Resolution App: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/master?filepath=notebooks%2Fseismic%2FSeis_VerticalResolution.ipynb
-.. _Seismic General App: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/master?filepath=notebooks%2Fseismic%2FSeismicApplet.ipynb
+.. _Seismic NMO App: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/main?filepath=notebooks%2Fseismic%2FSeis_NMO.ipynb
+.. _Seismic Reflection App: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/main?filepath=notebooks%2Fseismic%2FSeis_Reflection.ipynb
+.. _Seismic Refraction App: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/main?filepath=notebooks%2Fseismic%2FSeis_Refraction.ipynb
+.. _Seismic Vertical Resolution App: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/main?filepath=notebooks%2Fseismic%2FSeis_VerticalResolution.ipynb
+.. _Seismic General App: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/main?filepath=notebooks%2Fseismic%2FSeismicApplet.ipynb
