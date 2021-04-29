@@ -9,7 +9,7 @@ Purpose
 The objective is to learn about the magnetic field observed at the ground's surface, caused by a small buried dipolar magnet. In geophysics, this simulates the observed anomaly over a buried susceptible sphere that is magnetized by the Earth's magnetic field. By clicking below binder badge, you can run this app!
 
 .. image:: https://mybinder.org/badge.svg
-    :target: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/master?filepath=notebooks%2Fmag%2FMagneticDipoleApplet.ipynb
+    :target: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/main?filepath=notebooks%2Fmag%2FMagneticDipoleApplet.ipynb
     :align: center
 
 .. figure:: ./images/magnetic_dipole_applet.png
