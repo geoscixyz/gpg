@@ -96,7 +96,7 @@ exclude_patterns = [
   ]
 
 linkcheck_ignore = [
-  'https://phet.colorado.edu/sims/html/wave-on-a-string/latest/wave-on-a-string_en.html',
+  'https://phet.colorado.edu/*',
 ]
 linkcheck_retries = 3
 linkcheck_timeout = 2000
