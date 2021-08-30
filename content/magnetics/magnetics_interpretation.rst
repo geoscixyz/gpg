@@ -353,7 +353,7 @@ Secondly, we need a topographic surface that defines the relative distance betwe
    *  - Data uncertainties
       - 10 nT
 
-.. _Geogratis: http://geogratis.gc.ca/site/eng/extraction
+.. _Geogratis: https://maps.canada.ca/czs/index-en.html
 
 3D Solution
 ^^^^^^^^^^^

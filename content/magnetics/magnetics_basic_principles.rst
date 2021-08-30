@@ -646,5 +646,5 @@ California 95131 U.S.A.
 .. _page: http://www.ngdc.noaa.gov/ngdc.html
 .. _homepage: http://www.geomag.nrcan.gc.ca/index-eng.php
 .. _geomagnetics website: http://www.geomag.bgs.ac.uk/
-.. _magnetic_app: http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Mag/InducedMag2D.ipynb
+.. _magnetic_app: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/main?filepath=notebooks%2Fmag%2FMag_Induced2D.ipynb
 .. _geodynamo: https://commons.wikimedia.org/w/index.php?curid=1712490

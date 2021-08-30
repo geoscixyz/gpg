@@ -37,7 +37,7 @@ any day in the most recent 3 years.
 
 
 .. _geomag: http://www.geomag.nrcan.gc.ca/index-eng.php
-.. _NRC: http://www.spaceweather.gc.ca/tech/se-pip-en.php
+.. _NRC: https://www.spaceweather.gc.ca/tech/index-en.php#pip
 
 .. _magnetics_regional_trend:
 
@@ -99,7 +99,7 @@ map is related to the ore body.
 Reduction to Pole
 =================
 
-Reduction to pole is a processing step which allows for easier interpretation of magnetic data. During a reduction to pole, the observed data are used to compute the magnetic anomaly that would have been measured if the Earth's field had been vertical (90 :math:`\!\,^o` inclination). 
+Reduction to pole is a processing step which allows for easier interpretation of magnetic data. During a reduction to pole, the observed data are used to compute the magnetic anomaly that would have been measured if the Earth's field had been vertical (90 :math:`\!\,^o` inclination).
 
 The magnetic anomalies from susceptible bodies depend significantly on the inclination and declination of the Earth's magnetic field; see :numref:`fig_reduce_to_pole_1`. As a result, it may be challenging to resolve the location/orientation of a susceptible body solely by examining the anomaly it produces. In :numref:`fig_reduce_to_pole_1` b, we see that the location of maximum anomaly amplitude is offset from the location of the steel pipe. However, the location of the pipe and the maximum anomaly amplitude are the same when the inclination is 90 :math:`\!\,^o`; this is the case for most susceptible bodies. For an inclination of 90 :math:`\!\,^o`, it is also easier to determine if the object is elongated or dipping.
 
@@ -121,6 +121,3 @@ To demonstrate the effectiveness of reduction to pole, let us consider a magneti
   :name: fig_reduce_to_pole_2
 
   Total field magnetic data over UXO before (left) reduction to pole and after (right) reduction to pole. The true location of each object is labeled by a black dot.
-
-
-

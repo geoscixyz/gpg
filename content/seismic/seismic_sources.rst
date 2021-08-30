@@ -35,8 +35,8 @@ There are many ways of generating elastic energy and transmitting it into the ea
 
 .. figure:: ./images/Vibroseis.jpg
     :align: center
-    
-    `Vibroseis truck <https://en.wikipedia.org/wiki/Seismic_source#/media/File:Vibroseis.jpg>`_. Licenced under `CC BY-SA 3.0`_.
+
+    `Vibroseis truck <https://upload.wikimedia.org/wikipedia/commons/a/ac/Vibroseis.jpg>`_. Licenced under `CC BY-SA 3.0`_.
 
 
 Water Sources
@@ -48,8 +48,8 @@ When seismic surveying is needed to characterize ocean, lake or river bed sedime
 
 .. figure:: ./images/800px-Air_gun_hg.jpg
     :align: center
-    
-    `Air gun <https://en.wikipedia.org/wiki/Seismic_source#/media/File:Air_gun_hg.jpg>`_ by `HannesGrobe <https://commons.wikimedia.org/wiki/User:Hgrobe>`_, licenced under `CC BY-SA 2.5`_.
+
+    `Air gun <https://upload.wikimedia.org/wikipedia/commons/7/70/Air_gun_hg.jpg>`_ by `HannesGrobe <https://commons.wikimedia.org/wiki/User:Hgrobe>`_, licenced under `CC BY-SA 2.5`_.
 
 2. Water gun: Water is ejected by a piston and there is a cavity behind the water jet. There is an implosion but no bubbles because no extra air has been introduced. Click `here <https://vimeo.com/70134132>`__ for a video of a water gun source in action.
 
@@ -60,4 +60,3 @@ When seismic surveying is needed to characterize ocean, lake or river bed sedime
 .. _CC BY-SA 3.0: https://creativecommons.org/licenses/by-sa/3.0/.
 
 .. _CC BY-SA 2.5: http://creativecommons.org/licenses/by-sa/2.5
-

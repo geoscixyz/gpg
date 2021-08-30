@@ -252,7 +252,7 @@ Seismic 1
             
 
 
-- `App <https://www.3ptscience.com/app/SeismicRefraction>`_
+- `App <https://mybinder.org/v2/gh/geoscixyz/gpgLabs/main?filepath=notebooks%2Fseismic%2FSeis_Refraction.ipynb>`_
             
         
 
@@ -281,7 +281,7 @@ Seismic 2
             
 
 
-- `App <https://www.3ptscience.com/app/SeismicRefraction>`_
+- `App <https://mybinder.org/v2/gh/geoscixyz/gpgLabs/main?filepath=notebooks%2Fseismic%2FSeis_Refraction.ipynb>`_
             
         
 

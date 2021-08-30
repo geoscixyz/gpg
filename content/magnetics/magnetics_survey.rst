@@ -271,7 +271,7 @@ in the field, and more applications will become evident in the coming decade
 
 .. _magnetics_survey_layout:
 
-.. _magnetic_app: http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Mag/InducedMag2D.ipynb
+.. _magnetic_app: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/main?filepath=notebooks%2Fmag%2FMag_Induced2D.ipynb
 
 
 
