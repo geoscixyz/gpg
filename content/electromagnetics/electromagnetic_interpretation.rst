@@ -6,7 +6,6 @@ Interpretation
 .. figure:: ./images/ExpoSite_Icon.png
     :align: right
     :figwidth: 40%
-    :name: Expo_Icon
 
 In this section, we use a real-world example to illustrate the use of electromagnetic (EM) methods. In this industrial reclamation case study, the interpretation of EM data had proven useful in characterizing the sub-surface and answering the following questions:
 
@@ -120,7 +119,7 @@ At our field site, EM-31 data were gathered on a 2m grid resulting in measuremen
 
 Both complete data sets are presented in :numref:`Expo_EW_NS`. They were recorded using the "normal" vertical dipole coil orientation with the instrument held 1 m above the ground.
 
-.. list-table::
+.. list-table:: EM 31 data the Expo site
    :header-rows: 0
    :widths: 10 10 10 10
    :stub-columns: 0
@@ -150,7 +149,7 @@ Processing
 
 Since data were gathered using two different instrument orientations, it is easy to supply averaged and differenced data sets. Averaged and differential maps are presented in :numref:`Expo_Avg_Diff`. The effect of averaging data from two orientations is to smooth responses, emphasizing regions where ground is more uniform. The objective of differencing data from two orientations is to emphasize features that depend upon instrument orientation. For apparent conductivity data the result is that linear and small 3D targets are more clearly decerned. Click the following small images to display larger versions of each image.
 
-.. list-table::
+.. list-table:: Processed data at the Expo Site
    :header-rows: 0
    :widths: 20 20 20 20
    :stub-columns: 0
@@ -171,5 +170,3 @@ Since data were gathered using two different instrument orientations, it is easy
       - .. figure:: ./images/Expo_InPhase_Diff.gif
 
           : Differenced EW and NS In-phase map
-
-

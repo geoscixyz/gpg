@@ -34,7 +34,8 @@ where :math:`\hat{n}` is the outward pointing normal vector for the loop and :ma
 
 .. figure:: ./images/IntFaradayDiagram-emf-version.svg
      :align: center
-     :scale: 30 %
+     :figwidth: 100%
+..     :scale: 30 %
 
 Faraday's law relates the magnetic flux through the surface bordered by the loop to the induced EMF in the loop
 
@@ -99,9 +100,11 @@ The magnetic fields of various current sources
 The shape of the magnetic field due to an electric current in a wire depends on the shape of the wire. The magnetic field of a closed loop source will be approximately that of a perfect magnetic dipole when observed far enough from the loop. A good rule of thumb is that we can use the dipole approximation when the distance from the loop is more than five times its diameter. Put mathematically, the approximation holds when :math:`r\, >>\, a` where :math:`r` is the distance from the observer to the center of the loop and :math:`a` is the radius of the loop. The magnetic moment from a loop is :math:`\vec{m} = IA \hat{n}`, where :math:`I` is the current in the loop, :math:`A` is its area, and :math:`\hat{n}` is the unit vector perpendicular to the plane of the loop. In this course we will consider frequency domain transmitters. These are transmitters driven by a harmonic current, that is, a current that varies sinusoidally in time. The magnetic field of a dipole is given by the magnetization multiplied by a geometric factor, which implies that the primary magnetic field due to the transmitter will be harmonic in time: :math:`\vec{H}_p = \vec{H}_0 \cos(\omega t)`.
 
 .. figure:: ./images/mag-field-current-loop-v2.png
-     :align: center
-     :scale: 50 %
-     :name: loop_dipole_field
+    :align: center
+    :scale: 50 %
+    :name: loop_dipole_field
+
+    : Magnetic field do to a circular current loop
 
 If you're interested in a more detailed discussion of the field of a magnetic dipole, please see the `Wikipedia page <https://en.wikipedia.org/wiki/Magnetic_dipole>`__.
 
@@ -124,6 +127,8 @@ EM induction is at work in everyday devices as well as in geophysics. A common e
     :align: center
     :figwidth: 100%
     :name: metal_detectors
+
+    : Electromagnetic fields used in metal detectors.
 
 In both cases we see that a current :math:`I_0` flowing in a transmitter coil generates a magnetic flux density :math:`\mathbf{B}_0`. As :math:`\mathbf{B}_0` changes in time, eddy currents are generated in metallic objects. These eddy currents oscillate in time with the same periodicity as the transmitter current and generate a secondary magnetic field :math:`\mathbf{B}'`. The primary and secondary fields both pass through the receiver coil (in the handheld metal detector the transmitter and receiver coils are concentric) generating a secondary current :math:`I'` that can be measured.
 

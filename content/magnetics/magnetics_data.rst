@@ -8,6 +8,8 @@ Data
     :figwidth: 50%
     :name: mag_measurment
 
+    Contributions to a magnetic measurement
+
 In this section we present a summary about the different types of magnetic data. Different assumptions are made depending on the type of :ref:`instrument<magnetics_instrumentation>` used during acquisition.
 
 .. _magnetics_field_data:
@@ -91,5 +93,3 @@ a frame.
 .. utilities, data spacing along profile lines would likely be much tighter than
 .. spacing between lines. This assumes that lines can be placed perpendicular to
 .. the target orientation.
-
-

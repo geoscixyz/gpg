@@ -67,6 +67,8 @@ The sampling interval, or distance between observation points, is also important
   :figwidth: 50%
   :name: sampling_frequency
 
+  : Rule of thumb for sampling frequencies
+
 The above example illustrates a "General Rule of Thumb for Sampling Interval":  In order capture the details about the anomalous field, data should be acquired so that there are at least about 3 points per halfwidth of the signal. This is illustrated in :numref:`sampling_frequency`. A more specific analysis, from a time series viewpoint, is that any frequency component of the signal needs to be sampled at least two times in each period. For our purposes, sampling the fields finely enough so that you produce the main features of the anomalous field is sufficient.
 
 Important point: Note that survey area that is needed to capture the anomaly, and the sampling interval both depend upon the depth of burial of the object. If the object is small and buried very close to the surface then the footprint of the object is small. The station space is correspondingly reduced.
@@ -280,7 +282,3 @@ Magnetic Gradiometer
   vertical or horizontal gradients.
 
 - They often employ two cesium magnetometers separated by about 1 m.
-
-
-
-

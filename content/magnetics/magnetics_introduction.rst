@@ -9,7 +9,7 @@ The energy source is a magnetic field. The physical
 property of interest is the magnetic susceptibility. The data
 are magnetic field values.
 Signals are sometimes interpreted in terms of geologic units, or
-geologic structure (such as faults or dykes) but most often the 
+geologic structure (such as faults or dykes) but most often the
 data are inverted to yield the subsurface
 distribution of the magnetc susceptibility.
 
@@ -18,6 +18,8 @@ distribution of the magnetc susceptibility.
     :scale: 50 %
     :name: mag_response
 
+    A simple magnetic survey
+
 A pictoral summary of magnetic surveying is
 illustrated in :numref:`mag_survey` There are four main
 elements:
@@ -25,21 +27,21 @@ elements:
 The **energy source** is the Earth's magnetic field.
 It has a strength and direction at every location on the Earth.
 
-Subsurface materials can often be thought of as acting like a 
+Subsurface materials can often be thought of as acting like a
 small magnetics. The material therefore becomes magnetized when
 a magnetic field is applied. The physical property that quantifies
 this is the **magnetic susceptibiilty**.
 
 The magnetized material creates a magnetic field (often called the
-induced field).  The data from the survey 
-will be a superposition of Earth's field and the induced 
+induced field).  The data from the survey
+will be a superposition of Earth's field and the induced
 fields caused by the magnetization of the buried materials.
 
 The end goal of a magnetic survey is to infer information about the
 sub-surface from the measured magnetic field data. The data are processed
 and sometimes resultant data maps can be used to infer
 geologic information. More generally, the data are inverted to
-generate 2D or 3D images of the subsurface. 
+generate 2D or 3D images of the subsurface.
 
 
 
