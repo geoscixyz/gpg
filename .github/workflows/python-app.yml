@@ -47,6 +47,7 @@ jobs:
     - name: Build pages
       run: |
         make html
+        echo "gpg.geosci.xyz" > _build/html/CNAME
     - name: GitHub Pages
       # You may pin to the exact commit or the version.
       # uses: crazy-max/ghaction-github-pages@db4476a01402e1a7ce05f41832040eef16d14925
