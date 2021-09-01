@@ -1,7 +1,7 @@
 GPG: Geophysics for Practicing Geoscientists
 ============================================
 
-[![Build Status](https://travis-ci.org/ubcgif/gpg.svg?branch=master)](https://travis-ci.org/ubcgif/gpg)
+![Build Status](https://github.com/geoscixyz/gpg/actions/workflows/python-app.yml/badge.svg)
 [![license](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg)](/LICENSE)
 [![DOI](https://zenodo.org/badge/24121664.svg)](https://zenodo.org/badge/latestdoi/24121664)
 
@@ -19,7 +19,7 @@ For Developers:
 Here are a couple resources on sphinx and reStructured Text:
 
 - http://sphinx-doc.org/markup/
-- http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html 
+- http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
 
 **Best practices for attribution:**
 
@@ -34,7 +34,7 @@ Example of how to reference a Figure.
 ```
  .. figure:: ./ExampleImage.png
 	:align: center
-	:scale: 110% 
+	:scale: 110%
 	:name: ExampleImage
 
 	Figure Caption.
@@ -43,5 +43,5 @@ Example of how to reference a Figure.
 - Reference the Figure
 ```
 An example image is shown in :numref:`Positive_magnetic_pole`.
-```	
-Output: An example image is shown in Fig. #.	
+```
+Output: An example image is shown in Fig. #.
