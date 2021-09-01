@@ -101,6 +101,8 @@ Here are few filters applied to a simple 1x1x0.1 m block anomaly (:numref:`Data_
   :figwidth:  100%
   :name: Data_Filters
 
+  Magnetics derivative based filters
+
 
 Call for contributors
 ^^^^^^^^^^^^^^^^^^^^^
@@ -124,6 +126,8 @@ Tli Kwi Cho (TKC): *A primer*
     :figwidth: 50%
     :name: TKC_Location
 
+    Aquisition locations for TKC
+
 We demonstrate the various interpretation techniques on a mineral exploration case study, the Tli Kwi Cho diamond deposit.
 Tli Kwi Cho (TKC) is a kimberlite complex in the Northwest Territories,  Canada.
 The Northwest Territories have been surveyed extensively for diamondiferous kimberlites since the early 1980s. The Lac de Gras region has been particularly productive, and hosts two of the largest Canadian deposits: the Ekati and Diavik mines.
@@ -132,6 +136,8 @@ The Northwest Territories have been surveyed extensively for diamondiferous kimb
   :align: left
   :figwidth: 30%
   :name: TKC_Sketch
+
+  Simplified sketch of expected TKC kimberlite deposit
 
 A common geophysical fingerprint for a kimberlite pipe is a circular strong magnetic anomaly, with a gravitational low and an anomalous electromagnetic (EM) response.
 A generic model for kimberlite pipes found in the Lac de Gras region is presented in :numref:`TKC_Sketch`. The main rock types associated with kimberlites are summarized in :numref:`TKC_rocks`.
@@ -163,6 +169,8 @@ A generic model for kimberlite pipes found in the Lac de Gras region is presente
   :align: right
   :figwidth: 50%
   :name: DIGHEM_survey
+
+  Airborne magnetic data of TKC
 
 The TKC kimberlite complex was identified from an airborne magnetic and frequency-domain electromagnetic DIGHEM survey in 1992 (:numref:`DIGHEM_survey`).
 Geophysics had been used during the discovery phase of TKC, but little had been done to model the deposit prior to drilling. As we will later discover, the TKC deposit differ from the standard kimberlite model found in the region.
@@ -224,6 +232,8 @@ The derivative maps were useful in identifying at least two important features :
   :align: center
   :name: 1th_Interp
 
+  Important features identified from the derivative maps
+
 
 
 .. _frequency_domain: https://en.wikipedia.org/wiki/Frequency_domain
@@ -247,6 +257,8 @@ Plate model
 .. figure:: ./images/TKC_Parametric_Dyke.png
   :align: center
   :name: TKC_param_dyke
+
+  Parametric dyke model of TKC area
 
 .. list-table:: : Parameter used to model the dykes
    :header-rows: 0
@@ -272,6 +284,8 @@ Second, we look at the compact, near circular magnetic anomaly in the center of 
 .. figure:: ./images/TKC_Parametric_Pipe.png
   :align: center
   :name: TKC_param_pipe
+
+  Circular pipe model of the TKC area
 
 .. list-table:: : Parameters used to model the pipe
    :header-rows: 0
@@ -300,6 +314,8 @@ The inverse problem is illustrated in :numref:`mag_inverse`. Similar to a medica
     :figwidth: 50 %
     :name: mag_inverse
 
+    Conceptual inverse problem
+
 
 Inverse Problem
 ^^^^^^^^^^^^^^^
@@ -309,12 +325,16 @@ Inverse Problem
     :figwidth: 50 %
     :name: TKC_Mesh
 
+    Mesh used to discretize the subsurface for inversion
+
 In its simplest form, the inverse problem attempts to image the Earth from the observed data. To do this, we need to *approximate* the continuous Earth with a set of *discrete* parameters that a computer can understand. A picture taken with a digital camera is a great analogy. The quality of the picture largely depends on the resolution of the camera, or the number of pixels used to capture the image. The higher the resolution, the larger the file size. Similarly for 3D inversion, we need to choose an appropriate *mesh* resolution to capture the right level of details, without getting too large for a computer to handle it. The chosen mesh parameters for this problem are shown in :numref:`Inversion_param`.
 
 .. figure:: ./images/TKC_DEM.png
     :align: right
     :figwidth: 50 %
     :name: TKC_topo
+
+    Topography of the TKC area
 
 Secondly, we need a topographic surface that defines the relative distance between the observation point and the discrete Earth. A Digital Elevation Model (DEM) is downloaded from the NRCan Geogratis_ website as shown in :numref:`TKC_topo`.
 
@@ -333,7 +353,7 @@ Secondly, we need a topographic surface that defines the relative distance betwe
    *  - Data uncertainties
       - 10 nT
 
-.. _Geogratis: http://geogratis.gc.ca/site/eng/extraction
+.. _Geogratis: https://maps.canada.ca/czs/index-en.html
 
 3D Solution
 ^^^^^^^^^^^
@@ -348,6 +368,8 @@ We note the following features:
     :figwidth: 100 %
     :name: TKC_susc
 
+    Inverted TKC susceptibility model
+
 
 - Two nearly vertical compact bodies are imaged west of the magnetic dykes (:numref:`TKC_DO27`). Susceptibility values vary greatly between the two anomalies. The largest (South) anomaly seems to dip slightly toward SW has predicted by our :ref:`parametric model<pipe_model>` and appears deeper than the northern anomaly.
 
@@ -355,6 +377,8 @@ We note the following features:
     :align: center
     :figwidth: 100 %
     :name: TKC_DO27
+
+    Vertically compact bodies identified with inversion
 
 
 .. image:: https://img.shields.io/badge/powered%20by-SimPEG-blue.svg
@@ -469,4 +493,3 @@ Final Interpretation
 
 .. The effects of these five processing options are illustrated in a `separate
 .. sidebar`_ on processing of magnetics data.
-

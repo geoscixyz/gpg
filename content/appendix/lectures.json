@@ -65,7 +65,7 @@
         "author": "Doug Oldenburg",
         "youtube": "Q_4WzrzU2uM",
         "pdf": "Seismology.pdf",
-        "app": "https://www.3ptscience.com/app/SeismicRefraction"
+        "app": "https://mybinder.org/v2/gh/geoscixyz/gpgLabs/main?filepath=notebooks%2Fseismic%2FSeis_Refraction.ipynb"
     },
     "9":{
         "title": "Seismic 2",
@@ -73,7 +73,7 @@
         "author": "Doug Oldenburg",
         "youtube": "ucLEddbzOEc",
         "pdf": "Seismology.pdf",
-        "app": "https://www.3ptscience.com/app/SeismicRefraction"
+        "app": "https://mybinder.org/v2/gh/geoscixyz/gpgLabs/main?filepath=notebooks%2Fseismic%2FSeis_Refraction.ipynb"
     },
     "10":{
         "title": "Seismic 3",

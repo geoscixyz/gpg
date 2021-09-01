@@ -11,9 +11,11 @@ Primary field removal
 .. figure:: ./images/Concepts_3loops-just-3D-conductor.png
     :align: right
     :figwidth: 40%
-    :name: 3Loops
+    :name: 3Loops2
 
-As illustrated in :numref:`3Loops`, the EM receiver measures both the primary EM field from the transmitter and the secondary fields from conductive anomalies. In most cases, the amplitude of the primary field is much larger than secondary fields and must be removed from the measured data.
+    The fields measured by an EM receiver
+
+As illustrated in :numref:`3Loops2`, the EM receiver measures both the primary EM field from the transmitter and the secondary fields from conductive anomalies. In most cases, the amplitude of the primary field is much larger than secondary fields and must be removed from the measured data.
 
 .. _electromagnetic_bucking_coil:
 
@@ -26,6 +28,8 @@ One option is to physically cancel the primary field with second transmitter pla
     :align: center
     :figwidth: 75%
     :name: BuckingCoil
+
+    A Bucking coil setup
 
 
 Post-processing

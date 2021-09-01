@@ -10,7 +10,7 @@ As you will see, many of the basic fundamentals which are used to describe seism
 
 
 .. sidebar:: GPR Source
-	
+
     .. figure:: images_new/GPR_wavelet_example.png
             :align: center
             :name: fig_gpr_wavelet_0
@@ -239,9 +239,11 @@ For highly conductive objects, the reflection and transmission of radiowaves can
 Instead, we must consider the electrical conductivity of the object.
 
 .. figure:: images_new/Conductor.gif
-    :align: right
-    :scale: 120%
-    :name: fig_gpr_conductor_gif
+	:align: right
+	:scale: 120 %
+	:name: fig_gpr_conductor_gif
+
+	GPR signals bouncing off of a conductive target.
 
 From the general equation for propagation velocity, we see that as :math:`\sigma \rightarrow \infty`, the propagation velocity goes to zero.
 Thus radiowaves cannot propagate through extremely conductive objects.
@@ -470,13 +472,3 @@ In general, the time it takes for this wave to reach the receiver is given by:
 Notice that the arrival time for the critically refracted wave is linear.
 In this radargram example, we cannot easily see the critically refracted wave.
 However, it does not mean that it does not exist.
-
-
-
-
-
-
-
-
-
-

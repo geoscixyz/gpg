@@ -22,33 +22,36 @@ measured.
 	:align: center
 	:scale: 100 %
 
-Using the same colour scheme as the flow diagram above, Figure 2 shows how
+Using the same colour scheme as the flow diagram above, The next figure shows how
 this conceptual framework applies for DC methods. The energy source is a pair
 of electrodes that inject a known current into the ground at known locations
-(Figure 2a). The earth affects this energy because variations in the
+(:numref:`E source A`). The earth affects this energy because variations in the
 electrical conductivity of subsurface structures will bend the current flow
-lines (Figure 2b). The measured signals or data (Figure 2c) will involve
+lines (:numref:`E source B`). The measured signals or data (:numref:`E source B`) will involve
 measurements of voltage at the earth's surface or within boreholes. This type
 of data contains information about how charges become distributed at
 boundaries where electrical conductivity changes.
 
 .. figure:: ./images/E_source.gif
-	:align: center
-	:scale: 100 %
+    :align: center
+    :scale: 100 %
+    :name: E source A
 
-	Figure 2a. The energy source is a controlled DC electrical current injected into the ground.
+    The energy source is a controlled DC electrical current injected into the ground.
 
 .. figure:: ./images/E_source2.gif
-	:align: center
-	:scale: 100 %
+    :align: center
+    :scale: 100 %
+    :name: E source B
 
-	Figure 2b. Increases and decreases in electrical conductivity cause current paths to converge and diverge respectively.
+    Increases and decreases in electrical conductivity cause current paths to converge and diverge respectively.
 
 .. figure:: ./images/E_source3.gif
-	:align: center
-	:scale: 100 %
+    :align: center
+    :scale: 100 %
+    :name: E source C
 
-	Figure 2c. Data are voltages caused by charges accumulating due to current flow.
+    Data are voltages caused by charges accumulating due to current flow.
 
 For each placement of the transmitting electrodes, voltages will be measured
 at different locations. Therefore, the complete data set includes measured
@@ -95,8 +98,8 @@ signals.
 Measurements (Rx): potential difference
 =======================================
 
-It is tempting to compare the earth to a resistor in an electric circuit 
-(:numref:`resistance`, :numref:`resistivity`). 
+It is tempting to compare the earth to a resistor in an electric circuit
+(:numref:`resistance`, :numref:`resistivity`).
 However, it is important to recognize the difference between
 resistance and resistivity. If we apply Ohm's law, :math:`R=V/I`
 we will have a resistance, which is in units of Ohms.
@@ -106,15 +109,19 @@ resistivity.
 
 
 
- .. figure:: ./images/figure4a.gif
-	:align: center
-	:scale: 100 %
-	:name: resistance
+.. figure:: ./images/figure4a.gif
+    :align: center
+    :scale: 100 %
+    :name: resistance
 
- .. figure:: ./images/figure4b.gif
-	:align: center
-	:scale: 100 %
-	:name: resistivity
+    A simple resistor in a DC circuit
+
+.. figure:: ./images/figure4b.gif
+    :align: center
+    :scale: 100 %
+    :name: resistivity
+
+    The earth in a DC circuit
 
 
 In order to derive the relation between measurements (:math:`I`, :math:`V`,
@@ -132,7 +139,7 @@ resistivity". The derivation is a three step process:
 	:align: center
 	:figwidth: 50 %
 	:name: surveydesign
-	
+
 	Survey Design
 
 The actual measurement configuration can be summarized as shown in :numref:`surveydesign`.
@@ -143,11 +150,11 @@ The measured voltage for any arrangement of electrodes can be derived from
 :numref:`surveydesign` as follows for an half-space:
 
  .. math::
-	
+
 	\Delta V &= \frac{I \rho}{2 \pi} \left \{ \frac{1}{r_{AM}} - \frac{1}{r_{BM}} - \frac{1}{r_{AN}} + \frac{1}{r_{BN}}  	 \right \}\\[0.8em]
-	
+
  .. math::
-    
+
 	\Delta V &=I \rho G\\
 
 **G** is a geometric factor (including the factor :math:`1/2 \pi`), which depends
@@ -163,7 +170,7 @@ Survey configurations
     :figwidth: 50%
 
 There are many geometries of electrodes that can be used in the field for gathering DC
-resistivity (and induced polarization) data. The electrodes can be co-linear 
+resistivity (and induced polarization) data. The electrodes can be co-linear
 or they can be in an arbitrary configuration.
 Current and potential electrodes can be on the surface or in boreholes. The
 choice of which survey geometry to use is governed by:
@@ -174,12 +181,15 @@ choice of which survey geometry to use is governed by:
 
 The most common specific arrays are detailed in :numref:`SurveyConfiguration` and in the interactive figure below, but there are several general types of surveys conducted on the surface.
 
- .. figure:: ./images/figure6.gif
-	:align: center
-	:scale: 100 %
-	:name: SurveyConfiguration
+.. figure:: ./images/figure6.gif
+    :align: center
+    :scale: 100 %
+    :name: SurveyConfiguration
 
-**Soundings**: 
+    DC survey congfigurations
+
+
+**Soundings**:
   a fixed geometry of electrodes is expanded symetrically about a
   central point of the array. The data provide information about how the
   electrical structure varies with depth. The data curve is often called a
@@ -191,10 +201,10 @@ The most common specific arrays are detailed in :numref:`SurveyConfiguration` an
 **Profiling**:
   a fixed array is moved along a line. The data  provide
   information about lateral variations to a depth that is determined by the
-  length of the array. All seven types shown in :numref:`SurveyConfiguration` 
+  length of the array. All seven types shown in :numref:`SurveyConfiguration`
   and in the interactive figure below can be used for profiling.
 
-**General configuration**: 
+**General configuration**:
   These are combinations of profiling and sounding
   arrays. They are often obtained by defining an electrode array and expanding
   and translating it along a line. In practice, this is achieved by laying out
@@ -297,6 +307,3 @@ are not discussed further here.
           electrodes are in different tunnels.
 
       -
-
-
-

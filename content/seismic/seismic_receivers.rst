@@ -66,7 +66,7 @@ the following capabilities:
 
     "SmartSeis" seismograph which can record up to 24 channels, manufactured
     by Geometrics. A good place to see specifications of engineering scale
-    seismic equipment is http://www.terraplus.ca/products/seismic/ (Terraplus
+    seismic equipment is https://terraplus.ca/sale/seismic (Terraplus
     is an equipment rental company, based out of Richmond Hill, Ontario).
 
 

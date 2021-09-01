@@ -21,6 +21,8 @@ conductivity for rocks and minerals is presented in :numref:`roughchart`.
   :figwidth: 100%
   :name: roughchart
 
+  Rough ranges of conductivities
+
 
 While conductivity is the generally the main physical property of interest, EM induction methods also depend on the `magnetic permeability`_ and `electrical permitivity`_ of rocks. Their importance depends upon the frequency of the EM signal used for given a system.
 

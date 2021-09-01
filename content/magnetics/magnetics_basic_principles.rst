@@ -8,7 +8,9 @@ Purpose: This section provides the key components to understand the geophysical 
 .. figure:: ./images/Intro_Response.png
     :align: right
     :figwidth: 50 %
-    :name: mag_response
+    :name: intro_mag_response
+
+    Simplified magnetic target and receiver
 
 Important topics are:
  - :ref:`Source<earth_s_field>`
@@ -29,6 +31,8 @@ Earth's magnetic field (Source)
   :figwidth: 20%
   :name: Geodynamo_reversal
 
+  The Earth's dynamo
+
 All magnetic fields arise from currents. This is also true for the magnetic
 field of the earth. The outer core of the earth is molten and in a
 state of convection and a geomagnetic dynamo creates magnetic fields. Close
@@ -40,6 +44,8 @@ bar magnetic which is often referred to as a magnetic dipole.
   :align: left
   :figwidth: 40%
   :name: earth_mag_vectors
+
+  Direction of the Earth's field at the surface.
 
 To a first approximation, Earth's magnetic field resembles a large
 dipolar source with a negative pole in the northern hemisphere and a positive
@@ -53,6 +59,8 @@ Melville Island.
   :align: right
   :figwidth: 30%
   :name: coord_sys
+
+  Terms for the coordinate system used in magnetics
 
 The field at any location on (or above or within) the Earth are generally described in terms described of magnitude (:math:`\mathbf{|B|}`), declination (:math:`\mathbf{D}`) and inclination (:math:`\mathbf{I}`) as illustrated in :numref:`coord_sys`.
 
@@ -85,7 +93,7 @@ in :numref:`IGRF_three_figures` based upon the IGRF from 2003 (NOAA_).
 
 .. _magnetics_three_figures:
 
-.. list-table::
+.. list-table:: 2003 IGRF Magnetic Field
    :header-rows: 0
    :widths: 10 10
    :stub-columns: 0
@@ -320,6 +328,8 @@ Remanent Magnetization
   :figwidth: 50%
   :name: magnetic_domains
 
+  Magnetization acquired by cooling below the Curie temperature
+
 A toy bar magnetic is a quintessential example of an object that has a
 remanent magnetization. If taken to outer space where there is no inducing
 field, it still posesses a magnetic field like that of a dipole. The
@@ -337,6 +347,8 @@ magnetism. Some elements of the process are portrayed in :numref:`magnetic_domai
         :align: right
         :figwidth: 25 %
         :name: Magnetization_components
+
+        Components of magnetization
 
 Remanent magnetization is very common in man-made objects and in rocks. :numref:`UXO` shows the magnetic signature of multiple UXO buried in a proving
 ground. Each has the signature of a dipole yet the data could not have been
@@ -634,5 +646,5 @@ California 95131 U.S.A.
 .. _page: http://www.ngdc.noaa.gov/ngdc.html
 .. _homepage: http://www.geomag.nrcan.gc.ca/index-eng.php
 .. _geomagnetics website: http://www.geomag.bgs.ac.uk/
-.. _magnetic_app: http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Mag/InducedMag2D.ipynb
+.. _magnetic_app: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/main?filepath=notebooks%2Fmag%2FMag_Induced2D.ipynb
 .. _geodynamo: https://commons.wikimedia.org/w/index.php?curid=1712490
