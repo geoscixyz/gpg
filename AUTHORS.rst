@@ -7,3 +7,4 @@
 - Thibaut Astic, (`@thast <https://github.com/thast>`_)
 - Sarah Devriese, (`@sdevriese <https://github.com/sdevriese>`_)
 - Seogi Kang, (`@sgkang <https://github.com/sgkang>`_)
+- Joseph Capriotti, (`@jcapriot <https://github.com/jcapriot>`_)

@@ -128,7 +128,7 @@ pygments_style = 'sphinx'
 # -- Edit on Github Extension ---------------------------------------------
 
 edit_on_github_project = 'ubcgif/gpg'
-edit_on_github_branch = 'master'
+edit_on_github_branch = 'main'
 
 # -- Options for HTML output ----------------------------------------------
 
