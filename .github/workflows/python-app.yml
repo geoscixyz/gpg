@@ -47,7 +47,6 @@ jobs:
     - name: Build pages
       run: |
         make html
-        echo "gpg.geosci.xyz" > _build/html/CNAME
     - name: GitHub Pages
       # You may pin to the exact commit or the version.
       # uses: crazy-max/ghaction-github-pages@db4476a01402e1a7ce05f41832040eef16d14925
@@ -72,7 +71,7 @@ jobs:
         # Commit message
         # commit_message: # optional
         # Write the given domain name to the CNAME file
-        # fqdn: # optional
+        fqdn: gpg.geosci.xyz
         # Allow Jekyll to build your site
         jekyll: false # optional, default is true
         # If enabled, nothing will be pushed
