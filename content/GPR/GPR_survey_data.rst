@@ -309,7 +309,7 @@ This results in pulse widths around 1 ns to 10 ns.
 In order to create a wavelet with a longer pulse width, only frequencies near the central frequency are needed.
 However, a large range of frequencies (or bandwidth) is needed to create wavelets that have short pulse widths.
 
-**3) The spatial length (wavelength) increases as the pulse with increases**.
+**3) The spatial length (wavelength) increases as the pulse width increases**.
 As we can see from the figure below, the "wave envelope" is longer for wavelets that have a long pulse width.
 
 
