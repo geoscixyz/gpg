@@ -388,7 +388,7 @@ We note the following features:
 
 .. _Simpeg: http://simpeg.xyz
 
-.. _tutorial: http://computation.geosci.xyz/case-studies/PF/TKC_PF.html
+.. _tutorial: https://github.com/geoscixyz/computation/blob/main/docs/case-studies/PF/TKC_PF.ipynb
 
 Validation
 ^^^^^^^^^^
