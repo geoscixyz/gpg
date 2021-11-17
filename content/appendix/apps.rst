@@ -41,15 +41,6 @@ Binder
     :width: 100%
     :align: center
 
-Azure Notebooks
----------------
-
-They can also be run online through
-
-- https://notebooks.azure.com/eosc350/libraries/gpgLabs
-
-.. image:: images/gpgLabNotebooks.png
-
 
 Installing locally
 ------------------
