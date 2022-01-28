@@ -307,7 +307,7 @@ Inversion
 
 The parametric forward simulation was helpful in understanding the shape and susceptibility contrast associated with the main magnetic anomalies. Modeling the Earth with simple parametric objects rapidly becomes prohibitive however for large and complicated susceptibility distributions. For this reason, we must adopt a more mathematical approach.
 
-The inverse problem is illustrated in :numref:`mag_inverse`. Similar to a medical imaging problem, the goal is to recover a 3D representation of the Earth from the magnetic data. Several commercial and open-source algorithms are available to solve the inverse problem. We here used the SimPEG_ open-source package. We present the various input parameters required for the inversion. More technical details regarding the inversion algorithm are provided in this tutorial_
+The inverse problem is illustrated in :numref:`mag_inverse`. Similar to a medical imaging problem, the goal is to recover a 3D representation of the Earth from the magnetic data. Several commercial and open-source algorithms are available to solve the inverse problem. We here used the SimPEG_ open-source package. We present the various input parameters required for the inversion.
 
 .. figure:: ./images/Intro_Inverse.png
     :align: center
@@ -387,8 +387,6 @@ We note the following features:
 
 
 .. _Simpeg: http://simpeg.xyz
-
-.. _tutorial: http://computation.geosci.xyz/case-studies/PF/TKC_PF.html
 
 Validation
 ^^^^^^^^^^
