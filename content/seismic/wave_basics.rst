@@ -121,7 +121,7 @@ A wave is a representation of the propagation of energy. In the case of seismic 
 .. figure:: ./images/pondwaves-noleaves.jpg
         :align: center
         
-        Image reproduced with permission from The website of the `Gemini Observatory <http://www.gemini.edu/>`__. The original can be found `here <http://www.gemini.edu/images/stories/press_release/pr2003-2/pondwaves-noleaves.jpg>`__.
+        Image reproduced with permission from The website of the `Gemini Observatory <https://www.gemini.edu/>`__. The original can be found `here <https://www.gemini.edu/images/stories/press_release/pr2003-2/pondwaves-noleaves.jpg>`__.
 
 A wavefront indicates the set of locations at which the phase of the wave has the same value. To continue with the pond example, visualize the peaks (or troughs) of water ripples after a rock has been thrown in. The direction of propagation of the energy is normal to the wavefront. **Seismic rays** are imaginary lines perpendicular to the wavefront that indicate the path along which the wavefront is traveling. Rays are not physical entities. They exist only to illustrate where the energy travels. It is important to remark here that the arrival of energy at a geophone is not a point event. The energy is spread in space and time. Note how the peaks and troughs of the waves on the pond have widths, which remains constant as they propagate. Similarly, seismic energy will arrive at a geophone as a pulse of energy with some shape and width, not as a spike occurring a single instance in time. This pulse of energy is called a wavelet.
 
@@ -172,6 +172,6 @@ are two primary reasons:
 	
 
 .. _CC BY 3.0: https://creativecommons.org/licenses/by/3.0/
-.. _Subsurface Wiki: http://subsurfwiki.org/
-.. _L. Braile: http://web.ics.purdue.edu/~braile/
-.. _seismic wave demo: http://web.ics.purdue.edu/~braile/edumod/waves/WaveDemo.htm
+.. _Subsurface Wiki: https://subsurfwiki.org/
+.. _L. Braile: https://web.ics.purdue.edu/~braile/
+.. _seismic wave demo: https://web.ics.purdue.edu/~braile/edumod/waves/WaveDemo.htm

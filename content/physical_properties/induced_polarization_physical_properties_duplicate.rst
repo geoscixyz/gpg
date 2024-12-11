@@ -186,7 +186,7 @@ response is provided. Those measurements can be in time or frequency and the uni
 of the "chargeability" are inherited from the data. We outline below:
 
 .. ToDo: Integrate the material currently in Induced polarization
-.. http://gpg.geosci.xyz/en/physprops/content/induced_polarization/induced_polarization_measurements_data.html
+.. https://gpg.geosci.xyz/en/physprops/content/induced_polarization/induced_polarization_measurements_data.html
 .. so that go through each type of datum and hence the meanings and units for each of the
 .. associated chargeabilities.
 
@@ -518,7 +518,7 @@ Thus, the chargeability of a rock increases and its tortuosity increases.
 .. Physical Phenomenons
 .. ====================
 
-.. .. _induced polarization measurements data: http://gpg.geosci.xyz/en/latest/content/induced_polarization/induced_polarization_measurements_data.html
+.. .. _induced polarization measurements data: https://gpg.geosci.xyz/en/latest/content/induced_polarization/induced_polarization_measurements_data.html
 
 .. The chargeability of earth materials is essentially an electrochemical effect
 .. caused by many factors, not all of which are completely understood. If ground

@@ -211,9 +211,9 @@ Data, model and inversion files used in this page can be downloaded below:
  `Two_Spheres <https://storage.googleapis.com/simpeg/em_geosci/DCR_Interp_TwoSpheres.zip>`_
 
 
-Utilities: UBC-DC2D `data viewer <http://gif.eos.ubc.ca/sites/default/files
+Utilities: UBC-DC2D `data viewer <https://gif.eos.ubc.ca/sites/default/files
 /dcip2d-data-viewer.zip>`_ and `model viewer
-<http://gif.eos.ubc.ca/sites/default/files/dcip2d-model-viewer.zip>`_
+<https://gif.eos.ubc.ca/sites/default/files/dcip2d-model-viewer.zip>`_
 
 References
 **********

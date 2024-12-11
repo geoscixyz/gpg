@@ -89,7 +89,7 @@ Earth's field has a strength of approximately 70,000 nanoTeslas
 equator. Field orientation and strength varies around the world, as presented
 in :numref:`IGRF_three_figures` based upon the IGRF from 2003 (NOAA_).
 
-.. _IAGA: http://www.ngdc.noaa.gov/IAGA/vmod/
+.. _IAGA: https://www.ngdc.noaa.gov/IAGA/vmod/
 
 .. _magnetics_three_figures:
 
@@ -640,11 +640,11 @@ California 95131 U.S.A.
 
 
 .. links:
-.. _NOAA: http://www.ngdc.noaa.gov/geomag/geomag.shtml
-.. _Canadian National Geomagnetism Program: http://www.geomag.nrcan.gc.ca/index-eng.php
-.. _magnetic field calculator: http://www.ngdc.noaa.gov/geomag-web/
-.. _page: http://www.ngdc.noaa.gov/ngdc.html
-.. _homepage: http://www.geomag.nrcan.gc.ca/index-eng.php
-.. _geomagnetics website: http://www.geomag.bgs.ac.uk/
+.. _NOAA: https://www.ngdc.noaa.gov/geomag/geomag.shtml
+.. _Canadian National Geomagnetism Program: https://www.geomag.nrcan.gc.ca/index-eng.php
+.. _magnetic field calculator: https://www.ngdc.noaa.gov/geomag-web/
+.. _page: https://www.ngdc.noaa.gov/ngdc.html
+.. _homepage: https://www.geomag.nrcan.gc.ca/index-eng.php
+.. _geomagnetics website: https://www.geomag.bgs.ac.uk/
 .. _magnetic_app: https://mybinder.org/v2/gh/geoscixyz/gpgLabs/main?filepath=notebooks%2Fmag%2FMag_Induced2D.ipynb
 .. _geodynamo: https://commons.wikimedia.org/w/index.php?curid=1712490
