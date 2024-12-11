@@ -108,7 +108,7 @@ Magnetics 2
 - `Magnetics lecture slides <https://storage.googleapis.com/simpeg/eosc350lectures/3_Magnetics.pdf>`_
             
 
-- `Jupyter notebook: InducedMag2D.ipynb <http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Mag/InducedMag2D.ipynb>`_
+- `Jupyter notebook: InducedMag2D.ipynb <https://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Mag/InducedMag2D.ipynb>`_
             
 
         
@@ -137,7 +137,7 @@ Magnetics 3
 - `Magnetics lecture slides <https://storage.googleapis.com/simpeg/eosc350lectures/3_Magnetics.pdf>`_
             
 
-- `Jupyter notebook: InducedMag2D.ipynb <http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Mag/InducedMag2D.ipynb>`_
+- `Jupyter notebook: InducedMag2D.ipynb <https://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Mag/InducedMag2D.ipynb>`_
             
 
         
@@ -166,7 +166,7 @@ Magnetics 4
 - `Magnetics lecture slides <https://storage.googleapis.com/simpeg/eosc350lectures/3_Magnetics.pdf>`_
             
 
-- `Jupyter notebook: InducedMag2D.ipynb <http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Mag/InducedMag2D.ipynb>`_
+- `Jupyter notebook: InducedMag2D.ipynb <https://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Mag/InducedMag2D.ipynb>`_
             
 
         
@@ -195,7 +195,7 @@ Magnetics 5
 - `Magnetics lecture slides <https://storage.googleapis.com/simpeg/eosc350lectures/3_Magnetics.pdf>`_
             
 
-- `Jupyter notebook: InducedMag2D.ipynb <http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Mag/InducedMag2D.ipynb>`_
+- `Jupyter notebook: InducedMag2D.ipynb <https://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Mag/InducedMag2D.ipynb>`_
             
 
         
@@ -363,7 +363,7 @@ Seismic 5
 - `Seismology lecture slides <https://storage.googleapis.com/simpeg/eosc350lectures/Seismology.pdf>`_
             
 
-- `Jupyter notebook: SeismicNMOapp.ipynb <http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Seismic/NMO/SeismicNMOapp.ipynb>`_
+- `Jupyter notebook: SeismicNMOapp.ipynb <https://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Seismic/NMO/SeismicNMOapp.ipynb>`_
             
 
         
@@ -446,7 +446,7 @@ Electromagnetics 2
 - `EM lecture slides <https://storage.googleapis.com/simpeg/eosc350lectures/5_EM.pdf>`_
             
 
-- `Jupyter notebook: ResponseFct.ipynb <http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/EM/ResponseFct/ResponseFct.ipynb>`_
+- `Jupyter notebook: ResponseFct.ipynb <https://mybinder.org/repo/ubcgif/gpgLabs/notebooks/EM/ResponseFct/ResponseFct.ipynb>`_
             
 
         
@@ -475,7 +475,7 @@ Electromagnetics 3
 - `EM lecture slides <https://storage.googleapis.com/simpeg/eosc350lectures/5_EM.pdf>`_
             
 
-- `Jupyter notebook: ResponseFct.ipynb <http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/EM/ResponseFct/ResponseFct.ipynb>`_
+- `Jupyter notebook: ResponseFct.ipynb <https://mybinder.org/repo/ubcgif/gpgLabs/notebooks/EM/ResponseFct/ResponseFct.ipynb>`_
             
 
         
@@ -502,7 +502,7 @@ DC Resistivity 1
 
 
 
-- `Jupyter notebook: DCLab.ipynb <http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/DC/DCLab.ipynb>`_
+- `Jupyter notebook: DCLab.ipynb <https://mybinder.org/repo/ubcgif/gpgLabs/notebooks/DC/DCLab.ipynb>`_
             
 
         
@@ -531,7 +531,7 @@ DC Resistivity 2
 - `DC Resistivity lecture slides <https://storage.googleapis.com/simpeg/eosc350lectures/9_DC_Resistivity.pdf>`_
             
 
-- `Jupyter notebook: DCLab.ipynb <http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/DC/DCLab.ipynb>`_
+- `Jupyter notebook: DCLab.ipynb <https://mybinder.org/repo/ubcgif/gpgLabs/notebooks/DC/DCLab.ipynb>`_
             
 
         

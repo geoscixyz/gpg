@@ -223,7 +223,7 @@ Thus, the chargeability of a rock increases and its tortuosity increases.
 .. Physical Phenomenons
 .. ====================
 
-.. .. _induced polarization measurements data: http://gpg.geosci.xyz/en/latest/content/induced_polarization/induced_polarization_measurements_data.html
+.. .. _induced polarization measurements data: https://gpg.geosci.xyz/en/latest/content/induced_polarization/induced_polarization_measurements_data.html
 
 .. The chargeability of earth materials is essentially an electrochemical effect
 .. caused by many factors, not all of which are completely understood. If ground

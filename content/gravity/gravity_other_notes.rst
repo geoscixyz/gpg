@@ -141,6 +141,6 @@ laser interferometer. Specifications include:
 - Operating dynamic range: world-wide
 
 .. For a good summary of the instrument, how it works, applications, and current
-.. users, see the company's web page at http://www.microgsolutions.com/index.html
+.. users, see the company's web page at https://www.microgsolutions.com/index.html
 
-.. _Geodetic Survey Division: http://webapp.geod.nrcan.gc.ca/geod/
+.. _Geodetic Survey Division: https://webapp.geod.nrcan.gc.ca/geod/
