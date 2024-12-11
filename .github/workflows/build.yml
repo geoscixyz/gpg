@@ -1,0 +1,78 @@
+name: Build and Deploy website
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  # =============
+  # Build website
+  # =============
+  build:
+    runs-on: ubuntu-latest
+    env:
+      PYTHON: "3.9"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ env.PYTHON }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: List installed packages
+        run: pip list
+
+      - name: Build the website
+        run: make html
+
+      # Store the docs as a build artifact so we can deploy it later
+      - name: Upload HTML documentation as an artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs-${{ github.sha }}
+          path: _build/html
+
+
+  # ==============
+  # Deploy website
+  # ==============
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.repository == 'geoscixyz/gpg' && github.event_name == 'push' && github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      # Fetch the built docs from the "build" job
+      - name: Download HTML documentation artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: docs-${{ github.sha }}
+          path: _build/html
+
+      - name: Deploy website
+        if: success() && github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          publish_dir: _build/html
+          publish_branch: gh-pages
+          force_orphan: true
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
