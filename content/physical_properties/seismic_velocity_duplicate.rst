@@ -150,7 +150,7 @@ Young's Modulus and Poisson's Ratio
 		:align: right
 		:figwidth: 35%
 
-		Young's modulus and Poisson's ratio diagram. `Image <http://www.subsurfwiki.org/wiki/File:Elastic_Poisson_ratio.png>`__ from `Subsurface Wiki`_, licensed under `CC BY 3.0`_.
+		Young's modulus and Poisson's ratio diagram. `Image <https://www.subsurfwiki.org/wiki/File:Elastic_Poisson_ratio.png>`__ from `Subsurface Wiki`_, licensed under `CC BY 3.0`_.
 
 
 Young's modulus is defined to be the ratio of longitudinal normal stress to longitudinal normal strain.
@@ -440,10 +440,10 @@ Ultimately, this process is responsible for increasing the seismic velocities.
 
 .. rubric:: Footnotes
 
-.. [#f1] L. Braile, http://web.ics.purdue.edu/~braile/edumod/waves/WaveDemo.htm, Copyright 2004-2010,
+.. [#f1] L. Braile, https://web.ics.purdue.edu/~braile/edumod/waves/WaveDemo.htm, Copyright 2004-2010,
 
 .. _CC BY 3.0: https://creativecommons.org/licenses/by/3.0/
-.. _Subsurface Wiki: http://subsurfwiki.org/
+.. _Subsurface Wiki: https://subsurfwiki.org/
 
 
 

@@ -175,7 +175,7 @@ References
 
 Corwin, R.F., 1990, *The self-potential method for environmental and engineering applications*, in Geotechnical and Environmental Geophysics, Vol I: Review and Tutorial, (Ward, S.H., ed), Society of Exploration Geophysics, pg 127 - 146.
 
-.. _Geometrics: http://www.geometrics.com/
+.. _Geometrics: https://www.geometrics.com/
 
 
 

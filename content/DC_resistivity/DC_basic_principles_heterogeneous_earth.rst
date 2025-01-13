@@ -27,7 +27,7 @@ Exploration Geophysicists.
     :file: ./figure2.html
 
 
-.. _Mont Isa: http://em.geosci.xyz/content/case_histories/mt_isa/index.html
+.. _Mont Isa: https://em.geosci.xyz/content/case_histories/mt_isa/index.html
 
 Charge distribution
 ===================
