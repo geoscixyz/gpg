@@ -25,7 +25,7 @@ geological engineers, geologists, and undergraduate geophysicists.  The GPG is
 light on mathematical development but links to deeper levels of analysis are
 provided.
 
-To ease readers' understanding in applied geophysics and its applocations,
+To ease readers' understanding in applied geophysics and its applications,
 materials in GPG are integrated with the Jupyter apps. We strongly promote readers to use both text materials in GPG and apps together.
 By clicking below **binder** badge
 will show you list of the apps, and there you can run the app.
