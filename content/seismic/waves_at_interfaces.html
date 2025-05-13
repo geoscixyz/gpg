@@ -1,0 +1,321 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waves at interfaces &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Travel times" href="traveltimes.html" />
+    <link rel="prev" title="Basics of wave propagation" href="wave_basics.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Seismic</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="elastic_properties.html">Elastic Properties</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="basic_principles.html">Basic principles</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="wave_basics.html">Basics of wave propagation</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Waves at interfaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#reflection-and-transmission-of-plane-waves">Reflection and transmission of plane waves</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mode-conversion">Mode Conversion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#angles-of-reflection-and-refraction">Angles of reflection and refraction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#critical-angle">Critical angle</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="traveltimes.html">Travel times</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_survey.html">Survey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_data.html">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_processing.html">Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_interpretation.html">Interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MASW.html">MASW</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_apps.html">Seismic apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Seismic</a> &raquo;</li>
+        
+          <li><a href="basic_principles.html">Basic principles</a> &raquo;</li>
+        
+      <li>Waves at interfaces</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/seismic/waves_at_interfaces.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="waves-at-interfaces">
+<span id="id1"></span><h1>Waves at interfaces<a class="headerlink" href="#waves-at-interfaces" title="Link to this heading"></a></h1>
+<section id="reflection-and-transmission-of-plane-waves">
+<h2>Reflection and transmission of plane waves<a class="headerlink" href="#reflection-and-transmission-of-plane-waves" title="Link to this heading"></a></h2>
+<p>When a wave strikes an interface between two materials with differing physical properties, some of the wave energy will be reflected and the rest will be transmitted through or along the interface. All of the processing and interpretation methods we will discuss will assume that a seismic wave striking the interface between materials of differing physical properties can be approximated as a plane wave. We define a new quantity called acoustic impedance as <span class="math notranslate nohighlight">\(Z = \rho V\)</span>, the product of density and velocity. The velocity in question could be for either P or S waves.</p>
+<p>Let us first consider waves striking an interface at normal incidence, i.e. with the direction of propagation perpendicular to the interface. The relative amplitudes of the reflected and transmitted waves will depend on the acoustic impedances of the two materials. Let <span class="math notranslate nohighlight">\(A_0\)</span>, <span class="math notranslate nohighlight">\(A_1\)</span> and <span class="math notranslate nohighlight">\(A_2\)</span> be the amplitudes of the incident, reflected, and transmitted waves, respectively. The ratios of <span class="math notranslate nohighlight">\(A_1\)</span> and <span class="math notranslate nohighlight">\(A_2\)</span> to <span class="math notranslate nohighlight">\(A_0\)</span> are given by the reflection and transmission coefficients:</p>
+<p><strong>Reflection Coefficient:</strong></p>
+<div class="math notranslate nohighlight">
+\[R = \frac{A_1}{A_0} = \frac{Z_2 - Z_1}{Z_2 + Z_1} \qquad -1 \le R \le 1\]</div>
+<p><strong>Transmission Coefficient:</strong></p>
+<div class="math notranslate nohighlight">
+\[T = \frac{A_2}{A_0} = \frac{2 Z_1}{Z_2 + Z_1} \qquad 0 \le T \le 2\]</div>
+<p>The following figure shows the progression of amplitude as a vertical seismic wave propagates through the earth.</p>
+<figure class="align-center">
+<img alt="../../_images/Reflection_Transmission.jpg" src="../../_images/Reflection_Transmission.jpg" />
+</figure>
+<p>Displacement of the earth from equilibrium position must be continuous across any interface. This guarantees that <span class="math notranslate nohighlight">\(A_0 = A_1 + A_2\)</span>. We make note of the values of <span class="math notranslate nohighlight">\(R\)</span> and <span class="math notranslate nohighlight">\(Z\)</span> in some important special cases:</p>
+<ol class="arabic simple">
+<li><p>If <span class="math notranslate nohighlight">\(Z_1 = Z_2\)</span>:   <span class="math notranslate nohighlight">\(R = 0\)</span>,  <span class="math notranslate nohighlight">\(T = 1\)</span></p></li>
+<li><p>If   <span class="math notranslate nohighlight">\(Z_1 &gt;&gt; Z_2\)</span>:   <span class="math notranslate nohighlight">\(R = -1\)</span>,  <span class="math notranslate nohighlight">\(T = 2\)</span>.  The value <span class="math notranslate nohighlight">\(R
+= -1\)</span> means that the pulse will be reflected with a polarity change, for
+example at the rock-air interface, with an upward traveling wave.</p></li>
+<li><p>If   <span class="math notranslate nohighlight">\(Z_2 &gt;&gt; Z_1\)</span>   <span class="math notranslate nohighlight">\(R = 1\)</span>,  <span class="math notranslate nohighlight">\(T = 0\)</span> (wave travelling down through the air and hitting the air earth interface).</p></li>
+</ol>
+<p>We can illustrate scenarios two and three using the example of a wave propagating on a string. A string with a free end represents scenario two and a string with a fixed end represents scenario three.  These are illustrated in the following video</p>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9OpL3OFuVXo?rel=0" frameborder="0" allowfullscreen></iframe allowfullscreen>
+</iframe>
+</div><p>You can explore the concept further using an interactive web app <a class="reference external" href="https://phet.colorado.edu/en/simulations/wave-on-a-string">here</a>.</p>
+<p><strong>Remark:</strong>  Large amplitudes of the transmitted wave are sometimes counter-
+intuitive. However, the energy transported in an acoustic wave is</p>
+<div class="math notranslate nohighlight">
+\[\text{Energy} = \frac{1}{2} \rho v \omega^2 A^2 \approx ZA^2\]</div>
+<p>So even though there is an enhanced amplitude of a transmitted wave in certain
+situations, there is still conservation of energy. The ratio of incoming to reflected
+energy is <span class="math notranslate nohighlight">\(E_R\)</span> and the ratio of incoming to transmitted energy is <span class="math notranslate nohighlight">\(E_T\)</span>. In terms of the impedances on either side of the interface, The energy ratios are</p>
+<div class="math notranslate nohighlight">
+\[E_R = Z_1 \left( \frac{Z_2 - Z_1}{Z_2 + Z_1} \right)^2 A_0^2\]</div>
+<div class="math notranslate nohighlight">
+\[E_T = Z_2 \frac{4 Z_1 Z_1}{(Z_2 + Z_1 )^2} A_0^2\]</div>
+<div class="math notranslate nohighlight">
+\[E_R + E_T = Z_1 A_0^2\]</div>
+</section>
+<section id="mode-conversion">
+<h2>Mode Conversion<a class="headerlink" href="#mode-conversion" title="Link to this heading"></a></h2>
+<p>A P-wave incident on an interface at a non-perpendicular angle will produce reflected and transmitted
+S-waves, as well as P-waves. Analogous conversions occur when there is an incident S wave on a plane boundary. The
+mode conversions (P <span class="math notranslate nohighlight">\(\rightarrow\)</span> S, or S <span class="math notranslate nohighlight">\(\rightarrow\)</span> P) can complicate interpretation, but S-waves are always slower than P-waves, so first arrivals will always be P-waves unless a special S-wave energy source is used. Interpretation of shear waves is still important in some contexts, especially in geotechnical applications, since they provide important information about the rigidity of the material.</p>
+<figure class="align-center">
+<img alt="../../_images/modeconversion.gif" src="../../_images/modeconversion.gif" />
+</figure>
+<p>In seismic refraction surveying we are concerned with first arrivals and will not consider mode conversion further. It will be discussed again in the section on processing reflection survey data.</p>
+</section>
+<section id="angles-of-reflection-and-refraction">
+<h2>Angles of reflection and refraction<a class="headerlink" href="#angles-of-reflection-and-refraction" title="Link to this heading"></a></h2>
+<p>Consider a P-wave which is incident at an  angle <span class="math notranslate nohighlight">\(\theta_1\)</span> measured with
+respect to the normal of the interface, as seen in the figure below where the approaching wave is represented as a ray. The angles of the reflected and refracted rays are as follows:</p>
+<p><strong>Law of reflection:</strong> The angle of reflection equals the angle of incidence. So
+<span class="math notranslate nohighlight">\(\theta_r\)</span> = <span class="math notranslate nohighlight">\(\theta_1\)</span> .</p>
+<p><strong>Law of refraction:</strong> The angle of refraction <span class="math notranslate nohighlight">\(\theta_2\)</span>  is determined
+through Snell’s Law, which is</p>
+<div class="math notranslate nohighlight">
+\[\frac{\sin\theta_1}{v_1} = \frac{\sin\theta_2}{v_2}\]</div>
+<p>If the wave travels from a low velocity medium to a high velocity medium the
+wave gets refracted away from the normal. Conversely, it gets refracted toward
+the normal if the wave goes from a high velocity to a low velocity medium.</p>
+<figure class="align-center">
+<img alt="../../_images/snell.gif" src="../../_images/snell.gif" />
+</figure>
+<p>The animation of wavefront propagation shown earlier (and directly below) is again useful here. Although we have described Snell’s law in terms of two rays it captures the bending of a spatially extended wavefront, as the animation clearly shows.</p>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0z2WTLLKjGY?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></section>
+<section id="critical-angle">
+<h2>Critical angle<a class="headerlink" href="#critical-angle" title="Link to this heading"></a></h2>
+<p>The critical refraction angle, called <span class="math notranslate nohighlight">\(\theta_c\)</span>, is a key concept in refraction seismology. This is the angle of incidence for which the corresponding angle of refraction is <span class="math notranslate nohighlight">\(90^{\circ}\)</span>. In this case, the refracted ray travels horizontally along the interface. A formula for the critical angle can be derived from Snell’s law as follows:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\frac{\sin\theta_c}{v_1} = \frac{\sin 90^{\circ}}{v_2} = \frac{1}{v_2}\\\sin\theta_c = \frac{v_1}{v_2}\end{aligned}\end{align} \]</div>
+<p>When the wave in the second medium is critically refracted, it travels
+parallel to the interface at a speed of <span class="math notranslate nohighlight">\(v_2\)</span>. As it travels, it radiates
+energy into the upper medium with the associated ray path making an angle
+<span class="math notranslate nohighlight">\(\theta_c\)</span> with the normal. This critically refracted wave is also called
+a “head wave”. It is somewhat analogous to the bow wave of a moving boat. This is illustrated in the static figure below.</p>
+<figure class="align-center">
+<img alt="../../_images/criticalrefraction.gif" src="../../_images/criticalrefraction.gif" />
+</figure>
+<p>The following video from <a class="reference external" href="https://www.iris.edu/hq/programs/epo">the IRIS group</a> illustrates the propagation of reflected, sub-critically refracted and critically refracted rays.</p>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FygYDmm99SA?rel=0" frameborder="0" allowfullscreen></iframe>
+</iframe>
+</div><p>We will also once again return to our trusty wavefront animation which shows the head wave in actual wave form, rather than just the head-rays</p>
+<blockquote>
+<div><div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0z2WTLLKjGY?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></div></blockquote>
+<p>A final very important point here is to note that energy will only be refracted back toward the surface if the velocity in the lower layer is greater than in the upper layer. Otherwise the ray will be bent toward the vertical downward direction. Examine Snell’s law to convince yourself this is true. This scenario is illustrated below</p>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eI3epl0ek3g?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="wave_basics.html" class="btn btn-neutral float-left" title="Basics of wave propagation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="traveltimes.html" class="btn btn-neutral float-right" title="Travel times" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,414 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dielectric Permittivity &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Electrical Conductivity" href="physical_properties_conductivity.html" />
+    <link rel="prev" title="Seismic Velocity" href="seismic_velocity_duplicate.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Physical Properties</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="physical_properties_density.html">Density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_susceptibility_duplicate.html">Susceptibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_velocity_duplicate.html">Seismic Velocity</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Dielectric Permittivity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#measurements-for-dielectric-permittivity">Measurements for Dielectric Permittivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#electrical-permittivity-for-common-rocks">Electrical Permittivity for Common Rocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#factors-impacting-electric-permittivity">Factors Impacting Electric Permittivity</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="physical_properties_conductivity.html">Electrical Conductivity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="induced_polarization_physical_properties_duplicate.html">Chargeability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tables/index.html">Tables of Physical Properties</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Physical Properties</a> &raquo;</li>
+        
+      <li>Dielectric Permittivity</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/physical_properties/physical_properties_dielectric_permittivity.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dielectric-permittivity">
+<span id="physical-properties-dielectric-permittivity"></span><h1>Dielectric Permittivity<a class="headerlink" href="#dielectric-permittivity" title="Link to this heading"></a></h1>
+<p>Dielectric permittivity (<span class="math notranslate nohighlight">\(\varepsilon\)</span>) represents an important diagnostic physical property for ground-penetrating radar.
+This physical property impacts the attenuation, wavelength and velocity of electromagnetic waves as they propagate through a material.
+Dielectric permittivity is defined as the ratio between the electric field (<span class="math notranslate nohighlight">\(\vec E\)</span>) within a material and the corresponding electric displacement (<span class="math notranslate nohighlight">\(\vec D\)</span>):</p>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/electric_polarization_physics_diagram.png"><img alt="../../_images/electric_polarization_physics_diagram.png" src="../../_images/electric_polarization_physics_diagram.png" style="width: 361.6px; height: 250.8px;" />
+</a>
+</figure>
+<div class="math notranslate nohighlight">
+\[\vec D = \varepsilon \vec E\]</div>
+<p>When exposed to an electric field, positive and negative charges within individual atoms and molecules try to separate from one another.
+For example, the electron clouds of atoms will shift in position relative to their nuclei.
+The extent of electrical charge separation within a material is represented by the electric polarization (<span class="math notranslate nohighlight">\(\vec P\)</span>).
+The electric field, electric displacement and electric polarization are related by the following expression:</p>
+<div class="math notranslate nohighlight">
+\[\vec D = \varepsilon_0 \vec E + \vec P\]</div>
+<p>where the permittivity of free-space (<span class="math notranslate nohighlight">\(\varepsilon_0 = 8.8541878176 \times 10^{-12}\)</span> F/m) defines the relationship between <span class="math notranslate nohighlight">\(\vec D\)</span> and <span class="math notranslate nohighlight">\(\vec E\)</span> if the material is non-polarizable.
+Therefore, the dielectric permittivity and the electric displacement define how strongly a material becomes electrically polarized under the influence of an electric field.
+The electrical polarization within the material can be defined in terms of the electric field as follows:</p>
+<div class="math notranslate nohighlight">
+\[\vec P = (\varepsilon - \varepsilon_0 ) \vec E = \chi_e \varepsilon_0 \vec E\]</div>
+<p>where <span class="math notranslate nohighlight">\(\chi_e\)</span> is known as the electric susceptibility.
+The electric susceptibility should not be confused with the magnetic susceptibility, as they describe different physical processes.</p>
+<p><strong>Relative Permittivity</strong>: The dielectric properties of materials are generally expressed using the relative permittivity (<span class="math notranslate nohighlight">\(\varepsilon_r\)</span>).
+The relative permittivity defines the dielectric properties of a material relative to that of free-space:</p>
+<div class="math notranslate nohighlight">
+\[\varepsilon_r = \frac{\varepsilon}{\varepsilon_0}\]</div>
+<p>Parameters used to define the dielectric properties of materials and their associated units are tabulated below.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Property</strong></p></th>
+<th class="head"><p><strong>Symbol</strong></p></th>
+<th class="head"><p><strong>Units</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Electric Field</p></td>
+<td><p><span class="math notranslate nohighlight">\(\vec E\)</span></p></td>
+<td><p>N/C or V/m</p></td>
+</tr>
+<tr class="row-odd"><td><p>Displacement Current</p></td>
+<td><p><span class="math notranslate nohighlight">\(\vec D\)</span></p></td>
+<td><p>A/m <span class="math notranslate nohighlight">\(\!^2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Electric Polarization</p></td>
+<td><p><span class="math notranslate nohighlight">\(\vec P\)</span></p></td>
+<td><p>A/m <span class="math notranslate nohighlight">\(\!^2\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Dielectric Permittivity</p></td>
+<td><p><span class="math notranslate nohighlight">\(\varepsilon\)</span></p></td>
+<td><p>F/m</p></td>
+</tr>
+<tr class="row-even"><td><p>Electric Susceptibility</p></td>
+<td><p><span class="math notranslate nohighlight">\(\chi_e\)</span></p></td>
+<td><p><em>Unitless</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>Relative Permittivity</p></td>
+<td><p><span class="math notranslate nohighlight">\(\varepsilon_r\)</span></p></td>
+<td><p><em>Unitless</em></p></td>
+</tr>
+</tbody>
+</table>
+<section id="measurements-for-dielectric-permittivity">
+<h2>Measurements for Dielectric Permittivity<a class="headerlink" href="#measurements-for-dielectric-permittivity" title="Link to this heading"></a></h2>
+<p>There are a host of methods for measuring the dielectric permittivity of a material.
+Here, we will describe two basic experiments.
+These experiments assume that 1) the sample is non-magnetic (i.e. <span class="math notranslate nohighlight">\(\mu = \mu_0\)</span>) and 2) the conductivity of the sample is sufficiently small (<span class="math notranslate nohighlight">\(\sigma &lt; 0.01\)</span>).</p>
+<p><strong>Transmission Time Measurements</strong></p>
+<p>The speed at which high-frequency electromagnetic (EM) waves move through a material depends on the material’s dielectric permittivity.
+Assuming the material is non-magnetic, this relationship is given by:</p>
+<div class="math notranslate nohighlight">
+\[v = \frac{c}{\sqrt{\varepsilon_r}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\varepsilon_r\)</span> is the relative permittivity and <span class="math notranslate nohighlight">\(c = 2.998 \times 10^8\)</span> m/s is the speed light constant.
+In free-space, <span class="math notranslate nohighlight">\(\varepsilon_r = 1\)</span> and EM waves travel at the speed of light.
+However, within a dielectric material, EM waves propagate more slowly according to the above relationship.</p>
+<p>When performing physical property measurements, a source sends EM waves towards a sample.
+A portion of these waves transmit through the sample and reach a sensor on the other side.
+For samples that have high dielectric permittivities, it will take much longer for the signal to arrive at the sensor.
+This is because the transmitted waves slow down as they propagates through the sample.
+An equation for the total travel time (<span class="math notranslate nohighlight">\(\Delta t\)</span>) for transmitted EM waves as the go from the source to the receiver is given by:</p>
+<div class="math notranslate nohighlight">
+\[\Delta t = \frac{L - \Delta x}{c} + \frac{\Delta x}{v}\]</div>
+<p>where <span class="math notranslate nohighlight">\(L\)</span> is the distance from the source to the receiver, <span class="math notranslate nohighlight">\(\Delta x\)</span> is the length of the sample, <span class="math notranslate nohighlight">\(c\)</span> is the speed of light and <span class="math notranslate nohighlight">\(v\)</span> is the velocity of the waves as they propagate through the material.
+Using the signal measured by the receiver, we can determine the total travel time for the transmitted EM waves.
+By combining the previous two equations and solving for the relative permittivity:</p>
+<div class="math notranslate nohighlight">
+\[\varepsilon_r = \Bigg ( 1 + \frac{c\Delta t - L}{\Delta x} \Bigg )^2\]</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/permittivity_transmission_measurements.png"><img alt="../../_images/permittivity_transmission_measurements.png" src="../../_images/permittivity_transmission_measurements.png" style="width: 469.6px; height: 210.4px;" />
+</a>
+</figure>
+<p><strong>Reflection Coefficient Measurements</strong></p>
+<p>When EM waves meet an interface, some of their energy is reflected and some of their energy is transmitted.
+For high-frequency EM waves, the proportion of energy which is reflected depends on the dielectric properties of the materials comprising the interface.
+This relationship is generally characterized by a reflection coefficient.
+The reflection coefficient <span class="math notranslate nohighlight">\(R\)</span> defines the ratio between the amplitude of the reflected wave and the amplitude of the incoming wave:</p>
+<div class="math notranslate nohighlight">
+\[R = \frac{A_{ref}}{A_{inc}}\]</div>
+<p>Below is a diagram for a simplified experiment.
+In this experiment, a source generates EM waves which are reflected due to a difference in dielectric permittivity.
+The reflected waves are measured by a sensor.
+Assuming the incoming waves have a zero incidence angle relative to the interface, the reflection coefficient is given by:</p>
+<div class="math notranslate nohighlight">
+\[R = \frac{1 - \sqrt{\varepsilon_r}}{1 + \sqrt{\varepsilon_r}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\varepsilon_r\)</span> is the relative permittivity of the sample.
+From the source, it is trivial to determine the amplitude of incident EM waves at the interface.
+Using the sensor, we may also determine the amplitude of reflected EM waves at the interface.
+If both amplitudes are known, the first equation may be used to determine the reflection coefficient.
+Once obtained, the second equation may be used to solve for the relative permittivity of the sample.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/permittivity_reflection_measurements.png"><img alt="../../_images/permittivity_reflection_measurements.png" src="../../_images/permittivity_reflection_measurements.png" style="width: 435.20000000000005px; height: 149.20000000000002px;" />
+</a>
+</figure>
+</section>
+<section id="electrical-permittivity-for-common-rocks">
+<h2>Electrical Permittivity for Common Rocks<a class="headerlink" href="#electrical-permittivity-for-common-rocks" title="Link to this heading"></a></h2>
+<p>A table containing the relative permittivities for common rocks, soils and other materials is shown below (Martinez and Byrnes, 2001).
+Rocks within a certain classification vary significantly in composition.
+As a result, the relative permittivities of rock types are given as a range of values.
+By examining this table, several things can be inferred:</p>
+<ul class="simple">
+<li><p>Water has a much higher dielectric permittivity than rock forming minerals.</p></li>
+<li><p>Water saturated rocks have larger dielectric permittivities than dry rocks.</p></li>
+<li><p>Saturated sediments generally have larger dielectric permittivities than hard rocks.</p></li>
+<li><p>The variation in dielectric permittivity for sediments is larger than it is for hard rocks.</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p><strong>Material</strong></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\varepsilon_r\;\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="2"><p>Air</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>Fresh Water</p></td>
+<td><p>80</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>Sea Water</p></td>
+<td><p>80</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p><a class="reference internal" href="tables/permittivity_frozen.html#table-permittivity-frozen"><span class="std std-ref">Ice, Snow, Permafrost</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p><a class="reference internal" href="tables/permittivity_sediments.html#table-permittivity-sediments"><span class="std std-ref">Sediments</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p><a class="reference internal" href="tables/permittivity_rocks.html#table-permittivity-rocks"><span class="std std-ref">Rocks</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p><a class="reference internal" href="tables/permittivity_minerals.html#table-permittivity-minerals"><span class="std std-ref">Minerals</span></a></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="factors-impacting-electric-permittivity">
+<h2>Factors Impacting Electric Permittivity<a class="headerlink" href="#factors-impacting-electric-permittivity" title="Link to this heading"></a></h2>
+<p><strong>Porosity and Water Saturation</strong>:</p>
+<p>By far the most important factors in determining a rock’s dielectric permittivity are porosity and water saturation.
+Air has a relative permittivity of 1 whereas common rock forming minerals have much higher relative permittivities.
+This means that for dry samples, the rock’s bulk dielectric permittivity decreases as the porosity increases.</p>
+<p>When rock samples are saturated with water, their dielectric permittivities can increase drastically.
+This is because water has a relative permittivity of 80, which is much higher than the relative permittivities of rock forming minerals.
+As a result, the bulk dielectric permittivity of a rock increases as pore water saturation increases.</p>
+<p>The relationship between a rock’s bulk dielectric permittivity, porosity and water saturation is given by:</p>
+<div class="math notranslate nohighlight">
+\[\sqrt{\varepsilon} = (1 - \phi ) \sqrt{\varepsilon_m} + \phi \big [ S_w \sqrt{\varepsilon_w} + (1-S_w) \sqrt{\varepsilon_a} \big ]\]</div>
+<p>where</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(0 \leq \phi \leq 1\)</span> is the porosity</p></li>
+<li><p><span class="math notranslate nohighlight">\(0 \leq S_w \leq 1\)</span> is the factional volume of the pore space saturated by water.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varepsilon_m\)</span> is the dielectric permittivity of rock forming minerals.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varepsilon_a\)</span> is the dielectric permittivity of air (equal to free-space).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varepsilon_w\)</span> is the dielectric permittivity of water.</p></li>
+</ul>
+<p><strong>Frequency</strong>:</p>
+<p>For hard rocks and unsaturated sedimentary samples, the dielectric permittivity can be considered constant for all intents and purposes.
+At sufficiently low frequencies, the same can be said about water-saturated sedimentary rocks and soils (Kaatze, 1989; Meissner and Wentz, 2004).
+At high frequencies however ( &gt; 1 GHz), the electric polarization within water-saturated samples depends on the frequency of the electric field.
+As a result, these samples are sometimes characterized using a frequency-dependent dielectric permittivity:</p>
+<div class="math notranslate nohighlight">
+\[\varepsilon (\omega) = \varepsilon^\prime (\omega) + i \varepsilon^{\prime\prime} (\omega)\]</div>
+<p>where <span class="math notranslate nohighlight">\(i = \sqrt{-1}\)</span>.
+The real component of the dielectric permittivity (<span class="math notranslate nohighlight">\(\varepsilon^\prime\)</span>) represents energy stored through electrical polarization whereas the imaginary component (<span class="math notranslate nohighlight">\(\varepsilon^{\prime\prime}\)</span>) represents a measure of energy loss.
+The significance of the real and imaginary components of the dielectric permittivity will be discussed in more detail when learning about ground-penetrating radar (link).</p>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/cole_cole_permittivity.png"><img alt="../../_images/cole_cole_permittivity.png" src="../../_images/cole_cole_permittivity.png" style="width: 340.40000000000003px; height: 260.0px;" />
+</a>
+</figure>
+<p>A widely used model for describing the frequency-dependent dielectric permittivity is the Cole-Cole model:</p>
+<div class="math notranslate nohighlight">
+\[\varepsilon (\omega) = \varepsilon_\infty + \frac{\varepsilon_{DC} - \varepsilon_\infty}{1 + (i\omega \tau)^\alpha}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\varepsilon_{DC}\)</span> is the DC or zero-frequency permittivity, and <span class="math notranslate nohighlight">\(\varepsilon_\infty\)</span> represents a limit as frequency goes to infinity.
+Parameters <span class="math notranslate nohighlight">\(\tau\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> define the span of frequencies in which the dielectric permittivity changes with respect to frequency.
+As we can see from this model:</p>
+<ul class="simple">
+<li><p>Frequency-dependence only occurs over a finite span of frequencies.</p></li>
+<li><p>The magnitude of the dielectric permittivity decreases with respect to an increase in frequency.</p></li>
+<li><p>At sufficiently low frequencies, the dielectric permittivity is constant and real-valued.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="seismic_velocity_duplicate.html" class="btn btn-neutral float-left" title="Seismic Velocity" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="physical_properties_conductivity.html" class="btn btn-neutral float-right" title="Electrical Conductivity" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

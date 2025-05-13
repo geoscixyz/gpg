@@ -1,0 +1,266 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physical Properties &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Propagation Velocities of Dielectric Materials" href="table_velocity.html" />
+    <link rel="prev" title="Ground Penetrating Radar" href="index.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Ground Penetrating Radar</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Physical Properties</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example-microwaves">Example: Microwaves</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="table_velocity.html">Propagation Velocities of Dielectric Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GPR_fundamental_principles.html">Basic Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GPR_survey_data.html">Survey and Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GPR_processing.html">Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GPR_interpretation.html">Interpretation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Ground Penetrating Radar</a> &raquo;</li>
+        
+      <li>Physical Properties</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/GPR/GPR_physical_properties.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="physical-properties">
+<span id="gpr-physical-properties"></span><h1>Physical Properties<a class="headerlink" href="#physical-properties" title="Link to this heading"></a></h1>
+<p>Unlike the survey methods discussed previously, signals corresponding to ground penetrating radar (GPR) depend on a multitude of physical properties.
+The most important physical property to GPR is the <a class="reference internal" href="../physical_properties/physical_properties_dielectric_permittivity.html#physical-properties-dielectric-permittivity"><span class="std std-ref">dielectric permittivity</span></a> (<span class="math notranslate nohighlight">\(\varepsilon\)</span>), as it greatly influences the velocity, attenuation, reflection, refraction and transmission of radiowaves.
+These concepts will be presented in the following section.
+Dielectric permittivity is considered the diagnostic physical property for GPR.
+In addition to the dielectric permittivity, the propagation of radiowaves through the Earth may depend significantly on the <a class="reference internal" href="../physical_properties/physical_properties_conductivity.html#physical-properties-conductivity"><span class="std std-ref">electrical conductivity</span></a> (<span class="math notranslate nohighlight">\(\sigma\)</span>); provided the electrical conductivity of the Earth is sufficiently large.
+Radiowaves will also reflect off of very conductive objects buried in the Earth.
+If the Earth is magnetic, we may also need to consider the role of <a class="reference internal" href="../physical_properties/magnetics_susceptibility_duplicate.html#physprop-mag-susc"><span class="std std-ref">magnetic permeability</span></a> (<span class="math notranslate nohighlight">\(\mu\)</span>).</p>
+<section id="example-microwaves">
+<h2>Example: Microwaves<a class="headerlink" href="#example-microwaves" title="Link to this heading"></a></h2>
+<p>In order to better understand the link between the dielectric permittivity (<span class="math notranslate nohighlight">\(\varepsilon\)</span>) and electromagnetic waves, let us consider a microwave oven.
+We know that microwaves heat food using electromagnetic radiation, but how do they work?</p>
+<figure class="align-right" id="asdf" style="width: 50%">
+<img alt="../../_images/GPR_microwave_1.jpg" src="../../_images/GPR_microwave_1.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 87 </span><span class="caption-text">Electromagnetic waves in a microwaves.</span><a class="headerlink" href="#asdf" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Within a microwave oven, there is a source which generates high-frequency electromagnetic waves (f = 2.45 GHz).
+These waves move at roughly the speed of light (c = <span class="math notranslate nohighlight">\(3.00 \times 10^8\)</span> m/s) and have wavelengths of about 12.2 cm.
+We can see from the figure on the right, that EM waves support electric and magnetic fields which oscillate.</p>
+<p>The walls within the microwave are made out of materials which reflect elecromagnetic waves.
+As a result, the walls designed not to heat up while the microwave is on.</p>
+<figure class="align-right" id="id1" style="width: 40%">
+<img alt="../../_images/Electromagneticwave3D.gif" src="../../_images/Electromagneticwave3D.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 88 </span><span class="caption-text">Oscillating electric and magnetic fields being carried by an electromagnetic wave. <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Electromagneticwave3D.gif">Image source</a> .</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>All foods contain water to varying degrees.
+Water is unique from most other molecules because it is naturally polarized (carries an electric dipole moment).
+This property of water molecules makes them align with electric fields very easily; giving them a <a class="reference internal" href="table_velocity.html#gpr-table-velocity"><span class="std std-ref">high dielectric permittivity</span></a> (<span class="math notranslate nohighlight">\(\varepsilon_r\)</span> = 80).
+When electromagnetic waves come into contact with the water molecules in the food, the water molecules physically re-orient with the oscillation of the wave.
+This is because of the oscillating electric field carried by the wave.
+For waves at 2.45 GHz, this is occurring over 2 billion times per second!</p>
+<figure class="align-center" id="id2" style="width: 80%">
+<img alt="../../_images/GPR_water_molecules.png" src="../../_images/GPR_water_molecules.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 89 </span><span class="caption-text">Polarization of water molecules. (A) Disordered water molecules. B) Water molecules rotate to align with E-field. C) Water molecules polarized under E-field.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The magic of microwaves is their operating frequency.
+At roughly 2.45 GHz, water molecules absorb the energy from electromagnetic waves and become agitated.
+The heat energy generated by the physical movement of the water molecules is then transferred throughout the food.
+Therefore, microwaves work by heating water molecules with electromagnetic radiation.</p>
+<p>What about the turntable or glass of the microwave?
+The glass and plastic which make up the window and turntable of the microwave have low dielectric permittivities.
+As a result, these materials do not become polarized by the incoming microwaves, making them non-reactive.</p>
+<p>So what have we learned from this example?</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Very conductive materials will reflect incoming electromagnetic waves.</p></li>
+<li><p>Materials containing water will become polarized from electromagnetic waves.</p></li>
+<li><p>Some materials do not absorb electromagnetic radiation easily.</p></li>
+<li><p>The operating frequency of the source has a great impact on the response of materials.</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Ground Penetrating Radar" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="table_velocity.html" class="btn btn-neutral float-right" title="Propagation Velocities of Dielectric Materials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

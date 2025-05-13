@@ -1,0 +1,302 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mathematical representations of the Earth &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Inversion Outline" href="foundations_inversion.html" />
+    <link rel="prev" title="Survey methods" href="foundations_survey_methods.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Foundations</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="seeing_underground/index.html">Seeing Underground</a></li>
+<li class="toctree-l2"><a class="reference internal" href="foundations_sevensteps.html">A seven-step framework for applied geophysics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="foundations_survey_methods.html">Survey methods</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Mathematical representations of the Earth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="foundations_inversion.html">Inversion Outline</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Foundations</a> &raquo;</li>
+        
+      <li>Mathematical representations of the Earth</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/foundations/foundations_model_types.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mathematical-representations-of-the-earth">
+<span id="foundations-model-types"></span><h1>Mathematical representations of the Earth<a class="headerlink" href="#mathematical-representations-of-the-earth" title="Link to this heading"></a></h1>
+<p>Earth materials and buried structures are complicated. Yet we need to be able
+to represent these mathematically so that responses from geophysical surveys
+can be numerically simulated. Ultimately, our goal is to find a mathematical
+representation of the earth, such that when simulated responses are generated,
+then the simulated responses are in agreement with the observations. The
+process of carrying this out is referred to as “inversion”.</p>
+<p>There are many ways to parameterize the earth mathematically. We can have
+discrete objects with boundaries or we can divide the earth into “cells”, each
+of which has constant value of a physical property. The earth is 3-dimensional
+and to accommodate this the cells can be: layers, 2D cylinders, 3D prisms.</p>
+<p>We generically refer to the parameterized earth as a “model”. In the inverse
+problem we attempt to find values for each element in the model. In the
+application step, these values are interpreted to help solve the problem of
+interest. This means we need to know the relationship between values of a
+physical property and rock type, alteration, buried object etc.</p>
+<p>Below we provide some examples of commonly used earth parameterizations.</p>
+<aside class="sidebar">
+<p class="sidebar-title">Uniform halfspace</p>
+<figure class="align-center">
+<img alt="../../_images/modelytpes_0d.gif" src="../../_images/modelytpes_0d.gif" />
+</figure>
+</aside>
+<ol class="arabic simple">
+<li><p><strong>A “uniform halfspace”</strong> means the earth beneath the surface has the same
+physical property value. No topography is permitted and the region above the
+surface is assumed to be air (sometimes called “free space”). In a “uniform
+wholespace” the entire volume has the same physical property value. This is
+useful in borehole studies.</p></li>
+</ol>
+<p><strong>Typical geoscience tasks:</strong> Mapping shallow apparent conductivity for site
+characterization, contaminated ground, or other shallow investigation
+projects</p>
+<aside class="sidebar">
+<p class="sidebar-title">Buried objects</p>
+<figure class="align-center">
+<img alt="../../_images/modelytpes_0obj.gif" src="../../_images/modelytpes_0obj.gif" />
+</figure>
+</aside>
+<ol class="arabic simple" start="2">
+<li><p>When <strong>buried objects</strong> are the focus, the earth is usually considered to
+be uniform all around the object. The object itself may be represented with a
+more or less complicated set of parameters.</p></li>
+</ol>
+<p><strong>Typical geoscience tasks:</strong> Finding or characterizing buried utilities, tanks,
+UXOs, or other objects.</p>
+<aside class="sidebar">
+<p class="sidebar-title">1D (layered) models</p>
+<figure class="align-center">
+<img alt="../../_images/1d-interp.gif" src="../../_images/1d-interp.gif" />
+</figure>
+</aside>
+<ol class="arabic simple" start="3">
+<li><p>In a <strong>1D model</strong>, the physical property is assumed to vary only in one
+direction (usually depth). The earth is commonly divided into layers (cells),
+each of which has a constant value of physical property. Surveys that are
+designed to yield 1D results are often called soundings. Results are often
+displayed in a way that resembles a drill core.</p></li>
+</ol>
+<p><strong>Typical geoscience tasks:</strong> Layered Earth problems, such as hydrology,
+overburden thickness, clay layer detection, etc.</p>
+<aside class="sidebar">
+<p class="sidebar-title">2D models</p>
+<figure class="align-center">
+<img alt="../../_images/2d-interp.gif" src="../../_images/2d-interp.gif" />
+</figure>
+</aside>
+<ol class="arabic simple" start="4">
+<li><p>In a <strong>2D model</strong>, the physical property is assumed to vary in two
+directions, usually depth and the direction parallel to a survey line. Surveys
+that yield 2D results are interpreted as cross sections. The assumption is
+that the structures extend without change either side of the survey line.</p></li>
+</ol>
+<p><strong>Typical geoscience tasks:</strong> Detailed geologic structure characterization such
+as defining ore bodies or other geologic features</p>
+<aside class="sidebar">
+<p class="sidebar-title">3D models</p>
+<figure class="align-center">
+<img alt="../../_images/modelytpes_3d.gif" src="../../_images/modelytpes_3d.gif" />
+</figure>
+</aside>
+<ol class="arabic simple" start="5">
+<li><p>In a <strong>3D model</strong>, the subsurface is divided into prismatic cells. Each
+cell is assumed to have a constant physical property. This is the most general
+parameterization and 3D inversion is computatinally intensive.</p></li>
+</ol>
+<p><strong>Typical geoscience tasks:</strong> Detailed geologic structure characterization such
+as defining ore bodies or other geologic features</p>
+<p>For 2D and 3D models, structures within the earth may be considered as simple
+geometric shapes, or as continuously varying distributions of a physical
+property. Simple shapes (spheres, blocks, cylinders, etc.) are easy to
+describe - they require few parameters. For example a cylinder is fully
+described by a fixed radius, depth to top, length and density. For
+continuously varying physical property distributions, the Earth’s structure
+must be described as a <em>function</em> with the physical property dependent upon
+position. Representing this mathematically requires that the earth be
+represented with many cells. In the next section, we expand upon the
+distinctions between discrete simple geometric shapes and continuously varying
+models.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="foundations_survey_methods.html" class="btn btn-neutral float-left" title="Survey methods" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="foundations_inversion.html" class="btn btn-neutral float-right" title="Inversion Outline" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

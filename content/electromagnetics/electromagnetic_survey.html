@@ -1,0 +1,378 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Survey &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Frequency Domain Data" href="electromagnetic_data.html" />
+    <link rel="prev" title="Basic Principles" href="electromagnetic_basic_principles.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Electromagnetic Methods</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="electromagnetic_introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electromagnetic_physical_properties.html">Conductivity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electromagnetic_basic_principles.html">Basic Principles</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Survey</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dual-loop-systems">Dual Loop Systems</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#em-31">EM-31</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#em-34">EM-34</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#depth-of-investigation">Depth of Investigation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#apparent-conductivity-from-the-quadrature-component">Apparent Conductivity from the Quadrature Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#relative-response-function">Relative Response Function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cumulative-response-functions">Cumulative Response Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#multilayer-earth-structures">Multilayer Earth Structures</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="electromagnetic_data.html">Frequency Domain Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electromagnetic_processing.html">Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electromagnetic_interpretation.html">Interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electromagnetic_applet.html">Applet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Electromagnetic Methods</a> &raquo;</li>
+        
+      <li>Survey</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/electromagnetics/electromagnetic_survey.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="survey">
+<span id="electromagnetic-survey"></span><h1>Survey<a class="headerlink" href="#survey" title="Link to this heading"></a></h1>
+<section id="dual-loop-systems">
+<h2>Dual Loop Systems<a class="headerlink" href="#dual-loop-systems" title="Link to this heading"></a></h2>
+<section id="em-31">
+<h3>EM-31<a class="headerlink" href="#em-31" title="Link to this heading"></a></h3>
+<p>Loop-loop system mounted on a 4 meter boom. The transmitting coil operates at
+a frequency of 9.8 kHz and the receiving coil is located 3.66 meters from the
+transmitter. The instrument measures both the in-phase and quadrature fields.
+The in-phase component is diagnostic of high conductivity bodies (metal pipes,
+drums, etc.) and the quadrature component can be converted into an apparent
+conductivity which is read out in mS/m. Such readings arc valid only if the
+ground is laterally uniform on a scale length equal to the source-receiver
+separation and that <span class="math notranslate nohighlight">\(s &lt;&lt; \delta\)</span>. The instrument and coils can be
+rotated by 90° so that loops are vertical. This provides data estimating the
+conductivities and thickness. The effective depth of exploration is about 6
+meters for the vertical dipole mode and about 3 meters for the horizontal
+dipole mode. Data can be acquired with the device held at hip level or it can
+be put on the ground.</p>
+</section>
+<section id="em-34">
+<h3>EM-34<a class="headerlink" href="#em-34" title="Link to this heading"></a></h3>
+<p>This uses two vertical or horizontal coplanar coils that are not attached to
+each other. The coils and analysis system are designed so that different coil
+separations operate at different frequencies:</p>
+<ol class="arabic simple">
+<li><p>10 meters at 6.4 kHz</p></li>
+<li><p>20 meters at 1.6 kHz</p></li>
+<li><p>40 meters at 0.4 kHz</p></li>
+</ol>
+<p>This allows greater penetration into the ground and hence is used to delineate
+vertical geologic anomalies and for groundwater exploration in fractured,
+faulted and weathered bedrock zones.</p>
+</section>
+</section>
+<section id="depth-of-investigation">
+<h2>Depth of Investigation<a class="headerlink" href="#depth-of-investigation" title="Link to this heading"></a></h2>
+<p>A maximum depth of investigation is provided by the skin depth rule, however
+for controlled source surveys we also need to take into account the source and
+receiver geometry. This generally reduces the depth of penetration. A rule of
+thumb for loop-loop systems is that the depth of penetration is about twice
+the separation of the source and receiver, but this is very approximate and is
+easily violated. Also, a necessary condition for this to happen is that the
+source/receiver separation <span class="math notranslate nohighlight">\(s &lt;&lt; \delta\)</span> (coil separation is less than
+the skin depth).</p>
+<p>If we are attempting to find a conducting target then the ability to see the
+target depends upon the coil orientation and coil separation. It must also
+take into account the fact that the:</p>
+<ol class="arabic simple">
+<li><p>primary field is attenuated before it reaches the target</p></li>
+<li><p>the secondary fields are attenuated as they travel from the target to the receiver.</p></li>
+</ol>
+</section>
+<section id="apparent-conductivity-from-the-quadrature-component">
+<h2>Apparent Conductivity from the Quadrature Component<a class="headerlink" href="#apparent-conductivity-from-the-quadrature-component" title="Link to this heading"></a></h2>
+<p>If the spacing <span class="math notranslate nohighlight">\(s\)</span> between the coils is much less than the skin depth,
+that is, <span class="math notranslate nohighlight">\(s &lt;&lt; \delta\)</span> then the ratio of secondary to primary field is
+approximately</p>
+<div class="math notranslate nohighlight">
+\[\frac{H_s}{H_p} \simeq i\frac{\omega \mu_0 \sigma s^2}{4}\]</div>
+<p>where <span class="math notranslate nohighlight">\(i\)</span> is the imaginary unit. The response is purely imaginary, that is, it is found in the quadrature component of the data. The constant conductivity which gives rise to the observed response can be found from the above formula. It is referred to as the apparent conductivity
+<span class="math notranslate nohighlight">\(\sigma_a\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\sigma_a = \frac{4}{\omega \mu_0 s^2} \mathrm{Im}\left\{\frac{H_s}{H_p} \right\},\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathrm{Im}\left\{\frac{H_s}{H_p} \right\}\)</span> is the imaginary part of the secondary field to primary field ratio. Further insight about the apparent conductivity is obtained by incorporating
+the response curves <span class="math notranslate nohighlight">\(\phi_V(z)\)</span> and <span class="math notranslate nohighlight">\(\phi_H(z)\)</span>. We have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\sigma_a &amp;= \int_{0}^{\infty} \phi_V (z) \sigma (z) dz \\[0.8em]
+\sigma_a &amp;= \int_{0}^{\infty} \phi_H (z) \sigma (z) dz\end{split}\]</div>
+<p>respectively for the vertical and horizontal dipoles.</p>
+</section>
+<section id="relative-response-function">
+<h2>Relative Response Function<a class="headerlink" href="#relative-response-function" title="Link to this heading"></a></h2>
+<p>The justification for the above statement is based upon the following.
+Consider a homogeneous halfspace on the surface of which is located a
+horizontal coplanar coil (HCP) system (e.g. EM31) or a vertical coplanar (VCP)
+system (EM34). Let the depth <span class="math notranslate nohighlight">\(z\)</span> in the earth be normalized by the coil
+spacing <span class="math notranslate nohighlight">\(s\)</span>. (True depth in meters is <span class="math notranslate nohighlight">\(zs\)</span>.) The time varying fields
+in the transmitting coils will induce eddy currents in the earth. For a
+homogeneous earth, these currents flow in horizontal planes. This is true even
+for the vertically oriented coils. It is possible to calculate the
+contribution to the secondary field as measured from the surface from any thin
+layer of thickness <span class="math notranslate nohighlight">\(dz\)</span> at some depth <span class="math notranslate nohighlight">\(z\)</span>. Let <span class="math notranslate nohighlight">\(\phi_V(z)\)</span> denote
+this contribution from the vertical magnetic dipole source and receiver. The
+subscript <span class="math notranslate nohighlight">\(V\)</span> denotes that the magnetic fields are vertical. A horizontal
+loop of current acts like a vertical magnetic dipole. A plot of this function
+is shown below:</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/vertical_dipole_response.jpg"><img alt="../../_images/vertical_dipole_response.jpg" src="../../_images/vertical_dipole_response.jpg" style="width: 673.0px; height: 191.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 145 </span><span class="caption-text">Relative response versus depth for vertical dipoles. <span class="math notranslate nohighlight">\(\phi_V(z)\)</span> is the relative contribution to <span class="math notranslate nohighlight">\(H_s\)</span>. from material in a thin layer dz located at (normalized) depth <span class="math notranslate nohighlight">\(z\)</span>.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Note that the vertical magnetic dipole has zero sensitivity at the surface,
+has a maximum at about <span class="math notranslate nohighlight">\(z = 0.4\)</span> and is substantially diminished by <span class="math notranslate nohighlight">\(z =
+2.0\)</span>. It is this type of diagram which says that the maximum depth of
+investigation is limited to about twice the coil separation. This rule of
+thumb however is valid only when the coil separation is much less than the
+skin depth.</p>
+<p>The response function from the horizontal magnetic is very different. Let
+<span class="math notranslate nohighlight">\(\phi_H (z)\)</span> denote the relative contribution that arises from a
+horizontal magnetic dipole source and receiver. It has a maximum at the
+surface, so it is sensitive to the conductivity there, and it decreases
+monotonically with depth.</p>
+<blockquote>
+<div><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/horizontal_dipole_response.jpg"><img alt="../../_images/horizontal_dipole_response.jpg" src="../../_images/horizontal_dipole_response.jpg" style="width: 883.0px; height: 235.0px;" />
+</a>
+</figure>
+</div></blockquote>
+<p>We therefore notice how two coil configurations couple differently with the
+ground and have different sensitivities with respect to the conductivity
+structure.</p>
+</section>
+<section id="cumulative-response-functions">
+<h2>Cumulative Response Functions<a class="headerlink" href="#cumulative-response-functions" title="Link to this heading"></a></h2>
+<p>We often have a multi-layer earth (e.g. a thin resistive layer overlying a
+more conductive stratum, or vice versa) and we would like to estimate the
+thickness of the layer and the two conductivities. Cumulative response curves
+are useful for carrying out computations. Define</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R_V (z) &amp;= \int_{z}^{\infty} \phi_V (z) dz \\[0.8em]
+R_H (z) &amp;= \int_{z}^{\infty} \phi_H (z) dz\end{split}\]</div>
+<p>to be the relative contribution to the secondary magnetic field obtained from
+all of the material below a depth <span class="math notranslate nohighlight">\(z\)</span>. The diagrams are plotted below:</p>
+<blockquote>
+<div><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/cumulative_response.jpg"><img alt="../../_images/cumulative_response.jpg" src="../../_images/cumulative_response.jpg" style="width: 1024.0px; height: 484.0px;" />
+</a>
+</figure>
+</div></blockquote>
+<p>A depth of investigation might be defined as that depth below which only 25%
+of the signal arises. According to this rule the depth of investigation for
+the vertical dipole is about 2.0 s while the depth for the horizontal dipole
+is only half that amount.</p>
+</section>
+<section id="multilayer-earth-structures">
+<h2>Multilayer Earth Structures<a class="headerlink" href="#multilayer-earth-structures" title="Link to this heading"></a></h2>
+<p>Under the assumption that <span class="math notranslate nohighlight">\(s &lt;&lt; \delta\)</span>  then the above formulae can be
+used to predict the apparent conductivity from a multilayered earth, or to
+used measured apparent conductivities to estimate the individual layer
+thickness and conductivities. For instance if we coplanar coils on the earth’s
+surface given below</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/coplanar_coils.jpg"><img alt="../../_images/coplanar_coils.jpg" src="../../_images/coplanar_coils.jpg" style="width: 523.0px; height: 192.0px;" />
+</a>
+</figure>
+<p>The apparent conductivity would be</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\sigma_a &amp;= \int_{0}^{h} \sigma_1 \phi_V (z) dz + \int_{h}^{\infty} \sigma_2  \phi_V (z) dz \\[0.8em]
+         &amp;= \sigma_1 (1-R_V(h)) + \sigma_2 R_V(h)\end{split}\]</div>
+<p>Either the curves shown previously or the following formulae are therefore useful:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\phi_V (z) &amp;= \frac{4z}{(4z^2 + 1)^{3/2}} \\[0.8em]
+\phi_H (z) &amp;= 2- \frac{4z}{(4z^2 + 1)^{1/2}} \\[0.8em]
+       R_V &amp;= \frac{1}{(4z^2 + 1)^{1/2} }\\[0.8em]
+       R_H &amp;=  (4z^2 + 1)^{1/2} - 2z \\[0.8em]\end{split}\]</div>
+<p>You can explore the response of a multilayered earth further using the <a class="reference external" href="https://mybinder.org/v2/gh/geoscixyz/gpgLabs/main?filepath=notebooks%2FEM_EM31.ipynb">layered earth response app</a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="electromagnetic_basic_principles.html" class="btn btn-neutral float-left" title="Basic Principles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="electromagnetic_data.html" class="btn btn-neutral float-right" title="Frequency Domain Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

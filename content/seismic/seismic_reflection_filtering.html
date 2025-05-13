@@ -1,0 +1,374 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filtering of Seismic Data &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Fundamental procedure" href="seismic_reflection_processing_fundamental.html" />
+    <link rel="prev" title="Normal Incidence Reflection Seismogram" href="seismic_reflection_seismogram.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Seismic</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="elastic_properties.html">Elastic Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_principles.html">Basic principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_survey.html">Survey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_data.html">Data</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="seismic_processing.html">Processing</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="seismic_refraction_processing.html">Refraction</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="seismic_reflection_processing.html">Reflection</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="seismic_reflection_seismogram.html">Normal Incidence Reflection Seismogram</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Filtering of Seismic Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seismic_reflection_processing_fundamental.html">Fundamental procedure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seismic_reflection_static_corrections.html">Static Corrections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seismic_reflection_stacking.html">Normal MoveOut (NMO): Stacking Data in CMP Gathers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seismic_reflection_migration.html">Migration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_interpretation.html">Interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MASW.html">MASW</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_apps.html">Seismic apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Seismic</a> &raquo;</li>
+        
+          <li><a href="seismic_processing.html">Processing</a> &raquo;</li>
+        
+          <li><a href="seismic_reflection_processing.html">Reflection</a> &raquo;</li>
+        
+      <li>Filtering of Seismic Data</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/seismic/seismic_reflection_filtering.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="filtering-of-seismic-data">
+<span id="seismic-reflection-filtering"></span><h1>Filtering of Seismic Data<a class="headerlink" href="#filtering-of-seismic-data" title="Link to this heading"></a></h1>
+<p>The interpretation of seismic data is made purely on the basis of what is
+observed in the final processed section. CMP processing greatly enhances the
+signal to noise ratio and allows coherent reflections to be visible. However,
+the data that goes into the CMP processing is often contaminated with “noise”.
+The ground roll in the CSP gather shown previously is a good example. Also,
+the data might be contaminated with wind noise or instrument vibrations.
+These, and other types of noise, can be partially removed by using various
+filtering operations.</p>
+<section id="three-useful-filtering-operations">
+<h2>Three Useful Filtering Operations<a class="headerlink" href="#three-useful-filtering-operations" title="Link to this heading"></a></h2>
+<section id="frequency-filtering">
+<h3>1. Frequency Filtering<a class="headerlink" href="#frequency-filtering" title="Link to this heading"></a></h3>
+<p>Wind, instrument, and cultural effects can generate unwanted noise at
+frequencies outside the seismic band. Often these are high frequency signals.
+Alternatively, ground roll and ship generated noise are low frequency. If this
+is the case then the seismic signal might lie in a frequency band that is
+distinct from the the noise. This is illustrated below. The unwanted noise can
+be removed using bandpass filtering in the frequency domain.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/frequency_band.gif"><img alt="../../_images/frequency_band.gif" src="../../_images/frequency_band.gif" style="width: 540.0px; height: 123.6px;" />
+</a>
+</figure>
+<p>One can apply a frequency filter to remove all signals that have a frequency
+high than <span class="math notranslate nohighlight">\(f_H\)</span> and all frequencies lower than <span class="math notranslate nohighlight">\(f_L\)</span>.</p>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+MM_preloadImages('./../../../_images/rawseis2.gif','./../../../_images/rawseis3.gif','./../../../_images/rawseis5.gif')
+
+</script>
+
+<table width="99%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+
+      <p><b><img src="./../../../_images/rawseis2.gif" name="rawdata" width="374" height="290" align="right" id="rawdata"></b>
+    The figures to the right illustrate effects of low pass and high pass 
+		filters. First examine the figure and try to identify aspects caused by 
+		high frequencies. Then try to identify aspects caused by lower freqeuncy 
+		components in the signal. </p>
+        <p>Click buttons below to switch between different versions of the same 
+		data displayed after filtering. <strong><br>
+            |
+    <input name="radiobutton" type="radio" onClick="MM_swapImage('rawdata','','./../../../_images/rawseis2.gif',1)" value="radiobutton" checked>
+            <em>no</em> filter | 
+    <input name="radiobutton" type="radio" onClick="MM_swapImage('rawdata','','./../../../_images/rawseis3.gif',1)" value="radiobutton">
+    	low <em>pass</em> |
+    <input name="radiobutton" type="radio" onClick="MM_swapImage('rawdata','','./../../../_images/rawseis5.gif',1)" value="radiobutton">
+    	high <em>pass</em> |</strong>. <br>
+
+    Which of these three could also be described as the result of applying a <strong>
+		low <em>cut</em></strong> filter, and which is the result of applying a <strong>
+		high <em>cut </em></strong>filter? </p>
+      </form>
+
+  </tr>
+</table>
+
+</section>
+<section id="deconvolution">
+<h3>2. Deconvolution<a class="headerlink" href="#deconvolution" title="Link to this heading"></a></h3>
+<p><strong>a) Deghosting</strong></p>
+<p>In marine work a source is detonated slightly below the water surface. The
+primary seismic wavelet propagates downward but there is an upward propagating
+wave that reflects from the water surface and then propagates downward. The
+latter reflection is referred to as a “ghost”.</p>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/ghost.gif"><img alt="../../_images/ghost.gif" src="../../_images/ghost.gif" style="width: 150.0px; height: 110.0px;" />
+</a>
+</figure>
+<p>A seismic wavelet is composed of the original wavelet plus a closely spaced
+reflection. This complicates the wavelet as shown in the figure below.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/seismic_wavelet.gif"><img alt="../../_images/seismic_wavelet.gif" src="../../_images/seismic_wavelet.gif" style="width: 420.0px; height: 121.19999999999999px;" />
+</a>
+</figure>
+<p><strong>b) Wavelet or Signature Deconvolution</strong></p>
+<p>An “inverse filter” is designed so that the original source wavelet is
+contracted to a narrower and symmetric form. e.g.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/inverse_filter.gif"><img alt="../../_images/inverse_filter.gif" src="../../_images/inverse_filter.gif" style="width: 420.0px; height: 120.0px;" />
+</a>
+</figure>
+<p>This can enhance the vertical resolution, though not beyond the “theoretical”
+maximum which is controlled by wavelength.</p>
+<p><strong>c) Predictive Deconvolution</strong></p>
+<p>This type of processing can remove some multiples from a seismic section.
+Reverberation (multiples of the ocean-bottom reflection) in marine surveys is
+a common example of this type of problem.</p>
+</section>
+<section id="velocity-or-f-mbox-k-filtering">
+<h3>3. Velocity or <span class="math notranslate nohighlight">\(f\mbox{-}k\)</span> filtering<a class="headerlink" href="#velocity-or-f-mbox-k-filtering" title="Link to this heading"></a></h3>
+<p>In shot gathers or on final sections we often have events that appear with a
+specific slope. Notice the ground roll, in the CSP gather below left. These
+are characterized by the late-arriving, high amplitude, low-frequency events
+which define a steep triangular-shaped central zone which mask the reflected
+arrivals.</p>
+<p>Ground roll events have a small apparent velocity or equivalently a large dip.
+They can be isolated by taking a 2-D Fourier transform. In that domain the
+ground roll is located in a fan-like region. By zeroing the Fourier transform
+values in this fan and then inverse Fourier transforming, we remove the ground
+roll. The diagram below right sketches these fan-shaped regions of an
+<span class="math notranslate nohighlight">\(f\mbox{-}k\)</span> plot for a typical shot gather which contains reflections
+events and noise.</p>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/fk_freq_fan.gif"><img alt="../../_images/fk_freq_fan.gif" src="../../_images/fk_freq_fan.gif" style="width: 425.0px; height: 280.5px;" />
+</a>
+</figure>
+<figure class="center align-left">
+<a class="reference internal image-reference" href="../../_images/CSP_w_ground_roll_2.gif"><img alt="../../_images/CSP_w_ground_roll_2.gif" src="../../_images/CSP_w_ground_roll_2.gif" style="width: 210.0px; height: 472.5px;" />
+</a>
+</figure>
+<p>The procedure for carrying out <span class="math notranslate nohighlight">\(f\mbox{-}k\)</span> filtering is provided in the
+flow chart, below left. The final diagram shows four shallow marine records
+before and after <span class="math notranslate nohighlight">\(f\mbox{-}k\)</span> filtering to remove coherent linear noise.
+Hyperbolic reflections are observed after removal of the noise.</p>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/fk_procedure.gif"><img alt="../../_images/fk_procedure.gif" src="../../_images/fk_procedure.gif" style="width: 313.5px; height: 432.0px;" />
+</a>
+</figure>
+<figure class="center align-left">
+<a class="reference internal image-reference" href="../../_images/shallow_marine_records.gif"><img alt="../../_images/shallow_marine_records.gif" src="../../_images/shallow_marine_records.gif" style="width: 331.5px; height: 585.0px;" />
+</a>
+</figure>
+<p>Four shallow marine records (a) before and (b) after f-k dip filtering to
+remove coherent linear noise. The coherent noise seen in these records is
+primarily of guided wave type.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="seismic_reflection_seismogram.html" class="btn btn-neutral float-left" title="Normal Incidence Reflection Seismogram" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="seismic_reflection_processing_fundamental.html" class="btn btn-neutral float-right" title="Fundamental procedure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

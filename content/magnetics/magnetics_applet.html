@@ -1,0 +1,373 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magnetic dipole applet &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Seismic" href="../seismic/index.html" />
+    <link rel="prev" title="Interpretation" href="magnetics_interpretation.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Magnetics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="magnetics_introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_physical_property.html">Susceptibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_basic_principles.html">Basic Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_survey.html">Survey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_data.html">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_processing.html">Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_interpretation.html">Interpretation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Magnetic dipole applet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#purpose">Purpose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#background-summary">Background summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#learning-with-the-magnetic-dipole-applet">Learning with the Magnetic Dipole Applet</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#testing-the-formula-for-a-dipole-link">Testing the formula for a dipole (link)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bodies-at-the-pole-earths-field-is-vertical">Bodies at the pole: Earth’s field is vertical</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bodies-at-the-equator-earths-field-is-horizontal">Bodies at the equator: Earth’s field is horizontal</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#learning-with-the-monopole-window-of-the-applet">Learning with the Monopole window of the applet</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#testing-the-formula-for-a-monopole-link">Testing the formula for a monopole (<span class="xref std std-ref">link</span>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a-vertical-pipe-in-a-vertical-field">A vertical pipe in a vertical field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a-horizontal-pipe-at-the-equator">A horizontal pipe at the equator</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Magnetics</a> &raquo;</li>
+        
+      <li>Magnetic dipole applet</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/magnetics/magnetics_applet.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="magnetic-dipole-applet">
+<span id="magnetics-applet"></span><h1>Magnetic dipole applet<a class="headerlink" href="#magnetic-dipole-applet" title="Link to this heading"></a></h1>
+<section id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Link to this heading"></a></h2>
+<p>The objective is to learn about the magnetic field observed at the ground’s surface, caused by a small buried dipolar magnet. In geophysics, this simulates the observed anomaly over a buried susceptible sphere that is magnetized by the Earth’s magnetic field. By clicking below binder badge, you can run this app!</p>
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/geoscixyz/gpgLabs/main?filepath=notebooks%2Fmag%2FMagneticDipoleApplet.ipynb"><img alt="https://mybinder.org/badge.svg" class="align-center" src="https://mybinder.org/badge.svg" />
+</a>
+<figure class="align-center" style="width: 100%">
+<img alt="../../_images/magnetic_dipole_applet.png" src="../../_images/magnetic_dipole_applet.png" />
+</figure>
+</section>
+<section id="background-summary">
+<h2>Background summary<a class="headerlink" href="#background-summary" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>The <a class="reference internal" href="magnetics_basic_principles.html#earth-s-field"><span class="std std-ref">link</span></a> shows the earth’s field that is the result of a large magnet at the center.</p></li>
+<li><p>At any point on the earth the magnetic field is characterized by <span class="math notranslate nohighlight">\(|B_0|\)</span>, <span class="math notranslate nohighlight">\(I\)</span>, <span class="math notranslate nohighlight">\(D\)</span>.</p></li>
+<li><p>A magnetizable body (with susceptibility kappa), located anywhere on the earth, becomes magnetized. It’s field is like that of a magnetic dipole oriented in the direction of the earth’s field at that location.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\mathbf{B} = \frac{\mu_0}{4\pi}\Big(\frac{3\mathbf{r}(\mathbf{m}\cdot \mathbf{r})}{r^5}-\frac{\mathbf{m}}{r^3}\Big)\]</div>
+<ul class="simple">
+<li><p>The strength of the magnet is <span class="math notranslate nohighlight">\(\mathbf{m}=\kappa\mathbf{H_0}\)</span> Volume</p></li>
+<li><p>The plots show various data: Bt is the projection of the anomalous field onto the direction of the earth’s field</p></li>
+<li><p>Bx,By,Bz are projections in the x (northing), y (easting) and z (vertically down) directions</p></li>
+<li><p>Bg: is a vertical gradient</p></li>
+<li><p>For the app, the observation is 1 meter above the earth’s surface. The depth relates to how far beneath the surface the dipole is situated. A depth of 10 means the dipole is 11m below the sensor.</p></li>
+</ul>
+</section>
+<section id="learning-with-the-magnetic-dipole-applet">
+<h2>Learning with the Magnetic Dipole Applet<a class="headerlink" href="#learning-with-the-magnetic-dipole-applet" title="Link to this heading"></a></h2>
+<p>For many of the questions that follow you should use pencil and paper to draw field lines so that you can sketch projections of the field onto various directions. Do that first and then click on the profile button.</p>
+<section id="testing-the-formula-for-a-dipole-link">
+<h3>Testing the formula for a dipole (link)<a class="headerlink" href="#testing-the-formula-for-a-dipole-link" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>The field should drop of <span class="math notranslate nohighlight">\(1/r^3\)</span>. Does it?</p></li>
+<li><p>The field should depend linearly on m. Does it?</p></li>
+</ul>
+</section>
+<section id="bodies-at-the-pole-earths-field-is-vertical">
+<h3>Bodies at the pole: Earth’s field is vertical<a class="headerlink" href="#bodies-at-the-pole-earths-field-is-vertical" title="Link to this heading"></a></h3>
+<ul>
+<li><p>What is the inclination required to simulate a field that is vertically downward?</p></li>
+<li><p>Think what the data should like like in plan view. Before you click buttons, Sketch on a piece of paper what you are anticipating for Bt, Bx, By and Bz</p></li>
+<li><p>How does Bt compare with Bz? Why?</p></li>
+<li><p>Why is Bx negative towards the north but positive towards the south?</p></li>
+<li><p>Why does By look like a rotated version of Bx?</p></li>
+<li><p>What happens when you change the declination of the inducing field? Why?</p></li>
+<li><p>From the default settings, with depth=10 m, try to estimate the depth using</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>half width of the Bt anomaly estimated from the color map</p></li>
+<li><p>the profile provided at the bottom.</p></li>
+<li><p>How do these compare with the value provided by the app when you click half-width?</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Change the “depth” to be 1m.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Attempt to carry out the same depth of burial analysis</p></li>
+<li><p>What do you need to alter to obtain a well-sampled anomaly and good estimates of the depth?</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="bodies-at-the-equator-earths-field-is-horizontal">
+<h3>Bodies at the equator: Earth’s field is horizontal<a class="headerlink" href="#bodies-at-the-equator-earths-field-is-horizontal" title="Link to this heading"></a></h3>
+<p>Suppose I=0 (equivalent to having an object buried at the equator.</p>
+<ul>
+<li><p>What is the inclination and declination required to simulate a field that is horizontal and pointing north?</p></li>
+<li><p>Think what the data should like  in plan view. Before you click buttons, Sketch on a piece of paper what you are anticipating for</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Bt, Bx, By and Bz</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Bt looks like one of the components, {Bx, By, Bz}. Which one? Why?</p></li>
+<li><p>Now change the declination to D=90.</p>
+<blockquote>
+<div><ul>
+<li><p>If you are facing north, which way is the earth’s field pointing? To your right, or to your left?</p></li>
+<li><p>Why is the Bt magnetic anomaly negative on the positive east side.</p></li>
+<li><p>The By anomaly is interesting.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>What is the name for that type of pattern?</p></li>
+<li><p>Usually, if you collect data along two perpendicular lines directly over the top of the object you are looking for, you will see signal from the body. Why do we not see anything in this example?</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</section>
+</section>
+<section id="learning-with-the-monopole-window-of-the-applet">
+<h2>Learning with the Monopole window of the applet<a class="headerlink" href="#learning-with-the-monopole-window-of-the-applet" title="Link to this heading"></a></h2>
+<p>In reality the isolation of a single magnetic charge (monopole) is not possible. In practise however it can be emulated by placing a magnetizable cylinder in the direction of the Earth’s field. One end of the cylinder will have a negative charge, the other end will have a positive charge. The app allows you to experiment with these situations.</p>
+<p>For almost all questions that follow you should use pencil and paper to draw field lines so that you can sketch projections of the field onto various directions. Do that first and then click on the profile button. Many of the questions are similar to what you did with a dipole but the fact that we now have a monopole changes many of the diagrams.</p>
+<section id="testing-the-formula-for-a-monopole-link">
+<h3>Testing the formula for a monopole (<a class="reference internal" href="magnetics_basic_principles.html#magnetics-charges"><span class="std std-ref">link</span></a>)<a class="headerlink" href="#testing-the-formula-for-a-monopole-link" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>The field should drop of <span class="math notranslate nohighlight">\(1/r^2\)</span>. Does it?</p></li>
+<li><p>The field should depend linearly on m. Does it?</p></li>
+</ul>
+</section>
+<section id="a-vertical-pipe-in-a-vertical-field">
+<h3>A vertical pipe in a vertical field<a class="headerlink" href="#a-vertical-pipe-in-a-vertical-field" title="Link to this heading"></a></h3>
+<ul>
+<li><p>What values of I and D will you use to conduct this simulation?</p></li>
+<li><p>Think what the data should like  in plan view. Before you click buttons, sketch on  paper what you are anticipating for:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Bt, Bx, By and Bz</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>How does Bt compare with Bz? Why?</p></li>
+<li><p>Why is Bx negative towards the north but positive towards the south?</p></li>
+<li><p>Why does By look like a rotated version of Bx?</p></li>
+<li><p>From the default settings, with depth=10 m, try to estimate the depth using halfwidths estimated by different techniques. The relationship between halfwidth and depth for a monopole can be found in the GPG (<a class="reference internal" href="magnetics_interpretation.html#half-width"><span class="std std-ref">link</span></a>);</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>half width of the Bt anomaly estimated from the color map</p></li>
+<li><p>the profile provided at the bottom.</p></li>
+<li><p>How do these compare with the value provided by the app when you click half-width?</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Change the “depth” to be 1m.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Attempt to carry out the same depth of burial analysis</p></li>
+<li><p>What do you need to alter to obtain a well-sampled anomaly and good estimates of the depth?</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="a-horizontal-pipe-at-the-equator">
+<h3>A horizontal pipe at the equator<a class="headerlink" href="#a-horizontal-pipe-at-the-equator" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>What values of I and D will you use to conduct this simulation?</p></li>
+<li><p>Sketch a plan view of the fields {Bt, Bx, By and Bz} and compare with the maps generated by the app</p></li>
+<li><p>Bt looks like one of the components, {Bx, By, Bz}. Which one? Why?</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="magnetics_interpretation.html" class="btn btn-neutral float-left" title="Interpretation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../seismic/index.html" class="btn btn-neutral float-right" title="Seismic" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

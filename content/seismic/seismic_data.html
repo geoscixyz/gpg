@@ -1,0 +1,298 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Processing" href="seismic_processing.html" />
+    <link rel="prev" title="Survey geometry" href="seismic_survey_geometry.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Seismic</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="elastic_properties.html">Elastic Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_principles.html">Basic principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_survey.html">Survey</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#signals-that-get-recorded">Signals that get recorded</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_processing.html">Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_interpretation.html">Interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MASW.html">MASW</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_apps.html">Seismic apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Seismic</a> &raquo;</li>
+        
+      <li>Data</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/seismic/seismic_data.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data">
+<span id="seismic-data"></span><h1>Data<a class="headerlink" href="#data" title="Link to this heading"></a></h1>
+<section id="signals-that-get-recorded">
+<h2>Signals that get recorded<a class="headerlink" href="#signals-that-get-recorded" title="Link to this heading"></a></h2>
+<p>Each geophone produces an electrical signal that is proportional to ground
+motion (in one direction - usually vertical, but horizontal with special
+geophones used for shear wave work). That signal is recorded for a short
+period of time starting at the moment that the source of energy begins. We
+observe these signals by plotting them as one wiggly line for each geophone’s
+signal. These signals are plotted next to each other so that ground motion at
+each geophone can be seen as a function of time. An example showing ground
+motion at 24 geophones is shown below.</p>
+<figure class="align-center">
+<img alt="../../_images/rawdata.gif" src="../../_images/rawdata.gif" />
+</figure>
+<p>On this plot, one geophone was not working properly. Geophones are labeled
+with the first closest to the source. As expected, ground motion occurred
+earlier at geophones closest to the source. For geophones 1 through 10, it
+seems as if there was no ground motion at later times, however this is an
+artifact of the “gain” (amplification) applied to these traces. Gain is lower
+for geophone signals near the source because signal amplitudes are larger. If
+the signals within the blue box are amplified and replotted, the adjustable
+figure below results.</p>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function popWindow(file,height,width,winName)
+{
+var urlstring = file;
+pWin=window.open(urlstring,winName, "toolbar=0,scrollbars=1,directories=0,resizable=1,height=" + height + ",width=" + width + ",status=0"); 
+}
+
+MM_preloadImages('./images/firstbreak2.gif','./images/firstbreak3.gif','./images/firstbreak1.gif');
+</script>
+
+<br>
+
+<table border="0" cellpadding="1" cellspacing="0" width="100%">
+  <tbody>
+    <tr>
+        <td valign="top" valign="top" style="width:30%;">
+    <input name="radiobutton" type="radio" onClick="MM_swapImage('firstbreaks','','./images/firstbreak1.gif',1)" value="radiobutton" checked>
+    			Original <br>
+    <input name="radiobutton" type="radio" onClick="MM_swapImage('firstbreaks','','./images/firstbreak2.gif',1)" value="radiobutton">
+    			First breaks picked <br>
+    <input name="radiobutton" type="radio" onClick="MM_swapImage('firstbreaks','','./images/firstbreak3.gif',1)" value="radiobutton">
+    			Straight line segments </p>
+            </td>
+              <td style="width:70%;"><img src="./images/firstbreak1.gif" name="firstbreaks" width="397" height="297" id="firstbreaks"></td>
+          </tr>
+        </table>
+<p>This figure shows shorter segments of traces from 12 geophones. The signal
+amplitudes have been amplified, so all ground motions are visible. There are
+clear beginnings of ground motion for each trace, which appear later in time
+for traces farther from the source. Finding exactly what time the ground first
+moved at each geophone is called <strong>first break picking</strong>. It is not difficult
+in this case, but it can be challenging if signals are weak. Use radio buttons
+next to the figure to see the result of picking first breaks (also known as
+first arrivals) on this figure. Once the picks are chosen, it becomes evident
+that there is a definite pattern to the arrivals–there are straight lines
+joining the first breaks of several adjacent traces. The third radio button
+reveals straight line patterns emphasized by drawing red lines.</p>
+<p>We will learn that first arrivals are either direct signals (for near
+geophones) or refractions that have traveled along subsurface interfaces. The
+objective of seismic refraction surveys is to determine the geometry of
+subsurface interfaces, and this can be derived by analysis of the pattern of
+first arrivals.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="seismic_survey_geometry.html" class="btn btn-neutral float-left" title="Survey geometry" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="seismic_processing.html" class="btn btn-neutral float-right" title="Processing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

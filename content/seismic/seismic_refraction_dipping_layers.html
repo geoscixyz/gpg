@@ -1,0 +1,348 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interpretation when layers are dipping &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Irregular Surfaces and the Plus-Minus Method" href="seismic_refraction_irregular_layers.html" />
+    <link rel="prev" title="Refraction" href="seismic_refraction_processing.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Seismic</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="elastic_properties.html">Elastic Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_principles.html">Basic principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_survey.html">Survey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_data.html">Data</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="seismic_processing.html">Processing</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="seismic_refraction_processing.html">Refraction</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Interpretation when layers are dipping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seismic_refraction_irregular_layers.html">Irregular Surfaces and the Plus-Minus Method</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seismic_reflection_processing.html">Reflection</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_interpretation.html">Interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MASW.html">MASW</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_apps.html">Seismic apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Seismic</a> &raquo;</li>
+        
+          <li><a href="seismic_processing.html">Processing</a> &raquo;</li>
+        
+          <li><a href="seismic_refraction_processing.html">Refraction</a> &raquo;</li>
+        
+      <li>Interpretation when layers are dipping</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/seismic/seismic_refraction_dipping_layers.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="interpretation-when-layers-are-dipping">
+<span id="seismic-refraction-dipping-layers"></span><h1>Interpretation when layers are dipping<a class="headerlink" href="#interpretation-when-layers-are-dipping" title="Link to this heading"></a></h1>
+<p>Earth layers can often be approximated as planar, but they are rarely
+horizontal.  The next level of complication is to assume that the layers have
+some dip associated with them. Consider a single interface which is dipping at
+an angle <span class="math notranslate nohighlight">\(\theta\)</span> with respect to the horizontal. The critical angle is
+still defined by the angle that an incoming wave must make with respect to the
+<strong>normal</strong> of the refractor. This is shown by the diagram below.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/dip_layer_S_R_schematic1.gif"><img alt="../../_images/dip_layer_S_R_schematic1.gif" src="../../_images/dip_layer_S_R_schematic1.gif" style="width: 340.20000000000005px; height: 152.55px;" />
+</a>
+</figure>
+<figure class="center align-center">
+<a class="reference internal image-reference" href="../../_images/dip_layer_x_t_lines.gif"><img alt="../../_images/dip_layer_x_t_lines.gif" src="../../_images/dip_layer_x_t_lines.gif" style="width: 340.71px; height: 189.42px;" />
+</a>
+</figure>
+<p>Arrival times of the refracted wave will still appear as a straight line on
+the travel time plot. However, as the refracted wave moves updip the waves
+have less distance to travel to the surface. The travel time is reduced and
+thus the slope of the line is reduced. The velocity recovered from using this
+slope is called <span class="math notranslate nohighlight">\(v_{2u}\)</span> , and is called the updip “apparent” velocity.
+This will be larger than the true velocity of the layer.</p>
+<p>Conversely, if you are downdip then the distance traveled by the refracted
+wave increases with distance and it takes longer for the waves to reach you.
+The slope of the refracted arrival on the travel time plot will increase and
+the apparent downdip velocity <span class="math notranslate nohighlight">\(v_{2d}\)</span> estimated from this slope will be
+smaller than the true velocity.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/dip_layer_S_R_schematic.gif"><img alt="../../_images/dip_layer_S_R_schematic.gif" src="../../_images/dip_layer_S_R_schematic.gif" style="width: 290.25px; height: 176.85000000000002px;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/dip_layer_x_t_lines2.gif"><img alt="../../_images/dip_layer_x_t_lines2.gif" src="../../_images/dip_layer_x_t_lines2.gif" style="width: 290.4px; height: 176.4px;" />
+</a>
+</figure>
+<p><strong>Therefore, having receivers only updip or downdip from the source provides
+only an apparent velocity and no indication that there is a dipping
+interface.</strong></p>
+<p>Intuitively, if we want to obtain another parameter (namely the dip angle,
+designated <span class="math notranslate nohighlight">\(\gamma\)</span>), then we need more data. We can achieve this by
+having two shots so that both updip and downdip apparent velocities can be
+obtained. This requires shots at both ends of the spread.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/dip_layers_geom.gif"><img alt="../../_images/dip_layers_geom.gif" src="../../_images/dip_layers_geom.gif" style="width: 409.20000000000005px; height: 149.60000000000002px;" />
+</a>
+</figure>
+<p>Consider the geometry and travel time curves shown to the right.  Note that
+<span class="math notranslate nohighlight">\(h\)</span> is depth (vertical distance) of the interface beneath the shot at A.
+The distance from A to the normal of the interface is given by <span class="math notranslate nohighlight">\(z\)</span>. These
+quantities are given by <span class="math notranslate nohighlight">\((h', z')\)</span> for the source at D. The traveltimes
+<span class="math notranslate nohighlight">\(t_{AD}\)</span> (time for the wave to go from A to D) and <span class="math notranslate nohighlight">\(t_{DA}\)</span> (the time
+for the wave to go from D to A) are called the “reciprocal times.”  It is
+should be obvious from geometry that these time are equal.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/reciprocal_times.gif"><img alt="../../_images/reciprocal_times.gif" src="../../_images/reciprocal_times.gif" style="width: 370.0px; height: 205.0px;" />
+</a>
+</figure>
+<p>Note the reciprocal travel times are sometimes erroneously considered as the
+travel times from first to last geophones of a spread, even though these first
+and last geophones do not always coincide with the two shot locations.
+Reciprocal times are total travel times from source location to the last
+receiver location.</p>
+<p>Checking for equal reciprocal times is a common test of the quality of the
+data. Don’t forget that the reciprocal time for each shot is found as the
+intersection of the refraction line with the time axis above the other shot
+(not at the “arbitrary” time axis). Extending the line with a ruler is an
+acceptable way of finding these times.</p>
+<p>The traveltime for receivers in the downdip direction is</p>
+<div class="math notranslate nohighlight">
+\[t_2 = \frac{x\sin(\theta + \gamma)}{v_1} + \frac{2z\cos\theta}{v_1} = \frac{x}{v_{2d}}+{t_i} \quad (1)\]</div>
+<p>The traveltime in the updip direction is</p>
+<div class="math notranslate nohighlight">
+\[t^{\prime}_2 = \frac{x\sin(\theta-\gamma)}{v_1} + \frac{2z^{\prime}\cos\theta}{v_1} = \frac{x}{v_{2u}}+{t^{\prime}_i}   \quad (2)\]</div>
+<p>So measurement of <span class="math notranslate nohighlight">\(v_{2d}\)</span> and <span class="math notranslate nohighlight">\(v_{2u}\)</span> can be used to obtain values for the critical angle <span class="math notranslate nohighlight">\(\theta\)</span> and the dip <span class="math notranslate nohighlight">\(\gamma\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{v_{2d}} = \frac{sin(\theta + \gamma)}{v_1} \rightarrow \theta + \gamma = sin^{-1}\Big( \frac{v_1}{v_{2d}}\Big)\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{1}{v_{2u}} = \frac{sin(\theta - \gamma)}{v_1} \rightarrow \theta - \gamma = sin^{-1}\Big( \frac{v_1}{v_{2u}}\Big)\]</div>
+<p>There are two equations in two unknowns <span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\(\gamma\)</span>,
+therefore we can solve for both unknowns. The result of solving for
+<span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\(\gamma\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\gamma = \frac{1}{2} \bigg[ sin^{-1}\bigg( \frac{v_1}{v_{2d}} \bigg) - sin^{-1}\bigg( \frac{v_1}{v_{2u}}  \bigg) \bigg]\]</div>
+<div class="math notranslate nohighlight">
+\[\theta = \frac{1}{2} \bigg[ sin^{-1}\bigg( \frac{v_1}{v_{2d}} \bigg) + sin^{-1}\bigg( \frac{v_1}{v_{2u}}  \bigg) \bigg]\]</div>
+<p>Now, how do we use these relations? Start by recalling what we want: We want
+depths under each end of the survey line (<span class="math notranslate nohighlight">\(h\)</span> and <span class="math notranslate nohighlight">\(h'\)</span>) and two true
+velocities. This is as much as we will obtain from a two-shot (forward and
+reverse) seismic refraction survey. We have, or can measure, velocities
+<span class="math notranslate nohighlight">\(v_1\)</span>, <span class="math notranslate nohighlight">\(v_{2u}\)</span>  and <span class="math notranslate nohighlight">\(v_{2d}\)</span>  , and two intercept times <span class="math notranslate nohighlight">\(t_i\)</span>
+and <span class="math notranslate nohighlight">\(t'_i\)</span>. The intercepts <span class="math notranslate nohighlight">\(t_i\)</span> and <span class="math notranslate nohighlight">\(t'_i\)</span> can be used to
+calculate <span class="math notranslate nohighlight">\(z\)</span> and <span class="math notranslate nohighlight">\(z'\)</span> (using equations (1) and (2) above) because
+<span class="math notranslate nohighlight">\(x=0\)</span> when <span class="math notranslate nohighlight">\(t_2=t_i\)</span> or <span class="math notranslate nohighlight">\(t'_2=t'_i\)</span> and the angle <span class="math notranslate nohighlight">\(\theta\)</span>
+can be found using the three velocities obtainable from the T-X plot. Finally,
+true depths <span class="math notranslate nohighlight">\(h\)</span> and <span class="math notranslate nohighlight">\(h'\)</span> can be found using these slant depths and the
+relation we found for dip, <span class="math notranslate nohighlight">\(\gamma\)</span> .</p>
+<p>What about true refractor velocity, <span class="math notranslate nohighlight">\(v_2\)</span> ? Snell’s law can of course be
+invoked. The critical angle <span class="math notranslate nohighlight">\(\theta\)</span> (referred to above) is obtained from
+the relation involving updip and downdip velocities, and the known value of
+<span class="math notranslate nohighlight">\(v_1\)</span> . A less accurate version of <span class="math notranslate nohighlight">\(v_2\)</span> can be obtained by averaging
+<span class="math notranslate nohighlight">\(v_2d\)</span> and <span class="math notranslate nohighlight">\(v_2u\)</span> but your average value will be wrong by a factor of
+<span class="math notranslate nohighlight">\(\cos(\gamma)\)</span> , or 2% to 3% for dips of about 12 degrees.</p>
+<section id="profile-geometries">
+<h2>Profile Geometries<a class="headerlink" href="#profile-geometries" title="Link to this heading"></a></h2>
+<p>Because interfaces are generally dipping (if not curved and tortuous) one
+needs to have information from multiple directions or at least some type of
+overlapping information which can be manipulated to yield the dip. The most
+common acquisition geometries are:</p>
+<ol class="arabic simple">
+<li><p>Reverse profile shots where you fire at both ends of the recording spread.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/profile_geom1.gif"><img alt="../../_images/profile_geom1.gif" src="../../_images/profile_geom1.gif" style="width: 313.59999999999997px; height: 175.0px;" />
+</a>
+</figure>
+<ol class="arabic simple" start="2">
+<li><p>Split spread (receivers are spread out from the shot in both directions).</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/profile_geom2.gif"><img alt="../../_images/profile_geom2.gif" src="../../_images/profile_geom2.gif" style="width: 407.4px; height: 162.39999999999998px;" />
+</a>
+</figure>
+<ol class="arabic simple" start="3">
+<li><p>Single end roll-along.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/profile_geom3.gif"><img alt="../../_images/profile_geom3.gif" src="../../_images/profile_geom3.gif" style="width: 408.79999999999995px; height: 163.79999999999998px;" />
+</a>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="seismic_refraction_processing.html" class="btn btn-neutral float-left" title="Refraction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="seismic_refraction_irregular_layers.html" class="btn btn-neutral float-right" title="Irregular Surfaces and the Plus-Minus Method" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

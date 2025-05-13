@@ -1,0 +1,271 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic principles &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Survey" href="induced_polarization_survey.html" />
+    <link rel="prev" title="Chargeability" href="induced_polarization_physical_properties.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Induced Polarization</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="induced_polarization_introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="induced_polarization_physical_properties.html">Chargeability</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Basic principles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#effects-of-ip-on-geophysical-measurements">Effects of IP on Geophysical Measurements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#definitions-for-chargeability">Definitions for Chargeability</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="induced_polarization_survey.html">Survey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="induced_polarization_data.html">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="induced_polarization_interpretation.html">Interpretation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Induced Polarization</a> &raquo;</li>
+        
+      <li>Basic principles</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/induced_polarization/induced_polarization_basic_principles.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="basic-principles">
+<span id="induced-polarization-basic-principles"></span><h1>Basic principles<a class="headerlink" href="#basic-principles" title="Link to this heading"></a></h1>
+<section id="effects-of-ip-on-geophysical-measurements">
+<h2>Effects of IP on Geophysical Measurements<a class="headerlink" href="#effects-of-ip-on-geophysical-measurements" title="Link to this heading"></a></h2>
+<p>To demonstrate the effects of induced polarization on geophysical
+measurements, consider a specific example where a current generator,
+hooked to the ground as in a DC survey, is turned on.
+At some location, the electric
+potential (<span class="math notranslate nohighlight">\(V\)</span>) is measured. In non-chargeable rocks, an instantaneous
+increase in the measured potential occurs when the source is switched
+on. When the source is switched off, the current through the Earth returns
+immediately to zero and
+so is the measured potential. This is illustrated in the figure below.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/IP_source.gif"><img alt="../../_images/IP_source.gif" src="../../_images/IP_source.gif" style="width: 540.0px; height: 144.0px;" />
+</a>
+</figure>
+<p>If the ground is chargeable, there will also be an instantaneous jump in the
+measured potential when the source is switched on; we denote as
+<span class="math notranslate nohighlight">\(V_\sigma\)</span>. However, the subsequent build-up of ionic charges during the
+on-time results in a corresponding increase in the measured potential; which
+is sometimes referred to as the over-voltage. Eventually, the build-up of
+ionic charges reaches saturation, resulting in a final measured potential
+(<span class="math notranslate nohighlight">\(V_m\)</span>). In general, the measured potential after the source is switched
+(<span class="math notranslate nohighlight">\(V_{on}\)</span>) can be expressed as:</p>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/chargeability_physics2.png"><img alt="../../_images/chargeability_physics2.png" src="../../_images/chargeability_physics2.png" style="width: 328.0px; height: 215.0px;" />
+</a>
+</figure>
+<div class="math notranslate nohighlight">
+\[V_{on}(t) = V_\sigma + V_s \Big[ 1 - e^{-t/\tau } \Big]\]</div>
+<p>where <span class="math notranslate nohighlight">\(V_s\)</span> is the amplitude of the over-voltage and <span class="math notranslate nohighlight">\(\tau\)</span> is a
+constant which determines the rate at which the induced polarization forms.</p>
+<p>When the source is switched off, there is an instantaneous drop in the
+measured potential equal to <span class="math notranslate nohighlight">\(V_\sigma\)</span>. Subsequently, the accumulated
+charges begin to diffuse, resulting in a measured potential which decays
+according to:</p>
+<div class="math notranslate nohighlight">
+\[V_{off}(t) = V_s \, e^{-t/\tau}\]</div>
+<p>This decaying off-time potential is commonly called the discharge curve.
+We use the discharge curve to characterize the chargeable properties of the Earth.</p>
+</section>
+<section id="definitions-for-chargeability">
+<h2>Definitions for Chargeability<a class="headerlink" href="#definitions-for-chargeability" title="Link to this heading"></a></h2>
+<p>It is convenient to consider “chargeabilty” as an independent physical property but
+in reality it is an integral component of the electrical conductivity. It describes
+how the conductivity changes with frequency. If <span class="math notranslate nohighlight">\(\sigma_0\)</span> denotes the conductivity
+at zero  frequency and if <span class="math notranslate nohighlight">\(\sigma_\infty\)</span> is the conductivity at infinite frequency
+then the chargeability is</p>
+<div class="math notranslate nohighlight">
+\[\eta = \frac{\sigma_\infty -\sigma_0}{\sigma_\infty}\]</div>
+<p>This is a dimensionless number varying between 0 &lt; <span class="math notranslate nohighlight">\(\eta\)</span> &lt; 1. It is
+often referred to as the intrinsic chargeability.  The above definition
+is equivalent to defining the
+intrinsic chargeability as the ratio between the amplitude of the over-voltage (<span class="math notranslate nohighlight">\(V_s\)</span>)
+and the DC voltage (<span class="math notranslate nohighlight">\(V_m\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[\eta = \frac{V_s}{V_m}\]</div>
+<p>The intrinsic chargeability for materials is rarely provided in tables. Rather, numbers
+based upon laboratory measurements of some characteristic of the induced polarization
+response is provided. Those measurements can be in time or frequency and the units
+of the “chargeability” are inherited from the data. We outline below:</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="induced_polarization_physical_properties.html" class="btn btn-neutral float-left" title="Chargeability" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="induced_polarization_survey.html" class="btn btn-neutral float-right" title="Survey" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

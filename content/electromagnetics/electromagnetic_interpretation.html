@@ -1,0 +1,521 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interpretation &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Applet" href="electromagnetic_applet.html" />
+    <link rel="prev" title="Processing" href="electromagnetic_processing.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Electromagnetic Methods</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="electromagnetic_introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electromagnetic_physical_properties.html">Conductivity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electromagnetic_basic_principles.html">Basic Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electromagnetic_survey.html">Survey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electromagnetic_data.html">Frequency Domain Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electromagnetic_processing.html">Processing</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Interpretation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#background">Background</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#historical-land-use">Historical Land Use</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stratigraphy">Stratigraphy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hydrogeology">Hydrogeology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#buried-metal-and-objects">Buried Metal and Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hydrocarbons">Hydrocarbons</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#survey">Survey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#processing">Processing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="electromagnetic_applet.html">Applet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Electromagnetic Methods</a> &raquo;</li>
+        
+      <li>Interpretation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/electromagnetics/electromagnetic_interpretation.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="interpretation">
+<span id="electromagnetic-interpretation"></span><h1>Interpretation<a class="headerlink" href="#interpretation" title="Link to this heading"></a></h1>
+<figure class="align-right" style="width: 40%">
+<img alt="../../_images/ExpoSite_Icon.png" src="../../_images/ExpoSite_Icon.png" />
+</figure>
+<p>In this section, we use a real-world example to illustrate the use of electromagnetic (EM) methods. In this industrial reclamation case study, the interpretation of EM data had proven useful in characterizing the sub-surface and answering the following questions:</p>
+<blockquote>
+<div><p>1- What is the thickness of the mixed fill layer (i.e. what is the depth to till)?</p>
+<p>2- What is the distribution of buried objects? Many objects are thought to exist, possibly ranging in size from small pieces of industrial trash, to railway lines, reinforced concrete building foundations, and buried tanks.</p>
+<p>3- Can geophysics contribute any information about the extent of hydrocarbons within the top layer, which consists of a wide range of fill materials?</p>
+<p>4- Where is fill material dominated by wood waste, making ground unfit to support structures?</p>
+</div></blockquote>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Link to this heading"></a></h2>
+<figure class="align-right" id="expo-today" style="width: 50%">
+<img alt="../../_images/Expo_Today.png" src="../../_images/Expo_Today.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 148 </span><span class="caption-text">Recent satellite image over the old Expo site, Vancouver, BC.</span><a class="headerlink" href="#expo-today" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The field site in question is an urban area with a complex industrial history located on the outskirt of downtown Vancouver, Canada. The same site had been used for the 1986 <strong>World Exposition on Transportation and Communication</strong>, also known as the Expo site. Following the Expo, the city undertook excation work prior to the construction of public space [REF NEEDED].
+<em>The actual field site was fully remediated by the end of 1991, as summarized by the closure report prepared by Golder Associates Ltd.</em></p>
+<section id="historical-land-use">
+<h3>Historical Land Use<a class="headerlink" href="#historical-land-use" title="Link to this heading"></a></h3>
+<figure class="align-right" id="expo-excavation" style="width: 50%">
+<img alt="../../_images/Expo_Archive_excavation.jpg" src="../../_images/Expo_Archive_excavation.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 149 </span><span class="caption-text">Excavated wood debris below the Expo site.</span><a class="headerlink" href="#expo-excavation" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The land had been used by several insdustries over the years, laying down pipes, railroads, cables and several utility buildings.
+The history of industrial activity is fairly complex, and covers over 100 years. For example, <a class="reference internal" href="#expo-excavation"><span class="std std-numref">Fig. 149</span></a> shows some of the wood waste mixed in with the fill under the pavement at this location. More details about the history are available through the few engineering documents presented below:</p>
+<script language="JavaScript" type="text/JavaScript">
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+  </script>
+  <script language="JavaScript">
+<!--
+function MM_initInteractions(){}
+//-->
+  </script><!-- InstanceEndEditable -->
+
+
+<br>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="99%">
+
+  <tbody>
+    <tr>
+
+  </tr>
+
+  </tbody>
+</table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="99%">
+
+  <tbody>
+    <tr>
+
+      <table border="0" cellpadding="2" cellspacing="1" width="100%">
+
+        <tbody>
+
+          <tr>
+
+            <td>
+            <form name="form1" method="post" action="">
+
+              <p class="figureCaption">
+
+                  <input name="radiobutton" value="radiobutton" checked="checked"onclick="MM_swapImage('filters','','./../../_images/Expo_site_1902.gif',1)" type="radio">
+                  <b>
+
+                    1902.
+
+                  </b>
+
+                   Before 1902, there were wood processing and storage facilities in the area. During that period, the original shoreline was moved from the north edge of our site to the south edge using a wide variety of fill materials including wood chips, logs, and construction debris. <br>
+
+                  <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('filters','','./../../_images/Expo_site_1936.gif',1)" type="radio">
+                  <b>
+
+                    1936.
+
+                  </b>
+
+                   After 1902 there was a gas manufacturing plant with storage facilities, an oil house, an auto repair garage, and a substation maintenance facility. The gas plant left some quantities of ammonia, phenolics, cyanide, oxides, and light hydrocarbons, as well as other miscellaneous waste. The substation maintenance shop included a sump in the floor into which dielectric fluids from capacitors and transformers was drained. Oil from this  sump was piped to the oil house for treatment and recycling. This oil house included large tanks, at least one of which was underground. There was also the Viaduct traffic overpass crossing over the central portion of our site, and associated support foundations may well have been left in the ground when the viaduct was later removed.<br>
+
+                  <input name="radiobutton" value="radiobutton"  onclick="MM_swapImage('filters','','./../../_images/Expo_site_1952.gif',1)" type="radio">
+                  <b>
+
+                    1952.
+
+                  </b>
+
+                   Between 1910 and 1960 there were several different railway lines laid at various orientations across our field site.<br>
+
+                  <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('filters','','./../../_images/Expo_site_1961.gif',1)" type="radio">
+                  <b>
+
+                    1961.
+
+                  </b>
+
+                  Sometime in 1969 or 1970 as much as several thousand gallons of oil was spilled on to the shop floor because a valve had been accidentally left open over a  weekend.<br>
+
+                  <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('filters','','./../../_images/Expo_site_1974.gif',1)" type="radio">
+                  <b>
+
+                    1974.
+
+                  </b>
+
+                   After 1974, a fuel depot, bus wash and several underground storage tanks existed. These were demolished for the most recent use, which was a parking lot for a near by Exposition.<br>
+
+              </form>
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div align="center"><font size="-1"><img src="./../../_images/Expo_site_1902.gif" name="filters" height="129" width="400"></font></div>
+            </td>
+
+          </tr>
+
+
+        </tbody>
+
+      </table>
+
+    <!-- InstanceEndEditable --></td>
+
+  </tr>
+
+  </tbody>
+</table>
+</section>
+<section id="stratigraphy">
+<h3>Stratigraphy<a class="headerlink" href="#stratigraphy" title="Link to this heading"></a></h3>
+<p>Based on monitoring wells, boreholes and trenching the north-south cross section shown to the right was constructed. The five primary stratigraphic units in the area of interest can be described as follows.</p>
+<figure class="align-right" id="expo-stratigraphy" style="width: 50%">
+<img alt="../../_images/Expo_Stratigraphy.jpg" src="../../_images/Expo_Stratigraphy.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 150 </span><span class="caption-text">Known stratigraphy from monitoring wells, boreholes and trenching.</span><a class="headerlink" href="#expo-stratigraphy" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>The top half metre consisted of two layers of very hard pavement.</p></li>
+<li><p>The fill below was very variable, consisting mainly of mineral fill, but with considerable quantities of other materials, including buried metal and concrete, wood waste, construction debris and gravel fill. Individually, these materials have a wide range of physical and geotechnical properties, and when used as fill, bulk (averaged) properties would also range widely. Identifying elevation highs and lows may provide some insight as to where more (or less) compressible fill materials existed.</p></li>
+<li><p>The next unit below the artificial fill was a sandy silt (or silty clay in some areas), ranging between zero and one metre thick. The deepest layer penetrated by boreholes was a very dense gray sandy silt, with some gravel and traces of clay - basically a till.</p></li>
+<li><p>The depth to this till is moderately well-constrained under the profile to the west of the field site.</p></li>
+<li><p>Sedimentary bedrock was reportedly deeper than 20 m.</p></li>
+</ul>
+</section>
+<section id="hydrogeology">
+<h3>Hydrogeology<a class="headerlink" href="#hydrogeology" title="Link to this heading"></a></h3>
+<p>The depth to the water table was known to vary between 1 and 3 m, with flow generally towards the South West. The principle hydrostratigraphic unit (fill) was generally highly permeable but with isolated regions that appeared to block flow through this aquifer. Transformer oil contaminated with polychlorinated biphenyl (PCB) was found in boreholes and test trenches floating on the water table 2 m to 3 m below ground surface in some parts of the northern half of the field site.</p>
+</section>
+<section id="buried-metal-and-objects">
+<h3>Buried Metal and Objects<a class="headerlink" href="#buried-metal-and-objects" title="Link to this heading"></a></h3>
+<figure class="align-right" id="expo-buried-metal" style="width: 50%">
+<img alt="../../_images/Expo_Buried_Metal.jpg" src="../../_images/Expo_Buried_Metal.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 151 </span><span class="caption-text">Buried oil tankIn two of the test pits, high inflows of water (and some oil) were observed in zones of coarse wood waste characterized by open voids up to 10 cm in size</span><a class="headerlink" href="#expo-buried-metal" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Many kinds of buried objects were encountered in the fill layer. There was much buried metal including wires, tanks, and other known and unknown objects. <a class="reference internal" href="#expo-buried-metal"><span class="std std-numref">Fig. 151</span></a> shows a buried tank found at test pit 28. A buried oil sump was also expected in the location of the oil house associated with the maintenance shop near the North edge of the site. It is also possible that re-bar reinforced concrete foundations of buildings or supports for the old traffic Viaduct could be encountered. There were also old railways, although no evidence of the iron rails themselves was found in trenches or boreholes. Above ground, there are several lamps, and a chain link fences surrounds our study area on three sides. The lamps are expected to be connected to underground wiring since they are not fed by overhead wires.</p>
+</section>
+<section id="hydrocarbons">
+<h3>Hydrocarbons<a class="headerlink" href="#hydrocarbons" title="Link to this heading"></a></h3>
+<p>Early in our work, a monitoring well was discovered to have up to 20 cm of oil floating on the water table, containing concentrations of PCB’s higher than the local special waste regulations permitted. As a result, an investigation program was conducted to delineate the areal extent and thickness of the oil, to assess the PCB concentrations, and to locate any potential remaining sources of oil such as underground tanks. The investigation involved excavation of 36 test pits, and collection of 7 oil samples, 58 soil samples, and 10 water samples. Details about all boreholes and test pits are contained in a separate report. We recommend that geophysical surveys be conducted in order to further delineate contaminated zones, and to locate subsurface features that might be associated with oils. This is because the largest concentrations of PCB’s were found in black stained soil inside or adjacent to buried pipes and transformer parts. This increases the importance of investigating all geophysical anomalies that could be buried metal debris.</p>
+<figure class="align-right" id="expo-hydrocarbon" style="width: 50%">
+<img alt="../../_images/Expo_Hydrocarbon.jpg" src="../../_images/Expo_Hydrocarbon.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 152 </span><span class="caption-text">PCB samples measured at the Expo site.</span><a class="headerlink" href="#expo-hydrocarbon" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>PCB concentrations were measured in 58 soil samples with results as shown in <a class="reference internal" href="#expo-hydrocarbon"><span class="std std-numref">Fig. 152</span></a>. Most of the contamination was found within the depth range of 1m to 3m, which corresponds to the fluctuation of the water table. Samples from five standpipe locations were used to characterize the oil itself, in terms of carbon distribution, viscosity, specific gravity and flashpoint. The oil / water contact was found to be blurred even after samples gathered from standpipes had been left to stand for 24 hrs. The diffuse layer between oil and water was inferred to consist of emulsified oil possibly resulting from weathering due to microbial activity over the extended time period. Note that this probably has important implications for detection using geophysics for at least two reasons: i) the interface between water and oil is not manifested as a distinct transition in physical properties, and ii) there are in effect three fluids rather than two - water, oil, and the mixture.</p>
+</section>
+</section>
+<section id="survey">
+<h2>Survey<a class="headerlink" href="#survey" title="Link to this heading"></a></h2>
+<p>The Geonics EM-31 instrument is used to map variations of electrical conductivity within the top 3 to 6 metres of the sub-surface. This chapter of our report summarizes survey design and results obtained. Detailed interpretation was not one of our contractual oblications.
+Survey design</p>
+<p>For EM-31 surveys, rapid acquisition of spatially dense data sets is usually the most important requirement. When searching for discrete targets, the most important design consideration is to avoid spatial aliassing. For small 3D targets a tightly spaced grid would be required. For 2D targets (such as buried utility pipes), data spacing along profile lines would likely be tighter than spacing between lines, assuming lines can be placed perpendicular to target orientation.</p>
+<p>At our field site, EM-31 data were gathered on a 2m grid resulting in measurements of in-phase and quadrature response at 2600 stations. Since the instrument response to elongated buried objects depends upon the orientation of the instrument, two complete data sets were gathered, with the instrument’s 3.66 m boom oriented both in north-sourth and east-west directions.</p>
+<p>Both complete data sets are presented in <a class="reference internal" href="#expo-ew-ns"><span class="std std-numref">Table 11</span></a>. They were recorded using the “normal” vertical dipole coil orientation with the instrument held 1 m above the ground.</p>
+<table class="docutils align-default" id="expo-ew-ns">
+<caption><span class="caption-number">Table 11 </span><span class="caption-text">EM 31 data the Expo site</span><a class="headerlink" href="#expo-ew-ns" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id1">
+<img alt="../../_images/Expo_AppCond_EW.gif" src="../../_images/Expo_AppCond_EW.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 153 </span><span class="caption-text">: <span class="math notranslate nohighlight">\(\sigma_{app}\)</span> map from the EW orientation</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id2">
+<img alt="../../_images/Expo_AppCond_NS.gif" src="../../_images/Expo_AppCond_NS.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 154 </span><span class="caption-text">: <span class="math notranslate nohighlight">\(\sigma_{app}\)</span> map from the NS orientation</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id3">
+<img alt="../../_images/Expo_InPhase_EW.gif" src="../../_images/Expo_InPhase_EW.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 155 </span><span class="caption-text">: In-phase map from the EW orientation</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id4">
+<img alt="../../_images/Expo_InPhase_NS.gif" src="../../_images/Expo_InPhase_NS.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 156 </span><span class="caption-text">: In-phase map from the NS orientation</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Apparent conductivity data are presented in units of milliSeimens per m (mS/m) using a rainbow colour scale with banding so that values and local trends are both visible. Corresponding in-phase data are in percent of primary field strength, and are presented using a bimodal colour scale since results are generally interpreted qualitatively to identify buried metal rather than quantitatively in terms of ground material properties.</p>
+</section>
+<section id="processing">
+<h2>Processing<a class="headerlink" href="#processing" title="Link to this heading"></a></h2>
+<p>Since data were gathered using two different instrument orientations, it is easy to supply averaged and differenced data sets. Averaged and differential maps are presented in <a class="reference internal" href="#expo-avg-diff"><span class="std std-numref">Table 12</span></a>. The effect of averaging data from two orientations is to smooth responses, emphasizing regions where ground is more uniform. The objective of differencing data from two orientations is to emphasize features that depend upon instrument orientation. For apparent conductivity data the result is that linear and small 3D targets are more clearly decerned. Click the following small images to display larger versions of each image.</p>
+<table class="docutils align-default" id="expo-avg-diff">
+<caption><span class="caption-number">Table 12 </span><span class="caption-text">Processed data at the Expo Site</span><a class="headerlink" href="#expo-avg-diff" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id5">
+<img alt="../../_images/Expo_AppCond_Avg.gif" src="../../_images/Expo_AppCond_Avg.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 157 </span><span class="caption-text">: Averaged EW and NS <span class="math notranslate nohighlight">\(\sigma_{app}\)</span> map</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id6">
+<img alt="../../_images/Expo_AppCond_Diff.gif" src="../../_images/Expo_AppCond_Diff.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 158 </span><span class="caption-text">: Differenced EW and NS <span class="math notranslate nohighlight">\(\sigma_{app}\)</span> map</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id7">
+<img alt="../../_images/Expo_InPhase_Avg.gif" src="../../_images/Expo_InPhase_Avg.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 159 </span><span class="caption-text">: Averaged EW and NS In-phase map</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id8">
+<img alt="../../_images/Expo_InPhase_Diff.gif" src="../../_images/Expo_InPhase_Diff.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 160 </span><span class="caption-text">: Differenced EW and NS In-phase map</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="electromagnetic_processing.html" class="btn btn-neutral float-left" title="Processing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="electromagnetic_applet.html" class="btn btn-neutral float-right" title="Applet" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

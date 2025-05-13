@@ -1,0 +1,465 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Susceptibility &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Seismic Velocity" href="seismic_velocity_duplicate.html" />
+    <link rel="prev" title="Density" href="physical_properties_density.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Physical Properties</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="physical_properties_density.html">Density</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Susceptibility</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#susceptibility-measurements">Susceptibility Measurements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#susceptibility-of-common-rocks">Susceptibility of Common Rocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#factors-impacting-magnetic-susceptibility">Factors Impacting Magnetic Susceptibility</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_velocity_duplicate.html">Seismic Velocity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physical_properties_dielectric_permittivity.html">Dielectric Permittivity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physical_properties_conductivity.html">Electrical Conductivity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="induced_polarization_physical_properties_duplicate.html">Chargeability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tables/index.html">Tables of Physical Properties</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Physical Properties</a> &raquo;</li>
+        
+      <li>Susceptibility</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/physical_properties/magnetics_susceptibility_duplicate.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="susceptibility">
+<span id="physprop-mag-susc"></span><h1>Susceptibility<a class="headerlink" href="#susceptibility" title="Link to this heading"></a></h1>
+<p>Magnetic susceptibility (<span class="math notranslate nohighlight">\(\kappa\)</span>) quantifies the magnetization (<span class="math notranslate nohighlight">\(\vec M\)</span>) a rock or mineral experiences when it is subjected to an applied magnetic field (<span class="math notranslate nohighlight">\(\vec H\)</span>). This relationship takes the form:</p>
+<div class="math notranslate nohighlight">
+\[\vec M = \kappa \vec H\]</div>
+<p id="physprop-magnetization"><strong>Magnetization</strong></p>
+<p>Within the mineral grains comprising rocks, there are tiny magnetized volumes (magnetic domains) which behave like small bar magnets.
+The direction and magnitude of each magnetic domain is defined by its magnetic dipole moment (<span class="math notranslate nohighlight">\(\vec m\)</span>).
+Magnetization (<span class="math notranslate nohighlight">\(\vec M\)</span>) is defined as the dipole moment per unit volume within a material.</p>
+<p>Let <span class="math notranslate nohighlight">\(\vec m_i\)</span> be the magnetic dipole moment of the
+<span class="math notranslate nohighlight">\(i^\textrm{th}\)</span> particle or magnetic domain. Within a volume
+(<span class="math notranslate nohighlight">\(V\)</span>), the total magnetic moment is the sum of all individual magnetic
+moments, thus:</p>
+<figure class="align-right" style="width: 60%">
+<img alt="../../_images/magnetization_physics.png" src="../../_images/magnetization_physics.png" />
+</figure>
+<div class="math notranslate nohighlight">
+\[\vec{m}= \sum_i \vec m_i\]</div>
+<p>And since magnetization is the dipole moment per unit volume:</p>
+<div class="math notranslate nohighlight">
+\[\vec M = \frac {\vec m}{V} = \frac {1}{V} \sum_i \vec m_i\]</div>
+<p>where the units for magnetization are Am <span class="math notranslate nohighlight">\(\! ^2\)</span>/m <span class="math notranslate nohighlight">\(\! ^3\)</span> = A/m.</p>
+<p id="physprop-magnetic-field"><strong>Magnetic Field</strong></p>
+<p>The magnetic field <span class="math notranslate nohighlight">\(\vec H\)</span> is responsible for applying a magnetic force
+to a material. Magnetic dipoles subjected to magnetic fields will attempt to
+align in the direction of <span class="math notranslate nohighlight">\(\vec H\)</span>. The magnetization process is
+illustrated in the following interactive figure.</p>
+<p>When there is no external magnetic field, individual magnetic moments
+<span class="math notranslate nohighlight">\(\vec m_i\)</span> within a volume are generally disordered and hence don’t
+produce a net magnetic field. However, when the material is subjected to an
+external magnetic field, <span class="math notranslate nohighlight">\(\vec H\)</span>, the magnetic moments try to re-orient
+themselves along the direction of the field. This results in a net
+magnetization which produces a secondary magnetic field. The following
+interactive figure illustrates this process:</p>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="99%"> 
+  <tbody> 
+    <tr> 
+      <td bgcolor="#ffffff" width="12">&nbsp;</td> 
+              <table align="center" border="1" cellpadding="2" cellspacing="0" width="95%"> 
+          <tbody> 
+            <tr valign="top"> 
+              <td> <form name="form1" method="post" action=""> 
+                  <img src="./../../../_images/intro1.gif" name="intro" id="intro" align="right" height="109" width="120"> 
+                  <input name="radiobutton" onclick="MM_swapImage('intro','','./../../../_images/intro1.gif',1)" value="radiobutton" checked="checked" type="radio">
+                  <font size="-1"> 
+                  No external field. Rock sample has zero net field.</font><br> 
+                  <input name="radiobutton" onclick="MM_swapImage('intro','','./../../../_images/intro2.gif',1)" value="radiobutton" type="radio"> 
+                  <font size="-1">
+                  Magnetic domains are oriented randomly.</font><br> 
+                  <input name="radiobutton" onclick="MM_swapImage('intro','','./../../../_images/intro3.gif',1)" value="radiobutton" type="radio"> 
+                  <font size="-1">
+                  If an external field <strong>H</strong> exists, magnetic domains will align to it.</font><br> 
+                  <input name="radiobutton" onclick="MM_swapImage('intro','','./../../../_images/intro4.gif',1)" value="radiobutton" type="radio"> 
+                  <font size="-1">
+                  Net effect of all aligned fields causes rock sample to have a NON-zero field.</font>
+                </form> 
+              </td> 
+            </tr> 
+          </tbody> 
+                    
+
+</table> 
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>For many materials, the strength of the alignment of the magnetic moments
+increases linearly with the strength of the applied field. The magnetic
+susceptibility therefore defines a constant of proportionality.</p>
+<p id="physprop-mag-permeability"><strong>Magnetic Permeability</strong></p>
+<p>In magnetic problems, a more fundamental physical property is the magnetic
+permeability (<span class="math notranslate nohighlight">\(\mu\)</span>). Magnetic permeability relates the magnetic field
+(<span class="math notranslate nohighlight">\(\vec H\)</span>) to the magnetic flux density (<span class="math notranslate nohighlight">\(\vec B\)</span>). This
+constitutive relationship is written as follows:</p>
+<div class="math notranslate nohighlight">
+\[\vec B = \mu \vec H\]</div>
+<p>The magnetic flux density depends on the magnetization within the material and
+can be written as:</p>
+<div class="math notranslate nohighlight">
+\[\vec B = \mu_0 \big ( \vec H + \vec M \big )\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mu_0 = 4\pi \times 10^{-7}\)</span> H/m is the permeability of free-
+space. The permeability of free-space represents the relationship between
+<span class="math notranslate nohighlight">\(\vec B\)</span> and <span class="math notranslate nohighlight">\(\vec H\)</span> when the material is non-magnetic. For
+materials in which <span class="math notranslate nohighlight">\(\vec M = \kappa \vec H\)</span>,  the magnetic permeability
+can be defined in terms of the magnetic susceptibility as follows:</p>
+<div class="math notranslate nohighlight">
+\[\mu = \mu_0 (1 + \kappa )\]</div>
+<p><strong>Relative Permeability</strong></p>
+<p>Relative permeability (<span class="math notranslate nohighlight">\(\mu_r\)</span>) defines the ratio between the magnetic
+permeability of the material and the permeability of free-space:</p>
+<div class="math notranslate nohighlight">
+\[\mu_r = \frac{\mu}{\mu_0}\]</div>
+<p>According to the above definitions, both magnetic susceptibility and magnetic
+permeability are diagnostic physical properties associated with the magnetic
+characteristics of materials. In the literature, it is common to see physical
+property tables which use <span class="math notranslate nohighlight">\(\mu\)</span>, <span class="math notranslate nohighlight">\(\mu_r\)</span>, or <span class="math notranslate nohighlight">\(\kappa\)</span>. For
+most rocks, the susceptibility is small and charcterizing the magnetic
+properties in terms of <span class="math notranslate nohighlight">\(\kappa\)</span> is convenient. Parameters used to define
+magnetic properties and their associated units are tabulated below.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Property</strong></p></th>
+<th class="head"><p><strong>Symbol</strong></p></th>
+<th class="head"><p><strong>Units</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Magnetic Field Intensity</p></td>
+<td><p><span class="math notranslate nohighlight">\(\vec H\)</span></p></td>
+<td><p>A/m</p></td>
+</tr>
+<tr class="row-odd"><td><p>Magnetic Flux Density</p></td>
+<td><p><span class="math notranslate nohighlight">\(\vec B\)</span></p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-even"><td><p>Magnetization</p></td>
+<td><p><span class="math notranslate nohighlight">\(\vec M\)</span></p></td>
+<td><p>A/m</p></td>
+</tr>
+<tr class="row-odd"><td><p>Magnetic Susceptibility</p></td>
+<td><p><span class="math notranslate nohighlight">\(\kappa\)</span></p></td>
+<td><p><em>Unitless</em></p></td>
+</tr>
+<tr class="row-even"><td><p>Magnetic Permeability</p></td>
+<td><p><span class="math notranslate nohighlight">\(\mu\)</span></p></td>
+<td><p>H/m</p></td>
+</tr>
+<tr class="row-odd"><td><p>Relative Permeability</p></td>
+<td><p><span class="math notranslate nohighlight">\(\mu_r\)</span></p></td>
+<td><p><em>Unitless</em></p></td>
+</tr>
+</tbody>
+</table>
+<p>Some useful conversions for units are:</p>
+<blockquote>
+<div></div></blockquote>
+<p>The above units (with the exception of gamma) are all SI units; which can always be expressed using meters, kilograms, and seconds.
+Historically, units of cgs (centimeter, grams, seconds) were used to define the magnetic susceptibilities for rocks.
+Although it is unitless, the value of susceptibility is different when given in cgs as opposed to SI.
+The translation between cgs and SI units is:</p>
+<div class="math notranslate nohighlight">
+\[\kappa \; \textrm{(SI)} = 4 \pi \kappa \; \textrm{(cgs)}\]</div>
+<p>The SI system is the current preferred standard among most geophysicists, but you will find cgs used in older references and texts.
+This can cause great confusion so be careful!</p>
+<section id="susceptibility-measurements">
+<h2>Susceptibility Measurements<a class="headerlink" href="#susceptibility-measurements" title="Link to this heading"></a></h2>
+<p><strong>KT-10 Magnetic Susceptibility Meter</strong></p>
+<p>The KT-10 magnetic susceptibility meter is a widely used tool for measuring magnetic susceptibilities in the field.
+Within the KT-10, there is an electrical circuit which produces a magnetic field.
+When held next to a rock, the magnetic field causes a magnetization within the rock.
+This magnetization changes the resonance frequency of the current within the circuit.
+Therefore, the KT-10 measures a change in resonance frequency, and uses it to approximate the susceptibility of the rock.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/magnetic_susceptibility_measurement_KT10.jpg"><img alt="../../_images/magnetic_susceptibility_measurement_KT10.jpg" src="../../_images/magnetic_susceptibility_measurement_KT10.jpg" style="width: 50%;" />
+</a>
+</figure>
+<p><strong>Laboratory Measurements</strong></p>
+<p>Laboratory measurements are based on the same physical principles as the KT-10.
+However, the circuit and sample holder used in laboratory measurements are more sophisticated, resulting in more accurate susceptibility values.</p>
+</section>
+<section id="susceptibility-of-common-rocks">
+<span id="physprop-susc-common-rocks"></span><h2>Susceptibility of Common Rocks<a class="headerlink" href="#susceptibility-of-common-rocks" title="Link to this heading"></a></h2>
+<p>Charts showing the range of magnetic susceptibility values for common rock types are shown below.
+Note that the scale is logarithmic, indicating a large variability in magnetic susceptibility among rocks.
+From these charts we can infer several things:</p>
+<ul class="simple">
+<li><p>Rocks with a high magnetite content are by far the most susceptible (see red vertical red lines denoting % magnetite content).</p></li>
+<li><p>Although hematite and magnetite are both iron-oxide minerals, only magnetite is particularly susceptible.</p></li>
+<li><p>Igneous and metamorphic rocks tend to be more susceptible than sedimentary rocks. However, there is a very wide range of overlap.</p></li>
+<li><p>Mafic igneous rocks are more susceptible than felsic igneous rocks.</p></li>
+<li><p>Mineralized rocks such as skarns and banded-iron formations are generally more susceptible than the surrounding country rock.</p></li>
+</ul>
+<p>A more detailed analysis of rock magnetic properties can be found in Clark and Emerson (1991).</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/rock_susceptibilities_adapted.png"><img alt="../../_images/rock_susceptibilities_adapted.png" src="../../_images/rock_susceptibilities_adapted.png" style="width: 1300.0px; height: 738.0px;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/susceptibility_chart.gif"><img alt="../../_images/susceptibility_chart.gif" src="../../_images/susceptibility_chart.gif" style="width: 537.0px; height: 375.0px;" />
+</a>
+</figure>
+</section>
+<section id="factors-impacting-magnetic-susceptibility">
+<h2>Factors Impacting Magnetic Susceptibility<a class="headerlink" href="#factors-impacting-magnetic-susceptibility" title="Link to this heading"></a></h2>
+<p><strong>Magnetic Minerals</strong></p>
+<p>The magnetic susceptibility of a rock depends on the type and abundance of
+magnetic minerals it contains. Magnetic minerals are generally part of the
+iron-titanium-oxide or iron-sulphide mineral groups. The most important
+magnetic mineral in rock magnetism is magnetite. This mineral is common in
+igneous and metamorphic rocks, and is present at least in trace amounts in
+most sediments. Ore-bearing sulphides are frequently susceptible due to
+minerals such as pyrite and pyrrhotite. The magnetic susceptibilities of
+notable magnetic minerals are shown below.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Mineral</strong></p></th>
+<th class="head"><p><strong>Chemical formula</strong></p></th>
+<th class="head"><p>Average susceptibility (SI)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Magnetite</p></td>
+<td><p><span class="math notranslate nohighlight">\(Fe_3 O_4\)</span></p></td>
+<td><p>5.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ilmenite</p></td>
+<td><p><span class="math notranslate nohighlight">\(FeTiO_3\)</span></p></td>
+<td><p>1.8</p></td>
+</tr>
+<tr class="row-even"><td><p>Hematite</p></td>
+<td><p><span class="math notranslate nohighlight">\(Fe_2O_3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(6.5 \times 10^{-3}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Maghemite</p></td>
+<td><p><span class="math notranslate nohighlight">\(Fe_2O_3\)</span></p></td>
+<td><p>5.8</p></td>
+</tr>
+<tr class="row-even"><td><p>Pyrite</p></td>
+<td><p><span class="math notranslate nohighlight">\(FeS_2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.5 \times 10^{-3}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Pyrrhotite</p></td>
+<td><p><span class="math notranslate nohighlight">\(Fe_{1-x}S(Fe_7S_8)\)</span></p></td>
+<td><p>1.5</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="physical_properties_density.html" class="btn btn-neutral float-left" title="Density" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="seismic_velocity_duplicate.html" class="btn btn-neutral float-right" title="Seismic Velocity" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

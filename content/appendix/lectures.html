@@ -1,0 +1,444 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lectures &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Apps" href="apps.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps.html">Apps</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lectures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-eosc-350-environmental-geotechnical-and-exploration-geophysics">Introduction to EOSC 350: Environmental, Geotechnical and Exploration Geophysics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-applied-geophysics">Introduction to Applied Geophysics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#magnetics-1">Magnetics 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#magnetics-2">Magnetics 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#magnetics-3">Magnetics 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#magnetics-4">Magnetics 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#magnetics-5">Magnetics 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#magnetics-6">Magnetics 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#seismic-1">Seismic 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#seismic-2">Seismic 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#seismic-3">Seismic 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#seismic-4">Seismic 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#seismic-5">Seismic 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gpr">GPR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#electromagnetics-1">Electromagnetics 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#electromagnetics-2">Electromagnetics 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#electromagnetics-3">Electromagnetics 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dc-resistivity-1">DC Resistivity 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dc-resistivity-2">DC Resistivity 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#induced-polarization">Induced Polarization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#em-wrap-up">EM Wrap Up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#final-lecture">Final Lecture</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Lectures</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/appendix/lectures.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <span class="target" id="lectures"></span><section id="id1">
+<h1>Lectures<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<section id="introduction-to-eosc-350-environmental-geotechnical-and-exploration-geophysics">
+<span id="lecture-0"></span><h2>Introduction to EOSC 350: Environmental, Geotechnical and Exploration Geophysics<a class="headerlink" href="#introduction-to-eosc-350-environmental-geotechnical-and-exploration-geophysics" title="Link to this heading"></a></h2>
+<p><em>September 07, 2016</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://storage.googleapis.com/simpeg/eosc350lectures/a_Intro_350.pdf">Intro 350 lecture slides</a></p></li>
+</ul>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C1U2okdfMbU?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></section>
+<section id="introduction-to-applied-geophysics">
+<span id="lecture-1"></span><h2>Introduction to Applied Geophysics<a class="headerlink" href="#introduction-to-applied-geophysics" title="Link to this heading"></a></h2>
+<p><em>September 09, 2016</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://storage.googleapis.com/simpeg/eosc350lectures/b_Intro_to_applied_geophysics.pdf">Intro to applied geophysics lecture slides</a></p></li>
+</ul>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xw5o3TYYWUE?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></section>
+<section id="magnetics-1">
+<span id="lecture-2"></span><h2>Magnetics 1<a class="headerlink" href="#magnetics-1" title="Link to this heading"></a></h2>
+<p><em>September 14, 2016</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://storage.googleapis.com/simpeg/eosc350lectures/3_Magnetics.pdf">Magnetics lecture slides</a></p></li>
+</ul>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-WeOfAh6Hm8?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></section>
+<section id="magnetics-2">
+<span id="lecture-3"></span><h2>Magnetics 2<a class="headerlink" href="#magnetics-2" title="Link to this heading"></a></h2>
+<p><em>September 16, 2016</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://storage.googleapis.com/simpeg/eosc350lectures/3_Magnetics.pdf">Magnetics lecture slides</a></p></li>
+<li><p><a class="reference external" href="http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Mag/InducedMag2D.ipynb">Jupyter notebook: InducedMag2D.ipynb</a></p></li>
+</ul>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iaF2Fb7WtfM?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></section>
+<section id="magnetics-3">
+<span id="lecture-4"></span><h2>Magnetics 3<a class="headerlink" href="#magnetics-3" title="Link to this heading"></a></h2>
+<p><em>September 19, 2016</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://storage.googleapis.com/simpeg/eosc350lectures/3_Magnetics.pdf">Magnetics lecture slides</a></p></li>
+<li><p><a class="reference external" href="http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Mag/InducedMag2D.ipynb">Jupyter notebook: InducedMag2D.ipynb</a></p></li>
+</ul>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dd7bJ9rhJUE?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></section>
+<section id="magnetics-4">
+<span id="lecture-5"></span><h2>Magnetics 4<a class="headerlink" href="#magnetics-4" title="Link to this heading"></a></h2>
+<p><em>September 21, 2016</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://storage.googleapis.com/simpeg/eosc350lectures/3_Magnetics.pdf">Magnetics lecture slides</a></p></li>
+<li><p><a class="reference external" href="http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Mag/InducedMag2D.ipynb">Jupyter notebook: InducedMag2D.ipynb</a></p></li>
+</ul>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IK7z_-XjN7M?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></section>
+<section id="magnetics-5">
+<span id="lecture-6"></span><h2>Magnetics 5<a class="headerlink" href="#magnetics-5" title="Link to this heading"></a></h2>
+<p><em>September 23, 2016</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://storage.googleapis.com/simpeg/eosc350lectures/3_Magnetics.pdf">Magnetics lecture slides</a></p></li>
+<li><p><a class="reference external" href="http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Mag/InducedMag2D.ipynb">Jupyter notebook: InducedMag2D.ipynb</a></p></li>
+</ul>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CtihJA84qm4?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></section>
+<section id="magnetics-6">
+<span id="lecture-7"></span><h2>Magnetics 6<a class="headerlink" href="#magnetics-6" title="Link to this heading"></a></h2>
+<p><em>September 28, 2016</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://storage.googleapis.com/simpeg/eosc350lectures/3_Magnetics.pdf">Magnetics lecture slides</a></p></li>
+</ul>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cHiPFgc_1DM?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></section>
+<section id="seismic-1">
+<span id="lecture-8"></span><h2>Seismic 1<a class="headerlink" href="#seismic-1" title="Link to this heading"></a></h2>
+<p><em>September 30, 2016</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://storage.googleapis.com/simpeg/eosc350lectures/Seismology.pdf">Seismology lecture slides</a></p></li>
+<li><p><a class="reference external" href="https://mybinder.org/v2/gh/geoscixyz/gpgLabs/main?filepath=notebooks%2Fseismic%2FSeis_Refraction.ipynb">App</a></p></li>
+</ul>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Q_4WzrzU2uM?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></section>
+<section id="seismic-2">
+<span id="lecture-9"></span><h2>Seismic 2<a class="headerlink" href="#seismic-2" title="Link to this heading"></a></h2>
+<p><em>October 03, 2016</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://storage.googleapis.com/simpeg/eosc350lectures/Seismology.pdf">Seismology lecture slides</a></p></li>
+<li><p><a class="reference external" href="https://mybinder.org/v2/gh/geoscixyz/gpgLabs/main?filepath=notebooks%2Fseismic%2FSeis_Refraction.ipynb">App</a></p></li>
+</ul>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ucLEddbzOEc?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></section>
+<section id="seismic-3">
+<span id="lecture-10"></span><h2>Seismic 3<a class="headerlink" href="#seismic-3" title="Link to this heading"></a></h2>
+<p><em>October 05, 2016</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://storage.googleapis.com/simpeg/eosc350lectures/Seismology.pdf">Seismology lecture slides</a></p></li>
+</ul>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NUrUbOjUMq4?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></section>
+<section id="seismic-4">
+<span id="lecture-11"></span><h2>Seismic 4<a class="headerlink" href="#seismic-4" title="Link to this heading"></a></h2>
+<p><em>October 07, 2016</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://storage.googleapis.com/simpeg/eosc350lectures/Seismology.pdf">Seismology lecture slides</a></p></li>
+</ul>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8XhqadeTofg?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></section>
+<section id="seismic-5">
+<span id="lecture-12"></span><h2>Seismic 5<a class="headerlink" href="#seismic-5" title="Link to this heading"></a></h2>
+<p><em>October 12, 2016</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://storage.googleapis.com/simpeg/eosc350lectures/Seismology.pdf">Seismology lecture slides</a></p></li>
+<li><p><a class="reference external" href="http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/Seismic/NMO/SeismicNMOapp.ipynb">Jupyter notebook: SeismicNMOapp.ipynb</a></p></li>
+</ul>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4kLwlwMoPbA?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></section>
+<section id="gpr">
+<span id="lecture-13"></span><h2>GPR<a class="headerlink" href="#gpr" title="Link to this heading"></a></h2>
+<p><em>October 24, 2016</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://storage.googleapis.com/simpeg/eosc350lectures/GPR_2016.pdf">2016 lecture slides</a></p></li>
+</ul>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fIe0iE59yWg?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></section>
+<section id="electromagnetics-1">
+<span id="lecture-14"></span><h2>Electromagnetics 1<a class="headerlink" href="#electromagnetics-1" title="Link to this heading"></a></h2>
+<p><em>November 07, 2016</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://storage.googleapis.com/simpeg/eosc350lectures/5_EM.pdf">EM lecture slides</a></p></li>
+</ul>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cofxA5JGpJg?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></section>
+<section id="electromagnetics-2">
+<span id="lecture-15"></span><h2>Electromagnetics 2<a class="headerlink" href="#electromagnetics-2" title="Link to this heading"></a></h2>
+<p><em>November 09, 2016</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://storage.googleapis.com/simpeg/eosc350lectures/5_EM.pdf">EM lecture slides</a></p></li>
+<li><p><a class="reference external" href="http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/EM/ResponseFct/ResponseFct.ipynb">Jupyter notebook: ResponseFct.ipynb</a></p></li>
+</ul>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2s831k1MLx0?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></section>
+<section id="electromagnetics-3">
+<span id="lecture-16"></span><h2>Electromagnetics 3<a class="headerlink" href="#electromagnetics-3" title="Link to this heading"></a></h2>
+<p><em>November 14, 2016</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://storage.googleapis.com/simpeg/eosc350lectures/5_EM.pdf">EM lecture slides</a></p></li>
+<li><p><a class="reference external" href="http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/EM/ResponseFct/ResponseFct.ipynb">Jupyter notebook: ResponseFct.ipynb</a></p></li>
+</ul>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xWORpeGyhwE?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></section>
+<section id="dc-resistivity-1">
+<span id="lecture-17"></span><h2>DC Resistivity 1<a class="headerlink" href="#dc-resistivity-1" title="Link to this heading"></a></h2>
+<p><em>November 18, 2016</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/DC/DCLab.ipynb">Jupyter notebook: DCLab.ipynb</a></p></li>
+</ul>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ywlpOsYRTww?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></section>
+<section id="dc-resistivity-2">
+<span id="lecture-18"></span><h2>DC Resistivity 2<a class="headerlink" href="#dc-resistivity-2" title="Link to this heading"></a></h2>
+<p><em>November 21, 2016</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://storage.googleapis.com/simpeg/eosc350lectures/9_DC_Resistivity.pdf">DC Resistivity lecture slides</a></p></li>
+<li><p><a class="reference external" href="http://mybinder.org/repo/ubcgif/gpgLabs/notebooks/DC/DCLab.ipynb">Jupyter notebook: DCLab.ipynb</a></p></li>
+</ul>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-0Z_jGz-1T0?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></section>
+<section id="induced-polarization">
+<span id="lecture-19"></span><h2>Induced Polarization<a class="headerlink" href="#induced-polarization" title="Link to this heading"></a></h2>
+<p><em>November 23, 2016</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://storage.googleapis.com/simpeg/eosc350lectures/IP.pdf">IP lecture slides</a></p></li>
+</ul>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hmZGxFYmpm8?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></section>
+<section id="em-wrap-up">
+<span id="lecture-20"></span><h2>EM Wrap Up<a class="headerlink" href="#em-wrap-up" title="Link to this heading"></a></h2>
+<p><em>November 28, 2016</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://storage.googleapis.com/simpeg/eosc350lectures/5_EM.pdf">EM lecture slides</a></p></li>
+</ul>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nmwVFxxizH4?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></section>
+<section id="final-lecture">
+<span id="lecture-21"></span><h2>Final Lecture<a class="headerlink" href="#final-lecture" title="Link to this heading"></a></h2>
+<p><em>December 02, 2016</em></p>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OeJVz4T5gRw?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="apps.html" class="btn btn-neutral float-left" title="Apps" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

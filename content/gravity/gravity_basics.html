@@ -1,0 +1,383 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gravity measurements &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Gravity data: acquisition and reduction" href="gravity_data.html" />
+    <link rel="prev" title="Introduction" href="gravity_introduction.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Gravity</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gravity_introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Gravity measurements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-physical-property-density">The physical property: density</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fundamentals">Fundamentals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#units">Units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#measuring-gravity">Measuring gravity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-actually-measured">What is actually measured?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#factors-affecting-gravity">Factors affecting gravity</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gravity_data.html">Gravity data: acquisition and reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gravity_example.html">Gravity example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gravity_gradients.html">Gravity gradients</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gravity_other_notes.html">Other aspects of gravity surveying</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Gravity</a> &raquo;</li>
+        
+      <li>Gravity measurements</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/gravity/gravity_basics.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="gravity-measurements">
+<span id="gravity-basics"></span><h1>Gravity measurements<a class="headerlink" href="#gravity-measurements" title="Link to this heading"></a></h1>
+<figure class="align-right">
+<img alt="../../_images/gravity_table.gif" src="../../_images/gravity_table.gif" />
+</figure>
+<section id="the-physical-property-density">
+<h2>The physical property: density<a class="headerlink" href="#the-physical-property-density" title="Link to this heading"></a></h2>
+<p>Gravity surveys are usually done to find subsurface variations in density
+(kg/m<sup>3</sup> or g/cm<sup>3</sup>). Densities of geologic materials vary
+from 880 kg/m<sup>3</sup> (ice) (or 0 for air) to over 8000 kg/m<sup>3</sup>for some rare minerals. Rocks are generally between 1600 kg/m<sup>3</sup>(sediments) and 3500 kg/m<sup>3</sup> (gabbro). Table 2.1 from PV Sharma is
+reproduced to the right.</p>
+<p>It is important to recall the difference between mass, density and weight.
+Density is the physical property - it is mass (kilograms) per unit volume.
+Weight is the force experienced by that mass in the presence of a
+gravitational field. Your weight on the Moon is 1/6th of your weight on Earth,
+but your mass (and density) is the same wherever you are.</p>
+</section>
+<section id="fundamentals">
+<h2>Fundamentals<a class="headerlink" href="#fundamentals" title="Link to this heading"></a></h2>
+<p>We want to show that a mass above the earth experiences an attraction force
+due to Earth’s gravitational field. The phenomenon is described with very
+simple equations that were discovered empirically by Sir Isaac Newton in the
+17<sup>th</sup> century.</p>
+<p>Newton’s equation describing the force between two masses (Earth and Moon, or
+Earth and you) is</p>
+<div class="math notranslate nohighlight">
+\[F = G \frac{Mm}{r^2} \qquad \text{(Eq1)}\]</div>
+<p>where the force <span class="math notranslate nohighlight">\(F\)</span> points from one mass to the other, <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(m\)</span>
+are two masses, and <span class="math notranslate nohighlight">\(G=6.67*10^{-11}\)</span> Nm<sup>2</sup>/Kg<sup>2</sup>. You
+should recall that another of Newton’s relations characterizes the force on an
+object experiencing acceleration:</p>
+<div class="math notranslate nohighlight">
+\[F=ma \qquad \text{(Eq2)}\]</div>
+<p>Comparing these two equations, it should be clear that most of Eq1 represents
+an acceleration: <span class="math notranslate nohighlight">\(a = GM/r^2\)</span>. In fact this is gravitational
+acceleration, and we call it <span class="math notranslate nohighlight">\(g\)</span>. This gravitational acceleration <span class="math notranslate nohighlight">\(g\)</span>
+is nominally approximately 9.8 m/s<sup>2</sup> on Earth’s surface at the
+equator. Local variations in <span class="math notranslate nohighlight">\(g\)</span> will be caused by local variations in
+<span class="math notranslate nohighlight">\(M\)</span> and/or in <span class="math notranslate nohighlight">\(r\)</span>.</p>
+</section>
+<section id="units">
+<h2>Units<a class="headerlink" href="#units" title="Link to this heading"></a></h2>
+<p>What are the units for this acceleration, or <span class="math notranslate nohighlight">\(g\)</span>? Acceleration is in m/s<sup>2</sup>, but another name for g = 1 cm/s<sup>2</sup> is 1 Gal (short for
+Galileo). Usually geophysicists work in units of milliGals (0.001 Gal). You
+will also see the “gravity unit,” or <em>gu</em>, where 1 gu = 0.1 mGal. Some
+authors, especially in Europe, use gu’s instead of Gals. Earth’s gravitational
+acceleration in these units (converted from the more common m/s<sup>2</sup>) is
+9.8 m/s<sup>2</sup>= 978 Gal, or 978,031.85 mGal, or 9,780,318.5 gu at the
+equator.</p>
+</section>
+<section id="measuring-gravity">
+<h2>Measuring gravity<a class="headerlink" href="#measuring-gravity" title="Link to this heading"></a></h2>
+<p>Measurable geophysical gravity anomalies generally range between 0.1 and
+0.00001 Gal. This means we must measure accelerations of
+1 part in 10 <sup>8</sup> or 10 <sup>9</sup>; not a trivial task!
+How is this done?</p>
+<p>If a mass hangs on a spring, a force on the mass <span class="math notranslate nohighlight">\((F = ma)\)</span> will stretch
+the spring. Hooke’s law states that the extension of a spring is proportional
+to force, or</p>
+<div class="math notranslate nohighlight">
+\[m(dg)=k(ds)\]</div>
+<p>where <span class="math notranslate nohighlight">\(k\)</span> is the “elastic spring constant,” <span class="math notranslate nohighlight">\(dg\)</span> :math:`` a small
+change in gravitational acceleration, and <span class="math notranslate nohighlight">\(ds\)</span> is a small change in spring
+length. So, if we measure <span class="math notranslate nohighlight">\(ds\)</span>, we can get</p>
+<div class="math notranslate nohighlight">
+\[dg = ds \frac{k}{m}\]</div>
+<p>To summarize:</p>
+<ul class="simple">
+<li><p>The <em>measured</em> parameter is the force on a mass, <span class="math notranslate nohighlight">\(m\)</span>, due to the presence of another mass, <span class="math notranslate nohighlight">\(M\)</span>.</p></li>
+<li><p>The <em>recorded</em> parameter is acceleration, with units of milliGals (compared to m/s<sup>2</sup>).</p></li>
+<li><p>The <em>interpreted</em> parameter is usually density of causative buried materials and structures.</p></li>
+</ul>
+<p>To carry out a gravity survey, you must measure this change in spring length
+all over the field site (or along a line). Then you can produce a map (or
+profile) of relative differences in gravitational acceleration, <span class="math notranslate nohighlight">\(g\)</span>.
+Finally, this result must be interpreted in terms of variations in buried mass
+(integrated all over the volume), and/or in terms of the distance, <span class="math notranslate nohighlight">\(r\)</span>, to
+the buried mass.</p>
+<p>There are other fundamental measurements that do not involve springs. There
+are instruments that measure the time it takes for a mass to fall through a
+vacuum, and the period of a pendulum can be observed carefully. There are more
+details about these less common methods of measuring gravity in most text
+books about applied geophysics.</p>
+</section>
+<section id="what-is-actually-measured">
+<h2>What is actually measured?<a class="headerlink" href="#what-is-actually-measured" title="Link to this heading"></a></h2>
+<figure class="align-right">
+<img alt="../../_images/grav_diag.gif" src="../../_images/grav_diag.gif" />
+</figure>
+<p>Instruments actually measure the vertical component of the gravitational
+effect of the target, <span class="math notranslate nohighlight">\(\Delta g_z\)</span>. However, the formula <span class="math notranslate nohighlight">\(Gm/r^2\)</span>
+gives acceleration experienced in line with two masses, where r is the
+distance between center of masses (sensor and target mass). Since we measure
+<span class="math notranslate nohighlight">\(\Delta g_z\)</span> along the surface over the target, we must resolve this
+geometry. Using the figure to the right, <span class="math notranslate nohighlight">\(\Delta g_z\)</span> at location <span class="math notranslate nohighlight">\((x,0
+,0)\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\Delta g_z = \Delta g_r \cos(\theta) = \Delta g_r \frac{z}{r}\]</div>
+<p>and since</p>
+<div class="math notranslate nohighlight">
+\[\Delta g_r = G \frac{M}{r^2}\]</div>
+<p>then</p>
+<div class="math notranslate nohighlight">
+\[\Delta g_z = G \frac{M}{r^3} = G \frac{Mz}{(x^2+z^2)^{3/2}}\]</div>
+<figure class="align-right">
+<img alt="../../_images/response_cylinder.gif" src="../../_images/response_cylinder.gif" />
+</figure>
+<p>If the mass, <span class="math notranslate nohighlight">\(M\)</span>, is a sphere centered at <span class="math notranslate nohighlight">\((0,0,x)\)</span>, then this
+equation describes the pattern of gravitational acceleration that would be
+measured along a traverse that crosses over the sphere. For a sphere with
+radius, <span class="math notranslate nohighlight">\(R\)</span>, the mass and its density are related according to <span class="math notranslate nohighlight">\(4/3(\pi
+R^3)dρ\)</span> where <span class="math notranslate nohighlight">\(dρ\)</span> is <strong>density contrast</strong>; that is, density of host
+rocks minus the density of anomalous mass.</p>
+<p>This relation (profile) is plotted (figure to the right)
+assuming the survey crosses over a 2D “point” mass - i.e.
+a “line mass,” or horizontal cylinder. The pattern would be similar
+but slightly narrower if the buried feature was a point mass or sphere.</p>
+<ul class="simple">
+<li><p>Note that the “mass” must involve the density <em>contrast</em>. In other words, the difference between host and target densities.</p></li>
+<li><p>An estimate of vertical depth to the center of mass can be obtained by equating amplitude at <span class="math notranslate nohighlight">\(x=0\)</span> to twice the amplitude at <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
+<li><p>The result is a half-width rule giving depth to center of a sphere <span class="math notranslate nohighlight">\(z=1.3 x_{1/2}\)</span>, where <span class="math notranslate nohighlight">\(x_{1/2}\)</span> is half the width of the measured gravity anomaly at half of its maximum amplitude. You can prove this by recognizing that at the maximum amplitude (directly over the sphere), <span class="math notranslate nohighlight">\(x=0\)</span> so <span class="math notranslate nohighlight">\(g_Z=GM/z^2\)</span>. Then <span class="math notranslate nohighlight">\(x\)</span> in terms of <span class="math notranslate nohighlight">\(z\)</span> at the location where <span class="math notranslate nohighlight">\(g_Z\)</span> is half of its maximum amplitude, or</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\frac{GM}{2z^2}=\frac{GMz}{(x^2 + z^2)^{3/2}}\]</div>
+<ul class="simple">
+<li><p>For the infinite horizontal cylinder, the half-width rule is <span class="math notranslate nohighlight">\(z=1.0 x_{1/2}\)</span>, giving depth to the center of the cylinder.</p></li>
+</ul>
+</section>
+<section id="factors-affecting-gravity">
+<h2>Factors affecting gravity<a class="headerlink" href="#factors-affecting-gravity" title="Link to this heading"></a></h2>
+<p>Gravitational acceleration measured at any point depends on five factors, all
+related to either <span class="math notranslate nohighlight">\(M\)</span> or <span class="math notranslate nohighlight">\(r\)</span> or both (in Eq2 above). The effects are
+as follows, and corrections for these effects must be applied to data sets.
+The section on data reduction explains further.</p>
+<ol class="arabic simple">
+<li><p><strong>Latitude</strong>: From equator to pole, gravity varies by roughly 5000 mGal
+(greater at poles). The gradient (i.e. rate of change with respect to
+latitude) is maximum at 45° latitude, where it is about 0.8 mGal/km.</p></li>
+<li><p><strong>Elevation</strong>: The effect of changing the elevation (changing the <span class="math notranslate nohighlight">\(r\)</span>
+of Eq2) of a measurement is quite significant. For modern instruments, a
+change of only a few centimeters can be detected, and between sea level
+and the top of Mt. Everest, the difference is roughly 2000 mGal.</p></li>
+<li><p><strong>Slab effect</strong>: Going up in elevation rarely means up into air (except for
+airborne surveys). If we are “up,” there are rocks and soils between us
+and where we were. The attraction of these materials counteracts the
+effect of going up in elevation. Therefore, the elevation correction is
+counteracted by subtracting a factor of <span class="math notranslate nohighlight">\(0.0419 \times h \times d\)</span>
+mGal, where h is elevation in metres, <span class="math notranslate nohighlight">\(d\)</span> is density of intervening
+materials in g/cc. This is called the <em>Bouguer correction</em>.</p></li>
+<li><p><strong>Topography</strong>: Effects due to nearby topographic relief (hills or valleys)
+may be significant, but are rarely more than 1.0 mGal. These effects are
+rather tedious to apply, but are important when there is steep topography
+near the measurement locations.</p></li>
+<li><p><strong>Earth tides</strong>: Tidal effects are as much as 0.3 mGal, and these are
+usually accounted for by recording several measurements at a single
+station (a base station) throughout the course of a survey.</p></li>
+<li><p><strong>Lateral density variations</strong>: Large scale structural anomalies (basin and
+range geology) may be 100 - 500 mGal. Good targets for oil exploration (a
+salt dome) may be ~ 10 mGal. In mineral exploration, ore bodies may cause
+anomalies of around 1 mGal. A geotechnical application may involve
+anomalies of 20 microGal.</p></li>
+<li><p><strong>Effects of a moving platform</strong>: If the instrument is in motion while a
+measurement is made, the acceleration caused by motion on a rotating
+sphere must be accounted for. These contributions to measured
+acceleration can be very large, especially in aircraft. Even the slight
+rotational motion of a ship resting on a sea with mild swells will have
+significant effects on measurements.</p></li>
+</ol>
+<p>As noted above, all data sets must be corrected for these effects, and this is
+discussed in a later section.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="gravity_introduction.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="gravity_data.html" class="btn btn-neutral float-right" title="Gravity data: acquisition and reduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

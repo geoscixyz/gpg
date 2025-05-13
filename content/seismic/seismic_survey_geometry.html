@@ -1,0 +1,328 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Survey geometry &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Data" href="seismic_data.html" />
+    <link rel="prev" title="Receivers" href="seismic_receivers.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Seismic</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="elastic_properties.html">Elastic Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_principles.html">Basic principles</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="seismic_survey.html">Survey</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="seismic_sources.html">Sources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seismic_receivers.html">Receivers</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Survey geometry</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#multichannel-data-collection">Multichannel data collection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#common-midpoints-cmp">Common MidPoints (CMP)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#refraction-surveys">Refraction surveys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reflection-surveys">Reflection surveys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fold">Fold</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_data.html">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_processing.html">Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_interpretation.html">Interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MASW.html">MASW</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_apps.html">Seismic apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Seismic</a> &raquo;</li>
+        
+          <li><a href="seismic_survey.html">Survey</a> &raquo;</li>
+        
+      <li>Survey geometry</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/seismic/seismic_survey_geometry.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <span class="target" id="seismic-survey-design"></span><section id="survey-geometry">
+<h1>Survey geometry<a class="headerlink" href="#survey-geometry" title="Link to this heading"></a></h1>
+<section id="multichannel-data-collection">
+<h2>Multichannel data collection<a class="headerlink" href="#multichannel-data-collection" title="Link to this heading"></a></h2>
+<p>First consider the source-receiver geometry. The geometry can be “split
+spread” in which case there is a central shot with receivers on both sides, or
+a “single-ended spread” in which the receivers are always on one side of the
+source. Split spreads are common in land surveys; single-ended spreads are
+common in marine surveys.</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/split_and_single_spread.gif"><img alt="../../_images/split_and_single_spread.gif" src="../../_images/split_and_single_spread.gif" style="width: 440.00000000000006px; height: 304.70000000000005px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 70 </span><span class="caption-text">Shot-detector configurations used in multichannel seismic reflection
+profiling .(a) Split spread, or straddle spread. (b) Single-ended spread
+<a class="footnote-reference brackets" href="#f1" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/shot_gather_split_spread.gif"><img alt="../../_images/shot_gather_split_spread.gif" src="../../_images/shot_gather_split_spread.gif" style="width: 200.0px; height: 450.0px;" />
+</a>
+</figure>
+<p>A split spread seismic record is shown above. The seismic traces all belong to
+a single source and hence this is referred to as a “Common Source Gather”. The
+first arrivals are direct or critically refracted arrivals. Reflection
+hyperbolae from numerous boundaries are observed, right. The strong energy in
+the triangular central portion is ground roll caused by surface waves. It
+masks the reflection events.</p>
+</section>
+<section id="common-midpoints-cmp">
+<h2>Common MidPoints (CMP)<a class="headerlink" href="#common-midpoints-cmp" title="Link to this heading"></a></h2>
+<p>Multiple shots and receivers are used in seismic profiling
+specifically so that some subsurface points are sampled more than once.
+Ultimately the goal is to identify all the reflections due to that point on
+the various seismograms and stack these to get an enhanced signal to noise
+ratio. The idea is illustrated on the upper figure.</p>
+<p>The collection of seismic traces that correspond to a particular midpoint is
+called a Common Midpoint (CMP) gather. In older literature, this collection of
+traces was referred to as a Common Depth Point (CDP) gather. That is not
+strictly correct, as the bottom diagram illustrates.</p>
+<blockquote>
+<div><figure class="align-center" id="id4">
+<img alt="../../_images/common_reflection_pt1.gif" src="../../_images/common_reflection_pt1.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 71 </span><span class="caption-text">A series of six shots and associated receivers that would have
+reflections from a common point. When the layers are plane and horizontal
+then this common reflection point lies midway between the source and
+receiver</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id5">
+<img alt="../../_images/common_reflection_pt2.gif" src="../../_images/common_reflection_pt2.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 72 </span><span class="caption-text">Common depth point (CDP) reflection profiling. <a class="footnote-reference brackets" href="#f1" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>  (a) A set of rays
+from different shots to detectors are reflected off a common point on a
+horizontal reflector. (b) The common depth point is not achieved in the
+case of a dipping  reflector.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</section>
+<section id="refraction-surveys">
+<h2>Refraction surveys<a class="headerlink" href="#refraction-surveys" title="Link to this heading"></a></h2>
+<p>Seismic refraction is most useful when the velocity of seismic
+signals in each layer increases with depth. Therefore, where higher velocity
+(e.g. clay) layers may overlie lower velocity (e.g. sand or gravel) layers,
+seismic refraction may yield incorrect results. In addition, seismic
+refraction requires geophone arrays with lengths of approximately 4 to 5 times
+the depth to the layer of interest (for example the top of bedrock). Therefore
+seismic refraction is commonly limited to mapping layers to depths less than
+30-50 meters. Greater depths are possible, but the required array lengths may
+exceed site dimensions, and the shot energy required to transmit seismic
+arrivals for the required distances may necessitate the use of large explosive
+charges.</p>
+</section>
+<section id="reflection-surveys">
+<h2>Reflection surveys<a class="headerlink" href="#reflection-surveys" title="Link to this heading"></a></h2>
+<p>By contrast, reflection surveys are not hampered by low velocity layers but they have difficulty imaging the top 50m of the earth because reflections from such shallow depth are difficult to distinguish from direct arrivals and sound waves travelling through the air. In general, identifying a reflection event in a seismic record is more difficult than picking first arrivals for a refraction survey. Much signal processing is typically involved. In order to improve the ability to detect and image a given reflection event geophysicists typically design reflection surveys to detect a reflection from a particular point in the subsurface multiple times.</p>
+</section>
+<section id="fold">
+<h2>Fold<a class="headerlink" href="#fold" title="Link to this heading"></a></h2>
+<p>The fold refers to the number of times a particular subsurface point has been
+sampled. It is equal to the number of traces in the CMP gather and is
+numerically evaluated by</p>
+<div class="math notranslate nohighlight">
+\[fold = \frac{N (number\;of\;geophones)}{2n}\]</div>
+<p>where <span class="math notranslate nohighlight">\(n\)</span> is the moveup rate in units of geophone spacing. “Moveup rate”
+is in fact (shot spacing)/(geophone spacing). For example, if geophones are 2
+meters apart and shots are employed every 4 meters, then the moveup rate is
+n=4/2=2. This can be less than one if there are shots set more often than
+geophone spacing, a practice that is sometimes done in marine seismology,
+especially ocean bottom profiling.</p>
+<p>The schematic below shows a single ended spread with 8 geophones and moveup
+rate of n=2.</p>
+<figure class="align-center">
+<img alt="../../_images/fold.gif" src="../../_images/fold.gif" />
+</figure>
+<p>We see that each point in the subsurface is sampled only twice. Notice that
+the distance between the reflection points in the subsurface is half the
+geophone spacing.</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="f1" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>)</span>
+<p>From Kearey, Philip and Micheal Brooks, ‘<em>An Introduction to Geophysical Exploration</em>’. 2nd ed. Blackwell Science: 1991.</p>
+</aside>
+</aside>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="seismic_receivers.html" class="btn btn-neutral float-left" title="Receivers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="seismic_data.html" class="btn btn-neutral float-right" title="Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

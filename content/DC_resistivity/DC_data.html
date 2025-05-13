@@ -1,0 +1,544 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Interpretation" href="DC_interpretation.html" />
+    <link rel="prev" title="Surveys" href="DC_surveys.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">DC Resistivity</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DC_physical_properties.html">Conductivity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DC_basic_principles_index.html">Basic principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DC_surveys.html">Surveys</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#apparent-resistivity">Apparent resistivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plotting-raw-data">Plotting raw data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#soundings">Soundings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#profiling">Profiling</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#processing-options">Processing options</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DC_interpretation.html">Interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DC_instruments.html">DC resistivity instruments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DC_examples.html">Case Histories</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">DC Resistivity</a> &raquo;</li>
+        
+      <li>Data</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/DC_resistivity/DC_data.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data">
+<span id="dc-data"></span><h1>Data<a class="headerlink" href="#data" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>For DC resistivity surveys, the energy source is a generator which injects a
+constant current into the ground using two electrodes. The “signals out”
+(data) are voltages measured at various places on the surface, along with
+strength of the known current source (in Amperes) and details about relative
+geometry of the four electrodes.</p>
+<p>In order to create maps or graphs of raw data for quality assessment or for
+direct interpretations, measurements are converted into a form that is related
+to the relevant physical property. For each measurement, a 3D version of Ohm’s
+Law is used to generate a datum with units of resistivity (or conductivity).
+These transformed data are called <strong>apparent resistivities</strong> because they
+represent the earth’s true resistivity only if the ground is uniform. When
+subsurface resistivity varies, interpretation must be based upon the way in
+which apparent resistivity varies as a function of electrode geometry and
+position. The commonly used survey procedures are explained later on this
+page, after discussions about current flow, sources, measurements, and
+conversion to apparent resistivities.</p>
+</section>
+<section id="apparent-resistivity">
+<h2>Apparent resistivity<a class="headerlink" href="#apparent-resistivity" title="Link to this heading"></a></h2>
+<p>If there are two current (source) electrodes, the potential is the
+superposition of the effects from both. In a practical experiment (figure
+below), one electrode, <span class="math notranslate nohighlight">\(A\)</span>, is the positive side of a current source, and
+the other electrode, <span class="math notranslate nohighlight">\(B\)</span>, is the negative side. The current into each
+electrode is equal, but of opposite sign. For a practical survey, we need two
+electrodes to measure a potential difference. These are <span class="math notranslate nohighlight">\(M\)</span>, the positive
+terminal of the voltmeter (the one closest to the <span class="math notranslate nohighlight">\(A\)</span> current electrode),
+and <span class="math notranslate nohighlight">\(N\)</span>, the negative terminal of the voltmeter.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/practical_experiment.gif"><img alt="../../_images/practical_experiment.gif" src="../../_images/practical_experiment.gif" style="width: 300.0px; height: 127.0px;" />
+</a>
+</figure>
+<p>The measured voltage is a potential difference <span class="math notranslate nohighlight">\((V_M - V_N)\)</span> in which each
+potential is the superposition of the effects from both current sources:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Delta V &amp;= V_M - V_N \textrm{, with} \\[0.8em]
+V_M &amp;= \frac{I \rho}{2 \pi} \left \{ \frac{1}{r_{AM}}  -  \frac{1}{r_{BM}} \right \} \textrm{ and}  \\[0.8em]
+V_N &amp;= \frac{I \rho}{2 \pi} \left \{ \frac{1}{r_{AN}}  -  \frac{1}{r_{BN}} \right \} \textrm{, so} \\[0.8em]
+\Delta V &amp;= \frac{I \rho}{2 \pi} \left \{ \frac{1}{r_{AM}} - \frac{1}{r_{BM}} - \frac{1}{r_{AN}} + \frac{1}{r_{BN}}      \right \}\\[0.8em]
+\Delta V &amp;=I \rho G\end{split}\]</div>
+<p>In the final relation, <span class="math notranslate nohighlight">\(G\)</span> is a geometric factor which depends upon the
+geometry of all four electrodes. Finally, we can define apparent resistivity
+(discussed in the measurements section) by rearranging the last expression to
+give:</p>
+<div class="math notranslate nohighlight">
+\[\rho_a = \frac{\Delta V}{IG}\]</div>
+<p>Similarly, the apparent conductivity is</p>
+<div class="math notranslate nohighlight">
+\[\sigma_a = \frac{1}{\rho_a} = \frac{IG}{\Delta V}\]</div>
+<p>We use the term <em>apparent resistivity</em> <span class="math notranslate nohighlight">\(\rho_{a}\)</span> because it is the true resistivity
+of materials only if the Earth is a uniform halfspace within range of the
+survey. Otherwise, this number represents some complicated averaging of the
+resistivities of all materials encountered by the current field.</p>
+<p>For any survey we can compute the apparent resistivity if measured voltage,
+<span class="math notranslate nohighlight">\(I\)</span>, and the geometric factor, <span class="math notranslate nohighlight">\(G\)</span> are known. Sometimes there is a
+simple expression for <span class="math notranslate nohighlight">\(G\)</span>. For example, if electrodes are spaced equally
+by a distance <span class="math notranslate nohighlight">\(a\)</span>, then:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[G = \frac{ \frac{1}{a} - \frac{1}{2a}    - \frac{1}{2a} + \frac{1}{a} }{2 \pi}  = \frac{1}{2 \pi a}\]</div>
+</div></blockquote>
+<p>This is the case for the “Wenner” array shown in <a class="reference internal" href="#survey-configuration"><span class="std std-numref">Fig. 176</span></a>, which summarizes
+the geometric factor for a variety of common electrode configurations. Note
+that in this figure, <span class="math notranslate nohighlight">\(k=1/G\)</span> . Usage of the various arrays is illustrated
+in the next section.</p>
+<figure class="align-center" id="survey-configuration">
+<a class="reference internal image-reference" href="../../_images/figure6.gif"><img alt="../../_images/figure6.gif" src="../../_images/figure6.gif" style="width: 500.0px; height: 390.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 176 </span><span class="caption-text">Survey configurations for DC resistivity surveying.</span><a class="headerlink" href="#survey-configuration" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="plotting-raw-data">
+<h2>Plotting raw data<a class="headerlink" href="#plotting-raw-data" title="Link to this heading"></a></h2>
+<p>How are apparent resistivities (calculated from measured potentials, currents
+and geometries) displayed for direct interpretation or for quality assessment?
+There is one conventional plotting scheme for soundings, while plotting of
+profiles depends upon the survey configuration.</p>
+<section id="soundings">
+<h3>Soundings<a class="headerlink" href="#soundings" title="Link to this heading"></a></h3>
+<p>Soundings are used when the earth’s electrical structure needs to be
+interpreted in terms of layers under a single location at the surface. The
+electrode spacings are varied symmetrically about a central location.</p>
+<script language="JavaScript" type="text/JavaScript">
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+MM_preloadImages('./../../_images/t1.gif','./../../_images/t2.gif','./../../_images/t3.gif','./../../_images/t4.gif','./../../_images/t5.gif','./../../_images/t6.gif','./../../_images/t7.gif','./../../_images/t8.gif','./../../_images/t9.gif','./../../_images/t10.gif','./../../_images/t11.gif','./../../_images/t12.gif','./../../_images/t13.gif','./../../_images/shell.gif','./../../_images/s1.gif','./../../_images/s2.gif','./../../_images/s3.gif','./../../_images/s4.gif','./../../_images/s5.gif','./../../_images/s6.gif','./../../_images/s7.gif','./../../_images/s8.gif','./../../_images/s9.gif','./../../_images/s10.gif','./../../_images/s11.gif','./../../_images/s12.gif','./../../_images/s13.gif','./../../_images/s14.gif','./../../_images/s15.gif','./../../_images/s16.gif','./../../_images/e1.gif','./../../_images/e2.gif','./../../_images/e3.gif','./../../_images/e4.gif','./../../_images/e5.gif','./../../_images/e6.gif','./../../_images/e7.gif','./../../_images/e8.gif','./../../_images/e9.gif','./../../_images/e10.gif','./../../_images/e11.gif','./../../_images/e12.gif','./../../_images/e13.gif','./../../_images/e14.gif','./../../_images/e15.gif','./../../_images/e16.gif');
+  </script>
+
+
+        <table border="0" cellpadding="1" cellspacing="0" width="100%"> 
+          <tbody> 
+            <tr valign="top"> 
+              <td colspan="2" valign="top"> <div class="caption"> 
+                Figure 8. 
+                Therefore, data must be plotted as a function of electrode spacing rather than as a function of location. The resulting plot is called a sounding curve, and it arises as shown in this interactive figure (Figure 8). Only current electrodes are shown. Potentials would be measured inside current electrodes using either the Wenner or Schulmberger configurations.
+              </div></td> 
+            </tr>
+            <tr>
+              <td valign="top" style="width:50%;">
+                  <table align="center" border="1" cellpadding="2" cellspacing="0" width="100%"> 
+                      <tbody>
+                        <tr valign="top"> 
+                          <td>
+                            <br>
+                            <input name="radiobutton" value="radiobutton" checked="checked" onclick="MM_swapImage('sounding','','./../../_images/surv1.gif',1)" type="radio">At small electrode spacings current flows only in near-surface regions. Apparent resistivities look similar to the true resistivity of overburden.<br><br>
+                            <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('sounding','','./../../_images/surv2.gif',1)" type="radio">
+                            As current flows deeper, apparent resistivities are influenced by the true resistivities of deeper materials.<br><br>
+                            <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('sounding','','./../../_images/surv3.gif',1)" type="radio">
+                            The sounding curve begins to indicate that there are at least 2 layers under this location.<br><br>
+                            <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('sounding','','./../../_images/surv4.gif',1)" type="radio">
+                            At very large electrode spacings most of the information reflects deeper ground because that is where most of the current is flowing.<br><br>
+                            <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('sounding','','./../../_images/surv5.gif',1)" type="radio"> 
+                            The completed sounding curve. <br><br> 
+                          </td>
+     <!--            </form>  -->
+              <td style="width:50%;"><img src="./../../_images/surv1.gif" name="sounding" height="342" width="100%"><br></td>
+            </tr> 
+          </tbody> 
+        </table><br>
+</section>
+<section id="profiling">
+<h3>Profiling<a class="headerlink" href="#profiling" title="Link to this heading"></a></h3>
+<blockquote>
+<div><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Pseudo_PDP_East.gif"><img alt="../../_images/Pseudo_PDP_East.gif" src="../../_images/Pseudo_PDP_East.gif" style="width: 900.0px; height: 400.0px;" />
+</a>
+</figure>
+</div></blockquote>
+<p>Simple profiling involves moving a fixed array of four electrodes along a
+survey line. If there are no changes of spacing, then a simple graph of
+apparent resistivity versus line position would be adequate. A contour plot
+could be created if there is suitable coverage of the area.</p>
+<p><strong>Pseudosections:</strong> When profiling, potentials are usually measured at several
+positions for every current source location. Results at wider separations
+between the potential pair and the transmitter pair provide some information
+about deeper structures. The conventional method of plotting such results is
+the pseudosection, so called because it is not a true geological cross-
+section. Values of apparent resistivity are plotted on the graph as shown in
+Figures 9 and 10. The vertical axis represents separation distance, NOT
+depth. When all values are plotted, the result is contoured. Interpretation
+is tricky and requires some experience.</p>
+<blockquote>
+<div><figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/figure9.gif"><img alt="../../_images/figure9.gif" src="../../_images/figure9.gif" style="width: 500.0px; height: 145.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 177 </span><span class="caption-text">Figure 9. Plotting a pseudosection of dipole-dipole data: current
+electrodes are spaced a meters apart (same for potential electrodes), and
+current-voltage separation is n×a meters (n is an integer).</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p>In the animation in Figure 10, the process of gathering and plotting profiling
+data is illustrated. The survey illustrated involves a dipole-dipole array
+with <span class="math notranslate nohighlight">\(a = 2\)</span> meters, and <span class="math notranslate nohighlight">\(n = 4\)</span>.</p>
+<blockquote>
+<div><script language="JavaScript" type="text/JavaScript">
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+
+MM_preloadImages('./../../_images/t1.gif','./../../_images/t2.gif','./../../_images/t3.gif','./../../_images/t4.gif','./../../_images/t5.gif','./../../_images/t6.gif','./../../_images/t7.gif','./../../_images/t8.gif','./../../_images/t9.gif','./../../_images/t10.gif','./../../_images/t11.gif','./../../_images/t12.gif','./../../_images/t13.gif','./../../_images/shell.gif','./../../_images/s1.gif','./../../_images/s2.gif','./../../_images/s3.gif','./../../_images/s4.gif','./../../_images/s5.gif','./../../_images/s6.gif','./../../_images/s7.gif','./../../_images/s8.gif','./../../_images/s9.gif','./../../_images/s10.gif','./../../_images/s11.gif','./../../_images/s12.gif','./../../_images/s13.gif','./../../_images/s14.gif','./../../_images/s15.gif','./../../_images/s16.gif','./../../_images/e1.gif','./../../_images/e2.gif','./../../_images/e3.gif','./../../_images/e4.gif','./../../_images/e5.gif','./../../_images/e6.gif','./../../_images/e7.gif','./../../_images/e8.gif','./../../_images/e9.gif','./../../_images/e10.gif','./../../_images/e11.gif','./../../_images/e12.gif','./../../_images/e13.gif','./../../_images/e14.gif','./../../_images/e15.gif','./../../_images/e16.gif')
+</script>
+
+
+            <table align="center" cellpadding="4" cellspacing="0" width="100%">
+              <tbody>
+                <tr>
+                  <td colspan="2" valign="top"><div class="caption">
+                  Figure 10. For each measurement, notice the positions of
+                  current electrodes (left pair) and potential electrodes
+                  (right pair). Vertical axis of the plotted data is NOT
+                  depth; it is the value <i>n</i>, from 1 to 4 in this case.
+                  <br></div></td>
+                </tr>
+                <tr>
+                  <td valign="top" style="width:30%;">
+                    <table align="left" border="1" cellpadding="1" cellspacing="0" width="100%">
+                      <tbody>
+                        <tr valign="top">
+                          <td>
+                            <br>
+                            <input name="radiobutton" value="radiobutton" checked="checked" onclick="MM_swapImage('pseudoanim','','./../../_images/lawn-ps.gif',1)" type="radio">
+                            Display the finished contoured pseudosection.<br>
+                            <input name="radiobutton" value="radiobutton" checked="checked"  onclick="MM_swapImage('pseudoanim','','./../../_images/pseudo-anim.gif',1)" checked="checked" type="radio">
+                            Return to the animation. <br>
+                          </td>
+                  </td>
+                  <td style="width:70%;">
+                    <img src="./../../_images/pseudo-anim.gif" name="pseudoanim" alt="profiling concepts" border="0" height="412" width="100%" vertical-align="text-center"><br>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+</div></blockquote>
+<p><strong>Gradient array:</strong> Large scale reconnaissance surveys are sometimes done using
+the gradient array (Figure 7e above). If the current sources are not moved,
+then the energizing field is the same for all measurements. There is,
+therefore, no inherent information about variations with depth, just like
+the case of gravity and magnetic surveys. Gradient array surveys are often
+displayed simply by contour plotting the results.</p>
+<p><strong>Real Sections:</strong> There is one variation of the gradient array that provides
+limited information about structures at depth. It is run under the trade
+name “real-section,” but the plot is still a “pseudosection” because
+apparent resistivity data are plotted with no attempt to convert apparent
+(measured) resistivities into true (intrinsic) resistivities. In the
+following figures, red electrodes are the current source, and blue
+electrodes are the potential measurement electrodes. A row of potential
+measurements at fixed “a” spacing is gathered for each pair of current
+electrode placements. This is basically a set of seven (in this case)
+gradient surveys along the same line. At four stages in acquisition, the
+data look like the following:</p>
+<blockquote>
+<div><script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+MM_preloadImages('./../../_images/l50-ip3.gif','./../../_images/l50-ip-10.gif','./../../_images/l50-ip-13.gif','./../../_images/l50-ip-00.gif');
+</script> 
+     
+	 <table border="0" cellpadding="1" cellspacing="0" width="100%"> 
+          <tbody> 
+            <tr valign="top"> 
+              <td colspan="2" valign="top"><div class="caption">Figure 11. Although the result is not a "real" section at all, data can be inverted as for any other pseudosection to provide a more legitimate estimate of the true Earth resistivity structure. This example shows data gathered over the San Nicolas deposit in Mexico.<br></div></td>
+            </tr>
+            <tr>
+              <td valign="top" style="width:30%;">
+                <!-- <form name="form3" method="post" action="">  -->
+                <table align="left" border="1" cellpadding="1" cellspacing="0" width="100%"> 
+                      <tbody>
+                        <tr valign="top">
+                          <td>
+                  <input name="radiobutton" value="radiobutton" checked="checked" onclick="MM_swapImage('realsect','','./../../_images/l50-ip3.gif',1)" type="radio"> 
+                  After several measurements at one current source spacing.<br> 
+                  <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('realsect','','./../../_images/l50-ip-10.gif',1)" type="radio"> 
+                  After changing to narrower current spacing and re-doing potential measurements.<br> 
+                  <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('realsect','','./../../_images/l50-ip-13.gif',1)" type="radio"> 
+                  Over halfway completed.<br> 
+                  <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('realsect','','./../../_images/l50-ip-00.gif',1)" type="radio"> 
+                  The completed "real-section" pseudosection.<br>
+                </td> 
+                </td>
+              <td style="width:70%;"><img src="./../../_images/l50-ip3.gif" name="realsect" height="312" width="120%"> </td> 
+            </tr> 
+          </tbody> 
+      </table><br>
+</div></blockquote>
+<p><strong>Choice of array:</strong> Does the choice of array type matter for profiling?
+Appendix II has a brief comparison of pseudosections and the results of
+inverting data gathered using the arrays.</p>
+</section>
+</section>
+<section id="processing-options">
+<h2>Processing options<a class="headerlink" href="#processing-options" title="Link to this heading"></a></h2>
+<p>Very little processing is applied to most raw resistivity data, other than to
+convert from apparent resistivities to potentials if that is needed for input
+to inversion programs. This is accomplished by using the apparent resistivity
+formula for the array in use, and the known geometric factor. If the current,
+<span class="math notranslate nohighlight">\(I\)</span>, is taken to be 1 (even if it was not 1 Amp in the field), then the
+result is a normalized potential in units of volts.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DC_surveys.html" class="btn btn-neutral float-left" title="Surveys" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DC_interpretation.html" class="btn btn-neutral float-right" title="Interpretation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

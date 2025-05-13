@@ -1,0 +1,345 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chargeability &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Basic principles" href="induced_polarization_basic_principles.html" />
+    <link rel="prev" title="Introduction" href="induced_polarization_introduction.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Induced Polarization</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="induced_polarization_introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Chargeability</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#chargeabilities-of-common-rocks">Chargeabilities of Common Rocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#factors-impacting-chargeability">Factors Impacting Chargeability</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="induced_polarization_basic_principles.html">Basic principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="induced_polarization_survey.html">Survey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="induced_polarization_data.html">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="induced_polarization_interpretation.html">Interpretation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Induced Polarization</a> &raquo;</li>
+        
+      <li>Chargeability</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/induced_polarization/induced_polarization_physical_properties.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="chargeability">
+<span id="induced-polarization-physical-properties"></span><h1>Chargeability<a class="headerlink" href="#chargeability" title="Link to this heading"></a></h1>
+<p>Chargeability is a physical property related to conductivity. As we learned
+previously, ionic charges within a rock’s pore water begin to move under the
+influence of an electric field, resulting in electrical current. However, some
+of the pore ions do not move uninhibited through the rock and begin to
+accumulate at impermeable boundaries. This build-up of ionic charges is
+commonly referred to as induced polarization (IP), as it is responsible for
+generating electric dipole moments within the rock. We use chargeability to
+characterize the formation and strength of the induced polarization within a
+rock, under the influence of an electric field.</p>
+<p>The physical explanation for causes of chargeabilty are complex and not
+completely understood. Certainly the effects are dependent upon the
+microscopic nature the material and specifically upon the surface to
+volume ratio of pore material and the types of fluids in the rock. The
+two images below offer some insight into the complexity.</p>
+<blockquote>
+<div><figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/illite.gif"><img alt="../../_images/illite.gif" src="../../_images/illite.gif" style="width: 360.0px; height: 240.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 187 </span><span class="caption-text">Illite (a clay mineral) with surface area-to-volume ratio of <span class="math notranslate nohighlight">\(100m^2/g\)</span> (1000 times greater than sandstone)</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/quartz.gif"><img alt="../../_images/quartz.gif" src="../../_images/quartz.gif" style="width: 360.0px; height: 240.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 188 </span><span class="caption-text">Quartz overgrowths in sandstone with surface area-to-volume ratio of <span class="math notranslate nohighlight">\(0.1m^2/g\)</span></span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p>Despite the complexity are two primary phenomenological mechanisms which are
+insightful in characterizing the chargeable
+behaviour of rocks: membrane polarization and electrode polarization.</p>
+<p><strong>Membrane Polarization</strong></p>
+<p>Membrane polarization occurs when the pore space narrows to a within several
+ion widths.</p>
+<blockquote>
+<div><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/memb1.gif"><img alt="../../_images/memb1.gif" src="../../_images/memb1.gif" style="width: 272.0px; height: 132.0px;" />
+</a>
+</figure>
+</div></blockquote>
+<p>Because ionic charges cannot be forced through the pore throat, they
+accumulate on either side when an electric field is applied; with positive
+charges accumulating on one side of the pore throat and negative charges
+accumulating on the other. The accumulation of charges eventually stops
+because the electric fields from the blocked charges becomes large enough
+that it prevents other ions of the same sign from joining the group.</p>
+<blockquote>
+<div><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/memb2.gif"><img alt="../../_images/memb2.gif" src="../../_images/memb2.gif" style="width: 270.0px; height: 125.0px;" />
+</a>
+</figure>
+</div></blockquote>
+<p>The net separation of positive and negative charges across narrow pore spaces
+generates a set of electric dipole moments which is ultimately responsible for
+the voltages measured in induced polarization survey.</p>
+<blockquote>
+<div><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/memb3.gif"><img alt="../../_images/memb3.gif" src="../../_images/memb3.gif" style="width: 270.0px; height: 125.0px;" />
+</a>
+</figure>
+</div></blockquote>
+<p><strong>Electrode Polarization</strong></p>
+<p>Electrode polarization occurs when the pore space is blocked by metallic
+particles. When an electric field is applied, the metallic particles become
+electrically charged and attract nearby ions.</p>
+<blockquote>
+<div><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/elec_pol_1.gif"><img alt="../../_images/elec_pol_1.gif" src="../../_images/elec_pol_1.gif" style="width: 274.0px; height: 181.0px;" />
+</a>
+</figure>
+</div></blockquote>
+<p>The attraction of the ions to the surface forms a primary layer of fixed ionic
+charges, followed by a secondary diffuse layer of opposing charges. This is
+known as an electric double layer.</p>
+<blockquote>
+<div><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/elec_pol_3.gif"><img alt="../../_images/elec_pol_3.gif" src="../../_images/elec_pol_3.gif" style="width: 211.0px; height: 170.0px;" />
+</a>
+</figure>
+</div></blockquote>
+<p>Each electric double layer results in an electric dipole moment which
+contributes towards the induced polarization within the rock.</p>
+<blockquote>
+<div><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/elec_pol_2.gif"><img alt="../../_images/elec_pol_2.gif" src="../../_images/elec_pol_2.gif" style="width: 272.0px; height: 128.0px;" />
+</a>
+</figure>
+</div></blockquote>
+<section id="chargeabilities-of-common-rocks">
+<h2>Chargeabilities of Common Rocks<a class="headerlink" href="#chargeabilities-of-common-rocks" title="Link to this heading"></a></h2>
+<p>Tables (from Telford et al, 1976) provide a very general guide to the
+integrated chargeabilities of materials. Because different intervals of
+integration <span class="math notranslate nohighlight">\([t_1,t_2]\)</span> are used for each table, chargeability values
+cannot be compared between tables. However, we can infer several things from
+these tables:</p>
+<ul class="simple">
+<li><p>The individual properties of rocks results in a variation in chargeability (click <a class="reference internal" href="../physical_properties/tables/chargeability_sulphide_rocks.html#table-chargeability-rocks"><span class="std std-ref">here</span></a> for table).</p></li>
+<li><p>Chargeability increases as the % abundance of sulphide minerals increases (click <a class="reference internal" href="../physical_properties/tables/chargeability_sulphide_percent.html#table-chargeability-sulphide"><span class="std std-ref">here</span></a> for table).</p></li>
+<li><p>Highly porous rocks such as extrusive volcanics and sandstones are more chargeable than hard rocks such as granites and limestones (click <a class="reference internal" href="../physical_properties/tables/chargeability_sulphide_percent.html#table-chargeability-sulphide"><span class="std std-ref">here</span></a> for table).</p></li>
+<li><p>The type of ore-mineralization impacts the chargeability of rocks to varying degrees (click <a class="reference internal" href="../physical_properties/tables/chargeability_sulphide_minerals.html#table-chargeability-minerals"><span class="std std-ref">here</span></a> for table).</p></li>
+</ul>
+</section>
+<section id="factors-impacting-chargeability">
+<h2>Factors Impacting Chargeability<a class="headerlink" href="#factors-impacting-chargeability" title="Link to this heading"></a></h2>
+<p><strong>Sulphide Mineralization:</strong></p>
+<p>As we discussed earlier, electrode polarization occurs when the pore path is blocked by metallic particles.
+A major source of these metallic particles is sulphide mineralization.
+As the abundance of sulphide minerals within a rock increases, so does the electrode polarization.
+Therefore, highly mineralized rock tend to be very chargeable.</p>
+<p><strong>Clays:</strong></p>
+<blockquote>
+<div><figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/memb_pol_2nd_type.gif"><img alt="../../_images/memb_pol_2nd_type.gif" src="../../_images/memb_pol_2nd_type.gif" style="width: 350.0px; height: 288.0px;" />
+</a>
+</figure>
+</div></blockquote>
+<p>Clays have a tendancy to partially block the path which ions take through the rock’s pore water.
+Upon application of an electric potential, positive charge carriers pass easily, while negative carriers accumulate.
+This results in an “ion-selective” membrane polarization.
+Clays represent a dominant source of induced polarization in unmineralized sedimentary rocks.</p>
+<p>A surplus of both cations and anions occurs at one end of the membrane, while a deficiency occurs at the other end.
+The reduction of mobility is most obvious at frequencies slower than the diffusion time of ions between adjacent membrane zones; i.e. slower than around 0.1 Hz. Conductivity increases at higher frequencies.</p>
+<p><strong>Pore-Water Salinity:</strong></p>
+<p>The induced polarization within a rock depends on having a mechanism for accumulating ionic charges.
+It also depends on the salinity of the pore water; i.e. the concentration of ions within the pore water.
+As the pore-water salinity increases, so does the capacity of the rock to support a build-up of ionic charges.
+This results in an increases chargeability for the rock.</p>
+<p><strong>Tortuosity:</strong></p>
+<p>Tortuosity defines the connectivity and complexity of a rock’s pore-space network.
+As the tortuosity of the rock’s pore-space increases, it becomes more difficult for ionic charges to move through the rock.
+As a result, and increases abundance of ionic charges will accumulate within the rock when it is subjected to an electric field.
+Thus, the chargeability of a rock increases and its tortuosity increases.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="induced_polarization_introduction.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="induced_polarization_basic_principles.html" class="btn btn-neutral float-right" title="Basic principles" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

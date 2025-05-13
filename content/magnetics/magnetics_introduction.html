@@ -1,0 +1,401 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Susceptibility" href="magnetics_physical_property.html" />
+    <link rel="prev" title="Magnetics" href="index.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Magnetics</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_physical_property.html">Susceptibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_basic_principles.html">Basic Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_survey.html">Survey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_data.html">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_processing.html">Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_interpretation.html">Interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_applet.html">Magnetic dipole applet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Magnetics</a> &raquo;</li>
+        
+      <li>Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/magnetics/magnetics_introduction.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction">
+<span id="magnetics-introduction"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
+<p>The generic magnetic survey is summarized in <a class="reference internal" href="#mag-response"><span class="std std-numref">Fig. 18</span></a>.
+The energy source is a magnetic field. The physical
+property of interest is the magnetic susceptibility. The data
+are magnetic field values.
+Signals are sometimes interpreted in terms of geologic units, or
+geologic structure (such as faults or dykes) but most often the
+data are inverted to yield the subsurface
+distribution of the magnetc susceptibility.</p>
+<figure class="align-center" id="mag-response">
+<a class="reference internal image-reference" href="../../_images/Intro_Response.png"><img alt="../../_images/Intro_Response.png" src="../../_images/Intro_Response.png" style="width: 384.0px; height: 240.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">A simple magnetic survey</span><a class="headerlink" href="#mag-response" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>A pictoral summary of magnetic surveying is
+illustrated in <a class="reference internal" href="#mag-survey"><span class="std std-numref">Table 1</span></a> There are four main
+elements:</p>
+<p>The <strong>energy source</strong> is the Earth’s magnetic field.
+It has a strength and direction at every location on the Earth.</p>
+<p>Subsurface materials can often be thought of as acting like a
+small magnetics. The material therefore becomes magnetized when
+a magnetic field is applied. The physical property that quantifies
+this is the <strong>magnetic susceptibiilty</strong>.</p>
+<p>The magnetized material creates a magnetic field (often called the
+induced field).  The data from the survey
+will be a superposition of Earth’s field and the induced
+fields caused by the magnetization of the buried materials.</p>
+<p>The end goal of a magnetic survey is to infer information about the
+sub-surface from the measured magnetic field data. The data are processed
+and sometimes resultant data maps can be used to infer
+geologic information. More generally, the data are inverted to
+generate 2D or 3D images of the subsurface.</p>
+<table class="docutils align-default" id="mag-survey">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">:Principals of magnetic surveys.</span><a class="headerlink" href="#mag-survey" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 100.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+MM_preloadImages('./../../_images/solarexp-earthonly.jpg')
+
+  </script>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="99%">
+
+  <tbody>
+    <tr>
+
+    <td bgcolor="#ffffff"><!-- InstanceBeginEditable name="content" -->
+      
+      <table border="0" cellpadding="2" cellspacing="1" width="100%">
+
+        <tbody>
+
+          <tr valign="top">
+
+            <td bgcolor="#ffffff">
+              
+            <p></p>
+
+              
+            <p><font size="-1"><img src="./../../_images/solarexp-earthonly.jpg" name="Image1" height="200" width="300"></font></p>
+
+              
+            <form name="form1" method="post" action="" onsubmit="MM_swapImage('Image1','','earthfield2.gif',1)">
+                <font size="-1">
+                <input name="radiobutton" value="radiobutton" checked="checked" onclick="MM_swapImage('Image1','','./../../_images/solarexp-earthonly.jpg',1)" type="radio">
+                <b> 2a.</b> Earth's magnetic field.<br>
+
+                <b>
+                <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('Image1','','./../../_images/earthfield2.gif',1)" type="radio">
+              2b.</b> It has strength and direction everywhere. </font>
+            </form>
+            </td>
+
+            <td bgcolor="#ffffff">
+              
+            <div align="center"> <font size="-1"><img src="./../../_images/cartoon-nofield.gif" name="Image2" height="203" width="220"> </font>
+                  
+            <form name="form2" method="post" action="">
+                    
+              <div align="left">
+                      
+              <p> <font size="-1">
+                        <input name="radiobutton" value="radiobutton" checked="checked" onclick="MM_swapImage('Image2','','./../../_images/cartoon-nofield.gif',1)" type="radio">
+                        <b>2c.</b> No incident magnetic field.<br>
+
+                        <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('Image2','','./../../_images/cartoon-field.gif',1)" type="radio">
+                        <b>2d.</b> Earth's field causes material to become 
+        magnetized.</font></p>
+
+                    </div>
+
+                  </form>
+
+            </div>
+            </td>
+
+            <td bgcolor="#ffffff" valign="top">
+              
+            <div align="center"> <font size="-1"><img src="./../../_images/cartoon-withfield.gif" height="203" width="220"> </font>
+                  
+            <p><font size="-1"><b>2e.</b> Data are a superposition of Earth's 
+      field and resulting induced fields.</font></p>
+
+            </div>
+            </td>
+
+          </tr>
+
+        
+        </tbody>
+      
+      </table>
+        
+<!-- InstanceEndEditable --></td>
+
+  </tr>
+
+  </tbody>
+</table></td>
+</tr>
+</tbody>
+</table>
+<p>Magnetic data can be used in a variety of ways and for different purposes.
+One of the most useful is to use magnetic data for geologic mapping.
+The example below shows a magnetic map and a geologic  map over the
+same area. There are many geologic units that have a distinct magnetic
+signature but the correspondence in not one-to-one.</p>
+<blockquote>
+<div><figure class="align-center" id="intro-geomaping">
+<a class="reference internal image-reference" href="../../_images/intro_geomaping.png"><img alt="../../_images/intro_geomaping.png" src="../../_images/intro_geomaping.png" style="width: 576.0px; height: 288.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">: (a) Magnetic data.  (b)  A geologic map, over the same geographical area</span><a class="headerlink" href="#intro-geomaping" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p>Magnetic data can be used for remediation  and engineering work. The
+image below shows the magnetic data over an area that is contaminated by
+UXO. Each UXO has a signature like that of a magnetic dipole but the
+orientations are random. These data provide fairly localized information
+about where to dig to find the ordnance item. However, the data can
+be further analysed through a parameteric inversion to find the
+location in 3D space and also the size of the object. These are
+valuable pieces of information when the area is being reclaimed.</p>
+<blockquote>
+<div><figure class="align-center" id="mag-paramestim">
+<a class="reference internal image-reference" href="../../_images/intro_paramEstim.png"><img alt="../../_images/intro_paramEstim.png" src="../../_images/intro_paramEstim.png" style="width: 576.0px; height: 288.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">: (a) A typical UXO site.  There is no surface indications of ordnance items. (b) Typical ordance items (c) Magnetic field data over a  site contaminated with UXO.</span><a class="headerlink" href="#mag-paramestim" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p>Magnetic data are also routinely used in mineral exploration.
+In this application however, the data must be inverted to recover
+information about the structure of the deposit at depth. The ability
+to extend surface information into depth is one of the most
+valuable results to be obtained from geophysical data.</p>
+<blockquote>
+<div><figure class="align-center" id="mag-exploration">
+<a class="reference internal image-reference" href="../../_images/intro_exploration.png"><img alt="../../_images/intro_exploration.png" src="../../_images/intro_exploration.png" style="width: 576.0px; height: 288.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">: (a) Magnetic data map with the earth’s field removed. (b) A volume rendered image of the 3D magnetic susceptibility obtained by inverting the data in (a).</span><a class="headerlink" href="#mag-exploration" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Magnetics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="magnetics_physical_property.html" class="btn btn-neutral float-right" title="Susceptibility" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,395 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Density &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Susceptibility" href="magnetics_susceptibility_duplicate.html" />
+    <link rel="prev" title="Physical Properties" href="index.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Physical Properties</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Density</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#density-measurements">Density Measurements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#density-of-common-rocks">Density of Common Rocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#factors-impacting-rock-density">Factors Impacting Rock Density</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_susceptibility_duplicate.html">Susceptibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_velocity_duplicate.html">Seismic Velocity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physical_properties_dielectric_permittivity.html">Dielectric Permittivity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physical_properties_conductivity.html">Electrical Conductivity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="induced_polarization_physical_properties_duplicate.html">Chargeability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tables/index.html">Tables of Physical Properties</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Physical Properties</a> &raquo;</li>
+        
+      <li>Density</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/physical_properties/physical_properties_density.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="density">
+<span id="physical-properties-density"></span><h1>Density<a class="headerlink" href="#density" title="Link to this heading"></a></h1>
+<p>Density (<span class="math notranslate nohighlight">\(\rho\)</span>) is defined as the mass (<span class="math notranslate nohighlight">\(m\)</span>) contained within a material per unit volume (<span class="math notranslate nohighlight">\(V\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[\rho = \frac{m}{V}\]</div>
+<p>Please note that mass (the quantity of matter within an object) should not be confused with weight (the downward force exerted by an object due to gravity).</p>
+<p><strong>Specific Gravity</strong>:</p>
+<p>In some cases, the density of a material is represented instead by its specific gravity.
+Specific gravity defines the ratio of a material’s density to that of water:</p>
+<div class="math notranslate nohighlight">
+\[S.G. = \frac{\rho}{\rho_w}\]</div>
+<p>where the density of water <span class="math notranslate nohighlight">\(\rho_w\)</span> = 1,000 kg/m <span class="math notranslate nohighlight">\(\!^3\)</span> (or 1 g/cm <span class="math notranslate nohighlight">\(\!^3\)</span>).
+Parameters used to define density and their associated units are summarized below.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Property</p></th>
+<th class="head"><p>Symbol</p></th>
+<th class="head"><p>Units</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Density</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rho\)</span></p></td>
+<td><p>g/cm <span class="math notranslate nohighlight">\(\!^3\)</span> or kg/m <span class="math notranslate nohighlight">\(\!^3\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Mass</p></td>
+<td><p><span class="math notranslate nohighlight">\(m\)</span></p></td>
+<td><p>g or kg</p></td>
+</tr>
+<tr class="row-even"><td><p>Volume</p></td>
+<td><p><span class="math notranslate nohighlight">\(V\)</span></p></td>
+<td><p>cm <span class="math notranslate nohighlight">\(\!^3\)</span> or m <span class="math notranslate nohighlight">\(\!^3\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Specific Gravity</p></td>
+<td><p><span class="math notranslate nohighlight">\(S.G.\)</span></p></td>
+<td><p><em>Unitless</em></p></td>
+</tr>
+</tbody>
+</table>
+<section id="density-measurements">
+<h2>Density Measurements<a class="headerlink" href="#density-measurements" title="Link to this heading"></a></h2>
+<p>Acquiring the density of a material requires an appropriate method of measurement.
+Below are four common ways to measure density. These are ordered from more basic to more sophisticated.</p>
+<p><strong>Basic Method</strong></p>
+<p>The most basic method for measuring a rock’s bulk density can be performed in two steps.
+First, the mass (M) of the rock is obtained using a weight scale.
+Next, the rock is fully immersed into a volume of water contained in a graduated cylinder.
+The amount of water which is displaced by the rock is equal to the volume (<span class="math notranslate nohighlight">\(V\)</span>) of the sample.
+The density of the rock is obtained from</p>
+<div class="math notranslate nohighlight">
+\[\rho = \frac{m}{V}\]</div>
+<p>This method is simple but it is often not sufficiently accurate for geophysical purposes.</p>
+<p><strong>Hydrostatic Weighting</strong></p>
+<p>For this method, the mass of the rock (<span class="math notranslate nohighlight">\(m_{a}\)</span>) is first measured using a conventional scale.
+The rock is then immersed into a bath of water, where its underwater weight is measured and used to obtain an apparent mass (<span class="math notranslate nohighlight">\(m_{w}\)</span>).
+Where <span class="math notranslate nohighlight">\(\rho_w\)</span> = 1000 kg/m <span class="math notranslate nohighlight">\(\!^3\)</span> is the density of water, the density of the rock is given by:</p>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/hydrostatic_weighting_legend.jpg"><img alt="../../_images/hydrostatic_weighting_legend.jpg" src="../../_images/hydrostatic_weighting_legend.jpg" style="width: 360.0px; height: 202.5px;" />
+</a>
+</figure>
+<div class="math notranslate nohighlight">
+\[\rho = \frac{m_a}{m_a - m_w} \times \rho_w\]</div>
+<p>This method does poorly if the rock is unconsolidated or porous.
+Unconsolidated rocks tend to break apart when immersed in water.
+The pore-space within porous rocks becomes partially filled, resulting in an overestimation of the rock’s density.</p>
+<p><strong>Pycnometer Measurements</strong></p>
+<p>Pycnometer measurements are generally used on porous rocks and sediments.
+Using a pycnometer, we can obtain a rock’s skeletal density; that is, the average density of all solid material within the rock.
+Bulk density is not recovered using this method, as we are not accounting for the rock’s pore space.</p>
+<p>Pycnometers typically consist of a hollow chamber with a known initial volume (<span class="math notranslate nohighlight">\(V_c\)</span>).
+Once a rock has been placed in the chamber, the volume of the chamber is changed, resulting in a change in gas pressure around the rock.
+The change in gas pressure is used to determine how much of the chamber is filled with gas (<span class="math notranslate nohighlight">\(V_s\)</span>).
+The difference between <span class="math notranslate nohighlight">\(V_c\)</span> and <span class="math notranslate nohighlight">\(V_s\)</span> represents the volume of solid material comprising the rock.
+The skeletal density of the rock is therefore:</p>
+<div class="math notranslate nohighlight">
+\[\rho_{sk} = \frac{m}{V_c - V_s}\]</div>
+<p><strong>Gamma-Gamma Density Logging</strong></p>
+<p>Gamma-gamma density logging is used to continuously record the bulk density of rock formation along a borehole.
+For these measurements, gamma rays are emmitted by a radioactive source.
+While transmitting through the adjacent rock, the gamma rays interact with electrons and undergo Compton scattering.
+A detector within the borehole measures the intensity of the scattered gamma rays.
+Gamma rays experience a higher level of Compton scattering in denser materials.
+Therefore, the intensity of scattered signal can be used to obtain the bulk density of the rocks within the borehole.</p>
+</section>
+<section id="density-of-common-rocks">
+<h2>Density of Common Rocks<a class="headerlink" href="#density-of-common-rocks" title="Link to this heading"></a></h2>
+<p>Each rock type is defined by a range of density values (not a specific value). The densities for some common rocks, minerals, and other materials are summarized below.
+Note that the density ranges for different rock types can overlap.
+Some general comments pertaining to densities are:</p>
+<ul class="simple">
+<li><p>Igneous and metamorphic rock are generally more dense than sedimentary rocks.</p></li>
+<li><p>Mafic igneous rocks are generally more dense than felsic igneous rocks.</p></li>
+<li><p>Higher metamorphic grade rocks such as eclogite and amphibolite are more dense than low grade metamorphic rocks such as slate and phyllite.</p></li>
+<li><p>Metal ore-bearing rocks are generally much denser than other rock types. One exception is bauxite.</p></li>
+</ul>
+<p>To see the range of densities for specific rock types, click the links in the table.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Material</p></th>
+<th class="head"><p>Density Range (g/cm <span class="math notranslate nohighlight">\(\!^3\)</span>)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Air</p></td>
+<td><p>0.001225</p></td>
+</tr>
+<tr class="row-odd"><td><p>Water</p></td>
+<td><p>1.00</p></td>
+</tr>
+<tr class="row-even"><td><p>Ice</p></td>
+<td><p>0.917</p></td>
+</tr>
+<tr class="row-odd"><td><p>Petroleum</p></td>
+<td><p>0.60 - 0.90</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="tables/density_sedimentary_rocks.html#table-density-sedimentary"><span class="std std-ref">Sedimentary  Rocks</span></a></p></td>
+<td><p>1.50 -3.30</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="tables/density_igneous_rocks.html#table-density-igneous"><span class="std std-ref">Igneous Rocks</span></a></p></td>
+<td><p>2.35 -3.50</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="tables/density_metamorphic_rocks.html#table-density-metamorphic"><span class="std std-ref">Metamorphic Rocks</span></a></p></td>
+<td><p>2.52- 3.54</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="tables/density_ore_bearing_rocks.html#table-density-ore-bearing"><span class="std std-ref">Ore-Bearing Rocks</span></a></p></td>
+<td><p>2.30- 7.60</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="factors-impacting-rock-density">
+<h2>Factors Impacting Rock Density<a class="headerlink" href="#factors-impacting-rock-density" title="Link to this heading"></a></h2>
+<p>There are many factors which impact the bulk density of a rock.
+Below are several important factors which you should be familiar with.</p>
+<p><strong>Composition</strong></p>
+<p>Composition impacts the density of all rock types.
+Most common rocks are made up of sillicate minerals due to the abundance of silicon and oxygen in the Earth’s crust.
+The distinct densities of these rocks, however, are dictated by the abundances of other elements such as: aluminum, iron, calcium, sodium, potassium and magnesium.</p>
+<p>In igneous rocks, density generally decreases with respect to the % abundance of silica (Si0 <span class="math notranslate nohighlight">\(\!_2\)</span>) contained within the rock.
+Using this relationship, igeneous rocks are classified as being felsic, intermediate, mafic or ultramafic.
+Rocks with lower silica content (mafic) tend to contain higher abundances of heavier elements like magnesium and iron; making mafic rocks denser than rocks with a higher silica content (felsic).
+This explains why the oceanic crust (mafic) is typically more dense than the continental crust (felsic).
+The classification of igeneous rocks based on % silica content can be seen below:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Igneous Rock Type</p></th>
+<th class="head"><p>% Silica (SiO <span class="math notranslate nohighlight">\(\!_2\)</span>)</p></th>
+<th class="head"><p>Density</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Felsic</p></td>
+<td><p>65% &lt;</p></td>
+<td><p>Lowest</p></td>
+</tr>
+<tr class="row-odd"><td><p>Indermediate</p></td>
+<td><p>55% - 65%</p></td>
+<td><p>Moderate</p></td>
+</tr>
+<tr class="row-even"><td><p>Mafic</p></td>
+<td><p>45% - 55%</p></td>
+<td><p>High</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ultramafic</p></td>
+<td><p>&lt; 45%</p></td>
+<td><p>Highest</p></td>
+</tr>
+</tbody>
+</table>
+<p>Similar relationships between composition and density are much harder to obtain for sedimentary and metamorphic rocks.
+For sedimentary rocks, the density depends on the rock’s parent material, which can be highly variable.
+For metamorphic rocks, the density depends on the parent rock and the metamorphic alteration it has experienced.</p>
+<p>The oxide and sulphide minerals contained in ore-bearing rocks are much denser than typical rock forming minerals.
+This is because ore-bearing rocks contain large quantities of heavy elements such as gold, silver, copper, lead and iron.</p>
+<p><strong>Porosity</strong></p>
+<p>Porosity primarily impacts the density of sedimentary and extrusive volcanic rocks, as the porosity of other rock types is generally very small.
+Pore fluids, whether it be air, water, brine or petroleum, have much less density than rock forming minerals.
+As a result, rock density decreases as porosity increases.
+Because air, water, brine and petroleum have measureably different densities, the type of pore fluid also impacts the density of the rock.</p>
+<p><strong>Pressure</strong></p>
+<p>Sedimentary rocks can experience significant pressure from overlying geological units.
+In sedimentary rocks, compressional forces are responsible for reducing the pore space.
+The reduction in pore space ultimately results in a higher density for the rock.
+This is explains why sediments at the bottom of a basin are typically denser than those at the top.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Physical Properties" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="magnetics_susceptibility_duplicate.html" class="btn btn-neutral float-right" title="Susceptibility" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

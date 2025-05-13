@@ -1,0 +1,568 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic Principles &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Survey and Data" href="GPR_survey_data.html" />
+    <link rel="prev" title="Propagation Velocities of Dielectric Materials" href="table_velocity.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Ground Penetrating Radar</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="GPR_physical_properties.html">Physical Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="table_velocity.html">Propagation Velocities of Dielectric Materials</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Basic Principles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#wave-velocity">Wave Velocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#attenuation">Attenuation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skin-depth">Skin Depth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reflection-and-transmission-of-radiowaves">Reflection and Transmission of Radiowaves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reflection-at-conductive-object-boundaries">Reflection at Conductive Object Boundaries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#refraction-of-radiowaves">Refraction of Radiowaves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scattering">Scattering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wave-fronts-and-ray-paths">Wave Fronts and Ray Paths</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#geometric-spreading">Geometric Spreading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-signal-paths-for-a-2-layer-earth">Example: Signal Paths for a 2-Layer Earth</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="GPR_survey_data.html">Survey and Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GPR_processing.html">Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GPR_interpretation.html">Interpretation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Ground Penetrating Radar</a> &raquo;</li>
+        
+      <li>Basic Principles</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/GPR/GPR_fundamental_principles.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="basic-principles">
+<span id="gpr-fundamental-principles"></span><h1>Basic Principles<a class="headerlink" href="#basic-principles" title="Link to this heading"></a></h1>
+<p>Here, we present the fundamental principles which govern ground penetrating radar (GPR) signals.
+As you will see, many of the basic fundamentals which are used to describe seismic methods can also be applied to GPR.</p>
+<aside class="sidebar">
+<p class="sidebar-title">GPR Source</p>
+<figure class="align-center" id="fig-gpr-wavelet-0">
+<img alt="../../_images/GPR_wavelet_example.png" src="../../_images/GPR_wavelet_example.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 90 </span><span class="caption-text">Wavelet representing the pulse of EM waves within the GPR signal.</span><a class="headerlink" href="#fig-gpr-wavelet-0" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="fig-gpr-conductor-gif-0">
+<img alt="../../_images/Conductor.gif" src="../../_images/Conductor.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 91 </span><span class="caption-text">GPR signals reflecting off a buried conductor.</span><a class="headerlink" href="#fig-gpr-conductor-gif-0" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</aside>
+<p>As we mentioned earlier, the source of the GPR system sends a pulse of high-frequency electromagnetic waves (radiowaves) into the Earth (<a class="reference internal" href="#fig-gpr-wavelet-0"><span class="std std-numref">Fig. 90</span></a>).
+Therefore, GPR equipment does <strong>not</strong> send a continuous signal into the Earth.
+The signal pulse contains a set of electromagnetic waves which oscillate near a particular frequency.
+And as these radiowaves propagate through the Earth, they are distorted due to the distribution of subsurface electromagnetic properties (<span class="math notranslate nohighlight">\(\sigma , \; \mu\)</span> and <span class="math notranslate nohighlight">\(\varepsilon\)</span>).</p>
+<p>When radiowaves within the pulse come into contact with an interface (a boundary defined by an abrupt change in the Earth’s electromagnetic properties), portions of the incoming radiowaves can be reflected, transmitted and/or refracted (<a class="reference internal" href="#fig-gpr-conductor-gif-0"><span class="std std-numref">Fig. 91</span></a>). The reflection, transmission and refraction of the radiowaves depends on the electromagnetic properties defining each side of the interface as well as the incident angle of the incoming radiowave signal.</p>
+<p>For the purposes of GPR, the Earth may be thought of as a set of homogeneous regions separated by interfaces (<a class="reference internal" href="#fig-schematic-gpr-fundamentals"><span class="std std-numref">Fig. 92</span></a>).
+Using signals measured by the receivers, the goal of GPR is to define these interfaces and thus gain information about structures under the Earth’s surface; which can be naturally occurring or man-made.</p>
+<figure class="align-center" id="fig-schematic-gpr-fundamentals" style="width: 70%">
+<img alt="../../_images/GPR_schematic_example.jpg" src="../../_images/GPR_schematic_example.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 92 </span><span class="caption-text">Schematic of a zero-offset GPR setup.</span><a class="headerlink" href="#fig-schematic-gpr-fundamentals" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="wave-velocity">
+<h2>Wave Velocity<a class="headerlink" href="#wave-velocity" title="Link to this heading"></a></h2>
+<p>Radiowaves propagate through different materials at different speeds.
+The velocity of the radiowaves depends on the physical properties of the medium.
+In general, the velocity of radiowaves through a homogeneous material is given by:</p>
+<div class="math notranslate nohighlight">
+\[V = \sqrt{\frac{2}{\mu \varepsilon}} \Bigg [ \Bigg ( 1 + \bigg ( \frac{\sigma}{\omega \varepsilon} \bigg )^2 \, \Bigg )^{1/2} \; + 1 \; \Bigg ]^{-1/2}\]</div>
+<p>This equation can be used to show that the radiowave velocity is largest in free-space (i.e. when <span class="math notranslate nohighlight">\(\sigma = 0\)</span>, <span class="math notranslate nohighlight">\(\mu = \mu_0\)</span> and <span class="math notranslate nohighlight">\(\varepsilon = \varepsilon_0\)</span>).
+Therefore, electromagnetic waves in matter travel slower than the speed of light (c = 3.00 <span class="math notranslate nohighlight">\(\times 10^8\)</span> m/s).</p>
+<p>GPR signals are characterized as being high-frequency.
+Thus in many cases (and for this course), it is safe to assume that <span class="math notranslate nohighlight">\(\sigma \ll \omega \varepsilon\)</span>; especially if the Earth is resistive.
+This is known as the <strong>wave regime approximation</strong>.
+Using the approximation, the velocity of radiowaves can be simplified to:</p>
+<div class="math notranslate nohighlight">
+\[V = \frac{1}{\sqrt{\mu \varepsilon}} = \frac{c}{\sqrt{\mu_r \varepsilon_r}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mu_r\)</span> is the relative permeability and <span class="math notranslate nohighlight">\(\varepsilon_r\)</span> is the relative permittivity.
+If the propagation material is non-magnetic, then <span class="math notranslate nohighlight">\(\mu_r\)</span> = 1 and the radiowave velocity simplifies to:</p>
+<div class="math notranslate nohighlight">
+\[V = \frac{c}{\sqrt{\varepsilon_r}}\]</div>
+<figure class="align-right" id="fig-gpr-layeredearth-gif">
+<a class="reference internal image-reference" href="../../_images/LayeredEarth.gif"><img alt="../../_images/LayeredEarth.gif" src="../../_images/LayeredEarth.gif" style="width: 374.40000000000003px; height: 374.40000000000003px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 93 </span><span class="caption-text">GPR signal propagating through a layered Earth.</span><a class="headerlink" href="#fig-gpr-layeredearth-gif" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>This expression is considered a good approximation when considering GPR signals.
+From the previous expression, we can see that radiowaves propagate more slowly in increasingly dielectric materials.
+A table showing the dielectric permittivity, conductivity and radiowave velocity for various materials can be found <a class="reference internal" href="table_velocity.html#gpr-table-velocity"><span class="std std-ref">here</span></a> .
+Notice that:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Water saturation decreases the propagation velocity of sediments because they have high dielectric permittivities.</p></li>
+<li><p>Dry rocks and igneous rocks have the highest propagation velocity</p></li>
+</ul>
+</div></blockquote>
+<p>Examine the GIF in <a class="reference internal" href="#fig-gpr-layeredearth-gif"><span class="std std-numref">Fig. 93</span></a>.
+What medium has the higher velocity?
+What medium has the higher relative permittivity?</p>
+</section>
+<section id="attenuation">
+<h2>Attenuation<a class="headerlink" href="#attenuation" title="Link to this heading"></a></h2>
+<figure class="align-right" id="id1" style="width: 45%">
+<img alt="../../_images/Attenuation.png" src="../../_images/Attenuation.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 94 </span><span class="caption-text">Attenuation of electromagnetic waves.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Attenuation defines the continuous loss of amplitude a wave experiences as it propagates through a particular medium.
+The rate at which the amplitude decreases is referred as the attenuation constant (<span class="math notranslate nohighlight">\(\alpha\)</span>).
+For an electromagnetic wave that has traveled a distance <span class="math notranslate nohighlight">\(z\)</span>, the attenuation constant is given by:</p>
+<div class="math notranslate nohighlight">
+\[\frac{| \mathbf{A} |}{ | \mathbf{A_0} |} = e^{-\alpha z}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{A_0}\)</span> is the initial amplitude of the wave and <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> is the amplitude of the wave after it has travel distance <span class="math notranslate nohighlight">\(z\)</span>.
+We can see that as <span class="math notranslate nohighlight">\(z \rightarrow \infty\)</span>, the amplitude of the wave goes to zero.
+Additionally, for larger values of <span class="math notranslate nohighlight">\(\alpha\)</span>, the wave attenuates more quickly.</p>
+<p>The attenuation constant depends on the physical properties of the media.
+In general, the attenuation constant can be expressed as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\alpha = \omega \sqrt{\frac{\mu \varepsilon}{2}} \Bigg [ \Bigg ( 1 + \bigg ( \frac{\sigma}{\omega \varepsilon} \bigg )^2 \Bigg )^{1/2} - \; 1 \; \Bigg ]^{1/2} \approx \begin{cases} \sqrt{\dfrac{\omega \mu \sigma}{2}} \; \; &amp;\textrm{for} \; \; \omega \varepsilon \ll \sigma \\ \dfrac{\sigma}{2} \sqrt{\dfrac{\mu}{\varepsilon}}  \; \; &amp;\textrm{for} \; \; \sigma \ll \omega \varepsilon \end{cases}\end{split}\]</div>
+<p>Once again, we see that the wave regime approximation (<span class="math notranslate nohighlight">\(\sigma \ll \omega \varepsilon\)</span>) for GPR provides a much simpler expression.</p>
+</section>
+<section id="skin-depth">
+<span id="gpr-fundamental-principles-skin-depth"></span><h2>Skin Depth<a class="headerlink" href="#skin-depth" title="Link to this heading"></a></h2>
+<p>Skin depth (<span class="math notranslate nohighlight">\(\delta\)</span>) defines the propagation distance at which the amplitude of an electromagnetic wave is reduced by a factor of <span class="math notranslate nohighlight">\(1/e\)</span>; i.e. reduced to 37% of its original amplitude.
+By definition, the skin depth is just the reciprocal of the attenuation constant:</p>
+<figure class="align-right" id="id2" style="width: 40%">
+<img alt="../../_images/GPR_attenuation_skin_depth.png" src="../../_images/GPR_attenuation_skin_depth.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 95 </span><span class="caption-text">Figure comparing the attenuation of radiowaves in air versus in a conductive medium.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="math notranslate nohighlight">
+\[\delta = \frac{1}{\alpha}\]</div>
+<p>If we use the approximations found above and assume the Earth is non-magnetic (<span class="math notranslate nohighlight">\(\mu_r = 1\)</span>), the skin depth is given by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\delta \approx \begin{cases} 503 \sqrt{\dfrac{1}{\sigma f}} \; \; &amp;\textrm{for} \; \; \omega \varepsilon \ll \sigma \\ 0.0053 \dfrac{\sqrt{\varepsilon_r}}{\sigma}  \; \; &amp;\textrm{for} \; \; \sigma \ll \omega \varepsilon \end{cases}\end{split}\]</div>
+<p>Where <span class="math notranslate nohighlight">\(f\)</span> is the frequency of the wave in Hz.
+We can see from the two previous expressions that:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Generally, the skin depth is smaller if the frequency of the electromagnetic waves is higher.</p></li>
+<li><p>For the wave regime approximation (<span class="math notranslate nohighlight">\(\sigma \ll \omega \varepsilon\)</span>), skin depth reaches a limit which doesn’t depend on frequency.</p></li>
+<li><p>The skin depth is larger in materials with lower conductivities.</p></li>
+<li><p>The skin depth is larger is materials with higher dielectric permittivities.</p></li>
+</ul>
+</div></blockquote>
+<p>An example of the attenuation of electromagnetic waves in air versus inside a conductive is shown on the right.
+We can see that in the air, the wave experienced little to no loss in amplitude as it propagates.
+In the conductive material however, the amplitude of the wave decreases noticeably as it propagates.</p>
+</section>
+<section id="reflection-and-transmission-of-radiowaves">
+<h2>Reflection and Transmission of Radiowaves<a class="headerlink" href="#reflection-and-transmission-of-radiowaves" title="Link to this heading"></a></h2>
+<aside class="sidebar">
+<p class="sidebar-title">Normal Incidence Reflection/Transmission</p>
+<figure class="align-center" id="id3" style="width: 100%">
+<img alt="../../_images/normal_incidence_reflection.gif" src="../../_images/normal_incidence_reflection.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 96 </span><span class="caption-text">Reflection of an incident wave with a reverse in polarity (<span class="math notranslate nohighlight">\(\varepsilon_1 &lt;\varepsilon_2\)</span>). <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Partial_transmittance.gif">Link to source image</a> .</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</aside>
+<p>When a radiowave reaches an interface, some of it is reflected and some of it is transmitted across the interface.
+This results in both a reflected and a transmitted wave.</p>
+<p>The amplitude of the reflected wave proportional to that of the incident wave is defined by the reflection coefficient (<span class="math notranslate nohighlight">\(R\)</span>).
+For radiowaves, the reflection coefficient can be expressed as a function of the <strong>relative permittivities</strong> on each side of the interface.
+Assuming the radiowave arrives at an angle perpendicular to the interface, the reflection coefficient is given by:</p>
+<div class="math notranslate nohighlight">
+\[R = \frac{\textrm{Reflected Amplitude}}{\textrm{Incident Amplitude}} = \frac{\sqrt{\varepsilon_1} - \sqrt{\varepsilon_2}}{\sqrt{\varepsilon_1} + \sqrt{\varepsilon_2}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\varepsilon_1\)</span> is the <strong>relative permittivity</strong> of the medium carrying the incident and reflected waves.
+The transmission coefficient is given by:</p>
+<div class="math notranslate nohighlight">
+\[T = \frac{\textrm{Transmitted Amplitude}}{\textrm{Incident Amplitude}} = \frac{2 \sqrt{\varepsilon_2}}{\sqrt{\varepsilon_1} + \sqrt{\varepsilon_2}}\]</div>
+<p>The reflection coefficient can be either positive or negative and has values between <span class="math notranslate nohighlight">\(-1 &lt; R &lt; 1\)</span>.
+The magnitude of <span class="math notranslate nohighlight">\(R\)</span> determines how much of the incident wave is reflected.
+It should be noted that:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(\varepsilon_1\)</span> and <span class="math notranslate nohighlight">\(\varepsilon_2\)</span> are similar, most of the incident wave is transmitted through the interface.</p></li>
+<li><p>If one of the relative permittivities across the interface is much smaller than the other, most of the incident wave is reflected. This can be a problem if you at attempting to gain information about structures below this interface.</p></li>
+</ul>
+</div></blockquote>
+<p>The sign of the reflection coefficient determines whether the reflected wave experiences a reverse in polarity.
+As a result, we can use the polarity of reflected radiowaves to determine whether <span class="math notranslate nohighlight">\(\varepsilon_1\)</span> is greater than or less than <span class="math notranslate nohighlight">\(\varepsilon_2\)</span>.
+This can be summarized as follows:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If the returning signal (reflected wave) shows a reverse in polarity, <span class="math notranslate nohighlight">\(R&lt;0\)</span> and thus <span class="math notranslate nohighlight">\(\varepsilon_1 &lt; \varepsilon_2\)</span></p></li>
+<li><p>If the returning signal (reflected wave) does not show a reverse in polarity, <span class="math notranslate nohighlight">\(R&gt;0\)</span> and thus <span class="math notranslate nohighlight">\(\varepsilon_1 &gt; \varepsilon_2\)</span></p></li>
+</ul>
+</div></blockquote>
+<p>Examine the GIF in <a class="reference internal" href="#fig-gpr-layeredearth-gif"><span class="std std-numref">Fig. 93</span></a>.
+Look at the reflected wave as it returns to the surface.
+When it reaches the surface, is most of the wave reflected or transmitted?
+From this, are the relative permittivities of the air and the ground very different or similar?</p>
+</section>
+<section id="reflection-at-conductive-object-boundaries">
+<h2>Reflection at Conductive Object Boundaries<a class="headerlink" href="#reflection-at-conductive-object-boundaries" title="Link to this heading"></a></h2>
+<p>Many compact objects relevant to GPR applications (buried pipes, landmines, etc…) are highly conductive.
+For highly conductive objects, the reflection and transmission of radiowaves cannot be characterized by the dielectric permittivities.
+Instead, we must consider the electrical conductivity of the object.</p>
+<figure class="align-right" id="fig-gpr-conductor-gif">
+<a class="reference internal image-reference" href="../../_images/Conductor.gif"><img alt="../../_images/Conductor.gif" src="../../_images/Conductor.gif" style="width: 345.59999999999997px; height: 345.59999999999997px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 97 </span><span class="caption-text">GPR signals bouncing off of a conductive target.</span><a class="headerlink" href="#fig-gpr-conductor-gif" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>From the general equation for propagation velocity, we see that as <span class="math notranslate nohighlight">\(\sigma \rightarrow \infty\)</span>, the propagation velocity goes to zero.
+Thus radiowaves cannot propagate through extremely conductive objects.
+Because of this, when radiowaves reach the interface between the Earth and a highly conductive object, the wave is completely reflected.
+This occurs regardless of the incident angle.</p>
+<p>Examine the GIF in <a class="reference internal" href="#fig-gpr-conductor-gif"><span class="std std-numref">Fig. 97</span></a>.
+Can you see any of the wave being transmitted through the conductor?</p>
+</section>
+<section id="refraction-of-radiowaves">
+<h2>Refraction of Radiowaves<a class="headerlink" href="#refraction-of-radiowaves" title="Link to this heading"></a></h2>
+<figure class="align-right" id="id4" style="width: 25%">
+<img alt="../../_images/GPR_refraction.png" src="../../_images/GPR_refraction.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 98 </span><span class="caption-text">Reflection and refraction of an incoming radiowave.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Refraction is used to describe the change in propagation direction of a wave due to a change in the propagation medium.
+When a radiowave reaches an interface, recall that some of it is reflected and some of it is transmitted accross the interface.
+The angles at which the incident wave is reflected and refracted are illustrated on the right.</p>
+<p>The angle of the reflected portion depends directly on the angle of the incident wave.
+The angle of the refracted wave can be obtained by using Snell’s law (just like seismic waves):</p>
+<div class="math notranslate nohighlight">
+\[\frac{\textrm{sin}\theta_1}{V_1} = \frac{\textrm{sin}\theta_2}{V_2}\]</div>
+<p>For radiowaves in resistive and non-magnetic media, the propagation velocity is equal to <span class="math notranslate nohighlight">\(V = c/ \! \sqrt{\varepsilon_r}\)</span> (shown earlier).
+In this case, Snell’s law can be expressed as:</p>
+<div class="math notranslate nohighlight">
+\[\sqrt{\varepsilon_1} \, \textrm{sin}\theta_1 = \sqrt{\varepsilon_2} \, \textrm{sin}\theta_2\]</div>
+<p>where <span class="math notranslate nohighlight">\(\varepsilon_1\)</span> and <span class="math notranslate nohighlight">\(\varepsilon_2\)</span> are <strong>relative permittivities</strong>.</p>
+<p>Remember that the GPR signal is a wavefront.
+If <span class="math notranslate nohighlight">\(V_2 &gt; V_1\)</span>, the wave wants to refract towards the horizontal.
+As a result, we expect the wavefront the ‘spread out’.
+Transversely, if <span class="math notranslate nohighlight">\(V_2 &lt; V_1\)</span>, the wave wants to refract towards the vertical and the wavefront should do the opposite.
+Go back to the GIF in <a class="reference internal" href="#fig-gpr-layeredearth-gif"><span class="std std-numref">Fig. 93</span></a> and examine the reflected wave that returns to the surface.
+Is the transmitted wave from the ground into the air spreading or contracting?
+What can you say about the velocities of both media?</p>
+<p><strong>Critical Refraction</strong></p>
+<figure class="align-right" id="id5" style="width: 50%">
+<img alt="../../_images/GPR_critical_refraction.png" src="../../_images/GPR_critical_refraction.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 99 </span><span class="caption-text">Critical refraction at interface and the resulting head-wave.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Just like in refraction seismology, radiowaves can undergo critical refractions.
+This occurs when the incident angle <span class="math notranslate nohighlight">\(\theta_1\)</span> is such that the refracted wave propagates along the interface at velocity <span class="math notranslate nohighlight">\(V_2\)</span>; ultimately leading to a head wave.
+The critical angle (<span class="math notranslate nohighlight">\(\theta_c\)</span>) is given by:</p>
+<div class="math notranslate nohighlight">
+\[\textrm{sin} \theta_c = \frac{V_1}{V_2}\]</div>
+<p>Once again, we can see that critical refraction only occurs when <span class="math notranslate nohighlight">\(V_1 &lt; V_2\)</span>.
+Additionally the propagation direction of the head wave is characterized by <span class="math notranslate nohighlight">\(\theta_c\)</span>.</p>
+</section>
+<section id="scattering">
+<h2>Scattering<a class="headerlink" href="#scattering" title="Link to this heading"></a></h2>
+<figure class="align-right" id="id6">
+<a class="reference internal image-reference" href="../../_images/Scattering.gif"><img alt="../../_images/Scattering.gif" src="../../_images/Scattering.gif" style="width: 345.59999999999997px; height: 345.59999999999997px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 100 </span><span class="caption-text">Scattering due to inhomogeneities.</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Scattering is used to describe deviations in the paths of electromagnetic waves due to localized non-uniformities; which are less than 1/4 the wavelength of the radiowave signal.
+Scattering is problematic for GPR because it reduces the amplitudes of useful signals while increasing extraneous noise.
+Several sources of scattering are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Irregular surface shape of larger buried objects (below left).</p></li>
+<li><p>Rocky soils, which are a large contributor to the scattering of GPR signals (below right).</p></li>
+<li><p>Gas bubbles trapped in ice.</p></li>
+<li><p>Clutter made up of small buried objects</p></li>
+</ul>
+</div></blockquote>
+<figure class="align-center" id="id7" style="width: 80%">
+<img alt="../../_images/GPR_scattering_examples.png" src="../../_images/GPR_scattering_examples.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 101 </span><span class="caption-text">Examples of scattering. A) Scattering from irregular surface texture. B) Scattering in rocky soils.</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="wave-fronts-and-ray-paths">
+<h2>Wave Fronts and Ray Paths<a class="headerlink" href="#wave-fronts-and-ray-paths" title="Link to this heading"></a></h2>
+<p>Like in seismology, it is very important to understand the difference between wave-fronts and ray paths.
+One way to thing about it as follows:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Wave-front</strong>: The physical location of the radiowave signal as it propagates through the Earth.</p></li>
+<li><p><strong>Ray path</strong>: A particular path which a portion of the wave-front can take in order to reach a particular location.</p></li>
+</ul>
+</div></blockquote>
+<p>Thus the wave-front represents the actual pulse of radiowaves, and the ray path is used to represent paths which signals can take to reach a receiver location.
+To see a simple example of the wavefront generated by radar source, see <a class="reference internal" href="#fig-gpr-layeredearth-gif"><span class="std std-numref">Fig. 93</span></a> of <a class="reference internal" href="#fig-gpr-conductor-gif"><span class="std std-numref">Fig. 97</span></a>.
+To follow a ray path, choose a small sliver of the wavefront and follow it as it reflects, refracts and propagates.
+If at any time this portion of the wavefron reaches the receiver, it is a ray path which is measured.</p>
+</section>
+<section id="geometric-spreading">
+<h2>Geometric Spreading<a class="headerlink" href="#geometric-spreading" title="Link to this heading"></a></h2>
+<figure class="align-right" id="id8" style="width: 45%">
+<img alt="../../_images/GPR_geometric_spreading.png" src="../../_images/GPR_geometric_spreading.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 102 </span><span class="caption-text">Wave-front at time <span class="math notranslate nohighlight">\(\Delta t\)</span>. Shows geometric spreading for radiowaves in the ground and in the air.</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>We have seen how radiowave signals lose their amplitude through attenuation.
+They also lose amplitude due to geometric spreading.
+This makes sense given that the energy of the wave-front is now spread over an increasingly larger area.
+For geometric spreading, the loss in amplitude of the radiowaves is represented by:</p>
+<div class="math notranslate nohighlight">
+\[\frac{| \mathbf{A} |}{ | \mathbf{A_0} |} \propto \frac{1}{R}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{A_0}\)</span> is the amplitude of the waves as their leave the source and <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> is the amplitude of the waves after they have traveled distance <span class="math notranslate nohighlight">\(R\)</span>.
+As we can see from the figure, the rate of geometric spreading loss is higher in the air than it is in the ground.
+This is due to the fact that radiowaves propagate faster in the air than they do in the ground.
+Examine <a class="reference internal" href="#fig-gpr-layeredearth-gif"><span class="std std-numref">Fig. 93</span></a>.
+Can you see spherical spreading?
+In what medium is spherical spreading happening more quickly?</p>
+</section>
+<section id="example-signal-paths-for-a-2-layer-earth">
+<h2>Example: Signal Paths for a 2-Layer Earth<a class="headerlink" href="#example-signal-paths-for-a-2-layer-earth" title="Link to this heading"></a></h2>
+<figure class="align-right" id="id9" style="width: 50%">
+<img alt="../../_images/GPR_wave_paths_diagram.png" src="../../_images/GPR_wave_paths_diagram.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 103 </span><span class="caption-text">Radiowaves signals measured by a receiver for a 2-layer Earth.</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Now that we understand the background theory, let’s put it all together.
+At <span class="math notranslate nohighlight">\(t\)</span> = 0 s, the source (Tx) generates a pulse of radio waves.
+As we can see on the right, there are many paths in which radiowaves can take in order to reach the receiver (Rx).
+The propagation velocities, reflections and refractions can all be explained using the equations found above.
+On the right, we have an example of a radargram, which shows the returning signal at increasing distances <span class="math notranslate nohighlight">\(x\)</span> from the source.
+Let us now try and explain the nature of each ray path.</p>
+<p><strong>Path 1: Direct Air Wave</strong></p>
+<figure class="align-right" id="id10" style="width: 45%">
+<img alt="../../_images/GPR_radargram_2layer_example.png" src="../../_images/GPR_radargram_2layer_example.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 104 </span><span class="caption-text">Radargram for a 2-layer Earth.</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>This was travels through the air in a direct line from the transmitter to the receiver.
+Recall that in the air, radiowaves propagate roughly at the speed of light (<span class="math notranslate nohighlight">\(c = 3.00 \times 10^8\)</span> m/s).
+As a result, the direct air wave is <strong>always</strong> the first signal measured by the receiver.
+The time it takes this wave to reach the receiver is given by:</p>
+<div class="math notranslate nohighlight">
+\[t_{air} = \frac{x}{c}\]</div>
+<p>The direct wave is shown in <strong>red</strong> on the radargram.
+According to the above equation, the velocity of the air wave is 1 divided by the slope of this line.</p>
+<p><strong>Path 2: Direct Ground Wave</strong></p>
+<p>This wave travels along the surface interface at velocity <span class="math notranslate nohighlight">\(V_1\)</span>.
+Like the air wave, the ground wave also takes a direct path.
+Because <span class="math notranslate nohighlight">\(V_1 &lt; c\)</span>, the ground wave arrives later than the air wave.
+The time it takes for the ground wave to reach the receiver is given by:</p>
+<div class="math notranslate nohighlight">
+\[t_{ground} = \frac{x}{V_1}\]</div>
+<p>The direct ground wave is shown in <strong>pink</strong>.
+Like the air wave, the direct ground wave velocity can also be obtained from the slope of the line.</p>
+<p><strong>Path 3: Reflected Wave</strong></p>
+<p>The reflected wave travels through medium 1 at velocity <span class="math notranslate nohighlight">\(V_1\)</span>.
+Because it takes a longer path than the direct ground wave, it arrives later.
+The time it takes for the reflected wave to reach the receiver is given by:</p>
+<div class="math notranslate nohighlight">
+\[t_{ref} = \frac{\sqrt{x^2 + 4h^2}}{V_1}\]</div>
+<p>The reflected wave is shown in <strong>green</strong>.
+Unlike direct waves, the arrival time for the reflected wave is hyperbolic, which makes it distinguishable from other signals.
+After sufficient distances (<span class="math notranslate nohighlight">\(h \ll x\)</span>), the previous equation becomes approximately linear.
+This portion of the curve can be used to estimate the velocity of the top-most layer.
+Notice how the slope of the direct ground wave and reflected wave are parallel.</p>
+<p><strong>Path 4: Critically Refracted at Surface</strong></p>
+<p>This ray path is denoted in <strong>blue</strong>.
+Because <span class="math notranslate nohighlight">\(V_1 &lt; V_0\)</span>, reflected waves are critically refracted at the surface.
+While this wave propagates along the surface interface, it will have velocity a velocity roughly the speed of light.
+In general, the time it takes for this wave to reach the receiver is given by:</p>
+<div class="math notranslate nohighlight">
+\[t_c = \frac{x}{c} + \textrm{Constant}\]</div>
+<p>Notice that the arrival time for the critically refracted wave is linear.
+In this radargram example, we cannot easily see the critically refracted wave.
+However, it does not mean that it does not exist.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="table_velocity.html" class="btn btn-neutral float-left" title="Propagation Velocities of Dielectric Materials" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="GPR_survey_data.html" class="btn btn-neutral float-right" title="Survey and Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

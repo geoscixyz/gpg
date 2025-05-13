@@ -1,0 +1,328 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hidden Layers &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Vertical Resolution" href="seismic_reflection_interpretation.html" />
+    <link rel="prev" title="Interpretation" href="seismic_interpretation.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Seismic</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="elastic_properties.html">Elastic Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_principles.html">Basic principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_survey.html">Survey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_data.html">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_processing.html">Processing</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="seismic_interpretation.html">Interpretation</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Hidden Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lateral-velocity-changes">Lateral Velocity Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#phantoming">Phantoming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#static-data-corrections">Static Data Corrections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seismic_reflection_interpretation.html">Vertical Resolution</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="MASW.html">MASW</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_apps.html">Seismic apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Seismic</a> &raquo;</li>
+        
+          <li><a href="seismic_interpretation.html">Interpretation</a> &raquo;</li>
+        
+      <li>Hidden Layers</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/seismic/seismic_refraction_interpretation.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="hidden-layers">
+<span id="seismic-refraction-other-topics"></span><h1>Hidden Layers<a class="headerlink" href="#hidden-layers" title="Link to this heading"></a></h1>
+<p>When acquiring refraction data we attempt to obtain first arrivals from each
+refractor (in fact first arrivals are the only useful data - signal energy
+following first arrivals can not be used unless seismic reflection is being
+done - a topic covered in geop301). Sometimes it is not possible to obtain
+refracted arrivals from each and every refracting horizon. There are two
+reasons why the second layer might go undetected.</p>
+<dl class="simple">
+<dt><strong>1. The Second Layer is a Low Velocity Layer:</strong>  If <span class="math notranslate nohighlight">\(v_2 &lt; v_1\)</span>  the</dt><dd><p>incoming wave will refract towards the normal and there will be no critical
+refraction along the upper boundary.  Assuming <span class="math notranslate nohighlight">\(v_3 &gt; v_1\)</span> the first
+arrival travel time curve will look as shown in the second half of the
+figure.</p>
+</dd>
+</dl>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/low_velocity_schematic.gif"><img alt="../../_images/low_velocity_schematic.gif" src="../../_images/low_velocity_schematic.gif" style="width: 251.1px; height: 167.4px;" />
+</a>
+</figure>
+<figure class="center align-center">
+<a class="reference internal image-reference" href="../../_images/low_velocity_t_x_plot.gif"><img alt="../../_images/low_velocity_t_x_plot.gif" src="../../_images/low_velocity_t_x_plot.gif" style="width: 252.0px; height: 167.0px;" />
+</a>
+</figure>
+<dl class="simple">
+<dt><strong>2. The Second Layer is Too Thin:</strong>  Even though there is a headwave on its</dt><dd><p>upper surface, the headwave traveling along the top of the third layer
+arrives first. The dependence of the travel time curves upon the thickness
+of the second layer is shown in this sequence of three figures.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/thin_layer_1.gif"><img alt="../../_images/thin_layer_1.gif" src="../../_images/thin_layer_1.gif" style="width: 444.0px; height: 193.2px;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/thin_layer_2.gif"><img alt="../../_images/thin_layer_2.gif" src="../../_images/thin_layer_2.gif" style="width: 445.2px; height: 291.59999999999997px;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/thin_layer_3.gif"><img alt="../../_images/thin_layer_3.gif" src="../../_images/thin_layer_3.gif" style="width: 436.8px; height: 194.4px;" />
+</a>
+</figure>
+</section>
+<section id="lateral-velocity-changes">
+<h1>Lateral Velocity Changes<a class="headerlink" href="#lateral-velocity-changes" title="Link to this heading"></a></h1>
+<p>The headwave travels at the speed of the underlying medium and that velocity
+might vary laterally. This produces another complication when interpreting the
+first arrivals. Consider the two velocity models and traveltime curves given
+below. The traveltime curves are the same. We note that the crossover point
+between <span class="math notranslate nohighlight">\(v_{2a}\)</span> and <span class="math notranslate nohighlight">\(v_{2b}\)</span> in (b) is always shifted away from the
+shotpoint with respect to the location of the position of the subsurface
+change.</p>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/lateral_velocity_a.gif"><img alt="../../_images/lateral_velocity_a.gif" src="../../_images/lateral_velocity_a.gif" style="width: 270.3px; height: 350.86px;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/lateral_velocity_b.gif"><img alt="../../_images/lateral_velocity_b.gif" src="../../_images/lateral_velocity_b.gif" style="width: 270.6px; height: 352.0px;" />
+</a>
+</figure>
+<p>To determine which structure is correct we need another shot. It could be a
+reversed shot, or a shot that is off the end of the profile. If the shot is
+offset then the travel times from the two velocities are shifted as indicated
+below. In (a) the traveltime curve is shifted to the left by an amount
+<span class="math notranslate nohighlight">\(S\)</span>. In (b) a constant time increment is added to each arrival and the
+location of the crossover remains the same.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/lateral_velocity_ab.gif"><img alt="../../_images/lateral_velocity_ab.gif" src="../../_images/lateral_velocity_ab.gif" style="width: 571.1999999999999px; height: 372.0px;" />
+</a>
+</figure>
+</section>
+<section id="phantoming">
+<h1>Phantoming<a class="headerlink" href="#phantoming" title="Link to this heading"></a></h1>
+<figure class="float-right-360 align-right">
+<a class="reference internal image-reference" href="../../_images/phantoming.gif"><img alt="../../_images/phantoming.gif" src="../../_images/phantoming.gif" style="width: 427.0px; height: 417.0px;" />
+</a>
+</figure>
+<p>As shown in the above diagram, refracting arrivals from two shots from the
+same end produce traveltime curves which are parallel. This provides a good
+way to group first-break arrivals according to specific refractors. Ideally we
+want to have many arrivals from a single interface. This can be accomplished
+by using the parallelism noted above and phantoming the arrivals. That is, we
+can determine the arrival time of the refracted event at a location where no
+seismometer really existed. Phantoming can be carried out in the cases where:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>The receiver array is fixed, and off-end shots are recorded.</p></li>
+<li><p>The shot and receiver array is moved.</p></li>
+</ol>
+</div></blockquote>
+<p>The diagram here shows an example where the spread is moved.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>For the shot at x-position 140 feet , data from the shot at 100 feet can fill in arrival times between positions 0 and 40 feet.</p></li>
+<li><p>For the shot at 100 feet, data from 140 can phantom in artificial arrivals that arrive before <span class="math notranslate nohighlight">\(x_{crit}\)</span>. The data can help define the intercept time because we now have more points to help estimate a straight line. Note that these phantomed values don’t actually exist but they are valid data for helping us estimate the slope and intercept for the particular refractor.</p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="static-data-corrections">
+<h1>Static Data Corrections<a class="headerlink" href="#static-data-corrections" title="Link to this heading"></a></h1>
+<p>There are two corrections that are sometimes applied to the recorded travel
+times. These are corrections for elevations and similar corrections when there
+is a known weathered layer which has variable velocity.</p>
+<p><strong>Elevation Correction:</strong> The goal is to reduce the data to a datum plane, that
+is, to define a flat surface on which the data might have been recorded. The
+importance of this lies in the fact that all of our interpretation formulae
+assume that the upper surface of the earth is flat. Let <span class="math notranslate nohighlight">\(h_S\)</span> and
+<span class="math notranslate nohighlight">\(h_D\)</span> respectively denote the height of the shot and receiver about the
+datum plane (negative heights are allowed). The angle that the waves in this
+region are travelling upward or downward is determined by Snell’s law. If
+<span class="math notranslate nohighlight">\(v_n\)</span> denotes the velocity of the refractor then the elevation
+correction is</p>
+<div class="math notranslate nohighlight">
+\[t_{elev} = -(h_S + h_D)\frac{(v_n^2 - v_1^2)^\frac{1}{2}}{v_1v_n}\]</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="seismic_interpretation.html" class="btn btn-neutral float-left" title="Interpretation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="seismic_reflection_interpretation.html" class="btn btn-neutral float-right" title="Vertical Resolution" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

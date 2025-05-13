@@ -1,0 +1,524 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Survey methods &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Mathematical representations of the Earth" href="foundations_model_types.html" />
+    <link rel="prev" title="A seven-step framework for applied geophysics" href="foundations_sevensteps.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Foundations</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="seeing_underground/index.html">Seeing Underground</a></li>
+<li class="toctree-l2"><a class="reference internal" href="foundations_sevensteps.html">A seven-step framework for applied geophysics</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Survey methods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#magnetics">Magnetics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gradient-magnetics">Gradient Magnetics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gravity">Gravity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dc-resistivity">DC resistivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#induced-polarization">Induced polarization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#seismic-reflection">Seismic reflection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#seismic-refraction">Seismic refraction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gpr-ground-penetrating-radar">GPR (ground penetrating radar)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#electromagnetic-em-terrain-conductivity">Electromagnetic (EM) terrain conductivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#frequency-domain-em">Frequency domain EM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#time-domain-em">Time domain EM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vlf-electromagnetics-em">VLF electromagnetics (EM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rcptu">RCPTU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other-surveys">Other surveys</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="foundations_model_types.html">Mathematical representations of the Earth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="foundations_inversion.html">Inversion Outline</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Foundations</a> &raquo;</li>
+        
+      <li>Survey methods</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/foundations/foundations_survey_methods.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="survey-methods">
+<span id="foundations-survey-methods"></span><h1>Survey methods<a class="headerlink" href="#survey-methods" title="Link to this heading"></a></h1>
+<p>The following are one-paragraph summaries that serve as an introduction to
+geophysical survey methods. Each paragraph connects a survey with a physical
+property, typical surveying configurations, and styles of interpretation.</p>
+<section id="magnetics">
+<h2>Magnetics<a class="headerlink" href="#magnetics" title="Link to this heading"></a></h2>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/men-mag.jpg"><img alt="../../_images/men-mag.jpg" src="../../_images/men-mag.jpg" style="width: 90.0px; height: 117.0px;" />
+</a>
+</figure>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/icon_mag.gif"><img alt="../../_images/icon_mag.gif" src="../../_images/icon_mag.gif" style="width: 108.0px; height: 120.60000000000001px;" />
+</a>
+</figure>
+<p>Measurements of the magnetic field contain information about subsurface
+variations in <strong>magnetic susceptibility</strong>. The measurements record the sum of
+Earth’s field and fields induced in magnetic materials. More magnetic (i.e.
+susceptible) materials have stronger induced fields. Removing Earth’s field
+from the observations yields anomalous fields that can be interpreted in terms
+of where magnetic material lies and also its susceptiblity and shape. Data can
+be acquired in the air (planes, satellites), on the ground (stationary, moving
+platforms, marine) and inderground (boreholes, tunnels). Processed data are
+presented as maps or profiles, and advanced processing, involving inversion,
+yields parametric structures or 3D models of the subsurface susceptibility
+distribution.  Magnetic surveying is extremely versatile and applied in many
+areas in the geosciences.</p>
+</section>
+<section id="gradient-magnetics">
+<h2>Gradient Magnetics<a class="headerlink" href="#gradient-magnetics" title="Link to this heading"></a></h2>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/icon_maggrad.gif"><img alt="../../_images/icon_maggrad.gif" src="../../_images/icon_maggrad.gif" style="width: 116.10000000000001px; height: 126.0px;" />
+</a>
+</figure>
+<p>Measurements of <em>gradient</em> of the magnetic field are acquired by using two
+magnetometers and taking the difference between the measured values.Grandients
+in the Z, X or Y directions can be measured.  The measured anomalies are
+smaller, but resolution is higher and sensitive to structure near the
+instruments. Surveys are conducted on the ground, by fixed-wing aircraft, and
+by helicopter. As in magnetic surveys, gradient magnetic measurements are
+interpreted in terms of variations in <strong>magnetic susceptibility.</strong></p>
+</section>
+<section id="gravity">
+<h2>Gravity<a class="headerlink" href="#gravity" title="Link to this heading"></a></h2>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/man-grav.jpg"><img alt="../../_images/man-grav.jpg" src="../../_images/man-grav.jpg" style="width: 90.0px; height: 117.0px;" />
+</a>
+</figure>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/icon_grav.gif"><img alt="../../_images/icon_grav.gif" src="../../_images/icon_grav.gif" style="width: 108.0px; height: 97.2px;" />
+</a>
+</figure>
+<p>Measurements of Earth’s gravitational field can reveal subsurface variations
+in <strong>density</strong> because gravitational attraction depends upon the mass of
+material. The measurements vary with latitude, elevation, and topography,so
+these need to be recorded accurately for every measurement. Measurements
+require meticulous care, but it is now common to carry out surveys on land, on
+ships, on airborne platforms, in boreholes, and by observing satellite orbit
+perturbations. Results are interpreted in terms of density contrasts. Airborne
+gravity gradiometer data have been available since the mid 1990’s.</p>
+</section>
+<section id="dc-resistivity">
+<h2>DC resistivity<a class="headerlink" href="#dc-resistivity" title="Link to this heading"></a></h2>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/pwr-stake-b.jpg"><img alt="../../_images/pwr-stake-b.jpg" src="../../_images/pwr-stake-b.jpg" style="width: 70.2px; height: 117.0px;" />
+</a>
+</figure>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/icon_dc1.gif"><img alt="../../_images/icon_dc1.gif" src="../../_images/icon_dc1.gif" style="width: 135.0px; height: 82.8px;" />
+</a>
+</figure>
+<p><strong>Electrical resistivity</strong> of subsurface materials is measured by causing an
+electrical current to flow in the earth between one pair of electrodes while
+the voltage across a second pair of electrodes is measured. The result is
+converted to an  “apparent” resistivity which is a value representing the
+weighted average resistivity over a volume of the earth. Variations in this
+measurement are caused by variations in the soil, rock, and pore fluid
+electrical resistivity. Surveys require contact with the ground, so they can
+be labour intensive. Results are sometimes interpreted directly, but more
+commonly, 1D, 2D or 3D models are estimated using inversion procedures. When
+the survey is conducted in order to obtain a 1D model, it is called a
+sounding. Profiles are used to build 2D models of the earth. Multiple lines,
+or more complex electrode arrangements are used to obtain 3D
+interpretations. Soundings and profiles are defined as follows:</p>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/1d-interp.gif"><img alt="../../_images/1d-interp.gif" src="../../_images/1d-interp.gif" style="width: 100.0px; height: 80.0px;" />
+</a>
+</figure>
+<p><strong>Soundings</strong> are surveys that are arranged so that measurements reveal vertical
+variations in resistivity under one location. The earth is interpreted in
+terms of flat lying layers. Results are often displayed rather like a drill
+core.</p>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/2d-assumption.gif"><img alt="../../_images/2d-assumption.gif" src="../../_images/2d-assumption.gif" style="width: 100.0px; height: 80.0px;" />
+</a>
+</figure>
+<p><strong>Profiles</strong> are surveys that are arranged in order to be interpreted in terms
+of vertical and lateral variations under a line of measurements. Results are
+interpreted in 2D and presented as a cross-section of the earth, that is,
+the assumption is that the structures extend without change either side of
+the survey line.</p>
+</section>
+<section id="induced-polarization">
+<h2>Induced polarization<a class="headerlink" href="#induced-polarization" title="Link to this heading"></a></h2>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/dc-richmond.jpg"><img alt="../../_images/dc-richmond.jpg" src="../../_images/dc-richmond.jpg" style="width: 94.5px; height: 117.0px;" />
+</a>
+</figure>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/icon_ip.gif"><img alt="../../_images/icon_ip.gif" src="../../_images/icon_ip.gif" style="width: 135.0px; height: 82.8px;" />
+</a>
+</figure>
+<p>Some earth materials act like capacitors and build up internal charges when a
+current is passed through. The ability to accumulate this charge is called
+<strong>chargeability</strong> . An Induced polarization (or IP) survey measures secondary
+responses associated with chargeability. IP measurements  can be made at the
+same time, and with the same equipment, as used for a DC resistivity survey.
+Clays, graphite, and sulphide minerals have large chargeabilty but small
+changes in chargeability can be detected when groundwater is contaminated with
+salt, hydrocarbons, or other materials. Data can be collected at the surface
+or in boreholes or tunnels.</p>
+</section>
+<section id="seismic-reflection">
+<h2>Seismic reflection<a class="headerlink" href="#seismic-reflection" title="Link to this heading"></a></h2>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/man-seis.jpg"><img alt="../../_images/man-seis.jpg" src="../../_images/man-seis.jpg" style="width: 94.5px; height: 117.0px;" />
+</a>
+</figure>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/icon_refl.gif"><img alt="../../_images/icon_refl.gif" src="../../_images/icon_refl.gif" style="width: 108.0px; height: 109.8px;" />
+</a>
+</figure>
+<p>An impulse of compressional or shearing energy will travel from its source
+(such as a hammer strike on a metal plate, and explosion, or an earthquake)
+through the ground. This energy will be reflected and refracted (bent) by
+changes in the ground’s <strong>elastic properties</strong> and <strong>density</strong>. Reflection
+surveys are designed to record signals with differing seismic velocities
+(which is related to density and elasticity) that have been reflected from
+boundaries between materials within the ground. Data require significant
+processing before results are usable but seismic reflection surveying
+represents over 90% of the geophysics done in support of exploration for oil
+and gas. Results can be interpreted in terms of subsurface layering if
+interfaces between layers are with roughly 10 or 20 degrees of horizontal.
+Contacts between geologic units that are nearly vertical are difficult to
+image with seismic reflection, although breaks in horizontal features can
+often be found. Petroleum exploration work may involve investigating the
+ground to a few kilometers of depth. Engineering-scale surveys may involve
+studying only the first few 10’s of meters depth.</p>
+</section>
+<section id="seismic-refraction">
+<h2>Seismic refraction<a class="headerlink" href="#seismic-refraction" title="Link to this heading"></a></h2>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/icon_refrac.gif"><img alt="../../_images/icon_refrac.gif" src="../../_images/icon_refrac.gif" style="width: 108.0px; height: 108.9px;" />
+</a>
+</figure>
+<p>Refraction surveys are designed to record signals that have been bent within
+the ground so that they arrive back at the surface. The bending or refraction
+occurs due to increasing seismic velocity in the ground, which in turn is
+related to the ground’s <strong>elastic properties</strong> and <strong>density</strong>. The method is
+popular for mapping sub-horizontal structure, but is not very effective at
+characterizing features that are nearly vertical. Instruments are similar to
+those used for seismic reflection surveys, but field layouts are different.
+Like reflection surveying, results cannot be used without significant
+processing. Surveys can be carried out at almost any scale from lines a few
+10’s of meters long to lines many kilometers long.</p>
+</section>
+<section id="gpr-ground-penetrating-radar">
+<h2>GPR (ground penetrating radar)<a class="headerlink" href="#gpr-ground-penetrating-radar" title="Link to this heading"></a></h2>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/gpr-c.jpg"><img alt="../../_images/gpr-c.jpg" src="../../_images/gpr-c.jpg" style="width: 108.0px; height: 117.0px;" />
+</a>
+</figure>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/icon_gpr.gif"><img alt="../../_images/icon_gpr.gif" src="../../_images/icon_gpr.gif" style="width: 108.0px; height: 99.9px;" />
+</a>
+</figure>
+<p>GPR is similar to seismic reflection, but using electromagnetic energy instead
+of acoustic energy. Pulses of radio energy are emitted from one antenna and
+echoes are received at a second antenna. Results are plotted and sometimes
+processed, similar to seismic reflection, although data processing is usually
+much less intensive compared to that required for seismic reflection work. The
+ground’s <strong>electrical resistivity</strong> controls the depth of signal penetration.
+Penetration is usually less than 10 meters. Signals echo at boundaries where
+<strong>electrical resistivity</strong> and/or <strong>dielectric permittivity</strong> change abruptly.
+<strong>Dielectric permittivity</strong> is a quantity related to the ease with which
+materials become polarized in the presence of an electric field.  It is mainly
+affected by the amount of water in materials.</p>
+</section>
+<section id="electromagnetic-em-terrain-conductivity">
+<h2>Electromagnetic (EM) terrain conductivity<a class="headerlink" href="#electromagnetic-em-terrain-conductivity" title="Link to this heading"></a></h2>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/em-31c.jpg"><img alt="../../_images/em-31c.jpg" src="../../_images/em-31c.jpg" style="width: 80.10000000000001px; height: 117.0px;" />
+</a>
+</figure>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/icon_em311.gif"><img alt="../../_images/icon_em311.gif" src="../../_images/icon_em311.gif" style="width: 108.0px; height: 115.2px;" />
+</a>
+</figure>
+<p>Electromagnetic methods involve using oscillating electromagnetic energy which
+penetrates the ground and causes (induces) secondary EM fields in regions of
+elevated <strong>electrical conductivity</strong> (i.e.reduced <strong>electrical resistivity</strong>).
+Terrain conductivity surveys usually involve a handheld instrument operating
+at a single frequency. Some systems estimate terrain conductivity at several
+frequencies. One transmitter coil generates the EM energy and a second
+receiver coil detects EM fields caused by the transmitter, as well as fields
+induced in subsurface conductive regions. Large data sets can be collected
+efficiently.  Data are usually plotted as maps or line profiles of apparent
+conductivity and interpreted to find horizontal locations of conductive
+features. The results cannot be used directly to learn about variations of
+conductivity with depth.</p>
+</section>
+<section id="frequency-domain-em">
+<h2>Frequency domain EM<a class="headerlink" href="#frequency-domain-em" title="Link to this heading"></a></h2>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/man-maxmin.jpg"><img alt="../../_images/man-maxmin.jpg" src="../../_images/man-maxmin.jpg" style="width: 70.2px; height: 117.0px;" />
+</a>
+</figure>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/icon_fem.gif"><img alt="../../_images/icon_fem.gif" src="../../_images/icon_fem.gif" style="width: 108.0px; height: 116.10000000000001px;" />
+</a>
+</figure>
+<p>The EM terrain conductivity survey discussed above is a simple form of
+frequency domain EM (FEM). More sophisticated FEM surveys involve using
+multiple frequency and/or coil configurations. Surveys can be carried out on
+the ground or from airborne platforms (fixed wing or, more commonly, systems
+towed by a helicopter) or in marine environments. Each set of measurements at
+one location using a range of frequencies and/or coil configurations
+represents a “sounding” (see DC methods above). Such results can be
+interpreted in terms of 1D layered earth models of  <strong>electrical resistivity</strong>
+or <strong>electrical conductivity</strong> directly under sensor.  Information about the
+ground can be obtained from very shallow to 100’s of meters deep. FEM surveys
+can also be carried out using grounded transmitters and receivers that measure
+magnetic or electric fields. Interpreting data from multiple transmitters and
+receivers requires stitching together 1D inversion results or carrying out a
+full 3D inversion of the data.</p>
+</section>
+<section id="time-domain-em">
+<h2>Time domain EM<a class="headerlink" href="#time-domain-em" title="Link to this heading"></a></h2>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/icon_tem.gif"><img alt="../../_images/icon_tem.gif" src="../../_images/icon_tem.gif" style="width: 108.0px; height: 92.7px;" />
+</a>
+</figure>
+<p>Time domain EM (TEM) methods are the same as FEM methods, except that the
+energy source (the current in a transmitter) is a transient signal instead of
+being at a fixed frequency. When the energy source is turned off instruments
+record the secondary fields that exist for a few micro- or milli-seconds
+following the source signal’s transition. Although the physics for FEM and TEM
+surveys is the same, the instrumentation to carry out the surveys is
+different. Like FEM surveys, each TEM measurement is usually treated as a
+sounding; many measurements must be carried out to produce many soundings,
+which may then be interpreted as a collection of soundings. TEM surveys can be
+carried out on the ground or from airborne platforms, and borehole TEM surveys
+are common for mineral exploration. Some TEM systems can produce information
+about ground as much as 300 or 400 meters deep, but most TEM surveys involve
+investigating only the first few 100 meters. As for all electrical and
+electromagnetic methods, TEM measurements yield information about variations
+in the earth’s <strong>electrical resistivity</strong> or its reciprocal <strong>electrical
+conductivity.</strong></p>
+</section>
+<section id="vlf-electromagnetics-em">
+<h2>VLF electromagnetics (EM)<a class="headerlink" href="#vlf-electromagnetics-em" title="Link to this heading"></a></h2>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/man-vlf.jpg"><img alt="../../_images/man-vlf.jpg" src="../../_images/man-vlf.jpg" style="width: 97.2px; height: 117.0px;" />
+</a>
+</figure>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/icon_vlf.gif"><img alt="../../_images/icon_vlf.gif" src="../../_images/icon_vlf.gif" style="width: 108.0px; height: 82.8px;" />
+</a>
+</figure>
+<p>The VLF (Very Low Frequency) band is a portion of the electromagnetic spectrum
+that was used for very long distance communications between the 1920’s and
+1990’s. Some transmitters are still operational, and these signals interact
+with shallow materials (within the top 20 to 50 meters) in ways that can be
+measured. Results are useful for detecting buried metallic objects, and (less
+reliably) for mapping variations in <strong>electrical resistivity.</strong></p>
+</section>
+<section id="rcptu">
+<h2>RCPTU<a class="headerlink" href="#rcptu" title="Link to this heading"></a></h2>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/rcpttruck.jpg"><img alt="../../_images/rcpttruck.jpg" src="../../_images/rcpttruck.jpg" style="width: 101.7px; height: 117.0px;" />
+</a>
+</figure>
+<p>RCPTU stands for “resistivity cone penetrometer testing unit.” This is a push-
+cone technology involving a system that pushes an instrumented cone into the
+ground. The <strong>electrical resistivity</strong> of the ground is measured using a small
+scale 4-electrode system mounted just behind the cone, which yields in-situ
+measurements of materials directly adjacent to the instrument. Various other
+geotechnical and geophysical parameters of the materials can be measured,
+including shear strength, tip stress, fluid permeability, pore pressure,
+friction, shear wave velocity (using a surface source), and others. The image
+shows a CPTU truck operated by the University of British Columbia Department
+of Civil Engineering.</p>
+</section>
+<section id="other-surveys">
+<h2>Other surveys<a class="headerlink" href="#other-surveys" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>Survey methods not discussed on this page include:</dt><dd><ul class="simple">
+<li><p>Borehole geophysical methods</p></li>
+<li><p>Radiometric methods, which involve investigating the radioactivity of ground materials</p></li>
+<li><p>Natural source and controlled source magnetotelluric methods (which involve low frequency EM sources)</p></li>
+<li><p>Spontaneous Potential methods, which involve measuring natural voltages that occur in the ground due to movement of fluids or chemical reactions between fluids and minerals</p></li>
+<li><p>Nuclear magnetic resonance imaging, which uses the interaction of time-varying magnetic fields with proton spins to measure the amount of non-bound water.</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="foundations_sevensteps.html" class="btn btn-neutral float-left" title="A seven-step framework for applied geophysics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="foundations_model_types.html" class="btn btn-neutral float-right" title="Mathematical representations of the Earth" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

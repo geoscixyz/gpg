@@ -1,0 +1,264 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equations for modeling DC phenomenona &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Currents and voltages in a uniform earth" href="DC_basic_principles_current_voltage_halfspace.html" />
+    <link rel="prev" title="Basic principles" href="DC_basic_principles_index.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">DC Resistivity</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DC_physical_properties.html">Conductivity</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="DC_basic_principles_index.html">Basic principles</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Equations for modeling DC phenomenona</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DC_basic_principles_current_voltage_halfspace.html">Currents and voltages in a uniform earth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DC_basic_principles_heterogeneous_earth.html">Currents and voltages in an heterogeneous earth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DC_basic_principles_anisotropy.html">Anisotropic ground</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DC_surveys.html">Surveys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DC_data.html">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DC_interpretation.html">Interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DC_instruments.html">DC resistivity instruments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DC_examples.html">Case Histories</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">DC Resistivity</a> &raquo;</li>
+        
+          <li><a href="DC_basic_principles_index.html">Basic principles</a> &raquo;</li>
+        
+      <li>Equations for modeling DC phenomenona</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/DC_resistivity/DC_basic_principles_equations.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="equations-for-modeling-dc-phenomenona">
+<span id="dc-basic-principles-equations"></span><h1>Equations for modeling DC phenomenona<a class="headerlink" href="#equations-for-modeling-dc-phenomenona" title="Link to this heading"></a></h1>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/principles_dcresf1.gif"><img alt="../../_images/principles_dcresf1.gif" src="../../_images/principles_dcresf1.gif" style="width: 200.0px; height: 168.0px;" />
+</a>
+</figure>
+<p>Using the physics and appropriate mathematics to calculate a set of
+measurements is called “forward modeling.” The DC resistivity forward modeling
+problem involves describing potentials everywhere as a function of
+conductivity in the ground, geometry, and input current. It requires three
+fundamental relations:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;(a) \quad \textbf{J} = \sigma \textbf{E} \quad &amp;&amp;\textrm{Ohm's Law}  \\[0.4em]
+&amp;(b) \quad \textbf{E} = - \nabla V \quad  &amp;&amp;\textrm{The electric field is the negative gradient of a scalar potential.}  \\[0.4em]
+&amp;(c) \quad \nabla \cdot\ \textbf{J} = - \partial{Q} / \partial{t} \quad &amp;&amp;\textrm{The divergence of current density equals the rate of change of free charge density.}\end{split}\]</div>
+<p>We want to obtain a differential equation and boundary conditions to define
+the forward problem that will allow us to relate conductivity everywhere to
+potential everywhere. Start by combining (a) and (b) to say <span class="math notranslate nohighlight">\(\textbf{J} =
+\sigma \nabla V\)</span>, then plug this into (c) to get</p>
+<div class="math notranslate nohighlight">
+\[\nabla \cdot\ (\sigma \nabla V) = \partial{Q} / \partial{t} \quad (2)\]</div>
+<p>This holds for steady state conditions everywhere, except at the source
+position <span class="math notranslate nohighlight">\(r = r_s\)</span>, where it equals the input current, <span class="math notranslate nohighlight">\(I\)</span>. In other
+words, charge does not accumulate under steady state conditions, except at the
+point of the source.</p>
+<p>Equation (2) can be re-written as</p>
+<div class="math notranslate nohighlight">
+\[\nabla \cdot\ (\sigma \nabla V) = I \delta (r-r_s) \quad (3)\]</div>
+<p>The Dirac delta function is used here to indicate that charge density is
+varying only at the point source of current.</p>
+<dl class="simple">
+<dt><strong>Boundary conditions</strong> that must hold are:</dt><dd><ol class="arabic simple">
+<li><p>The change of potential across the free surface is zero (<span class="math notranslate nohighlight">\(\partial{V}/\partial{n} = 0\)</span> at <span class="math notranslate nohighlight">\(z=0\)</span>), and</p></li>
+<li><p><span class="math notranslate nohighlight">\(V\)</span> approaches 0 as <span class="math notranslate nohighlight">\(r - r_s\)</span> approaches infinity.</p></li>
+</ol>
+</dd>
+</dl>
+<p>This differential equation (3) and the two boundary conditions define the
+forward problem that relates conductivity everywhere in the ground to
+potential measured anywhere within or on the surface of the ground. This
+problem can be solved numerically using finite element or finite volume
+techniques.</p>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading"></a></h2>
+<p><strong>Dey , A. and H.F. Morrison</strong>, 1979a, <em>Resistivity modelling for arbitrarily shaped two-dimensional structures</em>, Geophysical Prospecting, 27, 106-136.</p>
+<p><strong>Dey, A. and H.F. Morrison, 1979b</strong>, <em>Resistivity modeling for arbitrarily shaped three-dimensional structures</em>, Geophysics, 44, no. 4, 753-780.</p>
+<p><strong>McGillevry, P.R.</strong>, 1992, <em>Forward modelling and inversion of DC resistivity and MMR data</em>, unpublished PhD. thesis, UBC.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DC_basic_principles_index.html" class="btn btn-neutral float-left" title="Basic principles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DC_basic_principles_current_voltage_halfspace.html" class="btn btn-neutral float-right" title="Currents and voltages in a uniform earth" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

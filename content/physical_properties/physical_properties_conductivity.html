@@ -1,0 +1,333 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Electrical Conductivity &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Chargeability" href="induced_polarization_physical_properties_duplicate.html" />
+    <link rel="prev" title="Dielectric Permittivity" href="physical_properties_dielectric_permittivity.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Physical Properties</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="physical_properties_density.html">Density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_susceptibility_duplicate.html">Susceptibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_velocity_duplicate.html">Seismic Velocity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physical_properties_dielectric_permittivity.html">Dielectric Permittivity</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Electrical Conductivity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#conductivity-measurements">Conductivity Measurements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conductivities-of-common-rocks">Conductivities of Common Rocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#factors-affecting-rock-conductivity">Factors Affecting Rock Conductivity</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="induced_polarization_physical_properties_duplicate.html">Chargeability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tables/index.html">Tables of Physical Properties</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Physical Properties</a> &raquo;</li>
+        
+      <li>Electrical Conductivity</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/physical_properties/physical_properties_conductivity.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="electrical-conductivity">
+<span id="physical-properties-conductivity"></span><h1>Electrical Conductivity<a class="headerlink" href="#electrical-conductivity" title="Link to this heading"></a></h1>
+<p>Electrical conductivity (<span class="math notranslate nohighlight">\(\sigma\)</span>)  is a physical property that describes how easily electric currents can flow through a medium when subjected to an applied electric field.
+More specifically, it defines the relationship  between the electrical current density (<span class="math notranslate nohighlight">\(\vec J\)</span>) within a material, and the electric field (<span class="math notranslate nohighlight">\(\vec E\)</span>) :</p>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/conductivity_physics_diagram.png"><img alt="../../_images/conductivity_physics_diagram.png" src="../../_images/conductivity_physics_diagram.png" style="width: 322.0px; height: 300.5px;" />
+</a>
+</figure>
+<div class="math notranslate nohighlight">
+\[\vec J = \sigma \vec E\]</div>
+<p>Within rocks and other materials, there are free electrical charges.
+When an electric field is applied to a material, these charges experience an electrical (Coulomb) force.
+This force causes the free charges to move through the material along the direction of the applied field; with positive charges moving parallel to the field and negative charges moving in the opposite direction.
+The size of the flow of electrical charges through a material is known as electrical current (<span class="math notranslate nohighlight">\(\vec I\)</span>).
+Current density represents the amount of current flowing per unit cross-sectional area (<span class="math notranslate nohighlight">\(A\)</span>), where:</p>
+<div class="math notranslate nohighlight">
+\[\vec J = \frac{\vec I}{A}\]</div>
+<p>In conductive materials (larger <span class="math notranslate nohighlight">\(\sigma\)</span>), free charges move quite easily and strong currents may be induced by a relatively weak electrical field.
+In contrast, resistive materials (smaller <span class="math notranslate nohighlight">\(\sigma\)</span>) require strong electrical fields in order to produce any significant current.</p>
+<p><strong>Resistivity</strong>: An equivalent physical property to the conductivity is the resistivity (<span class="math notranslate nohighlight">\(\rho\)</span>).
+By definition, the resistivity of a material is the reciprocal of its conductivity:</p>
+<div class="math notranslate nohighlight">
+\[\rho = \frac{1}{\sigma}\]</div>
+<p>Both the electrical conductivity and resistivity are acceptable for describing the conductive properties of rocks and they are sometimes used interchangeably.
+Parameters used to define the conductive properties and their associated S.I. units are summarized below.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Property</strong></p></th>
+<th class="head"><p><strong>Symbol</strong></p></th>
+<th class="head"><p><strong>Units</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Electric Field</p></td>
+<td><p><span class="math notranslate nohighlight">\(\vec E\)</span></p></td>
+<td><p>V/m</p></td>
+</tr>
+<tr class="row-odd"><td><p>Current Density</p></td>
+<td><p><span class="math notranslate nohighlight">\(\vec J\)</span></p></td>
+<td><p>A/m <span class="math notranslate nohighlight">\(\!^2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Electric Current</p></td>
+<td><p><span class="math notranslate nohighlight">\(\vec I\)</span></p></td>
+<td><p>A</p></td>
+</tr>
+<tr class="row-odd"><td><p>Conductivity</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sigma\)</span></p></td>
+<td><p>S/m or mS/m</p></td>
+</tr>
+<tr class="row-even"><td><p>Resistivity</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rho\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\Omega\cdot\!\)</span> m</p></td>
+</tr>
+</tbody>
+</table>
+<p>where V is volts, A is Amperes and S is Siemens.
+Millisiemens per meter (mS/m) are often used (1000 mS/m = 1 S/m).
+Thus 1 mS/m = 1000 <span class="math notranslate nohighlight">\(\Omega\cdot\!\)</span> m.</p>
+<section id="conductivity-measurements">
+<h2>Conductivity Measurements<a class="headerlink" href="#conductivity-measurements" title="Link to this heading"></a></h2>
+<p>Measuring a rock’s conductivity/resistivity is fairly straightforward.
+First, a cylindrical core sample is taken from the rock.
+The core sample is then placed in a sample holder between two copper/graphite electrodes where it acts as a resistive element for a circuit.</p>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/electrode_conductivity_measurements.png"><img alt="../../_images/electrode_conductivity_measurements.png" src="../../_images/electrode_conductivity_measurements.png" style="width: 315.7px; height: 214.89999999999998px;" />
+</a>
+</figure>
+<p>Next, a source is used to drive direct current (<span class="math notranslate nohighlight">\(I\)</span>) through the core sample.
+By measuring the voltage drop (<span class="math notranslate nohighlight">\(\Delta V\)</span>) accross the length of the sample, Ohm’s law can be used to determine the circuit resistance (<span class="math notranslate nohighlight">\(R\)</span>) caused by the rock:</p>
+<div class="math notranslate nohighlight">
+\[R = \frac{\Delta V}{I}\]</div>
+<p>The measured resistance increases proportional to the length (<span class="math notranslate nohighlight">\(L\)</span>) of the core sample.
+We expect this given that the current must flow through more of the resistive material.
+The measured resistance is also inversely proportional to the cross-sectional area (<span class="math notranslate nohighlight">\(A\)</span>) of the sample.
+This relationship can be understood by comparing the net resistance of two identical resistors in parallel to a single resistor in series.</p>
+<p>Ultimately, the resistivity of the sample can be obtained from the measured resistance, the length of the core and its cross-sectional area using Pouillet’s law:</p>
+<div class="math notranslate nohighlight">
+\[\rho = \frac{R A}{L}\]</div>
+</section>
+<section id="conductivities-of-common-rocks">
+<h2>Conductivities of Common Rocks<a class="headerlink" href="#conductivities-of-common-rocks" title="Link to this heading"></a></h2>
+<p>A chart showing the range of electrical conductivity/resistivity values for common rock types is shown below.
+Note that the scale is logarithmic, indicating a huge variability in conductivity/resistivity among rocks.
+From this chart we can infer several things:</p>
+<ul class="simple">
+<li><p>Massive sulphides and graphite-bearing rocks are by far the most conductive.</p></li>
+<li><p>Carbonate rocks and unconsolidated sediments are very resistive</p></li>
+<li><p>Weathered igneous and metamorphic rocks are more conductive than unweathered igneous and metamorphic rocks.</p></li>
+<li><p>Sedimentary rocks containing clays are generally more conductive.</p></li>
+<li><p>Salt water is more conductive than fresh water.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/resistivity_table1.png"><img alt="../../_images/resistivity_table1.png" src="../../_images/resistivity_table1.png" style="width: 1157.0px; height: 918.0px;" />
+</a>
+</figure>
+</section>
+<section id="factors-affecting-rock-conductivity">
+<h2>Factors Affecting Rock Conductivity<a class="headerlink" href="#factors-affecting-rock-conductivity" title="Link to this heading"></a></h2>
+<p><strong>Porosity, Pore Saturation and Pore Fluid</strong></p>
+<p>Most rocks contain pore-spaces which are at least partially saturated with ionic fluids.
+These fluids include: fresh water, brackish water, ocean water and brine.
+Because pore fluids have a higher conductivity than most rock-forming minerals, electrical current generally prefers to flow through the pore-space whenever possible.
+As a result, the bulk conductivity of the rock depends significantly upon its porosity, fluid saturation and the type of fluid contained within the pore-space.</p>
+<p>For rocks which are unsaturated, the pore space is occupied solely by air.
+Because air is very resistive, it forces the current to flow through the minerals comprising the rock.
+As a result, unsaturated rocks are poorly conductive.
+When a sufficient percentage of the pore-space is saturated, the pore fluid is able to offer a more efficient pathway for the current.
+Thus, the bulk conductivity of rocks generally increases as fluid saturation increases.</p>
+<p>Current flows through a rock’s pore-fluid via ionic conduction.
+As a result, the conductivity of the pore-fluid depends on the concentration of dissolved ions.
+Pore-fluid conductivity increases as the concentration of dissolved ions increases.
+This implies that rocks containing more brackish pore fluid are more conductive than rocks containing fresh-water.</p>
+<p><strong>Tortuosity</strong></p>
+<p>Tortuosity defines the connectivity and complexity of a rock’s pore-space network.
+For rocks with low tortuosities, the current’s path through the pore space is simple; resulting in efficient conduction of electrical charges.
+For rocks with high tortuosities, the path the current must take to get through the rock is very indirect.
+As a result, conduction is inefficient, and the rock is more resistive.</p>
+<p><strong>Mineralization</strong></p>
+<p>Electrical current within a rock will choose not to flow through the pore-space if the rock forming minerals are more conductive.
+This occurs frequently in ore-bearing rocks due to the presence of metal-oxides (magnetite, illmenite, specular hematite), metal-sulphides (pyrite, pyrrhotite, galena) and native metals (gold, silver, copper).
+One exception is graphite, which despite being entirely comprised of carbon, is very conductive.
+As expected, the conductivity increases as the concentration of conductive minerals within the rock increases.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="physical_properties_dielectric_permittivity.html" class="btn btn-neutral float-left" title="Dielectric Permittivity" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="induced_polarization_physical_properties_duplicate.html" class="btn btn-neutral float-right" title="Chargeability" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
