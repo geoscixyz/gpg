@@ -13,8 +13,8 @@ Modern portable land-based instruments include automated leveling, data
 recording, and logging, but essentially their sensors are based upon
 variations of a mass on a spring. If the force on a spring is to be measured
 accurately to tell us geologically useful information about gravity, then
-changes in spring length, :math:`ds`, must be measured with a precision of
-1:109. Therefore, some form of "amplification" is required. A complete
+changes in spring length, :math:`ds`, must be measured with a precision of :math:`10^-9`.
+Therefore, some form of "amplification" is required. A complete
 discussion of instruments is beyond the scope of these notes, but some of the
 characteristics of the most common instruments are listed here.
 
