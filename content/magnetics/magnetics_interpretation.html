@@ -1,0 +1,864 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interpretation &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Magnetic dipole applet" href="magnetics_applet.html" />
+    <link rel="prev" title="Processing" href="magnetics_processing.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Magnetics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="magnetics_introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_physical_property.html">Susceptibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_basic_principles.html">Basic Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_survey.html">Survey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_data.html">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_processing.html">Processing</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Interpretation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#direct-data-interpretation">Direct Data Interpretation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#estimating-depth-of-burial-from-half-width">Estimating Depth of Burial from Half-Width</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#derivative-maps">Derivative Maps</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tli-kwi-cho-tkc-a-primer">Tli Kwi Cho (TKC): <em>A primer</em></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#data-map">Data map</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#parametric-simulation">Parametric Simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inversion">Inversion</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#final-interpretation">Final Interpretation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_applet.html">Magnetic dipole applet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Magnetics</a> &raquo;</li>
+        
+      <li>Interpretation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/magnetics/magnetics_interpretation.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="interpretation">
+<span id="magnetics-interpretation"></span><h1>Interpretation<a class="headerlink" href="#interpretation" title="Link to this heading"></a></h1>
+<p>In this we focus on various techniques used to interpret the magnetic data.
+From an applied geoscientists standpoint, this is where most of the data
+integration and decision making steps are made. In some cases <a class="reference internal" href="#direct-data-interpretation"><span class="std std-ref">direct
+data interpretation</span></a> can be used. In others, in
+particular when a 3D geologic interpretation is needed, an <a class="reference internal" href="#mag-inversion"><span class="std std-ref">inversion</span></a> is required. On this page, we discuss these techniques and
+illustrate common interpretation techniques on a
+<a class="reference internal" href="#tkc-primer"><span class="std std-ref">mineral exploration example</span></a>.</p>
+<section id="direct-data-interpretation">
+<span id="id1"></span><h2>Direct Data Interpretation<a class="headerlink" href="#direct-data-interpretation" title="Link to this heading"></a></h2>
+<p>We begin with direct data interpretation techniques. Informations about the
+sub-surface are inferred directly from the data, either through filtering
+methods or by analyzing the shape and amplitude of magnetic field anomalies.</p>
+<section id="estimating-depth-of-burial-from-half-width">
+<span id="half-width"></span><h3>Estimating Depth of Burial from Half-Width<a class="headerlink" href="#estimating-depth-of-burial-from-half-width" title="Link to this heading"></a></h3>
+<p>For simple targets, a depth to the target can be estimated using the half-
+width. Most geologic setting are more complex and thus require more advanced
+interpretation.</p>
+<p>As discussed in <a class="reference internal" href="magnetics_basic_principles.html#magnetics-basic-principles"><span class="std std-ref">Basic Principles</span></a>, in simple
+scenarios, the target of a survey can be approximated:</p>
+<ul class="simple">
+<li><p>as a <a class="reference internal" href="magnetics_basic_principles.html#fields-magnetic-dipole"><span class="std std-ref">dipole</span></a> if it is a compact body</p></li>
+<li><p>or as a <a class="reference internal" href="magnetics_basic_principles.html#magnetics-extended-bodies"><span class="std std-ref">monopole</span></a> if it is an extended body .</p></li>
+</ul>
+<p>Consider a vertical inducing field (or alternatively, a data set that has been
+<a class="reference internal" href="magnetics_processing.html#magnetics-rtp"><span class="std std-ref">reduced to pole</span></a>), and a profile line of data over a target
+located at the origin. The total field anomaly is expected to take a shape similar
+to that show in figure <a class="reference internal" href="#halfwidth"><span class="std std-numref">Fig. 44</span></a>.</p>
+<p>We define the <strong>half-width</strong>, <span class="math notranslate nohighlight">\(x_{1/2}\)</span>, as the width of the anomaly at half
+its maximum (note that this is the <strong>anomaly</strong>, the background field has been removed).</p>
+<figure class="align-center" id="halfwidth" style="width: 70%">
+<img alt="../../_images/xhalf.png" src="../../_images/xhalf.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 44 </span><span class="caption-text">Definition of half-width.</span><a class="headerlink" href="#halfwidth" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>For a <strong>dipole</strong> target, the depth of burial(to the top of the target), <span class="math notranslate nohighlight">\(z\)</span>,  is
+approximately equal to the half-width</p>
+<div class="math notranslate nohighlight">
+\[z \sim x_{1/2}\]</div>
+<p>while for a <strong>monopole</strong> target, the depth of burial is</p>
+<div class="math notranslate nohighlight">
+\[z \sim \frac{1}{2} x_{1/2}\]</div>
+<p>You can explore this concept further with the <a class="reference internal" href="magnetics_applet.html#magnetics-applet"><span class="std std-ref">Jupyter Notebook app</span></a>.</p>
+</section>
+<section id="derivative-maps">
+<span id="magnetics-filters"></span><h3>Derivative Maps<a class="headerlink" href="#derivative-maps" title="Link to this heading"></a></h3>
+<p>While the data itself can be informative, image filtering techniques are commonly used by industry to further highlight important features present in the data. These filters a generally done in the <a class="reference external" href="https://en.wikipedia.org/wiki/Frequency_domain">frequency_domain</a> and require the data to be interpolated on a regular grid.
+Let <span class="math notranslate nohighlight">\(M(x,y,0)\)</span> be a grid of magnetic data taken at some reference elevation <span class="math notranslate nohighlight">\(z=0\)</span>.
+Here are few filters applied to a simple 1x1x0.1 m block anomaly (<a class="reference internal" href="#data-filters"><span class="std std-numref">Fig. 45</span></a>):</p>
+<ul>
+<li><p><strong>Upward Continuation (UC)</strong>: Magnetic data are synthetically moved vertically such that:</p>
+<div class="math notranslate nohighlight">
+\[UC = M(x,y,\delta z)\]</div>
+</li>
+</ul>
+<blockquote>
+<div><p>Upward continuation is commonly used to remove the effects of very nearby (or shallow) susceptible material. High frequency information decays rapidly, leaving only the broad features. Downward continuation is also possible in order to accentuate the high frequency content, but comes at the risk of enhancing noise in the gridded data.</p>
+</div></blockquote>
+<ul>
+<li><p><strong>First vertical derivative (1VD)</strong>: Quantifies the change in signal as a function of survey height.</p>
+<div class="math notranslate nohighlight">
+\[1VD = \frac{\partial M}{\partial z}\]</div>
+<p>1VD maps are commonly used to enhance the shorter wavelength signal.
+Notice how well the linear features are defined compared to the Total Field profile.</p>
+</li>
+<li><p><strong>Total horizontal derivative (THDR)</strong>: Measures the lateral rate of change of the measured field.</p>
+<div class="math notranslate nohighlight">
+\[THDR = \sqrt{\frac{\partial M}{\partial x}^2+\frac{\partial M}{\partial y}^2}\]</div>
+<p>This filter is most useful to highlight edges and delineate boundaries. Notice that the peak values occur over the edges of the block at -1 and 1 m.</p>
+</li>
+</ul>
+<figure class="align-center" id="data-filters" style="width: 100%">
+<img alt="../../_images/Mag_Filters_Derivatives.png" src="../../_images/Mag_Filters_Derivatives.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 45 </span><span class="caption-text">Magnetics derivative based filters</span><a class="headerlink" href="#data-filters" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="call-for-contributors">
+<h4>Call for contributors<a class="headerlink" href="#call-for-contributors" title="Link to this heading"></a></h4>
+<div class="col-md-2" align="center">
+   <a href="http://github.com/ubcgif/em"><i class="fa fa-wrench fa-4x" aria-hidden="true"></i></a>
+</div><p>There are many other filters published in the literature. Please contact us if you would like to contribute to this page.</p>
+</section>
+</section>
+</section>
+<section id="tli-kwi-cho-tkc-a-primer">
+<span id="tkc-primer"></span><h2>Tli Kwi Cho (TKC): <em>A primer</em><a class="headerlink" href="#tli-kwi-cho-tkc-a-primer" title="Link to this heading"></a></h2>
+<figure class="align-right" id="tkc-location" style="width: 50%">
+<img alt="../../_images/TKC_Location.png" src="../../_images/TKC_Location.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 46 </span><span class="caption-text">Aquisition locations for TKC</span><a class="headerlink" href="#tkc-location" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>We demonstrate the various interpretation techniques on a mineral exploration case study, the Tli Kwi Cho diamond deposit.
+Tli Kwi Cho (TKC) is a kimberlite complex in the Northwest Territories,  Canada.
+The Northwest Territories have been surveyed extensively for diamondiferous kimberlites since the early 1980s. The Lac de Gras region has been particularly productive, and hosts two of the largest Canadian deposits: the Ekati and Diavik mines.</p>
+<figure class="align-left" id="tkc-sketch" style="width: 30%">
+<img alt="../../_images/TKC_Kimbs.png" src="../../_images/TKC_Kimbs.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 47 </span><span class="caption-text">Simplified sketch of expected TKC kimberlite deposit</span><a class="headerlink" href="#tkc-sketch" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>A common geophysical fingerprint for a kimberlite pipe is a circular strong magnetic anomaly, with a gravitational low and an anomalous electromagnetic (EM) response.
+A generic model for kimberlite pipes found in the Lac de Gras region is presented in <a class="reference internal" href="#tkc-sketch"><span class="std std-numref">Fig. 47</span></a>. The main rock types associated with kimberlites are summarized in <a class="reference internal" href="#tkc-rocks"><span class="std std-numref">Table 6</span></a>.</p>
+<table class="docutils align-default" id="tkc-rocks">
+<caption><span class="caption-number">Table 6 </span><span class="caption-text">: Common rock types associated with kimberlites found in the Lac de Gras region</span><a class="headerlink" href="#tkc-rocks" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Rock Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Susceptibility</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Pyroclastic Kimberlite (PK)</p></td>
+<td><p>Extrusive, violent, post-eruption</p></td>
+<td><p>Moderate-low</p></td>
+</tr>
+<tr class="row-odd"><td><p>Volcaniclastic Kimberlite (VK)</p></td>
+<td><p>Extrusive, fragmental, main body</p></td>
+<td><p>Moderate-low</p></td>
+</tr>
+<tr class="row-even"><td><p>Hypabyssal Kimberlite (HK)</p></td>
+<td><p>Intrusive, igneous, coherent</p></td>
+<td><p>High</p></td>
+</tr>
+<tr class="row-odd"><td><p>Glacial till</p></td>
+<td><p>Sedimentary</p></td>
+<td><p>Low</p></td>
+</tr>
+</tbody>
+</table>
+<figure class="align-right" id="dighem-survey" style="width: 50%">
+<img alt="../../_images/TKC_RTF_Raw.png" src="../../_images/TKC_RTF_Raw.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 48 </span><span class="caption-text">Airborne magnetic data of TKC</span><a class="headerlink" href="#dighem-survey" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The TKC kimberlite complex was identified from an airborne magnetic and frequency-domain electromagnetic DIGHEM survey in 1992 (<a class="reference internal" href="#dighem-survey"><span class="std std-numref">Fig. 48</span></a>).
+Geophysics had been used during the discovery phase of TKC, but little had been done to model the deposit prior to drilling. As we will later discover, the TKC deposit differ from the standard kimberlite model found in the region.
+Consequently, the geological model used to explain the deposit underwent several revisions over the following decades.</p>
+<p>In this section, we will attempt to extract as much information as possible about the deposit strictly from the original airborne magnetic survey.</p>
+<section id="data-map">
+<h3>Data map<a class="headerlink" href="#data-map" title="Link to this heading"></a></h3>
+<p>2D plots of magnetic data, often referred to as maps, can provide insight
+about the geologic units, contacts, and the horizontal location of structures.
+What is presented, and how it is presented can greatly alter interpretations
+obtained by visually analyzing the maps. Raw data are not usually presented
+directly. Choices of contour plotting parameters must be made; features not
+related to targets might be removed; and data or image enhancement processing
+might be employed. Here we introduce some aspects of these topics.</p>
+<p>The first and simplest analysis can be done directly on the <a class="reference internal" href="magnetics_data.html#magnetics-field-data"><span class="std std-ref">Total Field Anomaly</span></a> data as shown below. The survey parameters are provided in <a class="reference internal" href="#dighem-param"><span class="std std-numref">Table 7</span></a>.</p>
+<p><strong>Note</strong>: The highest values observed on the gridded magnetic map are strongly correlated with the survey line locations. This is strictly an interpolation bias and should be ignore during the interpretation process.</p>
+<table class="docutils align-default" id="dighem-param">
+<caption><span class="caption-number">Table 7 </span><span class="caption-text">: Airborne DIGHEM (1992) magnetic survey.</span><a class="headerlink" href="#dighem-param" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Inducing field</p></td>
+<td><p><span class="math notranslate nohighlight">\(Inc:\;83.8^\circ,\;Dec:\;25.4^\circ,\;Strength:\;60308\;nT\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Line spacing</p></td>
+<td><p>200 m</p></td>
+</tr>
+<tr class="row-odd"><td><p>Instrument</p></td>
+<td><p>Optical pump cesium vapor</p></td>
+</tr>
+</tbody>
+</table>
+<p>From the raw data, we notice a regional trend coming from the east of the survey area. In order to enhance the local anomalies, we first proceed with a <a class="reference internal" href="magnetics_processing.html#magnetics-regional-trend"><span class="std std-ref">regional trend removal</span></a>. A <span class="math notranslate nohighlight">\(1^{th}\)</span> Order polynomial is subtracted from the raw data.</p>
+<script language="JavaScript" type="text/JavaScript">
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+  </script>
+  <script language="JavaScript">
+<!--
+function MM_initInteractions(){}
+//-->
+  </script><!-- InstanceEndEditable -->
+
+
+<br>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="99%">
+
+  <tbody>
+    <tr>
+
+  </tr>
+
+  </tbody>
+</table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="99%">
+
+  <tbody>
+    <tr>
+
+      <table border="0" cellpadding="2" cellspacing="1" width="100%">
+
+        <tbody>
+
+          <tr>
+
+            <td>
+            <form name="form1" method="post" action="">
+
+              <p class="figureCaption">
+                  <input name="radiobutton" value="radiobutton" checked="checked" onclick="MM_swapImage('lawnmap','','./../../_images/TKC_RTF_Raw.png',1)" type="radio">
+                  Total field strength is measured along 15 lines covering an area of 2.5 x 3 kilometers. The raw data appears to include A large trend from the east<br>
+
+                  <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('lawnmap','','./../../_images/TKC_RTF_Trend.png',1)" type="radio">
+                  First order polynomial is calculated <br>
+
+                  <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('lawnmap','','./../../_images/TKC_RTF_Detrend.png',1)" type="radio">
+                  The de-trended residual total field data highlights the local anomalies. <br>
+
+              </form>
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div align="center"><font size="-1"><img src="./../../_images/TKC_RTF_Raw.png" name="lawnmap" height="129" width="400"></font></div>
+            </td>
+
+          </tr>
+
+
+        </tbody>
+
+      </table>
+
+    <!-- InstanceEndEditable --></td>
+
+  </tr>
+
+  </tbody>
+</table>
+<p>Having isolated the local anomalies, we can now look at various <a class="reference internal" href="#magnetics-filters"><span class="std std-ref">filtering techniques</span></a> as shown below:</p>
+<script language="JavaScript" type="text/JavaScript">
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+  </script>
+  <script language="JavaScript">
+<!--
+function MM_initInteractions(){}
+//-->
+  </script><!-- InstanceEndEditable -->
+
+
+<br>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="99%">
+
+  <tbody>
+    <tr>
+
+  </tr>
+
+  </tbody>
+</table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="99%">
+
+  <tbody>
+    <tr>
+
+      <table border="0" cellpadding="2" cellspacing="1" width="100%">
+
+        <tbody>
+
+          <tr>
+
+            <td>
+            <form name="form1" method="post" action="">
+
+              <p class="figureCaption">
+
+                  <input name="radiobutton" value="radiobutton" checked="checked"onclick="MM_swapImage('filters','','./../../_images/TKC_RTF_Detrend.png',1)" type="radio">
+                  De-trended residual total field data map <br>
+
+                  <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('filters','','./../../_images/TKC_Upward100m.png',1)" type="radio">
+                  Upward continuation (100 m) map<br>
+
+                  <input name="radiobutton" value="radiobutton"  onclick="MM_swapImage('filters','','./../../_images/TKC_1VD.png',1)" type="radio">
+                  First vertical derivative (1VD) map<br>
+
+                  <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('filters','','./../../_images/TKC_HD.png',1)" type="radio">
+                  Total horizontal derivative (THDR) map<br>
+
+
+
+              </form>
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div align="center"><font size="-1"><img src="./../../_images/TKC_RTF_Detrend.png" name="filters" height="129" width="400"></font></div>
+            </td>
+
+          </tr>
+
+
+        </tbody>
+
+      </table>
+
+    <!-- InstanceEndEditable --></td>
+
+  </tr>
+
+  </tbody>
+</table>
+<p>The derivative maps were useful in identifying at least two important features <a class="reference internal" href="#th-interp"><span class="std std-numref">Fig. 49</span></a>).</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Two sets of elongated magnetic anomalies striking <span class="math notranslate nohighlight">\(315^\circ\)</span> N and <span class="math notranslate nohighlight">\(45^\circ\)</span> N. From the shape and strength of the magnetic field, they may correspond to intrusive dykes emplaced during separate events. From the THDR map, these dykes should be between 20 to 50 m in width.</p></li>
+<li><p>Possible sinistral faulting post-intrusion striking at <span class="math notranslate nohighlight">\(\approx 40^\circ\)</span></p></li>
+<li><p>Two compact, near circular anomaly that could resemble a kimberlite pipes. These are features of interest in diamond exploration.</p></li>
+</ul>
+</div></blockquote>
+<figure class="align-center" id="th-interp">
+<img alt="../../_images/TKC_1th_interp.png" src="../../_images/TKC_1th_interp.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 49 </span><span class="caption-text">Important features identified from the derivative maps</span><a class="headerlink" href="#th-interp" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="parametric-simulation">
+<h3>Parametric Simulation<a class="headerlink" href="#parametric-simulation" title="Link to this heading"></a></h3>
+<p>From the data map, we have targeted two features of interest with different
+geometries: a narrow elongated anomaly and a compact body. In order to test
+these hypothesizes, we first attempt to approximate these magnetic features
+with simple parametric objects using the <a class="reference internal" href="magnetics_applet.html#magnetics-applet"><span class="std std-ref">magnetic
+app</span></a>.</p>
+<section id="plate-model">
+<span id="id2"></span><h4>Plate model<a class="headerlink" href="#plate-model" title="Link to this heading"></a></h4>
+<blockquote>
+<div><p><a class="reference internal" href="#tkc-param-dyke"><span class="std std-numref">Fig. 50</span></a> compares the observed and simulated magnetic data across an elongated magnetic anomaly. The parameter used for the plate model are presented in <a class="reference internal" href="#param-dyke"><span class="std std-numref">Table 8</span></a>. This result seems to confirm the presence of thin, shallow dipping magnetic dykes.Turns out that these dykes are part of the Mackenzie dyke swarm that runs through out the Lac de Gras region. These intrusive dykes are related to major tectonic events, and although interesting scientifically, they are of little interest in diamond exploration.</p>
+</div></blockquote>
+<figure class="align-center" id="tkc-param-dyke">
+<img alt="../../_images/TKC_Parametric_Dyke.png" src="../../_images/TKC_Parametric_Dyke.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 50 </span><span class="caption-text">Parametric dyke model of TKC area</span><a class="headerlink" href="#tkc-param-dyke" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<table class="docutils align-default" id="param-dyke">
+<caption><span class="caption-number">Table 8 </span><span class="caption-text">: Parameter used to model the dykes</span><a class="headerlink" href="#param-dyke" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Dimensions</p></td>
+<td><p>50 x 800 x 500 m</p></td>
+</tr>
+<tr class="row-even"><td><p>Dip</p></td>
+<td><p><span class="math notranslate nohighlight">\(20^\circ\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Susceptibility</p></td>
+<td><p>0.1 SI</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="pipe-model">
+<span id="id3"></span><h4>Pipe model<a class="headerlink" href="#pipe-model" title="Link to this heading"></a></h4>
+<p>Second, we look at the compact, near circular magnetic anomaly in the center of the survey area. This feature may be of interest as it resemble the typical signature of a kimberlite pipe.
+<a class="reference internal" href="#tkc-param-pipe"><span class="std std-numref">Fig. 51</span></a> compares the magnetic data over the compact anomaly and the parametric pipe model (<a class="reference internal" href="#param-dyke"><span class="std std-numref">Table 8</span></a>). This result seems to confirm the presence of a compact magnetic block SE dipping. The shape of the anomaly is surprisingly different than the expected shape of a vertical pipe. This result requires additional work for validation, hence the need to invert the data.</p>
+<figure class="align-center" id="tkc-param-pipe">
+<img alt="../../_images/TKC_Parametric_Pipe.png" src="../../_images/TKC_Parametric_Pipe.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 51 </span><span class="caption-text">Circular pipe model of the TKC area</span><a class="headerlink" href="#tkc-param-pipe" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<table class="docutils align-default" id="param-pipe">
+<caption><span class="caption-number">Table 9 </span><span class="caption-text">: Parameters used to model the pipe</span><a class="headerlink" href="#param-pipe" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Dimensions</p></td>
+<td><p>300 x 200 x 50 m</p></td>
+</tr>
+<tr class="row-even"><td><p>Dip</p></td>
+<td><p><span class="math notranslate nohighlight">\(20^\circ\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Susceptibility</p></td>
+<td><p>0.05 SI</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="inversion">
+<span id="mag-inversion"></span><h3>Inversion<a class="headerlink" href="#inversion" title="Link to this heading"></a></h3>
+<p>The parametric forward simulation was helpful in understanding the shape and susceptibility contrast associated with the main magnetic anomalies. Modeling the Earth with simple parametric objects rapidly becomes prohibitive however for large and complicated susceptibility distributions. For this reason, we must adopt a more mathematical approach.</p>
+<p>The inverse problem is illustrated in <a class="reference internal" href="#mag-inverse"><span class="std std-numref">Fig. 52</span></a>. Similar to a medical imaging problem, the goal is to recover a 3D representation of the Earth from the magnetic data. Several commercial and open-source algorithms are available to solve the inverse problem. We here used the <a class="reference external" href="http://simpeg.xyz">SimPEG</a> open-source package. We present the various input parameters required for the inversion.</p>
+<figure class="align-center" id="mag-inverse" style="width: 50%">
+<img alt="../../_images/Intro_Inverse.png" src="../../_images/Intro_Inverse.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 52 </span><span class="caption-text">Conceptual inverse problem</span><a class="headerlink" href="#mag-inverse" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="inverse-problem">
+<h4>Inverse Problem<a class="headerlink" href="#inverse-problem" title="Link to this heading"></a></h4>
+<figure class="align-left" id="tkc-mesh" style="width: 50%">
+<img alt="../../_images/TKC_Mesh.png" src="../../_images/TKC_Mesh.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 53 </span><span class="caption-text">Mesh used to discretize the subsurface for inversion</span><a class="headerlink" href="#tkc-mesh" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In its simplest form, the inverse problem attempts to image the Earth from the observed data. To do this, we need to <em>approximate</em> the continuous Earth with a set of <em>discrete</em> parameters that a computer can understand. A picture taken with a digital camera is a great analogy. The quality of the picture largely depends on the resolution of the camera, or the number of pixels used to capture the image. The higher the resolution, the larger the file size. Similarly for 3D inversion, we need to choose an appropriate <em>mesh</em> resolution to capture the right level of details, without getting too large for a computer to handle it. The chosen mesh parameters for this problem are shown in <a class="reference internal" href="#inversion-param"><span class="std std-numref">Table 10</span></a>.</p>
+<figure class="align-right" id="tkc-topo" style="width: 50%">
+<img alt="../../_images/TKC_DEM.png" src="../../_images/TKC_DEM.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 54 </span><span class="caption-text">Topography of the TKC area</span><a class="headerlink" href="#tkc-topo" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Secondly, we need a topographic surface that defines the relative distance between the observation point and the discrete Earth. A Digital Elevation Model (DEM) is downloaded from the NRCan <a class="reference external" href="https://maps.canada.ca/czs/index-en.html">Geogratis</a> website as shown in <a class="reference internal" href="#tkc-topo"><span class="std std-numref">Fig. 54</span></a>.</p>
+<table class="docutils align-default" id="inversion-param">
+<caption><span class="caption-number">Table 10 </span><span class="caption-text">: Inversion parameters</span><a class="headerlink" href="#inversion-param" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Cell size</p></td>
+<td><p>25 x 25 x 25 m</p></td>
+</tr>
+<tr class="row-even"><td><p>Number of cells (X, Y, Z)</p></td>
+<td><p>120 x 130 x 35 = 546,000 cells</p></td>
+</tr>
+<tr class="row-odd"><td><p>Number of data</p></td>
+<td><p>1092</p></td>
+</tr>
+<tr class="row-even"><td><p>Data uncertainties</p></td>
+<td><p>10 nT</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="d-solution">
+<h4>3D Solution<a class="headerlink" href="#d-solution" title="Link to this heading"></a></h4>
+<p>From the inversion algorithm, we recover a 3D model of magnetic susceptibility.
+We note the following features:</p>
+<ul class="simple">
+<li><p>The inversion successfully recovered thin dipping planes similar to our <a class="reference internal" href="#plate-model"><span class="std std-ref">parametric model</span></a>. Despite getting smooth and broad at depth, the vertical length of these magnetic planes appear to extend from the surface down to over 500 m (<a class="reference internal" href="#tkc-susc"><span class="std std-numref">Fig. 55</span></a> ).</p></li>
+</ul>
+<figure class="align-center" id="tkc-susc" style="width: 100%">
+<img alt="../../_images/TKC_Inv_Susc.png" src="../../_images/TKC_Inv_Susc.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 55 </span><span class="caption-text">Inverted TKC susceptibility model</span><a class="headerlink" href="#tkc-susc" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Two nearly vertical compact bodies are imaged west of the magnetic dykes (<a class="reference internal" href="#tkc-do27"><span class="std std-numref">Fig. 56</span></a>). Susceptibility values vary greatly between the two anomalies. The largest (South) anomaly seems to dip slightly toward SW has predicted by our <a class="reference internal" href="#pipe-model"><span class="std std-ref">parametric model</span></a> and appears deeper than the northern anomaly.</p></li>
+</ul>
+<figure class="align-center" id="tkc-do27" style="width: 100%">
+<img alt="../../_images/TKC_Susc_DO27.png" src="../../_images/TKC_Susc_DO27.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 56 </span><span class="caption-text">Vertically compact bodies identified with inversion</span><a class="headerlink" href="#tkc-do27" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<a class="reference external image-reference" href="http://simpeg.xyz"><img alt="SimPEG&lt;/pre&gt;" src="https://img.shields.io/badge/powered%20by-SimPEG-blue.svg" />
+</a>
+</section>
+<section id="validation">
+<h4>Validation<a class="headerlink" href="#validation" title="Link to this heading"></a></h4>
+<p>A key component to asses the validity of our 3D model is to verify that the given solution honors the data. The figures below compares the true and predicted magnetic data. The residual map confirms that our model captures most of the signal contained in the airborne data set.</p>
+<script language="JavaScript" type="text/JavaScript">
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+  </script>
+  <script language="JavaScript">
+<!--
+function MM_initInteractions(){}
+//-->
+  </script><!-- InstanceEndEditable -->
+
+
+<br>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="99%">
+
+  <tbody>
+    <tr>
+
+  </tr>
+
+  </tbody>
+</table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="99%">
+
+  <tbody>
+    <tr>
+
+      <table border="0" cellpadding="2" cellspacing="1" width="100%">
+
+        <tbody>
+
+          <tr>
+
+            <td>
+            <form name="form1" method="post" action="">
+
+              <p class="figureCaption">
+
+                  <input name="radiobutton" value="radiobutton" checked="checked"onclick="MM_swapImage('inverse','','./../../_images/TKC_Obs.png',1)" type="radio">
+                  Observed data. <br>
+
+                  <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('inverse','','./../../_images/TKC_Pred.png',1)" type="radio">
+                  Predicted data from the recovered susceptibility model. <br>
+
+                  <input name="radiobutton" value="radiobutton"  onclick="MM_swapImage('inverse','','./../../_images/TKC_Residual.png',1)" type="radio">
+                  Normalized residual [ (obs-pred)/uncertainties ]. <br>
+
+
+              </form>
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+            <div align="center"><font size="-1"><img src="./../../_images/TKC_Obs.png" name="inverse" height="129" width="400"></font></div>
+            </td>
+
+          </tr>
+
+
+        </tbody>
+
+      </table>
+
+    <!-- InstanceEndEditable --></td>
+
+  </tr>
+
+  </tbody>
+</table>
+</section>
+</section>
+</section>
+<section id="final-interpretation">
+<h2>Final Interpretation<a class="headerlink" href="#final-interpretation" title="Link to this heading"></a></h2>
+<div class="col-md-2" align="center">
+   <a href="http://github.com/ubcgif/em"><i class="fa fa-wrench fa-4x" aria-hidden="true"></i></a>
+</div></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="magnetics_processing.html" class="btn btn-neutral float-left" title="Processing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="magnetics_applet.html" class="btn btn-neutral float-right" title="Magnetic dipole applet" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

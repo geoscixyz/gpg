@@ -1,0 +1,666 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Survey and Data &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Processing" href="GPR_processing.html" />
+    <link rel="prev" title="Basic Principles" href="GPR_fundamental_principles.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Ground Penetrating Radar</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="GPR_physical_properties.html">Physical Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="table_velocity.html">Propagation Velocities of Dielectric Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GPR_fundamental_principles.html">Basic Principles</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Survey and Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#common-offset-survey">Common Offset Survey</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#buried-compact-objects">Buried Compact Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dipping-layers">Dipping Layers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#common-midpoint-survey">Common Midpoint Survey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#transillumination-survey">Transillumination Survey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#source-signal">Source Signal</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#gpr-signals-and-bandwidth">GPR Signals and Bandwidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gpr-signals-and-spatial-length">GPR Signals and Spatial Length</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#survey-resolution-and-probing-distance">Survey Resolution and Probing Distance</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#vertical-resolution-for-layers">Vertical Resolution for Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#horizontal-resolution-for-objects">Horizontal Resolution for Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#probing-distance">Probing Distance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#probing-distance-versus-resolution">Probing Distance versus Resolution</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gpr-and-sources-of-noise">GPR and Sources of Noise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="GPR_processing.html">Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GPR_interpretation.html">Interpretation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Ground Penetrating Radar</a> &raquo;</li>
+        
+      <li>Survey and Data</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/GPR/GPR_survey_data.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="survey-and-data">
+<span id="gpr-survey-data"></span><h1>Survey and Data<a class="headerlink" href="#survey-and-data" title="Link to this heading"></a></h1>
+<p>Here, we discuss the various survey geometries used in GPR and some of their applications.
+Information about the GPR source signal and its impact on planning surveys is presented.
+We also discuss sources of noise which may contaminate GPR data.</p>
+<p>On this page, you will learn about:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Common offset, common midpoint and transillumination surveys.</p></li>
+<li><p>Where these surveys are most effective.</p></li>
+<li><p>What is the source signal used in GPR.</p></li>
+<li><p>The properties of the source signal and how it impacts the effectiveness of GPR surveys.</p></li>
+<li><p>The resolution of GPR surveys.</p></li>
+<li><p>The probing distance of GPR surveys.</p></li>
+<li><p>Sources of noise and their impact on GPR surveys.</p></li>
+</ul>
+</div></blockquote>
+<section id="common-offset-survey">
+<h2>Common Offset Survey<a class="headerlink" href="#common-offset-survey" title="Link to this heading"></a></h2>
+<blockquote>
+<div><figure class="align-right" id="id1" style="width: 40%">
+<img alt="../../_images/GPR_common_offset.png" src="../../_images/GPR_common_offset.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 105 </span><span class="caption-text">Common offset survey configuration.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p>Common offset surveys are the most frequently used configuration for GPR surveys.
+In common offset survey, the distance between the transmitter and a single receiver is fixed.
+Data are collected each time the transmitter-receiver pair are moved to a new position.
+In some cases, the transmitter and receiver are placed at a zero-offset; otherwise known as a coincident source and receiver.</p>
+<p>Common-offset surveys are effective for locating the depths of approximately horizontal interfaces.
+In addition, zero-offset surveys are very affective a locating pipes, tunnels and compact buried objects; as they generate hyperbolic signatures in radargram data.
+Examples of this can be seen below.</p>
+<section id="buried-compact-objects">
+<h3>Buried Compact Objects<a class="headerlink" href="#buried-compact-objects" title="Link to this heading"></a></h3>
+<p>Below we see the geometry for a zero-offset survey and the corresponding radargram.
+We will show how the geometry of the problem and the radargram can be used to resolve the locations of pipes and blocky objects.</p>
+<figure class="align-center" id="id2" style="width: 100%">
+<img alt="../../_images/GPR_compact_objects.png" src="../../_images/GPR_compact_objects.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 106 </span><span class="caption-text">(Left) Problem geometry showing a buried pipe and a block. (Right) Corresponding radargram for the problem geometry.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In GPR, a <strong>thin pipe</strong> will act as a point reflector.
+According to the geometry of the problem, the total travel time of the GPR signal as it reflects off the pipe is given by:</p>
+<div class="math notranslate nohighlight">
+\[t_p = \frac{2 L_2}{V} = \frac{2 \sqrt{ (x - x_p)^2 + d^2}}{V}\]</div>
+<p>where <span class="math notranslate nohighlight">\(V\)</span> is the propagation velocity (light gray region) and <span class="math notranslate nohighlight">\(d\)</span> is the depth to the pipe.
+As we can see in the radargram, the arrival times for a compact object form a hyperbola.
+When we are directly above the pipe (<span class="math notranslate nohighlight">\(x = x_p\)</span>), the total travel time is smallest and equal to:</p>
+<div class="math notranslate nohighlight">
+\[t_p (x_p) = \frac{2 d}{V}\]</div>
+<p>For the <strong>block</strong>, things are a little more complicated.
+Above the face of the block (<span class="math notranslate nohighlight">\(x_L\)</span> = 6 m to <span class="math notranslate nohighlight">\(x_R\)</span> = 16 m), the signal measured by the receiver reflects directly.
+However, the return signal at locations outside the margins of the block occur on the points.
+As a result, the total travel time for reflected signals off the block are given by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}t_b = \begin{cases} \dfrac{2 \sqrt{(x-x_L)^2 + h^2}}{V} \;\;\; &amp;\textrm{for} \;\;\; x &lt; x_L \\
+\dfrac{2h}{V} \;\;\; &amp;\textrm{for} \;\;\; x_L \leq x \leq x_R \\
+\dfrac{2 \sqrt{(x-x_R)^2 + h^2}}{V} \;\;\; &amp;\textrm{for} \;\;\; x &gt; x_R \end{cases}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(h\)</span> is the depth to the top of the block.
+As we can see from the previous equation, we expect to see a flat feature the block’s radargram signature.
+Then on either size of the block, the radargram signature resembles one-half of a hyperbola.</p>
+<p><strong>Resolving Buried Objects: Method 1</strong></p>
+<p>In order to locate buried objects, we first need to use the radargram to obtain a velocity for the medium.
+Let us begin by considering the pipe.
+Notice that at large offset distances from the horizontal location of the pipe (i.e. when <span class="math notranslate nohighlight">\(x - x_p \gg d\)</span>), the travel time for the pipe becomes:</p>
+<div class="math notranslate nohighlight">
+\[t_p = \frac{2 L_2}{V} \approx \frac{2 }{V} \Bigg ( (x - x_p) + \frac{1}{2} d \Bigg ) \;\;\; \textrm{for} \;\;\; \Delta x_2 \gg d\]</div>
+<p>Therefore, each end of the hyperbolic signature has a slope <span class="math notranslate nohighlight">\(m = \pm 2/V\)</span> (red dashed lines).
+The slope on the radargram can ultimately be used as a crude approximation for the medium velocity.
+Once the medium velocity has been obtained, the depth to the object can be calculated using the minimum travel time.
+The minimum travel time for the pipe (blue dashed line) is given by:</p>
+<div class="math notranslate nohighlight">
+\[t_0 = \frac{2d}{V}\]</div>
+<p>Notice that for the block the travel time also shows a slope of <span class="math notranslate nohighlight">\(m = \pm 2/V\)</span> as we move far enough away.
+As a result, we can approximate the medium velocity using the block’s radargram signature then use its minimum travel time to get the depth.</p>
+<p><strong>Resolving Buried Objects: Method 2</strong></p>
+<p>Notice that the offset distance must be sufficiently large in order to obtain the medium velocity.
+If the offset distance is insufficient, we must use a different method for determining the medium velocity.</p>
+<p>Let us first consider the <strong>pipe</strong>.
+The total travel time for the reflected GPR signal is given by:</p>
+<div class="math notranslate nohighlight">
+\[t_p = \frac{2 L_2}{V} = \frac{2 \sqrt{ (x - x_p)^2 + d^2}}{V}\]</div>
+<p>When we are directly over the pipe, we will have a minimum travel time equal to (blue dashed line):</p>
+<div class="math notranslate nohighlight">
+\[t_0 = \frac{2d}{V}\]</div>
+<p>By combining the two previous equations, we see that:</p>
+<div class="math notranslate nohighlight">
+\[V = 2 \sqrt{\dfrac{(x - x_p )^2}{t^2 - t_0^2}}\]</div>
+<p>where (<span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(t\)</span>) represents are arbitrary point on the hyperbolic signature within the radargram.
+Given that <span class="math notranslate nohighlight">\(t_0\)</span> and <span class="math notranslate nohighlight">\(x_p\)</span> can be obtained directly from the radargram, <strong>any other point</strong> on the hyperbola can be used to determine the propagation velocity of the medium.
+This may come in handy when a portion of the hyperbola is obstructed by other signals.
+Also note that once <span class="math notranslate nohighlight">\(V\)</span> is determined, the definition of <span class="math notranslate nohighlight">\(t_0\)</span> can be used to determine the depth of the object.</p>
+<p>Notice that for locations to the left and to the right of the block, the total travel time behaves like a hyperbola.
+Therefore, we can use the same approach.
+The only difference being that <span class="math notranslate nohighlight">\(x_p\)</span> is replaced by either <span class="math notranslate nohighlight">\(x_L\)</span> or <span class="math notranslate nohighlight">\(x_R\)</span>; which depends on the side of the block’s signature you use.</p>
+</section>
+<section id="dipping-layers">
+<h3>Dipping Layers<a class="headerlink" href="#dipping-layers" title="Link to this heading"></a></h3>
+<p>So far we have only considered interfaces which are approximately horizontal.
+However, the subsurface may consist of dipping layers.
+This can lead to challenges when attempting to interpret reflections in the data.</p>
+<p>For a zero-offset survey, we can see that the reflected signal returns at an angle.
+This is because the reflection happens perpendicular to the surface of the interface in this case.
+As a result, the two-way travel time does not correspond to the depth of the interface.
+Instead, it corresponds to the minimum travel distance.
+If we assume the reflected signal gives us the vertical distance to the interface, we will <strong>under-estimate</strong> the dip of the interface.</p>
+<figure class="align-center" id="id3" style="width: 70%">
+<img alt="../../_images/GPR_dipping_layer.png" src="../../_images/GPR_dipping_layer.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 107 </span><span class="caption-text">Reflections from a dipping layer for a common-offset survey.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Migration Correction</strong></p>
+<p>The true dip of the interface can be recovered using circular arcs.
+To apply the correction (assuming you have obtained the velocity of the top-layer from the direct ground wave or other means):</p>
+<ol class="arabic simple">
+<li><p>Obtain the distance from the two-way travel time of the reflection. Assume this represents the vertical distance to the interface. Doing so will give you the dashed line shown in the figure above.</p></li>
+<li><p>For each Tx-Rx position, draw and arc centered at this location, which passes through the under-estimated vertical distance point (found on the dashed line).</p></li>
+<li><p>The true dipping interface is created by drawing a line which intersects all of the arcs at only a single point (black line).</p></li>
+</ol>
+</section>
+</section>
+<section id="common-midpoint-survey">
+<h2>Common Midpoint Survey<a class="headerlink" href="#common-midpoint-survey" title="Link to this heading"></a></h2>
+<blockquote>
+<div><figure class="align-right" id="id4" style="width: 40%">
+<img alt="../../_images/GPR_common_midpoint.png" src="../../_images/GPR_common_midpoint.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 108 </span><span class="caption-text">Common midpoint survey configuration.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p>For this configuration, the distance between the transmitter and receiver are changed for every reading.
+However, the halfway point between the transmitter and the receiver is kept the same.
+As we will show, common midpoint surveys are useful for determining the top-layer velocity and thickness.</p>
+<p>From the survey schematic, we see that if the interface is approximately flat, the point of reflection is the same for all readings.
+As a result, the signal from the reflected wave in the radargram should form a hyperbola.</p>
+<figure class="align-right" id="id5" style="width: 50%">
+<img alt="../../_images/GPR_example_buried_object_2.png" src="../../_images/GPR_example_buried_object_2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 109 </span><span class="caption-text">Geometry shown how radargram can be used to find propagation velocity.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Once again, the travel time for the radiowave signal is given by:</p>
+<div class="math notranslate nohighlight">
+\[t = \frac{2 \sqrt{ x^2 + d^2 }}{V}\]</div>
+<p>where <span class="math notranslate nohighlight">\(d\)</span> is the thickness of the top layer and <span class="math notranslate nohighlight">\(x\)</span> is the distance between the mid-point and either the transmitter or the receiver.
+Once again by defining <span class="math notranslate nohighlight">\(t_0 = 2d/V\)</span>, the top-layer velocity is given by:</p>
+<div class="math notranslate nohighlight">
+\[V = 2 \sqrt{ \dfrac{x^2}{t^2 - t_0^2} }\]</div>
+<p>Thus, <strong>any point</strong> on the parabola can be used to determine the top-layer velocity from a common mid-point survey.
+And once <span class="math notranslate nohighlight">\(V\)</span> is determined, the definition of <span class="math notranslate nohighlight">\(t_0\)</span> can be used to obtain the thickness of the top layer.</p>
+<blockquote>
+<div><figure class="align-right" id="id6" style="width: 40%">
+<img alt="../../_images/GPR_survey_transillumination.jpg" src="../../_images/GPR_survey_transillumination.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 110 </span><span class="caption-text">Transillumination surveys. (A) Mine-shaft structural integrity (B) Borehole survey. (C) Concrete pillar testing.</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</section>
+<section id="transillumination-survey">
+<h2>Transillumination Survey<a class="headerlink" href="#transillumination-survey" title="Link to this heading"></a></h2>
+<p>When performing a transillumination GPR survey, multiple transmitters and receivers are placed on either side of an region of interest.
+There are many applications for transillumination surveys, some of which are mentioned here.</p>
+<p>In panel (A), a transillumination survey is being used to assess the structural integrity between two mine shafts.
+By using GPR, we can determine if there are void spaces between the mine shafts or any potential planes of weakness.
+The information collected can be used to assure the mine shaft is safe.</p>
+<p>In panel (B), we see a transillumination borehole survey.
+In some cases, a surface survey may not supply sufficient information about a particular region of interest.
+Although it is more expensive and time-consuming, this type of survey may be required.</p>
+<p>In panel (C), a GPR transmitter and receiver are placed on opposing sides of an object; in this case, a concrete pillar.
+This represents a non-invasive approach for determining internal structures.</p>
+<aside class="sidebar">
+<p class="sidebar-title">Wavelet Example</p>
+<figure class="align-center" id="id7" style="width: 100%">
+<img alt="../../_images/GPR_wavelet_example.png" src="../../_images/GPR_wavelet_example.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 111 </span><span class="caption-text">Example of a wavelet signal.</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id8">
+<img alt="../../_images/Electromagneticwave3D.gif" src="../../_images/Electromagneticwave3D.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 112 </span><span class="caption-text">Electromagnetic waves contained within the GPR pulse. <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Electromagneticwave3D.gif">Image source</a> .</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id9" style="width: 100%">
+<img alt="../../_images/GPR_wavelet_frequencies_example.png" src="../../_images/GPR_wavelet_frequencies_example.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 113 </span><span class="caption-text">Band of frequencies for a particular wavelet.</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</aside>
+</section>
+<section id="source-signal">
+<h2>Source Signal<a class="headerlink" href="#source-signal" title="Link to this heading"></a></h2>
+<p>As we have already discussed, the source antenna sends a pulse of radiowaves into the ground.
+Radiowaves carry oscillating electric and magnetic fields.
+As it turns out, the pulse is not made up entirely of radiowaves of a single frequency.
+Instead, a set of sinusoidal EM waves of similar frequencies are used create what is called a wavelet.
+As a result, the wavelet contains information over a range of frequencies (generally between <span class="math notranslate nohighlight">\(10^6\)</span> and <span class="math notranslate nohighlight">\(10^9\)</span> Hz).</p>
+<p>Before we move forward let us define a few terms:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Wavelet</strong>: A wave-like oscillation of short duration.</p></li>
+<li><p><strong>Bandwidth</strong>: The range of frequencies present in the source wavelet.</p></li>
+<li><p><strong>Pulse Width</strong>: The time duration of the wavelet.</p></li>
+<li><p><strong>Spatial Length (wavelength)</strong>: The physical length of the wavelet signal while it propagates through a medium.</p></li>
+<li><p><strong>Central Frequency</strong>: The central frequency corresponding to the bandwidth. In general, the central frequency defines the propagation of the GPR signal.</p></li>
+</ul>
+</div></blockquote>
+<section id="gpr-signals-and-bandwidth">
+<h3>GPR Signals and Bandwidth<a class="headerlink" href="#gpr-signals-and-bandwidth" title="Link to this heading"></a></h3>
+<p>The figure below can be used to examine the relationships between the 5 aforementioned terms.
+As we can see, the bandwidth and central frequency for the GPR signal depend on the pulse width of the wavelet.
+Here are a few important relationships to keep in mind:</p>
+<p><strong>1)</strong> For a pulse width <span class="math notranslate nohighlight">\(\Delta t\)</span>, the central frequency <span class="math notranslate nohighlight">\(f_c\)</span> is given by:</p>
+<div class="math notranslate nohighlight">
+\[f_c = \frac{1}{\Delta t}\]</div>
+<p>As a result, longer wavelets generally contain lower-frequency information.
+Frequencies corresponding to GPR signal are around 100 MHz to 1 GHz.
+This results in pulse widths around 1 ns to 10 ns.</p>
+<p><strong>2) The bandwidth increases as the pulse width decreases.</strong>
+In order to create a wavelet with a longer pulse width, only frequencies near the central frequency are needed.
+However, a large range of frequencies (or bandwidth) is needed to create wavelets that have short pulse widths.</p>
+<p><strong>3) The spatial length (wavelength) increases as the pulse width increases</strong>.
+As we can see from the figure below, the “wave envelope” is longer for wavelets that have a long pulse width.</p>
+<figure class="align-center" style="width: 65%">
+<img alt="../../_images/GPR_pulse_bandwidth.png" src="../../_images/GPR_pulse_bandwidth.png" />
+</figure>
+</section>
+<section id="gpr-signals-and-spatial-length">
+<h3>GPR Signals and Spatial Length<a class="headerlink" href="#gpr-signals-and-spatial-length" title="Link to this heading"></a></h3>
+<p>The spatial length of the GPR wavelet signal is different as it moves through different materials.
+For a wavelet with central frequency <span class="math notranslate nohighlight">\(f_c\)</span> moving at velocity <span class="math notranslate nohighlight">\(V\)</span>, the wavelength <span class="math notranslate nohighlight">\(\lambda\)</span> is given by:</p>
+<div class="math notranslate nohighlight">
+\[\lambda = \frac{V}{f_c} = \frac{c}{f_c \sqrt{\varepsilon_r}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(c = 3.00 \times 10^8\)</span> m/s is the speed of light and <span class="math notranslate nohighlight">\(\varepsilon_r\)</span> is the relative permittivity.
+This expressions shows that if the signal is moving through a material with a higher dielectric permittivity, it will move slower and it will have a larger spatial width.
+It also shows that GPR signals with higher central frequencies have shorter spatial widths.</p>
+<p>Recall that the central frequency is the reciprocal of the pulse width (<span class="math notranslate nohighlight">\(f_c = 1/\Delta t\)</span>).
+Thus:</p>
+<div class="math notranslate nohighlight">
+\[\lambda = V \, \Delta t = \frac{c \, \Delta t}{\sqrt{\varepsilon_r}}\]</div>
+<p>Therefore, shorter pulse widths result in shorter spatial lengths.
+This was stated in the previous subsection.</p>
+<p>Examine the gif in <a class="reference internal" href="GPR_fundamental_principles.html#fig-gpr-layeredearth-gif"><span class="std std-numref">Fig. 93</span></a>.
+Examine the wave as it propagates through both the ground and the Earth.
+In which medium is the wavefront thicker/thinner?
+In which medium is the GPR signal moving slower/faster?
+Does this make sense from the equations above?</p>
+</section>
+</section>
+<section id="survey-resolution-and-probing-distance">
+<h2>Survey Resolution and Probing Distance<a class="headerlink" href="#survey-resolution-and-probing-distance" title="Link to this heading"></a></h2>
+<p>The pulse width, and thus the frequency content contained within the GPR signal, is a very important aspect of planning a GPR survey.
+The concepts of resolution and probing distance are discussed here.</p>
+<section id="vertical-resolution-for-layers">
+<h3>Vertical Resolution for Layers<a class="headerlink" href="#vertical-resolution-for-layers" title="Link to this heading"></a></h3>
+<p>Resolution defines the smallest features which can be distinguished in a GPR survey.
+The vertical resolution for GPR surveys depends on the pulse width of the signal.</p>
+<p>In order for a layer to be detected using a GPR survey, it must be sufficiently thick compared to the wavelength of the incoming wavelet.
+As a general rule, the layer must be at least 1/4 the wavelength of the incoming wavelet to be detectable.
+Thus:</p>
+<div class="math notranslate nohighlight">
+\[L &gt;  \frac{\lambda}{4} = \frac{c}{4 f_c \sqrt{\varepsilon_r}} = \frac{c \Delta t}{4 \sqrt{\varepsilon_r}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(L\)</span> is the layer thickness, <span class="math notranslate nohighlight">\(c/\!\sqrt{\varepsilon_r}\)</span> is the propagation velocity for radiowaves, <span class="math notranslate nohighlight">\(\Delta t\)</span> is the pulse width and <span class="math notranslate nohighlight">\(f_c\)</span> is the central frequency.
+As we can see from this expression, higher frequencies/shorter pulse widths are required to observe smaller features.
+This means higher frequencies/shorter pulse widths are used for higher resolution surveys.</p>
+</section>
+<section id="horizontal-resolution-for-objects">
+<h3>Horizontal Resolution for Objects<a class="headerlink" href="#horizontal-resolution-for-objects" title="Link to this heading"></a></h3>
+<figure class="align-right" style="width: 35%">
+<img alt="../../_images/GPR_resolution_horizontal.png" src="../../_images/GPR_resolution_horizontal.png" />
+</figure>
+<p>When the resolution of the survey is sufficient, returning signals from separate buried objects are distinguishable.
+However, if buried objects are too close to one another, their respective returning GPR signals can be hard to differentiate.
+In general, we can distinguish the signals from two nearby objects so long as:</p>
+<div class="math notranslate nohighlight">
+\[L &gt; \sqrt{\dfrac{V \, d}{2 f_c}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(V\)</span> is the propagation velocity, <span class="math notranslate nohighlight">\(f_c\)</span> is the central frequency for the wavelet, <span class="math notranslate nohighlight">\(d\)</span> is the depth to the objects and <span class="math notranslate nohighlight">\(L\)</span> is the separation distance from both objects.
+We can see from this equation, that by reducing the pulse length, we can see objects that are closer together.
+Additionally, it is harder to distinguish objects which are further away from the transmitters and receivers.</p>
+</section>
+<section id="probing-distance">
+<h3>Probing Distance<a class="headerlink" href="#probing-distance" title="Link to this heading"></a></h3>
+<figure class="align-right" id="id10" style="width: 50%">
+<img alt="../../_images/GPR_probing_distance_2.jpg" src="../../_images/GPR_probing_distance_2.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 114 </span><span class="caption-text">Proving distances for GPR signals for various materials.</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Probing distance characterizes the maximum depth in which GPR signals can be used to obtain information about subsurface structures.
+For materials which have larger skin depths, radiowaves can penetrate deeper into the ground and still provide a sufficiently strong returning signal.</p>
+<p>As a general rule, the probing distance (<span class="math notranslate nohighlight">\(D\)</span>) is approximated 3 <a class="reference internal" href="GPR_fundamental_principles.html#gpr-fundamental-principles-skin-depth"><span class="std std-ref">skin depths</span></a>.
+If we assume the Earth is non-magnetic (<span class="math notranslate nohighlight">\(\mu_r = 1\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}D = 3 \delta \approx
+\begin{cases} 1510 \sqrt{\dfrac{1}{\sigma f}} \; \; &amp;\textrm{for} \;\; \omega \varepsilon \ll \sigma \\
+0.0159 \dfrac{\sqrt{\varepsilon_r}}{\sigma}  \; \; &amp;\textrm{for} \;\; \omega \varepsilon \gg \sigma \end{cases}\end{split}\]</div>
+<figure class="align-right" id="id11" style="width: 50%">
+<img alt="../../_images/GPR_probing_distance.jpg" src="../../_images/GPR_probing_distance.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 115 </span><span class="caption-text">Probing distance for various materials from 1 MHz through 1 GHz.</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>On the right we see figures which show probing distances for various materials.
+Using these figures, we can see that:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>In general, as the frequency increases, the skin depth decreases and the probing distance decreases.</p></li>
+<li><p>Frequencies used for GPR are <span class="math notranslate nohighlight">\(\sim\)</span> 1 GHz. Therefore, the probing distances for GPR signals are generally quite shallow.</p></li>
+<li><p>It is very difficult for GPR signals to penetrate concrete and asphalt, as the probing distance is only about 1 m for GPR.</p></li>
+<li><p>Water saturated sedimentary rocks, such as clays and sandstones, have much lower probing distances than dry sedimentary rocks.</p></li>
+<li><p>Rocks saturated with sea water have much smaller probing distances than rocks saturated with fresh water.</p></li>
+<li><p>The probing distances for hard rocks (granites, limestones, schists…) is quite large.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="probing-distance-versus-resolution">
+<h3>Probing Distance versus Resolution<a class="headerlink" href="#probing-distance-versus-resolution" title="Link to this heading"></a></h3>
+<aside class="sidebar">
+<p class="sidebar-title">Radargrams at Several Resolutions (Underground tunnels)</p>
+<figure class="align-center" id="id12">
+<img alt="../../_images/GPR_resolution_high.jpg" src="../../_images/GPR_resolution_high.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 116 </span><span class="caption-text">Higher resolution radargram (200 MHz).</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id13">
+<img alt="../../_images/GPR_resolution_mid.jpg" src="../../_images/GPR_resolution_mid.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 117 </span><span class="caption-text">Medium resolution radargram (100 MHz).</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id14">
+<img alt="../../_images/GPR_resolution_low.jpg" src="../../_images/GPR_resolution_low.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 118 </span><span class="caption-text">Lower resolution radargram (50 MHz).</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</aside>
+<p>On the right we see several radargrams corresponding to data collected over two buried tunnels (hyperbolic features).
+Each radargram was collected using a different frequency.</p>
+<p>By using a 200 MHz central frequency, we are hoping to obtain a high resolution radargram.
+However, the attenuation of radiowaves is more severe at higher frequencies.
+As a result, the GPR signal does not penetrate deep enough to image either of the tunnels.
+At 100 MHz, both tunnels become partially visible in the radargram (hyperbolic signatures).
+This is made possible because because the probing distance is larger.
+In the 50MHz radargram, both tunnels are easily recognizable.
+This is made possible because the probing distance is now large enough.
+Notice however, that the hyperbolic features in the radargram are slightly less distinct.</p>
+<p>We can see from this example that there is a compromise between resolution and probing distance.
+It is important to choose a frequency which is high enough to image sufficient small features.
+However, the probing distance of the background medium must be large enough to obtain a return signal.</p>
+</section>
+</section>
+<section id="gpr-and-sources-of-noise">
+<h2>GPR and Sources of Noise<a class="headerlink" href="#gpr-and-sources-of-noise" title="Link to this heading"></a></h2>
+<p>Noise is used to describe any measured signal which does not correspond to signals from desired targets.
+When the sources of noise are sufficiently large, it can be difficult to identify and classify signals in radargrams.
+That is why it is necessary to take steps which minimize the impact of external noise sources on the data.
+Below are some sources of noise relevant to GPR and their impact.</p>
+<p><strong>Radiowaves from Other Sources</strong></p>
+<figure class="align-right" id="id15" style="width: 50%">
+<img alt="../../_images/GPR_noise_sheild.jpg" src="../../_images/GPR_noise_sheild.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 119 </span><span class="caption-text">Some external sources of noise related to GPR system, which can be reduced through shielding.</span><a class="headerlink" href="#id15" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Much of 21st century communication is made possible with radiowaves.
+Cellular phones, radio towers and other transmitting systems all use radiowave frequencies to transmit information through the air.
+These signals can be measured by the receiver and have the potential to mask responses from desired targets.
+To limit the effects of external sources, the transmitter and receiver are frequently protected by a shield (as depicted in the image).</p>
+<p><strong>Returning Signals from Above-Ground Objects</strong></p>
+<p>GPR is used to gain information about structures below the Earth.
+However, since radiowaves propagate through the air, it is possible to measure returning signals from nearby objects as well.
+This is common in urban and wooded environments where GPR signals can reflect off of buildings and trees.</p>
+<figure class="align-right" id="id16" style="width: 50%">
+<img alt="../../_images/GPR_noise_trees.jpg" src="../../_images/GPR_noise_trees.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 120 </span><span class="caption-text">Zero-offset radargram example containing returning signals from nearby trees.</span><a class="headerlink" href="#id16" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>On the right, we see an example of a radargram for a zero-offset configuration.
+The survey was performed in a wooded area without using a shield.
+Because the trees acts as point reflectors, they produce hyperbolic signatures in the radargram.
+Using the slope on either end of the hyperbola, we find that the propagation velocity associated with this reflection is <span class="math notranslate nohighlight">\(2/c\)</span>; this is demonstrated with a line.
+This verifies that the signature must correspond to an object which is above the ground.
+And we can infer that signatures after 100 ns correspond to nearby trees.</p>
+<p>Below, we show the two-way travel path for reflected signals off a tree and a building.
+A diagram showing the different radargram signatures for both the tree and the building is also provided.
+Unlike the tree, the face of the building is not a point reflector.
+However, the ends of the signature corresponding to the building also have slopes which are <span class="math notranslate nohighlight">\(2/c\)</span>.
+Thus, we can infer the propagation velocity.</p>
+<p>To avoid measuring signals such as these, shields may also be used on the transmitter and receiver.
+However, if signals from above ground objects are present in the radargram, they can be be identified for zero-offset configurations by their slope.</p>
+<figure class="align-center" id="id17" style="width: 100%">
+<img alt="../../_images/GPR_above_ground_objects.png" src="../../_images/GPR_above_ground_objects.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 121 </span><span class="caption-text">Zero-offset radargram example for returning signals from a tree and building wall.</span><a class="headerlink" href="#id17" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Ringing</strong></p>
+<p>Ringing occurs when radiowave signals reverberate in regular fashion.
+This is created when GPR signals repeatedly bounce within or between nearby objects.
+In response to ringing, the returning signal from a particular interface(s) is not ‘sharp’ in the radargram.
+Instead, it becomes present over all times.</p>
+<figure class="align-center" id="id18" style="width: 80%">
+<img alt="../../_images/GPR_wire_surface.png" src="../../_images/GPR_wire_surface.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 122 </span><span class="caption-text">(Left) Radargram showing ringing from a small metal wire near the surface. (Right) Ringing from two nearby objects.</span><a class="headerlink" href="#id18" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Noise from Scattering</strong></p>
+<p>As we mentioned earlier, scattering is used to describe deviations in the paths of electromagnetic waves due to localized non-uniformities; which are less than 1/4 the wavelength of the radiowave signal.
+Scattering is problematic for GPR because it reduces the amplitudes of useful signals while increasing extraneous noise.
+If the Earth is made up of homogeneous units, scattering is negligible and returning GPR signals are easily visible.
+If the Earth is very inhomogeneous, the effects of scattering may produce significant extraneous noise.</p>
+<figure class="align-center" id="id19" style="width: 60%">
+<img alt="../../_images/GPR_scattering_examples.png" src="../../_images/GPR_scattering_examples.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 123 </span><span class="caption-text">Examples of scattering. A) Scattering from irregular surface texture. B) Scattering in rocky soils.</span><a class="headerlink" href="#id19" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Below, we show a representation of data from a single Tx-Rx shot.
+On the left, scattering is negligible and the returning wavelet is easily visible.
+On the right, the returning wavelet is hard to see due to incoherent noise cause by scattering.
+In addition, we see that the amplitude of the returning wavelet signal is less, as scattering resulted in a loss in amplitude.</p>
+<figure class="align-center" id="id20" style="width: 70%">
+<img alt="../../_images/GPR_scattering_return_signal.png" src="../../_images/GPR_scattering_return_signal.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 124 </span><span class="caption-text">Return signals with different levels of scattering noise (Left) Minimal noise. (Right) Significant scattering noise.</span><a class="headerlink" href="#id20" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="GPR_fundamental_principles.html" class="btn btn-neutral float-left" title="Basic Principles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="GPR_processing.html" class="btn btn-neutral float-right" title="Processing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,338 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Normal MoveOut (NMO): Stacking Data in CMP Gathers &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Migration" href="seismic_reflection_migration.html" />
+    <link rel="prev" title="Static Corrections" href="seismic_reflection_static_corrections.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Seismic</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="elastic_properties.html">Elastic Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_principles.html">Basic principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_survey.html">Survey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_data.html">Data</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="seismic_processing.html">Processing</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="seismic_refraction_processing.html">Refraction</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="seismic_reflection_processing.html">Reflection</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="seismic_reflection_seismogram.html">Normal Incidence Reflection Seismogram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seismic_reflection_filtering.html">Filtering of Seismic Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seismic_reflection_processing_fundamental.html">Fundamental procedure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seismic_reflection_static_corrections.html">Static Corrections</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Normal MoveOut (NMO): Stacking Data in CMP Gathers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seismic_reflection_migration.html">Migration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_interpretation.html">Interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MASW.html">MASW</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_apps.html">Seismic apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Seismic</a> &raquo;</li>
+        
+          <li><a href="seismic_processing.html">Processing</a> &raquo;</li>
+        
+          <li><a href="seismic_reflection_processing.html">Reflection</a> &raquo;</li>
+        
+      <li>Normal MoveOut (NMO): Stacking Data in CMP Gathers</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/seismic/seismic_reflection_stacking.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="normal-moveout-nmo-stacking-data-in-cmp-gathers">
+<span id="seismic-reflection-stacking"></span><h1>Normal MoveOut (NMO): Stacking Data in CMP Gathers<a class="headerlink" href="#normal-moveout-nmo-stacking-data-in-cmp-gathers" title="Link to this heading"></a></h1>
+<p>Imagine recording four seismic traces from one source. If we plot the travel
+time for a seismic signal as a function of distance between receiver and
+source we see that time increases (middle panel). The curve through the traces
+forms a hyperbola.</p>
+<p>For horizontal flat surfaces, the change in travel time for a set of
+increasing source-receiver spacings of a CMP gather (bottom panel) will be
+identical to the “common shot gather” (top panel). The travel time curve from
+the reflector will appear approximately as a hyperbola. Unlike for the common
+shot gather, in the CMP gather all of the arrivals correspond to the same
+reflection point.</p>
+<p>The hyperbolic representation for the travel time curve is exact if the
+velocity above the reflector is constant, and if the reflector is flat. For
+layered media we saw that the travel time curve was hyperbolic, but the
+velocity used should be the RMS velocity. Unfortunately we don’t know what
+this velocity is, so we attempt to estimate it from the data themselves. We
+proceed as follows.</p>
+<ol class="arabic simple">
+<li><p>Assume that each reflection event in a CMP gather has a travel time that corresponds to a hyperbola,</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[t^2 (x) = t_0^2 + \frac{x^2}{v_{st}^2}\]</div>
+<p>where <span class="math notranslate nohighlight">\(v_{st}\)</span> is a “stacking” velocity, or sometimes called the Normal Moveout Velocity, <span class="math notranslate nohighlight">\(v_{nmo}\)</span>.</p>
+<ol class="arabic simple" start="2">
+<li><p>For each reflection event hyperbola, perform a velocity analysis to find
+<span class="math notranslate nohighlight">\(v_{st}\)</span>. This is done by first choosing <span class="math notranslate nohighlight">\(t_0\)</span>. Then choose a trial
+value of velocity <span class="math notranslate nohighlight">\(v_1\)</span>. The associated travel time hyperbola is generated
+and it forms a trajectory on the CMP gather. Sum the energy of the seismic
+traces along the trajectory and plot this value on a graph of velocity versus
+energy. Repeat this procedure for different trial velocities. Choose as
+<span class="math notranslate nohighlight">\(v_{st}\)</span> the velocity that yields the largest energy. In the diagram below
+<span class="math notranslate nohighlight">\(v_2\)</span> represents the stacking velocity. The term cross power can be
+interpreted as total energy.</p></li>
+</ol>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/stacking_velocity.gif"><img alt="../../_images/stacking_velocity.gif" src="../../_images/stacking_velocity.gif" style="width: 540.0px; height: 264.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 81 </span><span class="caption-text">From Kearey, Philip and Micheal Brooks, An Introduction to Geophysical Exploration. 2nd ed. Blackwell Science: 1991.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="3">
+<li><p>Calculate the Normal Moveout Correction: Again, using the hyperbola
+corresponding to <span class="math notranslate nohighlight">\(v_st\)</span>, compute the normal moveout for each trace and
+then adjust the reflection time by the amount <span class="math notranslate nohighlight">\(\Delta T\)</span>.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/NMO_correction.gif"><img alt="../../_images/NMO_correction.gif" src="../../_images/NMO_correction.gif" style="width: 540.0px; height: 163.2px;" />
+</a>
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>Finally, stacking the normal moveout corrected traces generates a single
+trace. Each trace corresponds to a zero-offset trace, that is, the seismic
+trace that would have been recorded by a receiver that is coincident with the
+source.</p></li>
+</ol>
+<p>As an example consider the two CMP gathers in the figure below left (click for
+a larger version). The most prominent seismic wavelet at times between 50 and
+70 ms is a bedrock reflection from about 9 m below the surface. The geophone
+offsets were 3.7 m (12 ft) for the nearest traces and 17 m (56 ft) for the
+farthest trace with 1.22 m (4 ft) between geophones. The reflection even of
+interest is at about 55 msec.</p>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/CMP_gather.gif"><img alt="../../_images/CMP_gather.gif" src="../../_images/CMP_gather.gif" style="width: 312.5px; height: 232.5px;" />
+</a>
+</figure>
+<figure class="center align-left">
+<a class="reference internal image-reference" href="../../_images/velocity_analysis.gif"><img alt="../../_images/velocity_analysis.gif" src="../../_images/velocity_analysis.gif" style="width: 312.5px; height: 245.0px;" />
+</a>
+</figure>
+<p>In the figure above right, the CMP gather for point 988 has been moveout
+corrected using different velocities. The moveout correction using a velocity
+of 1225 ft/s (328 m/s) causes the reflection events to occur at about the same
+time for all traces. Stacking these signals will produce a high quality
+reflection signal. Conversely, a velocity of 1075 ft/s is too small and
+produces too large a correction at far offsets.</p>
+<figure class="center align-right">
+<a class="reference internal image-reference" href="../../_images/wrong_velocity_stack.gif"><img alt="../../_images/wrong_velocity_stack.gif" src="../../_images/wrong_velocity_stack.gif" style="width: 325.0px; height: 235.3px;" />
+</a>
+</figure>
+<p>To show what happens if the wrong velocity is chosen for carrying out the
+normal moveout correction, five 12-fold CMP traces are shown (right) processed
+with three different velocities. When the velocity is too low, the frequency
+of the reflection wavelet is lowered and it is therefore depicted too shallow
+on the seismic section. When the velocity is too high the frequency decreases
+and the reflection wavelet is depicted at too large a time on the seismic
+section. The correct velocity gives the correct position for the wavelet and
+preserves the high frequencies which allow best resolution of small features
+and thin beds. Correct velocity is about 373 m/s (1225 ft/s).</p>
+<section id="summary-essential-elements-in-cmp-processing">
+<h2>Summary: Essential Elements in CMP Processing<a class="headerlink" href="#summary-essential-elements-in-cmp-processing" title="Link to this heading"></a></h2>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/Baker_SeismicPrimer_fig.png"><img alt="../../_images/Baker_SeismicPrimer_fig.png" src="../../_images/Baker_SeismicPrimer_fig.png" style="width: 268.5px; height: 333.75px;" />
+</a>
+</figure>
+<p>There are many different processing steps that could be performed.
+An example from <a class="reference external" href="https://www.researchgate.net/profile/Gregory_Baker4/publication/49182348_Processing_near-surface_seismic-reflection_data_a_primer/links/5617dbbf08ae4780f241fe3d.pdf">GS Baker 1999</a>, is shown in the flow chart image here (click
+for a larger version.). However, the essential steps are summarized in the
+following short list.</p>
+<ol class="arabic simple">
+<li><p>Obtain CSP (Common Source Point) gathers.</p></li>
+<li><p>Sort into CMP (Common Midpoint) gathers. Reflection events (coming from approximately the same point in the earth) appear as hyperbolic trajectories. The goal is to stack them into a single trace.</p></li>
+<li><p>For each event, perform a velocity analysis to find the stacking velocity.</p></li>
+<li><p>Perform NMO correction and stack. This yields a single trace corresponding to a coincident source and receiver.</p></li>
+<li><p>Composite the traces into a CMP processed section.</p></li>
+</ol>
+<p>These are the only steps we will be concerned with in these notes. Other steps
+may be used by experienced contractors and they may be necessary to produce
+more useful sections for interpretation, but the details are beyond the scope
+of this set of notes.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/CMPprocessing.png"><img alt="../../_images/CMPprocessing.png" src="../../_images/CMPprocessing.png" style="width: 944.9999999999999px; height: 520.1px;" />
+</a>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="seismic_reflection_static_corrections.html" class="btn btn-neutral float-left" title="Static Corrections" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="seismic_reflection_migration.html" class="btn btn-neutral float-right" title="Migration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

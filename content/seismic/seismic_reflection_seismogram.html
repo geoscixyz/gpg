@@ -1,0 +1,316 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Normal Incidence Reflection Seismogram &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Filtering of Seismic Data" href="seismic_reflection_filtering.html" />
+    <link rel="prev" title="Reflection" href="seismic_reflection_processing.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Seismic</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="elastic_properties.html">Elastic Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_principles.html">Basic principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_survey.html">Survey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_data.html">Data</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="seismic_processing.html">Processing</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="seismic_refraction_processing.html">Refraction</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="seismic_reflection_processing.html">Reflection</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Normal Incidence Reflection Seismogram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seismic_reflection_filtering.html">Filtering of Seismic Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seismic_reflection_processing_fundamental.html">Fundamental procedure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seismic_reflection_static_corrections.html">Static Corrections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seismic_reflection_stacking.html">Normal MoveOut (NMO): Stacking Data in CMP Gathers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="seismic_reflection_migration.html">Migration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_interpretation.html">Interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MASW.html">MASW</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_apps.html">Seismic apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Seismic</a> &raquo;</li>
+        
+          <li><a href="seismic_processing.html">Processing</a> &raquo;</li>
+        
+          <li><a href="seismic_reflection_processing.html">Reflection</a> &raquo;</li>
+        
+      <li>Normal Incidence Reflection Seismogram</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/seismic/seismic_reflection_seismogram.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="normal-incidence-reflection-seismogram">
+<span id="seismic-reflection-seismogram"></span><h1>Normal Incidence Reflection Seismogram<a class="headerlink" href="#normal-incidence-reflection-seismogram" title="Link to this heading"></a></h1>
+<p>The principles of the normal incidence reflection seismogram are illustrated
+in the diagrams below. A source and receiver are at the surface of a layered
+earth whose properties are variable. The reflection and transmission
+coefficients depend upon the change in acoustic impedance, and thus on both
+density and velocity. The travel time for the wave to go from the source to
+the reflecting interface and back to the surface depends only upon the length
+of the travel path and the velocity of each layer. The travel time formula
+given below, is for a wave which travels vertically and for which the source
+and receiver are coincident. (The source and receiver are offset slightly in
+the diagram for visual clarity). This produces the “normal incidence”
+seismogram.</p>
+<p>The procedure for generating the ideal seismogram is as follows:</p>
+<ol class="loweralpha simple">
+<li><p>Begin with a geologic section.</p></li>
+<li><p>Compute the acoustic impedance as a function of depth by taking the product of the density and velocity logs</p></li>
+<li><p>Compute the reflection (and transmission) coefficients as a function of
+depth. This yields a reflection log.</p></li>
+<li><p>Convert to time. Each layer has a defined velocity. The incremental (two-
+way) travel time on each layer is <span class="math notranslate nohighlight">\(\Delta t_i = 2h_i / v_i\)</span>. This
+yields a reflection function on the two-way travel time domain.</p></li>
+<li><p>Convolve the reflectivity function with a source wavelet. This yields the
+desired ideal seismogram.</p></li>
+</ol>
+<p>The figure below illustrates the procedure:</p>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/three_layer_schematic.gif"><img alt="../../_images/three_layer_schematic.gif" src="../../_images/three_layer_schematic.gif" style="width: 330.0px; height: 265.1px;" />
+</a>
+</figure>
+<p>The acoustic impedance for the ith layer is given by:</p>
+<div class="math notranslate nohighlight">
+\[Z_i = \rho_{i} v_{i}\]</div>
+<p>If the amplitude of the incident ray is <span class="math notranslate nohighlight">\(A_0\)</span> and the amplitude of
+reflection is <span class="math notranslate nohighlight">\(A_1\)</span>, then the reflection coefficient <span class="math notranslate nohighlight">\(R\)</span> is
+<span class="math notranslate nohighlight">\(A_1/A_0\)</span>. Similarly, if the amplitude of the transmitted wave is
+<span class="math notranslate nohighlight">\(A_2\)</span>, then the transmission coefficient <span class="math notranslate nohighlight">\(T\)</span> is
+<span class="math notranslate nohighlight">\(A_2/A_0\)</span>.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Reflection_Transmission.jpg"><img alt="../../_images/Reflection_Transmission.jpg" src="../../_images/Reflection_Transmission.jpg" style="width: 460.59999999999997px; height: 494.9px;" />
+</a>
+</figure>
+<p>Using boundary conditions to ensure the continuity of
+stresses and displacements at the interface between we can express the
+reflection and transmission coefficients in terms of the acoustic
+impedance. Where <span class="math notranslate nohighlight">\(i\)</span> denotes the layer the wave is in and <span class="math notranslate nohighlight">\(j\)</span>
+denotes the layer that the transmitted wave passes into.</p>
+<div class="math notranslate nohighlight">
+\[R_{i,j} =\frac{Z_{j} - Z_{i}}{Z_{j} + Z_{i}}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[T_{i,j} = \frac{2Z_i}{Z_{j} + Z_{i}}\]</div>
+<p>Given the amplitude of the incident wave <span class="math notranslate nohighlight">\(A_0\)</span> you can calculate the
+amplitude of a transmitted of reflected waves in any layer. For example,
+the amplitude of the transmitted wave in the 3rd layer is equal to
+<span class="math notranslate nohighlight">\(A_0 T_{1,2} T_{2,3} = A_2 T_{2,3}\)</span> and the amplitude of the reflected
+wave from the top of the 3rd layer in the 1st layer is
+<span class="math notranslate nohighlight">\(A_0 T_{1,2} R_{2,3} T_{2,1}\)</span>.</p>
+<p>We then convert the reflectivity log from reflectivity as a function of depth
+to reflectivity as a function of time. The total travel time is the sum of
+the incremental times for a particular reflection. The incremental 2 way travel
+time for layer <span class="math notranslate nohighlight">\(i\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[\Delta  t_i = \frac{2h_i}{v}\]</div>
+<p>The normal incidence seismic trace is then obtained by the convolution of a seismic
+wavelet (input pulse) with the reflectivity function. The amplitude of each
+spike on the reflectivity function is determined by the value of the calculated
+reflection and transmission coefficients. The times for each reflection event are
+obtained by knowing the layer thickness and velocities. Each impulse on the
+reflection function generates a scaled replication of the seismic wavelet. The
+composite of all of the reflection events generates the seismic trace.</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/logs.gif"><img alt="../../_images/logs.gif" src="../../_images/logs.gif" style="width: 450.0px; height: 268.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 76 </span><span class="caption-text">The reflection seismogram viewed as the convolved output of a reflectivity function with an input pulse. <a class="footnote-reference brackets" href="#f1" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Notice how the negative reflection coefficients change the polarity of the
+signal recorded at the receiver.</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../../_images/synthetic_seismogram.gif"><img alt="../../_images/synthetic_seismogram.gif" src="../../_images/synthetic_seismogram.gif" style="width: 400.0px; height: 252.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 77 </span><span class="caption-text">A synthetic seismogram. <a class="footnote-reference brackets" href="#f1" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="f1" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>)</span>
+<p>From Kearey, Philip and Micheal Brooks, “An Introduction to Geophysical Exploration”. 2nd ed. Blackwell Science: 1991.</p>
+</aside>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="seismic_reflection_processing.html" class="btn btn-neutral float-left" title="Reflection" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="seismic_reflection_filtering.html" class="btn btn-neutral float-right" title="Filtering of Seismic Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

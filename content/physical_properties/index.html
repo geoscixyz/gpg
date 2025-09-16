@@ -1,0 +1,228 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physical Properties &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Density" href="physical_properties_density.html" />
+    <link rel="prev" title="Inversion Outline" href="../foundations/foundations_inversion.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Physical Properties</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="physical_properties_density.html">Density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_susceptibility_duplicate.html">Susceptibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_velocity_duplicate.html">Seismic Velocity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physical_properties_dielectric_permittivity.html">Dielectric Permittivity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physical_properties_conductivity.html">Electrical Conductivity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="induced_polarization_physical_properties_duplicate.html">Chargeability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tables/index.html">Tables of Physical Properties</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Physical Properties</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/physical_properties/index.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="physical-properties">
+<span id="physical-properties-index"></span><h1>Physical Properties<a class="headerlink" href="#physical-properties" title="Link to this heading"></a></h1>
+<p>In geophysics, materials are differentiated based on their physical properties. Physical properties characterize how materials respond to various physical inputs. For example, if I send sound waves through this material, how quickly does the signal propagate? How effective is this material at conducting electricity? Can I magnetize this material by applying a magnetic field? Sufficient understanding of material physical properties is ultimately paramount, as this information can be used to choose the optimum survey method for a given geophysical/geotechnical/geological problem.</p>
+<p>As part of the GPG, we will focus on the following physical properties: <a class="reference internal" href="physical_properties_density.html#physical-properties-density"><span class="std std-ref">density</span></a>, <a class="reference internal" href="magnetics_susceptibility_duplicate.html#physprop-mag-susc"><span class="std std-ref">magnetic susceptibility and permeability</span></a>, <a class="reference internal" href="seismic_velocity_duplicate.html#seismic-velocity-duplicate"><span class="std std-ref">seismic velocity</span></a>, <a class="reference internal" href="physical_properties_dielectric_permittivity.html#physical-properties-dielectric-permittivity"><span class="std std-ref">dielectric permittivity</span></a>, <a class="reference internal" href="physical_properties_conductivity.html#physical-properties-conductivity"><span class="std std-ref">electrical conductivity/resistivity</span></a> and <a class="reference internal" href="induced_polarization_physical_properties_duplicate.html#induced-polarization-physical-properties-duplicate"><span class="std std-ref">chargeability</span></a>. For each physical property:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Relevant quantities are defined.</p></li>
+<li><p>We explain how the physical property can be measured.</p></li>
+<li><p>Physics associated with the physical property are explained.</p></li>
+<li><p>A common range of values for rocks and materials is provided.</p></li>
+<li><p>Factors impacting the physical property are explained.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Contents:</strong></p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="physical_properties_density.html">Density</a></li>
+<li class="toctree-l1"><a class="reference internal" href="magnetics_susceptibility_duplicate.html">Susceptibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seismic_velocity_duplicate.html">Seismic Velocity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="physical_properties_dielectric_permittivity.html">Dielectric Permittivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="physical_properties_conductivity.html">Electrical Conductivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="induced_polarization_physical_properties_duplicate.html">Chargeability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tables/index.html">Tables of Physical Properties</a></li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../foundations/foundations_inversion.html" class="btn btn-neutral float-left" title="Inversion Outline" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="physical_properties_density.html" class="btn btn-neutral float-right" title="Density" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geophysics primer &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/gpg.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Mineral exploration example" href="foundations_seeing_underground_example.html" />
+    <link rel="prev" title="Introduction" href="foundations_seeing_underground_intro.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Foundations</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Seeing Underground</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="foundations_seeing_underground_intro.html">Introduction</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Geophysics primer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#measuring-physical-properties">Measuring physical properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#traditional-interpretation">Traditional interpretation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inversion">Inversion</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="foundations_seeing_underground_example.html">Mineral exploration example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="foundations_seeing_underground_geotech.html">Geotechnical example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="foundations_seeing_underground_conclusions.html">Conclusions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../foundations_sevensteps.html">A seven-step framework for applied geophysics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foundations_survey_methods.html">Survey methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foundations_model_types.html">Mathematical representations of the Earth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../foundations_inversion.html">Inversion Outline</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Foundations</a> &raquo;</li>
+        
+          <li><a href="index.html">Seeing Underground</a> &raquo;</li>
+        
+      <li>Geophysics primer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/foundations/seeing_underground/foundations_seeing_underground_primer.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="geophysics-primer">
+<span id="foundations-seeing-underground-primer"></span><h1>Geophysics primer<a class="headerlink" href="#geophysics-primer" title="Link to this heading"></a></h1>
+<blockquote>
+<div><figure class="align-right">
+<a class="reference internal image-reference" href="../../../_images/foursurveys.jpg"><img alt="../../../_images/foursurveys.jpg" src="../../../_images/foursurveys.jpg" style="width: 253.8px; height: 236.70000000000002px;" />
+</a>
+</figure>
+</div></blockquote>
+<p>Geophysical surveys are performed when information about the earth’s subsurface is desired, but direct sampling through expensive and invasive techniques such as drilling or trenching is insufficient, impractical or ill-advised. A survey may be as large as the whole Earth, as small as the top few meters of the subsurface, or anywhere in between.</p>
+<section id="measuring-physical-properties">
+<h2>Measuring physical properties<a class="headerlink" href="#measuring-physical-properties" title="Link to this heading"></a></h2>
+<p>During a geophysical survey, energy is put into the earth and responses are recorded at the surface, in the air or in boreholes. Resulting data reveal information about the earth because the behavior of the energy within the ground is controlled by the distribution of the earth’s physical properties. For instance, one basic physical property is magnetic susceptibility, which describes a rock’s ability to become magnetized. This physical property provides information on rock type and structures because the rock’s magnetic susceptibility relates directly to mineral type and the chemical alteration processes. A second important physical property is electrical conductivity, which quantifies a material’s ability to carry electrical current. Figure 2 illustrates one way a geophysical survey can be carried out to provide information about the subsurface distribution of electrical conductivity.</p>
+<blockquote>
+<div><script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+MM_preloadImages('./../../../_images/resist-eg1.jpg','./../../../_images/resist-eg2.jpg','./../../../_images/resist-eg3.jpg','./../../../_images/resist-eg.jpg')
+</script>
+
+   <table cellspacing="0" width="100%"> 
+      <tbody> 
+        <tr> 
+          <td colspan="4" class="caption" valign="top"> <b>Figure 2.</b> An example of how the distribution of a physical property (electrical conductivity in this case) can be measured to provide information about geologic materials.
+          </td> 
+        </tr> 
+
+        <tr> 
+          <td align="top" valign="CENTER" width="100%" colspan="4"><img src="./../../../_images/resist-eg1.jpg" name="resist" id="resist"></td>
+        </tr>
+
+        <tr>
+          <td valign="top" width="10"><font size="-1"><b>a. </b> </font></td> 
+          <td valign="top" width="10"><font size="-1"> 
+            <input name="resist" value="OFF" onclick="MM_swapImage('resist','','./../../../_images/resist-eg1.jpg',1)" checked="checked" type="radio"> 
+            </font></td> 
+          <td colspan="2"><font size="-1"> The physical properties under this surface are unknown. A geophysical survey- DC resistivity in this case - is used to generate data.</font></td> 
+        </tr> 
+
+        <tr>
+          <td valign="top" width="10"><font size="-1"><b>b. </b> </font></td> 
+          <td valign="top" width="10"><font size="-1"> 
+            <input name="resist" value="OFF" onclick="MM_swapImage('resist','','./../../../_images/resist-eg2.jpg',1)" type="radio"> 
+            </font></td> 
+          <td colspan="2"><font size="-1"> Current is injected into the ground, and resulting voltages are measured as electrode geometry varies. In this case, voltages get smaller as electrodes are separated further and further apart.</font></td> 
+        </tr> 
+
+        <tr>
+          <td valign="top" width="10"><font size="-1"><b>c. </b> </font></td> 
+          <td valign="top" width="10"><font size="-1"> 
+            <input name="resist" value="OFF" onclick="MM_swapImage('resist','','./../../../_images/resist-eg3.jpg',1)" type="radio"> 
+            </font></td> 
+          <td colspan="2"><font size="-1"> <b>Inversion </b>of this data set produces an estimate of a "layered earth" or 1D model of the relevant physical property - electrical conductivity.</font></td> 
+        </tr> 
+
+        <tr>
+          <td valign="top" width="10"><font size="-1"><b>d. </b> </font></td> 
+          <td valign="top" width="10"><font size="-1"> 
+            <input name="resist" value="OFF" onclick="MM_swapImage('resist','','./../../../_images/resist-eg.jpg',1)" type="radio"> 
+            </font></td> 
+          <td colspan="2"><font size="-1"> <b>Interpretation</b> converts the model into geologic information.</font></td> 
+        </tr> 
+
+      </tbody>
+    </table>
+    <br></div></blockquote>
+<p>Evidently, the application of geophysics to problems involving earth’s subsurface is a non-trivial process and should be conducted through the seven-step procedure.</p>
+</section>
+<section id="traditional-interpretation">
+<h2>Traditional interpretation<a class="headerlink" href="#traditional-interpretation" title="Link to this heading"></a></h2>
+<p>Traditionally, useful information was extracted from geophysical field results by examining maps or line profiles of raw or filtered survey data. Such images are useful for estimating locations and quantities of buried materials and to help choose locations for more invasive (and expensive) techniques such as drilling. For example, large-scale maps of magnetic or gravity data often show the geologic structure or identify an anomalous region that might be associated with a desired target. As an example, Figure 3 shows the magnetic data acquired at the Bathurst region of New Brunswick. The major features observed are related to geologic structure.</p>
+<blockquote>
+<div><figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../../_images/graphic5.gif"><img alt="../../../_images/graphic5.gif" src="../../../_images/graphic5.gif" style="width: 425.7px; height: 302.40000000000003px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Figure 3. Tetatouche Antiform - Total Magnetic Field, from “Airborne Geophysical Survey of the Bathurst Mining Camp”, Geological Survey of Canada website.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p>Historically, in mineral exploration, the identification of an anomalous region was often the endpoint of the analysis, and the image was used to plan the location of a drill hole. Unfortunately, the success rate was generally poor. At best, data maps provide some information about the lateral extent of a body but little information about what is happening at depth. Quantitative analysis, in particular inversion, is required to obtain 3D information.</p>
+</section>
+<section id="inversion">
+<h2>Inversion<a class="headerlink" href="#inversion" title="Link to this heading"></a></h2>
+<blockquote>
+<div><figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/inv-cartoon.jpg"><img alt="../../../_images/inv-cartoon.jpg" src="../../../_images/inv-cartoon.jpg" style="width: 314.1px; height: 134.1px;" />
+</a>
+</figure>
+</div></blockquote>
+<p>The goal of the inverse problem is to find a mathematical model of the earth that produced the field observations. That is, “What subsurface physical property distribution caused the data  observed at the surface?” Earlier inversion solutions involved characterizing the earth by a few prisms or layers and finding geometrical and physical properties of these simplified earth models.</p>
+<p>Due to the earth’s extreme complexity, useful models often need many parameters, usually more than the number of data. This means that the problem of finding a model (i.e. estimating values for every parameter) is one in which there are more unknowns than data. Such problems do not have unique solutions, and this nonuniqueness is exacerbated when data are noisy or inaccurate. Formal inversion methods address these issues using well-defined mathematical techniques. An appendix explains inversion in a little more detail.</p>
+<p>Some benefits of applying rigorous inversion can be seen by comparing traditional map and pseudosection plots of the raw data to the information in 3D and 2D models obtained by inversion.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="foundations_seeing_underground_intro.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="foundations_seeing_underground_example.html" class="btn btn-neutral float-right" title="Mineral exploration example" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

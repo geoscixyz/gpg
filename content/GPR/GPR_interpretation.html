@@ -1,0 +1,386 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interpretation &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Electromagnetic Methods" href="../electromagnetics/index.html" />
+    <link rel="prev" title="Processing" href="GPR_processing.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Ground Penetrating Radar</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="GPR_physical_properties.html">Physical Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="table_velocity.html">Propagation Velocities of Dielectric Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GPR_fundamental_principles.html">Basic Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GPR_survey_data.html">Survey and Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GPR_processing.html">Processing</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Interpretation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#things-to-keep-in-mind">Things to Keep in Mind</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#locating-buried-storage-tanks">Locating Buried Storage Tanks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mapping-peat-thickness-ireland">Mapping Peat Thickness (Ireland)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#underground-potash-mine">Underground Potash Mine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#burial-site-alabama">Burial Site (Alabama)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mapping-permafrost">Mapping Permafrost</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Ground Penetrating Radar</a> &raquo;</li>
+        
+      <li>Interpretation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/GPR/GPR_interpretation.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="interpretation">
+<span id="gpr-interpretation"></span><h1>Interpretation<a class="headerlink" href="#interpretation" title="Link to this heading"></a></h1>
+<p>Here, we look at some real examples of GPR surveys and try to interpret the radargram data.
+Although we are focusing on the interpretation of data, it will be contained within the 7-step framework.</p>
+<section id="things-to-keep-in-mind">
+<h2>Things to Keep in Mind<a class="headerlink" href="#things-to-keep-in-mind" title="Link to this heading"></a></h2>
+<p>When attempting to interpret radargram data, here are a few things to keep in mind.
+Try to consider these things when examining the radargram below.</p>
+<p><strong>Regarding the Survey</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>What is the Tx-Rx separation distance?</p></li>
+<li><p>What is the operating frequency and wavelet pulse width?</p></li>
+<li><p>What do you know about the local physical properties? high/low conductivity? high/low dielectric permittivity?</p></li>
+<li><p>Is the ground dry or saturated (permittivity)? Does the ground contain features which may scatter the signal?</p></li>
+<li><p>Having considered the previous statements, what do you think the resolution and probing distance are?</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Regarding the Data</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>When is the earliest useful signal you measure? When is the latest?</p></li>
+<li><p>Why can’t you see anything after the latest signal? Attenuation? Strong reflector?</p></li>
+<li><p>Can you infer a layer velocity and turn the travel time axis into an apparent distance axis?</p></li>
+<li><p>Is there a reverse in polarity of the wavelet signal? What does that tell you about <span class="math notranslate nohighlight">\(\varepsilon_1\)</span> and <span class="math notranslate nohighlight">\(\varepsilon_2\)</span> for an interface?</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Recognizing Features</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Do you notice any hyperbolic features? Indicates point reflector for zero-offset. Indicates layer for common midpoint.</p></li>
+<li><p>For hyperbolic signatures (or signatures from other discrete shapes), what does the slope tell you about the propagation velocity of the medium it’s in?</p></li>
+<li><p>Based on the slope, is the object above ground (noise), or below ground (potential target)?</p></li>
+<li><p>Are there any linear features (zero-offset)?</p></li>
+<li><p>Do linear features indicate a flat or dipping interface? Is the a method you can use to get the dip?</p></li>
+<li><p>Are you able to get signals from anything below an obvious reflector? What does that say about <span class="math notranslate nohighlight">\(\varepsilon_1\)</span> and <span class="math notranslate nohighlight">\(\varepsilon_2\)</span>?</p></li>
+<li><p>Can slopes and hyperbolas be used to obtain layer velocities?</p></li>
+</ul>
+</div></blockquote>
+<figure class="align-center" id="id1" style="width: 100%">
+<img alt="../../_images/GPR_interp_check_list.png" src="../../_images/GPR_interp_check_list.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 130 </span><span class="caption-text">Zero-offset radargram example.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="locating-buried-storage-tanks">
+<h2>Locating Buried Storage Tanks<a class="headerlink" href="#locating-buried-storage-tanks" title="Link to this heading"></a></h2>
+<figure class="align-center" id="id2" style="width: 60%">
+<img alt="../../_images/GPR_buried_tanks_diagram.png" src="../../_images/GPR_buried_tanks_diagram.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 131 </span><span class="caption-text">Diagram showing underground storage tanks.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id3" style="width: 65%">
+<img alt="../../_images/GPR_buried_tanks_radargram.png" src="../../_images/GPR_buried_tanks_radargram.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 132 </span><span class="caption-text">Corresponding radargram for a zero offset survey.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Setup</strong>: Real estate transactions regularly create the need for an environmental site assessment. Confirming the presence or absence of underground storage tanks (USTs) can be a  critical factor in contract closing.</p>
+<p><strong>Physical Properties</strong>: Storage tanks have a large conductivity. These will act as strong reflectors of GPR signals.</p>
+<p><strong>Survey</strong>: Survey line are done perpendicular to the known orientation of the storage tanks. A zero offset survey was used.</p>
+<p><strong>Data</strong>: GPR data were collected along several profile lines. These were used to generate radargrams.</p>
+<p><strong>Processing</strong>: An arrival time to depth conversion was done in order to approximate the depth to the storage tanks. The radargrams for several profile lines were interpolated in order to generate a 3D image.</p>
+<figure class="align-center" id="id4" style="width: 65%">
+<img alt="../../_images/GPR_buried_tanks_interpolated.png" src="../../_images/GPR_buried_tanks_interpolated.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 133 </span><span class="caption-text">3D interpolation from several GPR survey lines.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Interpretation</strong>: From the radargram and 3D interpolated image, we can easily see five storage tanks buried at a depth of 3.5 ft (1 metre).
+In the radargram, the signatures from the pipes are hyperbolic.
+Below the tanks, we can see two tank beds.
+The goal of the tank bed is to ensure that any leakage stays contained.
+Because the storage tanks themselves are such strong reflectors, we do not see the reflection of the tank beds for certain Tx-Rx positions.</p>
+<p><strong>Synthesis</strong>: This survey was successful in locating the buried storage tanks at a potential building site.</p>
+</section>
+<section id="mapping-peat-thickness-ireland">
+<h2>Mapping Peat Thickness (Ireland)<a class="headerlink" href="#mapping-peat-thickness-ireland" title="Link to this heading"></a></h2>
+<figure class="align-center" id="id5" style="width: 70%">
+<img alt="../../_images/GPR_interp_peat_bog_diagram.png" src="../../_images/GPR_interp_peat_bog_diagram.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 134 </span><span class="caption-text">GPR being used to map peat bog thickness.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Setup</strong>: Bog material in raised bogs are being used to energy consumption. We would like to map the peat bogs thickness over a 35,000 Ha region.</p>
+<p><strong>Physical Properties</strong>: Peat is a porous carbon material with large water content (they need to dry it before using). Region below is listed as lake deposits. Possibly a difference is water content and texture and this may provide a difference in dielectric permittivity.</p>
+<p><strong>Survey</strong>: GPR Towed 100MHz antenna, with RTK GPS for positional accuracy. Common offset survey.</p>
+<p><strong>Data</strong>: Profiles collected every 60 m and plotted as distance-time sections.</p>
+<p><strong>Processing</strong>: Processed to remove topography effects and identify correlated reflection events.</p>
+<figure class="align-center" id="id6" style="width: 70%">
+<img alt="../../_images/GPR_interp_peat_bog_radargram.png" src="../../_images/GPR_interp_peat_bog_radargram.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 135 </span><span class="caption-text">Radargram over profile line. (a) Data before topographic correction. (b) Data after topographic correction.</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Interpretation</strong>: As we can see at roughly 100 ns +/- 50 ns (a), there is well-established interface corresponding to the bottom of the peat bed.
+At earlier times, we see reflected signals from the internal layered structure of the peat beds as well.
+We also see localized features which are thought to be caused by buried timbers.
+After the topographic correction (b), we see an embankment on the left side of the radargram.
+The contrast in physical properties here is smaller, thus we do not see the reflection as strongly.</p>
+<p><strong>Synthesis</strong>: In various places, a peat augur (borehole device) was used to calibrate the data and verify the inferred thickness of the peat layer.
+As a result, our interpretation of the data was correct and the GPR survey was successful.</p>
+</section>
+<section id="underground-potash-mine">
+<h2>Underground Potash Mine<a class="headerlink" href="#underground-potash-mine" title="Link to this heading"></a></h2>
+<p><strong>Setup</strong>: Water is a serious problem for potash mines, as it can dissolve the rock and decrease structural integrity. The goal of this survey was to map the location of intruding water and locate its source.</p>
+<p><strong>Physical Properties</strong> In general, anhydrite minerals such as potash have relative permittivities <span class="math notranslate nohighlight">\(\varepsilon_r \sim 5\)</span>.
+On the other hand, water as a very high dielectric permittivity (<span class="math notranslate nohighlight">\(\varepsilon = 80\)</span>).
+Because these two units have such different dielectric permittivities, we expect a large reflection where radiowaves come into contact with the water.</p>
+<p><strong>Survey</strong>: GPR profiles were collected along the lengths of mine shafts using a common offset configuration.</p>
+<p><strong>Data</strong>: Radargrams along several profiles within mine shafts.</p>
+<p><strong>Processing</strong>: By assuming a propagation velocity of 0.13 m/ns (approximately known for potash), the two-way travel time was converted an apparent depth/distance.</p>
+<figure class="align-center" id="id7" style="width: 100%">
+<img alt="../../_images/GPR_interp_potash_radargram.png" src="../../_images/GPR_interp_potash_radargram.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 136 </span><span class="caption-text">Radargram showing reflected signal corresponding to water and ringing from proximal infrastructure. Notice the radargram is upside down. Things nearer to the source and receiver are plotted near the bottom.</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Interpretation</strong>: On the radargram, we see a strong reflected signal corresponding to the water which is percolating through the potash.
+We see that the water is approximately 6 m away from the wave of the mine shaft.
+The resolution is not high enough to determine the thickness of the water saturated potash.
+However, we see that it is delineated in some areas and that the source of the water is likely on the right of the profile.
+On the left side of the GPR profile, we see ringing causes by infrastructure.</p>
+<p><strong>Synthesis</strong>: In this case, the results of the GPR survey were correlated with the results from a DC resistivity survey (taught later in the course).
+Boreholes also confirmed the inferred location of the water.
+Ultimately, we were successful in locating the water and determining its source using GPR in conjunction with other methods.</p>
+</section>
+<section id="burial-site-alabama">
+<h2>Burial Site (Alabama)<a class="headerlink" href="#burial-site-alabama" title="Link to this heading"></a></h2>
+<p><strong>Setup</strong>: Archaeological study of historic burial grounds in Alabama. Attempting to locate burial sites.</p>
+<p><strong>Physical Properties</strong> In this case, the contrast in physical properties is between the host rock and items buried along with human remains.
+We expect that objects buried in the ground will act as point reflectors for the GPR signal.</p>
+<p><strong>Survey</strong>: Zero-offset survey along a 20 m profile.</p>
+<p><strong>Data</strong>: Radargram along a 20 m profile.</p>
+<p><strong>Processing</strong>: By using the hyperbolic signatures in the data, the host layer velocity was determined.
+This was used to obtain the apparent depth.</p>
+<figure class="align-center" id="id8" style="width: 80%">
+<img alt="../../_images/GPR_interp_burial_site.jpg" src="../../_images/GPR_interp_burial_site.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 137 </span><span class="caption-text">Radargram hyperbolic signatures associated with indigenous burials.</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Interpretation</strong>: Yellow arrows indicate very distinct point reflections (hyperbolas), probably associated with human burials.
+Less distinct hyperbolic reflections are indicated by red arrows.
+The apparent depth indicates that burials are between 0.75 m and 1.5 m.
+Dashed blue lines are used to indicate horizontal and sloping reflectors, probably bedrock.
+Smaller reflections near the surface are likely to be caused by tree roots.</p>
+<p><strong>Synthesis</strong>: Because of the nature of the site, subsurface testing was not used to confirm the interpretation.
+However, the interpretation is supported by surface indications (grave markers and depressions).</p>
+</section>
+<section id="mapping-permafrost">
+<h2>Mapping Permafrost<a class="headerlink" href="#mapping-permafrost" title="Link to this heading"></a></h2>
+<p><strong>Setup</strong>: We would like to map the thickness and stability of a permafrost layer and identify key features.</p>
+<p><strong>Physical Properties</strong>: Permafrost has a relative permittivity of roughly 4-8 whereas the saturated fluvial sediments below have a much higher relative permittivity.
+We expect this contrast in dielectric permittivity to provide a large reflection which can be measured by the GPR system.
+We expect to see scattering where methane gas bubbles are percolating up through the ground.</p>
+<p><strong>Survey</strong>: Another common offset survey.</p>
+<p><strong>Data</strong>: Radargram over a 400 m profile.</p>
+<p><strong>Processing</strong>: By assuming a propagation velocity of the speed of light, the two-way travel time was converted an apparent depth.</p>
+<figure class="align-center" style="width: 100%">
+<img alt="../../_images/GPR_interp_permafrost.png" src="../../_images/GPR_interp_permafrost.png" />
+</figure>
+<p><strong>Interpretation</strong>: The topmost layer is interpreted as being comprised of frozen silts followed by frozen gravels and sand.
+Because rocky soils result in scattering of radiowave signals, data corresponding to the signal from the frozen gravel is noisy.
+At about 400 ns, we clearly see a well-defined lower boundary for the permafrost (mostly on the right).
+One of the most interesting features is found in the middle.
+We see a change in character of GPR signal where the boundary should be defined.
+This has been interpreted as an area where methane gas is bubbling to the surface.</p>
+<p><strong>Synthesis</strong>: The features in this radargram are much noisier and hard to interpret than previous examples.
+Boreholes were used to confirm the interpretation.
+Although penetration depth may have been an important aspect of planning the survey (due to scattering), a higher frequency survey may have provided more details near the surface.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="GPR_processing.html" class="btn btn-neutral float-left" title="Processing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../electromagnetics/index.html" class="btn btn-neutral float-right" title="Electromagnetic Methods" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

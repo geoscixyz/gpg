@@ -1,0 +1,284 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Receivers &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Survey geometry" href="seismic_survey_geometry.html" />
+    <link rel="prev" title="Sources" href="seismic_sources.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Seismic</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="elastic_properties.html">Elastic Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_principles.html">Basic principles</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="seismic_survey.html">Survey</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="seismic_sources.html">Sources</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Receivers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#recording-equipment">Recording equipment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="seismic_survey_geometry.html">Survey geometry</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_data.html">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_processing.html">Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_interpretation.html">Interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MASW.html">MASW</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_apps.html">Seismic apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Seismic</a> &raquo;</li>
+        
+          <li><a href="seismic_survey.html">Survey</a> &raquo;</li>
+        
+      <li>Receivers</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/seismic/seismic_receivers.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="receivers">
+<span id="seismic-receivers"></span><h1>Receivers<a class="headerlink" href="#receivers" title="Link to this heading"></a></h1>
+<p>A seismic detector measures the displacement, velocity or acceleration of
+material. Typically it is an electromechanical device that responds to a
+mechanical input such as physical motion or pressure, and outputs an
+electrical signal.</p>
+<p>On land the instruments are called seismometers or geophones. Once the
+sensor’s spike (right) is planted into the ground, the geophone case moves
+with the ground while a heavy magnetic mass suspended on a spring inside the
+case stays stationary owing to its own inertia. The relative motion between a
+coil wrapped around the magnet, and the magnetic field supplied by magnets
+attached to the case, sets up a voltage in the coil. This voltage is passed
+along the wire to the recorder where it is converted to a digital signal and
+stored.</p>
+<p><strong>Geophones</strong> are sensitive to motion only along the axis of the coil. Vertical
+ground motion is best detected by a orienting the coil vertically to build a
+vertical geophone. It is also possible to mount the spring/mass system
+horizontally. A combination of several sensors in different orientations
+allows ground motion in all three directions to be measured.</p>
+<figure class="align-center" id="id1">
+<img alt="../../_images/LandGeophone.jpg" src="../../_images/LandGeophone.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 67 </span><span class="caption-text">Land Geophone</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Seismic signal detectors for water-borne deployment are called
+<strong>hydrophones</strong>. These are generally ceramic piezoelectric elements which
+produce an output voltage proportional to the pressure variations associated
+with the passage of a compressional wave through the water. At sea, these are
+often carried in a neutrally buoyant cable (seismic streamer). Recall that
+shear waves can not travel in liquids.</p>
+<section id="recording-equipment">
+<h2>Recording equipment<a class="headerlink" href="#recording-equipment" title="Link to this heading"></a></h2>
+<p>Seismic data consists of records of ground motion at each geophone location.
+Each record shows how ground moved as a function of time, starting at the
+moment the source energy was generated. The records are usually a few hundred
+milliseconds long, and are digitized (ie sampled) at a sampling rate of
+perhaps several samples per millisecond. This is not very different from the
+sampling rate for digitized music. Therefore, recording equipment must have
+the following capabilities:</p>
+<ol class="arabic simple">
+<li><p>An analogue to digital number converter that converts the measured electrical signal into a time series of numbers.</p></li>
+<li><p>A synchronizing facility so that digitizing can start at the same time as energy is initiated at the source.</p></li>
+<li><p>A computer to manage the input from the geophones.</p></li>
+<li><p>The computer must be able to “replay” or plot the seismograms (signals from each geophone) so that data quality can be checked visually. Old units had a small strip-paper printer.</p></li>
+<li><p>Since there is a computer, most systems include built in software to carry out initial interpretations of refraction data.</p></li>
+</ol>
+<figure class="align-center" id="id2">
+<img alt="../../_images/SmartSeis.jpg" src="../../_images/SmartSeis.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 68 </span><span class="caption-text">“SmartSeis” seismograph which can record up to 24 channels, manufactured
+by Geometrics. A good place to see specifications of engineering scale
+seismic equipment is <a class="reference external" href="https://terraplus.ca/sale/seismic">https://terraplus.ca/sale/seismic</a> (Terraplus
+is an equipment rental company, based out of Richmond Hill, Ontario).</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Below is an image showing simulated exploration of Mars at the Haughton-Mars
+Project, an international, interdisciplinary field research project. The “Mars
+analogue” field site is in the Haughton crater, a meteorite impact crater, on
+Devon Island in Canada’s high arctic. A line of geophones is being planted,
+the seismograph is nearby. The goal is to characterize the layered structure
+under the field site.</p>
+<figure class="align-center" id="id3">
+<img alt="../../_images/astro-geophone.jpg" src="../../_images/astro-geophone.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 69 </span><span class="caption-text">Installing a seismometer on mars! :)</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="seismic_sources.html" class="btn btn-neutral float-left" title="Sources" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="seismic_survey_geometry.html" class="btn btn-neutral float-right" title="Survey geometry" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

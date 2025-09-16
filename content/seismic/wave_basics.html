@@ -1,0 +1,366 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basics of wave propagation &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Waves at interfaces" href="waves_at_interfaces.html" />
+    <link rel="prev" title="Basic principles" href="basic_principles.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Seismic</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="elastic_properties.html">Elastic Properties</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="basic_principles.html">Basic principles</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Basics of wave propagation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#elastic-model-for-earth-rocks">Elastic model for Earth rocks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#body-waves">Body Waves</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#surface-waves">Surface Waves</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wave-velocity-and-particle-velocity">Wave Velocity and Particle Velocity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#waves-and-rays">Waves and Rays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attenuation">Attenuation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="waves_at_interfaces.html">Waves at interfaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="traveltimes.html">Travel times</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_survey.html">Survey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_data.html">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_processing.html">Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_interpretation.html">Interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MASW.html">MASW</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_apps.html">Seismic apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Seismic</a> &raquo;</li>
+        
+          <li><a href="basic_principles.html">Basic principles</a> &raquo;</li>
+        
+      <li>Basics of wave propagation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/seismic/wave_basics.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="basics-of-wave-propagation">
+<span id="wave-basics"></span><h1>Basics of wave propagation<a class="headerlink" href="#basics-of-wave-propagation" title="Link to this heading"></a></h1>
+<section id="elastic-model-for-earth-rocks">
+<h2>Elastic model for Earth rocks<a class="headerlink" href="#elastic-model-for-earth-rocks" title="Link to this heading"></a></h2>
+<p>Recall from the <a class="reference internal" href="../physical_properties/seismic_velocity_duplicate.html#seismic-velocity-duplicate"><span class="std std-ref">seismic velocity</span></a> page of the physical properties section that the earth deforms elastically when it is deformed by a source of seismic energy. These small elastic strains will propagate as waves away in all directions from the site of the original stress. The easiest way to obtain intuition about this is to think about rocks as being made up of a set of connected springs. Apply a force (stress) to any part and you will eventually get motion elsewhere. This propagation of energy is a type of wave motion. Elastic waves can be divided into two categories:</p>
+<aside class="sidebar">
+<p class="sidebar-title">Elastic model for rocks</p>
+<figure class="align-center">
+<img alt="../../_images/springbox.png" src="../../_images/springbox.png" />
+</figure>
+</aside>
+<ol class="arabic simple">
+<li><p><strong>Body waves</strong> which travel through materials</p></li>
+<li><p><strong>Surface waves</strong> which propagate along boundaries between materials such
+as the air/earth interface.</p></li>
+</ol>
+<p>Subtypes of these two categories are described below. Each wave type travels through a given material with a velocity that depends upon the elastic properties and density of the material.</p>
+</section>
+<section id="body-waves">
+<h2>Body Waves<a class="headerlink" href="#body-waves" title="Link to this heading"></a></h2>
+<p><strong>Compressional waves (P waves)</strong> propagate by compression and rarefaction and
+the velocity of such waves, <span class="math notranslate nohighlight">\(v_p\)</span>, in a material with bulk modulus <span class="math notranslate nohighlight">\(K\)</span>, shear modulus <span class="math notranslate nohighlight">\(\mu\)</span>, and density <span class="math notranslate nohighlight">\(\rho\)</span> is given by the equation</p>
+<div class="math notranslate nohighlight">
+\[v_p = \sqrt{ \frac{K + 4/3\mu}{\rho} }.\]</div>
+<p>The figure below shows a simple animation of the motion associated with P waves.</p>
+<figure class="align-center" id="id1">
+<img alt="../../_images/pwave-animated-2.gif" src="../../_images/pwave-animated-2.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 58 </span><span class="caption-text">Animation by <a class="reference external" href="http://web.ics.purdue.edu/~braile/">L. Braile</a>, from his <a class="reference external" href="http://web.ics.purdue.edu/~braile/edumod/waves/WaveDemo.htm">seismic wave demo</a>, licensed for non-commercial reuse.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Shear waves (S waves)</strong> propagate by a pure shear strain perpendicular to the
+wave propagation. The propagation speed <span class="math notranslate nohighlight">\(v_s\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[v_s = \sqrt{\frac{\mu}{\rho} }.\]</div>
+<p>The below animation shows the propagation of a vertically polarized S wave. Note that an S wave could also be horizontally polarized, meaning that particle motion would be in the y direction in the coordinate system of the animation, as opposed to the z direction for vertical polarization.</p>
+<figure class="align-center" id="id2">
+<img alt="../../_images/s-wave-animated.gif" src="../../_images/s-wave-animated.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 59 </span><span class="caption-text">Animation by <a class="reference external" href="http://web.ics.purdue.edu/~braile/">L. Braile</a>, from his <a class="reference external" href="http://web.ics.purdue.edu/~braile/edumod/waves/WaveDemo.htm">seismic wave demo</a>, licensed for non-commercial reuse.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Note that if <span class="math notranslate nohighlight">\(\mu = 0\)</span> then <span class="math notranslate nohighlight">\(v_s = 0\)</span>. This tells us that shear
+waves do not travel in a liquid.</p>
+<p>Seismic reflection and refraction surveying is usually carried out by the analysis of P waves. S-waves can also be used but they are harder to generate artificially compared to P-waves and require more complex receivers than ones designed to measure just P-waves. In marine surveys (unless sources and receivers are coupled directly to the ocean bottom) it is not possible to generate or measure S-waves at all. However, since <span class="math notranslate nohighlight">\(v_s &lt; v_p\)</span>, there are situations where it is beneficial to
+use S-waves instead of P-waves.</p>
+</section>
+<section id="surface-waves">
+<h2>Surface Waves<a class="headerlink" href="#surface-waves" title="Link to this heading"></a></h2>
+<p><strong>Rayleigh waves</strong> propagate along a free surface or on the boundary between two
+materials. Particle motion is a retrograde ellipse, and in the same plane as
+wave energy propagation. The amplitude of particle motion decays
+exponentially with depth. Rayleigh wave speed <span class="math notranslate nohighlight">\(v_R &lt; v_S\)</span>. Large
+earthquakes can generate Rayleigh waves that circumnavigate the globe. This
+provides information about the velocity structure in the upper few hundred
+kilometers of the earth.</p>
+<figure class="align-center" id="id3">
+<img alt="../../_images/Rayleigh-wave-animated.gif" src="../../_images/Rayleigh-wave-animated.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 60 </span><span class="caption-text">Animation by <a class="reference external" href="http://web.ics.purdue.edu/~braile/">L. Braile</a>, from his <a class="reference external" href="http://web.ics.purdue.edu/~braile/edumod/waves/WaveDemo.htm">seismic wave demo</a>, licensed for non-commercial reuse.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Love waves</strong> exist in a surface layer when the shear wave velocity of the
+upper layer is less than the shear wave velocity of the lower layer. The
+waves are trapped in the upper layer and the particle motion is parallel to
+the free surface and perpendicular to the direction of propagation.</p>
+<div class="math notranslate nohighlight">
+\[v_{S1} &lt; v_{Love} &lt; v_{S2}\]</div>
+<figure class="align-center" id="id4">
+<img alt="../../_images/Love-wave-animated.gif" src="../../_images/Love-wave-animated.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 61 </span><span class="caption-text">Animation by <a class="reference external" href="http://web.ics.purdue.edu/~braile/">L. Braile</a>, from his <a class="reference external" href="http://web.ics.purdue.edu/~braile/edumod/waves/WaveDemo.htm">seismic wave demo</a>, licensed for non-commercial reuse.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Both Love waves and Rayleigh waves are <strong>dispersive</strong>. That is, different
+frequency components travel at different speeds. So the wave changes shape as
+it travels. Also, the dispersion can be used to provide information about the
+velocity structure in the upper region of the earth. For shallow work, it is
+possible to generate surface waves artificially, and then observe the waves at
+a series of locations at increasing distances from the source. This type of
+field work is sometimes called <strong>multi-channel analysis of surface waves</strong> or
+MASW. This is usually considered an “advanced” topic in applied geophysics.</p>
+</section>
+<section id="wave-velocity-and-particle-velocity">
+<h2>Wave Velocity and Particle Velocity<a class="headerlink" href="#wave-velocity-and-particle-velocity" title="Link to this heading"></a></h2>
+<p>Seismic waves typically travel in the ground at 2-7 km/s. This is the velocity
+at which the energy moves, not the particles themselves. For comparison, sound
+travels in air at approximately 0.33 km/s. The wave energy can be recorded
+many kilometers from the source even if the source is small. The velocity and
+displacements of individual particles in the rocks are however very small;
+typical particle speeds are <span class="math notranslate nohighlight">\(10^{-8}\)</span> m/s and typical ground
+displacements are <span class="math notranslate nohighlight">\(10^{-10}\)</span> m. For a list of velocities of some common
+earth materials and a discussion of the geological factors that affect
+velocities please see the <a class="reference internal" href="../physical_properties/seismic_velocity_duplicate.html#seismic-velocity-duplicate"><span class="std std-ref">seismic velocity</span></a> page on the physical properties
+section of this site.</p>
+</section>
+<section id="waves-and-rays">
+<h2>Waves and Rays<a class="headerlink" href="#waves-and-rays" title="Link to this heading"></a></h2>
+<p>A wave is a representation of the propagation of energy. In the case of seismic waves, energy is propagated through small displacements of the earth away from equilibrium. Energy propagates away from seismic source with a distinct pattern. Most seismic sources can be approximated spatially as point sources. In a uniform medium, energy propagates away from a point source in an expanding spherical pattern, much like ripples on a pond that’s been disturbed. The figure below shows a snapshot of waves on a pond. Notice how each ring forms a coherent surface where the water is disturbed from equilibrium by an equal amount. These rings propagate outward in time, in a coherent manner.</p>
+<figure class="align-center" id="id5">
+<img alt="../../_images/pondwaves-noleaves.jpg" src="../../_images/pondwaves-noleaves.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 62 </span><span class="caption-text">Image reproduced with permission from The website of the <a class="reference external" href="http://www.gemini.edu/">Gemini Observatory</a>. The original can be found <a class="reference external" href="http://www.gemini.edu/images/stories/press_release/pr2003-2/pondwaves-noleaves.jpg">here</a>.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>A wavefront indicates the set of locations at which the phase of the wave has the same value. To continue with the pond example, visualize the peaks (or troughs) of water ripples after a rock has been thrown in. The direction of propagation of the energy is normal to the wavefront. <strong>Seismic rays</strong> are imaginary lines perpendicular to the wavefront that indicate the path along which the wavefront is traveling. Rays are not physical entities. They exist only to illustrate where the energy travels. It is important to remark here that the arrival of energy at a geophone is not a point event. The energy is spread in space and time. Note how the peaks and troughs of the waves on the pond have widths, which remains constant as they propagate. Similarly, seismic energy will arrive at a geophone as a pulse of energy with some shape and width, not as a spike occurring a single instance in time. This pulse of energy is called a wavelet.</p>
+<figure class="align-center">
+<img alt="../../_images/wavefront.gif" src="../../_images/wavefront.gif" />
+</figure>
+<p>Lets illustrate the connection between wavefronts and rays using a seismic example. Have a look at the following animation.</p>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0z2WTLLKjGY?rel=0" frameborder="0" allowfullscreen>
+</iframe>
+</div><p>The color represents a propagating wavefront due to a point source and the arrows are rays showing the direction of propagation. Note how the rays represent how the wavefront is bent when it hits the interface between two layers in the earth. They are always normal to the wavefront.</p>
+<p>It is common in seismic processing and interpretation to represent waves as plane waves, that is, waves whose wavefronts are straight lines rather than circles. The wavefronts maintain a circular shape when propagating in a uniform medium but as they expand away from the source the circles get larger and larger, to the point where the curvature is negligible and they can be approximated as planes. this is illustrated in the figure below</p>
+<figure class="align-center" id="id6">
+<img alt="../../_images/Sonar_Principle_EN-modified-from-wikipedia-radar-article.svg.png" src="../../_images/Sonar_Principle_EN-modified-from-wikipedia-radar-article.svg.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 63 </span><span class="caption-text">Adapted from <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Sonar_Principle_EN.svg">Wikipedia</a>, licensed under <a class="reference external" href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="attenuation">
+<h2>Attenuation<a class="headerlink" href="#attenuation" title="Link to this heading"></a></h2>
+<p>The amplitude of seismic waves falls off with distance from the source. There
+are two primary reasons:</p>
+<ol class="arabic simple">
+<li><p>Geometrical spreading - that is, energy falls off as <span class="math notranslate nohighlight">\(1/r^2\)</span> and hence the amplitude falls of as <span class="math notranslate nohighlight">\(1/r\)</span>.</p></li>
+<li><p>Earth materials are not perfectly elastic. Some frictional heating occurs
+as the waves propagate through the earth. This is often described as
+“absorption” and the absorption coefficient expresses the proportion of energy
+lost as the wave travels a distance of one wavelength. The figure here shows
+the progressive change of shape of an original spike pulse during its
+propagation through the ground due to the effects of absorption (after Anstey
+1977.) The spike’s shape changes as well as experiencing reduced amplitude.
+This is because the different frequencies making up the pulse decay at
+different rates - in fact, higher frequencies decay more rapidly than lower
+frequencies. This is easily observed on earthquake signals that have been
+recorded at different locations. As noted above in the context of surface
+waves, such frequency dependent behavior is called <strong>dispersion</strong>.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="../../_images/attenuation.gif" src="../../_images/attenuation.gif" />
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="basic_principles.html" class="btn btn-neutral float-left" title="Basic principles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="waves_at_interfaces.html" class="btn btn-neutral float-right" title="Waves at interfaces" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

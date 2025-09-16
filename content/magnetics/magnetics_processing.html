@@ -1,0 +1,391 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Processing &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Interpretation" href="magnetics_interpretation.html" />
+    <link rel="prev" title="Data" href="magnetics_data.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Magnetics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="magnetics_introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_physical_property.html">Susceptibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_basic_principles.html">Basic Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_survey.html">Survey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_data.html">Data</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Processing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#removal-of-time-variations">Removal of time variations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#removal-of-regional-trends">Removal of regional trends</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reduction-to-pole">Reduction to Pole</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_interpretation.html">Interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_applet.html">Magnetic dipole applet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Magnetics</a> &raquo;</li>
+        
+      <li>Processing</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/magnetics/magnetics_processing.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="processing">
+<span id="magnetics-processing"></span><h1>Processing<a class="headerlink" href="#processing" title="Link to this heading"></a></h1>
+<p>This section focusses on the the temporal and spatial correction of magnetic data prior to the interpretation phase. In most cases, these processing steps are completed by the acquisition team, providing both the raw and processed data as a final product.</p>
+<section id="removal-of-time-variations">
+<span id="mangetics-time-variations"></span><h2>Removal of time variations<a class="headerlink" href="#removal-of-time-variations" title="Link to this heading"></a></h2>
+<p>Earth’s magnetic field changes over time for a variety of <a class="reference internal" href="magnetics_basic_principles.html#magnetics-external-sources"><span class="std std-ref">reasons</span></a>. If the changes in earth’s
+field have an amplitude that is significant compared to our anomalous signal,
+then we need to correct for the observed temporal variations. The general
+procedure  is to establish a <a class="reference internal" href="magnetics_survey.html#magnetics-base-station"><span class="std std-ref">base-station</span></a> which is fixed in location and
+continually measures  the magnetic field. Each datum acquired by the roving
+sensor is also time-stamped. The assumption  is then made that the changes in
+the Earth’s magnetic field caused by these natural sources have a long enough
+spatial wavelength that they are same at any point on the survey grid.  Field
+data, corrected for these time variations, is obtained through the following
+subtraction process</p>
+<div class="math notranslate nohighlight">
+\[\Delta \textbf{B}(t) = \textbf{B}_{obs}(t) - \textbf{B}_{base}(t)\]</div>
+<p>The Geological Survey of Canada <a class="reference external" href="http://www.geomag.nrcan.gc.ca/index-eng.php">geomag</a> page can provide graphs of
+diurnal variations observed at any of 11 magnetic observatories in Canada, for
+any day in the most recent 3 years.</p>
+<figure class="align-center" id="space-weather">
+<a class="reference internal image-reference" href="../../_images/pipe3_timelapse_edit.gif"><img alt="../../_images/pipe3_timelapse_edit.gif" src="../../_images/pipe3_timelapse_edit.gif" style="width: 314.25px; height: 168.75px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 41 </span><span class="caption-text">: Adapted from <a class="reference external" href="https://www.spaceweather.gc.ca/tech/index-en.php#pip">NRC</a></span><a class="headerlink" href="#space-weather" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="removal-of-regional-trends">
+<span id="magnetics-regional-trend"></span><h2>Removal of regional trends<a class="headerlink" href="#removal-of-regional-trends" title="Link to this heading"></a></h2>
+<p>In order to interpret magnetic data in terms of features and structures at
+depth, the anomalous field caused by buried features of interest must be
+isolated. In other words, we must try to remove the contribution to the
+measurements made by the earth’s field and also from geologic features larger
+than the actual survey area. That is, we want to remove a regional field. If
+we designate magnetic fields as <strong>B</strong>, then we want to perform the following</p>
+<div class="math notranslate nohighlight">
+\[\textbf{B}_{a} = \Delta \textbf{B} - \textbf{B}_{regional}\]</div>
+<p>Estimates of the regional field may be obtained using:</p>
+<ul class="simple">
+<li><p>the <a class="reference internal" href="magnetics_basic_principles.html#magnetics-igrf"><span class="std std-ref">IGRF</span></a></p></li>
+<li><p>a constant value selected by the interpreter (when survey areas are small);</p></li>
+<li><p>a more sophisticated polynomial (map) generated by a computer using least
+squares (or other) analysis of data;</p></li>
+<li><p>it is also possible to use inversion at a large scale to define a regional
+field.</p></li>
+</ul>
+<p>To illustrate the process, when data are collected along a line, the removal
+of a regional trend can be managed graphically, as shown here:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/regional.gif"><img alt="../../_images/regional.gif" src="../../_images/regional.gif" style="width: 640.2px; height: 125.4px;" />
+</a>
+</figure>
+<p>Clearly this process involves some degree of subjectivity and will depend upon
+how you draw a line that separates the desired “signal” from the background.
+The situation becomes more complicated for  magnetic maps (data collected over
+an area) where the causative bodies have complicated shapes and variable
+dimensions. Nevertheless, removing an approximate regional field can be of
+critical importance in isolating an anomaly for further processing as maps or
+input into an inversion. The following is an example showing the regional
+magnetic map and a local anomalous field taken from a survey in central
+British Columbia. The area is Mt. Milligan, which has recently opened up as a
+mine. In the large-scale map the dominant feature is the magnetic signature of
+the mountain. Of interest is a (2km x 2km) segment of that map. A large-scale
+regional field is estimated, subtracted from the observed data, and the
+results are shown in a second  window. The magnetic feature observed in that
+map is related to the ore body.</p>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+  </script>
+  <script language="JavaScript">
+<!--
+function MM_initInteractions(){}
+//-->
+  </script><!-- InstanceEndEditable -->   
+           
+      <table bgcolor="#ffffff" border="1" cellpadding="2" cellspacing="1">
+
+        <tbody>
+
+          <tr>
+
+            <td valign="top">
+            <form name="form1" method="post" action="">
+                
+              <p>
+                  <input name="radiobutton" value="radiobutton" checked="checked" onclick="MM_swapImage('mtmill','','./../../_images/mm-airmag1.jpg',1)" type="radio">
+                  Regional field.<br>
+
+          Airborne magnetic data gathered a 25 square km <br>
+          area around a mineral deposit in central British <br>
+          Columbia. Some geological structural information <br>
+          is shown as black lines. The monzonite stock in <br>
+          the centre of the boxed region is a magnetic <br>
+          body, but this is not very clear in the data <br>
+          before removing the regional trend. </p>
+
+                
+              <p>
+                  <input name="radiobutton" value="radiobutton" onclick="MM_swapImage('mtmill','','./../../_images/mm-airmag2.jpg',1)" type="radio">
+                  Local anomalous field.<br>
+
+          Anomalous total magnetic field strength in <br>
+          the boxed area of the large-scale map, after <br>
+          the regional SW-to-NE trend has been removed. <br>
+          Now the signature of the monzonite stock is <br>
+          more clearly visible. </p>
+
+
+              </form>
+            </td>
+
+            <td valign="top"><img src="./../../_images/mm-airmag1.jpg" name="mtmill" border="0" height="275" width="300"></td>
+
+          </tr>
+
+        
+        </tbody>
+      
+      </table>
+
+     
+    <!-- InstanceEndEditable --></td>
+
+    <td bgcolor="#ffffff" width="12"></td>
+
+  </tr>
+
+  </tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="reduction-to-pole">
+<span id="magnetics-rtp"></span><h2>Reduction to Pole<a class="headerlink" href="#reduction-to-pole" title="Link to this heading"></a></h2>
+<p>Reduction to pole is a processing step which allows for easier interpretation of magnetic data. During a reduction to pole, the observed data are used to compute the magnetic anomaly that would have been measured if the Earth’s field had been vertical (90 <span class="math notranslate nohighlight">\(\!\,^o\)</span> inclination).</p>
+<p>The magnetic anomalies from susceptible bodies depend significantly on the inclination and declination of the Earth’s magnetic field; see <a class="reference internal" href="#fig-reduce-to-pole-1"><span class="std std-numref">Fig. 42</span></a>. As a result, it may be challenging to resolve the location/orientation of a susceptible body solely by examining the anomaly it produces. In <a class="reference internal" href="#fig-reduce-to-pole-1"><span class="std std-numref">Fig. 42</span></a> b, we see that the location of maximum anomaly amplitude is offset from the location of the steel pipe. However, the location of the pipe and the maximum anomaly amplitude are the same when the inclination is 90 <span class="math notranslate nohighlight">\(\!\,^o\)</span>; this is the case for most susceptible bodies. For an inclination of 90 <span class="math notranslate nohighlight">\(\!\,^o\)</span>, it is also easier to determine if the object is elongated or dipping.</p>
+<figure class="align-center" id="fig-reduce-to-pole-1" style="width: 100%">
+<img alt="../../_images/ReduceToPole1.png" src="../../_images/ReduceToPole1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 42 </span><span class="caption-text">Magnetic anomaly from a vertically orientation 2 m pole for differing inclinations of the Earth’s field: a) 90 <span class="math notranslate nohighlight">\(\!\,^o\)</span>, b) 45 <span class="math notranslate nohighlight">\(\!\,^o\)</span> and c) 0 <span class="math notranslate nohighlight">\(\!\,^o\)</span>.</span><a class="headerlink" href="#fig-reduce-to-pole-1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>To demonstrate the effectiveness of reduction to pole, let us consider a magnetic UXO survey (<a class="reference internal" href="#fig-reduce-to-pole-2"><span class="std std-numref">Fig. 43</span></a>). On the left, we see the total magnetic field data collected at the survey site. Although anomalies indicate the presence of a number of potential targets, the location of each object relative to the anomaly it produces is inconsistent. However after completing a reduction to pole (right), the location of each potential targets becomes easily visible.</p>
+<figure class="align-center" id="fig-reduce-to-pole-2" style="width: 100%">
+<img alt="../../_images/RTP_UXOdata.png" src="../../_images/RTP_UXOdata.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 43 </span><span class="caption-text">Total field magnetic data over UXO before (left) reduction to pole and after (right) reduction to pole. The true location of each object is labeled by a black dot.</span><a class="headerlink" href="#fig-reduce-to-pole-2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="magnetics_data.html" class="btn btn-neutral float-left" title="Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="magnetics_interpretation.html" class="btn btn-neutral float-right" title="Interpretation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

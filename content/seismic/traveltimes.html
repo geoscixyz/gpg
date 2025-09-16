@@ -1,0 +1,484 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel times &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Survey" href="seismic_survey.html" />
+    <link rel="prev" title="Waves at interfaces" href="waves_at_interfaces.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Seismic</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="elastic_properties.html">Elastic Properties</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="basic_principles.html">Basic principles</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="wave_basics.html">Basics of wave propagation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="waves_at_interfaces.html">Waves at interfaces</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Travel times</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#refracted-ray-in-a-two-layered-earth">Refracted ray in a two layered-earth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#refracted-ray-in-a-three-layered-earth">Refracted ray in a three layered-earth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reflected-rays-single-layer">Reflected rays - single layer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#travel-time-curves-for-multiple-layers">Travel Time Curves for Multiple Layers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_survey.html">Survey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_data.html">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_processing.html">Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_interpretation.html">Interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MASW.html">MASW</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seismic_apps.html">Seismic apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Seismic</a> &raquo;</li>
+        
+          <li><a href="basic_principles.html">Basic principles</a> &raquo;</li>
+        
+      <li>Travel times</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/seismic/traveltimes.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="travel-times">
+<span id="id1"></span><h1>Travel times<a class="headerlink" href="#travel-times" title="Link to this heading"></a></h1>
+<p>A seismic wave travelling through an isotropic homogeneous medium will propagate at a constant velocity. Therefore, the time <span class="math notranslate nohighlight">\(t\)</span> required for a seismic wave to travel from source to receiver in a homogeneous earth layer with velocity <span class="math notranslate nohighlight">\(v\)</span> is simply given by the formula</p>
+<div class="math notranslate nohighlight">
+\[t = \frac{d}{v}\]</div>
+<p>where <span class="math notranslate nohighlight">\(d\)</span> is the distance travelled in the layer. In a seismic survey we measure source to receiver travel times and use those data to estimate the properties of the subsurface. Basic seismic interpretation methods assume that the earth is composed of a series of uniform layers and attempt to compute the thicknesses, velocities, and sometimes dips of each layer. We will discuss specific techniques for computing layer thicknesses and velocities in the reflection and refraction survey sections. However, we will introduce the concept of travel time computations and how they relate to geometry here, using the example of a two layered earth.</p>
+<p>Consider a layer of thickness h and velocity <span class="math notranslate nohighlight">\(v_1\)</span> overlying a uniform halfspace of velocity <span class="math notranslate nohighlight">\(v_2\)</span>. A source is detonated at time <span class="math notranslate nohighlight">\(t=0\)</span>. We are interested in the waves and arrival times of those waves at a receiver which is located at a distance <span class="math notranslate nohighlight">\(x\)</span> from the source at position <span class="math notranslate nohighlight">\(D\)</span> in the figure below. There are three principal waves that will travel through the earth and arrive at position D. i) direct waves, ii) reflected waves, and  iii) critically refracted waves.</p>
+<figure class="align-center">
+<img alt="../../_images/waveslayerhalfspace.gif" src="../../_images/waveslayerhalfspace.gif" />
+</figure>
+<p>The travel time curves for these ray paths are shown below, where the horizontal axis represents distance from the source along the flat surface of the earth, <span class="math notranslate nohighlight">\(x_{crit}\)</span> is called the critical distance, and <span class="math notranslate nohighlight">\(x_{cross}\)</span> the crossover distance. The critical distance is the closest surface point to the source at which the refracted ray can be observed. The crossover distance is the surface point at which the direct and refracted rays arrive at the same time. At offsets from the source greater than the crossover distance the refracted ray will be the first signal to arrive from the source. You can explore these concepts interactively using the <a class="reference external" href="https://mybinder.org/v2/gh/geoscixyz/gpgLabs/main?filepath=notebooks%2Fseismic%2FSeis_Refraction.ipynb">Science seismic refraction app</a>. Instructions for using the app can be found <a class="reference internal" href="seismic_apps.html#seismic-apps"><span class="std std-ref">here</span></a>. The following video illustrates the propagation of headwaves and how they relate to the crossover distance</p>
+<div style="margin-top:10px; margin-bottom:20px;" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5_q5RuDCe1A?rel=0" frameborder="0" allowfullscreen></iframe>
+</iframe>
+</div><figure class="align-center">
+<img alt="../../_images/timetravels.gif" src="../../_images/timetravels.gif" />
+</figure>
+<p>Travel times of visible arrivals are related to the distance between source and receiver (<span class="math notranslate nohighlight">\(x\)</span>), thickness of the layer (<span class="math notranslate nohighlight">\(h\)</span>) and the wave velocities in the upper layer and basement (<span class="math notranslate nohighlight">\(v_1\)</span> and <span class="math notranslate nohighlight">\(v_2\)</span>). Let us denote the arrival times at point <span class="math notranslate nohighlight">\(x\)</span> for the direct, reflected and refracted waves as <span class="math notranslate nohighlight">\(t_{dir}\)</span>, <span class="math notranslate nohighlight">\(t_{refl}\)</span> <span class="math notranslate nohighlight">\(t_{refr}\)</span> respectively. These times are given by the following formulas</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}t_{dir} &amp; = \frac{x}{v_1}\\
+t_{refl} &amp; = \frac{\sqrt{x^2 + 4h^2}}{v_1}\\
+t_{refr}  &amp; = \frac{x}{v_2} + \frac{2h\sqrt{v_2^2-v_1^2}}{v_1 v_2}.\end{split}\]</div>
+<p>Note that the formulas for the direct and refracted waves are linear in <span class="math notranslate nohighlight">\(x\)</span> but that the reflected arrival time formula is not.</p>
+<p>Before moving on, let’s look at an example of how travel times show up in the field. The horizontal axis of the following plot shows offset from a seismic receiver. Each line plots the displacement vs time curve of a geophone at a given offset. The plot clearly shows a set of events moving linearly in time from one geophone to the next.</p>
+<figure class="align-center">
+<img alt="../../_images/case-study-seismogram.png" src="../../_images/case-study-seismogram.png" />
+</figure>
+<p>We will now discuss the computation of traveltimes in more detail. It is important to note here that computing traveltimes for an arbitrary, heterogeneous earth is a complex problem well beyond the scope of this course. However, much insight can be gained by assuming that the subsurface consists of a series of homogeneous layers with horizontal or possibly dipping interfaces.</p>
+<section id="refracted-ray-in-a-two-layered-earth">
+<h2>Refracted ray in a two layered-earth<a class="headerlink" href="#refracted-ray-in-a-two-layered-earth" title="Link to this heading"></a></h2>
+<p>We need to identify specific ray paths and their associated travel times.
+Consider an earth composed of a uniform layer with velocity <span class="math notranslate nohighlight">\(v_1\)</span> and
+thickness <span class="math notranslate nohighlight">\(z\)</span> overlying a medium with velocity <span class="math notranslate nohighlight">\(v_2\)</span>. Let
+<span class="math notranslate nohighlight">\(\theta\)</span> be the critical angle and x denoted the distance between the
+source at <span class="math notranslate nohighlight">\(A\)</span> and a receiver at <span class="math notranslate nohighlight">\(D\)</span>.  Let <span class="math notranslate nohighlight">\(x_c\)</span> denote the
+critical distance.</p>
+<figure class="align-center">
+<img alt="../../_images/refracHzGeometry.gif" src="../../_images/refracHzGeometry.gif" />
+</figure>
+<aside class="sidebar">
+<p class="sidebar-title">triangle</p>
+<figure class="align-center">
+<img alt="../../_images/lengthTriangle.gif" src="../../_images/lengthTriangle.gif" />
+</figure>
+</aside>
+<p>From elementary geometry the following relationships hold:</p>
+<div class="math notranslate nohighlight">
+\[x_c = 2z\tan\theta \quad l=\frac{z}{\cos\theta}\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[\tan\theta = \frac{x_c}{2z} \quad \cos\theta = \frac{z}{l}\]</div>
+<p>The travel time is the cumulative time for the wave to traverse the path
+<span class="math notranslate nohighlight">\(ABCD\)</span>. This is <span class="math notranslate nohighlight">\(t=t_{AB}+t_{BC}+t_{CD}\)</span>.</p>
+<p>Generally time = distance / velocity, so we can write <span class="math notranslate nohighlight">\(t_{AB} = L/v_1 =
+(z/cos\theta) / v1\)</span>, (using <span class="math notranslate nohighlight">\(L\)</span> from just above).</p>
+<p>Also, we can note that <span class="math notranslate nohighlight">\(t_{AB} = t_{CD}\)</span> and the distance <span class="math notranslate nohighlight">\(BC\)</span> is
+<span class="math notranslate nohighlight">\(x-x_c\)</span>. So we can now state that <span class="math notranslate nohighlight">\(t=2t_{AB}+t_{BC}\)</span> , or</p>
+<div class="math notranslate nohighlight">
+\[t = \frac{2z}{v_1\cos\theta} + \frac{x-2z\tan\theta}{v_2}\]</div>
+<aside class="sidebar">
+<p class="sidebar-title">velocity triangle</p>
+<figure class="align-center">
+<img alt="../../_images/velocitytriangle.gif" src="../../_images/velocitytriangle.gif" />
+</figure>
+</aside>
+<p>It is convenient to rearrange this slightly differently. Using the definition
+for critical angle  <span class="math notranslate nohighlight">\(\sin\theta=v_1/v_2\)</span>, we can make the “velocity
+triangle”, so expressions for the angle arise directly from simple
+trigonometry:</p>
+<div class="math notranslate nohighlight">
+\[\cos\theta = \frac{\sqrt{v_2^2-v_1^2}}{v_2}\]</div>
+<div class="math notranslate nohighlight">
+\[\tan\theta = \frac{v_1}{\sqrt{v_2^2-v_1^2}}\]</div>
+<p>Use these two relations for <span class="math notranslate nohighlight">\(\cos\)</span> and <span class="math notranslate nohighlight">\(\tan\)</span> in the expression for
+t above to obtain a useful set of relations.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}t = &amp; \frac{x}{v_2} + \frac{2z\sqrt{v_2^2-v_1^2}}{v_1v_2} \\
+  = &amp; \frac{x}{v_2} + t_i\end{split}\]</div>
+<p>This simple relation says that the travel time curve is a straight line which
+has a slope of <span class="math notranslate nohighlight">\(1/v_2\)</span> and an intercept of <span class="math notranslate nohighlight">\(t_i\)</span>. This intercept time
+is the time where the refraction line extends to intercept the <span class="math notranslate nohighlight">\(y\)</span>-axis
+–above the source position–. This is not a real “time” - it is derived from
+the graph.</p>
+<figure class="align-center">
+<img alt="../../_images/interpretingArrivals.gif" src="../../_images/interpretingArrivals.gif" />
+</figure>
+<p>The velocities of the seismic layers and the layer thickness are obtained in the following manner.</p>
+<ol class="arabic simple">
+<li><p>Plot the times of first arrivals on an time-offset plot (“offset” is distance between source and geophone).</p></li>
+<li><p>The direct arrivals are observed to lie along a straight line joining the origin. The slope of this line is <span class="math notranslate nohighlight">\(1/v_1\)</span>, giving the velocity of the upper layer.</p></li>
+<li><p>The refracted arrivals appear as a straight line with smaller slope equal to <span class="math notranslate nohighlight">\(1/v_2\)</span>, giving the velocity of the lower layer.</p></li>
+<li><p>For the refracted wave, this intercept time is</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[t_i = \frac{2z\sqrt{v_2^2-v_1^2}}{v_1v_2}\]</div>
+<p>so</p>
+<div class="math notranslate nohighlight">
+\[z = \frac{t_iv_1v_2}{2\sqrt{v_2^2-v_1^2}}\]</div>
+<p>We therefore can obtain all three useful parameters about the earth, <span class="math notranslate nohighlight">\((v_1, z, v_2)\)</span>.</p>
+<p>There is another useful point that is observable from the first arrival
+travel-time plot. We can often discern the crossover distance. Since this is
+the location where the direct wave and the refracted wave arrive at the same
+time, we can write</p>
+<div class="math notranslate nohighlight">
+\[\frac{x_{\text{cross}}}{v_1} = \frac{x_{\text{cross}}}{v_2} + t_i\]</div>
+<p>Thus</p>
+<div class="math notranslate nohighlight">
+\[x_{\text{cross}}\left(\frac{1}{v_1} - \frac{1}{v_2}\right) = t_i\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}x_{\text{cross}} &amp;= \left(\frac{v_1v_2}{v_2-v_1}\right)t_i \\
+&amp;= \frac{v_1v_2}{v_2-v_1}\frac{2z}{v_1v_2}\sqrt{v_2^2-v_1^2} \\
+&amp;= 2z\sqrt{\frac{v_2+v_1}{v_2-v_1}}\end{split}\]</div>
+<p>This can be used as a consistency check, or it can be used to compute one of
+the variables given values for two others.</p>
+</section>
+<section id="refracted-ray-in-a-three-layered-earth">
+<h2>Refracted ray in a three layered-earth<a class="headerlink" href="#refracted-ray-in-a-three-layered-earth" title="Link to this heading"></a></h2>
+<p>The extension to more layers is in principle straight forward. Snell’s law
+holds for waves at all interfaces, so for a multi-layered medium</p>
+<div class="math notranslate nohighlight">
+\[\frac{\sin\theta_1}{v_1} = \frac{\sin\theta_2}{v_2} = \frac{\sin\theta_3}{v_3} = ...\]</div>
+<p>For a three layer case, the algebra is slightly more involved compared to a
+two layer example because we need to compute the times due to the ray path
+segments in the two top layers. Consider the diagrams below:</p>
+<figure class="align-center">
+<img alt="../../_images/twoHorizontalLayers.gif" src="../../_images/twoHorizontalLayers.gif" />
+</figure>
+<figure class="align-center">
+<img alt="../../_images/twoHorizontalLayersTime.png" src="../../_images/twoHorizontalLayersTime.png" />
+</figure>
+<p>Using arguments that are entirely analagous to the two layer case (above) the
+travel time for the wave refracted at the top of layer three is given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}t &amp;= \frac{x}{v_3} + \frac{2 z_1 \cos\theta_1}{v_1} + \frac{2z_2\cos\theta_2}{v_2} \\
+&amp;= \frac{x}{v_3} + t_{i2}\end{split}\]</div>
+<p>All quantities are defined in the diagrams, and the angles are</p>
+<div class="math notranslate nohighlight">
+\[\theta_1 = \sin^{-1}\left(\frac{v_1}{v_3}\right) \quad \text{and} \quad \theta_2 = \sin^{-1}\left(\frac{v_2}{v_3}\right)\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(\theta_2\)</span> is a critical angle while <span class="math notranslate nohighlight">\(\theta_1\)</span> is not.
+You can prove the relation for  <span class="math notranslate nohighlight">\(\theta_1\)</span> yourself by using Snell’s law
+at the two interfaces, and recalling that the angle of the ray coming from
+point <span class="math notranslate nohighlight">\(B\)</span> is the same as the angle arriving at point <span class="math notranslate nohighlight">\(C\)</span>. The straight
+line that corresponds to an individual refractor provides a velocity (from its
+slope) and a thickness (from the intercept). Thus the information on the above
+travel-time plot allows us to recover all three velocities and the thickness
+of both layers.</p>
+<p>The travel time curves for multi layers are obtained from obvious extension of
+the above formulation.</p>
+</section>
+<section id="reflected-rays-single-layer">
+<h2>Reflected rays - single layer<a class="headerlink" href="#reflected-rays-single-layer" title="Link to this heading"></a></h2>
+<figure class="float-right-360 align-right">
+<a class="reference internal image-reference" href="../../_images/travel_time_fig1.gif"><img alt="../../_images/travel_time_fig1.gif" src="../../_images/travel_time_fig1.gif" style="width: 283.0px; height: 168.0px;" />
+</a>
+</figure>
+<p>Consider the situation to the right, in which there is a source <span class="math notranslate nohighlight">\(S\)</span> and a
+set of receivers on the surface of the earth. The earth is a single uniform
+layer overlying a uniform halfspace. A reflection from the interface will
+occur if there is a change in the acoustic impedance at the boundary.</p>
+<p>Let <span class="math notranslate nohighlight">\(x\)</span> denote the “offset” or distance from the source to the receiver.
+The time taken for the seismic energy to travel from the source to the
+receiver is given by</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[t = \frac{(x^2 + 4z^2)^\frac{1}{2}}{v}\]</div>
+</div></blockquote>
+<p>This is the equation of a hyperbola. In seismic reflection (as in radar) we
+plot time on the negative vertical axis, and so the seismic section (without
+the source wavelet) would look like.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/NMO_hyperbola.gif"><img alt="../../_images/NMO_hyperbola.gif" src="../../_images/NMO_hyperbola.gif" style="width: 388.7px; height: 196.3px;" />
+</a>
+</figure>
+<p>Two way travel time:</p>
+<div class="math notranslate nohighlight">
+\[t_0 = \frac{2z}{v}\]</div>
+<p>Normal Moveout:</p>
+<div class="math notranslate nohighlight">
+\[\Delta t = t(x) - t_0\]</div>
+<p>In the above diagram <span class="math notranslate nohighlight">\(t_0\)</span> is the 2-way vertical travel time. It is the
+minimum time at which a reflection will be recorded. The additional time taken
+for a signal to reach a receiver at offset <span class="math notranslate nohighlight">\(x\)</span> is called the “Normal
+Moveout” time, <span class="math notranslate nohighlight">\(\Delta t\)</span>.  This value is required for every trace in the
+common depth point data set in order to shift echoes up so they align for
+stacking. How is it obtained? First let us find a way of determining velocity
+and <span class="math notranslate nohighlight">\(t_0\)</span>.</p>
+<p>For this simple earth structure the velocity and layer thickness can readily
+be obtained from the hyperbola. Squaring both sides yields,</p>
+<div class="math notranslate nohighlight">
+\[t^2 = t_0^2 + \frac{x^2}{v^2}\]</div>
+<figure class="float-right-360 align-right">
+<a class="reference internal image-reference" href="../../_images/tsqrd_xsqrd_plot.gif"><img alt="../../_images/tsqrd_xsqrd_plot.gif" src="../../_images/tsqrd_xsqrd_plot.gif" style="width: 240.0px; height: 247.2px;" />
+</a>
+</figure>
+<p>This is the equation of a straight line when <span class="math notranslate nohighlight">\(t^2\)</span> is plotted against
+<span class="math notranslate nohighlight">\(x^2\)</span>.  Now, to find <span class="math notranslate nohighlight">\(\Delta T\)</span>, we must rearrange this hyperbolic
+equation relating <span class="math notranslate nohighlight">\(t_0\)</span>, <span class="math notranslate nohighlight">\(x\)</span>, the <span class="math notranslate nohighlight">\(Tx\)</span>–<span class="math notranslate nohighlight">\(Rx\)</span> offset, <span class="math notranslate nohighlight">\(t\)</span>
+at <span class="math notranslate nohighlight">\(x\)</span>,  or <span class="math notranslate nohighlight">\(t(x)\)</span>, and the ground’s velocity, <span class="math notranslate nohighlight">\(v\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\begin{split}t^2 &amp;= \frac{x^2 + 4z^2}{v} \\
+        &amp;= \frac{4z^2}{v^2}\left(\frac{x^2}{4z^2} + 1 \right)\\\end{split}\\\begin{split}  t &amp;= \frac{2z}{v} \sqrt{ 1 + (\frac{x}{2z})^2 } \\
+    &amp;= t_0 \sqrt{ 1 + \left(\frac{x}{vt_0}\right)^2 }\end{split}\end{aligned}\end{align} \]</div>
+<p>Apply binomial expansion to get</p>
+<div class="math notranslate nohighlight">
+\[t \approx  t_0 \left(1 + \frac{1}{2} \left(\frac{x}{vt_0} \right)^2  \right)\quad
+if \quad \frac{x}{vt_0} &lt;&lt; 1\]</div>
+<p>Now, since normal moveout is <span class="math notranslate nohighlight">\(\Delta T = t_x - t_0\)</span></p>
+<div class="math notranslate nohighlight">
+\[\Delta t \approx \left(t_0 + \frac{t_0x^2}{2v^2t_0^2} \right) - t_0 \approx \frac{x^2}{2v^2t_0}\]</div>
+<p>The algebra has only one complicated step–a binomial expansion must be
+applied to obtain a simple relation without square roots etc.</p>
+<p>The approximation is valid so long as the source-receiver separation (or
+offset) is “small” which means much less than the vertical depth to the
+reflecting layer (i.e. <span class="math notranslate nohighlight">\(x &lt;&lt; vt_0\)</span>). The result is a simple expression for
+normal moveout.</p>
+<p>Each echo can be shifted up to align with the <span class="math notranslate nohighlight">\(t_0\)</span> position, so long as
+the trace position, <span class="math notranslate nohighlight">\(x\)</span>, the vertical incident travel time, <span class="math notranslate nohighlight">\(t_0\)</span>, and
+the velocity are known. Velocity can be estimated using the slope of the
+<span class="math notranslate nohighlight">\(t^2\)</span>–<span class="math notranslate nohighlight">\(x^2\)</span> plot, or with several other methods, which we will
+discuss in pages following.</p>
+</section>
+<section id="travel-time-curves-for-multiple-layers">
+<h2>Travel Time Curves for Multiple Layers<a class="headerlink" href="#travel-time-curves-for-multiple-layers" title="Link to this heading"></a></h2>
+<p>If there are additional layers then the seismic energy at each interface is
+refracted according to Snell’s Law. The energy no longer travels in a straight
+line and hence the travel times are affected. It is observed that for small
+offsets, the travel time curve is still approximately hyperbolic, but the
+velocity, which controls the shape of the curve, is an “average” velocity
+determined from the velocities of all the layers above the reflector. The
+velocity is called the RMS (Root Mean Square) velocity, <span class="math notranslate nohighlight">\(v_{rms}\)</span>.</p>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/ray_in_multiple_layers.gif"><img alt="../../_images/ray_in_multiple_layers.gif" src="../../_images/ray_in_multiple_layers.gif" style="width: 290.0px; height: 287.09999999999997px;" />
+</a>
+</figure>
+<figure class="center align-left">
+<a class="reference internal image-reference" href="../../_images/t_x_curve_reflected_ray.gif"><img alt="../../_images/t_x_curve_reflected_ray.gif" src="../../_images/t_x_curve_reflected_ray.gif" style="width: 350.0px; height: 294.0px;" />
+</a>
+</figure>
+<p>The complex travel path of a reflected ray through a multilayered ground. (b)
+The time–distance curve for reflected rays following the above type of path.
+Note that the divergence from the hyperbolic travel-time curve for a
+homogeneous overburden of velocity Vrms increases with offset.</p>
+<p>As outlined in the figure above, the reflection curve for small offsets is
+still like a hyperbola, but the associated velocity is  <span class="math notranslate nohighlight">\(v_{rms}\)</span>, not a
+true interval velocity.</p>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/travel_t_hyperbolas.gif"><img alt="../../_images/travel_t_hyperbolas.gif" src="../../_images/travel_t_hyperbolas.gif" style="width: 270.0px; height: 286.5px;" />
+</a>
+</figure>
+<p>For each hyperbola:</p>
+<div class="math notranslate nohighlight">
+\[t \approx \frac{\left(x^2 + 4z_n^2 \right)^2 } {v_n^{rms}}\]</div>
+<p>By fitting hyperbolas to each reflection event one can obtain
+<span class="math notranslate nohighlight">\(t_n,v_n^{rms}\)</span> for n = 1, 2, … The interval velocity and layer
+thickness of each layer can be found using the formulae below:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}v_n \approx \left[ \frac{(v_n^{rms})^2 t_n - (v_{n-1}^{rms})^2 t_{n-1}  }{t_n-t_{n-1}} \right]\\\Delta z = z_n - z_{n-1} = v_n \left( \frac{t_n - t_{n-1}}{2} \right)\end{aligned}\end{align} \]</div>
+<p>These formulae for the interval velocity and thickness of the <span class="math notranslate nohighlight">\(n^{th}\)</span>
+layer are directly obtainable from the definition of <span class="math notranslate nohighlight">\(v_n^{rms}\)</span> given
+above. The RMS velocity for the <span class="math notranslate nohighlight">\(n^{th}\)</span> layer is given by:</p>
+<div class="math notranslate nohighlight">
+\[v_n^{rms} = \sqrt{\frac{\sum_{i=1}^{n} v_i^2 \tau_i}{\sum_{i=1}^{n} \tau_i}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(v_i\)</span> is the velocity of the <span class="math notranslate nohighlight">\(i^{th}\)</span> layer, and <span class="math notranslate nohighlight">\(\tau_i\)</span> is the one-way travel time through the <span class="math notranslate nohighlight">\(i^{th}\)</span>
+layer.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="waves_at_interfaces.html" class="btn btn-neutral float-left" title="Waves at interfaces" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="seismic_survey.html" class="btn btn-neutral float-right" title="Survey" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

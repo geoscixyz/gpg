@@ -1,0 +1,331 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Other aspects of gravity surveying &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Apps" href="../appendix/apps.html" />
+    <link rel="prev" title="Gravity gradients" href="gravity_gradients.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Gravity</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gravity_introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gravity_basics.html">Gravity measurements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gravity_data.html">Gravity data: acquisition and reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gravity_example.html">Gravity example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gravity_gradients.html">Gravity gradients</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Other aspects of gravity surveying</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-reference-spheroid">The reference spheroid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-gravimetric-geoid">The gravimetric geoid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#marine-gravity">Marine gravity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#airborne-gravity">Airborne gravity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gravity-gradiometry">Gravity gradiometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other-comments-on-instrumentation">Other comments on instrumentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#absolute-gravity-measurements">Absolute gravity measurements</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Gravity</a> &raquo;</li>
+        
+      <li>Other aspects of gravity surveying</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/gravity/gravity_other_notes.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="other-aspects-of-gravity-surveying">
+<span id="gravity-other-notes"></span><h1>Other aspects of gravity surveying<a class="headerlink" href="#other-aspects-of-gravity-surveying" title="Link to this heading"></a></h1>
+<section id="the-reference-spheroid">
+<h2>The reference spheroid<a class="headerlink" href="#the-reference-spheroid" title="Link to this heading"></a></h2>
+<p>The earth’s shape can be approximated by an oblate (squashed) ellipsoid
+approximating mean sea-level. The “flattening” of the ellipsoid is at the
+poles; i.e. radius at equator &gt; radius at poles. The reference spheroid is
+described by the following equation, which gives the theoretical value of
+gravity as a function of latitude <span class="math notranslate nohighlight">\(\phi\)</span>. Coefficients were standardized
+in 1979, but earlier work may have used other coefficients. Plugging in 0 and
+90 degrees yields approximately 9.780 m/s<sup>2</sup> and 9.832 m/s<sup>2</sup>for values of gravitational acceleration at the equator and poles
+respectively.</p>
+</section>
+<section id="the-gravimetric-geoid">
+<h2>The gravimetric geoid<a class="headerlink" href="#the-gravimetric-geoid" title="Link to this heading"></a></h2>
+<figure class="align-right">
+<img alt="../../_images/geoid-egm96-sm.gif" src="../../_images/geoid-egm96-sm.gif" />
+</figure>
+<p>The surface of equal gravitational potential can be thought of as mean sea-
+level. It includes the influence of local density changes and trenches and
+mountains and is referred to as the geoid. Calculating the geoid is important
+for leveling and surveying jobs that require extreme accuracy. There is an
+entire division of Canada’s Department of Natural Resources called the
+<a class="reference external" href="http://webapp.geod.nrcan.gc.ca/geod/">Geodetic Survey Division</a>. The link contains a huge amount of information on
+geodetic surveying, GPS surveying, and related material.</p>
+</section>
+<section id="marine-gravity">
+<h2>Marine gravity<a class="headerlink" href="#marine-gravity" title="Link to this heading"></a></h2>
+<p>On ships, <em>gyrostabilized platforms</em> are required since external accelerations
+(roll, pitch, and yaw of the vessel) can be as large as 100,000 mGal. Long-
+term averaging and damping suspension systems reduce vertical acceleration
+errors to 1 mGal. Cross-coupling error occurs for beam-supported mass
+instruments, since circular vertical motion induces torque that does not
+average out in the up-down cycle of floating over waves. The Bell marine
+gravimeter eliminates cross-coupling since it is axially symmetric. It can
+discriminate anomalies of 1-2 km wavelength, but it is expensive.</p>
+</section>
+<section id="airborne-gravity">
+<h2>Airborne gravity<a class="headerlink" href="#airborne-gravity" title="Link to this heading"></a></h2>
+<p>All problems caused by moving platforms are even more difficult to deal with
+for airborne work. Current best resolution is in the range of 0.1 mGal.  The
+Eötvös effect can produce errors of 18 mGal or 25 mGal at speeds of 200 knots
+for 1% error in velocity or heading. Therefore, autopilots are required.</p>
+<p>Since 1998, airborne instruments have become capable of acquiring data with
+sufficient resolution to contribute towards resource-scale projects. For
+example, there is a good deal of interest in using airborne gravity mapping to
+characterize salt domes for petroleum exploration applications. You could
+probably find examples on the web by searching for “gravity,” “airborne,” and
+“petroleum,” for example.</p>
+<p>Gravity gradiometry measured from the air is a “last frontier” in gravity data
+acquisition instrumentation. In early 2000, BHP (one of the largest mining
+companies in the world, based in Australia) announced the development of the
+“<em>world’s first airborne gravity gradiometer for mineral exploration</em>.”</p>
+<p>Satellite-derived gravity is also used in the exact characterization of the
+shape of Earth and other planets. See articles in the SEG’s January 1998
+edition of “The Leading Edge” - for example, “<em>Satellite-derived gravity:
+Where we are and what’s next</em>.”</p>
+<p>One field procedure that is not airborne gravity, but which uses aircraft to
+enhance the efficiency of acquisition (especially in rugged terrain) is
+helicopter-borne long-line systems. This involves an instrument hanging from a
+long wire which is placed on the ground for each measurement. Some of the
+advantages are: there are no cut lines needed; rugged terrain is easier to
+handle; the instrument is more gently handled than by a crew and truck;
+helicopter-borne GPS is just as accurate, and has more reliable signals in
+forested and rugged terrain. For finding the position of the instrument, a
+differential GPS unit finds the position of the helicopter, and ground
+reflecting laser altimeters compensate for the distance between the chopper
+and the instrument. Laser range-finding also has a better chance of getting
+accurate terrain at each station.</p>
+</section>
+<section id="gravity-gradiometry">
+<h2>Gravity gradiometry<a class="headerlink" href="#gravity-gradiometry" title="Link to this heading"></a></h2>
+<p>The gradients of Earth’s gravity field can be estimated from a simple map of
+gz by calculating horizontal first and second derivatives. Actually measuring
+the three gradients (<span class="math notranslate nohighlight">\(g_z\)</span>, <span class="math notranslate nohighlight">\(g_x\)</span>, <span class="math notranslate nohighlight">\(g_y\)</span>) may be desirable for
+several reasons.</p>
+<p>However, interpretation of gravity gradiometry is not trivial. There was a
+whole session on this topic at the August 2000 annual meeting of the Society
+of Exploration Geophysics, and it is a current topic of research at several
+universities and oil &amp; mineral exploration companies. One short paper on the
+topic is available from The Leading Edge (an SEG monthly publication) entitled
+“<em>Methodology for interpreting 3-D marine gravity gradiometry data</em>” in April
+1999.</p>
+</section>
+<section id="other-comments-on-instrumentation">
+<h2>Other comments on instrumentation<a class="headerlink" href="#other-comments-on-instrumentation" title="Link to this heading"></a></h2>
+<p>Here are notes on characteristics of a modern, semi-automatic ground-based, portable instrument:</p>
+<ul class="simple">
+<li><p>Many instruments now use a small solid state accelerometer, and the measure
+changes in capacitance due to varying spacing.</p></li>
+<li><p>Sensors are in a controlled temperature vacuum; the quartz element
+temperature is monitored and corrected.</p></li>
+<li><p>Instruments correct for leveling errors up to 200 sec of arc.</p></li>
+<li><p><span class="math notranslate nohighlight">\(g\)</span> is sampled at 1 s intervals and no result is displayed until it is
+deemed statistically reliable by the on-board micro-computer.</p></li>
+<li><p>Movements are now “static,” meaning there is no need to “amplify” the mass
+movement, as is necessary with mechanical systems. Roughly 1% of mass
+support is by electrostatic feedback to keep it near the null position.</p></li>
+<li><p>Automatic internal drift correction is commonly built-in, allowing for
+repeatability of 0.02 mgal over several months. Base station measurements
+are still needed to account for tidal effects.</p></li>
+<li><p>Most systems now make use of digital storage of data, location parameters,
+drift, and computed tidal correction, all for download to a PC.</p></li>
+</ul>
+</section>
+<section id="absolute-gravity-measurements">
+<h2>Absolute gravity measurements<a class="headerlink" href="#absolute-gravity-measurements" title="Link to this heading"></a></h2>
+<p>Micro-g Solutions Inc. builds an <em>absolute gravity</em> meter that operates by
+using the free-fall method. An object is dropped inside a vacuum chamber and
+the descent of the freely-falling object is monitored very accurately using a
+laser interferometer. Specifications include:</p>
+<ul class="simple">
+<li><p>Accuracy: 2 microGal (observed agreement between FG5 instruments)</p></li>
+<li><p>Precision: 15 microGal/√(Hz) at a quiet site [e.g. About 1 microGal in 3.75
+minutes or 0.1 microGal in 6.25 hours]</p></li>
+<li><p>Operating dynamic range: world-wide</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="gravity_gradients.html" class="btn btn-neutral float-left" title="Gravity gradients" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../appendix/apps.html" class="btn btn-neutral float-right" title="Apps" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

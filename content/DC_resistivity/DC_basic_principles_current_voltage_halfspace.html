@@ -1,0 +1,510 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currents and voltages in a uniform earth &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Currents and voltages in an heterogeneous earth" href="DC_basic_principles_heterogeneous_earth.html" />
+    <link rel="prev" title="Equations for modeling DC phenomenona" href="DC_basic_principles_equations.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">DC Resistivity</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DC_physical_properties.html">Conductivity</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="DC_basic_principles_index.html">Basic principles</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="DC_basic_principles_equations.html">Equations for modeling DC phenomenona</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Currents and voltages in a uniform earth</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#single-electrode-current-source">Single electrode current source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#two-electrode-current-sources">Two electrode current sources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#current-flow-in-the-ground">Current flow in the ground</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DC_basic_principles_heterogeneous_earth.html">Currents and voltages in an heterogeneous earth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DC_basic_principles_anisotropy.html">Anisotropic ground</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DC_surveys.html">Surveys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DC_data.html">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DC_interpretation.html">Interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DC_instruments.html">DC resistivity instruments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DC_examples.html">Case Histories</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">DC Resistivity</a> &raquo;</li>
+        
+          <li><a href="DC_basic_principles_index.html">Basic principles</a> &raquo;</li>
+        
+      <li>Currents and voltages in a uniform earth</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/DC_resistivity/DC_basic_principles_current_voltage_halfspace.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="currents-and-voltages-in-a-uniform-earth">
+<span id="dc-basic-principles-current-voltage-halfspace"></span><h1>Currents and voltages in a uniform earth<a class="headerlink" href="#currents-and-voltages-in-a-uniform-earth" title="Link to this heading"></a></h1>
+<section id="single-electrode-current-source">
+<h2>Single electrode current source<a class="headerlink" href="#single-electrode-current-source" title="Link to this heading"></a></h2>
+<p>In order to derive a relation between measurements (<span class="math notranslate nohighlight">\(I\)</span>, <span class="math notranslate nohighlight">\(V\)</span> and
+geometry) and the required physical property (resistivity or  <span class="math notranslate nohighlight">\(\rho\)</span> ),
+we must start by identifying how these parameters relate to electric field
+strength, <span class="math notranslate nohighlight">\(E\)</span> (Volts per meter), current density, <span class="math notranslate nohighlight">\(J\)</span> (Amps per unit
+area), and resistivity  (Ohm-m) in the three dimensional situation of a field
+survey (the introduction defines resistivity and conductivity).</p>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/currents_in_earth.gif"><img alt="../../_images/currents_in_earth.gif" src="../../_images/currents_in_earth.gif" style="width: 150.0px; height: 97.0px;" />
+</a>
+</figure>
+<p>Consider first a uniform Earth and one electrode, which is pumping a current,
+<span class="math notranslate nohighlight">\(I\)</span>, into the ground. We want to find the electric potential within the
+ground at a distance, <span class="math notranslate nohighlight">\(r\)</span>, from the current source. The current density in
+the ground is related to source current injected, and it flows radially
+outward from its point source. The potential measured at a surface defined by
+<span class="math notranslate nohighlight">\(r\)</span> is related to the electric field that exists in the ground because of
+the current. These two relations will be combined with the 3D form of Ohm’s
+law to end up with an expression for conductivity (the physical property we
+want) in terms of the current source, measured potential, and the distance.</p>
+<p>First, by symmetry the current density out of the hemisphere of radius,
+<span class="math notranslate nohighlight">\(r\)</span>, is</p>
+<div class="math notranslate nohighlight">
+\[J = \frac{I}{2 \pi r^2}         \qquad (1)\]</div>
+<p>and the current is flowing in a radial direction. Since <span class="math notranslate nohighlight">\(J= \sigma E\)</span>
+(Ohm’s Law), the electric field must also be pointing radially outward. The
+relationship between the electric field and the potential is</p>
+<div class="math notranslate nohighlight">
+\[E = -\frac{dV(r)}{dr}\]</div>
+<p>Combining the expression for <span class="math notranslate nohighlight">\(E\)</span>, Ohm’s Law and equation 1, we have</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}J = -\sigma \frac{dV(r)}{dr} &amp;= \frac{I}{2 \pi r^2}\\\frac{dV(r)}{dr} &amp;= \frac{-I}{2\pi \sigma r^2}\end{aligned}\end{align} \]</div>
+<p>If we integrate,</p>
+<div class="math notranslate nohighlight">
+\[V(r) = \frac{I}{2 \pi \sigma r} + C\]</div>
+<p>chose</p>
+<div class="math notranslate nohighlight">
+\[V(\infty) \longrightarrow C = 0\]</div>
+<p>So the potential due to a point current electrode at the surface is:</p>
+<div class="math notranslate nohighlight">
+\[V(r) = \frac{I}{2 \pi \sigma r}\]</div>
+<p>The electric potential inside the earth caused by the radial flow of current
+is illustrated in the diagram below.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/radial_flow.gif"><img alt="../../_images/radial_flow.gif" src="../../_images/radial_flow.gif" style="width: 280.0px; height: 147.0px;" />
+</a>
+</figure>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/pot_decay.gif"><img alt="../../_images/pot_decay.gif" src="../../_images/pot_decay.gif" style="width: 200.0px; height: 94.0px;" />
+</a>
+</figure>
+<p>At the surface, where measurements are made, the potential is infinite at the
+current electrode because <span class="math notranslate nohighlight">\(r=0\)</span>, and it decays with distance.</p>
+<div class="math notranslate nohighlight">
+\[V(r) = \frac{I}{2 \pi \sigma r} = \frac {I \rho}
+{2 \pi r}\]</div>
+</section>
+<section id="two-electrode-current-sources">
+<h2>Two electrode current sources<a class="headerlink" href="#two-electrode-current-sources" title="Link to this heading"></a></h2>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/two_electrodes.gif"><img alt="../../_images/two_electrodes.gif" src="../../_images/two_electrodes.gif" style="width: 200.0px; height: 61.0px;" />
+</a>
+</figure>
+<p>In a geophysical survey, current is injected into the ground using two
+electrodes. It is convenient to label the electrodes as</p>
+<ol class="upperalpha simple">
+<li><p>positive current electrode (carries a current <span class="math notranslate nohighlight">\(+I\)</span>)</p></li>
+<li><p>negative current electrode (carries a current <span class="math notranslate nohighlight">\(-I\)</span>)</p></li>
+</ol>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/fieldlines.gif"><img alt="../../_images/fieldlines.gif" src="../../_images/fieldlines.gif" style="width: 324.0px; height: 348.0px;" />
+</a>
+</figure>
+<p>For a uniform Earth, lines of current flow are shown in red in the figure to
+the right, and corresponding lines of equal potential (equipotential lines)
+are shown in black. Instead of the current flowing radially out from the
+current electrodes, it now flows along curved paths connecting the two current
+electrodes. Six current paths are shown. Between the surface of the earth and
+any current path we can compute the total proportion of current encompassed.
+The table below shows the proportion for the six paths shown (current path 1
+is the top-most path and 6 is the bottom-most path).</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Current Path</strong></p></th>
+<th class="head"><p><strong>% of Total Current</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>17</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>32</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>43</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>49</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>51</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>57</p></td>
+</tr>
+</tbody>
+</table>
+<p>From these calculations and the graph of the current flow shown above, notice
+that almost 50% of the current placed into the ground flows through rock at
+depths shallower than or equal to the current electrode spacing.</p>
+<p>The graph shown below plots the potential that would be measured along the
+surface of the earth for a fixed 2-electrode source. The voltage we would
+observe with our voltmeter (between purple electrodes) is the <strong>difference</strong>
+in potential at the two voltage electrodes, <span class="math notranslate nohighlight">\(\Delta V\)</span>.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/pot_difference.gif"><img alt="../../_images/pot_difference.gif" src="../../_images/pot_difference.gif" style="width: 333.0px; height: 253.0px;" />
+</a>
+</figure>
+</section>
+<section id="current-flow-in-the-ground">
+<h2>Current flow in the ground<a class="headerlink" href="#current-flow-in-the-ground" title="Link to this heading"></a></h2>
+<p>The path of the current in the earth after it is injected with two electrodes
+depends upon the distribution of electrical resistivity. If the Earth is
+uniform, current flows in a regular three dimensional pattern under the
+electrodes as illustrated Figure 1. The north slice number 8 (flagged with a
+<span class="math notranslate nohighlight">\(\ast\)</span>) is similar to the type of image commonly shown in texts to
+indicate how current flows in two dimensions under a pair of source
+electrodes.</p>
+<blockquote>
+<div><script language="JavaScript" type="text/JavaScript">
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+MM_preloadImages('./../../_images/t1.gif','./../../_images/t2.gif','./../../_images/t3.gif','./../../_images/t4.gif','./../../_images/t5.gif','./../../_images/t6.gif','./../../_images/t7.gif','./../../_images/t8.gif','./../../_images/t9.gif','./../../_images/t10.gif','./../../_images/t11.gif','./../../_images/t12.gif','./../../_images/t13.gif','./../../_images/shell.gif','./../../_images/s1.gif','./../../_images/s2.gif','./../../_images/s3.gif','./../../_images/s4.gif','./../../_images/s5.gif','./../../_images/s6.gif','./../../_images/s7.gif','./../../_images/s8.gif','./../../_images/s9.gif','./../../_images/s10.gif','./../../_images/s11.gif','./../../_images/s12.gif','./../../_images/s13.gif','./../../_images/s14.gif','./../../_images/s15.gif','./../../_images/s16.gif','./../../_images/e1.gif','./../../_images/e2.gif','./../../_images/e3.gif','./../../_images/e4.gif','./../../_images/e5.gif','./../../_images/e6.gif','./../../_images/e7.gif','./../../_images/e8.gif','./../../_images/e9.gif','./../../_images/e10.gif','./../../_images/e11.gif','./../../_images/e12.gif','./../../_images/e13.gif','./../../_images/e14.gif','./../../_images/e15.gif','./../../_images/e16.gif');
+  </script>
+
+
+
+
+
+   <table border="1" cellpadding="1" cellspacing="0" width="100%"> 
+      <tbody> 
+            <tr> 
+            <td colspan="2" valign="top"> <div class="caption"> Figure 1. 
+				  These figures show slices through a uniform Earth with current 
+				  flowing out of the right-hand (near) electrode and back into 
+				  the left-hand (far) electrode. A connecting red line 
+				  substitudes for a real generator. Vectors with white dots for 
+				  heads show the direction of current flow, while their colour 
+				  indicates the strength (or current density) in units of Log<sub>10</sub> 
+				  Amperes per square metre (A/m<sup>2</sup>); so the maximum 
+				  shown is Log<sub>10</sub>(J)=-3.33, or J=0.000468 A/m<sup>2</sup>. 
+          <br>
+          Vector plots of current distribution were generated using 3D EM modeling code developed by the UBC <a href="http://www.eos.ubc.ca/research/ubcgif/" target="_blank" class="nounderline">Geophysical Inversion Facility</a>
+        </div></td> 
+            </tr> 
+            <tr> 
+              <td valign="top" style="width:30%;"> 
+              <table border="0" cellpadding="0" cellspacing="0" width="100%"> 
+                  <tbody> 
+                    <tr valign="top"> 
+                      <td><b>Top</b><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/t1.gif',1)">
+					  slice 1</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/t2.gif',1)">
+					  slice 2</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/t3.gif',1)">
+					  slice 3</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/t4.gif',1)">
+					  slice 4</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/t5.gif',1)">
+					  slice 5</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/t6.gif',1)">
+					  slice 6</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/t7.gif',1)">
+					  slice 7</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/t8.gif',1)">
+					  slice 8</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/t9.gif',1)">
+					  slice 9</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/t10.gif',1)">
+					  slice 10</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/t11.gif',1)">
+					  slice 11</a> <br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/t12.gif',1)">
+					  slice 12</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/t13.gif',1)">
+					  slice 13</a> 
+                        <p><a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/shell.gif',1)">
+						shell</a></p></td> 
+                      <td><b>North</b><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/s1.gif',1)">
+					  slice 1</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/s2.gif',1)">
+					  slice 2</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/s3.gif',1)">
+					  slice 3</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/s4.gif',1)">
+					  slice 4</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/s5.gif',1)">
+					  slice 5</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/s6.gif',1)">
+					  slice 6</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/s7.gif',1)">
+					  slice 7</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/s8.gif',1)">
+					  slice 8</a> *<br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/s9.gif',1)">
+					  slice 9</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/s10.gif',1)">
+					  slice 10</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/s11.gif',1)">
+					  slice 11</a> <br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/s12.gif',1)">
+					  slice 12</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/s13.gif',1)">
+					  slice 13</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/s14.gif',1)">
+					  slice 14</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/s15.gif',1)">
+					  slice 15</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/s16.gif',1)">
+					  slice 16</a> <br> 
+                        <br> </td> 
+                      <td><b>East</b><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/e1.gif',1)">
+					  slice 1</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/e2.gif',1)">
+					  slice 2</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/e3.gif',1)">
+					  slice 3</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/e4.gif',1)">
+					  slice 4</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/e5.gif',1)">
+					  slice 5</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/e6.gif',1)">
+					  slice 6</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/e7.gif',1)">
+					  slice 7</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/e8.gif',1)">
+					  slice 8</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/e9.gif',1)">
+					  slice 9</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/e10.gif',1)">
+					  slice 10</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/e11.gif',1)">
+					  slice 11</a> <br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/e12.gif',1)">
+					  slice 12</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/e13.gif',1)">
+					  slice 13</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/e14.gif',1)">
+					  slice 14</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/e15.gif',1)">
+					  slice 15</a><br> 
+                        <a href="javascript:;" onmouseover="MM_swapImage('currents','','./../../_images/e16.gif',1)">
+					  slice 16</a> <br> </td> 
+                    </tr> 
+                  </tbody> 
+                </table>
+                </td> 
+              <td style="width:70%;"> <div align="center"><img src="./../../_images/t1.gif" name="currents" height="714" width="100%"> <br> 
+                </div></td> 
+            </tr> 
+          </tbody> 
+        </table> 
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DC_basic_principles_equations.html" class="btn btn-neutral float-left" title="Equations for modeling DC phenomenona" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DC_basic_principles_heterogeneous_earth.html" class="btn btn-neutral float-right" title="Currents and voltages in an heterogeneous earth" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

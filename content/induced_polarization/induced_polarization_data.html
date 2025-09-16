@@ -1,0 +1,508 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Interpretation" href="induced_polarization_interpretation.html" />
+    <link rel="prev" title="Survey" href="induced_polarization_survey.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Induced Polarization</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="induced_polarization_introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="induced_polarization_physical_properties.html">Chargeability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="induced_polarization_basic_principles.html">Basic principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="induced_polarization_survey.html">Survey</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#two-types-of-time-domain-data">Two types of time domain data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#integrated-chargeability">Integrated Chargeability</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#two-types-of-frequency-domain-data">Two types of frequency domain data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#relating-the-four-types-of-data">Relating the four types of data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-acquisition-in-time-domain-ip">Data acquisition in Time domain IP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-acquisition-in-frequency-domain-ip">Data acquisition in Frequency domain IP</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#frequency-effect">Frequency effect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#apparent-chargeability-measurements">Apparent Chargeability Measurements</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#choice-of-time-frequency-or-phase-measurements">Choice of time, frequency or phase measurements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#examples-of-inverted-field-data">Examples of inverted field data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#measuring-conductivity-and-chargeability-on-a-core-sample-with-a-gdd-scip-tester">Measuring conductivity and chargeability on a core sample with a GDD SCIP Tester</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="induced_polarization_interpretation.html">Interpretation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Induced Polarization</a> &raquo;</li>
+        
+      <li>Data</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/induced_polarization/induced_polarization_data.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data">
+<span id="induced-polarization-data"></span><h1>Data<a class="headerlink" href="#data" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>There are four techniques for observing chargeability: two using a charging
+current that is turned abruptly off so that discharging can be observed in the
+time domain, and two in which the dispersive nature (or effect as a function
+of frequency) of the phenomenon is observed in the frequency domain.</p>
+</section>
+<section id="two-types-of-time-domain-data">
+<h2>Two types of time domain data<a class="headerlink" href="#two-types-of-time-domain-data" title="Link to this heading"></a></h2>
+<blockquote>
+<div><figure class="align-center" id="duty-cylce">
+<a class="reference internal image-reference" href="../../_images/IP_source.gif"><img alt="../../_images/IP_source.gif" src="../../_images/IP_source.gif" style="width: 450.0px; height: 120.0px;" />
+</a>
+</figure>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/potentials.gif"><img alt="../../_images/potentials.gif" src="../../_images/potentials.gif" style="width: 250.0px; height: 79.0px;" />
+</a>
+</figure>
+</div></blockquote>
+<p>Consider the experiment illustrated in the following figure. Current, <span class="math notranslate nohighlight">\(I\)</span>,
+is injected into the ground at the source electrodes and voltage, <span class="math notranslate nohighlight">\(V\)</span>, is
+measured at the potential electrodes. The source is DC (direct current) in the
+sense that when it is on, there is no variation. However, in this case it is
+turned on and off with a duty cycle as shown above. Two methods of
+measuring chargeability in the time domain are described below.</p>
+<ol class="arabic">
+<li><p>The following is a definition of chargeability but it is not possible to
+measure it exactly in the field. The figure to the right shows voltage
+measured when the transmitter is first turned on and then turned off some time
+later. Using parameters from this figure, one definition of chargeability is
+<span class="math notranslate nohighlight">\(M = V_S / V_P\)</span> where <span class="math notranslate nohighlight">\(V_S\)</span> and <span class="math notranslate nohighlight">\(V_P\)</span> are the steady state and
+“secondary” potentials, respectively.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The leading edge potential <span class="math notranslate nohighlight">\(V_{\sigma}\)</span> is what would be measured in
+the absence of chargeability. This potential would yield the ground’s
+resistivity.</p></li>
+<li><p>The steady state, <span class="math notranslate nohighlight">\(V_P\)</span> (with a subscript <em>m</em> in the figure above),
+often referred to as the primary potential, is the combined effect of
+current flowing in the ground and charges built up under the influence of
+the imposed electric field.</p></li>
+<li><p>The secondary potential is entirely due to the charge imbalance resulting
+from the build-up of charge.</p></li>
+<li><p>Using this form, chargeability <span class="math notranslate nohighlight">\(M\)</span> will be <span class="math notranslate nohighlight">\(0 ≤ M &lt; 1\)</span>. If <span class="math notranslate nohighlight">\(M =
+0\)</span> the measured potential will follow the input current waveform exactly
+with no charging or discharging involved, as shown in the first column of
+the figure above.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>The most commonly measured form of time domain IP is the normalized area
+under the decay curve. It can be represented by the following equation, using
+parameters specified in the adjacent figure. The decaying potential that
+follows <span class="math notranslate nohighlight">\(V_s\)</span> is written as <span class="math notranslate nohighlight">\(V_s (t)\)</span>.</p></li>
+</ol>
+<p>Chargeability, <span class="math notranslate nohighlight">\(M\)</span>, is essentially the red area under the decay curve,
+normalized by the source voltage.</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[M = \frac{1}{V_P} \int  \! V_S(t) \, \mathrm{d}t\]</div>
+</div></blockquote>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/source_and_measured_V.gif"><img alt="../../_images/source_and_measured_V.gif" src="../../_images/source_and_measured_V.gif" style="width: 300.0px; height: 197.0px;" />
+</a>
+</figure>
+<section id="integrated-chargeability">
+<h3>Integrated Chargeability<a class="headerlink" href="#integrated-chargeability" title="Link to this heading"></a></h3>
+<p>The integrated chargeability (<span class="math notranslate nohighlight">\(M\)</span>) characterizes the quantity of potential energy stored within a chargeable rock due to the accumulation of ionic charges.
+The integrated chargeability is defined as the area under the discharge curve normalized by the DC voltage (<span class="math notranslate nohighlight">\(V_m\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[M = \frac{1}{V_m} \int_{t_1}^{t_2} V_{off}(t) \, dt\]</div>
+<p>Numerical values for the integrated chargeability are typically given in ms.</p>
+<p>For practical measurements, we do not integrate over the entire discharge curve.
+Instead, a finite interval of integration is chosen.
+For example, the Newmont standard chargeability integrates from t = 0.15 s to 1.1 s.</p>
+</section>
+</section>
+<section id="two-types-of-frequency-domain-data">
+<h2>Two types of frequency domain data<a class="headerlink" href="#two-types-of-frequency-domain-data" title="Link to this heading"></a></h2>
+<p>An oscillating source current can be employed to observe chargeability. The
+measurements are often still referred to as “DC resistivity” because the
+frequencies are relatively low. The resulting data will include (i) a “DC
+resistivity” based upon the voltages measured with the lowest source
+frequency, and (ii) a chargeability based upon the measurements explained
+next. Two methods of measuring chargeability in the frequency domain are
+described below.</p>
+<ol class="arabic simple">
+<li><p>If the amplitude of the potential is measured at two frequencies, a measure
+of chargeability is acquired, and it can be expressed as units of “<em>percent
+frequency effect</em>” or PFE. Since the ground has less time to respond at higher
+frequencies, the signal is expected to be smaller at the higher frequency.
+Expressions for PFE are shown in the equations below. The data used in this
+calculation are illustrated in the figure below. Recall that <span class="math notranslate nohighlight">\(\rho_a= K
+\mid V \mid / I\)</span> , where <span class="math notranslate nohighlight">\(K\)</span> is the geometric factor based upon
+electrode geometry (see the Geophysical surveys chapter, “DC resistivity”
+section), <span class="math notranslate nohighlight">\(V\)</span> is the measured potential, and <span class="math notranslate nohighlight">\(I\)</span> is the source
+current.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/PFE.gif"><img alt="../../_images/PFE.gif" src="../../_images/PFE.gif" style="width: 350.0px; height: 178.0px;" />
+</a>
+</figure>
+<div class="math notranslate nohighlight">
+\[PFE= 100 \left( \frac{\rho_{a1} - \rho_{a2}}{\rho_{a2}}  \right)\]</div>
+<p>Alternatively:</p>
+<div class="math notranslate nohighlight">
+\[FE = \frac{V(f_1) - V(f_2)}{V(f_2)}\]</div>
+<p>If the voltage version is used, the Frequency Effect (FE) can easily be
+converted to a percent frequency effect by multiplying by 100.</p>
+<ol class="arabic simple" start="2">
+<li><p>Data with units of phase are gathered by transmitting a sinusoidal source
+current. Then the phase difference between this source and measured potentials
+is recorded as a measure of chargeability. Units are usually milliradians. The
+following figure illustrates:</p></li>
+</ol>
+<figure class="align-center" id="sinusoids">
+<a class="reference internal image-reference" href="../../_images/sinusoids.gif"><img alt="../../_images/sinusoids.gif" src="../../_images/sinusoids.gif" style="width: 350.0px; height: 150.0px;" />
+</a>
+</figure>
+</section>
+<section id="relating-the-four-types-of-data">
+<h2>Relating the four types of data<a class="headerlink" href="#relating-the-four-types-of-data" title="Link to this heading"></a></h2>
+<p>The different IP responses all result from the build up of polarizing charges,
+but they do not produce the same numbers. In fact, the units of the various
+measurements are different. Nevertheless, the following approximate rule of
+thumb allows conversion between the different data sets:</p>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head" colspan="3"><p>A chargeability of <span class="math notranslate nohighlight">\(M = 0.1\)</span> is</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="3"><p>10 PFE</p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p>70 mrad</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p>70 msec</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="data-acquisition-in-time-domain-ip">
+<h2>Data acquisition in Time domain IP<a class="headerlink" href="#data-acquisition-in-time-domain-ip" title="Link to this heading"></a></h2>
+<p>The source is here an on-off duty cycle. As noted above, when time domain IP is recorded, chargeability is measured as
+the area under the decay curve normalized by “primary” voltage <span class="math notranslate nohighlight">\(V_P\)</span>,
+using</p>
+<div class="math notranslate nohighlight">
+\[M = \frac{1}{V_P} \int_{t_1}^{t_2}   \! V_S(t) \, \mathrm{d}t\]</div>
+<p>The <span class="math notranslate nohighlight">\(t_1\)</span> and <span class="math notranslate nohighlight">\(t_2\)</span> times may be any limits within the off-time, and
+there are not really any standards, so comparison of different surveys can be
+difficult.</p>
+<p>Source (input) current is a square wave with 50% duty cycle (equal on and off
+times) as per resistivity (repeated cycles of +on, off, -on, off). The use of
+positive and negative cycles in transmitter current is very important for
+time-domain IP work. The correct area under the decay curve will be measured
+only if the potential decays exactly to zero. This will not occur when there
+is a superimposed spontaneous potential (SP), which is usually the case. If
+only one polarity was used, the inevitable SP could not be detected and
+removed. Recording both positive and negative cycles allows the “off-time”
+potential (i.e. voltages recorded when the transmitter is off) to be
+estimated, and any non-zero component removed.</p>
+<p>Many instruments record measured voltage, <span class="math notranslate nohighlight">\(V_P\)</span>, just before the
+transmitter is turned off, and then again 10 times while voltages decay during
+the off times. The results can then provide a calculated chargeability and an
+estimated spontaneous potential. The adjacent figure illustrates each measured
+parameter. Note that if the transmitter is not on for a long enough time,
+<span class="math notranslate nohighlight">\(V_P\)</span> will be measured before the charging time is finished, resulting in
+a voltage that is smaller than the actual <span class="math notranslate nohighlight">\(V_P\)</span>.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/transmitter_on_off.gif"><img alt="../../_images/transmitter_on_off.gif" src="../../_images/transmitter_on_off.gif" style="width: 320.0px; height: 260.0px;" />
+</a>
+</figure>
+<p>Other instruments use alternative time windows, and some newer instruments
+digitize the whole waveform, but the fundamental concepts are the same for all
+time domain systems.</p>
+</section>
+<section id="data-acquisition-in-frequency-domain-ip">
+<h2>Data acquisition in Frequency domain IP<a class="headerlink" href="#data-acquisition-in-frequency-domain-ip" title="Link to this heading"></a></h2>
+<p>The source is here a sinusoid.</p>
+<section id="frequency-effect">
+<h3>Frequency effect<a class="headerlink" href="#frequency-effect" title="Link to this heading"></a></h3>
+<p>The percent frequency effect was defined above as either</p>
+<div class="math notranslate nohighlight">
+\[PFE= 100 \left( \frac{\rho_{a1} - \rho_{a2}}{\rho_{a2}}  \right) \quad \textrm{or} \quad
+FE = \frac{V(f_2) - V(f_1)}{V(f_1)}\]</div>
+<p>Where <span class="math notranslate nohighlight">\(f_1\)</span> is the DC or very low frequency, and <span class="math notranslate nohighlight">\(f_2\)</span> is a higher
+frequency (a few tens to hundreds of Hertz) the second type of resistivities
+can be measured at frequencies on the order of a few tens to hundreds of
+Hertz.</p>
+</section>
+<section id="apparent-chargeability-measurements">
+<h3>Apparent Chargeability Measurements<a class="headerlink" href="#apparent-chargeability-measurements" title="Link to this heading"></a></h3>
+<p>When the phase of voltage (<span class="math notranslate nohighlight">\(\Delta V\)</span>) with respect to input current ( I ) is measured directly,
+the impedance Z of the ground at different frequencies (<span class="math notranslate nohighlight">\(\omega\)</span>) can be determined based on the material. This
+requires careful synchronization between the receiver and the transmitter.</p>
+<div class="math notranslate nohighlight">
+\[Z(\omega ) = \frac{\Delta V (\omega)}{I (\omega)}\]</div>
+<p>In chargeable rocks, the measured voltage depends on the frequency of the alternating current.
+So in order to characterize the resistive properties of the rock, we need to determine the impedence over a spectrum of frequencies.</p>
+<p>The apparent resistivity of the ground at each frequency can be obtained from the impedance and the geometric factor (see <a class="reference internal" href="../DC_resistivity/DC_surveys.html#dc-surveys"><span class="std std-ref">Surveys</span></a>)</p>
+<p>In order to characterize the ground’s chargeable properties, we fit the experimentally acquired resistivity values to a mathematical model (illstrated below).
+A well-established model for explaining the resistivities of chargeable rocks is the Cole-Cole model:</p>
+<div class="math notranslate nohighlight">
+\[\rho (\omega) = \rho_0 \Bigg [ 1 - \eta \Bigg ( 1 - \frac{1}{1 + (i\omega\tau )^C} \Bigg ) \Bigg ]\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho_0\)</span> is the DC resistivity and <span class="math notranslate nohighlight">\(\eta\)</span> is the intrinsic chargeability.
+Parameters <span class="math notranslate nohighlight">\(\tau\)</span> and <span class="math notranslate nohighlight">\(C\)</span> define the rate at which ionic charges accumulate when an electric field is applied.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/electrode_chargeability_curve_fit.png"><img alt="../../_images/electrode_chargeability_curve_fit.png" src="../../_images/electrode_chargeability_curve_fit.png" style="width: 608.8000000000001px; height: 254.0px;" />
+</a>
+</figure>
+<p>Assuming <span class="math notranslate nohighlight">\(C=1\)</span>, <span class="math notranslate nohighlight">\(\tau\)</span> defines the exponential decay in voltage during the off-time measurements (see earlier).
+The conductivity of the rock can be obtained by taking the reciprocal of the complex resistivity:</p>
+<div class="math notranslate nohighlight">
+\[\sigma (\omega) = \frac{1}{\rho (\omega)}\]</div>
+<p>Additionally, Ohm’s law still applies for chargeable rocks.
+Thus:</p>
+<div class="math notranslate nohighlight">
+\[\vec J (\omega) = \sigma (\omega) \vec E (\omega)\]</div>
+</section>
+</section>
+<section id="choice-of-time-frequency-or-phase-measurements">
+<h2>Choice of time, frequency or phase measurements<a class="headerlink" href="#choice-of-time-frequency-or-phase-measurements" title="Link to this heading"></a></h2>
+<p>The following lists a few factors affecting whether to choose time domain or
+frequency domain survey types:</p>
+<ul class="simple">
+<li><p>Time domain methods are the most common since the IP signal is measured
+directly. The decay signals are small, such as millivolts or microvolts, so
+the signal-to-noise ratio can be a problem. Stacking many repeat
+measurements is required.</p></li>
+<li><p>Frequency domain methods require significantly smaller source currents and
+are less sensitive to some sources of noise. However the effects of EM
+coupling can be severe, and need to be removed. (“EM coupling” is an
+unwanted signal which arises from inductive interactions (like a
+transformer) between conductive near-surface ground and the wires carrying
+transmitter current. It can completely hide IP effects when it is severe).</p></li>
+<li><p>See Smith, 1980, for a comparison of time domain and frequency domain
+results recorded using three different instruments over the same ore body.
+Such studies are rare because of the cost, so this is an interesting
+examination of the pros and cons of various ways of measuring IP.</p></li>
+</ul>
+</section>
+<section id="examples-of-inverted-field-data">
+<h2>Examples of inverted field data<a class="headerlink" href="#examples-of-inverted-field-data" title="Link to this heading"></a></h2>
+<p>The data sets shown (below) were gathered simultaneously at the Century
+Deposit in Australia. Clearly they are exhibiting responses to different
+materials within the ground. However, this presentation of the raw data (plots
+called pseudosections) is deceptive, and does not represent true distribution
+of material properties in the ground. After inverting these data, the
+resulting resistivity model reveals information about rocks overlying the
+deposit, while the resulting chargeability model shows the deposit itself and
+underlying shale units.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/raw_data.gif"><img alt="../../_images/raw_data.gif" src="../../_images/raw_data.gif" style="width: 360.0px; height: 195.6px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 189 </span><span class="caption-text">Raw data (pseudosections)</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/inverted_results.gif"><img alt="../../_images/inverted_results.gif" src="../../_images/inverted_results.gif" style="width: 360.0px; height: 196.79999999999998px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 190 </span><span class="caption-text">Inversion results (resistivity top, chargeability bottom)</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="measuring-conductivity-and-chargeability-on-a-core-sample-with-a-gdd-scip-tester">
+<h2>Measuring conductivity and chargeability on a core sample with a GDD SCIP Tester<a class="headerlink" href="#measuring-conductivity-and-chargeability-on-a-core-sample-with-a-gdd-scip-tester" title="Link to this heading"></a></h2>
+<p>The Sample Core Induced Polarization (SCIP) Tester from GDD Inc. is a
+portative instruements that allows to estimate the resistivity and the IP
+response of core samples.</p>
+<figure class="align-default">
+<img alt="../../_images/conductivity_chargeability_measurement.jpg" src="../../_images/conductivity_chargeability_measurement.jpg" />
+</figure>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading"></a></h2>
+<blockquote>
+<div><p>Smith, M.J., 1980, <em>Comparison of induced polarization measurements over the Elura orebody, The Geophysics of the Elura Orebody, Cobar NSW</em>, ASEG, 1980, 77-80.</p>
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="induced_polarization_survey.html" class="btn btn-neutral float-left" title="Survey" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="induced_polarization_interpretation.html" class="btn btn-neutral float-right" title="Interpretation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

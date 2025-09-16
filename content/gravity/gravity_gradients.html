@@ -1,0 +1,389 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gravity gradients &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Other aspects of gravity surveying" href="gravity_other_notes.html" />
+    <link rel="prev" title="Gravity example" href="gravity_example.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetics/index.html">Electromagnetic Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Gravity</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gravity_introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gravity_basics.html">Gravity measurements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gravity_data.html">Gravity data: acquisition and reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gravity_example.html">Gravity example</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Gravity gradients</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#measured-gravity-is-g-z">Measured gravity is <span class="math notranslate nohighlight">\(g_z\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-spatial-derivative-rate-of-change-of-g">The spatial derivative (rate of change) of <span class="math notranslate nohighlight">\(g\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-second-spatial-derivative">The second spatial derivative</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#an-example">An example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#measuring-gradients">Measuring gradients</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other-forms-of-processing-for-maps">Other forms of processing for maps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gravity_other_notes.html">Other aspects of gravity surveying</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Gravity</a> &raquo;</li>
+        
+      <li>Gravity gradients</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/gravity/gravity_gradients.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="gravity-gradients">
+<span id="id1"></span><h1>Gravity gradients<a class="headerlink" href="#gravity-gradients" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>This page is an overview of this rapidly growing aspect of gravity surveying.
+Important goals are to recognize what spatial derivatives are and what the
+total horizontal derivative is good for, understand the idea behind “second
+spatial derivatives,” and recognize that direct measurement of all vectoral
+components of the spatial gradients of both gravity and magnetics is the
+latest really new capability in the geophysics industry. Is it useful? Much
+money has been spent on inventing this capability and yes, it is useful for
+larger scale problems associated with oil and gas and to some extent minerals
+exploration.</p>
+</section>
+<section id="measured-gravity-is-g-z">
+<h2>Measured gravity is <span class="math notranslate nohighlight">\(g_z\)</span><a class="headerlink" href="#measured-gravity-is-g-z" title="Link to this heading"></a></h2>
+<figure class="align-right">
+<img alt="../../_images/grav_diag.gif" src="../../_images/grav_diag.gif" />
+</figure>
+<p>Normally the vertical component of gravity <span class="math notranslate nohighlight">\(g_z\)</span> is measured. This was
+illustrated using the profile over a sphere or cylinder (right) in the section
+<a class="reference internal" href="gravity_basics.html"><span class="doc">Gravity measurements</span></a>. The horizontal components of gravity, <span class="math notranslate nohighlight">\(g_x\)</span>, and
+<span class="math notranslate nohighlight">\(g_y\)</span>, are small and not measured.</p>
+</section>
+<section id="the-spatial-derivative-rate-of-change-of-g">
+<h2>The spatial derivative (rate of change) of <span class="math notranslate nohighlight">\(g\)</span><a class="headerlink" href="#the-spatial-derivative-rate-of-change-of-g" title="Link to this heading"></a></h2>
+<p>The spatial rate of change of gravity (in the x-direction) is written
+mathematically as <span class="math notranslate nohighlight">\(\partial g/ \partial x\)</span>. This horizontal derivative
+can help map edges of buried changes in density. However, when data were
+gathered over an area, it is more common to employ the so called <em>total
+horizontal derivative</em>, which is the square root of the sum of squared x- and
+y- horizontal derivatives. This is a conceptually simple idea, but challenging
+to actually calculate if data are not on a survey grid that is uniform. Its
+result is illustrated in the following figures:</p>
+<figure class="align-center" id="id2">
+<img alt="../../_images/Bouger.jpg" src="../../_images/Bouger.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 193 </span><span class="caption-text">Bouguer gravity, contour map plotted using “shading.”</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id3">
+<img alt="../../_images/gravhd.jpg" src="../../_images/gravhd.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 194 </span><span class="caption-text">Total horizontal derivative of the adjacent gravity</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>One way to think of spatial derivatives is to simply look at the change in
+“value” between adjacent stations. Another better approach for real data is to
+look at slopes over several stations. A least squares fit to data at several
+stations will yield a slope. The magnitude of this slope is a horizontal
+derivative. This can be done along a profile (line survey) or using a matrix
+of points on a map. For maps, the horizontal derivative at one location is
+then simply the magnitude of the slope of a plane found by least squares fit
+to a set of points surrounding that location.</p>
+</section>
+<section id="the-second-spatial-derivative">
+<h2>The second spatial derivative<a class="headerlink" href="#the-second-spatial-derivative" title="Link to this heading"></a></h2>
+<figure class="align-right">
+<img alt="../../_images/2ndhorizderiv.gif" src="../../_images/2ndhorizderiv.gif" />
+</figure>
+<p>The rate of change of gradients (written as <span class="math notranslate nohighlight">\(\partial^2 g / \partial
+x^2\)</span> also can be estimated. Inflection points on the graph of <span class="math notranslate nohighlight">\(\partial^2
+g / \partial x^2\)</span> reveal the location of maximum rate of change of the
+gradient. The adjacent images show how this can help reveal the difference
+between a basin and an intrusion. Maps can also be processed to generate
+images of the second horizontal derivatives.</p>
+<p>The second vertical derivative is often considered useful. But what is the
+first vertical derivative? It is the vertical rate of change of gravity, and
+it is not easy to find unless you measure gravity everywhere at two
+elevations. However, gravity (a potential field) follows Laplace’s equation,
+which states that squared gradient of gravity equals 0:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial^2 g}{\partial x^2} + \frac{\partial^2 g}{\partial y^2}  + \frac{\partial^2 g}{\partial y^2} =0\]</div>
+<p>The <span class="math notranslate nohighlight">\(\partial^2 g / \partial x^2\)</span>  and <span class="math notranslate nohighlight">\(\partial^2 g / \partial
+y^2\)</span>  terms can be obtained directly from a Bouguer anomaly map, so the
+<span class="math notranslate nohighlight">\(\partial^2 g / \partial z^2\)</span>  term can be derived. This last term
+describes how fast the “vertical rate of change in gravity” is changing.
+However the success of this process depends upon adequate data spacing. These
+types of calculations are very efficient in the Fourier domain - something
+beyond the scope of this presentation.</p>
+<p>Making these types of processed maps is sometimes useful, but not always
+worthwhile. Two examples are given below: 1) salt domes where the process was
+beneficial, 2) a mineral exploration setting where it was not so useful.</p>
+<figure class="align-center" id="id4">
+<img alt="../../_images/2ndvertsalt.gif" src="../../_images/2ndvertsalt.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 195 </span><span class="caption-text">Observed, residual after removing a regional component, and second
+vertical derivative calculated using horizontal derivatives measured from
+the data set. Details about the salt domes are clearer in the second
+vertical derivative map.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id5">
+<img alt="../../_images/2ndvertnogood.gif" src="../../_images/2ndvertnogood.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 196 </span><span class="caption-text">The Bouguer anomaly map (A) exhibits more useful information than the
+corresponding second vertical derivative map (B).</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="an-example">
+<h2>An example<a class="headerlink" href="#an-example" title="Link to this heading"></a></h2>
+<p>One recommended short example describes contributions of gravity to
+hydrocarbon exploration in the complicated foothills environment, just
+southwest of Calgary, Alberta. The take home message from that example is that
+sparse data forces less-than-optimal results. Gravity has always suffered from
+this problem (fewer measurements than desirable) because of the care required
+for gravity, location and elevation measurements at each station. With the
+invention of airborne gravity surveys, this problem can be reduced, so long as
+the lower sensitivity of airborne measurements is sufficient for the task.
+Currently airborne surveys are sensitive enough for most oil and gas
+exploration problems, and for some large mineral exploration problems, but not
+sensitive enough for engineeri &amp; environmentalng scale work. If you are
+interested (it is short and easy) see <a class="reference external" href="http://www.sgl.com/technicalpapers/EAGEabst-final-TV.pdf">Turner Valley</a> , Canada – A Case
+History in Contemporary Airborne Gravity (links to the Sander Geophysics
+Limited (SGL) website), by J.W. Peirce1, S. Sander2, R.A. Charters1, and V.
+Lavoie, presented at the EAGE 64th Conference &amp; Exhibition — Florence, Italy,
+27 - 30 May 2002.</p>
+</section>
+<section id="measuring-gradients">
+<h2>Measuring gradients<a class="headerlink" href="#measuring-gradients" title="Link to this heading"></a></h2>
+<p>We are talking now about measuring how gravity varies spatially - that is
+<span class="math notranslate nohighlight">\(\partial g / \partial x\)</span> or <span class="math notranslate nohighlight">\(\partial g / \partial y\)</span> or
+<span class="math notranslate nohighlight">\(\partial g / \partial z\)</span>. In fact, there are units for gravitational
+gradient - the Eotvos Unit (EU) which is <span class="math notranslate nohighlight">\(10^{-6}\)</span> mGal/cm.</p>
+<p>However, if you think about it, we should really be more careful about what we
+are measuring. We are familiar with measuring the vertical component of
+gravity, <span class="math notranslate nohighlight">\(g_z\)</span>. However, it would be theoretically possible to measure
+<span class="math notranslate nohighlight">\(g_x\)</span> and <span class="math notranslate nohighlight">\(g_y\)</span>. In fact, one could consider how each of these three
+components of gravity vary in all three directions. That represents nine
+different “gradient” measurements. Given what you know about measuring
+<span class="math notranslate nohighlight">\(g_z\)</span>, measuring the other two components should sound like a very
+difficult task. Well, you are right. It is very difficult. In fact, it turns
+out to be easier to measure the gradients than the fields themselves. And, as
+of roughly 1998 - 2001, there are systems that can make these measurements.
+Are they useful measurements? Yes. Oil and mineral exploration companies would
+not have spent millions of dollars developing the capacity if it were not
+useful. But there is much research needed to learn how best to make use of the
+results.</p>
+<p>Maps showing what measurements of gravitational gradients look like are given
+on <a class="reference external" href="http://www.eoas.ubc.ca/courses/eosc350/content/methods/meth_4/assets/gravgrad-figs.pdf">a separate page of images</a> . Evidently, different components emphasize
+different aspects of a buried density contrast or target. Look at these
+figures and consider these questions:</p>
+<ol class="arabic simple">
+<li><p>Which emphasizes the feature’s location? (answer = <span class="math notranslate nohighlight">\(T_{zz}\)</span>)</p></li>
+<li><p>Which emphasize lineations in one or another direction? (answer =
+<span class="math notranslate nohighlight">\(T_{xx}\)</span>, <span class="math notranslate nohighlight">\(T_{yy}\)</span>)?</p></li>
+<li><p>Which emphasize the feature’s edges? (answer = <span class="math notranslate nohighlight">\(T_{xz}\)</span>, <span class="math notranslate nohighlight">\(T_{yz}\)</span>)?</p></li>
+<li><p>What does the remaining component emphasize? (answer = edges)?</p></li>
+</ol>
+<p>Consider some practical questions: How useful is this type of work? What kinds
+of targets can be detected?</p>
+<ol class="arabic simple">
+<li><p>The answers are usually expressed in terms of anomaly size, sampling rate,
+and noise level of instruments.</p></li>
+<li><p>Current systems can just see very large mineral targets.</p></li>
+<li><p>Many oil and gas and structural geology targets can be imaged.</p></li>
+<li><p>Anticipated limit for future systems is a little better.</p></li>
+</ol>
+</section>
+<section id="other-forms-of-processing-for-maps">
+<h2>Other forms of processing for maps<a class="headerlink" href="#other-forms-of-processing-for-maps" title="Link to this heading"></a></h2>
+<p>In the present version of this module we do not have time to include a section
+that pursues other aspects of deriving alternative forms of images from
+gravity (and magnetics) maps. It is true, however, that there are many forms
+of processing that are used. Two excellent introductions can be found at the
+following locations:</p>
+<ul class="simple">
+<li><p>If you are interested, there are some interactive figures on frequency
+domain filtering at
+<a class="reference external" href="http://www.geoexplo.com/airborne_survey_workshop_filtering.html">http://www.geoexplo.com/airborne_survey_workshop_filtering.html</a>.</p></li>
+<li><p>There is a good summary of Advanced Processing of Potential Fields by Getech
+(Houston, and Leeds). See the tutorial on-line at Getech via Advanced
+Processing of Potential Field Data.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="gravity_example.html" class="btn btn-neutral float-left" title="Gravity example" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="gravity_other_notes.html" class="btn btn-neutral float-right" title="Other aspects of gravity surveying" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

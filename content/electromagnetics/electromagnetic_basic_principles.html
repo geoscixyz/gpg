@@ -1,0 +1,426 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic Principles &mdash; GPG 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../../_static/gpg.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Survey" href="electromagnetic_survey.html" />
+    <link rel="prev" title="Conductivity" href="electromagnetic_physical_properties.html" />
+ 
+
+<meta name="description" content="open source resources for applied geophysics">
+<meta name="author" content="GeoSci.xyz Developers">
+<meta name="keywords" content="geoscience, geophysics, applied geophysics, education, python, SimPEG">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73243623-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            GPG
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_properties/index.html">Physical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../magnetics/index.html">Magnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seismic/index.html">Seismic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GPR/index.html">Ground Penetrating Radar</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Electromagnetic Methods</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="electromagnetic_introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electromagnetic_physical_properties.html">Conductivity</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Basic Principles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-magnetic-fields-of-various-current-sources">The magnetic fields of various current sources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#everyday-examples-of-em-induction">Everyday examples of EM induction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#circuit-model-for-em-induction">Circuit model for EM induction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#transmitter-and-primary-field">Transmitter and primary field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#receiver">Receiver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#coupling-between-transmitter-and-buried-loop">Coupling between transmitter and buried loop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#measured-responses">Measured responses</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#conductive-host">Conductive Host</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#primary-field-in-a-conductive-earth">Primary field in a conductive earth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#at-the-buried-body">At the Buried Body</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="electromagnetic_survey.html">Survey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electromagnetic_data.html">Frequency Domain Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electromagnetic_processing.html">Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electromagnetic_interpretation.html">Interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electromagnetic_applet.html">Applet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../DC_resistivity/index.html">DC Resistivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../induced_polarization/index.html">Induced Polarization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/lectures.html">Lectures</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">GPG</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Electromagnetic Methods</a> &raquo;</li>
+        
+      <li>Basic Principles</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            <a href="https://github.com/ubcgif/gpg/edit/main/content/electromagnetics/electromagnetic_basic_principles.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="basic-principles">
+<span id="electromagnetic-basic-principles"></span><h1>Basic Principles<a class="headerlink" href="#basic-principles" title="Link to this heading"></a></h1>
+<p>Electromagnetic survey methods are based on two fundamental principles: Faraday’s law of electromagnetic induction and the fact that electric currents generate magnetic fields, expressed in Ampère’s law. In its simplest form Faraday’s law states that the electromotive force (EMF) in a closed circuit is proportional to the rate of change of magnetic flux through the circuit, or in even simpler terms: a changing magnetic field will induce an EMF.</p>
+<p>The magnetic flux <span class="math notranslate nohighlight">\(\phi_B\)</span> which crosses a closed loop is given by</p>
+<div class="math notranslate nohighlight">
+\[\phi_B = \int_{area} \vec{B} \cdot \hat{n} \; d\vec{a}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\hat{n}\)</span> is the outward pointing normal vector for the loop and <span class="math notranslate nohighlight">\(\vec{B}\)</span> is the magnetic flux density, which is proportional to the magnetic field in free space. This is illustrated in the diagram below</p>
+<figure class="align-center" style="width: 100%">
+<img alt="../../_images/IntFaradayDiagram-emf-version.svg" src="../../_images/IntFaradayDiagram-emf-version.svg" />
+</figure>
+<p>Faraday’s law relates the magnetic flux through the surface bordered by the loop to the induced EMF in the loop</p>
+<div class="math notranslate nohighlight">
+\[V = - \frac{d \phi_B}{dt}.\]</div>
+<p>Recall that the current <span class="math notranslate nohighlight">\(I\)</span> flowing in the wire is related to the EMF through Ohm’s law</p>
+<div class="math notranslate nohighlight">
+\[V = IR,\]</div>
+<p>where <span class="math notranslate nohighlight">\(R\)</span> is the electrical resistance of the circuit.</p>
+<p>We can start to develop an intuition about Faraday’s law using the example of a permanent magnet moving through a coil of wire. The electric field generated by the moving magnet creates an electric force on the charges in the wire, causing current to flow. You can explore this example interactively using the applet below from <a class="reference external" href="https://phet.colorado.edu/en/simulations/faraday">PhET</a>.</p>
+<iframe src="https://phet.colorado.edu/en/simulations/faraday" width="700" height="525" scrolling="no" allowfullscreen></iframe><p>We can observe several characteristics of EM induction using the applet:</p>
+<ol class="arabic simple">
+<li><p>The voltmeter only registers a signal when the magnet is moving, regardless of its absolute position.</p></li>
+<li><p>The sign of the induced voltage changes depending on the direction of motion and orientation of the magnet</p></li>
+<li><p>The magnitude of the voltage depends on how quickly the magnet is moving</p></li>
+<li><p>All else being equal, the voltage induced in the four coil loop is larger than in the two coil loop.</p></li>
+</ol>
+<p><strong>Lenz’s Law</strong>:The direction of the induced current in Faraday’s law is such that its magnetic field opposes the change in flux. That is, nature does not like changing magnetic fields. This is the reason for the minus sign in Faraday’s law. The following video from the Technical Services Group at MIT’s physics department shows Lenz’s law in action.</p>
+<div style="position: relative; padding-bottom: 2%; height: 0; overflow: hidden; max-width: 100%; height: auto;"><iframe width="560" height="315" src="https://www.youtube.com/embed/N7tIi71-AjA?rel=0" frameborder="0" allowfullscreen></iframe></div><section id="the-magnetic-fields-of-various-current-sources">
+<h2>The magnetic fields of various current sources<a class="headerlink" href="#the-magnetic-fields-of-various-current-sources" title="Link to this heading"></a></h2>
+<p>The shape of the magnetic field due to an electric current in a wire depends on the shape of the wire. The magnetic field of a closed loop source will be approximately that of a perfect magnetic dipole when observed far enough from the loop. A good rule of thumb is that we can use the dipole approximation when the distance from the loop is more than five times its diameter. Put mathematically, the approximation holds when <span class="math notranslate nohighlight">\(r\, &gt;&gt;\, a\)</span> where <span class="math notranslate nohighlight">\(r\)</span> is the distance from the observer to the center of the loop and <span class="math notranslate nohighlight">\(a\)</span> is the radius of the loop. The magnetic moment from a loop is <span class="math notranslate nohighlight">\(\vec{m} = IA \hat{n}\)</span>, where <span class="math notranslate nohighlight">\(I\)</span> is the current in the loop, <span class="math notranslate nohighlight">\(A\)</span> is its area, and <span class="math notranslate nohighlight">\(\hat{n}\)</span> is the unit vector perpendicular to the plane of the loop. In this course we will consider frequency domain transmitters. These are transmitters driven by a harmonic current, that is, a current that varies sinusoidally in time. The magnetic field of a dipole is given by the magnetization multiplied by a geometric factor, which implies that the primary magnetic field due to the transmitter will be harmonic in time: <span class="math notranslate nohighlight">\(\vec{H}_p = \vec{H}_0 \cos(\omega t)\)</span>.</p>
+<figure class="align-center" id="loop-dipole-field">
+<a class="reference internal image-reference" href="../../_images/mag-field-current-loop-v2.png"><img alt="../../_images/mag-field-current-loop-v2.png" src="../../_images/mag-field-current-loop-v2.png" style="width: 438.5px; height: 282.5px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 141 </span><span class="caption-text">: Magnetic field do to a circular current loop</span><a class="headerlink" href="#loop-dipole-field" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>If you’re interested in a more detailed discussion of the field of a magnetic dipole, please see the <a class="reference external" href="https://en.wikipedia.org/wiki/Magnetic_dipole">Wikipedia page</a>.</p>
+<p>See the following video from the University of Sydney to help visualize the fields of various current loop configurations</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/V-M07N4a6-Y?rel=0" frameborder="0" allowfullscreen></iframe></section>
+<section id="everyday-examples-of-em-induction">
+<h2>Everyday examples of EM induction<a class="headerlink" href="#everyday-examples-of-em-induction" title="Link to this heading"></a></h2>
+<p>EM induction is at work in everyday devices as well as in geophysics. A common example is the metal detector. Figure <a class="reference internal" href="#metal-detectors"><span class="std std-numref">Fig. 142</span></a> shows metal detectors at work at airport security and searching for a buried object.</p>
+<figure class="align-center" id="metal-detectors" style="width: 100%">
+<img alt="../../_images/metal-detector-example.jpg" src="../../_images/metal-detector-example.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 142 </span><span class="caption-text">: Electromagnetic fields used in metal detectors.</span><a class="headerlink" href="#metal-detectors" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In both cases we see that a current <span class="math notranslate nohighlight">\(I_0\)</span> flowing in a transmitter coil generates a magnetic flux density <span class="math notranslate nohighlight">\(\mathbf{B}_0\)</span>. As <span class="math notranslate nohighlight">\(\mathbf{B}_0\)</span> changes in time, eddy currents are generated in metallic objects. These eddy currents oscillate in time with the same periodicity as the transmitter current and generate a secondary magnetic field <span class="math notranslate nohighlight">\(\mathbf{B}'\)</span>. The primary and secondary fields both pass through the receiver coil (in the handheld metal detector the transmitter and receiver coils are concentric) generating a secondary current <span class="math notranslate nohighlight">\(I'\)</span> that can be measured.</p>
+</section>
+<section id="circuit-model-for-em-induction">
+<h2>Circuit model for EM induction<a class="headerlink" href="#circuit-model-for-em-induction" title="Link to this heading"></a></h2>
+<p>Consider the goal of using an inductive EM source to locate a conductive body buried in a relatively non-conductive (also called resistive) host material. The basic picture is shown in <a class="reference internal" href="#loops-conductor-loop"><span class="std std-numref">Fig. 143</span></a>.</p>
+<figure class="align-center" id="loops-conductor-loop">
+<a class="reference internal image-reference" href="../../_images/Concepts_3loops-conductor-and-loop.png"><img alt="../../_images/Concepts_3loops-conductor-and-loop.png" src="../../_images/Concepts_3loops-conductor-and-loop.png" style="width: 458.49999999999994px; height: 466.2px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 143 </span><span class="caption-text">: Conceptual diagram for three loops</span><a class="headerlink" href="#loops-conductor-loop" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Eddy currents are generated in the buried body by changing magnetic flux passing through the body. We can learn a lot about the coupling between the transmitter, buried body and receiver by approximating the buried body by a wire coil with resistance <span class="math notranslate nohighlight">\(R\)</span> and inductance <span class="math notranslate nohighlight">\(L\)</span>. The resistance approximates the electrical resistivity of the earth and the inductance is a geometrical quantity that depends on the shape of the loop. The following discussion of the circuit model will be mostly conceptual. For a more detailed and quantitative discussion please see the <a class="reference external" href="http://em.geosci.xyz/content/maxwell3_fdem/circuitmodel_for_eminduction/index.html">em.geosci</a> resource–(not required for eosc 350.</p>
+<section id="transmitter-and-primary-field">
+<h3>Transmitter and primary field<a class="headerlink" href="#transmitter-and-primary-field" title="Link to this heading"></a></h3>
+<p>In this course we will consider small loop transmitters with current varying sinusoidally in time. These are known as harmonic or frequency domain transmitters. We will only consider transmitters small enough that the primary magnetic fields they generate are approximately dipolar, as illustrated in figure <a class="reference internal" href="#loop-dipole-field"><span class="std std-numref">Fig. 141</span></a> above. Electromagnetic induction transmitters operate over range of frequencies—roughly <span class="math notranslate nohighlight">\(10^1\)</span> Hz - <span class="math notranslate nohighlight">\(10^4\)</span> Hz. Note that this is a much lower frequency band than is used in GPR surveys, which can range from <span class="math notranslate nohighlight">\(10^6\)</span> Hz - <span class="math notranslate nohighlight">\(10^9\)</span> Hz.</p>
+</section>
+<section id="receiver">
+<h3>Receiver<a class="headerlink" href="#receiver" title="Link to this heading"></a></h3>
+<p>The receiver is most often also a wire coil The voltage recorded in the receiver coil will be proportional to the rate of change of magnetic flux through the loop. One could also measure the magnetic field directly using a magnetometer but this is not common practice.</p>
+</section>
+<section id="coupling-between-transmitter-and-buried-loop">
+<h3>Coupling between transmitter and buried loop<a class="headerlink" href="#coupling-between-transmitter-and-buried-loop" title="Link to this heading"></a></h3>
+<p>Recall that current is only generated in a loop by the normal component of the changing magnetic flux passing through it. The magnetic flux is vector quantity. The closer the direction of the primary magnetic flux is to the normal of the buried loop, the better the coupling, as illustrated in figure <a class="reference internal" href="#coupling-effects"><span class="std std-numref">Fig. 144</span></a> below</p>
+<figure class="align-center" id="coupling-effects">
+<a class="reference internal image-reference" href="../../_images/CouplingEffects.png"><img alt="../../_images/CouplingEffects.png" src="../../_images/CouplingEffects.png" style="width: 443.0px; height: 387.0px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 144 </span><span class="caption-text">: Couppling effects.</span><a class="headerlink" href="#coupling-effects" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The effect on the secondary field of the relative positions and orientations of the transmitter, receiver, and buried loop can be summarized by a coupling coefficient, which we will denote <span class="math notranslate nohighlight">\(C\)</span> . The ratio of the secondary field to the primary field is the product of coupling coefficient and an inductive response function <span class="math notranslate nohighlight">\(Q\)</span> that depends on the frequency of the transmitter and the resistance and inductance of the target loop:</p>
+<div class="math notranslate nohighlight">
+\[\frac{H_s}{H_p} = CQ(\alpha) = \frac{\alpha^2 + i\alpha}{1 + \alpha^2}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\alpha = \omega L/R\)</span> is called the induction number. See <a class="reference external" href="http://em.geosci.xyz/content/maxwell3_fdem/circuitmodel_for_eminduction/understanding_harmonicEMresponse.html#">em.geosci</a> for full derivations of the coupling coefficient and inductive response function.</p>
+<p>The secondary field will have a much smaller amplitude than the primary field (units of field measurements are often parts per million) and also a phase shift. We can decompose the signal into a component in phase with the transmitter and another component one quarter period out of phase, called the quadrature component. These components can be represented as a complex number whose real part is the in-phase secondary field and whose imaginary part is the quadrature signal.</p>
+<p>For a given coupling constant, the character of the secondary field can vary considerably as a function of the induction number <span class="math notranslate nohighlight">\(\alpha\)</span>, as illustrated in the following plot</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/induction-response.png"><img alt="../../_images/induction-response.png" src="../../_images/induction-response.png" style="width: 280.0px; height: 168.0px;" />
+</a>
+</figure>
+</section>
+<section id="measured-responses">
+<h3>Measured responses<a class="headerlink" href="#measured-responses" title="Link to this heading"></a></h3>
+<p>The basic understanding of the different coupling between the source and receiver that is due to geometry allows us to sketch the expected responses that arise from a frequency domain horizontal loop survey taken over a conductor which is buried in a resistive host. This is a two-stage process.</p>
+<ol class="arabic simple">
+<li><p>Use the geometries of the source and receiver to sketch the characteristic
+curve.</p></li>
+<li><p>Use the response diagram and the knowledge of whether you are
+dealing with a good conductor or poor conductor to determine the relative
+amplitude of the in-phase and out-of-phase parts.</p></li>
+</ol>
+<p><strong>Part I:</strong> Consider the basic geometry shown in the figure below</p>
+<blockquote>
+<div><figure class="align-center">
+<img alt="../../_images/Coupling_3loops.png" src="../../_images/Coupling_3loops.png" />
+</figure>
+</div></blockquote>
+<p>There is a time-varying magnetic field due to the transmitter passing through the buried loop and hence induced currents in the buried loop. Those currents generate secondary magnetic fields. The primary field is shown in grey in the left-hand image and the secondary field due to that transmitter is shown in red on the right. Note that the primary and secondary fields point in opposite directions as they pass through the receiver loop.</p>
+<p>We adopt the convention that if the secondary field is in the same direction as the primary field then the response will be plotted as a positive value. Alternatively, when the two fields are in opposition the response will be negative. The distance between the transmitter and receiver loops is held fixed and the-datum is plotted at the midpoint between the coils. When both loops are to the left, or to the right, of the buried loop then the response is positive. The response will be zero when either coil is over the buried loop. When the receiver, which is a horizontal coil, is over the loop, then no magnetic flux is passing through the coil. There will be zero voltage induced. When the transmitter is directly over the buried loop, there is no flux crossing the loop, hence no currents will be generated in it and the secondary magnetic field is zero.</p>
+<p><strong>Part II:</strong> The basic sketch for the shape of the anomalous signal is
+determined from the geometry of the coils and the relative locations of
+transmitter, receiver and the conductive body. In practice we measure both an
+in-phase and an out-of-phase component. Each of these curves will have the same general shape as the one plotted above. We need only establish their relative amplitudes. From the general response curve we find that the in-phase (or real component) is larger than the out-of-phase (imaginary) component when <span class="math notranslate nohighlight">\(\omega \sigma\)</span>
+(or <span class="math notranslate nohighlight">\(\omega L / R\)</span>) is large.</p>
+<p>Below we plot the responses for a survey taken over a buried loop</p>
+<p>Because the body is conductive and the frequency of the survey is high, the
+value of <span class="math notranslate nohighlight">\(\omega L / R\)</span> is large and the in-phase response is larger than
+the quadrature response.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/dipole_response.jpg"><img alt="../../_images/dipole_response.jpg" src="../../_images/dipole_response.jpg" style="width: 772.0px; height: 479.20000000000005px;" />
+</a>
+</figure>
+</section>
+</section>
+<section id="conductive-host">
+<h2>Conductive Host<a class="headerlink" href="#conductive-host" title="Link to this heading"></a></h2>
+<p>The sketches regarding EM responses were derived under the simplifying
+assumptions that the buried body was in a very resistive medium. Consequently,
+the response depended only upon the relative orientations of the source coil
+and the body (the coupling effect), the conductivity of the body and the
+frequency of the transmitter, and the coupling effect of the secondary
+magnetic fields with the receiver.</p>
+<p>In more realistic situations the object of interest in buried in a conductive
+medium.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/buried_object.jpg"><img alt="../../_images/buried_object.jpg" src="../../_images/buried_object.jpg" style="width: 550.4px; height: 233.60000000000002px;" />
+</a>
+</figure>
+<p>The laws of EM induction require that there be eddy currents that are also set
+up in the host. But any conductive material in which currents are flowing is a
+“lossy” medium. That is, there are <span class="math notranslate nohighlight">\(I^2R\)</span> losses which convert the
+electromagnetic energy to heat. As a consequence the energy from the source
+does not propagate to arbitrarily large depths in the earth. The amplitude of
+the EM fields thus decrease due to geometrical spreading and attenuation.</p>
+<section id="primary-field-in-a-conductive-earth">
+<h3>Primary field in a conductive earth<a class="headerlink" href="#primary-field-in-a-conductive-earth" title="Link to this heading"></a></h3>
+<p>We have gained insight in the material above by ignoring the background earth and assuming the EM induction happens only in an isolated target of interest. In that setting, the primary field propagates through the background earth as if it was free-space. In reality the earth has some non-zero electrical conductivity, which will cause it to decay more quickly than it would in free-space. The strength of the primary field in the earth will depend upon:</p>
+<ol class="arabic simple">
+<li><p>frequency of the transmitter</p></li>
+<li><p>conductivity of the background material</p></li>
+<li><p>geometry of the source</p></li>
+</ol>
+<p>Considerable insight can be obtained by ignoring the geometry of the
+source and observing how a plane electromagnetic wave decays as it propagates
+into the earth. An incoming sinusoidal wave with frequency <span class="math notranslate nohighlight">\(\omega = 2 \pi
+f\)</span> travels in the atmosphere at the speed of light <span class="math notranslate nohighlight">\(c = 3 \times 10^8\)</span>
+m/s and has a wavelength <span class="math notranslate nohighlight">\(\lambda = c/f\)</span>. When the wave enters the
+conducting earth it still propagates as a sinusoid but it travels much slower
+and attenuates rapidly. An example, with numbers for speed and wavelength is
+given below.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/EM_diffusion.jpg"><img alt="../../_images/EM_diffusion.jpg" src="../../_images/EM_diffusion.jpg" style="width: 834.4000000000001px; height: 456.0px;" />
+</a>
+</figure>
+<p>The wave attenuates so fast that it only propagates about a wavelength into
+the earth. Because the amplitude diminishes so rapidly and the waves travel so
+slowly, we generally talk about the EM wave “diffusing” into the earth. The
+amplitude of the field decays exponentially with depth according to the
+diagram given below.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/field_decay.jpg"><img alt="../../_images/field_decay.jpg" src="../../_images/field_decay.jpg" style="width: 290.5px; height: 166.6px;" />
+</a>
+</figure>
+<div class="math notranslate nohighlight">
+\[\begin{split}H  &amp;= H_0 e^\frac{-(1-i)z}{\delta}\\[0.4em]
+\mid H \mid &amp;= H_0 e^\frac{-z}{\delta}\end{split}\]</div>
+<p><strong>Skin Depth:</strong> This is the depth by which the amplitude has decayed to
+<span class="math notranslate nohighlight">\(1/e\)</span> of its surface value. We have already encountered the concept of skin depth in the GPR unit. For a uniform halfspace of conductivity
+<span class="math notranslate nohighlight">\(\sigma\)</span>, and at the low frequencies used in EM induction surveys, the skin depth <span class="math notranslate nohighlight">\(\delta\)</span> may be approximated as</p>
+<div class="math notranslate nohighlight">
+\[\delta \approx \sqrt{\frac{2}{\mu_0 \omega \sigma} } \approx 500\sqrt{\frac{\rho}{f}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho = 1/\sigma\)</span> is resistivity and <span class="math notranslate nohighlight">\(\omega/(2\pi)\)</span> is frequency.</p>
+</section>
+<section id="at-the-buried-body">
+<h3>At the Buried Body<a class="headerlink" href="#at-the-buried-body" title="Link to this heading"></a></h3>
+<p>There is a time varying magnetic field impinging upon the conductor. This sets
+up an electric force which causes currents to flow. The strength of the
+current is determined by Ohm’s law:</p>
+<div class="math notranslate nohighlight">
+\[\vec{J} = \sigma \vec{E}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\vec{J}\)</span> is current density in <span class="math notranslate nohighlight">\(A/m^2\)</span> (amperes per meter
+squared) and <span class="math notranslate nohighlight">\(\vec{E}\)</span> is the electric field with units of Volts/meter. This is the version of Ohm’s law for extended three-dimensional bodies, analogous to Ohm’s law for circuits: <span class="math notranslate nohighlight">\(I=V/R\)</span>, where <span class="math notranslate nohighlight">\(R\)</span> is the electrical resistance of the circuit.</p>
+<p>The currents in the body produce their own magnetic fields just as in the case of a loop. These currents will also vary with time and their magnetic field can be measured at the transmitter. We refer to these fields as the “secondary” magnetic field, <span class="math notranslate nohighlight">\(\vec{H_s}\)</span>. Note that the secondary field may be out of phase with the primary field.</p>
+<p><strong>Summary</strong></p>
+<ol class="arabic simple">
+<li><p>A time varying current in a transmitter produces a time varying magnetic
+field which impinges upon a conductor in the ground.</p></li>
+<li><p>The changing flux generates and electric field everywhere.</p></li>
+<li><p>The electric field generates currents via Ohm’s Law, <span class="math notranslate nohighlight">\(\vec{J} = \sigma \vec{E}\)</span> .</p></li>
+<li><p>The currents produce their own magnetic fields.</p></li>
+<li><p>The receiver measures the sum of the primary and secondary fields,
+(or it measures associated voltages.)</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="electromagnetic_physical_properties.html" class="btn btn-neutral float-left" title="Conductivity" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="electromagnetic_survey.html" class="btn btn-neutral float-right" title="Survey" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+ 
+
+<div role="contentinfo" font-size="11px">
+    <div class="row">
+        <div class="col-md-4" align="left" font-size="11px">
+            <a href="/">GPG Home</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz">GeoSci.xyz</a> &nbsp; <span class="divider">|</span> &nbsp;
+            <a href="http://geosci.xyz/contact">Contact</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <a href="https://github.com/geoscixyz/gpg/releases/tag/0.0.1">Version 0.0.1</a>
+        </div>
+        <br>
+        <div class="col-md-8" align="left" font-size="11px">
+            <div class="row">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" width="60px"; style="float:right;height:3em;line-height:3em;padding:10px 0 0 1em;">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                2017,
+                <a href="http://geosci.xyz">GeoSci Developers.</a><br />
+                Except where noted, this work is licensed under a <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    Creative Commons Attribution 4.0 International License
+                </a>
+            </div>
+        <br>
+        <div class="row">
+            Built with
+                <a href="http://sphinx-doc.org/">Sphinx</a>
+                using a
+                <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
+                provided by
+                <a href="https://readthedocs.org">Read the Docs</a>.
+        </div>
+    </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
