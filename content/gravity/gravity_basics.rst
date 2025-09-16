@@ -130,7 +130,7 @@ and since
 then 
 
 .. math::
-		\Delta g_z = G \frac{M}{r^3} = G \frac{Mz}{(x^2+z^2)^{3/2}}
+		\Delta g_z = G \frac{Mz}{r^3} = G \frac{Mz}{(x^2+z^2)^{3/2}}
 
 .. figure:: ./images/response_cylinder.gif
     :align: right
