@@ -340,7 +340,7 @@ true interval velocity.
 For each hyperbola:
 
 .. math::
- 		  t \approx \frac{\left(x^2 + 4z_n^2 \right)^2 } {v_n^{rms}}
+ 		  t \approx \frac{\sqrt{\left(x^2 + 4z_n^2 \right)}} {v_n^{rms}}
 
 By fitting hyperbolas to each reflection event one can obtain
 :math:`t_n,v_n^{rms}` for n = 1, 2, ... The interval velocity and layer
