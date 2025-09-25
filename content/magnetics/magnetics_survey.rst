@@ -60,7 +60,7 @@ The sampling interval, or distance between observation points, is also important
   :figwidth: 100%
   :name: magnetic_sampling
 
-  : Magnetic surveys at (a) :math:`0.4\;m` and (b) :math:`1.2\;m` station spacing  acquired over a magnetic magnetic rod oriented :math:`30^{\circ}` N.
+  : Magnetic surveys at (a) :math:`1.2\;m` and (b) :math:`0.4\;m` station spacing  acquired over a magnetic magnetic rod oriented :math:`30^{\circ}` N.
 
 .. figure:: ./images/Sampling_Frequency.png
   :align: right
