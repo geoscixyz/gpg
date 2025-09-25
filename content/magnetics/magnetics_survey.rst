@@ -160,17 +160,17 @@ use of these codes. See MAG3D in IAG's Chapter 10, "Sftwr & manuals" .
 | Continuous earth: |`v_sus`_        |                   |`v_msh`_       |`v_mag`_       |
 +-------------------+----------------+-------------------+---------------+---------------+
 
-.. _block_sus: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/block.sus
-.. _block_sus_loc: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/block.sus_loc
-.. _block_msh: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/block.msh
-.. _block_mag: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/block.mag
-.. _block_5_sus: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/block-5.sus
-.. _block_5_sus_loc: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/block-5.sus_loc
-.. _block_msh: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/block.msh
-.. _block_5_mag: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/block-5.mag
-.. _v_sus: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/v.mag
-.. _v_msh: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/v.msh
-.. _v_mag: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/v.mag
+.. _block_sus: https://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/block.sus
+.. _block_sus_loc: https://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/block.sus_loc
+.. _block_msh: https://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/block.msh
+.. _block_mag: https://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/block.mag
+.. _block_5_sus: https://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/block-5.sus
+.. _block_5_sus_loc: https://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/block-5.sus_loc
+.. _block_msh: https://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/block.msh
+.. _block_5_mag: https://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/block-5.mag
+.. _v_sus: https://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/v.mag
+.. _v_msh: https://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/v.msh
+.. _v_mag: https://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/assets/datmod-files/v.mag
 
 
 .. _magnetics_instrumentation:

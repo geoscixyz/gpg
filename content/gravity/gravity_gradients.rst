@@ -176,7 +176,7 @@ of targets can be detected?
 #. Anticipated limit for future systems is a little better.
 
 .. Two (somewhat complex) figures summarizing the limits of detectability for
-.. various ore bodies (mostly in Australia) are provided separately `here<http://www.eoas.ubc.ca/courses/eosc350/content/methods/meth_4/assets/g-limits.pdf>`_
+.. various ore bodies (mostly in Australia) are provided separately `here<https://www.eoas.ubc.ca/courses/eosc350/content/methods/meth_4/assets/g-limits.pdf>`_
 .. (PDF). Keep in mind that questions about structures associated with oil and
 .. gas are often larger targets than those associated with mineral exploration,
 .. so these types of cutting edge procedures are so far more directly useful to
@@ -193,7 +193,7 @@ following locations:
 
 - If you are interested, there are some interactive figures on frequency
   domain filtering at
-  http://www.geoexplo.com/airborne_survey_workshop_filtering.html.
+  https://www.geoexplo.com/airborne_survey_workshop_filtering.html.
 
 - There is a good summary of Advanced Processing of Potential Fields by Getech
   (Houston, and Leeds). See the tutorial on-line at Getech via Advanced
@@ -202,8 +202,8 @@ following locations:
 .. The Getech home page is at https://getech.com/gravity-magnetic-data-services/.
 
 
-.. _a separate page of images: http://www.eoas.ubc.ca/courses/eosc350/content/methods/meth_4/assets/gravgrad-figs.pdf
-.. _Turner Valley: http://www.sgl.com/technicalpapers/EAGEabst-final-TV.pdf
+.. _a separate page of images: https://www.eoas.ubc.ca/courses/eosc350/content/methods/meth_4/assets/gravgrad-figs.pdf
+.. _Turner Valley: https://www.sgl.com/technicalpapers/EAGEabst-final-TV.pdf
 
 
 

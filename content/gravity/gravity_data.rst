@@ -39,7 +39,7 @@ Modern instruments use similar mechanisms, but they incorporate automatic
 leveling, computer driven recording, and other convenience features.
 
 .. See, for
-.. example, http://www.lacosteromberg.com/ that has several highly respected
+.. example, https://www.lacosteromberg.com/ that has several highly respected
 .. portable instruments (both spring based (image to the right) and "free-fall"
 .. types), as well as air-sea gravity systems.
 

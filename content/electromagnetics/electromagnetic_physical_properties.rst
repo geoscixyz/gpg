@@ -26,6 +26,6 @@ conductivity for rocks and minerals is presented in :numref:`roughchart`.
 
 While conductivity is the generally the main physical property of interest, EM induction methods also depend on the `magnetic permeability`_ and `electrical permitivity`_ of rocks. Their importance depends upon the frequency of the EM signal used for given a system.
 
-.. _magnetic permeability: http://em.geosci.xyz/content/physical_properties/magnetic_permeability/index.html
+.. _magnetic permeability: https://em.geosci.xyz/content/physical_properties/magnetic_permeability/index.html
 
-.. _electrical permitivity: http://em.geosci.xyz/content/physical_properties/dielectric_permittivity/index.html
+.. _electrical permitivity: https://em.geosci.xyz/content/physical_properties/dielectric_permittivity/index.html

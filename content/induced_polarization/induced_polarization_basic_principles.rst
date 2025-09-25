@@ -88,6 +88,6 @@ response is provided. Those measurements can be in time or frequency and the uni
 of the "chargeability" are inherited from the data. We outline below:
 
 .. ToDo: Integrate the material currently in Induced polarization
-.. http://gpg.geosci.xyz/en/physprops/content/induced_polarization/induced_polarization_measurements_data.html
+.. https://gpg.geosci.xyz/en/physprops/content/induced_polarization/induced_polarization_measurements_data.html
 .. so that go through each type of datum and hence the meanings and units for each of the
 .. associated chargeabilities.

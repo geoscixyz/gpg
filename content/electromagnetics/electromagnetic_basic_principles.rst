@@ -145,7 +145,7 @@ Consider the goal of using an inductive EM source to locate a conductive body bu
     : Conceptual diagram for three loops
 
 
-Eddy currents are generated in the buried body by changing magnetic flux passing through the body. We can learn a lot about the coupling between the transmitter, buried body and receiver by approximating the buried body by a wire coil with resistance :math:`R` and inductance :math:`L`. The resistance approximates the electrical resistivity of the earth and the inductance is a geometrical quantity that depends on the shape of the loop. The following discussion of the circuit model will be mostly conceptual. For a more detailed and quantitative discussion please see the `em.geosci <http://em.geosci.xyz/content/maxwell3_fdem/circuitmodel_for_eminduction/index.html>`__ resource--(not required for eosc 350.
+Eddy currents are generated in the buried body by changing magnetic flux passing through the body. We can learn a lot about the coupling between the transmitter, buried body and receiver by approximating the buried body by a wire coil with resistance :math:`R` and inductance :math:`L`. The resistance approximates the electrical resistivity of the earth and the inductance is a geometrical quantity that depends on the shape of the loop. The following discussion of the circuit model will be mostly conceptual. For a more detailed and quantitative discussion please see the `em.geosci <https://em.geosci.xyz/content/maxwell3_fdem/circuitmodel_for_eminduction/index.html>`__ resource--(not required for eosc 350.
 
 Transmitter and primary field
 -----------------------------
@@ -176,7 +176,7 @@ The effect on the secondary field of the relative positions and orientations of 
 .. math::
   \frac{H_s}{H_p} = CQ(\alpha) = \frac{\alpha^2 + i\alpha}{1 + \alpha^2}
 
-where :math:`\alpha = \omega L/R` is called the induction number. See `em.geosci <http://em.geosci.xyz/content/maxwell3_fdem/circuitmodel_for_eminduction/understanding_harmonicEMresponse.html#>`__ for full derivations of the coupling coefficient and inductive response function.
+where :math:`\alpha = \omega L/R` is called the induction number. See `em.geosci <https://em.geosci.xyz/content/maxwell3_fdem/circuitmodel_for_eminduction/understanding_harmonicEMresponse.html#>`__ for full derivations of the coupling coefficient and inductive response function.
 
 The secondary field will have a much smaller amplitude than the primary field (units of field measurements are often parts per million) and also a phase shift. We can decompose the signal into a component in phase with the transmitter and another component one quarter period out of phase, called the quadrature component. These components can be represented as a complex number whose real part is the in-phase secondary field and whose imaginary part is the quadrature signal.
 

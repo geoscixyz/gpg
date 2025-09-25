@@ -36,7 +36,7 @@ any day in the most recent 3 years.
     : Adapted from `NRC`_
 
 
-.. _geomag: http://www.geomag.nrcan.gc.ca/index-eng.php
+.. _geomag: https://www.geomag.nrcan.gc.ca/index-eng.php
 .. _NRC: https://www.spaceweather.gc.ca/tech/index-en.php#pip
 
 .. _magnetics_regional_trend:

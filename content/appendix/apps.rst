@@ -49,6 +49,6 @@ If you
 are familiar with python and github, you can install them via
 https://github.com/geoscixyz/gpgLabs
 
-.. _Jupyter: http://jupyter.org
+.. _Jupyter: https://jupyter.org
 
 

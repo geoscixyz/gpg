@@ -59,4 +59,4 @@ When seismic surveying is needed to characterize ocean, lake or river bed sedime
 
 .. _CC BY-SA 3.0: https://creativecommons.org/licenses/by-sa/3.0/.
 
-.. _CC BY-SA 2.5: http://creativecommons.org/licenses/by-sa/2.5
+.. _CC BY-SA 2.5: https://creativecommons.org/licenses/by-sa/2.5

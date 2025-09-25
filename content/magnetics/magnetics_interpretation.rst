@@ -110,7 +110,7 @@ Call for contributors
 .. raw:: html
 
    <div class="col-md-2" align="center">
-      <a href="http://github.com/ubcgif/em"><i class="fa fa-wrench fa-4x" aria-hidden="true"></i></a>
+      <a href="https://github.com/ubcgif/em"><i class="fa fa-wrench fa-4x" aria-hidden="true"></i></a>
    </div>
 
 There are many other filters published in the literature. Please contact us if you would like to contribute to this page.
@@ -382,11 +382,11 @@ We note the following features:
 
 
 .. image:: https://img.shields.io/badge/powered%20by-SimPEG-blue.svg
-    :target: http://simpeg.xyz
+    :target: https://simpeg.xyz
     :alt: SimPEG</pre>
 
 
-.. _Simpeg: http://simpeg.xyz
+.. _Simpeg: https://simpeg.xyz
 
 Validation
 ^^^^^^^^^^
@@ -403,14 +403,14 @@ Final Interpretation
 .. raw:: html
 
    <div class="col-md-2" align="center">
-      <a href="http://github.com/ubcgif/em"><i class="fa fa-wrench fa-4x" aria-hidden="true"></i></a>
+      <a href="https://github.com/ubcgif/em"><i class="fa fa-wrench fa-4x" aria-hidden="true"></i></a>
    </div>
 
 
 .. Old Material
 .. ============
 
-.. .. _separate sidebar: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/blakely/blakely.html
+.. .. _separate sidebar: https://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/blakely/blakely.html
 
 
 .. 2D plots of magnetic data, often referred to as maps, can provide insight
@@ -426,7 +426,7 @@ Final Interpretation
 .. earth's field is measured at every location. To the right is a total field
 .. strength map for the whole world (a full size version is in the sidebar_).
 
-.. .. _sidebar: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/sidebar-fields.html
+.. .. _sidebar: https://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/sidebar-fields.html
 
 .. At the scale of most exploration or engineering surveys, a map of total field
 .. data gathered over ground with no buried susceptible material would appear
@@ -442,7 +442,7 @@ Final Interpretation
 .. with a larger version, including alternative colour scale schemes, `shown in a
 .. sidebar`_.
 
-.. .. _shown in a sidebar: http://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/sidebar-airmaps.html
+.. .. _shown in a sidebar: https://www.eos.ubc.ca/courses/eosc350/content/methods/meth_3/sidebar-airmaps.html
 
 .. .. figure:: ./images/map-cust.gif
 ..   :figclass: float-right-360
